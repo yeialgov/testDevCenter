@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>WorkStatusCategory</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Neu</fullName>
+        <default>true</default>
+        <label>Neu</label>
+        <groupingString>New</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Wird ausgeführt</fullName>
+        <default>false</default>
+        <label>Wird ausgeführt</label>
+        <groupingString>InProgress</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>In Warteschleife</fullName>
+        <default>false</default>
+        <label>In Warteschleife</label>
+        <groupingString>OnHold</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Abgeschlossen</fullName>
+        <default>false</default>
+        <label>Abgeschlossen</label>
+        <groupingString>Completed</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Geschlossen</fullName>
+        <default>false</default>
+        <label>Geschlossen</label>
+        <groupingString>Closed</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Abschließen nicht möglich</fullName>
+        <default>false</default>
+        <label>Abschließen nicht möglich</label>
+        <groupingString>CannotComplete</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Abgebrochen</fullName>
+        <default>false</default>
+        <label>Abgebrochen</label>
+        <groupingString>Canceled</groupingString>
+    </standardValue>
+</StandardValueSet>
