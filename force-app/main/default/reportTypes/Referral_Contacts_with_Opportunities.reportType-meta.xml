@@ -425,6 +425,46 @@
             <field>ZuoraSyncFailed__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_Level_Translation__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Status__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Comment__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_Tax_Advisor__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>merchantId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MerchantVenueId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amigo__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -436,6 +476,71 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Eligible_For_Ambassador_Commission__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>DistributionID__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>WebformSID__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Accepted_Quote_COUNT__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>self_referral__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Web2Lead_Origin__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Local_ob_Hotline__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Test_Meta_Data__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Existing_Delivery_Services__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SPLIT_ONLINE_ORDERING__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>GUEST_MANAGEMENT__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Interested_in_QR_Code_Ordering__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Lost_Reason_QR_Code_Ordering__c</field>
+            <table>Contact.Opportunities_referral__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Lost_Reason_Digital_Menu__c</field>
             <table>Contact.Opportunities_referral__r</table>
         </columns>
         <masterLabel>Opportunities</masterLabel>

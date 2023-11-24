@@ -1,208 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
     <baseObject>Contact</baseObject>
-    <category>admin</category>
+    <category>other</category>
     <deployed>true</deployed>
-    <description>Report to identify potential duplicate contact records</description>
+    <description>Contacts &amp; Subscriber List Members</description>
     <join>
-        <outerJoin>false</outerJoin>
-        <relationship>DuplicateRecordItems</relationship>
+        <outerJoin>true</outerJoin>
+        <relationship>wbsendit__Subscriptions__r</relationship>
     </join>
-    <label>Contact Duplicates (custom)</label>
+    <label>Contacts &amp; Subscriber List Members</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Account</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Salutation</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>FirstName</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastName</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>RecordType</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherAddress</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherStreet</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherCity</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherState</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherPostalCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherCountry</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherStateCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherCountryCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherLatitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherLongitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherGeocodeAccuracy</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingAddress</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingStreet</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingCity</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingState</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingPostalCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingCountry</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingStateCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingCountryCode</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingLatitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingLongitude</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MailingGeocodeAccuracy</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Phone</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Fax</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>MobilePhone</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>HomePhone</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>OtherPhone</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AssistantPhone</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>ReportsTo</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Email</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Title</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Department</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -212,7 +22,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LeadSource</field>
+            <field>AssistantPhone</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -222,12 +32,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Description</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrencyIsoCode</field>
+            <field>Id</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -237,17 +42,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>HasOptedOutOfEmail</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>HasOptedOutOfFax</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>DoNotCall</field>
+            <field>CreatedBy</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -257,12 +52,72 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
+            <field>Jigsaw</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
+            <field>Department</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Description</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>DoNotCall</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Email</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>EmailBouncedDate</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>EmailBouncedReason</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>HasOptedOutOfEmail</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Fax</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>HasOptedOutOfFax</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>FirstName</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>HomePhone</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -272,7 +127,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
+            <field>LastModifiedDate</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastName</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -287,117 +147,117 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>EmailBouncedReason</field>
+            <field>LeadSource</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>EmailBouncedDate</field>
+            <field>MailingAddress</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Jigsaw</field>
+            <field>MailingCity</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>DecisionMaker__c</field>
+            <field>MailingCountry</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>PrimaryContact__c</field>
+            <field>MailingLatitude</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>FinanceContact__c</field>
+            <field>MailingLongitude</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>OperationalContact__c</field>
+            <field>MailingState</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>TechnicalContact__c</field>
+            <field>MailingStreet</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>inactiveEmployee__c</field>
+            <field>MailingPostalCode</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>PartnerID__c</field>
+            <field>MobilePhone</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Mindset__c</field>
+            <field>OtherAddress</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>NetSuiteId__c</field>
+            <field>OtherCity</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Zuora_BillTo_Contact__c</field>
+            <field>OtherCountry</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Zuora_SoldTo_Contact__c</field>
+            <field>OtherLatitude</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>VendorID__c</field>
+            <field>OtherLongitude</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>SalesAgent__c</field>
+            <field>OtherPhone</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BillingAddress__c</field>
+            <field>OtherState</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>ShippingAddress__c</field>
+            <field>OtherStreet</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Ambassador_ID_Creation_Date__c</field>
+            <field>OtherPostalCode</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Ambassador_Level_Translation__c</field>
+            <field>Phone</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Field_Tester_Status__c</field>
+            <field>ReportsTo</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Field_Tester_Comment__c</field>
+            <field>Salutation</field>
             <table>Contact</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Is_Tax_Advisor__c</field>
+            <field>Title</field>
             <table>Contact</table>
         </columns>
         <columns>
@@ -420,44 +280,92 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Contact.DuplicateRecordItems</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Contact.DuplicateRecordItems</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CurrencyIsoCode</field>
-            <table>Contact.DuplicateRecordItems</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Contact.DuplicateRecordItems</table>
+            <field>wbsendit__Compound_Key__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Contact.DuplicateRecordItems</table>
+            <table>Contact.wbsendit__Subscriptions__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Contact.DuplicateRecordItems</table>
+            <field>CreatedDate</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__Date_Subscribed__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__Email__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__IP_Address__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>Contact.DuplicateRecordItems</table>
+            <table>Contact.wbsendit__Subscriptions__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>DuplicateRecordSet</field>
-            <table>Contact.DuplicateRecordItems</table>
+            <field>LastModifiedDate</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
         </columns>
-        <masterLabel>Duplicate Record Items</masterLabel>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__Lead__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__List_Id__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__State__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__Subscriber_Id__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__Subscriber_List__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <masterLabel>Subscriber List Memberships</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>wbsendit__List_Joined_Date__c</field>
+            <table>Contact.wbsendit__Subscriptions__r</table>
+        </columns>
+        <masterLabel>Subscriber List Members</masterLabel>
     </sections>
 </ReportType>
