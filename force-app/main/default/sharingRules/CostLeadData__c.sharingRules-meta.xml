@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Edit_All_Growth_Group_Members</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>The records created for any member of the group must be visible to everyone in the group</description>
+        <label>Edit All Growth Group Members</label>
+        <sharedTo>
+            <group>Growth_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Growth_Group</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Read_Online_Channel_Cost</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sys Admin update info regarding cost lead data and the Growth Group has Read Only access to this info</description>
+        <label>Read Online Channel Cost</label>
+        <sharedTo>
+            <group>Growth_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>System_Admin</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

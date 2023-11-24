@@ -1,0 +1,188 @@
+{
+	"Day": {
+		"English": "day",
+		"German": "Tag"
+	},
+	"Weekday":{
+		"0" : {
+			"English": "Sun.",
+			"German": "So."
+		},
+		"1" : {
+			"English": "Mon.",
+			"German": "Mo."
+		},
+		"2" : {
+			"English": "Tue.",
+			"German": "Di."
+		},
+		"3" : {
+			"English": "Wed.",
+			"German": "Mi."
+		},
+		"4" : {
+			"English": "Thu.",
+			"German": "Do."
+		},
+		"5" : {
+			"English": "Fri.",
+			"German": "Fr."
+		},
+		"6" : {
+			"English": "Sat.",
+			"German": "Sa."
+		}
+	},
+	"Last Week": {
+		"English": "last week",
+		"German": "letzte Woche"
+	},
+	"TakeawayPercentage": {
+		"Header": {
+			"English": "Take-Away Ratio",
+			"German": "Anteil Außer-Haus Umsatz"
+		},
+		"LastWeekWas": {
+			"English": "Last week it was",
+			"German": "Letzte Woche waren es"
+		}
+	},
+	"HourlyRevenue": {
+		"Header": {
+			"English": "Hourly Revenue - By Time of Billing",
+			"German": "Stündliche Umsätze nach Zeitpunkt der Rechnungsstellung"
+		}
+	},
+	"TopFoodItems": {
+		"Header": {
+			"English": "Top 5 Food Items - Number of Items Sold",
+			"German": "Deine Top 5 Speisen - Anzahl verkaufter Artikel"
+		}
+	},
+	"TopBeverageItems": {
+		"Header": {
+			"English": "Top 5 Beverages - Number of Items Sold",
+			"German": "Deine Top 5 Getränke - Anzahl verkaufter Artikel"
+		}
+	},
+	"FoodDrinksRatios": {
+		"Header": {
+			"English": "Ratio Food/Drinks - Number of Items Sold",
+			"German": "Verhältnis Speisen-Getränke - Anzahl verkaufter Artikel"
+		},
+		"food": {
+			"English": "Food",
+			"German": "Speisen"
+		},
+		"drinks": {
+			"English": "Drinks",
+			"German": "Getränke"
+		},
+		"others": {
+			"English": "Others",
+			"German": "Anderes"
+		}
+	},
+	"CardPaymentsPercentage": {
+		"Header": {
+			"English": "Percentage of Card Payments of Yesterday's Revenue",
+			"German": "Anteil von Kartenzahlungen an Deinem gestrigen Umsatz"
+		},
+		"BelowAverage": {
+			"English": "Below Industry Average",
+			"German": "Weniger als im Gastro-Durchschnitt"
+		},
+		"AboveAverage": {
+			"English": "Above Industry Average",
+			"German": "Mehr als im Gastro-Durchschnitt"
+		},
+		"AroundAverage": {
+			"English": "Around Industry Average",
+			"German": "Ungefähr im Gastro-Durchschnitt"
+		}
+	},
+	"AverageInvoice":{
+		"Header": {
+			"English": "Average Transaction Size - Revenue per Invoice",
+			"German": "Durchschnittsbon - Umsatz pro ausgegebener Rechnung"
+		},
+		"HigherThanLast": {
+			"English": "higher than last",
+			"German": "mehr als letzten"
+		},
+		"LowerThanLast": {
+			"English": "lower than last",
+			"German": "weniger als letzten"
+		},
+		"NoDifferenceFromLast": {
+			"English": "No difference from last",
+			"German": "Kein Unterschied zum letzten"
+		}
+	},
+	"Revenue" : {
+		"Header": {
+			"English": "Total Sales",
+			"German": "Gestriger Umsatz"
+		},
+		"RankTop" : {
+			"1" : {
+				"true" : {
+					"English": "Highest",
+					"German": "Höchster"
+				},
+				"false" : {
+					"English": "Lowest",
+					"German": "Niedgrister"
+				}
+			},
+			"2" : {
+				"true" : {
+					"English": "Second highest",
+					"German": "Zweithöchster"
+				},
+				"false" : {
+					"English": "Second lowest",
+					"German": "Zweitniedgrister"
+				}
+			},
+			"3" : {
+				"true" : {
+					"English": "Third highest",
+					"German": "Dritthöchster"
+				},
+				"false" : {
+					"English": "Third lowest",
+					"German": "Drittniedgrister"
+				}
+			},
+			"4" : {
+				"true" : {
+					"English": "Fourth highest",
+					"German": "Vierthöchster"
+				},
+				"false" : {
+					"English": "Fourth lowest",
+					"German": "Viertniedgrister"
+				}
+			},
+			"5" : {
+				"true" : {
+					"English": "Fifth highest",
+					"German": "Fünfthöchster"
+				},
+				"false" : {
+					"English": "Fifth lowest",
+					"German": "Fünftniedgrister"
+				}
+			}
+		},
+		"Since": {
+			"English": "since",
+			"German": "seit dem"
+		},
+		"Ever": {
+			"English": "ever",
+			"German": "aller Zeiten"
+		}
+	}
+}
