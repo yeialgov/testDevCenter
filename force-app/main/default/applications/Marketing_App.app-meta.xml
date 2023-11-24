@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#B8CE36</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>User Interface for Marketing user to the edit Info for the Growth Assessment Tool</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>true</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Marketing App</label>
+    <navType>Standard</navType>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>CostLeadData__c</tabs>
+    <tabs>standard-Campaign</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>Trade_Show_Form__c</tabs>
+    <tabs>LeadAttributeCombo__c</tabs>
+    <tabs>wbsendit__Campaign_Monitor</tabs>
+    <tabs>Work_Order__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Marketing_App_UtilityBar</utilityBar>
+</CustomApplication>

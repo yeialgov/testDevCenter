@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_number_mandatory</fullName>
+    <active>false</active>
+    <description>Makes one of the 2 phone numbers mandatory</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+NOT( $User.ProfileId = &quot;00e58000000SLnr&quot;),
+NOT(ISPICKVAL(RejectedReason__c,&quot;Bad/ incomplete contact details&quot;)), 
+
+ISBLANK(Phone),
+ISBLANK(MobilePhone)
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please fill either the phone or the mobile phone or the email!</errorMessage>
+</ValidationRule>

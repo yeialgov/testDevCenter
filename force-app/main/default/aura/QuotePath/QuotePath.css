@@ -1,0 +1,30 @@
+.THIS .nominwidth {
+    min-width: 0;
+}
+.THIS .success {
+    background-color: #4bca81;
+}
+.THIS .success::before {
+    background-color: #4bca81;
+}
+.THIS .success::after {
+    background-color: #4bca81;
+}
+.THIS .deepSuccess {
+    background-color: #04844b;
+}
+.THIS .deepSuccess::before {
+    background-color: #04844b;
+}
+.THIS .deepSuccess::after {
+    background-color: #04844b;
+}
+.THIS .failure {
+    background-color: #c23934;
+}
+.THIS .failure::before {
+    background-color: #c23934;
+}
+.THIS .failure::after {
+    background-color: #c23934;
+}

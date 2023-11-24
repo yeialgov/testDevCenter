@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Crucial_Feauture_Request</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Type__c</columns>
+    <columns>LAC_ID__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>UTMCampaign__c</columns>
+    <columns>UTMContent__c</columns>
+    <columns>UTMMedium__c</columns>
+    <columns>UTMSource__c</columns>
+    <columns>UTMTerm__c</columns>
+    <columns>Missing_feature__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_90_DAYS</value>
+    </filters>
+    <filters>
+        <field>LostRejectedReason__c</field>
+        <operation>equals</operation>
+        <value>Crucial feature request</value>
+    </filters>
+    <label>Crucial Feauture Request</label>
+</ListView>

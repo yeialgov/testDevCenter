@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Roles__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( Account.Primary_Contact__c =  Id ,IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J0000009Fmv&amp;operationContext=CHATTER&amp;contentId=05T5J000000SQYP&quot;, &quot;P&quot;,23,14), &quot;&quot;) +
+IF ( Account.SF_BillTo_Contact__c  =  Id , IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J0000009Fmr&amp;operationContext=CHATTER&amp;contentId=05T5J000000SQYK&quot;, &quot;B&quot;,23,14), &quot;&quot;) +
+IF ( Account.SF_SoldTo_Contact__c  =  Id , IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J0000009Fn0&amp;operationContext=CHATTER&amp;contentId=05T5J000000SQYZ&quot;, &quot;S&quot;,23,14), &quot;&quot;) +
+IF ( Ambassador_ID__c != NULL, IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J0000009Fmq&amp;operationContext=CHATTER&amp;contentId=05T5J000000SQYF&quot;, &quot;A&quot;,23,14), &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Roles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

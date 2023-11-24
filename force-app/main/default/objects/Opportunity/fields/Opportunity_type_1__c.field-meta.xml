@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_type_1__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>AccM solution CDS-1831 and CDS-1827</description>
+    <externalId>false</externalId>
+    <label>Sub-Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>OppCategory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>orderbird pay</fullName>
+                <default>false</default>
+                <label>orderbird pay</label>
+            </value>
+            <value>
+                <fullName>Compensation</fullName>
+                <default>false</default>
+                <label>Compensation</label>
+            </value>
+            <value>
+                <fullName>POS Add on products</fullName>
+                <default>false</default>
+                <label>POS Add on products</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Upselling</fullName>
+                <default>false</default>
+                <label>Upselling</label>
+            </value>
+            <value>
+                <fullName>pay onboarding</fullName>
+                <default>false</default>
+                <label>pay onboarding</label>
+            </value>
+            <value>
+                <fullName>METRO Cockpit</fullName>
+                <default>false</default>
+                <label>METRO Cockpit</label>
+            </value>
+            <value>
+                <fullName>MINI registration</fullName>
+                <default>false</default>
+                <label>MINI registration</label>
+            </value>
+            <value>
+                <fullName>GM - Table Reservation</fullName>
+                <default>false</default>
+                <label>GM - Table Reservation</label>
+            </value>
+            <value>
+                <fullName>GM - Ordering System</fullName>
+                <default>false</default>
+                <label>GM - Ordering System</label>
+            </value>
+            <value>
+                <fullName>GM - Bundle</fullName>
+                <default>false</default>
+                <label>GM - Bundle</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>New Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>orderbird pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>POS Add on products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Upselling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>pay onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>METRO Cockpit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Table Reservation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Ordering System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Bundle</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

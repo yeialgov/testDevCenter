@@ -1,0 +1,39 @@
+<apex:component >
+    <apex:attribute access="public" name="Account" type="Account" description=""/>
+    <apex:attribute access="public" name="AddressParts" type="List" description=""/>
+    <apex:outputPanel layout="none" rendered="{!IF(Account.AddressBuilder__c = null,true,false)}">
+        {!Account.LegalCompanyName__c}<br/>
+        <apex:outputPanel layout="none" rendered="{!IF(Account.SF_BillTo_Contact__r.FirstName = '[not provided]',false,true)}">
+            {!Account.SF_BillTo_Contact__r.Name}<br/>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!IF(Account.AddressBuilder__c = null,false,true)}">
+        <apex:outputPanel layout="none" rendered="{!IF(AddressParts.size < 1 || AddressParts[0]='empty' || AddressParts[0]=null,false,true)}">
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[0]='LegalCompanyName__c' || AddressParts[0]='Name' || AddressParts[0]='SF_BillTo_Contact__r.Name' || AddressParts[0]='SF_BillTo_Contact__r.Attention__c' || AddressParts[0]='SF_BillTo_Contact__r.Addressee__c',true,false)}">
+                {!Account[AddressParts[0]]}<br/>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[0]='LegalCompanyName__c' || AddressParts[0]='Name' || AddressParts[0]='SF_BillTo_Contact__r.Name' || AddressParts[0]='SF_BillTo_Contact__r.Attention__c' || AddressParts[0]='SF_BillTo_Contact__r.Addressee__c',false,true)}">
+                {!AddressParts[0]}<br/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!IF(AddressParts.size < 2 || AddressParts[1]='empty' || AddressParts[1]=null,false,true)}">
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[1]='LegalCompanyName__c' || AddressParts[1]='Name' || AddressParts[1]='SF_BillTo_Contact__r.Name' || AddressParts[1]='SF_BillTo_Contact__r.Attention__c' || AddressParts[1]='SF_BillTo_Contact__r.Addressee__c',true,false)}">
+                {!Account[AddressParts[1]]}<br/>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[1]='LegalCompanyName__c' || AddressParts[1]='Name' || AddressParts[1]='SF_BillTo_Contact__r.Name' || AddressParts[1]='SF_BillTo_Contact__r.Attention__c' || AddressParts[1]='SF_BillTo_Contact__r.Addressee__c',false,true)}">
+                {!AddressParts[1]}<br/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!IF(AddressParts.size < 3 || AddressParts[2]='empty' || AddressParts[2]=null,false,true)}">
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[2]='LegalCompanyName__c' || AddressParts[2]='Name' || AddressParts[2]='SF_BillTo_Contact__r.Name' || AddressParts[2]='SF_BillTo_Contact__r.Attention__c' || AddressParts[2]='SF_BillTo_Contact__r.Addressee__c',true,false)}">
+                {!Account[AddressParts[2]]}<br/>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!IF(AddressParts[2]='LegalCompanyName__c' || AddressParts[2]='Name' || AddressParts[2]='SF_BillTo_Contact__r.Name' || AddressParts[2]='SF_BillTo_Contact__r.Attention__c' || AddressParts[2]='SF_BillTo_Contact__r.Addressee__c',false,true)}">
+                {!AddressParts[2]}<br/>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:outputPanel>
+    <apex:outputText value="{!SUBSTITUTE(JSENCODE(Account.BillingStreet),'\r\n','<br/>')}" escape="=false"/><br/>
+    {!Account.BillingPostalCode} {!Account.BillingCity}<br/>
+    {!Account.BillingCountry}
+</apex:component>

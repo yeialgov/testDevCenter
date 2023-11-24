@@ -1,0 +1,99 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId"
+                controller="ZuoraSyncController">
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Quote" type="Object" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="FirstRun" type="Boolean" default="true"/>
+    <aura:attribute name="Response" type="List" default="[]"/>
+    <aura:attribute name="InvoiceItems" type="List" default="[]"/>
+    <aura:attribute name="Subtotal" type="Decimal" default="0.00" />
+    <aura:attribute name="Tax" type="Decimal" default="0.00" />
+    <aura:attribute name="Total" type="Decimal" default="0.00" />
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id,Name,AccountId,Account.Subscription_Count__c,Account.ZuoraId__c"
+                      targetFields="{!v.Quote}"
+                      recordUpdated="{!c.doInit}"/>
+    
+    <aura:attribute name="myRecordId" type="String" description="Record to which the files should be attached" />
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner />
+        <aura:set attribute="else">            
+            <div class="slds-text-heading_large">Invoice Preview</div>
+            <div class="slds-card__body slds-scrollable_x">
+                <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col" style="">
+                                <div class="slds-truncate" title="Name">Item</div>
+                            </th>
+                            <th scope="col" style="text-align:right;">
+                                <div class="slds-truncate" title="Company">Qty</div>
+                            </th>
+                            <th scope="col" style="text-align:right;">
+                                <div class="slds-truncate" title="Title">Unit</div>
+                            </th>
+                            <th scope="col" style="text-align:right;">
+                                <div class="slds-truncate" title="Email">Total</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration var="item" items="{!v.InvoiceItems}">
+                            <tr class="slds-hint-parent">
+                                <th scope="col">
+                                    <div class="slds-truncate">{!item.ChargeName}</div>
+                                </th>
+                                <td style="text-align:right;">
+                                    <aura:if isTrue="{!item.Quantity != null}">
+                                        <div class="slds-truncate">{!item.Quantity}</div>
+                                    </aura:if>
+                                </td>
+                                <td style="text-align:right;">
+                                    <aura:if isTrue="{!item.UnitPrice != null}">
+                                        <div class="slds-truncate"><ui:outputNumber value="{!item.UnitPrice}" format="#,##0.00"/></div>
+                                    </aura:if>
+                                </td>
+                                <td style="text-align:right;">
+                                    <aura:if isTrue="{!item.ChargeAmount != null}">
+                                        <div class="slds-truncate"><ui:outputNumber value="{!item.ChargeAmount}" format="#,##0.00"/></div>
+                                    </aura:if>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                        <tr class="slds-hint-parent slds-is-selected">
+                            <th scope="col">Sub-total</th>
+                            <th scope="col"/>
+                            <th scope="col"/>
+                            <td style="text-align:right;font-weight:700;">
+                                <div class="slds-truncate"><ui:outputNumber value="{!v.Subtotal}" format="#,##0.00"/></div>
+                            </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th scope="col">Tax</th>
+                            <th scope="col"/>
+                            <th scope="col"/>
+                            <td style="text-align:right;font-weight:700;">
+                                <div class="slds-truncate"><ui:outputNumber value="{!v.Tax}" format="#,##0.00"/></div>
+                            </td>
+                        </tr>
+                        <tr class="slds-hint-parent slds-is-selected">
+                            <th scope="col">Total</th>
+                            <th scope="col"/>
+                            <th scope="col"/>
+                            <td style="text-align:right;font-weight:700;">
+                                <div class="slds-truncate"><ui:outputNumber value="{!v.Total}" format="#,##0.00"/></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

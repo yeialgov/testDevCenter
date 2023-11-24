@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>TSE certified 7.4 test</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE only fieldtest V 7.4 August 2021</name>
+    <style>none</style>
+    <subject>Neue Test-App mit zertifizierter TSE steht bereit!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

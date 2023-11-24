@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-1342</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>New active paying customer</name>
+    <style>none</style>
+    <subject>{!Account.Name} - New active paying customer - {!Account.Region__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

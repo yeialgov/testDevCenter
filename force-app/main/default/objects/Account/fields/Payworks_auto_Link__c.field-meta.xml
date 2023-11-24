@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payworks_auto_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISBLANK(Payworks_Merchant_ID__c)) ,
+
+HYPERLINK(&quot;https://api.payworks.io/uis/mngr/#/applications/pw.orderbird.mpos/merchants/&quot; &amp; Payworks_Merchant_ID__c &amp; &quot;/information&quot;, &quot;Click Me&quot;)
+
+, &quot;N/A&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Payworks Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Industry</fullName>
+    <inlineHelpText>What kind of business is the venue? To be filled in as soon as possible. Always update in case new information becomes available!</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Picklist</type>
 </CustomField>

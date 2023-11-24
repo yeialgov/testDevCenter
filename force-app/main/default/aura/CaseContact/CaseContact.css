@@ -1,0 +1,8 @@
+.THIS .badger{
+    font-weight: 900;
+    color: white;
+    padding: 0 4px;
+    margin-left: 4px;
+    border-radius: 2px;
+    background-color: rgb(160,148,237);
+}

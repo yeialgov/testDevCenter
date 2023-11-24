@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - Showroom meeting confirmation - SIE</name>
+    <style>freeForm</style>
+    <subject>Bestätigung Ihrer Vor-Ort-Besichtigung bei orderbird</subject>
+    <textOnly>www.orderbird.com
+{!User.Email}
+{!User.Phone}
+
+
+
+Hallo liebes Team vom…,
+Liebe …,
+
+vielen Dank für das nette Telefongespräch! Wie besprochen, möchte ich Ihnen orderbird genauer vorstellen, damit Sie sich selbst ein Urteil bilden können.
+
+In unserem Showroom haben wir typische Szenarios aufgebaut und Sie können orderbird dort realitätsgetreu ausprobieren.
+
+Mein Ziel für unseren Termin ist es, Ihnen eine Entscheidungsgrundlage zu bieten, ob orderbird zu Ihnen passt.
+
+Ich habe mir folgenden Termin in meinem Kalender notiert und rufe Sie vorher nochmal an:
+
+XX.XX.XXX um XX.XX Uhr in der Ritterstraße 12-14 in Kreuzberg.
+
+Ich nehme mir gerne die Zeit und blockiere mir das Zeitfenster für Sie. Bitte tragen Sie sich den Termin ebenfalls in Ihren Kalender ein und geben mir bitte frühzeitig Bescheid, falls Sie den Termin nicht wahrnehmen können.
+
+Ich freue mich darauf, Ihnen den Marktführer orderbird präsentieren zu dürfen. Sollten in der Zwischenzeit Fragen haben, so freue ich mich auf Ihren Anruf oder Ihre E-Mail.
+
+Vielen Dank und liebe Grüße aus Berlin,
+
+Dein orderbird-Team
+
+
+
+98% unserer über {!User.Happy_Customers__c} Kunden würden uns weiterempfehlen! Gewinner des DEHOGA &amp; Intergastra Innovationspreis 2012/2013</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

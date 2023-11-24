@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allow users in the Support Console to use the status to route case via the omni-channel</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Omni_Channel_Cases</label>
+</PermissionSet>

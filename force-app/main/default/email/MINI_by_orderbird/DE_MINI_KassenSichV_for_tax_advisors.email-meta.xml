@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE MINI KassenSichV for tax advisors</name>
+    <style>none</style>
+    <subject>MINI by orderbird - Die Umsetzung der technischen Auflagen der KassenSichV</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+vielen Dank für Deine Anfrage zur Umsetzung der technischen Auflagen der KassenSichV für den MINI by orderbird. Alle Details dazu sind in unserer Verfahrensdokumentation beschrieben, die Du hier in ihrer aktuellsten Version herunterladen kannst: MINI by orderbird - Verfahrensdokumentation.
+
+
+Bereitstellung einer Online-TSE
+MINI by orderbird ist über eine Cloud-basierte Lösung mit einer Online-TSE ausgerüstet, die durch den Nutzer aktiviert werden muss. Die Online-TSE wird durch unseren Partner fiskaly bereitgestellt und ist über eine Schnittstelle mit MINI by orderbird verbunden. Nutzer_Innen des MINI by orderbird melden sich zur Aktivierung der Online-TSE über das zur Kassen-App gehörende Backend “my.orderbird.com” an. Es liegt in der Verantwortung des Nutzers, die TSE zu aktivieren.
+
+
+Zertifizierungs-ID der Online-TSE
+Die von fiskaly gestellte TSE befindet sich unter den Zertifizierungsnummern BSI-DSZ-CC-1130 und BSI-DSZ-DD-1153 aktuell (Stand 14.10.2020) im Zertifizierungsprozess des Bundesamts für Sicherheit in der Informationstechnik (BSI). Weitere Informationen zum aktuellen Status des Zertifizierungsprozesses können auf den Seiten des BSI abgerufen werden: “Produkte, die sich in Zertifizierung befinden”.
+
+Bereits jetzt ist die CSP Komponente (Cryptographic Service Provider Light) vom BSI mit Zertifizierungskennnummer BSI-DSZ-CC-1153–2021 zertifiziert.
+
+Die Zertifizierungs-ID der TSE wird bereitgestellt, sobald sie uns vorliegt.
+
+
+DSFinV-K Export
+Die Daten für den DSFinV-K Export werden sicher im fiskaly-Backend gespeichert. Zukünftig können MINI by orderbird Nutzer_Innen den Export jederzeit selbstständig erstellen. Dazu rufen sie über my.orderbird.com das fiskaly-Portal auf und erstellen dort den Export für den gewünschten Zeitraum. Aktuell ist der Zugang über das fiskaly-Backend noch nicht verfügbar (Stand 14.10.2020).
+
+
+Seriennummer der TSE
+Die 65-stellige Seriennummer der TSE, die aus Ziffern und Kleinbuchstaben besteht, wird auf jeden Beleg gedruckt.
+
+
+Seriennummer des MINI by orderbird
+Die Seriennummer des MINI by orderbird befindet sich auf der Rückseite des Geräts und besteht aus zehn Ziffern. Beispiel: “S/N: 1234567890”. Sie ist ebenfalls in der journal_entries.csv dokumentiert im Feld “device_name”, z.B. “MINI 1234567890”, wobei wiederum die letzten zehn Ziffern die Seriennummer darstellen.
+
+
+Meldepflicht für Registrierkassen
+Die Meldepflicht für Registrierkassen ist vom Gesetzgeber bis auf Weiteres aufgeschoben wurde. Aktuell gibt es keine Möglichkeit, den Betrieb des MINI by orderbird auf elektronischem Wege zu melden. (Stand 14.10.2020)
+
+
+Betrieb des MINI by orderbird nach Aktivierung der Online-TSE
+Ein Nutzer führt seine Kasse den technischen Auflagen der KassenSichv entsprechend, sobald App Version 1.0 oder höher auf dem Endgerät installiert und die Online-TSE über das Backend “my.orderbird.com” aktiviert wurde. Ab diesem Zeitpunkt werden alle Transaktionen des MINI by orderbird parallel an die Online-TSE gesendet und bekommen dort eine sichere und unveränderbare Signatur. Der weitere Betrieb der Kasse ist nur noch in Anbindung an die Online-TSE möglich. Weiterhin werden alle Transaktionsdaten nur sicher verschlüsselt versendet und werden sowohl im my.orderbird-Backend als auch bei fiskaly sicher verschlüsselt gespeichert.
+
+
+Stammdatenänderungen
+Während einer laufenden Schicht können die Nutzer_Innen der MININ by orderbird ihre Stammdaten nicht mehr verändern. Eine Änderung der Stammdaten ist nur bei geschlossener Schicht möglich und wird über die Online-TSE protokolliert und im DSFinV-K-Export gespeichert. Zu den Stammdaten zählen:
+
+Name und Adresse des Betriebs
+Name, Telefonnummer und E-Mail-Adresse der vom Nutzer angegebenen Kontaktperson
+Steuernummer des Betriebs
+
+
+Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter supportmini.orderbird.com.
+
+Liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

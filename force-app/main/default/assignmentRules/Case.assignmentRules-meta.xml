@@ -1,91 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignmentRule>
-        <fullName>Standard</fullName>
+        <fullName>Case Assignment</fullName>
         <active>true</active>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>Agent_Chat_Bots</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.Origin</field>
                 <operation>equals</operation>
-                <value>US,USA,United States,United States of America</value>
+                <value>Ebot7</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Account.SLA__c</field>
+                <field>Case.Online_Handover_ebot7__c</field>
                 <operation>equals</operation>
-                <value>Gold,Platinum</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
+                <value>True</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>ChatBot</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.Origin</field>
                 <operation>equals</operation>
-                <value>US,USA,United States,United States of America</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.SLA__c</field>
-                <operation>equals</operation>
-                <value>Silver,Bronze</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
+                <value>Ebot7</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
-            <assignedToType>User</assignedToType>
+            <booleanFilter>(1 OR 2) AND 3</booleanFilter>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.ParentId</field>
                 <operation>notEqual</operation>
-                <value>US,USA,United States,United States of America</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Account.SLA__c</field>
-                <operation>equals</operation>
-                <value>Gold,Platinum</value>
+                <field>User.Username</field>
+                <operation>notContain</operation>
+                <value>sfdc@orderbird</value>
             </criteriaItems>
             <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
+                <field>Case.RecordTypeId</field>
+                <operation>notContain</operation>
+                <value>Onboarding</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
-            <assignedToType>User</assignedToType>
+            <assignedTo>SFDC_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
             <criteriaItems>
-                <field>Account.BillingCountry</field>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>SFDC Support</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Success</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Webinar</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MINI_incoming_Case_queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>OR( ISPICKVAL( Origin, &quot;E-Mail MINI&quot;), AND(ISNEW(), ISPICKVAL( Origin, &quot;Web&quot;)) )</formula>
+            <overrideExistingTeams>true</overrideExistingTeams>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>MINI_incoming_Case_queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(ISNEW(), ISPICKVAL( Origin, &quot;E-Mail DACH&quot;), OR( Contains(Subject, &quot;MINI&quot;)))</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Account_Specialists</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(ISNEW(), ISPICKVAL( Origin, &quot;E-Mail DACH&quot;), OR(Contains(Subject, &quot;kündig&quot;), Contains(Subject, &quot;Kündig&quot;), Contains(Subject, &quot;Inkasso&quot;), Contains(Subject, &quot;Mahnung&quot;), Contains(Subject, &quot;Insolvenz&quot;),Contains(Subject, &quot;AccSp&quot;), Contains(Subject, &quot;Datenanpassung&quot;)))</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Pay_Specialists</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;E-Mail DACH&quot;), OR( Contains( Subject, &quot;Pay&quot;), Contains( Subject, &quot;Reader&quot;), Contains( Subject, &quot;Kartenzahlung&quot;), Contains( Subject, &quot;leser&quot;), Contains( Subject, &quot;Concardis&quot;), Contains( Subject, &quot;Disagio&quot;), Contains( Subject, &quot;Bambora&quot;), Contains( Subject, &quot;kontaktlos&quot;), Contains( Subject, &quot;Transaktion&quot;)))</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Success</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;E-Mail DACH&quot;),  OR(  Contains( Subject, &quot;SPK&quot;),  Contains( Subject, &quot;Webinar&quot;),  Contains( Subject, &quot;Speisekarte&quot;),  Contains( Subject, &quot;Schulung&quot;),  Contains( Subject, &quot;Artikelliste&quot;),  Contains( Subject, &quot;Preisliste&quot;)))</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DACH_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;E-Mail DACH&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DACH_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;E-Mail EN&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FR_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;E-Mail FR&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DACH_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;Live Call After Hours&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Nightowls</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;Voicemail After Hours&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DACH_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(   ISNEW(),   ISPICKVAL( Origin, &quot;Voicemail&quot;),   OR(  Contains( Subject, &quot;2 DE AH Leave Message&quot;),  Contains( Subject, &quot;2 EN AH Leave Message&quot;), Contains( Subject, &quot;CCA&quot;) )   )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Success</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(   ISNEW(),   ISPICKVAL( Origin, &quot;Voicemail&quot;),   OR(   Contains( Subject, &quot;4 DE GetItDone&quot;),   Contains( Subject, &quot;2 DE OH GuestManagement&quot;),   Contains(Subject, &quot;CSM&quot;))   )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Account_Specialists</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL(  Origin, &quot;Voicemail&quot;),  OR(   Contains(Subject, &quot;AccSp&quot;)   ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>FR_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(   ISNEW(),   ISPICKVAL( Origin, &quot;Voicemail&quot;),   OR(   Contains(Subject, &quot;FR OH Support&quot;),  Contains( Subject, &quot;2 FR AH Leave Message&quot;)   )   )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Pay_Specialists</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;Voicemail&quot;),   OR( Contains(Subject, &quot;Pay&quot;) )  )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Tech_Support</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(   ISNEW(),   ISPICKVAL( Origin, &quot;Voicemail&quot;),   OR(  Contains (Subject, &quot;Tech&quot;) ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DACH_Incoming_Case_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  ISPICKVAL( Origin, &quot;Voicemail&quot;) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Customer_Success</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(  ISNEW(),  OR(  RecordTypeId = &quot;01258000000FAvx&quot; ,  RecordTypeId = &quot;01258000000FDOe&quot; ) )</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.CaseNumber</field>
                 <operation>notEqual</operation>
-                <value>US,USA,United States,United States of America</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.SLA__c</field>
-                <operation>equals</operation>
-                <value>Silver,Bronze</value>
-            </criteriaItems>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Customer</value>
-            </criteriaItems>
-        </ruleEntry>
-        <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
-            <assignedToType>User</assignedToType>
-            <criteriaItems>
-                <field>Account.Type</field>
-                <operation>contains</operation>
-                <value>Partner</value>
             </criteriaItems>
         </ruleEntry>
     </assignmentRule>

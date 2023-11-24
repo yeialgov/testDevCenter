@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Account_Currency_Change</fullName>
+    <active>true</active>
+    <description>https://jira.orderbird.com/browse/SFDC-1493</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( 
+$Label.Admin_Users , $User.Id )), 
+ISCHANGED( 
+CurrencyIsoCode),
+NOT(ISBLANK( ZuoraId__c )
+)
+)</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>You cannot change the currency for this customer anymore! Please reach out to Finance in case of questions!</errorMessage>
+</ValidationRule>

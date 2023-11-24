@@ -1,0 +1,12 @@
+.THIS .red div span {
+    background-color: red;
+}
+.THIS .hoverMe:hover div div span span {
+    background-color: #10426a;
+}
+.THIS .hoverMe:hover div div span span span svg{
+    fill: #02a3e0;
+}
+.THIS .borderMe {
+    background-color: red !important;
+}

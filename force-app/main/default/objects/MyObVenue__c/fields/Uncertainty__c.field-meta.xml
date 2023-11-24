@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uncertainty__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>This field displays how uncertain we are that this connection is valid.
+
+0 = created by link OR created by BI with all parameters matching
+1 = created by BI with one parameter not matching
+2 = created by BI with two parameters not matching
+9 = created by BI and subsequently confirmed by the customer</description>
+    <externalId>false</externalId>
+    <label>Uncertainty</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

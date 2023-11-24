@@ -1,0 +1,79 @@
+<aura:component controller="NewQuoteController"
+                implements="flexipage:availableForAllPageTypes" 
+                access="global" >
+    
+    <aura:registerEvent name="appEvent" type="c:NewQuoteItem"/>
+    
+    <aura:attribute name="Catalog" type="List"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="QuoteId" type="String"/>
+    <aura:attribute name="CloneToOpportunity" type="Boolean" default="false"/> 
+    <aura:attribute name="SLIs" type="List"/>
+    <aura:attribute name="isAcctMgmt" type="Boolean" default="false"/>
+    <aura:attribute name="isAmendment" type="Boolean" default="false"/>
+    <aura:attribute name="Quote" type="Object"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.QuoteId}"
+                      fields="Id,Name,Opportunity.DiscountEligible__c,QuoteNumber,OpportunityId,Opportunity.Account.BillingCountryCode,Opportunity.Name,Opportunity.AccountId,Opportunity.Account.ZuoraId__c,Opportunity.Account.Name,Opportunity.Account.CurrencyIsoCode"
+                      targetFields="{!v.Quote}" 
+                      recordUpdated="{!c.doInit}"/>
+    
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner />
+    </aura:if>
+    <div class="slds-card">
+        <div class="slds-card__header">
+            <div class="slds-page-header" role="banner">
+                <p class="slds-text-heading_label">{!v.Quote.Opportunity.Account.Name}</p>
+                <aura:if isTrue="{!v.CloneToOpportunity}">
+                    <h1 class="slds-page-header__title slds-m-right_small
+                               slds-truncate slds-align-left">Clone Quote</h1>
+                    <aura:set attribute="else">
+                        <h1 class="slds-page-header__title slds-m-right_small
+                                   slds-truncate slds-align-left">Edit Quote&nbsp;{!v.Quote.QuoteNumber}</h1>
+                    </aura:set>
+                </aura:if>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_7-of-12">
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <aura:iteration var="cat" items="{!v.Catalog}">
+                            <aura:if isTrue="{!or(cat.Visibility__c == 'Visible to All', and(cat.Visibility__c == 'Acct Mgmt Only', v.isAcctMgmt))}">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <c:QuoteCategoryContainer Data="{!cat}" 
+                                                              isAcctMgmt = "{!v.isAcctMgmt}"
+                                                              Currency="{!v.Quote.Opportunity.Account.CurrencyIsoCode}"/>
+                                </div>
+                            </aura:if>
+                        </aura:iteration>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_5-of-12" style="padding-left:0;">
+                <!--{!v.body}-->
+                <c:QuoteSubtotaler QuoteId="{!v.QuoteId}" 
+                                   PresetValue="{!v.PresetValue}" 
+                                   Opportunity="{!v.Quote.Opportunity}" 
+                                   isAcctMgmt="{!v.isAcctMgmt}"
+                                   Currency="{!v.Quote.Opportunity.Account.CurrencyIsoCode}" 
+                                   IsAmendment="{!v.IsAmendment}"/>
+                <aura:if isTrue="{!v.CloneToOpportunity}">
+                    <c:NewQuoteButtons RedirectId="{!v.Quote.OpportunityId}" Type="Create"/>
+                    <aura:set attribute="else">
+                        <c:NewQuoteButtons RedirectId="{!v.QuoteId}" Type="Update"/>
+                    </aura:set>
+                    <br/>
+                </aura:if>
+                <br/>
+                <aura:iteration var="SLI" items="{!v.SLIs}">
+                    <c:SLIRemovalPicker SLI="{!SLI}"/>
+                </aura:iteration>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

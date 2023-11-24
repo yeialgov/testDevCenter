@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_not_empty</fullName>
+    <active>false</active>
+    <description>https://jira.orderbird.com/browse/SAL-42</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status , &quot;Completed&quot;),
+Next_Step_relevant__c = true,
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+OR(
+ $User.ProfileId = &quot;00e58000001547F&quot;, /* AM */
+$User.ProfileId = &quot;00e58000000Ijip&quot;, /* SDR */
+$User.ProfileId = &quot;00e580000015470&quot;), /* Sales */
+OR(
+ ISCHANGED(Opportunity_Stage__c),
+ ISNEW()),
+ISPICKVAL(Opportunity_Stage__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Opportunity_Stage__c</errorDisplayField>
+    <errorMessage>Stage cannot be empty! Please select one of the picklist values!</errorMessage>
+</ValidationRule>

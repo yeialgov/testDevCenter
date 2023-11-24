@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tims_All_Open_Cases</fullName>
+    <columns>CASES.STATUS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Pay_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OWNER_NAME</field>
+        <operation>equals</operation>
+        <value>Pay Registration,Pay Misc,Cardreader,MINI incoming Case queue,Joachim Groß,Tim Dahlmann,Lisa Baig,Valeria Meissner,Outdated Pay Specialists</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>On Hold,Re-Open,Waiting for Customer Reply,Open,New</value>
+    </filters>
+    <label>Tims Case Overview</label>
+</ListView>

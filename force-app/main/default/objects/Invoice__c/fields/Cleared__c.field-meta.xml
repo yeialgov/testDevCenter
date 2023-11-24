@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cleared__c</fullName>
+    <externalId>false</externalId>
+    <formula>Status__c = &apos;Posted&apos; &amp;&amp;  Balance__c = 0 &amp;&amp; 
+(  QualifyingPaymentCount__c &gt; 0 ||  abs(CreditBalanceAdjustmentAmount__c) = abs(Amount__c)  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cleared</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

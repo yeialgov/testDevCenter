@@ -1,0 +1,11 @@
+<apex:page controller="jsOptout" sidebar="false" showHeader="false">
+    <div style="padding:1rem;">
+        <c:birdHeader />
+        <apex:form >
+            <apex:outputPanel rendered="{!msg==null}">
+                <apex:commandButton action="{!execute}" value="Widersprechen"/>
+            </apex:outputPanel>
+        </apex:form>
+        <h1 style="font-size:200%;">{!msg}</h1>
+    </div>
+</apex:page>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_54007133</developerName>
+        <masterLabel>Successful or NOT</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Activity$Outcome__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Demo completed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Successful</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Completed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Task Completed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Attended</sourceValue>
+            </sourceValues>
+            <value>Success</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Not Reached - no Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Not Reached - Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Show</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Reached but busy</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Reached but not willing to talk</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Reached but contact not available</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Reached -but only want to have an offer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Successful - Lost</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Not Attended</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancellation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancellation by orderbird</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cancellation via Calendly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Interest anymore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Already has a POS</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>E-Mail bounced</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Expired</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Watched Video</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aborted - does not want pay</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aborted - needs Concardis</sourceValue>
+            </sourceValues>
+            <value>No Success</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Activity$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Activity$Subject</field>
+    </columns>
+    <columns>
+        <field>Activity$Outcome__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Number of Successful Demos per MONTH during the last two years</description>
+    <filter>
+        <criteriaItems>
+            <column>Activity$Activity_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Demo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity$ActivityDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>THIS_MONTH</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Activity$ActivityDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_54007133</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Successful Demo per MONTH</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activities_custom__c</reportType>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Activity$ActivityDate</dateColumn>
+        <endDate>2020-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-01-01</startDate>
+    </timeFrameFilter>
+</Report>

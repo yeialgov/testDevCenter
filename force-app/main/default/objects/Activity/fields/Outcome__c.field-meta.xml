@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Reached - no Voicemail</fullName>
+                <default>false</default>
+                <label>Not Reached - no Voicemail</label>
+            </value>
+            <value>
+                <fullName>Not Reached - Voicemail</fullName>
+                <default>false</default>
+                <label>Not Reached - Voicemail</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Reached but busy</fullName>
+                <default>false</default>
+                <label>Reached but busy</label>
+            </value>
+            <value>
+                <fullName>Reached but not willing to talk</fullName>
+                <default>false</default>
+                <label>Reached but not willing to talk</label>
+            </value>
+            <value>
+                <fullName>Reached but contact not available</fullName>
+                <default>false</default>
+                <label>Reached but contact not available</label>
+            </value>
+            <value>
+                <fullName>Reached -but only want to have an offer</fullName>
+                <default>false</default>
+                <label>Reached -but only want to have an offer</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Demo completed</fullName>
+                <default>false</default>
+                <label>Demo completed</label>
+            </value>
+            <value>
+                <fullName>Task Completed</fullName>
+                <default>false</default>
+                <label>Task Completed</label>
+            </value>
+            <value>
+                <fullName>Successful</fullName>
+                <default>false</default>
+                <label>Successful</label>
+            </value>
+            <value>
+                <fullName>Successful - Lost</fullName>
+                <default>false</default>
+                <label>Successful - Lost</label>
+            </value>
+            <value>
+                <fullName>Attended</fullName>
+                <default>false</default>
+                <label>Attended</label>
+            </value>
+            <value>
+                <fullName>Not Attended</fullName>
+                <default>false</default>
+                <label>Not Attended</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Cancellation by orderbird</fullName>
+                <default>false</default>
+                <label>Cancellation by orderbird</label>
+            </value>
+            <value>
+                <fullName>Cancellation via Calendly</fullName>
+                <default>false</default>
+                <label>Cancellation via Calendly</label>
+            </value>
+            <value>
+                <fullName>No Interest anymore</fullName>
+                <default>false</default>
+                <label>No Interest anymore</label>
+            </value>
+            <value>
+                <fullName>Already has a POS</fullName>
+                <default>false</default>
+                <label>Already has a POS</label>
+            </value>
+            <value>
+                <fullName>E-Mail bounced</fullName>
+                <default>false</default>
+                <label>E-Mail bounced</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Watched Video</fullName>
+                <default>false</default>
+                <label>Watched Video</label>
+            </value>
+            <value>
+                <fullName>Aborted - does not want pay</fullName>
+                <default>false</default>
+                <label>Aborted - does not want pay</label>
+            </value>
+            <value>
+                <fullName>Aborted - needs Concardis</fullName>
+                <default>false</default>
+                <label>Aborted - needs Concardis</label>
+            </value>
+            <value>
+                <fullName>Outcome not specified</fullName>
+                <default>false</default>
+                <label>Outcome not specified</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <valueName>No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Reached -but only want to have an offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Demo completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>No Interest anymore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Demo (onsite)</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Already has a POS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>PM - Partner check-in</controllingFieldValue>
+            <controllingFieldValue>PM - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - 1-on-1-Training</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>Support - Ketchup Call</controllingFieldValue>
+            <controllingFieldValue>Support - Goodbye Call</controllingFieldValue>
+            <controllingFieldValue>Support - Welcome Call</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Not Reached - no Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>PM - Partner check-in</controllingFieldValue>
+            <controllingFieldValue>PM - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - 1-on-1-Training</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>Support - Ketchup Call</controllingFieldValue>
+            <controllingFieldValue>Support - Goodbye Call</controllingFieldValue>
+            <controllingFieldValue>Support - Welcome Call</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Not Reached - Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>PM - Partner check-in</controllingFieldValue>
+            <controllingFieldValue>PM - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - 1-on-1-Training</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>Support - Ketchup Call</controllingFieldValue>
+            <controllingFieldValue>Support - Goodbye Call</controllingFieldValue>
+            <controllingFieldValue>Support - Welcome Call</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Reached but busy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>PM - Partner check-in</controllingFieldValue>
+            <controllingFieldValue>PM - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - 1-on-1-Training</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>Support - Ketchup Call</controllingFieldValue>
+            <controllingFieldValue>Support - Goodbye Call</controllingFieldValue>
+            <controllingFieldValue>Support - Welcome Call</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <controllingFieldValue>Sales - Demo (online)</controllingFieldValue>
+            <valueName>Reached but not willing to talk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <valueName>Reached but contact not available</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <valueName>Task Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>PM - Partner check-in</controllingFieldValue>
+            <controllingFieldValue>PM - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - General Issues</controllingFieldValue>
+            <controllingFieldValue>Support - 1-on-1-Training</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>Support - Ketchup Call</controllingFieldValue>
+            <controllingFieldValue>Support - Goodbye Call</controllingFieldValue>
+            <controllingFieldValue>Support - Welcome Call</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>Support - Incoming Voicemail</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <valueName>Successful</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>Sales - Support Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - General Issues</controllingFieldValue>
+            <controllingFieldValue>Sales - Order Process</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>Sales - Demand Analysis</controllingFieldValue>
+            <controllingFieldValue>Sales - Sales Talk</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up (Corona)</controllingFieldValue>
+            <controllingFieldValue>Sales - Follow up</controllingFieldValue>
+            <valueName>Successful - Lost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales - Upselling</controllingFieldValue>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <valueName>E-Mail bounced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support - Webinar Orderpad</controllingFieldValue>
+            <controllingFieldValue>Support - Webinar Settings</controllingFieldValue>
+            <controllingFieldValue>Support - Webinar my.orderbird</controllingFieldValue>
+            <controllingFieldValue>MINI</controllingFieldValue>
+            <controllingFieldValue>PRO</controllingFieldValue>
+            <valueName>Attended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Support - Webinar Orderpad</controllingFieldValue>
+            <controllingFieldValue>Support - Webinar Settings</controllingFieldValue>
+            <controllingFieldValue>Support - Webinar my.orderbird</controllingFieldValue>
+            <controllingFieldValue>AccM - Compensation</controllingFieldValue>
+            <controllingFieldValue>MINI</controllingFieldValue>
+            <controllingFieldValue>PRO</controllingFieldValue>
+            <valueName>Not Attended</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <valueName>Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <valueName>Cancellation by orderbird</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <valueName>Cancellation via Calendly</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <valueName>Aborted - does not want pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AccM - pay onboarding</controllingFieldValue>
+            <valueName>Aborted - needs Concardis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MINI</controllingFieldValue>
+            <valueName>Watched Video</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

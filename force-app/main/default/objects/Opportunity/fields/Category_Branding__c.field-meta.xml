@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Branding__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-3198</description>
+    <externalId>false</externalId>
+    <formula>IF (  
+Template_Branding__c = &apos;MINI&apos;,
+IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J000006dE3z&amp;operationContext=CHATTER&amp;contentId=05T5J00000O2wkq&quot;, &quot;&quot;,15,25 )+ &quot; &quot;, 
+IMAGE(&quot;/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=0685J000006dE5G&amp;operationContext=CHATTER&amp;contentId=05T5J00000O2wlA&quot;, &quot;&quot;,15,25)+ &quot; &quot;) 
++ TEXT(OppCategory__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Category &amp; Branding</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

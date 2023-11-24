@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>shopifySalesOrderId__c</fullName>
+    <description>https://jira.orderbird.com/browse/CRMT-4592</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Id of the Sales Order created in Shopify</inlineHelpText>
+    <label>Sales Order Id Shopify</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

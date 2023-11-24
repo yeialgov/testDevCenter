@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetSuiteId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This field contains the internal ID of the record exported from NetSuite</description>
+    <externalId>true</externalId>
+    <inlineHelpText>This field contains the internal ID of the record exported from NetSuite. DO NOT TOUCH</inlineHelpText>
+    <label>NetSuiteId</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

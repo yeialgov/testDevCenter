@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LiveChatAgentConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <users>
+            <user>philipp.wegener@orderbird.com</user>
+            <user>tim.dahlmann@orderbird.com</user>
+            <user>uta.niessner@orderbird.com</user>
+            <user>valeria.meissner@orderbird.com</user>
+            <user>yeisson.gonzalez@orderbird.com</user>
+        </users>
+    </assignments>
+    <autoGreeting>Hallo {!LiveAgent_VisitorName}!
+hast Du noch weitere Details für mich, damit ich Dir schneller helfen kann?</autoGreeting>
+    <customAgentName>{!User_FirstName}</customAgentName>
+    <disableTransferConferenceGreeting>false</disableTransferConferenceGreeting>
+    <enableAgentFileTransfer>true</enableAgentFileTransfer>
+    <enableAgentSneakPeek>true</enableAgentSneakPeek>
+    <enableAssistanceFlag>false</enableAssistanceFlag>
+    <enableAutoAwayOnDecline>true</enableAutoAwayOnDecline>
+    <enableAutoAwayOnPushTimeout>true</enableAutoAwayOnPushTimeout>
+    <enableChatConferencing>false</enableChatConferencing>
+    <enableChatMonitoring>true</enableChatMonitoring>
+    <enableChatTransferToAgent>true</enableChatTransferToAgent>
+    <enableChatTransferToButton>true</enableChatTransferToButton>
+    <enableChatTransferToSkill>true</enableChatTransferToSkill>
+    <enableLogoutSound>true</enableLogoutSound>
+    <enableNotifications>true</enableNotifications>
+    <enableRequestSound>false</enableRequestSound>
+    <enableSneakPeek>true</enableSneakPeek>
+    <enableVisitorBlocking>false</enableVisitorBlocking>
+    <enableWhisperMessage>true</enableWhisperMessage>
+    <label>Chat Agent Config</label>
+</LiveChatAgentConfig>

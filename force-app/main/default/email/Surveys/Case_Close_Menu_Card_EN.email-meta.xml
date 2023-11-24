@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Close Menu Card EN</name>
+    <style>none</style>
+    <subject>Your menu card is done! We&apos;d love to hear your feedback!</subject>
+    <textOnly>{!Case.OwnerFirstName} has finished working on menu card today.
+
+Did we do a good job?
+
+orderbird AG
+
+
+
+Ritterstraße 12-14, Aufg. 3
+D-10969 Berlin
+Germany
+
+
+
+Headquaters: Berlin
+District Court: Amtsgericht Berlin – Charlottenburg
+HRB 134011
+VAT-ID: DE276722316
+
+
+
+CEO: Jakob Schreyer
+
+Chairman of the Board: Carlo Kölzer
+
+
+© 2010–2017 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

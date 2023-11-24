@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DistributionPartner__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is a workaround until the partner community is in place and distribution partners can actually be object owners // For go-live not used, since Distribution Programm on hold // Stakeholder: PaM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is a distribution Partner owner of this Opportunity? Set on creation or by Leadmanagent</inlineHelpText>
+    <label>Distribution Partner</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Leads (Distribution Partner)</relationshipLabel>
+    <relationshipName>Leads1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

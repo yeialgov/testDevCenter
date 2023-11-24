@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+	<title>Template Base</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		th.column {
+			padding: 0
+		}
+
+		a[x-apple-data-detectors] {
+			color: inherit !important;
+			text-decoration: inherit !important;
+		}
+
+		#MessageViewBody a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		p {
+			line-height: inherit
+		}
+
+		@media (max-width:620px) {
+			.row-content {
+				width: 100% !important;
+			}
+
+			.image_block img.big {
+				width: auto !important;
+			}
+
+			.stack .column {
+				width: 100%;
+				display: block;
+			}
+		}
+	</style>
+</head>
+
+<body style="background-color: #eaeced; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+	<table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; background-color: #eaeced;">
+		<tbody>
+			<tr>
+				<td>
+					<table class="row row-1" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; color: #333;" width="600">
+										<tbody>
+											<tr>
+												<th class="column" width="100%" style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="image_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+														<tr>
+															<td style="width:100%;padding-right:0px;padding-left:0px;">
+																<div align="center" style="line-height:10px"><a href="https://orderbird.my.salesforce.com/sfc/p/58000000PJMf/a/5J000000c0S3/mCSy.nbreuNjKo6ATw5ZPUOWbUka5ESXSAOPIUUy0P0" target="_blank" style="outline:none" tabindex="-1"><img class="big" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/75146_50441/20-08-002-04-MINIbyorderbird_email_header.png" style="display: block; height: auto; border: 0; width: 600px; max-width: 100%;" width="600" alt="Image" title="Image"></a></div>
+															</td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; background-color: #fff;" width="600">
+										<tbody>
+											<tr>
+												<th class="column" width="100%" style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="text_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;">
+														<tr>
+															<td style="padding-bottom:15px;padding-left:25px;padding-right:25px;padding-top:5px;">
+																<div style="font-family: sans-serif">
+																	<div style="font-size: 12px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; color: #767676; line-height: 1.5;">
+																		<div style="font-size:12px;">
+																			<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 21px;"><span style="font-size:14px;">Hallo <strong>{!Contact.FirstName}</strong>,</span></p>
+																			<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 18px;"><br></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><span style="font-size:14px;">Aktuell hast Du bei uns noch ausstehende Beträge in Höhe von<strong> xx,xx €</strong>.&nbsp;</span></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><br clear="none"><span style="font-size:14px;">Wir bitten Dich, die bei uns ausstehenden Beträge&nbsp;<strong>bis zum xx.xx.2021</strong>&nbsp;zu begleichen und Deine Bankinformationen in&nbsp;<a target="_blank" href="https://my.orderbird.com/" shape="rect" style="text-decoration: underline; color: #00a3e0;" rel="noopener">my.orderbird.com</a>&nbsp;zu hinterlegen. Andernfalls sehen wir uns gezwungen, Deinen MINI by orderbird Account unsererseits zu kündigen, bis der&nbsp;ausstehende&nbsp;Betrag&nbsp;beglichen wird.</span></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><br clear="none"><span style="font-size:14px;">Die Höhe der offenen Beträge kannst Du Deinem Kundenkonto-Auszug im Anhang nochmals entnehmen.&nbsp;Wenn Du die Stilllegung Deines Accounts&nbsp;abwenden möchtest, dann&nbsp;<strong>überweise den Betrag bitte schnellstmöglich</strong>&nbsp;auf folgendes Konto:</span></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 18px;"><br></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><span style="font-size:14px;">Kontoinhaber: orderbird AG</span><br clear="none"><span style="font-size:14px;">Bank: Deutsche Bank</span></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><span style="font-size:14px;">IBAN: DE68 1007 0124 0112 1359 00</span></p>
+																			<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px;"><span style="font-size:14px;">SWIFT: DEUTDEDB101</span></p>
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-3" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; background-color: #fff;" width="600">
+										<tbody>
+											<tr>
+												<th class="column" width="100%" style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="divider_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+														<tr>
+															<td style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:15px;">
+																<div align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="02%" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+																		<tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 12px solid #FECC00;"><span></span></td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="text_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;">
+														<tr>
+															<td style="padding-bottom:10px;padding-left:25px;padding-right:10px;">
+																<div style="font-family: sans-serif">
+																	<div style="font-size: 12px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; color: #767676; line-height: 1.5;">
+																		<p style="margin: 0; mso-line-height-alt: 21px;"><span style="font-size:14px;">Solltest Du noch Fragen oder Anregungen haben, erreichst Du uns…</span></p>
+																		<ul>
+																			<li>
+																				<p style="margin: 0; mso-line-height-alt: 21px;"><span style="font-size:14px;">wochentags von 10-16 Uhr auch über den <strong>Chat</strong> in Deinem <a href="https://my.orderbird.com" target="_blank" rel="noopener" style="text-decoration: none; color: #00a3e0;">MY orderbird Account</a>,</span></p>
+																			</li>
+																			<li><span style="font-size:14px;">über unser <strong><a href="https://supportmini.orderbird.com/hc/de/requests/new" target="_blank" rel="noopener" style="text-decoration: none; color: #00a3e0;">Anfrage-Formular</a></strong>,</span></li>
+																			<li><span style="font-size:14px;">oder Du <strong>antwortest</strong> mir einfach auf diese <strong>E-Mail</strong>.</span></li>
+																		</ul>
+																		<p style="margin: 0; mso-line-height-alt: 21px;"><span style="font-size:14px;">Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter <a style="text-decoration: none; color: #00a3e0;" href="https://supportmini.orderbird.com" target="_blank" rel="noopener">supportmini.orderbird.com</a>.</span></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="divider_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+														<tr>
+															<td>
+																<div align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="02%" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+																		<tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 12px solid #FECC00;"><span></span></td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="text_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;">
+														<tr>
+															<td style="padding-bottom:10px;padding-top:10px;">
+																<div style="font-family: sans-serif">
+																	<div style="font-size: 12px; color: #767676; line-height: 1.5; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+																		<p style="margin: 0; text-align: center; mso-line-height-alt: 21px;"><span style="font-size:14px;">Vielen Dank und liebe Grüße aus Berlin</span></p>
+																		<p style="margin: 0; text-align: center; mso-line-height-alt: 21px;"><span style="font-size:14px;"><strong>{!User.FirstName}</strong> von orderbird<br></span></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="image_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+														<tr>
+															<td style="width:100%;padding-right:0px;padding-left:0px;padding-bottom:5px;">
+																<div align="center" style="line-height:10px"><a href="https://supportmini.orderbird.com" target="_blank" style="outline:none" tabindex="-1"><img src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/BeeProAgency/75146_50441/Logo-MINI_by_orderbird%401x.png" style="display: block; height: auto; border: 0; width: 120px; max-width: 100%;" width="120" alt="Alternate text" title="Alternate text"></a></div>
+															</td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="row row-4" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+						<tbody>
+							<tr>
+								<td>
+									<table class="row-content stack" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; background-color: #323435;" width="600">
+										<tbody>
+											<tr>
+												<th class="column" width="100%" style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: top;">
+													<table class="divider_block" width="100%" border="0" cellpadding="10" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+														<tr>
+															<td>
+																<div align="center">
+																	<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace: 0; mso-table-rspace: 0;">
+																		<tr>
+																			<td class="divider_inner" style="font-size: 1px; line-height: 1px; border-top: 0px solid #BBBBBB;"><span></span></td>
+																		</tr>
+																	</table>
+																</div>
+															</td>
+														</tr>
+													</table>
+													<table class="text_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;">
+														<tr>
+															<td style="padding-left:35px;padding-top:15px;">
+																<div style="font-family: sans-serif">
+																	<div style="font-size: 14px; color: #ffffff; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+																		<p style="margin: 0;">{!User.Template_Footer_Insert_DE__c}</p>
+																		<p style="margin: 0; mso-line-height-alt: 16.8px;"><br></p>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table><!-- End -->
+</body>
+
+</html>

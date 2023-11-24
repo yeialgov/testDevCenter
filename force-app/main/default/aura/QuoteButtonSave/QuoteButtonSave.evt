@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="saveAction" type="String" default="none"/>
+</aura:event>

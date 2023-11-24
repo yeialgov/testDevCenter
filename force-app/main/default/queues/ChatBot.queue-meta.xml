@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>yeisson.gonzalez@orderbird.com</email>
+    <name>Chat Bot</name>
+    <queueMembers>
+        <users>
+            <user>jens.borcherding@orderbird.com</user>
+            <user>katharina.volkmann@orderbird.com</user>
+            <user>uta.niessner@orderbird.com</user>
+            <user>valeria.meissner@orderbird.com</user>
+            <user>yeisson.gonzalez@orderbird.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>0 DE Get it Done Customer Contact</name>
+    <style>none</style>
+    <subject>orderbird für Get it Done!  - {!Contact.FirstName} {!Contact.LastName}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

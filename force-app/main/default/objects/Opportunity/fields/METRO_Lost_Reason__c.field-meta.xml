@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>METRO_Lost_Reason__c</fullName>
+    <description>Stakeholder: PaM &amp; HoReCa, part of Org2Org sharing</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the METRO relevant Lost Reason? Filled automatically!</inlineHelpText>
+    <label>METRO Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Existing customer</fullName>
+                <default>false</default>
+                <label>Existing customer</label>
+            </value>
+            <value>
+                <fullName>Open Opportunity already existing (Duplicate)</fullName>
+                <default>false</default>
+                <label>Open Opportunity already existing (Duplicate)</label>
+            </value>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <label>Lost to Competitor</label>
+            </value>
+            <value>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+                <label>No Budget / Lost Funding</label>
+            </value>
+            <value>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+                <label>No Decision / Non-Responsive</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Customer not interested</fullName>
+                <default>false</default>
+                <label>Customer not interested</label>
+            </value>
+            <value>
+                <fullName>Doesn&apos;t speak language</fullName>
+                <default>false</default>
+                <label>Doesn&apos;t speak language</label>
+            </value>
+            <value>
+                <fullName>Wrong branch</fullName>
+                <default>false</default>
+                <label>Wrong branch</label>
+            </value>
+            <value>
+                <fullName>Contact details incomplete</fullName>
+                <default>false</default>
+                <label>Contact details incomplete</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Website - Already has a website</fullName>
+                <default>false</default>
+                <label>Website - Already has a website</label>
+            </value>
+            <value>
+                <fullName>Website - Does not need a website</fullName>
+                <default>false</default>
+                <label>Website - Does not need a website</label>
+            </value>
+            <value>
+                <fullName>Website - Does not need a website now. Maybe later</fullName>
+                <default>false</default>
+                <label>Website - Does not need a website now. Maybe later</label>
+            </value>
+            <value>
+                <fullName>Website - Maintenance effort too high</fullName>
+                <default>false</default>
+                <label>Website - Maintenance effort too high</label>
+            </value>
+            <value>
+                <fullName>Website - Will get a website from an agency</fullName>
+                <default>false</default>
+                <label>Website - Will get a website from an agency</label>
+            </value>
+            <value>
+                <fullName>Other Solutions - Doesn&apos;t need Digital Solutions</fullName>
+                <default>false</default>
+                <label>Other Solutions - Doesn&apos;t need Digital Solutions</label>
+            </value>
+            <value>
+                <fullName>Other Solutions - Already has sufficient Digital Solutions</fullName>
+                <default>false</default>
+                <label>Other Solutions - Already has sufficient Digital Solutions</label>
+            </value>
+            <value>
+                <fullName>Other Solutions - Digital Solutions are too expensive</fullName>
+                <default>false</default>
+                <label>Other Solutions - Digital Solutions are too expensive</label>
+            </value>
+            <value>
+                <fullName>Other - I don&apos;t buy via phone</fullName>
+                <default>false</default>
+                <label>Other - I don&apos;t buy via phone</label>
+            </value>
+            <value>
+                <fullName>Other - Other</fullName>
+                <default>false</default>
+                <label>Other - Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

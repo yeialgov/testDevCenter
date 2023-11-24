@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                controller="OpportunityQuoteEmailsController"
+                access="global" >
+    
+    <aura:attribute name="Emails" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.Emails.length != 0}">
+        <lightning:card title="Quote Emails">
+            <ul class="slds-timeline">
+                <aura:iteration items="{!v.Emails}" var="Email">
+                    <c:OpportunityQuoteEmail Email="{!Email}"/>
+                </aura:iteration>
+            </ul>
+        </lightning:card>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>45.0</apiVersion>
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/CDS-71</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Auto reply for new lead ENG</name>
+    <style>none</style>
+    <subject>orderbird – die Kassenexperten für die Gastronomie</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wirelessOrdering__c</fullName>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the prospect interesting in using wireless ordering? Only relevant for POS opps. Filled by Sales</inlineHelpText>
+    <label>wireless Ordering</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>yes</fullName>
+                <default>false</default>
+                <label>yes</label>
+            </value>
+            <value>
+                <fullName>no</fullName>
+                <default>false</default>
+                <label>no</label>
+            </value>
+            <value>
+                <fullName>seasonal</fullName>
+                <default>false</default>
+                <label>seasonal</label>
+            </value>
+            <value>
+                <fullName>maybe</fullName>
+                <default>false</default>
+                <label>maybe</label>
+            </value>
+            <value>
+                <fullName>check-out</fullName>
+                <default>false</default>
+                <label>check-out</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Phone</fullName>
+    <inlineHelpText>What is the public phone number of the account? NOT the primary number for communication! (this would be on the contact)
+Correct format: &apos;+&apos; + country code + number
+e.g. +4930208983099</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
 </CustomField>

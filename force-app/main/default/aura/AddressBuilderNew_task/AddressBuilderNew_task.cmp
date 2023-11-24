@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global"
+                controller="AddressBuilderController" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="Object" type="Object"/>
+    <aura:attribute name="AddressType" type="String" default="Billing"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    {!v.body}
+	
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X100_Pay__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Stakeholder Pay - temporary Test field https://jira.orderbird.com/browse/CDS-1944</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only to be used by selected Sales Agents</inlineHelpText>
+    <label>100% Pay</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

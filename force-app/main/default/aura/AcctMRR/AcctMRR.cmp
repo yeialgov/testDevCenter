@@ -1,0 +1,25 @@
+<aura:component controller="CockpitController">
+    <aura:attribute name="AccountId" type="String" />
+    <aura:attribute name="MRR" type="Decimal" />
+    <aura:attribute name="isExpanded" type="Boolean" default="true"/>
+    
+    <aura:handler name="change" value="{!v.AccountId}" action="{!c.getAcctId}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getAcctId}"/>
+    
+    <aura:if isTrue="{!and(v.MRR != null, v.MRR > 0)}">
+        <aura:if isTrue="{!v.isExpanded}">
+            <div style="margin-left:1rem;font-family: 'Orbitron'; color: white;">
+                <div style="cursor:pointer;border-radius: 2rem; border: 0.2rem solid gray;text-align:center;width:5.75rem;">
+                    <p style="font-family: 'Montserrat';margin:1rem 0 0;padding:0;font-size:2rem;line-height:1.5rem;">€<b>{!v.MRR}</b></p>
+                    <p style="margin:0 0 0.5rem;padding:0;color:white;font-size:0.75rem;"><b>MRR</b> POS</p>
+                </div>    
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!!v.isExpanded}">
+            <span style="margin-left:1rem;font-family: 'Orbitron'; color: white;">
+                    <span style="font-family: 'Montserrat';margin:0 0.25rem;font-size:1rem;">€<b>{!v.MRR}</b></span>
+                    <span style="margin:0 0.25rem;color:white;font-size:1rem;"><b>MRR</b> POS</span>
+            </span>
+        </aura:if>
+    </aura:if>    
+</aura:component>

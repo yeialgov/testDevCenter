@@ -12,11 +12,6 @@
         <label>Ms.</label>
     </standardValue>
     <standardValue>
-        <fullName>Mrs.</fullName>
-        <default>false</default>
-        <label>Mrs.</label>
-    </standardValue>
-    <standardValue>
         <fullName>Dr.</fullName>
         <default>false</default>
         <label>Dr.</label>
@@ -25,10 +20,5 @@
         <fullName>Prof.</fullName>
         <default>false</default>
         <label>Prof.</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Mx.</fullName>
-        <default>false</default>
-        <label>Mx.</label>
     </standardValue>
 </StandardValueSet>

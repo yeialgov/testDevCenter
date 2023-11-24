@@ -1,0 +1,113 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" 
+                controller="AccountLightningController">
+    <aura:handler event="force:showToast" action="{!c.doInit}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.recordId}" action="{!c.refresher}"/>
+    <aura:attribute type="String" name="recordId" />
+    <aura:attribute type="List" name="Contacts" />
+    <aura:attribute type="Object" name="Account" />
+    <aura:handler name="change" value="{!v.items}" action="{!c.itemsChange}"/>    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, SF_BillTo_Contact__c, SF_SoldTo_Contact__c, SF_Venue_Contact__c, Primary_Contact__c"
+                      targetFields="{!v.Account}"
+                      recordUpdated="{!c.doInit}"/>
+
+    <div class="forceRelatedListContainer">
+        <div class="container">
+            <div class="container forceRelatedListSingleContainer">
+                <article class="slds-card slds-card_boundary forceRelatedListCardDesktop">
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                            <div class="slds-media__figure">
+                                <div class="extraS mall forceEntityIcon" style="background-color: #FCB95B">
+                                    <lightning:icon iconName="standard:contact" size="small"/>
+                                </div>
+                            </div>
+                            <div class="slds-media__body" onclick="{!c.doInit}">
+                                <h2>
+                                    <div class="slds-card__header-link baseCard__header-title-container">
+                                        <span class="slds-card__header-title slds-truncate slds-m-right--xx-small" title="Contacts">Contacts</span>
+                                        <span class="slds-card__header-title slds-shrink-none slds-m-right--xx-small" title="{!'('+v.Contacts.length+')'}">{!' ('+v.Contacts.length+')'}</span>
+                                    </div>
+                                </h2>
+                            </div>
+                            <div class="slds-no-flex">
+                                <div class="actionsContainer">
+                                    <ul class="branding-actions slds-button-group slds-m-left--xx-small small oneActionsRibbon forceActionsContainer">
+                                        <li class="slds-button slds-button--neutral slds-truncate">
+                                            <a href="javascript:void(0);" onclick="{!c.newContact}" title="New" class="forceActionLink" role="button">
+                                                <div class="slds-truncate" title="New">New</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </header>
+                        <!--<div class="slds-no-flex">
+                            <div class="actionsContainer"></div>
+                        </div>-->
+                    </div>
+                    <div class="slds-card__body">
+                        <div class="forceBaseListView forceRelatedListPreviewGrid" style="overflow-x:scroll;">
+                            <table class="forceRecordLayout slds-table slds-no-row-hover slds-table_cell-buffer uiVirtualDataGrid--default uiVirtualDataGrid">
+                                <thead>
+                                    <tr>
+                                        <th>Contact Name</th>
+                                        <th/>
+                                        <th>Phone</th>
+                                        <th>Mobile</th>
+                                        <th>Email</th>
+                                        <th class="actionColumnHeader"/>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration var="con" items="{!v.Contacts}">
+                                        <tr>
+                                            <th scope="row">
+                                                <div class="outputLookupContainer forceOutputLookupWithPreview">
+                                                    <a class="textUnderline outputLookupLink slds-truncate forceOutputLookup" 
+                                                       href="{!'/lightning/r/' + con.Id + '/view'}">
+                                                        {!con.Name}
+                                                    </a>
+                                                </div>
+                                            </th>
+                                            <td>
+                                                <div>
+                                                    <aura:if isTrue="{!v.Account.Primary_Contact__c == con.Id}">
+                                                        <c:ContactAddressBadge Badge="P"/>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!v.Account.SF_BillTo_Contact__c == con.Id}">
+                                                        <c:ContactAddressBadge Badge="B"/>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!v.Account.SF_SoldTo_Contact__c == con.Id}">
+                                                        <c:ContactAddressBadge Badge="S"/>
+                                                    </aura:if>
+                                                    <aura:if isTrue="{!v.Account.SF_Venue_Contact__c == con.Id}">
+                                                        <c:ContactAddressBadge Badge="V"/>
+                                                    </aura:if>
+                                                </div>
+                                            </td>
+                                            <td>{!con.Phone}</td>
+                                            <td>{!con.MobilePhone}</td>
+                                            <td>
+                                                <span class="uiOutputEmail">
+                                                    <a href="{!'mailto:' + con.Email}">
+                                                        {!con.Email}
+                                                    </a>
+                                                </span>
+                                            </td> 
+                                            <td>
+                                                <c:EditContactButton Contact="{!con}"/>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</aura:component>

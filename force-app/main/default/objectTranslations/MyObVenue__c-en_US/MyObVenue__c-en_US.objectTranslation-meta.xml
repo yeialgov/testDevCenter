@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MyOb Venue</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MyOb Venues</value>
+    </caseValues>
+    <layouts>
+        <layout>MyOrderbird Log-on Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Insights</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Fields</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FiscalizeAPI_2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FiscalizeAPI_3</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FiscalizeAPI_4</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FiscalizeAPI_5</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Link_Hiding_Restriction</name>
+    </validationRules>
+</CustomObjectTranslation>

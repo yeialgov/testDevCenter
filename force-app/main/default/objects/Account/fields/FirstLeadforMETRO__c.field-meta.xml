@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FirstLeadforMETRO__c</fullName>
+    <description>Stakeholder: Partner (METRO)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When has the first METRO Lead been created (Prospect said &quot;yes&quot; to one of the solutions)? Gets filled in automatically</inlineHelpText>
+    <label>First Lead for METRO</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

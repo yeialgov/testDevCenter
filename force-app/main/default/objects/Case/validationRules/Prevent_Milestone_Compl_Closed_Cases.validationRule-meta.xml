@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Milestone_Compl_Closed_Cases</fullName>
+    <active>false</active>
+    <description>Validates that a milestone&apos;s Completion Date can&apos;t occur after the
+case&apos;s Status is Closed.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+IsClosed = true
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t complete a milestone after a case is closed.</errorMessage>
+</ValidationRule>

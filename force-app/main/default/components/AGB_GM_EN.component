@@ -1,0 +1,257 @@
+<apex:component controller="QuotePdfController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!qId}" name="QuoteId" type="String" description="Quote Id"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.quotecss2}"/>
+    </head>
+    <div style="page-break-before:always;">  
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}"/>
+    </div>
+    
+    <div id="mainDiv">
+        <div style="text-align:right;">
+            <img src="{!$Resource.orderbird_logo}" style="height: 60px;"/>
+        </div>
+        
+        <p class="blueText bigBold" style="font-family: sans-serif;font-size:100%;">
+        Special Terms of Use for the Online Reservation System
+        <br/>
+        </p>
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+        These special terms of use govern the contractual relationship between orderbird AG, Ritterstraße 12-14, Aufgang 3, 10969 Berlin (“orderbird”) and all users of the online reservation system (the “User” or “You”). Customers of orderbird are exclusively entrepreneurs in the sense of § 14 BGB and not consumers in the sense of § 13 German Civil Code (BGB).
+       </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+       orderbird allows restaurateurs (i) to accept food orders, (ii) accept reservations via a widget and (iii) to offer incentives for a reservation in quiet periods based on pricing suggestions determined by orderbird. The services of orderbird include the provision of the “resmio Tables” App for Apple iPad devices, the widget and the reservation controlling and management via the resmio software which the user may access via a web application under app.resmio.com. orderbird merely forwards orders and/or reservation inquiries from the end customer/guest to the user; a purchase or service agreement regarding restaurant services can only be concluded between the user and the respective guest.
+       </p>
+       </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 1. Scope of Applicability </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;" >         
+        <strong> 1.1 </strong> The use of the orderbird online reservation and income management system (hereinafter the “Application”) is governed exclusively by the following general terms and conditions, the the currently valid service description and based on the pricing set forth on our 
+        <a class="blueText" href="https://www.orderbird.com/en/preise-guest-management"> Website</a> 
+        or in the offer. This also applies to any use from a location outside of the territory of the Federal Republic of Germany.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 1.2 </strong> Any opposing, deviating or supplementary general terms and conditions of the user are only deemed as agreed if orderbird has expressly confirmed them in writing. These terms of use also apply if orderbird provides the services unconditionally, even if it is aware of opposing or otherwise deviating terms of the user.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 1.3 </strong> These terms apply to future agreements with the user even if their applicability is not expressly referenced again, unless orderbird stipulates deviating terms and conditions for future agreements.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 2. Subject-Matter of Agreement </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.1 </strong> The use of the application is only permitted to users who have accepted these terms of use.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.2 </strong> The subject-matter of this Agreement is the provision of an online-based ordering, reservation and income management system for the restaurant sector. The orderbird application consists of the widget for use on the website of the user and potentially third parties (“Affiliates”), the integrated ordering and reservation application for use on the websites of Affiliates, the income management and reservation system developed by orderbird which the user can access via a web interface and a ticket function which enables the user to generate tickets to events and offer them on the internet. The application enables the user to accept orders and reservations via the widget and/or the ticket function and to manage the pricing of the offers published via the website in accordance with its estimated occupancy rate.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.3 </strong> An order or a reservation by a guest via the widget and/or the ticket function constitutes an offer to enter into a service agreement between the guest and the user. orderbird merely transmits the respective declaration of the guest. Accordingly, a purchase or service agreement can only be concluded between the user and the respective guest. As technical service provider, orderbird is in particular not responsible for damages, non-performance or improper performances arising from the mediated agreement or an agreement which failed to be concluded.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.4 </strong> Each user is solely responsible for verifying whether the pricing suggestions determined by orderbird are suitable to serve as basis for the pricing models vis-à-vis the customers. The user acknowledges that the pricing suggestions of orderbird are prepared only on the basis of an analysis of a limited number of parameters and that they do not allow any conclusions on the prices which may actually be achieved within a certain period. orderbird provides the users with own information and data via the application. This information and data servs only information purposes; the user cannot cite or rely on the validity, correctness, accuracy, relevance or completeness of the information.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.5 </strong> The application can be changed, modified, updated or wholly or partly withdrawn by orderbird at any time. In case of a major change, the user may terminate this Agreement with a notice period of four weeks to the end of the month.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.6 </strong> Within the available capacities and the scope of the tariff selected by the user, orderbird will advise the user with respect to the use and integration of the application and provide technical support.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.7 </strong> The user is responsible vis-á-vis the customer for compliance with applicable data protection laws. orderbird processes the generated data as a processor according to Art. 4 No. 8 DSGVO in conjunction with Art. 28 DSGVO. For this purpose, the customer must conclude the data processing agreement ("DPA") with orderbird through the following 
+        <a class="blueText" href="https://support.orderbird.com/hc/en-us/articles/360000877906-How-does-GDPR-affect-orderbird-customers-"> Link. </a> 
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 3. Formation of the contract, contract language </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.1 </strong> The presentation of goods and services on the orderbird website does not constitute a legally binding offer, but an “invitatio ad offerendum”. The customer may make a binding offer to conclude a contract in the following ways:
+        <ul class="grayText" style="list-style-type:lower-alpha; font-family: sans-serif;font-size:75%;">
+          <li>Signing of the application form by the customer and sending it to orderbird by e-mail.</li>
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.2 </strong> Immediately after sending the binding offer, the customer receives a confirmation from orderbird, which, however, does not yet represent acceptance of the contractual offer. A contract between orderbird and the customer is generally concluded as soon as orderbird accepts the customer&apos;s binding offer by means of a separate e-mail or in writing.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.3 </strong> The language provided for the conclusion of the contract is exclusively German. Translations into other languages serve only to inform the customer. In case of contradictions between the German text and the translation, the German text shall prevail.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 4. License </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.1 </strong> orderbird grants the user a non-exclusive, non-transferrable, global license to use the application for the term of this Agreement. The license is limited to the use of the application for one venue/bar/restaurant operation of the user. Upon request and subject to a separate agreement, licenses for the use of the application for multiple bars/restaurants may be purchased.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.2 </strong> orderbird will provide a password for access to the application control to the user. The user undertakes to store this password diligently and not to enable third parties to access the password.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.3 </strong> The customer is obligated to observe the applicable law when using the application and, in particular, not to violate the rights of third parties.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.4 </strong> The customer is prohibited from any action when using the application that violates applicable law, infringes the rights of third parties or violates the principles of the protection of minors. In the event of a violation, orderbird will block the application for the customer. In particular, the following actions are prohibited:
+        <ul class="grayText" style="list-style-type: square; font-family: sans-serif;font-size:75%;">
+          <li>the distribution of viruses, Trojans and other harmful files;</li>
+          <li>the sending of junk or spam mails as well as chain letters;</li>
+          <li>the dissemination of lewd, offensive, sexually oriented, obscene or defamatory content or communication, as well as content or communication that is likely to promote or support racism, fanaticism, hatred, physical violence or illegal acts (in each case explicitly or implicitly);</li>
+          <li>harassing others, e.g., by making multiple personal contacts without or in opposition to the other person&apos;s response, and encouraging or supporting such harassment;</li>
+          <li>soliciting others to disclose passwords or personal information for illegal or unlawful purposes;</li>
+          <li>the transmission of above-average amounts of data and, in particular, the sustained transmission of such amounts of data;</li>
+          <li>any action that is likely to impair the smooth operation of the application, in particular to place a disproportionately high load on orderbird&apos;s systems.</li>    
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.5 </strong> The user acknowledges that the application and all its components are the sole property of orderbird. The application or each part of the application may not be reproduced, decompiled, changed, modified or provided, sold, hired out to third parties or otherwise commercially used without prior written consent of orderbird. The rights under Section 69e of the German Copyright Act remain unaffected. Any documentation and information about the application and its functionalities provided to the user may not be disclosed to third parties without the prior written consent of orderbird.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.6 </strong> To the extent it is necessary for the provision of the services owed by orderbird, the user grants orderbird and the Affiliates of orderbird the temporal, non-exclusive, revocable right to use, make publicly accessible, edit, reproduce and disseminate during the term of this Agreement the name, data and labels (in particular the marks, logos, brand names) of the user and/or the operation of the user, as well as the materials which may be required for performance of the services owed by orderbird (e.g. images, photos, texts, graphics), solely for purposes of the contractual services. The user assures that such use is not opposed by third party rights and in case third parties assert such claims, the user indemnifies orderbird from and against all associated costs (including the costs of legal defense) upon first request.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 5. Availability and Individual Services </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.1 </strong> The application is provided with an Availability of 95 percent on monthly average. The term “Availability” refers to the technical usability of the application without major obstructions at the transfer point of the reservation system for usage by the user. The following cases of non-availability are not considered for purposes of the Availability guaranteed under this section:
+        <ul class="grayText" style="list-style-type:lower-alpha; font-family: sans-serif;font-size:75%;">
+          <li>Pre-announced maintenance periods of up to 12 hours duration. orderbird makes an effort to undertake maintenance works during night hours (10 pm to 6 am);</li>
+          <li>interruptions of the internet connection between orderbird and the user and/or between orderbird and the end customer;</li>
+          <li>cases of force majeure.</li>
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.2 </strong> The user is obligated to fulfil all cooperation duties which may be necessary when utilizing the service and provide all necessary information and declarations to orderbird which are required to provide the service. If the user fails to meet its cooperation duties temporally or permanently, orderbird is released from its obligation to provide the services for the period the cooperation duty is not fulfilled.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.3 </strong> The user acknowledges that in order to utilize certain individual services (e.g. support by orderbird regarding the creation of a Facebook or Google+ profile), it is necessary that the user enters into contractual relationships with third parties and accepts and complies with the respective applicable terms of use of these third parties. orderbird does not assume any liability for any breaches of terms of use of third parties by the user. If due to reasons not attributable to orderbird, the user is unable to enter into the contractual relationships with third parties required to utilize certain individual services, orderbird is released from its respective performance obligations.
+        </p>
+        </div>
+
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 6. Fees </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.1 </strong> orderbirdoffers different versions of the service where applicable. The duration and the pricing of the use of each version,the performance components as well as the amount of commission fees for transactions and online payment processing fees is set forth in the respective valid offer which can be viewed on
+        <a class="blueText" href="https://www.orderbird.com/en/pricing-guest-management"> the website </a> 
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        During the use of the “Ordering System” or the “Reservation System &amp; Guest Registration” version, the user may use the application with restrictions; however, there is not right to individual services of other tariffs (e.g. consulting).
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.2 </strong> The prices and fees valid at the time the Agreement is concluded and published on
+        <a class="blueText" href="https://www.orderbird.com"> orderbird Website </a> 
+        , shall apply. Non-use based fees are payable yearly in advance. Use-based fees become payable upon invoicing after expiration of the respective billing period. All fees and prices are net amounts payable plus VAT.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.3 </strong> Settlement shall take place annually before the beginning of the respective period of use via invoicing. orderbird may send invoices and payment reminders via email or online invoice. Payments of the user to orderbird for placed orders, undertaken reservations and other products within the system are made by electronic direct debit or credit card payment. The user authorizes orderbird to directly debit amounts payable by the user from an account or credit card to be designated by the user. In case direct debits fail or in case of chargebacks, orderbird reserves the right to charge a flat-fee of EUR 7.50 per direct debit or chargeback.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        Default interest in the amount of 8% above the respective base interest rate p.a. is charged. orderbird reserves the right to assert higher default damages.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.4 </strong> orderbird may increase the use-based fees no earlier than upon expiration of twelve (12) months after the effective date of this Agreement by providing six weeks ́ written notice to the beginning of the next following month. The user may terminate the contractual relationship by written termination declaration within a period of four (4) weeks after receipt of such notice. orderbird will inform the user about this termination right in each such notice.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 7. Warranty and liability </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.1 </strong> The rights of the customer shall be determined in accordance with the statutory provisions unless otherwise stipulated below.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.2 </strong> The customer must notify orderbird immediately of any defects that occur. Insofar as orderbird was unable to remedy the situation as a result of the omission or delay of notification, the customer is entitled to reduce the remuneration in whole or in part, to demand compensation for the damage caused by the defect or to terminate the contract only in the case of significant defects which impair the use of the service or render it unsuitable for use. The customer has to prove that he is not responsible for the omission of the notification. The strict liability of orderbird for damages (§ 536a BGB) for defects existing at the time of conclusion of the contract is excluded.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.3 </strong> orderbird is liable without limitation for damages caused by orderbird, its employees and vicarious agents intentionally or through gross negligence, in the event of fraudulent concealment of defects, in the event of the express assumption of a guarantee as well as for damages arising from injury to life, body and health. Any liability under the Product Liability Act shall remain unaffected.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.4 </strong> Liability for damage to property caused by negligence shall be limited to the amount of the agreed annual fee; this shall not apply to liability under Section 7.3.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.5 </strong> Liability for consequential damages and other incidental damages as well as for indirect damages shall be excluded, as shall any claim by the customer for reimbursement of expenses, to the extent permitted by law.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.6 </strong> Claims for damages shall become statute-barred one year after they arise. The period shall commence at the time at which the customer becomes aware of the circumstances giving rise to the claim and the person of the debtor or should have become aware without gross negligence.
+        </p>
+        </div>
+                
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 8. Term, Termination </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.1 </strong> This Agreement takes effect upon signing of the application form. The Agreement has an initial term of twelve (12) months, unless otherwise stated in the respective offer. It shall automatically extend by another twelve (12) months (or, if a different extension period is stated in the terms and conditions of the selected tariff, by such period), respectively, unless it is terminated with a notice period of four (4) weeks to the end of the contractual term.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.2 </strong> The right to block and terminate for good cause remains unaffected. orderbird will temporarily block the customer&apos;s right of use if there are concrete indications that these terms of use and/or applicable law are being or have been violated. orderbird will inform the customer of the reasons in good time before blocking.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.3 </strong> Each party may terminate this Agreement extraordinarily without adhering to a notice period in case of important cause. An important cause is in particular constituted for orderbird if the user is in arrears with the payment of the license fees pursuant to section 5 for a period exceeding two (2) months.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.4 </strong> Notice of termination must be given in text form.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 9. Applicable Law, Venue </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.1 </strong> This Agreement is subject to the laws of the Federal Republic of Germany excluding the UN Convention on Contracts for the International Sale of Goods (CISG). The parties agree Berlin shall be the exclusive venue for all disputes arising under or in connection with this Agreement.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.2 </strong> If a provision of this Agreement is invalid, the invalid provision shall be replaced by such valid provision which most closely resembles the parties&apos; economic and legal intention.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.3 </strong> orderbird reserves the right to change the General Terms of Use with effect for the future, in particular in the following cases:
+        <ul class="grayText" style="list-style-type:square; font-family: sans-serif;font-size:75%;">
+          <li>if and insofar as the market situation has changed in a valid manner from orderbird&apos;s point of view after conclusion of the contract in terms of calculation or technology.</li>
+          <li>if orderbird wishes to improve, expand or change the offer and services in favor of the customer.</li>
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+        Changes to the General Terms of Use will be announced with a notice period of four (4) weeks in advance and then changed.
+        </p>
+        </div>
+        
+        <div style= "text-align: right;">
+        <br/>
+        <p class="grayText" style="font-family: sans-serif;">         
+        Berlin, 21.05.2021
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">         
+        (Version 1: valid from the 21.05.2021)
+        </p>
+        </div>
+        
+    </div>
+    </div>
+ </apex:component>

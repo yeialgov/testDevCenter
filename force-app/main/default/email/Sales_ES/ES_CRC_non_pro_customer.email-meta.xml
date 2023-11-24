@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC non-pro customer</name>
+    <style>freeForm</style>
+    <subject>Clientes orderbird promocionan a clientes</subject>
+    <textOnly>Hola querido equipo de ... ,
+
+estimado/a... ,
+
+Desafortunadamente solamente podemos facilitarles nuestra oferta clientes- promocionan a- clientes- y sus ventajas a usuarios orderbird con una PRO- licencia anual en rigor. Sin embargo, queremos tenerte con nosotros y nos encantaría que nos siguieras recomendando.
+
+Si sigues interesado en la POR-licencia anual orderbird y sus ventajas que te podamos ofrecer con ella, llámanos de manera totalmente gratuita al +3491168046 6 o al número internacional +49 30 208 983 099  o envíanos un email a hola@orderbird.com. Estaremos encantados en explicarte todos los beneficios con tu licencia anual y te responderemos a todas las preguntas que te surjan sobre clientes- promocionan a- clientes- y sus ventajas.
+
+Queremos que todo te vaya genial con orderbird y te damos las gracias por tu apoyo.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReferralAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stand-in for Referral Contact until this one is fully implemented // Stakeholder: PaM &amp; Sales (CRC)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who (Account) referred this lead to us? Filled in by leads or sales as soon as known, preferably on creation</inlineHelpText>
+    <label>Referral Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Leads (as Ambassador)</relationshipLabel>
+    <relationshipName>ReferredLeads</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

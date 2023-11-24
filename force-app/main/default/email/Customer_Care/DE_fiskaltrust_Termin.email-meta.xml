@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE fiskaltrust Termin</name>
+    <style>none</style>
+    <subject>Terminvorschlag zur Fiskalisierung Deiner Kasse (RKSV)</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

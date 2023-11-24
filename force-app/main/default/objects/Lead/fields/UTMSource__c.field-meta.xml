@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UTMSource__c</fullName>
+    <description>Stakeholder: MKT</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tracking field for Online Marketing. Gets automatically filled with URL parameters attached to our campaigns for web2lead.</inlineHelpText>
+    <label>UTM Source</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

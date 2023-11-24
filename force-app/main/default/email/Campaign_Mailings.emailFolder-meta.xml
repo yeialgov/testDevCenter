@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Campaign-Mailings</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <group>Team_NEST</group>
+        <role>Knowledge_Management</role>
+        <role>Support_Management</role>
+        <role>System_Admin</role>
+    </sharedTo>
+</EmailFolder>

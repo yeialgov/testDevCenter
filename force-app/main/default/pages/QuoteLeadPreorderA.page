@@ -1,0 +1,225 @@
+<apex:page standardController="Lead" renderAs="pdf" applyHtmlTag="false" showHeader="false" language="{!IF(Lead.PrimaryLanguage__c == 'English','en','de')}">
+    <head>
+        <style>
+            @page { size: 8.5in 10.9in; /* letter width and height */ }
+        </style>
+        <apex:stylesheet value="{!$Resource.AttachDocument}"/>
+    </head>
+    <div class="footer">
+        <c:pdfFooter Language="{!CASE(Lead.PrimaryLanguage__c,'Engligh','en','French','fr','de')}"/>
+    </div>
+    <div id="mainDiv">
+        <div style="text-align:right;">
+            <img src="{!$Resource.orderbird_logo}" style="height: 60px;"/>
+        </div>
+        <table class="fullWidth grayText" style="font-family: sans-serif;">
+            <tr>
+                <td class="wideCol">
+                    <div class="shrinkText padCell">
+                        <table>
+                            <tr>
+                                <td class="blueText padCell rightBar">
+                                    orderbird AG
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    Ritterstraße 12-14
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    10969 Berlin
+                                </td>
+                                <td class="grayText padCell">
+                                    {!$Label.GERMANY}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="narrCol"></td>
+            </tr>
+            <tr>
+                <td class="topAlign">
+                    <br/>
+                    {!Lead.Name}<br/>
+                    {!Lead.Company}<br/>
+                    {!Lead.Street}<br/>
+                    {!Lead.PostalCode}&nbsp;{!Lead.City}<br/>
+                    {!Lead.CountryCode}
+                </td>
+            </tr>
+        </table>
+        <p class="blueText bigBold" style="font-family: sans-serif;">
+            {!$Label.QUOTE_HEADING}
+            <br/>
+            //&nbsp;{!$Label.YOUR_QUOTE}&nbsp;{!Lead.PreorderQuote__c}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.DEAR_TEAM_AT}&nbsp;{!Lead.Company}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_1_1} <strong>{!$Label.QUOTE_GRAF_1_2}</strong>
+        </p>
+        <table class="StatementTable bme grayText" border="0">
+            <thead style="background-color: rgb(0,163,224);">
+                <tr>
+                    <th class="lftalgn">{!$Label.ARTICLE}</th>
+                    <th style="text-align:center;">{!$Label.QUANTITY}</th>
+                    <th>{!$Label.UNIT_PRICE}</th>
+                    <th>{!$Label.TOTAL_PRICE}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_orderbird_Starter_Package}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {!$Label.P_Printer_Epson_TM_m30_cable_bound}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {!$Label.P_Base_Router}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {!$Label.P_Card_Reader_Miura_M010}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {!$Label.P_Onboarding_Standard}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        - {!$Label.P_Discount_Starter_Package}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <span style="text-decoration: line-through;"><c:Curr Value="{!ROUND(876,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></span><br/>
+                        <c:Curr Value="{!ROUND(699,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <span style="text-decoration: line-through;"><c:Curr Value="{!ROUND(876,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></span><br/>
+                        <c:Curr Value="{!ROUND(699,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_iPad_10_2_Wi_Fi_32GB_Space_Gray}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(319,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(319,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_Service_charge_1_year}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(360,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(360,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_Device_license_monthly}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(29,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(29,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_orderbird_online_TSE_1_year}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(99,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(99,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                        {!$Label.P_Cashbook_1_year}
+                    </td>
+                    <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                        1
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(119,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                    <td style="border-bottom: solid 1px rgb(0,163,224);">
+                        <c:Curr Value="{!ROUND(119,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn">{!$Label.TOTAL_LIST_PRICE}:</td>
+                    <td style="background-color:#fff;"><c:Curr Value="{!ROUND(1802,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn">{!$Label.YOUR_DISCOUNT}:</td>
+                    <td style="background-color:#fff;"><c:Curr Value="{!ROUND(177,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn">{!$Label.TOTAL_AFTER_DISCOUNT}:</td>
+                    <td style="background-color:#fff;"><c:Curr Value="{!ROUND(1625,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn">{!$Label.TAX_TOTAL}&nbsp;19%:</td>
+                    <td style="background-color:#fff;"><c:Curr Value="{!ROUND(308.75,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">{!$Label.TOTAL_AMOUNT}:</td>
+                    <td style="background-color:#fff;border-top: solid 1px rgb(0,163,224);font-weight:bolder;"><c:Curr Value="{!ROUND(1885,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">{!$Label.PREORDER_AMOUNT}:</td>
+                    <td style="background-color:#fff;border-top: solid 1px rgb(0,163,224);font-weight:bolder;"><c:Curr Value="{!ROUND(199,2)}" Currency="{!Lead.CurrencyIsoCode}" Country="{!Lead.Country}"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_2_1}&nbsp;<apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Lead.CreatedDate + 10}" /></apex:outputText>&nbsp;{!$Label.QUOTE_GRAF_2_2}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_2_3} {!Lead.PreorderQuote__c} {!$Label.QUOTE_GRAF_2_4} 
+            <a href="https://www.paypal.com/cgi-bin/webscr?business=paypal@orderbird.com&cmd=_xclick&currency_code={!Lead.CurrencyIsoCode}&amount=199&item_name={!Lead.PreorderQuote__c}">
+                PayPal-Link
+            </a>
+            {!$Label.QUOTE_GRAF_2_5}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_2_6}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_2_7}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            Deutsche Bank AG<br/>
+            IBAN: DE68 1007 0124 0112 1359 00
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.KIND_REGARDS}<br/>
+            orderbird AG
+        </p>
+    </div>
+</apex:page>

@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" 
+                controller="NewQuoteController">
+    
+    <aura:attribute name="Opportunity" type="Object"/>
+
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      mode="VIEW"
+                      targetFields="{!v.Opportunity}" />
+	
+    <c:MyObSignupWarning AccountId="{!v.Opportunity.AccountId}" redirectId="{!v.recordId}"/>
+
+</aura:component>

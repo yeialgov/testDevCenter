@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r.Subscription_Products__r$Name</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Filter by products that contain &quot;onboarding&quot; in the name with commission date equals this month and with price greater than 0 and Status Active</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Product__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$ProductName__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>guest</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Price__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>EUR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Subscriptions__r.Subscription_Products__r$ProductName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MY Sold Onboardings this MONTH</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_subscriptions_with_SLI__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CommissionDate__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

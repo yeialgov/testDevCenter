@@ -1,0 +1,89 @@
+<aura:component controller="NewQuoteController"
+                implements="flexipage:availableForAllPageTypes" 
+                access="global" >
+    
+    <!--aura:handler name="init" value="{!this}" action="{!c.doInit}"/-->
+    
+    <aura:attribute name="Opportunity" type="Object"/>
+    <aura:attribute name="OpportunityId" type="String"/>
+    <aura:attribute name="PresetValue" type="String"/>
+    <aura:attribute name="Defaults" type="Object"/>
+    <aura:attribute name="Catalog" type="List"/>
+    <aura:attribute name="SLIs" type="List"/>
+    <aura:attribute name="isAcctMgmt" type="Boolean" default="false"/>
+    <aura:attribute name="IsAmendment" type="Boolean" default="false"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.OpportunityId}"
+                      fields="Id,Name,AccountId,Account.Name,Account.CurrencyIsoCode,
+                              Account.SF_BillTo_Contact__c,
+                              Account.BillingStreet,
+                              Account.BillingPostalCode,
+                              Account.BillingCity,
+                              Account.BillingCountry,
+                              Account.BillingCountryCode,
+                              Account.SF_BillTo_Contact__r.Email,
+                              Account.SF_BillTo_Contact__r.PrimaryLanguage__c,
+                              Account.SF_BillTo_Contact__r.FirstName,
+                              Account.SF_BillTo_Contact__r.LastName,
+                              Account.SF_SoldTo_Contact__c,
+                              Account.ShippingStreet,
+                              Account.ShippingPostalCode,
+                              Account.ShippingCity,
+                              Account.ShippingCountry,
+                              Account.LegalCompanyName__c,
+                              Account.PrimaryLanguage__c,
+                              Account.Tax_Exempt_Reason__c,
+                              Account.Subscription_Count__c,
+                              Account.ZuoraId__c,
+                              Account.Batch_Payment_Method__c, 
+                              DiscountEligible__c"
+
+                      targetFields="{!v.Opportunity}"
+                      recordUpdated="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner />
+    </aura:if>
+    <div class="slds-card">
+        <div class="slds-card__header">
+            <div class="slds-page-header" role="banner">
+                <p class="slds-text-heading_label">{!v.Opportunity.Account.Name}</p>
+                <h1 class="slds-page-header__title slds-m-right_small
+                           slds-truncate slds-align-left">Create {!v.SLIs.length > 0 ? 'Amendment' : 'New'} Quote</h1>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_7-of-12">
+                <div class="slds-card__body slds-card__body_inner">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <aura:iteration var="cat" items="{!v.Catalog}">
+                            <aura:if isTrue="{!or(cat.Visibility__c == 'Visible to All', and(cat.Visibility__c == 'Acct Mgmt Only', v.isAcctMgmt))}">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <c:QuoteCategoryContainer Data="{!cat}" 
+                                                              isAcctMgmt = "{!v.isAcctMgmt}"
+                                                              Currency="{!v.Opportunity.Account.CurrencyIsoCode}"/>
+                                </div>
+                            </aura:if>
+                        </aura:iteration>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_5-of-12" style="padding-left:0;">
+                <!--{!v.body}-->
+                <c:QuoteSubtotaler PresetValue="{!v.PresetValue}" 
+                                   Opportunity="{!v.Opportunity}"
+                                   AccountId="{!v.Opportunity.AccountId}"
+                                   Currency="{!v.Opportunity.Account.CurrencyIsoCode}"
+                                   IsAmendment="{!v.IsAmendment}"/>
+                <c:NewQuoteButtons RedirectId="{!v.OpportunityId}" Type="Create"/>
+                <br/>
+                <aura:iteration var="SLI" items="{!v.SLIs}">
+                    <c:SLIRemovalPicker SLI="{!SLI}"/>
+                </aura:iteration>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

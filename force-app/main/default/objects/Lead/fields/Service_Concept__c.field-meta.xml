@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Concept__c</fullName>
+    <description>Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What kind of service does this venue operate by? This is the 1st part of the customer segmentation. Filled by Sales</inlineHelpText>
+    <label>Service Concept</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+                <label>Full Service</label>
+            </value>
+            <value>
+                <fullName>Quick Service</fullName>
+                <default>false</default>
+                <label>Quick Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

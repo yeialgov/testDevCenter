@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - WiFi - Rejected</name>
+    <style>freeForm</style>
+    <subject>Gracias por tu interés en el wifi orderbird</subject>
+    <textOnly>www.orderbird.com
+hola@orderbird.com
++34911680466
+
+
+Hola,
+
+Muchas gracias por tu interés en el wifi de orderbird, nuestra red WLAN para clientes específica en gastronomía. Desde orderbird actualmente ofrecemos este servicio solo en el sector gastronómico, ya que es aquí donde tenemos una competencia más amplia. Por este motivo te pedimos que comprendas que no atenderemos cuestiones que no estén relacionadas con este sector.
+
+Si quieres utilizar el wifi orderbird para tu negocio y aún no nos has avisado, no dudes en informarnos de inmediato respondiendo a este email.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used in template 2 Post Wcall How To Webinar DE/DU</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Webinar Button Screenshot</name>
+    <public>true</public>
+</Document>

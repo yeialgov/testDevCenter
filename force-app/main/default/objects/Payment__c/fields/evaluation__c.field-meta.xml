@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>evaluation__c</fullName>
+    <description>Stakeholder Finance https://jira.orderbird.com/browse/CDS-1019
+Summarises Type, GatewayState, Amount and Refund in one field to provide an easier overview in Related Lists</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(Type__c = &apos;Electronic&apos;, GatewayState__c = &apos;Settled&apos;,  Amount__c -  RefundAmount__c != 0), &apos;SEPA settled&apos;,
+ IF(AND(Type__c = &apos;Electronic&apos;, GatewayState__c = &apos;Settled&apos;,  Amount__c -  RefundAmount__c = 0), &apos;SEPA refunded&apos;,
+  IF(AND(Type__c = &apos;Electronic&apos;, GatewayState__c = &apos;Submitted&apos;,  Amount__c -  RefundAmount__c != 0), &apos;SEPA pending&apos;,
+   IF(AND(Type__c = &apos;Electronic&apos;, OR(GatewayState__c = &apos;FailedToSettle&apos;,GatewayState__c = &apos;Submitted&apos;),  Amount__c -  RefundAmount__c = 0), &apos;SEPA failed&apos;,
+    IF(AND(Type__c = &apos;Electronic&apos;, GatewayState__c = &apos;NotSubmitted&apos;,  Amount__c -  RefundAmount__c != 0), &apos;SEPA aborted&apos;,
+     IF(AND(Type__c = &apos;External&apos;, GatewayState__c = &apos;NotSubmitted&apos;,  Amount__c -  RefundAmount__c != 0), &apos;Manually settled&apos;,
+      IF(AND(Type__c = &apos;External&apos;, GatewayState__c = &apos;NotSubmitted&apos;,  Amount__c -  RefundAmount__c = 0), &apos;Manually refunded&apos;,
+&apos;undefined&apos;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Evaluation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

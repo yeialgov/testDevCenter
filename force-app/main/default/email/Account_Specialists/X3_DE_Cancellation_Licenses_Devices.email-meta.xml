@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kündigungen Vertrag</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>A DE-Cancellation Licenses: Devices</name>
+    <style>none</style>
+    <subject>Pausierung Deiner orderbird Kasse</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

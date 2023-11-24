@@ -1,0 +1,56 @@
+{
+  "appPageId" : "604a159d-9c1d-4f0c-a775-45dee85652a1",
+  "componentName" : "community_layout:sldsFlexibleLayout",
+  "dataProviders" : [ ],
+  "id" : "272f1eea-833a-43d4-a232-911937fb6579",
+  "label" : "ttt",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "sectionConfig" : "{\"UUID\":\"cefbf081-d6bc-4c91-8509-7812f7288bf7\",\"columns\":[{\"UUID\":\"eaba0baa-c778-4dd4-8291-957050bdf46f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"6\",\"seedComponents\":[]},{\"UUID\":\"795d7adf-19c2-413f-a188-d3a471b3a1f2\",\"columnName\":\"Column 2\",\"columnKey\":\"e2808\",\"columnWidth\":\"6\",\"seedComponents\":[]}]}"
+      },
+      "componentName" : "community_layout:section",
+      "id" : "cefbf081-d6bc-4c91-8509-7812f7288bf7",
+      "regions" : [ {
+        "id" : "eaba0baa-c778-4dd4-8291-957050bdf46f",
+        "regionLabel" : "Column 1",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "id" : "795d7adf-19c2-413f-a188-d3a471b3a1f2",
+        "regionLabel" : "Column 2",
+        "regionName" : "e2808",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "scopedBrandingSetId" : null,
+      "type" : "component"
+    } ],
+    "id" : "59eca9f8-05b2-4277-9ee2-caeec51caf62",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "pageTitle" : "ttt",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "community_builder:seoAssistant",
+      "id" : "7b3eb99c-c9e6-4602-a2cf-cb5773ffa78f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "2c10581e-cd5d-4d58-b5c1-97a48b6f774e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-ttt"
+}

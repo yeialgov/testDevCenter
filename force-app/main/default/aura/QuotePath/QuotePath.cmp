@@ -1,0 +1,260 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" 
+                controller="NewQuoteController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.updated}"/>
+
+    <aura:attribute name="Quote" type="Object"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true" />
+    <aura:attribute name="ShowAccept" type="Boolean" default="false" />
+    <aura:attribute name="HasObVenue" type="Boolean" default="false" />
+    <aura:attribute name="NeedsBambora" type="Boolean" default="false"/>
+
+    <aura:handler event="c:NeedsBambora" action="{!c.NeedsBambora}"/>
+    <aura:handler event="c:HasObVenue" action="{!c.HasObVenue}"/>
+    
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, Status, ExpirationDate, Opportunity.OppCategory__c, Opportunity.StageName, InvoiceForecast__c, GrandTotal, DisableSubmit__c, Account.ZuoraId__c"
+                      mode="EDIT"
+                      targetFields="{!v.Quote}" />
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large" variant="brand"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.ShowAccept}">
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <lightning:buttonIcon size="large" 
+                                          variant="inverse"
+                                          onclick="{!c.HideAccept}"
+                                          class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                                          iconName="utility:close"/>
+                </header>
+                <div class="slds-modal__content slds-p-around_large" id="modal-content-id-1">
+                    <c:CreateSubscription recordId="{!v.recordId}" NeedsBambora="{!v.NeedsBambora}"/>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.Quote.Status != null}">
+        <aura:if isTrue="{!v.Quote.Account.ZuoraId__c == null}">
+            <aura:if isTrue="{!v.Quote.InvoiceForecast__c == null}">
+                <div style="margin-bottom:0.5rem;" class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                    <span class="slds-assistive-text">warning</span>
+                    <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Quote Total has not been verified.">
+                        <lightning:icon iconName="utility:warning" variant="inverse" size="small"/>
+                    </span>
+                    <h2>Quote Total has not been verified.</h2>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!and(v.Quote.InvoiceForecast__c != null, abs(v.Quote.InvoiceForecast__c-v.Quote.GrandTotal) > 0.01)}">
+                <div style="margin-bottom:0.5rem;" class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Quote Total has not been verified.">
+                        <lightning:icon iconName="utility:error" variant="inverse" size="small"/>
+                    </span>
+                    <h2>Quote Total does not match Zuora Invoice forecast.</h2>
+                </div>
+            </aura:if>
+        </aura:if>
+        <article class="slds-card">
+            <div class="slds-path" style="margin:1rem;">
+                <div class="slds-grid slds-path__track">
+                    <div class="slds-grid slds-path__scroller-container">
+                        <div class="slds-path__scroller" role="application">
+                            <div class="slds-path__scroller_inner">
+                                <aura:if isTrue="{!or(v.Quote.Status == 'Draft',v.Quote.Status == 'In Review')}">
+                                    <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                        <li class="{!v.Quote.Status == 'Draft' ? 'slds-path__item slds-is-active slds-is-current' : 'slds-path__item success slds-is-complete'}" 
+                                            role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">Draft</span>
+                                                </span>
+                                                <span class="slds-path__title">
+                                                    Draft
+                                                    <aura:if isTrue="{!v.Quote.Status == 'Draft'}">
+	                                                    <span style="font-size:75%;">&nbsp;(exp. <ui:outputDate value="{!v.Quote.ExpirationDate}"/>)</span>
+                                                    </aura:if>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="{!v.Quote.Status == 'In Review' ? 'slds-path__item slds-is-active slds-is-current' : 'slds-path__item slds-is-incomplete'}" 
+                                            role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">In Review</span>
+                                                </span>
+                                                <span class="slds-path__title">
+                                                    In Review
+                                                    <aura:if isTrue="{!v.Quote.Status == 'In Review'}">
+	                                                    <span style="font-size:75%;">&nbsp;(exp. <ui:outputDate value="{!v.Quote.ExpirationDate}"/>)</span>
+                                                    </aura:if>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">Accepted</span>
+                                                </span>
+                                                <span class="slds-path__title">Accepted</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </aura:if>
+                                <aura:if isTrue="{!v.Quote.Status == 'Accepted'}">
+                                    <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                        <li class="slds-path__item success slds-is-complete" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">Draft</span>
+                                                </span>
+                                                <span class="slds-path__title">Draft</span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-path__item success slds-is-complete" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">In Review</span>
+                                                </span>
+                                                <span class="slds-path__title">In Review</span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-path__item deepSuccess slds-is-won slds-is-active slds-is-current" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">Accepted</span>
+                                                </span>
+                                                <span class="slds-path__title">Accepted</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </aura:if>
+                                <aura:if isTrue="{!and(and(v.Quote.Status != null,v.Quote.Status != 'Accepted'),and(v.Quote.Status != 'Draft',v.Quote.Status != 'In Review'))}">
+                                    <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                        <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">Draft</span>
+                                                </span>
+                                                <span class="slds-path__title">Draft</span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">In Review</span>
+                                                </span>
+                                                <span class="slds-path__title">In Review</span>
+                                            </a>
+                                        </li>
+                                        <li class="slds-path__item failure slds-is-won slds-is-active slds-is-current" role="presentation">
+                                            <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                                <span class="slds-path__stage">
+                                                    <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                    <span class="slds-assistive-text">{!v.Quote.Status}</span>
+                                                </span>
+                                                <span class="slds-path__title">{!v.Quote.Status}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </aura:if>
+                                <aura:if isTrue="false">
+                                    <li class="{!v.Quote.Status == 'Draft' ? 'slds-path__item slds-is-active slds-is-current' : 'slds-path__item slds-is-complete'}" 
+                                        role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                <span class="slds-assistive-text">Draft</span>
+                                            </span>
+                                            <span class="slds-path__title">Draft</span>
+                                        </a>
+                                    </li>
+                                    <li class="{!if(v.Quote.Status == 'Draft','slds-path__item slds-is-incomplete',v.Quote.Status == 'In Review' ? 'slds-path__item slds-is-active slds-is-current' : 'slds-path__item slds-is-complete')}" 
+                                        role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                <span class="slds-assistive-text">In Review</span>
+                                            </span>
+                                            <span class="slds-path__title">In Review</span>
+                                        </a>
+                                    </li>
+                                    <li class="{!if(or(v.Quote.Status == 'Draft',v.Quote.Status == 'In Review'),'slds-path__item slds-is-incomplete','slds-path__item slds-is-active slds-is-current')}" 
+                                        role="presentation">
+                                        <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" id="path-6" role="option" tabindex="-1">
+                                            <span class="slds-path__stage">
+                                                <lightning:icon iconName="utility:check" size="x-small" variant="inverse"/>
+                                                <span class="slds-assistive-text">{!if(or(v.Quote.Status == 'Draft',v.Quote.Status == 'In Review'),'Accepted',v.Quote.Status)}</span>
+                                            </span>
+                                            <span class="slds-path__title">{!if(or(v.Quote.Status == 'Draft',v.Quote.Status == 'In Review'),'Accepted',v.Quote.Status)}</span>
+                                        </a>
+                                    </li>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-path__action">
+                        <aura:if isTrue="{!v.Quote.Status == 'Draft'}">
+                            <aura:if isTrue="{!v.Quote.DisableSubmit__c}">
+                                <lightning:button class="nominwidth slds-path__mark-complete" 
+                                                  onclick="{!c.reverify}"
+                                                  label="Re-Verify" 
+                                                  iconName="utility:sync" iconPosition="right" 
+                                                  variant="brand" />
+                            </aura:if>
+                            <lightning:button class="nominwidth slds-path__mark-complete" 
+                                              onclick="{!c.review}"
+                                              label="Submit" 
+                                              disabled="{!v.Quote.DisableSubmit__c}"
+                                              iconName="utility:breadcrumbs" iconPosition="right" 
+                                              variant="brand" />
+                            <lightning:button class="nominwidth slds-path__mark-complete" 
+                                              onclick="{!c.edit}"
+                                              label="Edit" 
+                                              iconName="utility:edit" iconPosition="right" 
+                                              variant="brand" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.Quote.Status == 'In Review'}">
+                            <lightning:button class="nominwidth slds-path__mark-complete" 
+                                              onclick="{!c.accept}"
+                                              label="Accept" 
+                                              disabled="{!and(v.Quote.Opportunity.OppCategory__c != 'MINI by orderbird',and(!v.HasObVenue,v.Quote.Account.ZuoraId__c==null))}"
+                                              iconName="utility:success" iconPosition="right" 
+                                              variant="success" />
+                        </aura:if>
+                        <aura:if isTrue="{!and(v.Quote.Opportunity.StageName != 'Closed Won',v.Quote.Opportunity.StageName != 'Closed Lost')}">
+                            <lightning:button class="nominwidth slds-path__mark-complete" 
+                                              onclick="{!c.clone}"
+                                              label="Clone" 
+                                              iconName="utility:copy" iconPosition="right" 
+                                              variant="brand" />
+                        </aura:if>
+                        <aura:if isTrue="{!or(v.Quote.Status == 'Draft',v.Quote.Status == 'In Review')}">
+                            <lightning:button class="nominwidth slds-path__mark-complete" 
+                                              onclick="{!c.reject}"
+                                              label="Reject" 
+                                              iconName="utility:clear" iconPosition="right" 
+                                              variant="destructive" />
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </aura:if>
+</aura:component>

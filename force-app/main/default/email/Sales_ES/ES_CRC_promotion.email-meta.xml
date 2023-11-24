@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC promotion</name>
+    <style>freeForm</style>
+    <subject>¡Asegúrate ya una licencia anual totalmente gratis!</subject>
+    <textOnly>Hola XXXXXXXXXX,
+
+¿Te gustaría dejar de pagar los derechos de licencia? ¡entonces tengo una buena noticia para tí! Por cada nuevo cliente que nos consigas en orderbird te ofrecemos de regalo una licencia anual por el valor de 390€. El nuevo colaborador no se irá tampoco con las manos vacías, sino que recibirá un descuento en nuestro paquete inicial por el valor de 100€.
+
+Respóndenos directamente a este email o ve directamente a www.orderbird.com/kunden-werben-kunden y rellena nuestro práctico formular online.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

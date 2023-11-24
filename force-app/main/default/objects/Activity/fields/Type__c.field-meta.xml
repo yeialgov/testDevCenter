@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the type of Activity by department</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Activity_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales - Demand Analysis</fullName>
+                <default>false</default>
+                <label>Sales - Demand Analysis</label>
+            </value>
+            <value>
+                <fullName>Sales - Follow up</fullName>
+                <default>false</default>
+                <label>Sales - Follow up</label>
+            </value>
+            <value>
+                <fullName>Sales - Follow up (Corona)</fullName>
+                <default>false</default>
+                <label>Sales - Follow up (Corona)</label>
+            </value>
+            <value>
+                <fullName>Sales - Demo (online)</fullName>
+                <default>false</default>
+                <label>Sales - Demo (online)</label>
+            </value>
+            <value>
+                <fullName>Sales - Demo (onsite)</fullName>
+                <default>false</default>
+                <label>Sales - Demo (onsite)</label>
+            </value>
+            <value>
+                <fullName>Sales - Sales Talk</fullName>
+                <default>true</default>
+                <label>Sales - Sales Talk</label>
+            </value>
+            <value>
+                <fullName>Sales - Order Process</fullName>
+                <default>false</default>
+                <label>Sales - Order Process</label>
+            </value>
+            <value>
+                <fullName>Sales - Support Issues</fullName>
+                <default>false</default>
+                <label>Sales - Support Issues</label>
+            </value>
+            <value>
+                <fullName>Sales - General Issues</fullName>
+                <default>false</default>
+                <label>Sales - General Issues</label>
+            </value>
+            <value>
+                <fullName>Sales - Upselling</fullName>
+                <default>false</default>
+                <label>Sales - Upselling</label>
+            </value>
+            <value>
+                <fullName>AccM - pay onboarding</fullName>
+                <default>false</default>
+                <label>AccM - pay onboarding</label>
+            </value>
+            <value>
+                <fullName>AccM - Compensation</fullName>
+                <default>false</default>
+                <label>AccM - Compensation</label>
+            </value>
+            <value>
+                <fullName>PM - Partner check-in</fullName>
+                <default>false</default>
+                <label>PM - Partner check-in</label>
+            </value>
+            <value>
+                <fullName>PM - General Issues</fullName>
+                <default>false</default>
+                <label>PM - General Issues</label>
+            </value>
+            <value>
+                <fullName>Support - General Issues</fullName>
+                <default>false</default>
+                <label>Support - General Issues</label>
+            </value>
+            <value>
+                <fullName>Support - Incoming Voicemail</fullName>
+                <default>false</default>
+                <label>Support - Incoming Voicemail</label>
+            </value>
+            <value>
+                <fullName>Support - Webinar Orderpad</fullName>
+                <default>false</default>
+                <label>Support - Webinar Orderpad</label>
+            </value>
+            <value>
+                <fullName>Support - Webinar my.orderbird</fullName>
+                <default>false</default>
+                <label>Support - Webinar my.orderbird</label>
+            </value>
+            <value>
+                <fullName>Support - Webinar Settings</fullName>
+                <default>false</default>
+                <label>Support - Webinar Settings</label>
+            </value>
+            <value>
+                <fullName>Support - 1-on-1-Training</fullName>
+                <default>false</default>
+                <label>Support - 1-on-1-Training</label>
+            </value>
+            <value>
+                <fullName>Support - Welcome Call</fullName>
+                <default>false</default>
+                <label>Support - Welcome Call</label>
+            </value>
+            <value>
+                <fullName>Support - Ketchup Call</fullName>
+                <default>false</default>
+                <label>Support - Ketchup Call</label>
+            </value>
+            <value>
+                <fullName>Support - Goodbye Call</fullName>
+                <default>false</default>
+                <label>Support - Goodbye Call</label>
+            </value>
+            <value>
+                <fullName>Support - Follow Up</fullName>
+                <default>false</default>
+                <label>Support - Follow Up</label>
+            </value>
+            <value>
+                <fullName>Blocker</fullName>
+                <default>false</default>
+                <label>Blocker</label>
+            </value>
+            <value>
+                <fullName>MINI</fullName>
+                <default>false</default>
+                <label>MINI</label>
+            </value>
+            <value>
+                <fullName>PRO</fullName>
+                <default>false</default>
+                <label>PRO</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Demand Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Follow up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Follow up (Corona)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Sales Talk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Order Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - Support Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>Sales - General Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <controllingFieldValue>E-Mail</controllingFieldValue>
+            <controllingFieldValue>To Do</controllingFieldValue>
+            <valueName>Sales - Upselling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>E-Mail</controllingFieldValue>
+            <controllingFieldValue>To Do</controllingFieldValue>
+            <controllingFieldValue>Pay Onboarding</controllingFieldValue>
+            <valueName>AccM - pay onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>E-Mail</controllingFieldValue>
+            <controllingFieldValue>To Do</controllingFieldValue>
+            <valueName>AccM - Compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>PM - Partner check-in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <controllingFieldValue>Meeting (onsite)</controllingFieldValue>
+            <valueName>PM - General Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <valueName>Support - General Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call</controllingFieldValue>
+            <valueName>Support - Incoming Voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Demo</controllingFieldValue>
+            <valueName>Sales - Demo (online)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Demo</controllingFieldValue>
+            <valueName>Sales - Demo (onsite)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Webinar Orderpad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Webinar my.orderbird</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Webinar Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - 1-on-1-Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Welcome Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Ketchup Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Support - Goodbye Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>MINI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>PRO</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

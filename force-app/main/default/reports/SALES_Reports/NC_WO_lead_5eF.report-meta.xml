@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>Opportunity$Account.Id</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$LAC_ID__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Lead_Medium__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Converted_Lead__c.Lead_Medium__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Lead_Channel__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Converted_Lead__c.Lead_Channel__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>al new customers coming from an opp w/o lead</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$NewBusiness__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$OppCategory__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>MINI by orderbird</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$Converted_Lead__c.LeadSource</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$LeadSource</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NC W/O lead</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_custom__c</reportType>
+    <roleHierarchyFilter>System_Admin</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$Account.Closed_Contract_Date__c</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductService__c</fullName>
+    <externalId>false</externalId>
+    <label>Product/Service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>3rd Party Products</fullName>
+                <default>false</default>
+                <label>3rd Party Products</label>
+            </value>
+            <value>
+                <fullName>Academy</fullName>
+                <default>false</default>
+                <label>Academy</label>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Cash Book</fullName>
+                <default>false</default>
+                <label>Cash Book</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Customer Account</fullName>
+                <default>false</default>
+                <label>Customer Account</label>
+            </value>
+            <value>
+                <fullName>Customer Health</fullName>
+                <default>false</default>
+                <label>Customer Health</label>
+            </value>
+            <value>
+                <fullName>Customer Management Resmio</fullName>
+                <default>false</default>
+                <label>Customer Management Resmio</label>
+            </value>
+            <value>
+                <fullName>DATEV</fullName>
+                <default>false</default>
+                <label>DATEV</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>fiskaltrust</fullName>
+                <default>false</default>
+                <label>fiskaltrust</label>
+            </value>
+            <value>
+                <fullName>Gastro Gründer Preis</fullName>
+                <default>false</default>
+                <label>Gastro Gründer Preis</label>
+            </value>
+            <value>
+                <fullName>Get It Done</fullName>
+                <default>false</default>
+                <label>Get It Done</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Insights</fullName>
+                <default>false</default>
+                <label>Insights</label>
+            </value>
+            <value>
+                <fullName>KassenSichV</fullName>
+                <default>false</default>
+                <label>KassenSichV</label>
+            </value>
+            <value>
+                <fullName>License</fullName>
+                <default>false</default>
+                <label>License</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Metro</fullName>
+                <default>false</default>
+                <label>Metro</label>
+            </value>
+            <value>
+                <fullName>MINI by orderbird</fullName>
+                <default>false</default>
+                <label>MINI by orderbird</label>
+            </value>
+            <value>
+                <fullName>my.orderbird</fullName>
+                <default>false</default>
+                <label>my.orderbird</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>orderbird App</fullName>
+                <default>false</default>
+                <label>orderbird App</label>
+            </value>
+            <value>
+                <fullName>orderbird Pay</fullName>
+                <default>false</default>
+                <label>orderbird Pay</label>
+            </value>
+            <value>
+                <fullName>orderbird WiFi</fullName>
+                <default>false</default>
+                <label>orderbird WiFi</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Product Integration</fullName>
+                <default>false</default>
+                <label>Product Integration</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Server</fullName>
+                <default>false</default>
+                <label>Server</label>
+            </value>
+            <value>
+                <fullName>Supplies</fullName>
+                <default>false</default>
+                <label>Supplies</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

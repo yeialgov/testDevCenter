@@ -1,0 +1,28 @@
+<aura:component controller="InterwegaController" 
+                implements="flexipage:availableForAllPageTypes" 
+                access="global" >
+    
+    <lightning:card title="Interwega Data">
+        <div style="padding: 0 0.25rem;text-align:center;">
+            <p style="margin-bottom:0.25rem;">
+                <lightning:button label="Record Count" 
+                                  onclick="{!c.count}"
+                                  variant="neutral"
+                                  iconName="utility:record_lookup"/>
+            </p>
+            <p style="margin-bottom:0.25rem;">
+                <lightning:button label="Clear Data" 
+                                  onclick="{!c.clear}"
+                                  variant="destructive"
+                                  iconName="utility:record_delete"/>
+            </p>
+            <p>
+                <lightning:button label="Import Data" 
+                                  onclick="{!c.import}"
+                                  variant="brand"
+                                  iconName="utility:record_create"/>
+            </p>
+        </div>
+    </lightning:card>
+    
+</aura:component>

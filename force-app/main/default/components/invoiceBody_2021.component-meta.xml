@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>42.0</apiVersion>
+    <description>CRMT-3252 Applying VAT of Destination Country (New VAT law 01.07.2021)</description>
+    <label>invoiceBody_2021</label>
+</ApexComponent>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Categorisation</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>NameDE__c</columns>
+    <columns>NAME</columns>
+    <columns>ProductService__c</columns>
+    <columns>Case_Reason__c</columns>
+    <columns>Usage__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Approved__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProductService__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Case_Reason__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Usage__c</field>
+        <operation>greaterThan</operation>
+        <value>0</value>
+    </filters>
+    <label>Missing Categorisation</label>
+</ListView>

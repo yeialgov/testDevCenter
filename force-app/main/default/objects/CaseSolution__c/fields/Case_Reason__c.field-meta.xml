@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Account Balance</fullName>
+                <default>false</default>
+                <label>Account Balance</label>
+            </value>
+            <value>
+                <fullName>Apple Devices</fullName>
+                <default>false</default>
+                <label>Apple Devices</label>
+            </value>
+            <value>
+                <fullName>Belege</fullName>
+                <default>false</default>
+                <label>Belege</label>
+            </value>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>Callbacks and appointments</fullName>
+                <default>false</default>
+                <label>Callbacks and appointments</label>
+            </value>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Card Reader</fullName>
+                <default>false</default>
+                <label>Card Reader</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Complimentary Services and Materials</fullName>
+                <default>false</default>
+                <label>Complimentary Services and Materials</label>
+            </value>
+            <value>
+                <fullName>Data Maintenance</fullName>
+                <default>false</default>
+                <label>Data Maintenance</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Dunning/Debt Collection</fullName>
+                <default>false</default>
+                <label>Dunning/Debt Collection</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+                <label>Feature Request</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>General Questions</fullName>
+                <default>false</default>
+                <label>General Questions</label>
+            </value>
+            <value>
+                <fullName>Goodwill</fullName>
+                <default>false</default>
+                <label>Goodwill</label>
+            </value>
+            <value>
+                <fullName>Guest WiFi</fullName>
+                <default>false</default>
+                <label>Guest WiFi</label>
+            </value>
+            <value>
+                <fullName>Human Error - OB</fullName>
+                <default>false</default>
+                <label>Human Error - OB</label>
+            </value>
+            <value>
+                <fullName>Internal Data Maintenance</fullName>
+                <default>false</default>
+                <label>Internal Data Maintenance</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Masterdata</fullName>
+                <default>false</default>
+                <label>Masterdata</label>
+            </value>
+            <value>
+                <fullName>Menu Card</fullName>
+                <default>false</default>
+                <label>Menu Card</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>NPS</fullName>
+                <default>false</default>
+                <label>NPS</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Pricing and Conditions</fullName>
+                <default>false</default>
+                <label>Pricing and Conditions</label>
+            </value>
+            <value>
+                <fullName>Product Delisted</fullName>
+                <default>false</default>
+                <label>Product Delisted</label>
+            </value>
+            <value>
+                <fullName>Reason for Cancellation</fullName>
+                <default>false</default>
+                <label>Reason for Cancellation</label>
+            </value>
+            <value>
+                <fullName>Referral Programs</fullName>
+                <default>false</default>
+                <label>Referral Programs</label>
+            </value>
+            <value>
+                <fullName>Replacement</fullName>
+                <default>false</default>
+                <label>Replacement</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Return</fullName>
+                <default>false</default>
+                <label>Return</label>
+            </value>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>Suspicion of Fraud</fullName>
+                <default>false</default>
+                <label>Suspicion of Fraud</label>
+            </value>
+            <value>
+                <fullName>Taxation</fullName>
+                <default>false</default>
+                <label>Taxation</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Update</fullName>
+                <default>false</default>
+                <label>Update</label>
+            </value>
+            <value>
+                <fullName>Upselling</fullName>
+                <default>false</default>
+                <label>Upselling</label>
+            </value>
+            <value>
+                <fullName>Usage</fullName>
+                <default>false</default>
+                <label>Usage</label>
+            </value>
+            <value>
+                <fullName>User Issue</fullName>
+                <default>false</default>
+                <label>User Issue</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+            <value>
+                <fullName>Workaround</fullName>
+                <default>false</default>
+                <label>Workaround</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

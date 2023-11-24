@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinanceApproval</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( Approved__c ) 
+&amp;&amp;
+ $Profile.Name = &quot;Finance&quot;
+&amp;&amp;
+  NOT(ISPICKVAL(Case_Reason__c, &quot;Finance&quot;))</errorConditionFormula>
+    <errorMessage>Finance should only approve Finance Case Solutions</errorMessage>
+</ValidationRule>

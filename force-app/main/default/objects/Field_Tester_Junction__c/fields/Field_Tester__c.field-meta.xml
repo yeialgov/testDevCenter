@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Tester__c</fullName>
+    <externalId>false</externalId>
+    <label>Field Tester</label>
+    <referenceTo>Field_Tester__c</referenceTo>
+    <relationshipLabel>Field Tester Junctions</relationshipLabel>
+    <relationshipName>Field_Tester_Junctions</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

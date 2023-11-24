@@ -1,0 +1,59 @@
+<aura:component >
+    <aura:attribute name="Data" type="Object"/>
+    <aura:attribute name="Hidden" type="Boolean" default="true"/>
+    <aura:attribute name="Currency" type="String" default="EUR"/>
+    <aura:attribute type="Boolean" name="isAcctMgmt" default="false"/>
+    <aura:attribute type="Boolean" name="IsAmendment" default="false"/>
+    
+    <aura:handler event="c:NewQuoteItem" action="{!c.handleApplicationEvent}"/>
+    
+    <div class="{!if(v.Hidden==true, 'slds-section', 'slds-section slds-is-open')}">
+        <h3 class="slds-section__title" onclick="{!c.toggle}">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                <lightning:buttonIcon iconName="utility:switch"
+                                      variant="bare"
+                                      class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"/>
+                <span class="slds-truncate" title="{!v.Data.Name}">
+                    {!v.Data.Name}
+                    <aura:if isTrue="{!and(and(v.Data.Num != null , v.Data.Num != 0) , v.Hidden)}">
+                        <aura:if isTrue="{!and(v.IsAmendment, and(v.Data.tDelta != 0, v.Data.tDelta != null))}">
+                            <aura:if isTrue="{!v.Data.tDelta > 0}">
+                                <lightning:icon iconName="utility:record" size="small" class="greenDot"/>
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:record" size="small" class="redDot"/>
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:record" size="small" class="blueDot"/>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                </span>
+            </button>
+        </h3>
+        <div aria-hidden="{!v.Hidden}" class="slds-section__content" id="expando-unique-id">
+            <div class="slds-grid slds-gutters slds-wrap">
+                <aura:iteration items="{!v.Data.Products__r.records}" var="prod">
+                    <aura:if isTrue="{!prod.Display || prod.Num != null}">
+                        <div class="slds-col slds-size_1-of-2">
+                            <c:QuoteProductPicker isAcctMgmt="{!v.isAcctMgmt}"
+                                                  Product="{!prod}"
+                                                  Currency="{!v.Currency}"
+                                                  IsAmendment="{!v.IsAmendment}"/>
+                        </div>
+                    </aura:if>
+                </aura:iteration>
+                <aura:iteration items="{!v.Data.Product_Bundles__r.records}" var="prod">
+                    <aura:if isTrue="{!!prod.Hidden__c}">
+                        <div class="slds-col slds-size_1-of-2">
+                            <c:QuoteProductPicker isAcctMgmt="{!v.isAcctMgmt}"
+                                                  Product="{!prod}" 
+                                                  Currency="{!v.Currency}"
+                                                  IsAmendment="{!v.IsAmendment}"/>
+                        </div>
+                    </aura:if>
+                </aura:iteration>
+            </div>
+        </div>
+    </div>
+</aura:component>

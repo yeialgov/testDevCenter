@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccM_Task</fullName>
+    <active>true</active>
+    <label>AccM Task</label>
+    <picklistValues>
+        <picklist>Activity_Type__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>E-Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Do</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Next_Step_Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Next_Step_Type__c</picklist>
+        <values>
+            <fullName>AccM - Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AccM - pay onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Follow up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Follow up %28Corona%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Upselling</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Next_Step__c</picklist>
+        <values>
+            <fullName>Sales - Demand Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Follow up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - General Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Sales Talk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Upselling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Stage__c</picklist>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Introduction %2F Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>E-Mail bounced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reached - Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reached - no Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reached but busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reached but contact not available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful - Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Task Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Watched Video</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Check on potential upsell opportunities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demo completed%2C send quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Generally interested%2C wants to have a Demo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial draft offer made%2C follow-up needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not available%2C follow-up needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PM Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Outbound after Voicemail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>DO NOT USE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>AccM - Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AccM - pay onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Follow up</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sales - Follow up %28Corona%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales - Upselling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

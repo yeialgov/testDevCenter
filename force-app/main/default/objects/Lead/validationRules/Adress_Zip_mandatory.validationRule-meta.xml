@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adress_Zip_mandatory</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+
+OR(
+ISNEW(),
+ISCHANGED(PostalCode)),
+
+ISBLANK( PostalCode )
+)</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Please fill the Zip Code!</errorMessage>
+</ValidationRule>

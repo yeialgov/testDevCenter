@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Description</fullName>
+    <inlineHelpText>Are there generally true and relevant information about this account that are important to know for somebody looking at the account? Filled if needed. Keep in mind: nothing written here can be tracked or reported on.</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
 </CustomField>

@@ -1,0 +1,13 @@
+<apex:page controller="queryToolController" readOnly="true" showHeader="false" sidebar="false">
+  <div style="padding:1rem;">
+      <apex:form >
+          <apex:outputPanel rendered="{!!displayResults}">
+              <apex:inputTextarea value="{!queryString}"/>
+              <apex:commandButton value="Execute Query" action="{!executeQuery}"/>
+          </apex:outputPanel>
+          <apex:outputPanel rendered="{!displayResults}">
+              {!jsonStr}
+          </apex:outputPanel>
+      </apex:form>
+  </div>
+</apex:page>

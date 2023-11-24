@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Close Menu Card FR</name>
+    <style>none</style>
+    <subject>Votre carte est prête! Qu’en pensez-vous?</subject>
+    <textOnly>{!Case.OwnerFirstName} a implémenté votre carte aujourd&apos;hui.
+
+En êtes-vous satisfaite?
+
+orderbird AG
+
+
+
+Ritterstraße 12-14, Aufg. 3
+D-10969 Berlin
+Germany
+
+
+
+Siège: Berlin
+
+Registre du commerce de l&apos;Amtsgericht Berlin – Charlottenburg
+HRB 134011
+Numéro de TVA: DE276722316
+
+
+
+CEO: Jakob Schreyer
+
+Président du comité directeur: Carlo Kölzer
+
+
+© 2010–2017 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

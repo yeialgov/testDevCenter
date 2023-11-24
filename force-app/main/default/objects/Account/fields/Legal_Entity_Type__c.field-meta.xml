@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Entity_Type__c</fullName>
+    <description>Stakeholder: Pay 
+https://jira.orderbird.com/browse/CDS-2115</description>
+    <externalId>false</externalId>
+    <label>Legal Entity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AG</fullName>
+                <default>false</default>
+                <label>AG</label>
+            </value>
+            <value>
+                <fullName>e.G.</fullName>
+                <default>false</default>
+                <label>e.G.</label>
+            </value>
+            <value>
+                <fullName>e.K.</fullName>
+                <default>false</default>
+                <label>e.K.</label>
+            </value>
+            <value>
+                <fullName>e.V.</fullName>
+                <default>false</default>
+                <label>e.V.</label>
+            </value>
+            <value>
+                <fullName>einfache Gesellschaft</fullName>
+                <default>false</default>
+                <label>einfache Gesellschaft</label>
+            </value>
+            <value>
+                <fullName>Einzelunternehmen</fullName>
+                <default>false</default>
+                <label>Einzelunternehmen</label>
+            </value>
+            <value>
+                <fullName>GbR</fullName>
+                <default>false</default>
+                <label>GbR</label>
+            </value>
+            <value>
+                <fullName>GesnbR</fullName>
+                <default>false</default>
+                <label>GesnbR</label>
+            </value>
+            <value>
+                <fullName>gGmbH</fullName>
+                <default>false</default>
+                <label>gGmbH</label>
+            </value>
+            <value>
+                <fullName>GmbH</fullName>
+                <default>false</default>
+                <label>GmbH</label>
+            </value>
+            <value>
+                <fullName>GmbH &amp; Co KG</fullName>
+                <default>false</default>
+                <label>GmbH &amp; Co KG</label>
+            </value>
+            <value>
+                <fullName>K.d.ö.R.</fullName>
+                <default>false</default>
+                <label>K.d.ö.R.</label>
+            </value>
+            <value>
+                <fullName>Kollektiv Gesellschaft</fullName>
+                <default>false</default>
+                <label>Kollektiv Gesellschaft</label>
+            </value>
+            <value>
+                <fullName>OG</fullName>
+                <default>false</default>
+                <label>OG</label>
+            </value>
+            <value>
+                <fullName>OHG</fullName>
+                <default>false</default>
+                <label>OHG</label>
+            </value>
+            <value>
+                <fullName>Stiftung</fullName>
+                <default>false</default>
+                <label>Stiftung</label>
+            </value>
+            <value>
+                <fullName>UG</fullName>
+                <default>false</default>
+                <label>UG</label>
+            </value>
+            <value>
+                <fullName>UG &amp; Co KG</fullName>
+                <default>false</default>
+                <label>UG &amp; Co KG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

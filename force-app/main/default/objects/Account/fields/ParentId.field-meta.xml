@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ParentId</fullName>
+    <inlineHelpText>Is this account connected to other accounts (franchise, shared management, venue in venue)? Put the supervising/leading/primary account here.</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Hierarchy</type>
 </CustomField>

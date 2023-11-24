@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE No Inkasso during Lockdown 2021</name>
+    <style>none</style>
+    <subject>Kein Inkasso während des Lockdowns 2021</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+Du hast Dich bei uns gemeldet, weil Du durch den derzeitigen Corona-bedingten Lockdown mit Deinen Zahlungen bei uns in Verzug geraten bist. Solange sich die Gastronomie Anfang 2021 im Lockdown befindet, verzichtet die orderbird AG auf das Inkasso-Verfahren.
+
+Das bedeutet, dass Du Deine ausstehenden Zahlungen dann bezahlst, wenn Du kannst. Da der Zahlungsprozess sowie der damit verbundene Mahnprozess voll automatisiert ist, wirst Du allerdings weiterhin Mahnungen erhalten.
+
+Wusstest Du schon, dass Du für die Dauer des derzeitigen Lockdowns ohne Frist…
+- auf ein günstigeres Lizenzmodell wechseln kannst?
+- Deine Gerätelizenzen reduzieren kannst?
+- Deine Lizenz(en) pausieren kannst?
+
+Falls Du dazu eine Beratung wünschst, antworte einfach auf diese E-Mail unter Angabe einer Telefonnummer und den Zeiten, wann wir Dich gut erreichen können. Wir melden uns dann zeitnah innerhalb unserer Geschäftszeiten bei Dir.
+
+Liebe Grüße aus Berlin
+{!User.FirstName} von orderbird
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

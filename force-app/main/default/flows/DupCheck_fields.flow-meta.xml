@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>relevant fields changed</label>
+        </rules>
+    </decisions>
+    <description>https://jira.orderbird.com/browse/CDS-974</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+OR(
+[Lead].Ignore_Email__c = True,
+ISNULL([Lead].Email),
+[Lead].Email=&apos;na@na.na&apos;,
+[Lead].Email=&apos;na@na.de&apos;,
+[Lead].Email=&apos;test@test.com&apos;),
+&apos;&apos;, [Lead].Email )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_4449639585</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!myVariable_current.Ignore_Email__c} = True,
+ISNULL({!myVariable_current.Email}),
+{!myVariable_current.Email}=&apos;na@na.na&apos;,
+{!myVariable_current.Email}=&apos;na@na.de&apos;,
+{!myVariable_current.Email}=&apos;test@test.com&apos;),
+&apos;&apos;, {!myVariable_current.Email} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+OR(
+[Lead].Ignore_Full_Name__c = True,
+[Lead].LastName=&apos;Facebook Scrapper&apos;,
+[Lead].LastName=&apos;n/a&apos;,
+[Lead].LastName=&apos;[not provided]&apos;),
+&apos;&apos;, [Lead].FirstName + &apos; &apos; + [Lead].LastName)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A1_6994524857</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!myVariable_current.Ignore_Full_Name__c} = True,
+{!myVariable_current.LastName}=&apos;Facebook Scrapper&apos;,
+{!myVariable_current.LastName}=&apos;n/a&apos;,
+{!myVariable_current.LastName}=&apos;[not provided]&apos;),
+&apos;&apos;, {!myVariable_current.FirstName} + &apos; &apos; + {!myVariable_current.LastName})</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+OR(
+[Lead].Ignore_Last_Name__c = True,
+[Lead].LastName=&apos;Facebook Scrapper&apos;,
+[Lead].LastName=&apos;n/a&apos;,
+[Lead].LastName=&apos;[not provided]&apos;),
+&apos;&apos;, [Lead].LastName )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_4_myRule_1_A1_5972705627</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!myVariable_current.Ignore_Last_Name__c} = True,
+{!myVariable_current.LastName}=&apos;Facebook Scrapper&apos;,
+{!myVariable_current.LastName}=&apos;n/a&apos;,
+{!myVariable_current.LastName}=&apos;[not provided]&apos;),
+&apos;&apos;, {!myVariable_current.LastName} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+OR(
+[Lead].Ignore_Phone__c = True,
+ISNULL([Lead].Phone),
+[Lead].Phone=&apos;N/A&apos;,
+[Lead].Phone=&apos;+49123456789&apos;,
+[Lead].Phone=&apos;123456789&apos;),
+&apos;&apos;, [Lead].Phone )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_5_myRule_1_A1_4993298153</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!myVariable_current.Ignore_Phone__c} = True,
+ISNULL({!myVariable_current.Phone}),
+{!myVariable_current.Phone}=&apos;N/A&apos;,
+{!myVariable_current.Phone}=&apos;+49123456789&apos;,
+{!myVariable_current.Phone}=&apos;123456789&apos;),
+&apos;&apos;, {!myVariable_current.Phone} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>IF(
+OR(
+[Lead].Ignore_Venue_Name__c = True,
+[Lead].Company=&apos;[not provided]&apos;,
+[Lead].Company=&apos;Test&apos;,
+[Lead].Company=&apos;Trade Fair&apos;),
+&apos;&apos;, [Lead].Company )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_1_A1_9751168110</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(
+{!myVariable_current.Ignore_Venue_Name__c} = True,
+{!myVariable_current.Company}=&apos;[not provided]&apos;,
+{!myVariable_current.Company}=&apos;Test&apos;,
+{!myVariable_current.Company}=&apos;Trade Fair&apos;),
+&apos;&apos;, {!myVariable_current.Company} )</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>OR(
+ISNEW(),
+ISCHANGED([Lead].Ignore_Email__c),
+ISCHANGED([Lead].Ignore_Full_Name__c),
+ISCHANGED([Lead].Ignore_Last_Name__c),
+ISCHANGED([Lead].Ignore_Phone__c),
+ISCHANGED([Lead].Ignore_Venue_Name__c),
+ISCHANGED([Lead].Email),
+ISCHANGED([Lead].FirstName),
+ISCHANGED([Lead].LastName),
+ISCHANGED([Lead].Phone),
+ISCHANGED([Lead].Company)  
+) </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+ISNEW(),
+ISCHANGED({!myVariable_current.Ignore_Email__c}),
+ISCHANGED({!myVariable_current.Ignore_Full_Name__c}),
+ISCHANGED({!myVariable_current.Ignore_Last_Name__c}),
+ISCHANGED({!myVariable_current.Ignore_Phone__c}),
+ISCHANGED({!myVariable_current.Ignore_Venue_Name__c}),
+ISCHANGED({!myVariable_current.Email}),
+ISCHANGED({!myVariable_current.FirstName}),
+ISCHANGED({!myVariable_current.LastName}),
+ISCHANGED({!myVariable_current.Phone}),
+ISCHANGED({!myVariable_current.Company})  
+)</expression>
+    </formulas>
+    <interviewLabel>DupCheck_fields-3_InterviewLabel</interviewLabel>
+    <label>DupCheck fields</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Lead</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>criteria</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Lead]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A1</name>
+        <label>Set Dupcheck fields</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>inputDataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>LAC ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>operatorDataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>LAC_ID__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>180</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>DUPCHECK Email</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>DUPCHECK_Email__c</field>
+            <value>
+                <elementReference>formula_2_myRule_1_A1_4449639585</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>DUPCHECK Full Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>DUPCHECK_Full_Name__c</field>
+            <value>
+                <elementReference>formula_3_myRule_1_A1_6994524857</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>DUPCHECK Last Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>DUPCHECK_Last_Name__c</field>
+            <value>
+                <elementReference>formula_4_myRule_1_A1_5972705627</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>DUPCHECK Phone</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>DUPCHECK_Phone__c</field>
+            <value>
+                <elementReference>formula_5_myRule_1_A1_4993298153</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>DUPCHECK Venue Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>DUPCHECK_Venue_Name__c</field>
+            <value>
+                <elementReference>formula_6_myRule_1_A1_9751168110</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <startElementReference>myDecision</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Lead</objectType>
+    </variables>
+</Flow>

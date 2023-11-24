@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <description>https://jira.orderbird.com/browse/CDS-1267</description>
+    <interviewLabel>Delete overdue Case tasks {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Delete overdue Case tasks</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordDeletes>
+        <name>task_deletion</name>
+        <label>task deletion</label>
+        <locationX>197</locationX>
+        <locationY>49</locationY>
+        <inputReference>$Record</inputReference>
+    </recordDeletes>
+    <start>
+        <locationX>51</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>task_deletion</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Related_to_ID__c</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>500</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Days_overdue__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>30.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <schedule>
+            <frequency>Weekly</frequency>
+            <startDate>2020-06-25</startDate>
+            <startTime>07:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

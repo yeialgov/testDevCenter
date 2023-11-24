@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Company</fullName>
+    <inlineHelpText>What is the venue&apos;s name? Name of the company must be filled in at lead creation. If this name is not available on creation use placeholders like name of the contact can be used.</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
 </CustomField>

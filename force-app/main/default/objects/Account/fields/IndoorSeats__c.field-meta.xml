@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IndoorSeats__c</fullName>
+    <description>Stakeholder: Sales with BI</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the total number of seats inside the venue? Sales Reps have to fill in this information during sales talk.</inlineHelpText>
+    <label># Indoor Seats</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>none</fullName>
+                <default>false</default>
+                <label>none</label>
+            </value>
+            <value>
+                <fullName>&lt;10</fullName>
+                <default>false</default>
+                <label>&lt;10</label>
+            </value>
+            <value>
+                <fullName>10-20</fullName>
+                <default>false</default>
+                <label>10-20</label>
+            </value>
+            <value>
+                <fullName>21-30</fullName>
+                <default>false</default>
+                <label>21-30</label>
+            </value>
+            <value>
+                <fullName>31-50</fullName>
+                <default>false</default>
+                <label>31-50</label>
+            </value>
+            <value>
+                <fullName>51-75</fullName>
+                <default>false</default>
+                <label>51-75</label>
+            </value>
+            <value>
+                <fullName>76-100</fullName>
+                <default>false</default>
+                <label>76-100</label>
+            </value>
+            <value>
+                <fullName>101-150</fullName>
+                <default>false</default>
+                <label>101-150</label>
+            </value>
+            <value>
+                <fullName>151-200</fullName>
+                <default>false</default>
+                <label>151-200</label>
+            </value>
+            <value>
+                <fullName>200+</fullName>
+                <default>false</default>
+                <label>200+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

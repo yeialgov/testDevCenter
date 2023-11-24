@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upselling_email_interest__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://jira.orderbird.com/browse/CDS-1623
+This field is automatically checked, once the customer clicks on the upselling campaign link</description>
+    <externalId>false</externalId>
+    <label>Upselling email interest</label>
+    <type>Checkbox</type>
+</CustomField>

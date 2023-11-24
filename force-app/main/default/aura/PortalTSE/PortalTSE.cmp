@@ -1,0 +1,160 @@
+<aura:component access="global" controller="PortalController"
+                implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="token" type="String"/>
+    <aura:attribute name="IsMobile" type="Boolean" default="false"/>
+    <aura:attribute name="TermsAccepted" type="Boolean" default="false"/>
+    <aura:attribute name="DownloadPage" type="Boolean" default="false"/>
+    <aura:attribute name="Data" type="List"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <lightning:navigation aura:id="navService"/>
+    <div style="overflow:hidden;margin-left: 0;">
+        <div class="page-headliner">
+            <h4>{!$Label.c.TSE_COMPLIANCE}</h4>
+            <div class="page-headliner-subtitle">
+                <a href="javascript:void(0);" onclick="{!c.back}">{!$Label.c.BACK_TO_OPTIONS}</a>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.ShowSpinner}"><lightning:spinner size="large"/></aura:if>
+        <aura:if isTrue="{!v.DownloadPage}">
+            <div class="row rowSpacer">
+                <div class="col-sm-8 col-xs-12">
+                    <h3>{!$Label.c.TSE_148_DOWNLOAD_HEADING}</h3>
+                    <p>{!$Label.c.TSE_148_DOWNLOAD_BODY}</p>
+                    <p><a href="{!$Label.c.TSE_148_DOWNLOAD_2_URL}" target="_blank">{!$Label.c.TSE_148_DOWNLOAD_2_TEXT}</a></p>
+                    <p><a href="{!$Label.c.TSE_148_DOWNLOAD_3_URL}" target="_blank">{!$Label.c.TSE_148_DOWNLOAD_3_TEXT}</a></p>
+                </div>
+            </div>
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.TermsAccepted}">
+                    <aura:if isTrue="{!v.Data[0] != null}">
+                        <aura:if isTrue="{!v.Data[0].Account__r.BillingCountryCode == 'DE'}">
+                            <aura:if isTrue="{!v.Data[0].Wizard_Complete__c == null}">
+                                <div class="row rowSpacer">
+                                    <div class="col-sm-8 col-xs-12">
+                                        {!$Label.c.MISSING_TSE_REDIRECT}
+                                        <p>
+                                            <lightning:button label="{!$Label.c.TAKE_ME_TO_FISCALIZATION}" 
+                                                              onclick="{!c.redirectFisc}"/>
+                                        </p>
+                                    </div>
+                                </div>
+                                <aura:set attribute="else">
+                                    <div class="row rowSpacer">
+                                        <div class="col-sm-8 col-xs-12">
+                                            <p>
+                                                {!$Label.c.TSE_FORM_BODY}
+                                            </p>
+                                            <label class="control-label section-label">{!$Label.c.MY_INFORMATION}</label>
+                                            <p>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[0].Account__r.LegalCompanyName__c}" 
+                                                                 placeholder="{!$Label.c.COMPANY_NAME}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[0].VATId__c}" 
+                                                                 placeholder="{!$Label.c.TAX_NUMBER}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[0].Account__r.VenueStreet__c}" 
+                                                                 placeholder="{!$Label.c.STREET_ADDRESS}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[0].Account__r.VenuePostalCode__c}" 
+                                                                 placeholder="{!$Label.c.POSTAL_CODE}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[0].Account__r.VenueCity__c}" 
+                                                                 placeholder="{!$Label.c.CITY}"/>
+                                            </p>
+                                            <label class="control-label section-label ">{!$Label.c.MY_FINANCE_OFFICE_INFORMATION}</label>
+                                            <p>
+                                                <p>
+                                                    <i>{!$Label.c.REFRESH_TSE_INSTRUCTIONS}</i>&nbsp;
+                                                    <lightning:button onclick="{!c.refreshFin}" 
+                                                                      iconName="utility:refresh" 
+                                                                      label="{!$Label.c.REFRESH}"/>
+                                                </p>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[1].Name}" 
+                                                                 placeholder="{!$Label.c.NAME}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[1].Street__c}" 
+                                                                 placeholder="{!$Label.c.STREET_ADDRESS}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[1].PostalCode__c}" 
+                                                                 placeholder="{!$Label.c.POSTAL_CODE}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[1].City__c}" 
+                                                                 placeholder="{!$Label.c.CITY}"/>
+                                                <lightning:input class="fullEntry" 
+                                                                 value="{!v.Data[1].Email__c}" 
+                                                                 placeholder="{!$Label.c.EMAIL}"/>
+                                            </p>
+                                            <p>
+                                                {!$Label.c.TSE_WARNING_0}
+                                            </p>
+                                            <div>
+                                                <lightning:buttonGroup>
+                                                    <!--lightning:button label="{!$Label.c.EMAIL_FINANCE_OFFICE}" 
+                                                                      onclick="{!c.email}"/-->
+                                                    <aura:if isTrue="{!!v.IsMobile}">
+                                                        <lightning:button label="{!$Label.c.DOWNLOAD_LETTER_AS_PDF}" 
+                                                                          onclick="{!c.download}"/>
+                                                    </aura:if>
+                                                </lightning:buttonGroup>
+                                                <div class="flash_message flash_message-info">
+                                                    <p>
+                                                        {!$Label.c.TSE_WARNING_1}
+                                                    </p>
+                                                    <!--p>
+                                                        {!$Label.c.TSE_WARNING_2}
+                                                    </p>
+                                                    <p>
+                                                        {!$Label.c.TSE_WARNING_3}
+                                                    </p-->
+                                                    <p>
+                                                        {!$Label.c.TSE_WARNING_4}
+                                                    </p>
+                                                </div>              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                {!$Label.c.FISCALIZATION_ONLY_IN_GERMANY}
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.IsMobile}">
+                            {!$Label.c.DESKTOP_ONLY_DOWNLOAD}
+                            <aura:set attribute="else">
+                                <div class="row rowSpacer">
+                                    <div class="col-sm-8 col-xs-12">
+                                        <h3>
+                                            {!$Label.c.TSE_EXPLANATION_HEAD}
+                                        </h3>
+                                        <p>
+                                            {!$Label.c.TSE_EXPLANATION_BODY}
+                                        </p>
+                                        <p>
+                                            {!$Label.c.TSE_EXPLANATION_BODY_1}<br/>{!$Label.c.TSE_EXPLANATION_BODY_2}
+                                        </p>
+                                        <p>
+                                            {!$Label.c.TSE_EXPLANATION_BODY_3}
+                                        </p>
+                                        <p>
+                                            {!$Label.c.TSE_EXPLANATION_BODY_4}
+                                        </p>
+                                        <lightning:button iconName="utility:forward" 
+                                                          iconPosition="right" 
+                                                          label="{!$Label.c.TO_THE_APPLICATION}" 
+                                                          onclick="{!c.accept}"/>
+                                    </div>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

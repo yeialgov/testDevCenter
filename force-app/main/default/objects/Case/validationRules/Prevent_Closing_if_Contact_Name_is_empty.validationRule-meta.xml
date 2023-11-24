@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Closing_if_Contact_Name_is_empty</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+  ISCHANGED(Status),
+  NOT( RecordType.Id = &apos;012580000002RGo&apos;),
+  NOT( RecordType.Id = &apos;0121t000000V1wN&apos;),
+  ISBLANK( Contact.LastName ), 
+  OR 
+    (ISPICKVAL(Status,&quot;Closed&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>Please fill in the Contact Name before closing this ticket</errorMessage>
+</ValidationRule>

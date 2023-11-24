@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsHardware__c</fullName>
+    <externalId>false</externalId>
+    <formula>SubscriptionLineItem__r.Product__r.RecognizedRevenueAccountingCode__c = &quot;Revenue Hardware&quot;
+||
+SubscriptionLineItem__r.Product__r.RecognizedRevenueAccountingCode__c = &quot;Revenue Hardware MINI&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Hardware</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

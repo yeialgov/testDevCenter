@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step__c</fullName>
+    <description>Stakeholder: Sales // Copy from the Default Opportunity field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the next step to follow-up with this opportunity?</inlineHelpText>
+    <label>Next Step</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales - Follow up</fullName>
+                <default>false</default>
+                <label>Sales - Follow up</label>
+            </value>
+            <value>
+                <fullName>Sales - Demand Analysis</fullName>
+                <default>false</default>
+                <label>Sales - Demand Analysis</label>
+            </value>
+            <value>
+                <fullName>Sales - General Call</fullName>
+                <default>false</default>
+                <label>Sales - General Call</label>
+            </value>
+            <value>
+                <fullName>Sales - Sales Talk</fullName>
+                <default>false</default>
+                <label>Sales - Sales Talk</label>
+            </value>
+            <value>
+                <fullName>Sales - Upselling</fullName>
+                <default>false</default>
+                <label>Sales - Upselling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

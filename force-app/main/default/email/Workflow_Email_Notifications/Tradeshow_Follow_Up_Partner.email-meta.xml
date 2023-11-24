@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/MESSE-63</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>Tradeshow Follow Up - Partner</name>
+    <style>freeForm</style>
+    <subject>Danke für Deinen orderbird-Besuch auf der INTERGASTRA 2018</subject>
+    <textOnly>Hallo,
+
+
+danke, dass Du Dir auf der diesjährigen INTERGASTRA Zeit für Deutschlands führende iPad-Kasse genommen hast.
+
+
+Ich bin bei orderbird für das Partner Management zuständig. Gemeinsam wollen wir mit Dir die Gastronomie beflügeln. Deshalb melde ich mich wie besprochen in den nächsten Tagen mit dem für Dich passenden Partnerprogramm zurück.
+
+
+Wenn Du vorab Fragen hast, schreib uns einfach eine E-Mail an partner@orderbird.com oder informiere Dich unter www.orderbird.com/de/partner.
+
+
+
+Viele Grüße aus Berlin
+
+Christian Scheper-Stuke
+
+Partnermanagement - orderbird AG
+
+
+
+
+PS: Kennst Du eigentlich schon unser Tippgeberprogramm?
+
+
+
+Sicher Dir jetzt 250 € für Deine Empfehlung!
+
+Werde orderbird-Tippgeber und profitiere von Deinem Netzwerk.
+
+
+Jetzt kostenlos registrieren unter www.orderbird.com/empfehlen!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

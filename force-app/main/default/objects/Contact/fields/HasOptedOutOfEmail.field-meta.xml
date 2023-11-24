@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HasOptedOutOfEmail</fullName>
+    <inlineHelpText>Does the contact ask to be removed from all email campaigns? If checked, should not get any emails from us.</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
 </CustomField>

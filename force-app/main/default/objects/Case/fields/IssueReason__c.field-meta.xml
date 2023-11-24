@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IssueReason__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What caused this issue to raise?</inlineHelpText>
+    <label>Issue Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>AMCategory__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>--</fullName>
+                <default>false</default>
+                <label>--</label>
+            </value>
+            <value>
+                <fullName>Account period of service</fullName>
+                <default>false</default>
+                <label>Account period of service</label>
+            </value>
+            <value>
+                <fullName>Terms and conditions</fullName>
+                <default>false</default>
+                <label>Terms and conditions</label>
+            </value>
+            <value>
+                <fullName>Already fulfilled</fullName>
+                <default>false</default>
+                <label>Already fulfilled</label>
+            </value>
+            <value>
+                <fullName>Broken Hardware &amp; Replacement</fullName>
+                <default>false</default>
+                <label>Broken Hardware &amp; Replacement</label>
+            </value>
+            <value>
+                <fullName>Change not possible</fullName>
+                <default>false</default>
+                <label>Change not possible</label>
+            </value>
+            <value>
+                <fullName>Change of name</fullName>
+                <default>false</default>
+                <label>Change of name</label>
+            </value>
+            <value>
+                <fullName>Checking conditions for referral</fullName>
+                <default>false</default>
+                <label>Checking conditions for referral</label>
+            </value>
+            <value>
+                <fullName>Claim settled</fullName>
+                <default>false</default>
+                <label>Claim settled</label>
+            </value>
+            <value>
+                <fullName>Compensation</fullName>
+                <default>false</default>
+                <label>Compensation</label>
+            </value>
+            <value>
+                <fullName>Complaint - accounting/ customer account</fullName>
+                <default>false</default>
+                <label>Complaint - accounting/ customer account</label>
+            </value>
+            <value>
+                <fullName>Complaint against staff/ service complaint</fullName>
+                <default>false</default>
+                <label>Complaint against staff/ service complaint</label>
+            </value>
+            <value>
+                <fullName>Complaint - product</fullName>
+                <default>false</default>
+                <label>Complaint - product</label>
+            </value>
+            <value>
+                <fullName>Conditions not met</fullName>
+                <default>false</default>
+                <label>Conditions not met</label>
+            </value>
+            <value>
+                <fullName>Credit not yet issued</fullName>
+                <default>false</default>
+                <label>Credit not yet issued</label>
+            </value>
+            <value>
+                <fullName>Credit not yet payed out</fullName>
+                <default>false</default>
+                <label>Credit not yet payed out</label>
+            </value>
+            <value>
+                <fullName>Debt collection</fullName>
+                <default>false</default>
+                <label>Debt collection</label>
+            </value>
+            <value>
+                <fullName>Delay due to customer</fullName>
+                <default>false</default>
+                <label>Delay due to customer</label>
+            </value>
+            <value>
+                <fullName>Disclose account balance</fullName>
+                <default>false</default>
+                <label>Disclose account balance</label>
+            </value>
+            <value>
+                <fullName>Double payment</fullName>
+                <default>false</default>
+                <label>Double payment</label>
+            </value>
+            <value>
+                <fullName>Missing Feature</fullName>
+                <default>false</default>
+                <label>Missing Feature</label>
+            </value>
+            <value>
+                <fullName>Enter VAT ID</fullName>
+                <default>false</default>
+                <label>Enter VAT ID</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Finance period of service</fullName>
+                <default>false</default>
+                <label>Finance period of service</label>
+            </value>
+            <value>
+                <fullName>Incoming payments</fullName>
+                <default>false</default>
+                <label>Incoming payments</label>
+            </value>
+            <value>
+                <fullName>Insolvency</fullName>
+                <default>false</default>
+                <label>Insolvency</label>
+            </value>
+            <value>
+                <fullName>Reliability Lacking</fullName>
+                <default>false</default>
+                <label>Reliability Lacking</label>
+            </value>
+            <value>
+                <fullName>Notification of claim - unavailable</fullName>
+                <default>false</default>
+                <label>Notification of claim - unavailable</label>
+            </value>
+            <value>
+                <fullName>Owner Change</fullName>
+                <default>false</default>
+                <label>Owner Change</label>
+            </value>
+            <value>
+                <fullName>Partner mgmt period of service</fullName>
+                <default>false</default>
+                <label>Partner mgmt period of service</label>
+            </value>
+            <value>
+                <fullName>Process not started</fullName>
+                <default>false</default>
+                <label>Process not started</label>
+            </value>
+            <value>
+                <fullName>Provide information on warning</fullName>
+                <default>false</default>
+                <label>Provide information on warning</label>
+            </value>
+            <value>
+                <fullName>Re-debit amount invoiced</fullName>
+                <default>false</default>
+                <label>Re-debit amount invoiced</label>
+            </value>
+            <value>
+                <fullName>Rescission before delivery</fullName>
+                <default>false</default>
+                <label>Rescission before delivery</label>
+            </value>
+            <value>
+                <fullName>Rescission denied</fullName>
+                <default>false</default>
+                <label>Rescission denied</label>
+            </value>
+            <value>
+                <fullName>Rescission forwarded</fullName>
+                <default>false</default>
+                <label>Rescission forwarded</label>
+            </value>
+            <value>
+                <fullName>Returns processing</fullName>
+                <default>false</default>
+                <label>Returns processing</label>
+            </value>
+            <value>
+                <fullName>Contract Revocked</fullName>
+                <default>false</default>
+                <label>Contract Revocked</label>
+            </value>
+            <value>
+                <fullName>Sales period of service</fullName>
+                <default>false</default>
+                <label>Sales period of service</label>
+            </value>
+            <value>
+                <fullName>Saved inovices not removed</fullName>
+                <default>false</default>
+                <label>Saved inovices not removed</label>
+            </value>
+            <value>
+                <fullName>Seasonal</fullName>
+                <default>false</default>
+                <label>Seasonal</label>
+            </value>
+            <value>
+                <fullName>Send account statement</fullName>
+                <default>false</default>
+                <label>Send account statement</label>
+            </value>
+            <value>
+                <fullName>Through orderbird/ debt collection</fullName>
+                <default>false</default>
+                <label>Through orderbird/ debt collection</label>
+            </value>
+            <value>
+                <fullName>Unused Hardware</fullName>
+                <default>false</default>
+                <label>Unused Hardware</label>
+            </value>
+            <value>
+                <fullName>Warning after cancellation</fullName>
+                <default>false</default>
+                <label>Warning after cancellation</label>
+            </value>
+            <value>
+                <fullName>Warning correct</fullName>
+                <default>false</default>
+                <label>Warning correct</label>
+            </value>
+            <value>
+                <fullName>Warning incorrect</fullName>
+                <default>false</default>
+                <label>Warning incorrect</label>
+            </value>
+            <value>
+                <fullName>Wrong billing address</fullName>
+                <default>false</default>
+                <label>Wrong billing address</label>
+            </value>
+            <value>
+                <fullName>Wrong period of service</fullName>
+                <default>false</default>
+                <label>Wrong period of service</label>
+            </value>
+            <value>
+                <fullName>Wrong tax rate</fullName>
+                <default>false</default>
+                <label>Wrong tax rate</label>
+            </value>
+            <value>
+                <fullName>Change account name</fullName>
+                <default>false</default>
+                <label>Change account name</label>
+            </value>
+            <value>
+                <fullName>Change Address informatiob</fullName>
+                <default>false</default>
+                <label>Change Address informatiob</label>
+            </value>
+            <value>
+                <fullName>Change contact information</fullName>
+                <default>false</default>
+                <label>Change contact information</label>
+            </value>
+            <value>
+                <fullName>Change e-mail address</fullName>
+                <default>false</default>
+                <label>Change e-mail address</label>
+            </value>
+            <value>
+                <fullName>Due to system error</fullName>
+                <default>false</default>
+                <label>Due to system error</label>
+            </value>
+            <value>
+                <fullName>Invoice lost</fullName>
+                <default>false</default>
+                <label>Invoice lost</label>
+            </value>
+            <value>
+                <fullName>Left un-ticked</fullName>
+                <default>false</default>
+                <label>Left un-ticked</label>
+            </value>
+            <value>
+                <fullName>New bank account</fullName>
+                <default>false</default>
+                <label>New bank account</label>
+            </value>
+            <value>
+                <fullName>Request for current bank account details</fullName>
+                <default>false</default>
+                <label>Request for current bank account details</label>
+            </value>
+            <value>
+                <fullName>Revoke SEPA-mandate</fullName>
+                <default>false</default>
+                <label>Revoke SEPA-mandate</label>
+            </value>
+            <value>
+                <fullName>Spam folder</fullName>
+                <default>false</default>
+                <label>Spam folder</label>
+            </value>
+            <value>
+                <fullName>Third party request for duplicate</fullName>
+                <default>false</default>
+                <label>Third party request for duplicate</label>
+            </value>
+            <value>
+                <fullName>Wrong bank account details</fullName>
+                <default>false</default>
+                <label>Wrong bank account details</label>
+            </value>
+            <value>
+                <fullName>Wrong e-mail address</fullName>
+                <default>false</default>
+                <label>Wrong e-mail address</label>
+            </value>
+            <value>
+                <fullName>Closing Down</fullName>
+                <default>false</default>
+                <label>Closing Down</label>
+            </value>
+            <value>
+                <fullName>Data cleanup</fullName>
+                <default>false</default>
+                <label>Data cleanup</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Price increase rejected</fullName>
+                <default>false</default>
+                <label>Price increase rejected</label>
+            </value>
+            <value>
+                <fullName>Cashbook</fullName>
+                <default>false</default>
+                <label>Cashbook</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <valueName>Credit not yet issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <valueName>Credit not yet payed out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <valueName>Double payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <valueName>Saved inovices not removed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Wrong period of service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credits</controllingFieldValue>
+            <controllingFieldValue>Customer referrals</controllingFieldValue>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <controllingFieldValue>Damage Report</controllingFieldValue>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <controllingFieldValue>Rescissions</controllingFieldValue>
+            <controllingFieldValue>General data</controllingFieldValue>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <controllingFieldValue>Change bank account information</controllingFieldValue>
+            <controllingFieldValue>Tax data</controllingFieldValue>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Cashbook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer referrals</controllingFieldValue>
+            <valueName>Already fulfilled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer referrals</controllingFieldValue>
+            <valueName>Checking conditions for referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer referrals</controllingFieldValue>
+            <valueName>Conditions not met</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer referrals</controllingFieldValue>
+            <valueName>Process not started</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <valueName>Claim settled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <valueName>Debt collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <valueName>Warning after cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <valueName>Warning correct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dunning</controllingFieldValue>
+            <valueName>Warning incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <valueName>Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <valueName>Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Damage Report</controllingFieldValue>
+            <valueName>Broken Hardware &amp; Replacement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Damage Report</controllingFieldValue>
+            <valueName>Returns processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Damage Report</controllingFieldValue>
+            <valueName>Unused Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Complaint - accounting/ customer account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Complaint against staff/ service complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Complaint - product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>De-escalation</controllingFieldValue>
+            <valueName>Notification of claim - unavailable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Terms and conditions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Missing Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Insolvency</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Reliability Lacking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Owner Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Contract Revocked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Seasonal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Through orderbird/ debt collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Closing Down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Data cleanup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancellation</controllingFieldValue>
+            <valueName>Price increase rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rescissions</controllingFieldValue>
+            <valueName>Rescission before delivery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rescissions</controllingFieldValue>
+            <valueName>Rescission denied</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rescissions</controllingFieldValue>
+            <valueName>Rescission forwarded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General data</controllingFieldValue>
+            <valueName>Change account name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General data</controllingFieldValue>
+            <valueName>Change Address informatiob</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General data</controllingFieldValue>
+            <valueName>Change contact information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General data</controllingFieldValue>
+            <valueName>Change e-mail address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Due to system error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Invoice lost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Left un-ticked</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Spam folder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Third party request for duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Send out invoice</controllingFieldValue>
+            <valueName>Wrong e-mail address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change bank account information</controllingFieldValue>
+            <valueName>New bank account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change bank account information</controllingFieldValue>
+            <valueName>Request for current bank account details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change bank account information</controllingFieldValue>
+            <valueName>Revoke SEPA-mandate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change bank account information</controllingFieldValue>
+            <valueName>Wrong bank account details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tax data</controllingFieldValue>
+            <valueName>Change of name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tax data</controllingFieldValue>
+            <valueName>Enter VAT ID</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <valueName>Disclose account balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <valueName>Incoming payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <valueName>Provide information on warning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <valueName>Re-debit amount invoiced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account balance</controllingFieldValue>
+            <valueName>Send account statement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Account period of service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Change not possible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Delay due to customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Finance period of service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Partner mgmt period of service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Sales period of service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Wrong billing address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Change invoice</controllingFieldValue>
+            <valueName>Wrong tax rate</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

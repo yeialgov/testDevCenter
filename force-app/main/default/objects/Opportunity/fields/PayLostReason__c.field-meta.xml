@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PayLostReason__c</fullName>
+    <description>Stakeholder: PAY with BI</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Why is the prospect not interested in PAY? In case he interested and wants to buy PAY, select: PAY user! Filled by Sales</inlineHelpText>
+    <label>PAY Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>pay user</fullName>
+                <default>false</default>
+                <label>PAY user</label>
+            </value>
+            <value>
+                <fullName>cash only</fullName>
+                <default>false</default>
+                <label>cash only</label>
+            </value>
+            <value>
+                <fullName>fees too high</fullName>
+                <default>false</default>
+                <label>fees too high</label>
+            </value>
+            <value>
+                <fullName>reader too expensive</fullName>
+                <default>false</default>
+                <label>reader too expensive</label>
+            </value>
+            <value>
+                <fullName>existing contract</fullName>
+                <default>false</default>
+                <label>existing contract</label>
+            </value>
+            <value>
+                <fullName>existing ConCardis Contract</fullName>
+                <default>false</default>
+                <label>existing ConCardis Contract</label>
+            </value>
+            <value>
+                <fullName>no Internet</fullName>
+                <default>false</default>
+                <label>no Internet</label>
+            </value>
+            <value>
+                <fullName>prefers other solution</fullName>
+                <default>false</default>
+                <label>prefers other solution</label>
+            </value>
+            <value>
+                <fullName>Performance / loss of time by high frequency</fullName>
+                <default>false</default>
+                <label>Performance / loss of time by high frequency</label>
+            </value>
+            <value>
+                <fullName>Foreign country / incompatible</fullName>
+                <default>false</default>
+                <label>Foreign country / incompatible</label>
+            </value>
+            <value>
+                <fullName>Incomplete customer data</fullName>
+                <default>false</default>
+                <label>Incomplete customer data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

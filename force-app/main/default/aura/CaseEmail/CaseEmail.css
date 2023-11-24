@@ -1,0 +1,34 @@
+.THIS .boom {
+    background-color: #02A3E0;
+}
+.THIS .boom span svg { 
+    fill: #fff;
+}
+.THIS .mTop {
+    margin-top: 1.0rem;
+}
+.THIS .redPill {
+    border: 1px solid red !important;
+}
+.THIS .linky {
+    margin-left: 0.5rem;
+}
+.THIS .linky:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.THIS .templatePickRow {
+    padding: 0.25rem 0.75rem;
+    border-bottom: 1px solid #dddbda;
+}
+.THIS .templatePickRow:hover {
+    background-color: white;
+    color: #064369;
+    cursor: pointer;
+}
+.THIS .templatePickRow:hover span svg{
+    fill: #064369;
+}
+.THIS .warningIcon svg{
+    fill: #ff9e2c;
+}

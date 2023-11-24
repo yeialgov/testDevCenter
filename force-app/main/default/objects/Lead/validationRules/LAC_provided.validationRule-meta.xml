@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAC_provided</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+AND
+(
+ NOT(ISPICKVAL( LeadType__c, &apos;Partner&apos;)),
+ ISBLANK(LAC_ID__c),
+ ISPICKVAL(LAC_Shorthand__c, &apos;&apos;),
+ ISPICKVAL(LeadSource, &apos;&apos;))
+)</errorConditionFormula>
+    <errorDisplayField>LAC_Shorthand__c</errorDisplayField>
+    <errorMessage>You must provide the LAC ID or LAC shorthand</errorMessage>
+</ValidationRule>

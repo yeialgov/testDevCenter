@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Angebotsvorlage - DU</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - Angebot DU</name>
+    <style>freeForm</style>
+    <subject>Dein persönliches orderbird-Angebot</subject>
+    <textOnly>Liebes Team von {!Account.Name},
+Lieber {!Contact.FirstName},
+Liebe {!Contact.FirstName},
+
+
+
+vielen Dank für das nette Telefonat! Wie besprochen findest Du im Anhang dieser E-Mail Dein persönliches orderbird-Angebot.
+
+
+
+Darüber hinaus stehen Dir folgende Zusatzleistungen kostenlos zur Verfügung:
+
+Konfiguration Deiner Hardware
+
+Einpflegen Deiner Speisekarte
+
+Telefonische Kundenbetreuung
+
+24/7 Notfall-Support
+
+DATEV- und GDPdU-Export
+
+Regelmäßige Kassen-Updates
+
+
+
+Lizenzen für weitere Geräte kannst Du ganz bequem und flexibel online über Deinen my.orderbird-Account unter www.my.orderbird.com hinzufügen. Natürlich ohne Vertragsbindung, Mindestlaufzeit oder versteckten Kosten.
+
+
+
+Du suchst ein sicheres, preiswertes, schnelles und einfaches Kassensystem, das dem Benutzer keine Rätsel aufgibt? Genau das haben wir für Dich. Das bestätigt auch der DEHOGA-Dachverband, der uns den Intergastra-Innovationspreis verliehen hat.
+
+
+
+
+Viele Grüße
+
+
+{!User.FirstName} von orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

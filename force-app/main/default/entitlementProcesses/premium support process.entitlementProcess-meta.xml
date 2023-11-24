@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Default</businessHours>
+    <description>Premium support process with premium service.</description>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <exitCriteriaFilterItems>
+        <field>Case.Status</field>
+        <operation>equals</operation>
+        <value>Closed - Solved</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Customer Service, Customer Knowledge, Account Management, Customer Success, Tech Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: General/ Standard</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <successActions>
+            <name>Case.Milestone_First_Response_SUCCESSFUL</name>
+            <type>Alert</type>
+        </successActions>
+        <successActions>
+            <name>Case.Case_Status_In_Progress</name>
+            <type>FieldUpdate</type>
+        </successActions>
+        <timeTriggers>
+            <actions>
+                <name>Case.Milestone_First_Response_VIOLATION</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Case.Case_Escalated_TRUE</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.Case_Status_Escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.Milestone_First_Response_WARNING</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>-60</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Customer Service, Customer Knowledge, Account Management, Customer Success, Tech Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: General/ Standard</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Solution Proposed</milestoneName>
+        <minutesToComplete>4320</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case.Case_Solution_Pending</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.Case_Escalated_TRUE</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.Case_Status_Escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.Milestone_Solution_VIOLATION</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Customer Service, Customer Knowledge, Account Management, Customer Success, Tech Support</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: General/ Standard</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed - Solved</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Case Closed</milestoneName>
+        <minutesToComplete>7200</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Case.Case_Escalated_TRUE</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.Case_Status_Escalated</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case.Case_Close_VIOLATION</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Case.Case_Close_Pending_2</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

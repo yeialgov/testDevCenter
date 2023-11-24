@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>HasOptedOutOfFax</fullName>
+    <inlineHelpText>NOT USED (since we do not use faxing for campaigns - we love trees)</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
 </CustomField>

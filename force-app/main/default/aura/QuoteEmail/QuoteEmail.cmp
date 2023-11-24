@@ -1,0 +1,313 @@
+<aura:component controller="EmailSender"
+                implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" 
+                access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Language" type="String" default="German"/>
+    <aura:attribute name="Contacts" type="List" />
+    <aura:attribute name="Opportunity" type="Object" />
+    <aura:attribute name="Invoice" type="Object" />
+    <aura:attribute name="OBInvoice" type="Object" />
+    <aura:attribute name="Quote" type="Object" />
+    <aura:attribute name="Templates" type="List" />
+    <aura:attribute name="Invoices" type="List" />
+    <aura:attribute name="Quotes" type="List" />
+    <aura:attribute name="Files" type="List"/>
+    <aura:attribute name="Attachments" type="List"/>
+    <aura:attribute name="CantSend" type="Boolean" default="true" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true" />
+    <aura:attribute name="BCCMe" type="Boolean" default="false" />
+    <aura:attribute name="Permission" type="Boolean" default="false" />
+    <aura:attribute name="Unwrapped" type="Boolean" default="false" />
+    <aura:attribute name="Notify" type="Boolean" default="false" />
+    <aura:attribute name="ShowInvoices" type="Boolean" default="false" />
+    <aura:attribute name="ShowQuotes" type="Boolean" default="false" />
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="ObjectName" type="String" />
+    <aura:attribute name="EmailSubject" type="String" />
+    <aura:attribute name="EmailText" type="String" />
+    <aura:attribute name="UnwrappedEmailText" type="String" />
+    <aura:attribute name="OWEA" type="Object" />
+    
+    <aura:handler event="c:QuoteEmailContactClick" action="{!c.ContactClick}"/>
+    <aura:handler event="c:QuoteEmailBCCClick" action="{!c.BCCClick}"/>
+    
+    <aura:if isTrue="{!v.sObjectName == 'OBInvoice__c'}">
+        <force:recordData aura:id="recordLoader1"
+                          recordId="{!v.recordId}"
+                          fields="Id,Name,Attention__c,Email__c,InvoiceDate__c,Amount__c,CurrencyIsoCode,Account__r.SF_BillTo_Contact__c,Account__r.Name,Account__r.PrimaryLanguage__c"
+                          targetFields="{!v.OBInvoice}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Invoice__c'}">
+        <force:recordData aura:id="recordLoader1"
+                          recordId="{!v.recordId}"
+                          fields="Id,Name,InvoiceDate__c,Amount__c,CurrencyIsoCode,Account__r.SF_BillTo_Contact__c,Account__r.Name,Account__r.PrimaryLanguage__c"
+                          targetFields="{!v.Invoice}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Quote'}">
+        <force:recordData aura:id="recordLoader2"
+                          recordId="{!v.recordId}"
+                          fields="Id,Account.Name,Account.PrimaryLanguage__c"
+                          targetFields="{!v.Quote}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Opportunity'}">
+        <force:recordData aura:id="recordLoader3"
+                          recordId="{!v.recordId}"
+                          fields="Id,Account.Name,Account.PrimaryLanguage__c"
+                          targetFields="{!v.Opportunity}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large" variant="brand"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.Permission}">
+        <aura:if isTrue="{!v.sObjectName == 'OBInvoice__c'}">
+            <!-- -->
+            <article class="slds-card" style="padding:0 0.5rem;border: 1px solid #dddbda;border-radius: 0.25rem;-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);">
+                <div class="slds-card__header slds-grid" style="margin-top:0.75rem;">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-email" title="">
+                                <lightning:icon iconName="standard:email" size="small"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2>
+                                <span class="slds-card__header-link slds-truncate" style="line-height:80%;">
+                                    <span class="slds-text-heading_small">{!v.OBInvoice.Attention__c}</span>
+                                    <br/>
+                                    <!--aura:if isTrue="{!v.Contact.IsEmailBounced}">
+                                        <lightning:icon size="xx-small" iconName="utility:warning" class="warningIcon"/>
+                                    </aura:if-->
+                                    <span class="slds-text-heading_small" style="font-weight:normal;font-size:0.75rem;">{!v.OBInvoice.Email__c}</span>
+                                </span>
+                            </h2>
+                        </div>
+                    </header>
+                    <div class="slds-no-flex">
+                        <aura:if isTrue="{!!v.CantSend}">
+                            <lightning:buttonIcon iconName="utility:check" 
+                                                  title="Email"
+                                                  class="boom" 
+                                                  onclick="{!c.toggleOBRecip}"/>
+                            <aura:set attribute="else">
+                                <lightning:buttonIcon iconName="utility:email" 
+                                                      title="Email"
+                                                      onclick="{!c.toggleOBRecip}"/>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-card__body"></div>
+                <footer class="slds-card__footer"></footer>
+            </article>
+            
+            <!-- -->
+        </aura:if>
+        <aura:iteration items="{!v.Contacts}" var="Contact">
+            <aura:if isTrue="{!v.sObjectName != 'Invoice__c'}">
+                <c:QuoteEmailContact Contact="{!Contact}" ObjectName="{!v.sObjectName}"/>
+            </aura:if>
+            <aura:if isTrue="{!and(v.sObjectName == 'Invoice__c', Contact.Id == v.Invoice.Account__r.SF_BillTo_Contact__c)}">
+                <c:QuoteEmailContact Contact="{!Contact}" ObjectName="{!v.sObjectName}"/>
+            </aura:if>
+        </aura:iteration>
+        
+        <c:QuoteEmailBCC/>
+        
+        <aura:if isTrue="{!!v.CantSend}">
+            <div style="margin-top: 1rem;">
+                <lightning:input value="{!v.EmailSubject}"/>
+            </div>
+            <div style="margin-top: 1rem;">
+                <lightning:inputRichText variant="email" 
+                                         value="{!v.EmailText}"
+                                         formats="['font', 'size', 'bold', 'italic', 'underline',
+                                                  'strike', 'list', 'indent', 'align', 'link',
+                                                  'image', 'clean', 'table', 'header', 'color']"/>
+            </div>
+        </aura:if>
+        
+        <div style="margin-top: 1rem;text-align:center;">
+            <!--lightning:buttonMenu iconName="utility:insert_template" 
+                                      onselect="{!c.handleMenuSelect}"
+                                      disabled="{!v.CantSend}" >
+                    <aura:iteration items="{!v.Templates}" var="Template">
+                        <aura:if isTrue="{!Template.Default__c == null}">
+                            <lightning:menuItem label="{!Template.Name}" value="{!Template}"/>
+                        </aura:if>
+                    </aura:iteration>
+                </lightning:buttonMenu-->
+            <aura:if isTrue="{!v.ShowInvoices || v.ShowQuotes}">
+                <aura:if isTrue="{!v.ShowInvoices}">
+                    <table>
+                        <tr>
+                            <td>
+                                <ui:inputCheckbox click="{!c.checkAllBoxes}"/>
+                            </td>
+                            <td><i>Select All</i></td>
+                        </tr>
+                        <aura:iteration items="{!v.Invoices}" var="inv">
+                            <tr>
+                                <td>
+                                    <ui:inputCheckbox value="{!inv.Checked}"/>
+                                </td>
+                                <td>
+                                    <ui:outputText value="{!inv.Name}"/>
+                                </td>
+                                <td>
+                                    <ui:outputDate value="{!inv.InvoiceDate__c}"/>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </table>
+                </aura:if>
+                <aura:if isTrue="{!v.ShowQuotes}">
+                    <table>
+                        <tr>
+                            <td>
+                                <ui:inputCheckbox click="{!c.checkAllQuoteBoxes}"/>
+                            </td>
+                            <td><i>Select All</i></td>
+                        </tr>
+                        <aura:iteration items="{!v.Quotes}" var="quote">
+                            <tr>
+                                <td>
+                                    <ui:inputCheckbox value="{!quote.Checked}"/>
+                                </td>
+                                <td>
+                                    <ui:outputText value="{!quote.QuoteNumber}"/>
+                                </td>
+                                <!--td>
+                                    <ui:outputText value="{!quote.Name}"/>
+                                </td-->
+                                <td>
+                                    <ui:outputText value="{!'(' + quote.Status + ')'}"/>
+                                </td>
+                                <td style="text-align:right;">
+                                    <ui:outputCurrency value="{!quote.GrandTotal}" format="0.00"/>&nbsp;
+                                    <ui:outputText value="{!quote.CurrencyIsoCode}"/>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </table>
+                </aura:if>
+                <div class="slds-button-group" role="group" style="margin-top:1rem;">
+                    <lightning:button iconName="utility:email" 
+                                      label="{!'Email ' + v.ObjectName + '(s)'}" 
+                                      variant="brand"
+                                      disabled="{!v.CantSend}"
+                                      onclick="{!c.SendMultiEmail}"/>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-button-group" role="group">
+                        <aura:if isTrue="{!v.ObjectName != 'Invoice'}">
+                            <!--lightning:buttonIcon iconName="utility:text_template"
+                                                  alternativeText="Choose Template"
+                                                  onclick="{!c.ChooseTemplate}" /-->
+                            <aura:if isTrue="{!v.Templates.length > 0}">
+                                <lightning:buttonMenu iconName="utility:text_template" 
+                                                      alternativeText="Templates"
+                                                      onselect="{!c.handleMenuSelect}"
+                                                      disabled="{!v.CantSend}" >
+                                    <aura:iteration items="{!v.Templates}" var="Template">
+                                        <lightning:menuItem label="{!Template.Name}" value="{!Template}"/>
+                                    </aura:iteration>
+                                </lightning:buttonMenu>
+                            </aura:if>
+                            <!--lightning:buttonIcon iconName="utility:new_direct_message"
+                                                  alternativeText="Create Template"
+                                                  onclick="{!c.Settings}" /-->
+                        </aura:if>
+                        <aura:if isTrue="{!v.Files.length > 0}">
+                            <lightning:buttonMenu iconName="utility:attach" 
+                                                  alternativeText="Attachments"
+                                                  onselect="{!c.handleAttachSelect}"
+                                                  disabled="{!v.CantSend}" >
+                                <aura:iteration items="{!v.Files}" var="File">
+                                    <lightning:menuItem label="{!File.ContentDocument.Title}" value="{!File}"/>
+                                </aura:iteration>
+                            </lightning:buttonMenu>
+                        </aura:if>
+                        <lightning:button iconName="utility:email" 
+                                          label="{!or(v.ObjectName=='Invoice',v.ObjectName=='Quote')?
+                                                 'Email ' + v.ObjectName : 'Send'}" 
+                                          variant="brand"
+                                          disabled="{!v.CantSend}"
+                                          onclick="{!c.SendEmail}"/>
+                        <aura:if isTrue="{!and(or(v.ObjectName == 'Opportunity',v.ObjectName == 'Quote'),!v.CantSend)}">
+                            <lightning:buttonStateful labelWhenOff="Notify"
+                                                      labelWhenOn="Notifying"
+                                                      iconNameWhenOff="utility:notification"
+                                                      iconNameWhenOn="utility:check"
+                                                      state="{! v.Notify }"
+                                                      onclick="{! c.toggleNotify }" />
+                        </aura:if>
+                        <lightning:buttonIcon iconName="utility:refresh"
+                                              alternativeText="Refresh"
+                                              onclick="{!c.doInit}" />
+                        <aura:if isTrue="{!v.sObjectName == 'Invoice__c'}">
+                            <lightning:buttonIcon iconName="utility:multi_select_checkbox" 
+                                                  alternativeText="Send Multiple Emails"
+                                                  onclick="{!c.ChooseInvoices}"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.sObjectName == 'Quote'}">
+                            <lightning:buttonIcon iconName="utility:multi_select_checkbox" 
+                                                  alternativeText="Send Multiple Quotes"
+                                                  onclick="{!c.ChooseQuotes}"/>
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <aura:if isTrue="{!and(and(!v.CantSend, v.sObjectName != 'Invoice__c'),v.OWEA.Id != null)}">
+                <div style="text-align:center;color:#787878;">
+                    Sending from <strong>{!v.OWEA.DisplayName}&nbsp;[{!v.OWEA.Address}]</strong>
+                </div>
+            </aura:if>
+        </div>
+        
+        <aura:if isTrue="{!v.Attachments.length > 0}">
+            <div style="margin-top: 1rem;text-align:center;">
+                <div style="text-align:left;color:rgb(221, 219, 218);">Additional Attachments</div>
+                <div class="slds-pill_container">
+                    <ul class="slds-listbox slds-listbox_horizontal slds-listbox_inline" role="listbox" aria-label="Selected Attachments:" aria-orientation="horizontal">
+                        <aura:iteration items="{!v.Attachments}" var="Attach" indexVar="AttachNo">
+                            <li class="slds-listbox-item" role="presentation">
+                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+                                    <span class="slds-icon_container slds-icon-standard-account slds-pill__icon_container" title="Account">
+                                        <lightning:icon iconName="standard:document" />
+                                    </span>
+                                    <span class="slds-pill__label">{!Attach.ContentDocument.Title}</span>
+                                    <span class="slds-icon_container slds-pill__remove" title="Remove">
+                                        <lightning:buttonIcon iconName="utility:close" 
+                                                              size="x-small" 
+                                                              class="{!AttachNo}"
+                                                              onclick="{!c.RemoveAttachment}"
+                                                              variant="bare"/>
+                                    </span>
+                                </span>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </div>    
+        </aura:if>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!!v.ShowSpinner}">
+                <div style="text-align:center;">
+                    <p>You do not have permission to send Invoices.</p>
+                    <p>Please contact your System Administrator.</p>
+                </div>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

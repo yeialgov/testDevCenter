@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://jira.orderbird.com/browse/CDS-2581</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this nota real account and should be excluded from invoicing?</inlineHelpText>
+    <label>Demo Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

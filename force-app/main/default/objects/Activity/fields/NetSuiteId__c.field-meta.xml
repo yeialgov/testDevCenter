@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetSuiteId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Stakeholder: NEST</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Migration field! What was the original internal ID of this record&apos;s equivalent in NetSuite? The prefix describes the type of the Netsuite object. DO NOT TOUCH</inlineHelpText>
+    <label>NetSuiteId</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Auto reply new lead DE</name>
+    <style>none</style>
+    <subject>orderbird – die Kassenexperten für die Gastronomie</subject>
+    <textOnly>Lieber Gastronom, 
+
+vielen Dank, dass Du dich auf unserer Website eingetragen hast! 
+
+Wir leiten Dein Anliegen an Deinen orderbird-Berater weiter und melden uns schnellstmöglich bei Dir. 
+
+Sollte die Anfrage nicht von Dir persönlich stammen, die übermittelten Informationen falsch sein oder Du seit Tagen nichts von uns hören, melde Dich bitte direkt unter +49 30 208 983 098 bei unserem Team. 
+
+Du möchtest in der Zwischenzeit mehr über orderbird erfahren? Besuche uns auf www.orderbird.com! 
+
+Viele Grüße
+Dein orderbird-Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

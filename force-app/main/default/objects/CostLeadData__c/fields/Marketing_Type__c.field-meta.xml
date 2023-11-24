@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MINI</fullName>
+                <default>false</default>
+                <label>MINI</label>
+            </value>
+            <value>
+                <fullName>PRO</fullName>
+                <default>false</default>
+                <label>PRO</label>
+            </value>
+            <value>
+                <fullName>PRO or MINI</fullName>
+                <default>false</default>
+                <label>PRO or MINI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

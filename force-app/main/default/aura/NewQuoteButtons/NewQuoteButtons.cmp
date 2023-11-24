@@ -1,0 +1,30 @@
+<aura:component >
+    
+    <aura:attribute name="RedirectId" type="String" />
+    <aura:attribute name="Type" type="String" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="false"/>
+    
+    <aura:registerEvent name="appEvent" type="c:QuoteButtonSave"/>
+
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large"/>
+    </aura:if>    
+    
+    <div style="margin-top: 1rem;text-align:center;">
+        <div class="slds-button-group" role="group">
+            <!--
+			<lightning:button label="Preview PDF" 
+                              iconName="utility:page"
+                              onclick="{!c.openPDF}"/>
+            <lightning:button variant="brand" label="Email Quote" iconName="utility:email"/>
+            -->      
+            <lightning:button label="Cancel"
+                              iconName="utility:undo"
+                              onclick="{!c.cancel}"/>
+            <lightning:button variant="brand"
+                              label="Save" 
+                              iconName="utility:save"
+                              onclick="{!c.save}"/>
+        </div>
+    </div>
+</aura:component>

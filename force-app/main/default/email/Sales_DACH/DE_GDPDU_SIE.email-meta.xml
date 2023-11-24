@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - GDPDU - SIE</name>
+    <style>freeForm</style>
+    <subject>Was muss ein GDPdU-konformes Kassensystem erfüllen?</subject>
+    <textOnly>Sehr geehrte {!Contact.LastName},
+Sehr geehrter {!Contact.LastName},
+
+
+
+Was muss ein GDPdU-konformes Kassensystem erfüllen?
+
+
+
+Die Vorschriften der GDPdU (Grundsätze zum Datenzugriff und zur Prüfbarkeit digitaler Unterlagen) für Gastronomen sind umfangreich. Um den Überblick zu behalten, sind die wichtigsten Punkte hier einmal zusammengefasst:
+
+
+
+Alle Buchungen müssen detailliert für 10 Jahre digital gespeichert werden.
+
+Jede Änderung des Systems und das Löschen von Dateien müssen protokolliert werden.
+
+Alle Daten müssen jederzeit für einen Prüfer digital einsehbar sein.
+
+Der Speicherort der Daten muss dem Prüfer eindeutig dargelegt werden können.
+
+
+
+Ausführliche Informationen finden Sie auf unserer Homepage unter www.orderbird.com/de/gdpdu-kassensysteme-gastronomie.
+
+
+
+Wenn Sie darüber hinaus noch mehr über das GDPdU- und finanzamtkonforme Kassensystem von orderbird erfahren möchten, stehe ich Ihnen jederzeit gerne zur Verfügung.
+
+
+
+
+
+Viele Grüße
+
+
+
+Ihr orderbird-Team
+
+
+
+
+
+
+
+
+
+
+
+
+“ Ich als Steuerberater kann orderbird jedem Gastronom nur empfehlen. Gerade die DATEV-Schnittstelle erleichtert meine Arbeit als Steuerberater enorm und spart allen Beteiligten Zeit und somit bares Geld. “
+
+
+Arno Böttcher Steuerberater, Kanzlei Böttcher</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

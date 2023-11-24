@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AT_CH_Inbound_Leads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Origin__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>Region__c</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.PHONE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Region__c</field>
+        <operation>equals</operation>
+        <value>Austria,Switzerland</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Unqualified</value>
+    </filters>
+    <filters>
+        <field>First_Activity_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>AT/CH: Inbound Leads</label>
+</ListView>

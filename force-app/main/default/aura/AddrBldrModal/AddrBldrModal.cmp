@@ -1,0 +1,119 @@
+<aura:component controller="AddressBuilderController">
+    <aura:attribute name="ShowModal" type="Boolean" default="false"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="ShowLineAddButtons" type="Boolean" default="false"/>
+    <aura:attribute name="Account" type="Object"/>
+    <aura:attribute name="Label" type="String"/>
+    <aura:attribute name="Type" type="String"/>
+    <aura:attribute name="Blocks" type="List" />
+    <aura:attribute name="TypeMap" type="Object" default="{'BILL':'Billing','SHIP':'Shipping'}"/>
+    
+    <aura:registerEvent name="appEvent" type="c:AddressBuilderChange"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.ShowModal}">
+        <div style="height:640px">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                <div class="slds-modal__container">
+                    <aura:if isTrue="{!v.ShowSpinner}">
+                        <lightning:spinner size="large"/>
+                    </aura:if>
+                    <header class="slds-modal__header">
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Edit <b>{!v.Label}</b></h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <aura:if isTrue="{!v.Type != 'VENUE'}">
+                            <div class="slds-form-element__label">
+                                Address Label
+                            </div>
+                            <aura:iteration items="{!v.Blocks}" var="Block" indexVar="BlockIndex">
+                                <div class="addressCard">
+                                    <aura:if isTrue="{!Block.FieldLabel == null}">
+                                        <ui:inputText value="{!Block.FieldName}" class="freeTextInput"/>
+                                        <aura:set attribute="else">
+                                            <span style="font-size: 1rem; font-weight: bold; margin-right: 1rem;">{!Block.Text}</span>
+                                            <lightning:badge label="{!Block.FieldLabel}"/> 
+                                        </aura:set>
+                                    </aura:if>
+                                    <span style="float:right; margin-top:-0.25rem;">
+                                        <lightning:buttonIcon iconName="utility:up" size="xx-large" disabled="{!BlockIndex == 0}"
+                                                              onclick="{!c.shiftUp}" class="{!BlockIndex}"/>
+                                        <lightning:buttonIcon iconName="utility:down" size="xx-large" disabled="{!BlockIndex == v.Blocks.length - 1}"
+                                                              onclick="{!c.shiftDown}" class="{!BlockIndex}"/>
+                                        <lightning:buttonIcon iconName="utility:delete" size="xx-large" disabled="{!and(Block.FieldLabel == 'Legal Company Name', v.Type == 'BILL')}"
+                                                              onclick="{!c.deleteBlock}" class="{!BlockIndex + ' trash'}"/>
+                                    </span>
+                                </div>
+                            </aura:iteration>
+                            <aura:if isTrue="{!v.ShowLineAddButtons}">
+                                <div style="text-align:center;">
+                                    <aura:if isTrue="{!and(and(v.Blocks[0].FieldLabel != 'Legal Company Name',v.Blocks[1].FieldLabel != 'Legal Company Name'),v.Blocks[2].FieldLabel != 'Legal Company Name')}">
+                                        <button onclick="{!c.addLCN}" class="slds-button slds-button_icon-border" style="line-height:1.5rem;padding: 0.25rem 0.75rem;width:auto;height:auto;">
+                                            <div><i>add</i>&nbsp;<b>{!v.Account.LegalCompanyName__c}</b></div>
+                                            <div><lightning:badge class="bumpdown" label="Legal Company Name"/></div>
+                                        </button>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(and(v.Blocks[0].FieldLabel != 'Account Name',v.Blocks[1].FieldLabel != 'Account Name'),v.Blocks[2].FieldLabel != 'Account Name')}">
+                                        <button onclick="{!c.addAN}" class="slds-button slds-button_icon-border" style="line-height:1.5rem;padding: 0.25rem 0.75rem;width:auto;height:auto;">
+                                            <div><i>add</i>&nbsp;<b>{!v.Account.Name}</b></div>
+                                            <div><lightning:badge class="bumpdown" label="Account Name"/></div>
+                                        </button>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(and(v.Blocks[0].FieldLabel != 'Billing Contact',v.Blocks[1].FieldLabel != 'Billing Contact'),v.Blocks[2].FieldLabel != 'Billing Contact')}">
+                                        <aura:if isTrue="{!and(and(v.Blocks[0].FieldLabel != 'Shipping Contact',v.Blocks[1].FieldLabel != 'Shipping Contact'),v.Blocks[2].FieldLabel != 'Shipping Contact')}">
+                                            <button onclick="{!c.addCN}" class="slds-button slds-button_icon-border" style="line-height:1.5rem;padding: 0.25rem 0.75rem;width:auto;height:auto;">
+                                                <aura:if isTrue="{!v.Type == 'SHIP'}">
+                                                    <aura:set attribute="else">
+                                                        <div><i>add</i>&nbsp;<b>{!v.Account.SF_BillTo_Contact__r.Name}</b></div>
+                                                        <div><lightning:badge class="bumpdown" label="Billing Contact"/></div>
+                                                    </aura:set>
+                                                    <div><i>add</i>&nbsp;<b>{!v.Account.SF_SoldTo_Contact__r.Name}</b></div>
+                                                    <div><lightning:badge class="bumpdown" label="Shipping Contact"/></div>
+                                                </aura:if>
+                                            </button>
+                                        </aura:if>
+                                    </aura:if>
+                                    <button onclick="{!c.addET}" class="slds-button slds-button_icon-border" style="line-height:1.5rem;padding: 0.25rem 0.75rem;width:auto;height:auto;">
+                                        <div><i>add</i></div>&nbsp;
+                                        <div><b>Editable Text</b></div>
+                                    </button>
+                                </div>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.Blocks.length != 3}">
+                                        <div onclick="{!c.ShowLineAdder}" class="lineAdder"><i>Add Address Label Line</i></div>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                        <lightning:recordEditForm aura:id="recordViewForm"
+                                                  recordId="{!v.Account.Id}"
+                                                  onsuccess="{!c.Submitted}"
+                                                  onerror="{!c.HasError}"
+                                                  objectApiName="Account">
+                            <lightning:messages />
+                            <aura:if isTrue="{!v.Type == 'BILL'}">
+                                <lightning:inputField fieldName="BillingAddress" />
+                            </aura:if>
+                            <aura:if isTrue="{!v.Type == 'SHIP'}">
+                                <lightning:inputField fieldName="ShippingAddress" />
+                            </aura:if>
+                            <aura:if isTrue="{!v.Type == 'VENUE'}">
+                                <lightning:inputField fieldName="VenueCountry__c" />
+                                <lightning:inputField fieldName="VenueStreet__c" />
+                                <lightning:inputField fieldName="VenuePostalCode__c" />
+                                <lightning:inputField fieldName="VenueCity__c" />
+                            </aura:if>
+                        </lightning:recordEditForm>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button iconName="utility:close" label="Cancel" onclick="{!c.Cancel}"/>
+                        <lightning:button variant="brand" iconName="utility:save" label="Save" onclick="{!c.Save}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    
+</aura:component>

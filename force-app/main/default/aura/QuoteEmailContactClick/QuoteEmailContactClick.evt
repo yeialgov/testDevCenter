@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION">
+    <aura:attribute name="Add" type="Boolean" default="false"/>
+    <aura:attribute name="Sec" type="Boolean" default="false"/>
+    <aura:attribute name="Id" type="String"/>
+</aura:event>

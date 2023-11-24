@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseReason__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this problem come from a lack of knowledge? Is it a setup question? Note: Please only use SOS if instructed</inlineHelpText>
+    <label>Case Reason (old)</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party Hardware</fullName>
+                <default>false</default>
+                <label>3rd Party Hardware</label>
+            </value>
+            <value>
+                <fullName>Adress</fullName>
+                <default>false</default>
+                <label>Adress</label>
+            </value>
+            <value>
+                <fullName>Advanced rights management</fullName>
+                <default>false</default>
+                <label>Advanced rights management</label>
+            </value>
+            <value>
+                <fullName>App</fullName>
+                <default>false</default>
+                <label>App</label>
+            </value>
+            <value>
+                <fullName>Apple ID</fullName>
+                <default>false</default>
+                <label>Apple ID</label>
+            </value>
+            <value>
+                <fullName>Archive</fullName>
+                <default>false</default>
+                <label>Archive</label>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Ausfall</fullName>
+                <default>false</default>
+                <label>Ausfall</label>
+            </value>
+            <value>
+                <fullName>Bankruptcy</fullName>
+                <default>false</default>
+                <label>Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>Bill/Docket</fullName>
+                <default>false</default>
+                <label>Bill/Docket</label>
+            </value>
+            <value>
+                <fullName>Billing / Sales</fullName>
+                <default>false</default>
+                <label>Billing / Sales</label>
+            </value>
+            <value>
+                <fullName>Bill Template</fullName>
+                <default>false</default>
+                <label>Bill Template</label>
+            </value>
+            <value>
+                <fullName>Bug</fullName>
+                <default>false</default>
+                <label>Bug</label>
+            </value>
+            <value>
+                <fullName>Cancellation because of bugs</fullName>
+                <default>false</default>
+                <label>Cancellation because of bugs</label>
+            </value>
+            <value>
+                <fullName>Cancellation reasons</fullName>
+                <default>false</default>
+                <label>Cancellation reasons</label>
+            </value>
+            <value>
+                <fullName>Capacity issues</fullName>
+                <default>false</default>
+                <label>Capacity issues</label>
+            </value>
+            <value>
+                <fullName>Cash out</fullName>
+                <default>false</default>
+                <label>Cash out</label>
+            </value>
+            <value>
+                <fullName>Change of management</fullName>
+                <default>false</default>
+                <label>Change of management</label>
+            </value>
+            <value>
+                <fullName>Change of owner</fullName>
+                <default>false</default>
+                <label>Change of owner</label>
+            </value>
+            <value>
+                <fullName>Compensation</fullName>
+                <default>false</default>
+                <label>Compensation</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Could not be reached</fullName>
+                <default>false</default>
+                <label>Could not be reached</label>
+            </value>
+            <value>
+                <fullName>Course control</fullName>
+                <default>false</default>
+                <label>Course control</label>
+            </value>
+            <value>
+                <fullName>Data maintenance</fullName>
+                <default>false</default>
+                <label>Data maintenance</label>
+            </value>
+            <value>
+                <fullName>DATEV</fullName>
+                <default>false</default>
+                <label>DATEV</label>
+            </value>
+            <value>
+                <fullName>Debt collection</fullName>
+                <default>false</default>
+                <label>Debt collection</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Discounts</fullName>
+                <default>false</default>
+                <label>Discounts</label>
+            </value>
+            <value>
+                <fullName>Docket Printing</fullName>
+                <default>false</default>
+                <label>Docket Printing</label>
+            </value>
+            <value>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+                <label>Downgrade</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Email address</fullName>
+                <default>false</default>
+                <label>Email address</label>
+            </value>
+            <value>
+                <fullName>Error message</fullName>
+                <default>false</default>
+                <label>Error message</label>
+            </value>
+            <value>
+                <fullName>ESP</fullName>
+                <default>false</default>
+                <label>ESP</label>
+            </value>
+            <value>
+                <fullName>Fast Payment</fullName>
+                <default>false</default>
+                <label>Fast Payment</label>
+            </value>
+            <value>
+                <fullName>Feature wish</fullName>
+                <default>false</default>
+                <label>Feature wish</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Floor Plan</fullName>
+                <default>false</default>
+                <label>Floor Plan</label>
+            </value>
+            <value>
+                <fullName>FON</fullName>
+                <default>false</default>
+                <label>FON</label>
+            </value>
+            <value>
+                <fullName>GLS</fullName>
+                <default>false</default>
+                <label>GLS</label>
+            </value>
+            <value>
+                <fullName>Guest Counter</fullName>
+                <default>false</default>
+                <label>Guest Counter</label>
+            </value>
+            <value>
+                <fullName>Guest WiFi</fullName>
+                <default>false</default>
+                <label>Guest WiFi</label>
+            </value>
+            <value>
+                <fullName>Hardware Integration</fullName>
+                <default>false</default>
+                <label>Hardware Integration</label>
+            </value>
+            <value>
+                <fullName>Helpcenter</fullName>
+                <default>false</default>
+                <label>Helpcenter</label>
+            </value>
+            <value>
+                <fullName>How To</fullName>
+                <default>false</default>
+                <label>How To</label>
+            </value>
+            <value>
+                <fullName>import masterdata</fullName>
+                <default>false</default>
+                <label>import masterdata</label>
+            </value>
+            <value>
+                <fullName>Inadequate Info</fullName>
+                <default>false</default>
+                <label>Inadequate Info</label>
+            </value>
+            <value>
+                <fullName>Info</fullName>
+                <default>false</default>
+                <label>Info</label>
+            </value>
+            <value>
+                <fullName>Invitation</fullName>
+                <default>false</default>
+                <label>Invitation</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>Journal</fullName>
+                <default>false</default>
+                <label>Journal</label>
+            </value>
+            <value>
+                <fullName>Language</fullName>
+                <default>false</default>
+                <label>Language</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Licence fees</fullName>
+                <default>false</default>
+                <label>Licence fees</label>
+            </value>
+            <value>
+                <fullName>Licences</fullName>
+                <default>false</default>
+                <label>Licences</label>
+            </value>
+            <value>
+                <fullName>Lock screen</fullName>
+                <default>false</default>
+                <label>Lock screen</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Loss</fullName>
+                <default>false</default>
+                <label>Loss</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Master Data</fullName>
+                <default>false</default>
+                <label>Master Data</label>
+            </value>
+            <value>
+                <fullName>Menu Card</fullName>
+                <default>false</default>
+                <label>Menu Card</label>
+            </value>
+            <value>
+                <fullName>my.orderbird</fullName>
+                <default>false</default>
+                <label>my.orderbird</label>
+            </value>
+            <value>
+                <fullName>my.orderbird / taxation</fullName>
+                <default>false</default>
+                <label>my.orderbird / taxation</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>Navigation</fullName>
+                <default>false</default>
+                <label>Navigation</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>Network - ISP</fullName>
+                <default>false</default>
+                <label>Network - ISP</label>
+            </value>
+            <value>
+                <fullName>Networkstability</fullName>
+                <default>false</default>
+                <label>Networkstability</label>
+            </value>
+            <value>
+                <fullName>New Feature Request</fullName>
+                <default>false</default>
+                <label>New Feature Request</label>
+            </value>
+            <value>
+                <fullName>No Account</fullName>
+                <default>false</default>
+                <label>No Account</label>
+            </value>
+            <value>
+                <fullName>No longer using OB</fullName>
+                <default>false</default>
+                <label>No longer using OB</label>
+            </value>
+            <value>
+                <fullName>Notes</fullName>
+                <default>false</default>
+                <label>Notes</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Open Orders</fullName>
+                <default>false</default>
+                <label>Open Orders</label>
+            </value>
+            <value>
+                <fullName>Orderflows</fullName>
+                <default>false</default>
+                <label>Orderflows</label>
+            </value>
+            <value>
+                <fullName>Ordering</fullName>
+                <default>false</default>
+                <label>Ordering</label>
+            </value>
+            <value>
+                <fullName>Orderpad</fullName>
+                <default>false</default>
+                <label>Orderpad</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Package</fullName>
+                <default>false</default>
+                <label>Package</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Payment Types</fullName>
+                <default>false</default>
+                <label>Payment Types</label>
+            </value>
+            <value>
+                <fullName>payworks merchant info</fullName>
+                <default>false</default>
+                <label>payworks merchant info</label>
+            </value>
+            <value>
+                <fullName>Positions</fullName>
+                <default>false</default>
+                <label>Positions</label>
+            </value>
+            <value>
+                <fullName>POS user</fullName>
+                <default>false</default>
+                <label>POS user</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Processing</fullName>
+                <default>false</default>
+                <label>Processing</label>
+            </value>
+            <value>
+                <fullName>Productselection</fullName>
+                <default>false</default>
+                <label>Productselection</label>
+            </value>
+            <value>
+                <fullName>Prüfung</fullName>
+                <default>false</default>
+                <label>Prüfung</label>
+            </value>
+            <value>
+                <fullName>Recession of contract</fullName>
+                <default>false</default>
+                <label>Recession of contract</label>
+            </value>
+            <value>
+                <fullName>Replacements</fullName>
+                <default>false</default>
+                <label>Replacements</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Roles and Permissions</fullName>
+                <default>false</default>
+                <label>Roles and Permissions</label>
+            </value>
+            <value>
+                <fullName>Sales advice</fullName>
+                <default>false</default>
+                <label>Sales advice</label>
+            </value>
+            <value>
+                <fullName>Sales Dashboard</fullName>
+                <default>false</default>
+                <label>Sales Dashboard</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Seasonal Cancellation</fullName>
+                <default>false</default>
+                <label>Seasonal Cancellation</label>
+            </value>
+            <value>
+                <fullName>Seasonal Swarm Cancellation</fullName>
+                <default>false</default>
+                <label>Seasonal Swarm Cancellation</label>
+            </value>
+            <value>
+                <fullName>Service Charge</fullName>
+                <default>false</default>
+                <label>Service Charge</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>Shift</fullName>
+                <default>false</default>
+                <label>Shift</label>
+            </value>
+            <value>
+                <fullName>SimpleOrder</fullName>
+                <default>false</default>
+                <label>SimpleOrder</label>
+            </value>
+            <value>
+                <fullName>Software Integration</fullName>
+                <default>false</default>
+                <label>Software Integration</label>
+            </value>
+            <value>
+                <fullName>SOS</fullName>
+                <default>false</default>
+                <label>SOS</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>States</fullName>
+                <default>false</default>
+                <label>States</label>
+            </value>
+            <value>
+                <fullName>Swarm</fullName>
+                <default>false</default>
+                <label>Swarm</label>
+            </value>
+            <value>
+                <fullName>Tablex</fullName>
+                <default>false</default>
+                <label>Table</label>
+            </value>
+            <value>
+                <fullName>Table</fullName>
+                <default>false</default>
+                <label>Table</label>
+            </value>
+            <value>
+                <fullName>Taxation</fullName>
+                <default>false</default>
+                <label>Taxation</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Trouble</fullName>
+                <default>false</default>
+                <label>Trouble</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>User error</fullName>
+                <default>false</default>
+                <label>User error</label>
+            </value>
+            <value>
+                <fullName>VAT number invalid</fullName>
+                <default>false</default>
+                <label>VAT number invalid</label>
+            </value>
+            <value>
+                <fullName>Venue devices</fullName>
+                <default>false</default>
+                <label>Venue devices</label>
+            </value>
+            <value>
+                <fullName>WiFi Pro</fullName>
+                <default>false</default>
+                <label>WiFi Pro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

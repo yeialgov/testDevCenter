@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VATId_Status__c</fullName>
+    <defaultValue>9</defaultValue>
+    <description>In case the related account has a VAT number and is exempt of taxation, shows if the VAT Number of the account is valid at the moment of create the invoice in SF.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>0 = validation failed
+1 = valid
+2 = invalid
+9 = Not Validated or  N/A</inlineHelpText>
+    <label>VATId Status</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

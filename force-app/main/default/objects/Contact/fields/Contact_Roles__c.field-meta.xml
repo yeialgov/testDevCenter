@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Roles__c</fullName>
+    <description>to be deleted</description>
+    <externalId>false</externalId>
+    <formula>IF( Zuora_SoldTo_Contact__c = true, &quot;Shipping Contact | &quot; , &quot;&quot;) &amp; 
+IF( Zuora_BillTo_Contact__c = true, &quot;Billing Contact | &quot; , &quot;&quot;) &amp; 
+IF( DecisionMaker__c = true, &quot;Decision Maker | &quot; , &quot;&quot;) &amp; 
+IF( FinanceContact__c = true, &quot;Finance Contact | &quot; , &quot;&quot;) &amp; 
+IF( OperationalContact__c = true, &quot;Operational Contact | &quot; , &quot;&quot;) &amp; 
+IF( TechnicalContact__c = true, &quot;Technical Contact | &quot; , &quot;&quot;) &amp; 
+IF( inactiveEmployee__c = true, &quot;INACTIVE!&quot; , &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Roles</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

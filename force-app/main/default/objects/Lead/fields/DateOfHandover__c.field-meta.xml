@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateOfHandover__c</fullName>
+    <defaultValue>TODAY()</defaultValue>
+    <description>Stakeholder: PaM &amp; Sales (CRC)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When has a partner or existing customer send us this lead? To be filled in immediately upon lead arrival</inlineHelpText>
+    <label>Date of Handover</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

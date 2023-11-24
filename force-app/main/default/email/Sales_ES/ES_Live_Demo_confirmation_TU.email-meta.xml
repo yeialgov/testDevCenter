@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - Live Demo confirmation - TU</name>
+    <style>freeForm</style>
+    <subject>Confirma la fecha para tu versión de demostración en vivo con orderbird</subject>
+    <textOnly>www.orderbird.com
+{!User.Email}
+{!User.Phone}
+
+
+Hola querido equipo de ...,
+
+Querido/a ...,
+
+¡Muchas gracias por esta llamada tan agradable! Como te hemos comentado, nos gustaría presentarte como es debido a orderbird para que puedas tener tu propia opinión sobre nosotros.
+
+Durante nuestra versión de demostración trabajaremos con el iPad y así podrás seguir cada paso que hacemos. Además, si lo prefieres podemos enseñarte el funcionamiento de orderbird. ¡Acabas de despegar!
+
+Con este encuentro pretendemos que tengas suficiente información y puedas decidir si desde ordebird te podemos ofrecer lo que estás buscando.
+
+Ya hemos incorporado en nuestro calendario la fecha. Nos pondremos en contacto contigo entonces el
+
+XX.XX.XXXX a las XX.XX horas.
+
+Fijamos entonces esta fecha para estar disponibles para tí. Por favor, no te olvides del día de nuestro encuentro y avísanos lo antes posible si te surge cualquier cosa y finalmente no puedes acudir.
+
+Estamos encantados de que ya conozcas nuestro sistema TPV orderbird para iPad líder en gastronomía. Si te surge alguna duda no dudes en llamarnos o enviarnos un email.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

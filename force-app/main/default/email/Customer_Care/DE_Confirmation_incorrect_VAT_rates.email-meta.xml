@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Steuersatz Fuck Up, 16 %, 5 %, 1.7.20, automatisches Steuersatzupdate, Nachweis</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Confirmation incorrect VAT rates</name>
+    <style>none</style>
+    <subject>Fehlerhafte Steuersätze im Z-Bericht und auf Bons</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

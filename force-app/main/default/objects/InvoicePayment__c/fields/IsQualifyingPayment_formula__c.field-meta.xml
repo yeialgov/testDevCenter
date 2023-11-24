@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsQualifyingPayment_formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>Payment__r.Status__c = &apos;Processed&apos; &amp;&amp; (Payment__r.Type__c = &apos;External&apos; || (Payment__r.Type__c = &apos;Electronic&apos; &amp;&amp; Payment__r.GatewayState__c = &apos;Settled&apos;)) &amp;&amp;  Payment__r.RefundAmount__c = 0</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IsQualifyingPayment (formula)</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

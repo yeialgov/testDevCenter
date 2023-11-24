@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PresenceUserConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <users>
+            <user>fredericke.eberhardt@orderbird.com</user>
+            <user>philipp.wegener@orderbird.com</user>
+            <user>tim.dahlmann@orderbird.com</user>
+            <user>uta.niessner@orderbird.com</user>
+            <user>valeria.meissner@orderbird.com</user>
+        </users>
+    </assignments>
+    <capacity>3</capacity>
+    <enableAutoAccept>false</enableAutoAccept>
+    <enableDecline>false</enableDecline>
+    <enableDeclineReason>false</enableDeclineReason>
+    <enableDisconnectSound>true</enableDisconnectSound>
+    <enableRequestSound>true</enableRequestSound>
+    <label>MINI Chat</label>
+</PresenceUserConfig>

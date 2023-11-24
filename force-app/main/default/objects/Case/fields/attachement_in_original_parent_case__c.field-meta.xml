@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>attachement_in_original_parent_case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://jira.orderbird.com/browse/CRMT-307</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Look the Parent Case to see the attachment and the Original Email</inlineHelpText>
+    <label>attachement in original parent case</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

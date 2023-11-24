@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ACCS Kd arbeitet ohne Gerätelizenz, wir buchen Lizenz ein</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE No Device Licence</name>
+    <style>none</style>
+    <subject>Wir haben eine Gerätelizenz für Dich eingebucht</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

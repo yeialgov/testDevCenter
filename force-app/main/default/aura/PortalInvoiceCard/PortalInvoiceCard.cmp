@@ -1,0 +1,42 @@
+<aura:component controller="PortalController">
+    <aura:attribute name="Token" type="String"/>
+    <aura:attribute name="Invoice" type="Object"/>
+    <aura:attribute name="IsMobile" type="Boolean" default="false"/>
+    <lightning:navigation aura:id="navService2"/>   
+    <div class="row rowSpacer">
+        <div class="col-sm-8 col-xs-12">
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-file" title="file">
+                                <lightning:icon iconName="standard:file" size="large"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 style="font-size: 1.5em; color: #807665;">
+                                {!v.Invoice.Name}
+                            </h2>
+                        </div>
+                        <div class="slds-no-flex">
+                            <aura:if isTrue="{!and(v.Invoice.HasBeenEmailed__c, !v.IsMobile)}">
+                                <button onclick="{!c.viewInvoice}" class="slds-button slds-button_neutral">
+                                    {!$Label.c.DOWNLOAD}
+                                </button>
+                            </aura:if>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <table style="table-layout: fixed; width: 100%;" >
+                        <tr>
+                            <td style="width: 33%;text-align: left;">{!$Label.c.DATE}: <b><ui:outputDate value="{!v.Invoice.InvoiceDate__c}" format="dd.MM.yyyy"/></b></td>
+                            <td style="width: 33%;text-align: right;">{!$Label.c.AMOUNT}: <b><ui:outputNumber value="{!v.Invoice.Amount__c}" format="0.00"/>&nbsp;{!v.Invoice.CurrencyIsoCode == 'EUR' ? '€' : v.Invoice.CurrencyIsoCode}</b></td>
+                            <td style="width: 33%;text-align: right;">{!$Label.c.BALANCE}: <b><ui:outputNumber value="{!v.Invoice.Balance__c}" format="0.00"/>&nbsp;{!v.Invoice.CurrencyIsoCode == 'EUR' ? '€' : v.Invoice.CurrencyIsoCode}</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+    </div>
+</aura:component>

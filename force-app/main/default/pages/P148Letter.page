@@ -1,0 +1,164 @@
+<apex:page standardController="P148Letter__c" renderAs="pdf" applyHtmlTag="false" showHeader="false">
+    <head>
+        <style>
+            @page { size: 8.5in 10.9in; /* letter width and height */ }
+        </style>
+    </head>
+<div style="page-break-after:always;">
+    <b>An: </b><br/>
+    {!P148Letter__c.F_Name__c}<br/>
+    {!P148Letter__c.F_Street__c}<br/>
+    {!P148Letter__c.F_PostalCode__c}&nbsp;{!P148Letter__c.F_City__c}<br/><br/>
+    <p style="text-align:right;">
+        <apex:outputText value="{0, date, dd'.'MM'.'yy}">
+            <apex:param value="{!TODAY()}" /> 
+        </apex:outputText>
+    </p>
+    <p>
+        <b>Abs.: </b><br/>
+        {!P148Letter__c.LegalCompanyName__c}<br/>
+        {!P148Letter__c.TaxNumber__c}<br/>
+        {!P148Letter__c.VenueStreet__c}<br/>
+        {!P148Letter__c.VenuePostalCode__c}&nbsp;{!P148Letter__c.VenueCity__c}<br/>
+    </p>
+    <p><b>
+        Betreff: Antrag nach § 148 AO (Abgabenordnung) – Verlängerung der Frist zur vollständigen Implementierung einer Cloud-TSE
+    </b></p>
+    <p>
+        Sehr geehrte Damen und Herren,
+    </p>
+    <p>
+        hiermit beantrage ich
+    </p>
+    <p style="text-align:center;"><b>
+        die Verlängerung der durch die Nichtbeanstandungsregelung eingeräumten Frist über den 31. März 2021 hinaus
+    </b></p>
+    <p>
+        gemäß § 148 AO wegen Vorliegens unbilliger sachlicher Härte bis zum 30.09.2021. 
+    </p>
+    <p>
+        Hierzu möchte ich klarstellen, dass es sich im folgenden Antrag um keine allgemeine Fristverlängerung handelt, sondern um die weitere Duldung einer bereits eingesetzten “TSE in Evaluierung”, bis die am 28.05.2021 zertifizierte Cloud TSE-Lösung von fiskaly vom Bundesamt für Sicherheit in der Informationstechnik (BSI) im orderbird Kassensystem implementiert wurde. 
+    </p>
+    <p>
+        Ich beabsichtige zur Einhaltung der Anforderungen des § 146a AO die Nutzung der cloudbasierten TSE der fiskaly Germany GmbH, welche durch meinen Kassen-Dienstleister orderbird AG integriert wurde. 
+    </p>
+    <p>
+        orderbird bietet seit dem 04.02.2020 die fiskaly Cloud-TSE an und wir haben diese Vorabversion einer voll zertifizierten TSE bereits seit        <apex:outputText value="{0, date, dd'.'MM'.'yy}">
+            <apex:param value="{!P148Letter__c.FiscalizedSince__c}" /> 
+        </apex:outputText>
+        im Einsatz mit der orderbird Kundennummer {!P148Letter__c.CustomerId__c}. Aufgrund verschiedener von uns nicht zu verantwortender Umstände hat sich die finale Zertifizierung der fiskaly Cloud-TSE verzögert, was dazu führte, dass eine Implementierung der final zertifizierten Version der fiskaly-TSE für den Kassenhersteller nicht bis zum 31.03.2021 möglich war. Eine detaillierte Stellungnahme inkl. Rollout-Plan finden Sie im Anhang. Dementsprechend ist offensichtlich, dass eine Inbetriebnahme der final zertifizierten Cloud-TSE nicht bis zur Frist am 31. März 2021 abgeschlossen werden konnte. 
+    </p>
+    <p>
+        Wir sind bereits mit der Vorversion der kürzlich zertifizierten fiskaly Cloud-TSE gestartet, um unter den aktuellen Umständen eine größtmögliche Rechtssicherheit zu gewährleisten. Dieses Vorgehen ist über den Kassen-Dienstleister auch mit der Fachabteilung des Bundesministeriums für Finanzen, Referat IVA 4 Steuern, abgestimmt. Konkret heißt das, dass wir die TSE - wenn auch noch nicht die vollständig zertifizierte Version - bereits  im Einsatz haben und damit Geschäftsfälle manipulationssicher dokumentieren und Signaturen auf Belege drucken. Durch die finale Zertifizierung bedarf es beim Kassenhersteller nun lediglich eines Software-Updates, welches simultan und ohne Limitierungen entsprechend des Rollout-Plans an alle Kunden verteilt werden kann.
+    </p>
+    <p>
+        Für das oben beschriebene Vorgehen ersuchen wir um eine Erleichterung nach § 148 AO, um auf den voll zertifizierten Betrieb bis zum oben genannten Datum aufzurüsten. In diesem Übergangszeitraum wird die aktuelle Version 1 der TSE von fiskaly zum Einsatz kommen. Dementsprechend wollen wir nochmal betonen, dass wir um keine allgemeine Fristverlängerung ansuchen. Für das Upgrade auf den voll zertifizierten Betrieb (fiskaly Cloud TSE Version 2) sieht unser Kassenhersteller den Zeithorizont bis zum 31.07.2021 als ambitioniertes Ziel - welches sie erfüllen wollen - wie im aktuellen Rollout-Plan dargestellt. Aufgrund technischer Komplexität kann es jedoch zu einer Verzögerung kommen, weswegen wir eine Fristverlängerung bis zum 30.09.2021 erbitten.
+    </p>
+    <p>
+        Maßgebliche Ursache für die Verlängerung des Übergangszeitraums sind - neben der erst am 28.05.2021 erteilten Zertifizierungen durch das BSI - insbesondere die erhöhten Anforderungen an die Umsetzung im Bereich der zertifizierten Anwenderumgebung beim Steuerpflichtigen. Darüber hinaus sind die späten Änderungen der technischen Spezifikationen, welche durch das BSI veranlasst und erst Ende November letzten Jahres an die Cloud-TSE-Hersteller kommuniziert wurden, ursächlich. Diese späten Änderungen hatten gravierenden Einfluss auf die Zertifizierungsverfahren aller Cloud-TSE Anbieter. Dementsprechend war es in unserer Situation auch nicht mehr möglich, die vollständig zertifizierte fiskaly Cloud-TSE bis 31.3.2021 in Betrieb zu nehmen. 
+    </p>
+    <p>
+        Zum aktuellen Zeitpunkt erlaubt uns die Nutzung von “fiskaly SIGN v1” das Signieren von Kassenbelegen und dadurch bereits eine erste Umsetzung von § 146a AO. Dadurch zeigen wir auch gerne auf, dass die Einhaltung der KassenSichV in unserem Unternehmen Priorität hat. Wir haben uns bereits sehr früh und ausführlich mit dem Thema KassenSichV beschäftigt und notwendige Anpassungen und Investitionen getätigt. 
+    </p>
+    <p>
+        Wir, wie auch unser Kassenhersteller, verweisen auf die unüblich spät durch das BSI eingebrachten Anforderungen in laufenden Zertifizierungsverfahren, welche uns zu diesem Antrag zwingen.
+    </p>
+    <p>
+        Um positive Bescheidung wird gebeten.
+    </p>
+    <p>
+        Mit freundlichen Grüßen
+    </p>
+    <p>
+        gez. Steuerpflichtiger
+    </p>
+    <p>
+        Anlagen: <br/>
+        &nbsp;&nbsp;•&nbsp;Bestellstatus und Nachweis zur TSE <br/>
+        &nbsp;&nbsp;•&nbsp;BSI-Zertifikate der fiskaly Cloud-TSE <br/>
+        &nbsp;&nbsp;•&nbsp;Stellungnahme des Kassenherstellers und Integrator orderbird AG
+    </p>
+    <p>
+        Disclaimer: Alle in dieser Nachricht enthaltenen Informationen und Anhänge sind vertraulich und nur für den ursprünglichen Empfänger bestimmt. Teile oder die Gänze dieser Nachricht dürfen nicht an Dritte weitergegeben werden. Sollten Sie diese Nachricht irrtümlich erhalten haben, teilen Sie uns dies bitte sofort mit und löschen Sie diese Nachricht im Anschluss vollständig.
+    </p>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF1}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF2}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF3}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF4}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF5}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF6}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF7}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF8}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF9}" width="95%"/>
+</div>
+<div style="page-break-after:always;">
+    <apex:image url="{!$Resource.TSEPDF10}" width="95%"/>
+</div>
+    <div style="border: solid black 2px; padding: 5px;font-family: Arial, Helvetica, sans-serif;">
+    <apex:form >
+            <br/>
+            <div style="text-align:center;font-size:175%;font-weight:bold;">
+                Bestellbestätigung für {!P148Letter__c.LegalCompanyName__c} über eine cloudbasierte TSE
+            </div>
+            <p>
+                Anschrift:<br/>
+                {!P148Letter__c.BillingStreet__c}<br/>
+                {!P148Letter__c.BillingCity__c}&nbsp;{!P148Letter__c.BillingPostalCode__c}<br/>
+            </p>
+            <p>
+                Der Betrieb {!P148Letter__c.LegalCompanyName__c} ist Kunde der orderbird AG sowie Betreiber eines orderbird Kassensystems.
+            </p>
+            <p>
+                Zum aktuellen Zeitpunkt bestätigen wir, dass der Betrieb {!P148Letter__c.LegalCompanyName__c} folgende Schritte zur Einhaltung der technischen Auflagen der KassenSichV bereits durchgeführt hat:
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;orderbird-Kundennummer:&nbsp;{!P148Letter__c.CustomerId__c}
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;TSE bestellt/aktiviert am:&nbsp;<apex:outputText value="{0, date, dd'.'MM'.'yy}">
+                    <apex:param value="{!P148Letter__c.FiscalizedSince__c}" /> 
+                </apex:outputText>
+            </p>
+            <p>
+                Hinweis: Bitte beachten Sie, dass die o.g. Daten stündlich aktualisiert werden.
+            </p>
+            <p>
+                Eine Kundennummer bei orderbird ist immer eindeutig einer Kasse sowie einer hieran angeschlossenen TSE zuordenbar.
+            </p>
+            <p>
+                Bei Rückfragen wenden Sie sich bitte direkt an den Betrieb {!P148Letter__c.LegalCompanyName__c}, um eine entsprechende Rechnung über die Bestellung der Online-TSE oder, bei bereits aktivierter TSE, einen signierten Kassenbon aus dem Kassensystem als Nachweis zu erhalten.
+            </p>
+            <p>
+                <b>Wichtig:</b> Diese Seite wurde von orderbird individuell für den Kunden {!P148Letter__c.LegalCompanyName__c} erstellt zur Weiterleitung an den intendierten Empfänger, die zuständige Finanzbehörde des  genannten Kunden. Die Weitergabe dieses Schreibens an unberechtigte Dritte ist untersagt.
+            </p>
+            <p>
+                <b>orderbird AG</b>
+                Ritterstraße 12-14, Aufg. 3
+                D-10969 Berlin
+                Germany
+            </p>
+            <p>
+                <b>Vorstand</b><br/>
+                Mark Schoen (Vorstandsvorsitzender), Jakob Schreyer, c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+            </p>
+            <p>
+                <b>Vorsitzender des Aufsichtsrats</b><br/>
+                Oliver Kaltner, c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+            </p>
+        </apex:form>
+    </div>
+</apex:page>

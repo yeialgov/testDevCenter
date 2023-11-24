@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Length_min_10_chars</fullName>
+    <active>false</active>
+    <description>validate phone number fields value length (min. 10 chars)</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+NOT(ISNEW()),
+NOT(
+OR(LEN( Phone )&gt;=10,BEGINS(Phone, &quot;N/A&quot;))
+)
+)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Phone: 
+Phone number is not valid, because it&apos;s not long enough. (min 10 chars)
+Empty phone number enter &quot;N/A&quot;.</errorMessage>
+</ValidationRule>

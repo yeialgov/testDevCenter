@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <assignmentRule>
-        <fullName>Standard</fullName>
+        <fullName>Lead assignment</fullName>
         <active>true</active>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
+            <assignedTo>stefan.kutz@orderbird.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
-                <field>Lead.Country</field>
+                <field>Lead.RecordTypeId</field>
                 <operation>equals</operation>
-                <value>US,USA,United States,United States of America</value>
+                <value>Partner Lead</value>
             </criteriaItems>
         </ruleEntry>
         <ruleEntry>
-            <assignedTo>yeisson.gonzalez@orderbird.com.devcenter</assignedTo>
+            <assignedTo>stefan.kutz@orderbird.com</assignedTo>
             <assignedToType>User</assignedToType>
             <criteriaItems>
+                <field>Lead.LeadType__c</field>
+                <operation>equals</operation>
+                <value>Partner</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Spanish_Leads</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.PrimaryLanguage__c</field>
+                <operation>equals</operation>
+                <value>Spanish</value>
+            </criteriaItems>
+            <criteriaItems>
                 <field>Lead.Country</field>
+                <operation>equals</operation>
+                <value>Spain</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>dimitri.delgado@orderbird.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>France</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.CountryCode</field>
+                <operation>equals</operation>
+                <value>FR</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.PrimaryLanguage__c</field>
+                <operation>equals</operation>
+                <value>French</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>Austria,Switzerland</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>DE Süd</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>DE West</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>DE Nord</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Region__c</field>
+                <operation>equals</operation>
+                <value>DE Ost</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Lead_Evaluation_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Status</field>
                 <operation>notEqual</operation>
-                <value>US,USA,United States,United States of America</value>
             </criteriaItems>
         </ruleEntry>
     </assignmentRule>

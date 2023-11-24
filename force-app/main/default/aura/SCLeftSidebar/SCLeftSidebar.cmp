@@ -1,0 +1,21 @@
+<aura:component controller="SalesConsoleController" 
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId" 
+                access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:ConsoleCallLogged" action="{!c.removeCalled}"/>
+    
+    <force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}" 
+                      layoutType="FULL"
+                      recordUpdated="{!c.doInit}" />
+    
+    <aura:attribute name="Items" type="List" />
+    <aura:attribute name="recordId" type="String" />
+
+
+    <aura:iteration items="{!v.Items}" var="Item">
+        <c:SCItem Item="{!Item}" Selected="{!v.recordId}"/>
+    </aura:iteration>
+    
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome">
+    <aura:attribute name="Street" type="String"/>
+    <aura:attribute name="PostalCode" type="String"/>
+    <aura:attribute name="City" type="String"/>
+    <aura:attribute name="Country" type="String"/>
+    <aura:if isTrue="{!v.Country != null}">
+        <iframe aura:id="vfFrame"
+                frameborder="0"
+                width="100%"
+                height="200px"
+                src="{!'/apex/GoogleMap?Street=' + v.Street + '&amp;PostalCode=' + v.PostalCode + '&amp;City=' + v.City + '&amp;Country=' + v.Country}"/>
+    </aura:if>
+</aura:component>

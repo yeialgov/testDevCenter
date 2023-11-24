@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassador_Commission_Amount__c</fullName>
+    <description>Stakeholder Partnermanagement
+ https://jira.orderbird.com/browse/CDS-2845</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How high was the commission for this opportunity to the related Ambassador? Get&apos;s filled automatically once CCPD is filled in</inlineHelpText>
+    <label>Ambassador Commission Amount</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

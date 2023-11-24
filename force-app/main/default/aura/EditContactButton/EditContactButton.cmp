@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="Contact" type="Object"/>
+    <div class="forceVirtualActionMarker forceVirtualAction">
+        <a onclick="{!c.editContact}"
+           class="rowActionsPlaceHolder slds-button slds-button--icon-x-small slds-button--icon-border-filled keyboardMode--trigger" 
+           href="javascript:void(0);">
+            <lightning:icon iconName="utility:edit" size="xx-small"/>
+        </a>
+    </div>
+</aura:component>

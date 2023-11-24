@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step_Date__c</fullName>
+    <description>Trigger of the creation of a New Task record every time the Date is updated.
+The record type is: Next_Step Record Type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Due Date for your follow-up activity. (Time is Optional, not needed)</inlineHelpText>
+    <label>Next Step Due Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

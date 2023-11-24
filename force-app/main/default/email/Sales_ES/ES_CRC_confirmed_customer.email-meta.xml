@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC confirmed customer</name>
+    <style>freeForm</style>
+    <subject>Clientes orderbird- promocionan a- clientes: Gracias por el éxito de tu recomendación.</subject>
+    <textOnly>Querido cliente orderbird,
+
+¡Te queremos dar la enhorabuena por conseguir nuestra licencia anual! ¡NOMBRE DEL CLIENTE será de inmediato afortunadamente nuevo cliente orderbird!
+
+Si conoces a alguien más a quien le pueda interesar conocernos, solo tienes que seguir con tus recomendaciones y te asugarás así una nueva licencia anual.
+
+Te deseamos que todo vaya genial con nosotros y te agradecemos que nos sigas recomendando.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

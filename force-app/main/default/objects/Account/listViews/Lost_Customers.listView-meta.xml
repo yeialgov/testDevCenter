@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Customers</fullName>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Account_Status_Flag__c</columns>
+    <columns>Account_Status__c</columns>
+    <columns>Last_Status_Update__c</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>TotalOfOpps__c</columns>
+    <columns>TotalOfCWOpps__c</columns>
+    <columns>ACCOUNT.ADDRESS2_COUNTRY_CODE</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Customer</value>
+    </filters>
+    <filters>
+        <field>Account_Status__c</field>
+        <operation>equals</operation>
+        <value>Lost Customer</value>
+    </filters>
+    <label>Lost Customers</label>
+    <language>en_US</language>
+</ListView>

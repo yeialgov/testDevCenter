@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GroundworkPartner__c</fullName>
+    <description>Stakeholder: PaM with Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How well did the partner prepare the lead for us? Feedback for PaM which partners do a good job and justify nurturing, as well as which partners are in need of additional training. Filled in by Sales</inlineHelpText>
+    <label>Groundwork Partner</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>perfectly prepared</fullName>
+                <default>false</default>
+                <label>perfectly prepared</label>
+            </value>
+            <value>
+                <fullName>well prepared</fullName>
+                <default>false</default>
+                <label>well prepared</label>
+            </value>
+            <value>
+                <fullName>cold call</fullName>
+                <default>false</default>
+                <label>cold call</label>
+            </value>
+            <value>
+                <fullName>wrongly informed</fullName>
+                <default>false</default>
+                <label>wrongly informed</label>
+            </value>
+            <value>
+                <fullName>not reached</fullName>
+                <default>false</default>
+                <label>not reached</label>
+            </value>
+            <value>
+                <fullName>lead sharing</fullName>
+                <default>false</default>
+                <label>lead sharing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

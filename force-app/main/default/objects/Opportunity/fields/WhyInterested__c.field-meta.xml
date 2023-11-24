@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WhyInterested__c</fullName>
+    <description>Stakeholder: MKT with BI</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Why has the prospect considered orderbird in the first place? Filled by Sales</inlineHelpText>
+    <label>Why Interested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>no info</fullName>
+                <default>false</default>
+                <label>no info</label>
+            </value>
+            <value>
+                <fullName>card reader / orderbird PAY</fullName>
+                <default>false</default>
+                <label>card reader / orderbird PAY</label>
+            </value>
+            <value>
+                <fullName>Customers Recruit Customers</fullName>
+                <default>false</default>
+                <label>Customers Recruit Customers</label>
+            </value>
+            <value>
+                <fullName>Datev export</fullName>
+                <default>false</default>
+                <label>Datev export</label>
+            </value>
+            <value>
+                <fullName>easy to use</fullName>
+                <default>false</default>
+                <label>easy to use</label>
+            </value>
+            <value>
+                <fullName>free testing immediately</fullName>
+                <default>false</default>
+                <label>free testing immediately</label>
+            </value>
+            <value>
+                <fullName>law conformity</fullName>
+                <default>false</default>
+                <label>law conformity</label>
+            </value>
+            <value>
+                <fullName>great website</fullName>
+                <default>false</default>
+                <label>great website</label>
+            </value>
+            <value>
+                <fullName>innovative</fullName>
+                <default>false</default>
+                <label>innovative</label>
+            </value>
+            <value>
+                <fullName>likes apple products</fullName>
+                <default>false</default>
+                <label>likes apple products</label>
+            </value>
+            <value>
+                <fullName>looking for POS</fullName>
+                <default>false</default>
+                <label>looking for POS</label>
+            </value>
+            <value>
+                <fullName>low cost solution</fullName>
+                <default>false</default>
+                <label>low cost solution</label>
+            </value>
+            <value>
+                <fullName>Market leader</fullName>
+                <default>false</default>
+                <label>Market leader</label>
+            </value>
+            <value>
+                <fullName>personal sympathy</fullName>
+                <default>false</default>
+                <label>personal sympathy</label>
+            </value>
+            <value>
+                <fullName>recognised wireless ordering as benefit</fullName>
+                <default>false</default>
+                <label>recognised wireless ordering as benefit</label>
+            </value>
+            <value>
+                <fullName>seasonal costs</fullName>
+                <default>false</default>
+                <label>seasonal costs</label>
+            </value>
+            <value>
+                <fullName>single-user solution for free</fullName>
+                <default>false</default>
+                <label>single-user solution for free</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>won prizes</fullName>
+                <default>false</default>
+                <label>won prizes</label>
+            </value>
+            <value>
+                <fullName>Founder award</fullName>
+                <default>false</default>
+                <label>Founder award</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

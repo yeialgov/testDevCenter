@@ -1,0 +1,24 @@
+.THIS.quoteCreateButton {
+    height:80px;
+    background-color:#02a3e0;
+    border-radius:8px;
+    margin-top:15px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 25px;
+    color: #fff;
+    line-height: 16px;
+    font-weight: 700;
+    font-size: 200%;
+}
+.THIS.quoteCreateButton:hover {
+    cursor: pointer;
+    background-color: #10426a;
+}
+.THIS.bigText {
+    color: #fff;
+}
+.THIS.modalHeader {
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(62, 62, 60);
+}

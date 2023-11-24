@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wbsendit__World_View_Email_Tracking__c</fullName>
+    <deprecated>false</deprecated>
+    <description>World view of the email campaign tracking.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>World view of the email campaign tracking.</inlineHelpText>
+    <label>World View Email Tracking</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

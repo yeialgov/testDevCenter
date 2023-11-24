@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClosSolv_Upsell_Case_must_have_active_AM</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(CONTAINS( $Label.Admin_Users , $User.Id ))
+&amp;&amp;
+NOT( RecordType.Id = &apos;012580000002RGo&apos;)
+&amp;&amp;
+TEXT(Status) = &quot;Closed&quot;
+&amp;&amp;
+(
+ISBLANK( Account.AccountManager__c )
+||
+NOT(Account.AccountManager__r.IsActive)
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>An active Account Manager must be assigned to this customer.</errorMessage>
+</ValidationRule>

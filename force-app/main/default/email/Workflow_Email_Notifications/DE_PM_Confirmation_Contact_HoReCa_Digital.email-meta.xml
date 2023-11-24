@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/CDS-113</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE PM Confirmation Contact HoReCa Digital</name>
+    <style>freeForm</style>
+    <subject>orderbird: Bestätigung für Kontaktaufnahme</subject>
+    <textOnly>Hallo liebes Team von {!Account.Name},
+
+
+
+
+Wir bedanken uns für das vielversprechende Gespräch.
+
+
+
+Wie soeben mit Dir am Telefon besprochen, senden wir deine Kontaktdaten an unseren Partner HoReCa Digital, damit die nächsten Schritte schnellstmöglich folgen können.
+
+
+
+Unser Partner wird sich in den nächsten Tagen bei Dir persönlich melden, um alles Weitere abzustimmen.
+
+
+
+Solltest du damit nicht einverstanden sein, wende dich bitte direkt an uns.
+
+
+
+Wir wünschen Dir viel Erfolg!
+
+
+
+
+Herzliche Grüße,
+Dein orderbird-Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

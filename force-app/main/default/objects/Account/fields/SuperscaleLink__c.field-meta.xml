@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SuperscaleLink__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is there a &quot;superscale&quot; link that could be helpful to investigate, monitor or resolve the issue?</inlineHelpText>
+    <label>Superscale Link</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

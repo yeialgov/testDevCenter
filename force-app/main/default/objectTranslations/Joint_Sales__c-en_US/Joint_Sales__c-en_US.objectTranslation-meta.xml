@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Joint Sales</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Joint Sales</value>
+    </caseValues>
+    <layouts>
+        <layout>Joint Sales Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Email</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Restriction_to_revoke_Opt_Out</name>
+    </validationRules>
+</CustomObjectTranslation>

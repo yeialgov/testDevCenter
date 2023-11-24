@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ACCS Umzug Freemium auf aktuelle Lizenz</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE No more Freemium</name>
+    <style>none</style>
+    <subject>Verhindere jetzt eine Deaktivierung Deines orderbird Kassensystems</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

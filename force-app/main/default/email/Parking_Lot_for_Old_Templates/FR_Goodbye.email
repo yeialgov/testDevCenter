@@ -1,0 +1,79 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span id="docs-internal-guid-6bb84371-a397-bf7c-8071-b3183e6d4ec1" style=""><span id="docs-internal-guid-e4ac52c4-a3a0-e58d-7fa7-9912e62b3c68" style=""><span id="docs-internal-guid-7d44363f-a3a8-ff49-3d74-96b8f2247097" style=""><font style=""><font style=""><div style="text-size-adjust: auto; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><div style="text-size-adjust: auto; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 19.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6}
+p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6; min-height: 14.0px}
+p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #0000ee; -webkit-text-stroke: #0000ee}
+p.p9 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 19.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #000000}
+p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #000000; background-color: #fefefe}
+p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Helvetica; color: #808080; -webkit-text-stroke: #808080}
+span.s1 {font-kerning: none}
+span.s2 {font-kerning: none; background-color: #fefefe}
+span.s3 {text-decoration: underline ; font-kerning: none}
+span.s4 {font: 12.0px Arial; font-kerning: none}
+</style>
+
+
+<p class="p1"><span class="s1">Cher {!Contact.FirstName},<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p1"><span class="s1">Chère {!Contact.FirstName},</span></p><p class="p2"><span class="s1"></span><br></p><p class="p3"><span class="s2">C’est aujourd’hui que nous nous disons au revoir. Je vous remercie pour votre temps, votre écoute, et votre patience. Votre phase de formation est officiellement terminée et vous êtes maintenant prêt à utiliser sereinement orderbird.</span></p><p class="p4"><span class="s1"><b>Nous sommes, et resterons toujours disponibles pour vous aider!</b></span></p><p class="p5"><span class="s1"><b></b></span><br></p><p class="p6"><span class="s1"><b>assistance@orderbird.com</b></span></p><p class="p6"><span class="s1"><b>01 76 36 06 40</b></span></p><p class="p6"><span class="s1"><b>Lundi à Vendredi, 9-18h</b></span></p><p class="p5"><span class="s1"><b></b></span><br></p><p class="p4"><span class="s1"><b>Trouvez la réponse à votre question en ligne!</b></span></p><p class="p7"><span class="s1"><b></b></span><br></p><p class="p8"><span class="s3"><a href="http://support.orderbird.com/"><b>support.orderbird.com</b></a></span></p><p class="p5"><span class="s1"></span><br></p><p class="p4"><span class="s1"><b>Votre information orderbird</b></span></p><p class="p7"><span class="s1"><b></b></span><br></p><p class="p6"><span class="s1">{!Account.Name}</span></p><p class="p6"><span class="s1">{!Account.NetSuiteId__c}</span></p><p class="p6"><span class="s1">{!Account.myOrderbirdEmail__c}</span></p><p class="p5"><span class="s1"></span><br></p><p class="p9"><span class="s2">En cas d’urgence uniquement - un cas d’urgence est un cas dans lequel vous ne pouvez plus travailler avec orderbird - vous pouvez nous joindre 24h/24, 7j/7 au même numéro.</span></p><p class="p10"><span class="s1">Meilleures salutations,</span></p><p class="p11"><span class="s1"></span><br></p><p class="p1">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 19.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6}
+p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6; min-height: 14.0px}
+p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 16.0px; font: 12.0px Arial; color: #0000ee; -webkit-text-stroke: #0000ee}
+p.p9 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 19.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #000000}
+p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #000000; background-color: #fefefe}
+p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.0px; font: 12.0px Helvetica; color: #808080; -webkit-text-stroke: #808080}
+span.s1 {font-kerning: none}
+span.s2 {font-kerning: none; background-color: #fefefe}
+span.s3 {text-decoration: underline ; font-kerning: none}
+span.s4 {font: 12.0px Arial; font-kerning: none}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p12"><span class="s4">{!User.FirstName}</span><span class="s1"> de chez orderbird</span></p></div></div></font></font></span></span></span>]]></td>
+</tr>
+</table>

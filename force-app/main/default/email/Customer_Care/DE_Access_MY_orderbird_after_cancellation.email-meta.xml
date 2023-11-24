@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kd kann einmalig Service-Lizenz für 1 Monat erwerben</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Access MY orderbird after cancellation</name>
+    <style>none</style>
+    <subject>Zugriff auf MY orderbird nach Kündigung</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

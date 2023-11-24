@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ambassador_Commission__c</fullName>
+    <description>Stakeholder Finance &amp; PaM https://jira.orderbird.com/browse/CDS-2027</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the state of the commission to the Ambassador who referred us this opportunity?</inlineHelpText>
+    <label>Ambassador Commission</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invoice Received</fullName>
+                <default>false</default>
+                <label>Invoice Received</label>
+            </value>
+            <value>
+                <fullName>Invoice Paid</fullName>
+                <default>false</default>
+                <label>Invoice Paid</label>
+            </value>
+            <value>
+                <fullName>Not Commissionable</fullName>
+                <default>false</default>
+                <label>Not Commissionable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

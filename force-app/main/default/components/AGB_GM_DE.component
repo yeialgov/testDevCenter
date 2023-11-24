@@ -1,0 +1,265 @@
+<apex:component controller="QuotePdfController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!qId}" name="QuoteId" type="String" description="Quote Id"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.quotecss2}"/>
+    </head>
+    <div style="page-break-before:always;">  
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}"/>
+    </div>
+    
+    <div id="mainDiv">
+        <div style="text-align:right;">
+            <img src="{!$Resource.orderbird_logo}" style="height: 60px;"/>
+        </div>
+        
+        <p class="blueText bigBold" style="font-family: sans-serif;font-size:100%;">
+        Besondere Nutzungsbedingungen für das Online-Reservierungssystem
+        <br/>
+        </p>
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+        Die nachfolgenden besonderen Geschäftsbedingungen (<strong>„AGB“</strong>) regeln das Vertragsverhältnis zwischen der orderbird AG, Ritterstraße 12-14, Aufgang 3, 10969 Berlin (<strong>„orderbird“</strong>) und allen Vertragspartnern (<strong>„Kunden“</strong>) des Online-Bestell-, Reservierungs- und Managementsystems der orderbird („Reservierungssystem“ oder <strong>„Anwendung“</strong>). Kunden der orderbird sind ausschließlich Unternehmer im Sinne des § 14 BGB und nicht Verbraucher im Sinne des § 13 BGB.  
+       </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+       orderbird ermöglicht es Kunden, (i) über den Einsatz unselbständiger Webanwendungen (<strong>„Widget“</strong>) Reservierungen für Ladenlokale anzubieten (ii) Bestellungen zur Abholung vor Ort oder Lieferungen zum Gast anzunehmen, kontaktlose Entgegennahme von Bestellungen am Tisch zu gewährleisten (iii) den Verkauf von Tickets oder Gutscheine zu ermöglichen.
+       </p>
+       <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+       Die Leistungen von orderbird umfassen die Bereitstellung der App "resmio Tables"für Apple iPad Geräte, das Widget sowie die Reservierungssteuerung und-verwaltung über die resmio Software, auf die der Nutzer über eine Webanwendungunter app.resmio.com zugreifen kann.
+       </p>
+       <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+       orderbird übermittelt ausschließlich Reservierungsanfragen und Bestellungen desGastes an den Kunden. Ein Vertragsverhältnis über eine Gastronomieleistung oderdergleichen kommt ausschließlich zwischen dem Kunden und dem jeweiligen Gastzustande.
+       </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 1. Geltungsbereich </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;" >         
+        <strong> 1.1 </strong> Für die Nutzung des orderbird Online-Reservierungs- und Online-Bestellsystems(nachfolgend die "Anwendung") gelten ausschließlich die nachfolgendenAllgemeinen Geschäftsbedingungen, die aktuell gültige Leistungsbeschreibungsowie die auf unserer 
+        <a class="blueText" href="https://www.orderbird.com/de/preise-gaestemanagement"> Website</a> 
+        oder im Angebot dargestellten Preise.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+        Dies gilt auch für eine Nutzung von einem Ort außerhalb des Gebietes der Bundesrepublik Deutschland.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 1.2 </strong> Die Geltung abweichender, entgegenstehender oder ergänzender AGB desKunden oder eines Dritten wird hiermit ausdrücklich ausgeschlossen. AGB desKunden oder eines Dritten werden nur dann und insoweit Vertragsbestandteil, alsorderbird ihrer Geltung ausdrücklich zugestimmt hat. DiesesZustimmungserfordernis gilt in jedem Fall, insbesondere auch dann, wenn orderbirdin Kenntnis solcher Bedingungen des Kunden oder eines Dritten dessen Lieferungenund Leistungen vorbehaltlos annimmt. 
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 2. Vertragsgegenstand </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.1 </strong> Die Nutzung der Anwendung steht nur Kunden zu, die diese AGB beiVertragsschluss akzeptiert haben.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.2 </strong> Gegenstand des Vertrags ist die Bereitstellung der in der Leistungsbeschreibungdargestellten Anwendung. Die Anwendung ermöglicht es dem Kunden,Reservierungen und Bestellungen über Widgets entgegenzunehmen. Ferner sindKunden in der Lage, über die Ticket- und Gutscheinfunktion Tickets fürVeranstaltungen und Coupons bzw. Gutscheine zu erstellen und an den Gast zuveräußern.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.3 </strong> Eine Bestellung, eine Reservierungsanfrage eines Gastes über das Widget bzw.die Ticket- und Gutscheinfunktion stellt ein Angebot auf Abschluss eines Vertrags(<strong>„invitatio ad offerendum“</strong>) zwischen dem Gast und dem Kunden dar. orderbirdübermittelt lediglich die jeweilige Erklärung des Gastes. Ein Kauf- oderDienstleistungsvertrag kann demnach nur zwischen dem Nutzer und dem jeweiligenGast zustande kommen. Als technischer Dienstleister haftet orderbird insbesonderenicht für Schäden, Nichterfüllung oder Schlechtleistung aus dem vermittelten odereinem nicht zustande gekommenen Vertrag.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.4 </strong> Jeder Nutzer ist selbst dafür verantwortlich zu prüfen, ob die von orderbirdermittelten Preisvorschläge geeignet sind, als Grundlage für die Preismodellegegenüber den Kunden zu dienen. Der Nutzer nimmt zur Kenntnis, dass diePreisvorschläge von orderbird nur auf der Grundlage einer Analyse einer begrenztenAnzahl von Parametern erstellt werden und keine Rückschlüsse auf die innerhalbeines bestimmten Zeitraums tatsächlich erzielbaren Preise zulassen. orderbird stelltden Nutzern über die Anwendung eigene Informationen und Daten zur Verfügung.Diese Informationen und Daten dienen lediglich Informationszwecken; der Nutzerkann sich nicht auf die Gültigkeit, Richtigkeit, Genauigkeit, Relevanz oderVollständigkeit der Informationen berufen oder verlassen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.5 </strong> Der Umfang der Anwendung kann jederzeit durch orderbird geändert, erweitertoder reduziert wie auch die Anwendung selbst gänzlich eingestellt werden. Im Falleeiner Einstellung oder wesentlichen Änderung kann der Nutzer diesen Vertrag miteiner Frist von vier Wochen zum Monatsende kündigen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.6 </strong> orderbird wird dem Kunden im Rahmen der verfügbaren Kapazitäten in Bezugauf die Nutzung und Einbindung der Anwendung beraten und in technischerHinsicht unterstützen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 2.7 </strong> Für die Einhaltung der anwendbaren Datenschutzbestimmungen gegenüber denGästen ist der Kunde als Verantwortlicher im Sinne des Art. 4 Nr. 7Datenschutzgrundverordnung („DSGVO“) allein verantwortlich. orderbird verarbeitetdie dabei generierten Daten als Auftragsverarbeiter nach Art. 4 Nr. 8 DSGVO iVm.Art. 28 DSGVO. Zu diesem Zweck muss der Kunde dieDatenverarbeitungsvereinbarung ("DPA") mit orderbird abschließen, die über denfolgenden 
+        <a class="blueText" href="https://support.orderbird.com/hc/de/articles/360000877906-Die-EU-Datenschutz-Grundverordnung-DSGVO-Was-bedeutet-das-f%C3%BCr-orderbird-Kunden-"> Link </a> 
+        abgerufen werden kann.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 3. Zustandekommen des Vertrags, Vertragssprache </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.1 </strong> Die Darstellung der Waren und Dienstleistungen auf der Webseite von orderbirdstellt kein rechtlich bindendes Angebot, sondern eine invitatio ad offerendum dar. Der Kunde kann ein verbindliches Angebot zum Abschluss eines Vertrags durchUnterzeichnung des Antragsformulars und Versendung an orderbird per E-Mailabgeben.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.2 </strong> Unmittelbar nach Absenden des verbindlichen Angebots erhält der Kunde eineBestätigung von orderbird, die jedoch noch keine Annahme des Vertragsangebotsdarstellt. Ein Vertrag zwischen orderbird und dem Kunden kommt grundsätzlichzustande, sobald orderbird das verbindliche Angebot des Kunden durch einegesonderte E-Mail / schriftlich annimmt.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 3.3 </strong> Die für den Vertragsabschluss zur Verfügung gestellte Sprache ist ausschließlichDeutsch. Übersetzungen in andere Sprachen dienen lediglich der Information desKunden. Bei Widersprüchen zwischen dem deutschen Text und der Übersetzung hatder deutsche Text Vorrang.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 4. Umfang des Nutzungsrechts </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.1 </strong> orderbird räumt dem Kunden eine auf die Laufzeit dieser Vereinbarungbegrenzte, nicht-ausschließliche, nicht übertragbare, weltweit gültige Lizenz zurNutzung der Anwendung (<strong>„einfaches Nutzungsrecht“</strong>) ein. Die Lizenz istbeschränkt auf die Verwendung der Anwendung für einen (1) Gewerbebetrieb desKunden. Weitere Lizenzen für die Nutzung der Anwendung für mehrere Schank-/Restaurationsbetriebe können entgeltpflichtig erworben werden. Die Rechte sind nurdem Kunden als inhaltlich Verantwortlichem für dessen Webseite eingeräumt undohne Zustimmung von orderbird weder weiter übertragbar noch unterlizenzierbar.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.2 </strong> orderbird ermöglicht es dem Kunden für den Zugang zur Anwendung einindividuelles Passwort zu generieren. Der Kunde verpflichtet sich, dieses Passwortsorgfältig aufzubewahren und Dritten keinen Zugang zu dem Passwort zuermöglichen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.3 </strong> Der Kunde ist verpflichtet, bei der Nutzung der Anwendung das geltende Rechtzu beachten und insbesondere Rechte Dritter nicht zu verletzen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.4 </strong> Dem Kunden ist jegliche Handlung bei der Nutzung der Anwendung untersagt,die gegen geltendes Recht verstoßen, Rechte Dritter verletzen oder gegen dieGrundsätze des Jugendschutzes verstoßen. Im Falle eines Verstoßes wird orderbirddie Anwendung für den Kunden sperren. Insbesondere sind folgende Handlungenuntersagt:
+        <ul class="grayText" style="list-style-type: square; font-family: sans-serif;font-size:75%;">
+          <li>die Verbreitung von Viren, Trojanern und anderen schädlichen Dateien;</li>
+          <li>die Versendung von Junk- oder Spam-Mails sowie von Kettenbriefen;</li>
+          <li>die Verbreitung anzüglicher, anstößiger, sexuell geprägter, obszöner oderdiffamierender Inhalte bzw. Kommunikation sowie solcher Inhalte bzw.Kommunikation, die geeignet ist, Rassismus, Fanatismus, Hass, körperlicheGewalt oder rechtswidrige Handlungen zu fördern bzw. zu unterstützen(jeweils explizit oder implizit);</li>
+          <li>die Belästigung anderer Personen, z.B. durch mehrfaches persönlichesKontaktieren ohne oder entgegen der Reaktion der anderen Person sowie dasFördern bzw. Unterstützen derartiger Belästigungen;</li>
+          <li>die Aufforderung anderer Personen zur Preisgabe von Kennwörtern oderpersonenbezogener Daten für rechts- bzw. gesetzeswidrige Zwecke;</li>
+          <li>die Übertragung überdurchschnittlich großer Datenmengen und insbesonderedie anhaltende Übertragung solcher Datenmengen;</li>
+          <li>jede Handlung, die geeignet ist, den reibungslosen Betrieb der Anwendung zubeeinträchtigen, insbesondere die Systeme von orderbird unverhältnismäßighoch zu belasten.</li>    
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.5 </strong> Der Kunde erkennt an, dass die Anwendung und alle ihre Bestandteile imalleinigen Eigentum von orderbird stehen. Die Anwendung oder jeder Teil derAnwendung darf ohne vorherige schriftliche Zustimmung von orderbird nichtvervielfältigt, dekompiliert, verändert, modifiziert oder an Dritte verliehen, verkauft,vermietet oder anderweitig kommerziell genutzt werden. Die Rechte aus § 69e UrhGbleiben unberührt. Etwaige dem Kunden überlassene Dokumentationen undInformationen über die Anwendung und ihre Funktionsweise dürfen ohne vorherigeschriftliche Zustimmung von orderbird Dritten ebenfalls nicht zugänglich gemachtwerden. Arbeitnehmer des Kunden gelten nicht als Dritte.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 4.6 </strong> Soweit es für die Erbringung der von orderbird geschuldeten Leistungenerforderlich ist, räumt der Kunde orderbird das nicht-ausschließliche, zeitlich auf dieLaufzeit dieses Vertrages beschränkte, widerrufliche Recht ein, Namen, Bilder, Datenund Kennzeichnung (insbesondere eingetragene Marken, Logos, oder anderegewerbliche Schutzrechte) des Kunden bzw. des Betriebs des Kunden zu nutzen.Dieses Recht dient der Erbringung der von orderbird geschuldetenvertragsgegenständlichen Leistungen und ggf. der Anfertigung von vertraglichgeschuldeten Materialien (bspw. Bilder, Fotografien, Texte, Grafiken). Der Kundesichert zu, dass einer solchen Nutzung keine Rechte Dritter entgegenstehen undstellt orderbird im Falle einer Inanspruchnahme durch Dritte von allen damitzusammenhängenden Kosten (einschließlich der Kosten der Rechtsverteidigung) auferstes Anfordern frei. Der Kunde stimmt zu, dass orderbird die vorbenannten Rechteauch für positive Marketingzwecke (Referenznennung, etc.) nutzen darf.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 5. Verfügbarkeit und individuelle Leistungen </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.1 </strong> Die Anwendung wird mit einer Verfügbarkeit von 95 Prozent im Monatsmittel zurVerfügung gestellt. Unter Verfügbarkeit verstehen die Parteien die technischeNutzbarkeit der Anwendung ohne wesentliche Einschränkungen am Übergabepunkt(Routerausgang am Rechenzentrum des Providers) des Reservierungssystems zumGebrauch durch den Kunden. Die folgenden Fälle der Nichtverfügbarkeit werdennicht auf die unter dieser Ziffer zugesicherte Verfügbarkeit angerechnet:
+        <ul class="grayText" style="list-style-type:lower-alpha; font-family: sans-serif;font-size:75%;">
+          <li>Angekündigte Wartungszeiten bis zu einer Dauer von 12 Stunden. orderbirdbemüht sich, Wartungsarbeiten in den Nachtstunden (22 Uhr bis 6 Uhr,Zeitzone: Europe/Berlin - Central European Time/Mitteleuropäische Zeit(CET/MEZ)) vorzunehmen;</li>
+          <li>Unterbrechungen der Internetverbindung zwischen orderbird und dem Nutzerund/oder zwischen orderbird und dem Endkunden;</li>
+          <li>Fälle der höheren Gewalt.</li>
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.2 </strong> Der Kunde ist verpflichtet, bei der Inanspruchnahme der Leistungen allenMitwirkungshandlungen nachzukommen, die für die Erbringung der Leistungenerforderlich sind. Kommt der Kunde seinen Mitwirkungspflichten zeitweise oderdauerhaft nicht nach, wird orderbird für die Dauer der unterbliebenen Mitwirkungvon seinen diesbezüglichen Leistungspflichten frei.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 5.3 </strong> Der Kunde erkennt an, dass es für die Inanspruchnahme bestimmter individuellerLeistungen (z.B. die Unterstützung bei der Erstellung eines Facebook- bzw. GoogleMy Business-Profils durch orderbird) erforderlich ist, dass der KundeVertragsbeziehungen mit Dritten eingeht und die jeweils anwendbarenNutzungsbedingungen dieser Dritten akzeptiert und einhält. orderbird übernimmtkeine Haftung für Verstöße des Kunden gegen Nutzungsbedingungen Dritter. Ist esdem Kunden aus nicht von orderbird zu vertretenden Gründen nicht möglich, die fürdie Inanspruchnahme bestimmter individueller Leistungen erforderlichenVertragsbeziehungen mit Dritten einzugehen, wird orderbird von seinerdiesbezüglichen Leistungspflicht frei.
+        </p>
+        </div>
+
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 6. Nutzungsentgelt </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.1 </strong> orderbird bietet gegebenenfalls verschiedene Versionen des Dienstes an. DieDauer und die Preise für die Nutzung der jeweiligen Version, dieLeistungsbestandteile sowie die Höhe der Provisionen für Transaktionen und Online-Zahlungsabwicklungsgebühren sind im jeweils gültigen Angebot oder in deraktuellen Preisliste festgelegt, die auf 
+        <a class="blueText" href="https://www.orderbird.com/de/preise-gaestemanagement"> der Website </a> 
+         jederzeit eingesehen werden kann.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        Während der Verwendung der Version „Bestellsystem“ und „Reservierungssystem und Gästeregistrierung“ kann der Nutzer die Anwendung zur jeweiligen Versioneingeschränkt nutzen. Ein Anspruch auf einzelne Leistungen anderer Tarife (z.B.Beratung) besteht jedoch nicht.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.2 </strong> Es gelten die zum Zeitpunkt des Vertragsschlusses gültigen und auf 
+        <a class="blueText" href="https://www.orderbird.com"> orderbird Website </a> 
+        veröffentlichten Preise und Gebühren. Nichtnutzungsbasierte Entgelte sind jährlich im Voraus fällig. Nutzungsabhängige Entgeltewerden mit Rechnungsstellung nach Ablauf des jeweiligen Abrechnungszeitraumsfällig. Alle Gebühren und Preise sind Nettobeträge, die zuzüglich der gesetzlichenMehrwertsteuer zu zahlen sind.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.3 </strong> Die Abrechnung erfolgt jährlich vor Beginn der jeweiligen Nutzungszeit durchRechnungsstellung. orderbird kann Rechnungen und Zahlungserinnerungen per E-Mail oder Online-Rechnung versenden. Zahlungen des Nutzers an orderbird fürerteilte Aufträge, vorgenommene Reservierungen und sonstige Produkte innerhalbdes Systems erfolgen durch elektronischen Lastschrifteinzug oderKreditkartenzahlung. Der Nutzer ermächtigt orderbird, die vom Nutzer zu zahlendenBeträge von einem vom Nutzer zu benennenden Konto oder einer Kreditkarte direktabzubuchen. Bei fehlgeschlagenen Lastschriften oder Rückbuchungen behält sichorderbird das Recht vor, eine Pauschale in Höhe von EUR 10,00 pro Lastschrift oderRückbuchung zu berechnen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        Es werden Verzugszinsen in Höhe von 8% über dem jeweiligen Basiszinssatz p.a.berechnet. orderbird behält sich vor, einen höheren Verzugsschaden geltend zumachen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 6.4 </strong> orderbird ist berechtigt, die Nutzungsentgelte erstmals nach Ablauf von zwölf(12) Monaten nach Vertragsbeginn mit einer schriftlichen Ankündigung von sechs (6) Wochen zum darauf folgenden Monatsbeginn zu erhöhen. Der Kunde hat das Recht,das Vertragsverhältnis innerhalb einer Frist von vier (4) Wochen nach Zugang derAnkündigung schriftlich zu kündigen, wenn der Kunde der Vertragsänderung nichtzustimmt. Auf dieses Kündigungsrecht wird orderbird den Kunden zusammen mitjeder Ankündigung hinweisen.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 7. Gewährleistung und Haftung </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.1 </strong> Die Rechte des Kunden bestimmen sich nach den gesetzlichen Vorschriftensoweit nachfolgend nichts Abweichendes geregelt ist.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.2 </strong> Der Kunde hat auftretende Mängel unverzüglich mitzuteilen. Soweit orderbirdinfolge der Unterlassung oder Verspätung der Anzeige nicht Abhilfe schaffen konnte,ist der Kunde berechtigt, nur bei erheblichen Mängeln, die die Nutzungbeeinträchtigen, oder die Gebrauchstauglichkeit aufhebt, die Vergütung ganz oderteilweise zu mindern, den Ersatz des durch den Mangel eingetretenen Schadens zuverlangen oder den Vertrag zu kündigen. Der Kunde hat darzulegen, dass er dasUnterlassen der Anzeige nicht zu vertreten hat. Die verschuldensunabhängigeHaftung von orderbird auf Schadensersatz (§ 536a BGB) für bei Vertragsschlussvorhandene Mängel wird ausgeschlossen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.3 </strong> orderbird haftet unbeschränkt für die durch orderbird, seine Mitarbeiter undErfüllungsgehilfen vorsätzlich oder grob fahrlässig verursachten Schäden, beiarglistigem Verschweigen von Mängeln, bei der ausdrücklichen Übernahme einerGarantie sowie für Schäden aus der Verletzung des Lebens, des Körpers und derGesundheit. Eine etwaige Haftung nach dem Produkthaftungsgesetz bleibtunberührt.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.4 </strong> Die Haftung für fahrlässig verursachte Sachschäden ist der Höhe nach auf dieHöhe des vereinbarten Jahresentgelts beschränkt, dies gilt nicht für eine Haftung inZiffer 7.3.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.5 </strong> Eine Haftung für Mangelfolge- und sonstige Begleitschäden sowie für mittelbareSchäden, ist ebenso wie ein Anspruch des Kunden auf Ersatz von Aufwendungen,soweit gesetzlich zulässig, ausgeschlossen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 7.6 </strong> Schadensersatzansprüche verjähren in einem Jahr nach deren Entstehung. DieFrist beginnt mit dem Zeitpunkt, zu dem der Kunde von denanspruchsbegründenden Umständen und der Person des Schuldners Kenntniserlangt oder ohne grobe Fahrlässigkeit erlangen musste
+        </p>
+        </div>
+                
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 8. Laufzeit, Kündigung </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.1 </strong> Das Vertragsverhältnis läuft ab dem Zeitpunkt des Vertragsschlusses aufbestimmte Zeit nach den jeweiligen Angebotsbestimmungen. Der Vertrag hat eineanfängliche Laufzeit von zwölf (12) Monaten, sofern im Angebot nichts anderesangegeben ist. Er verlängert sich jeweils automatisch um weitere zwölf (12) Monate(bzw., wenn in den Bedingungen des gewählten Tarifs ein andererVerlängerungszeitraum angegeben ist, um diesen Zeitraum), wenn er nicht mit einerFrist von vier (4) Wochen zum Ende der Vertragslaufzeit gekündigt wird.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.2 </strong> Das Recht zur Sperrung und zur Kündigung aus wichtigem Grund bleibt hiervonunberührt. orderbird sperrt die Nutzungsberechtigung des Kunden vorübergehend,wenn konkrete Anhaltspunkte vorliegen, dass gegen diese Nutzungsbedingungenund/oder geltendes Recht verstoßen wird bzw. verstoßen wurde. orderbird wird denKunden vor der Sperrung über die Gründe rechtzeitig informieren.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.3 </strong> Jede Partei hat das Recht, diesen Vertrag außerordentlich bei Vorliegen eineswichtigen Grundes fristlos zu kündigen. Ein wichtiger Grund seitens orderbird liegtinsbesondere dann vor, wenn der Kunde mit der Zahlung vom Nutzungsentgelt mehrals zwei (2) Monate in Verzug ist.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 8.4 </strong> Die Kündigung bedarf der Textform.
+        </p>
+        </div>
+        
+        <p class="grayText" style="font-family: sans-serif;">
+        <strong> 9. Schlussbestimmungen </strong><br/>
+        </p>
+        
+        <div style= "text-align: justify; text-align-last: left;">
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.1 </strong> Diese Vereinbarung unterliegt dem Recht der Bundesrepublik Deutschland unterAusschluss des UN-Kaufrechts. Die Parteien vereinbaren Berlin als ausschließlichenGerichtsstand für alle Streitigkeiten, die aus oder in Verbindung mit diesem Vertragentstehen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.2 </strong> Sollten eine Bestimmung dieser Vereinbarung unwirksam sein, so soll dieunwirksame Bestimmung durch eine solche wirksame Bestimmung ersetzt werden,die dem wirtschaftlich und rechtlich Gewollten am nächsten kommt.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.3 </strong> orderbird behält sich das Recht vor, die AGB mit Wirkung für die Zukunftinsbesondere in den folgenden Fällen zu verändern:
+        <ul class="grayText" style="list-style-type:square; font-family: sans-serif;font-size:75%;">
+          <li>wenn und soweit sich die Marktlage nach Vertragsschluss in kalkulatorischeroder technischer Hinsicht aus Sicht von orderbird in triftiger Art und Weiseverändert hat.</li>
+          <li>wenn orderbird das Angebot und die Services verbessern, erweitern oder zu Gunsten der Kunden verändern möchte.</li>
+        </ul>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;"> 
+        Die Änderungen der AGB werden mit einer Frist von vier (4) Wochen im Vorausangekündigt und dann geändert.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:79%;">         
+        <strong> 9.4 </strong> Änderungen oder Ergänzungen dieser besonderen Geschäftsbedingungenbedürfen der Textform. Dies gilt auch für die Änderung oder Aufhebung dieser Klausel.
+        </p>
+        </div>
+        
+        <div style= "text-align: right;">
+        <br/>
+        <p class="grayText" style="font-family: sans-serif;">         
+        Berlin, den 21.05.2021
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">         
+        (Version 1: gültig ab 21.05.2021)
+        </p>
+        </div>
+        
+    </div>
+    </div>
+ </apex:component>

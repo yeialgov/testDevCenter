@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shorthand__c</fullName>
+    <description>Stakeholder: Sales https://jira.orderbird.com/browse/CDS-138</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is a User friendly shorthand for this LAC? Only required for manually set LAC</inlineHelpText>
+    <label>Shorthand</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>LAC_Shorthands</valueSetName>
+    </valueSet>
+</CustomField>

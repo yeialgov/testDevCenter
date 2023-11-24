@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>one time mailing to all customers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DATEV Update DE</name>
+    <style>none</style>
+    <subject>orderbird: Aktualisierung des DATEV-Exports in der App</subject>
+    <textOnly>orderbird: Aktualisierung des DATEV-Exports in der App
+
+Liebe orderbird Kundin, lieber orderbird Kunde,
+
+
+am 1. Juni 2019 aktualisieren wir den DATEV-Export für Dich. So kannst Du DATEV-Exporte nach den neuesten Standards für Deine Steuerberatung bereitstellen.
+
+
+Das ist neu für Dich
+
+
+Ab dem 1. Juni 2019 bieten wir den veralteten SKR 70 nicht mehr als voreingestellten Standard für Deine DATEV-Exporte an. Das bedeutet für Dich, dass Du zukünftig keine DATEV-Exporte mehr erhältst, wenn Du bis dahin keine Einstellungen in der orderbird App für DATEV vorgenommen hast.
+
+
+Außerdem findest Du auf my.orderbird unter Datenexporte &gt; DATEV ab Juni eine Übersicht zu den von uns empfohlenen Kontenrahmen. Dort hast Du zusätzlich die Möglichkeit, weitere Informationen wie zum Beispiel Deine Mandantennummer zu hinterlegen. Der Vorteil ist, dass es die Arbeit für Deinen Steuerberater noch einfacher macht, was ihm Zeit und Dir Kosten sparen kann.
+
+
+Bitte aktualisiere Deine DATEV-Einstellungen
+
+
+Bitte überprüfe unbedingt Deine Einstellungen für den DATEV-Export. Falls Du noch keine Kontonummern in der orderbird App unter Einstellungen &gt; DATEV eingetragen hast, hole das jetzt bitte nach. So kannst Du zukünftig DATEV-Exporte erhalten.
+
+
+Wir empfehlen als Einstellung den SKR 03 oder den SKR 04 für Deutschland und den SKR 07 in Österreich, da diese typischerweise in der Gastronomie verwendet werden. Stell bitte den Standard-Kontorahmen ein, der für Dich und Dein Land angemessen ist.
+
+
+Frag am besten Deine Steuerberatung, um auf Nummer sicher zu gehen. Die orderbird App unterstützt auch weiterhin alle Standardkontenrahmen für DATEV. Alle Informationen findest Du HIER!
+
+Falls Du die alten Kontonummern nach SKR 70 in der orderbird App unter Einstellungen &gt; DATEV selbstständig eingetragen hast, dann erhältst Du wie gewohnt Deinen DATEV-Export nach SKR 70. Auch hier gilt: Sprich Dich am besten nochmal mit Deiner Steuerberatung ab, welcher Kontenrahmen für Dich am sinnvollsten ist. So sorgst Du dafür, dass Du auf dem aktuellen Stand bist.
+
+
+Falls Du kein DATEV in der Vergangenheit genutzt hast und es auch zukünftig nicht vorhast, musst Du an dieser Stelle nichts unternehmen.
+
+
+Bei Fragen zum Thema melde Dich gern bei unserem Support unter hilfe@orderbird.com.
+
+
+Viele Grüße aus Berlin
+
+Dein orderbird Team
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+10969 Berlin
+
+Germany
+
+
+E-Mail: hello@orderbird.com
+Telefon: +49 30 208 983 098 kostenlos aus Deutschland,
++49 30 208 983 099 aus dem Ausland
+Fax: +49 321 214 681 89
+Sitz der Gesellschaft: Berlin
+Registergericht: Amtsgericht Berlin - Charlottenburg
+Registernummer: HRB 134011
+UstID: DE276722316
+Vorstand: Mark Schoen (Vorsitzender), Jakob Schreyer, Patrick Brienen-Lucius,
+c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+Vorsitzender des Aufsichtsrats: Oliver Kaltner, c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+
+
+
+© 2011-2019 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

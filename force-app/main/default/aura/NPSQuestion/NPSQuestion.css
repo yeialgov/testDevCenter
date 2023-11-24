@@ -1,0 +1,15 @@
+.THIS .NPSSel{
+    background-color: #2574a9;
+    color: white;
+}
+.THIS .NPSSel:hover {
+    background-color: #135f90;
+    cursor: pointer;
+}
+.THIS .NPSUnsel {
+    color: #333332;
+}
+.THIS .NPSUnsel:hover {
+    cursor: pointer;
+    background-color: #f8f8f8;
+}

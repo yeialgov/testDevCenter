@@ -1,0 +1,50 @@
+<aura:component >
+
+    <aura:attribute type="Object" name="Product"/>
+    <aura:attribute type="Boolean" name="IsAmendment" default="false"/>
+    <aura:attribute type="Boolean" name="isAcctMgmt" default="false"/>
+    <aura:attribute name="Currency" type="String" default="EUR"/>
+    <aura:attribute type="String" name="bgStyle" default=""/>
+
+    <aura:registerEvent name="appEvent" type="c:NewQuoteItem"/>
+    
+    <aura:handler event="c:PayByInstalment" action="{!c.handlePayByInstalment}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-table_edit_container slds-is-relative">
+        <table class="slds-table slds-table_bordered slds-table_fixed-layout" role="grid">
+            <tbody>
+                <tr class="slds-hint-parent">
+                    <td style="width:65%;">
+                        <div class="slds-truncate" title="{!v.Product.DisplayName__c == null ? v.Product.Name : v.Product.DisplayName__c}">{!v.Product.DisplayName__c == null ? v.Product.Name : v.Product.DisplayName__c}</div>
+                    </td>
+                    <td class="chosen" style="{!v.bgStyle}">
+                        <aura:if isTrue="{!v.Product.Model__c=='PerUnit'}">
+                            <aura:if isTrue="{!and(v.IsAmendment, and(v.Product.Num != v.Product.bDelta, v.Product.bDelta != null))}">
+                                ({!v.Product.bDelta}{!if(v.Product.cDelta > -1,'+','')}{!v.Product.cDelta}) {!v.Product.Num}
+                                <aura:set attribute="else">
+                                    {!v.Product.Num}
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.Product.Num != null}">
+                                    <lightning:icon iconName="utility:check"
+                                                    variant="inverse"
+                                                    size="x-small"/>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td role="gridcell">
+                            <lightning:buttonIcon iconName="{!if(v.Product.Model__c=='PerUnit','utility:up','utility:check')}"
+                                                  onclick="{!c.numUp}"
+                                                  class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-button__icon slds-button__icon_hint slds-button__icon_small"/>
+                            <lightning:buttonIcon iconName="{!if(v.Product.Model__c=='PerUnit','utility:down','utility:close')}"
+                                                  onclick="{!c.numDn}"
+                                                  class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-button__icon slds-button__icon_hint slds-button__icon_small"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

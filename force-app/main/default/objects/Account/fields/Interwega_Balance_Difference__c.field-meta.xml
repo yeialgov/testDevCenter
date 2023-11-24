@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interwega_Balance_Difference__c</fullName>
+    <externalId>false</externalId>
+    <formula>if (text(CurrencyIsoCode) = &quot;EUR&quot;,  Combined_Balance__c  - Interwega_Open_Balance_wo_fees__c, null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Orderbird Balance minus Interwega Open Balance (excl. fees)</inlineHelpText>
+    <label>Interwega Balance Difference (EUR)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

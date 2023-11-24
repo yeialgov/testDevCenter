@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentMethodDescription__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-2747</description>
+    <externalId>false</externalId>
+    <formula>CASE( Batch__c ,
+ &quot;Batch2&quot;, IF(
+   AND(NOT(ISBLANK(DefaultPaymentMethod__c)), AutoPay__c = true, DefaultPaymentMethod__r.PaymentMethodStatus__c = &quot;Active&quot;),
+    &quot;New Customer paying by SEPA - Waiting for payment approval&quot;,
+    &quot;New Customer paying by SEPA - Missing Info from Sales or Finance&quot;),
+ &quot;Batch3&quot;, &quot;Customer paying by Wire Transfer&quot;,
+ &quot;Batch4&quot;, &quot;New Customer paying by Installment&quot;,
+ &quot;Batch5&quot;, IF(
+   AND(NOT(ISBLANK(DefaultPaymentMethod__c)), AutoPay__c = true, DefaultPaymentMethod__r.PaymentMethodStatus__c = &quot;Active&quot;),
+    &quot;Active Customer using an active SEPA&quot;,
+    &quot;Active Customer with SEVERAL failed payments&quot;),
+ &quot;Batch7&quot;, &quot;New Customer paying first Invoice by Wire Transfer - After Success Payment should be move to Batch 5&quot;,
+ &quot;Batch8&quot;, &quot;Customer paying by Wire Transfer - Previously SEPA Customer but has too MANY failed payments&quot;,
+ &quot;Batch9&quot;, &quot;Customer paying by Wire Transfer - Previously SEPA Customer but has too MANY failed payments&quot;,
+ &quot;Batch10&quot;, &quot;New Customer paying by Installment&quot;,
+ &quot;Batch12&quot;, &quot;Debt Collection (Interwega)&quot;,  
+&quot;Customer paying by Wire Transfer&quot;)</formula>
+    <inlineHelpText>Small description regarding the payment method based on the Billing Batch and the whole payment process done by Finance</inlineHelpText>
+    <label>Payment Method Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

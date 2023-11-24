@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which item is affected by this issue? Multi-select picklist</inlineHelpText>
+    <label>Item</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Card Reader</fullName>
+                <default>false</default>
+                <label>Card Reader</label>
+            </value>
+            <value>
+                <fullName>Cash Drawer</fullName>
+                <default>false</default>
+                <label>Cash Drawer</label>
+            </value>
+            <value>
+                <fullName>iPad - Special Regulation</fullName>
+                <default>false</default>
+                <label>iPad - Special Regulation</label>
+            </value>
+            <value>
+                <fullName>iPad TM</fullName>
+                <default>false</default>
+                <label>iPad TM</label>
+            </value>
+            <value>
+                <fullName>Powerbank/ Cases</fullName>
+                <default>false</default>
+                <label>Powerbank/ Cases</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Router</fullName>
+                <default>false</default>
+                <label>Router</label>
+            </value>
+            <value>
+                <fullName>Starter Package</fullName>
+                <default>false</default>
+                <label>Starter Package</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Solution_mandatory_on_Type_change</fullName>
+    <active>true</active>
+    <description>https://jira.orderbird.com/browse/CDS-1103: 
+As soon as an agent changes a Issue Record Type from &quot;General/Standard&quot; to any other Issue Record Type, a solution should be mandatory right away.
+Updated: https://jira.orderbird.com/browse/CDS-1370</description>
+    <errorConditionFormula>AND( 
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+$User.UserRoleId != &apos;00E58000000bx0z&apos;, 
+
+NOT(AND($User.UserRoleId =&apos;00E58000000bx19&apos;,RecordType.Name = &apos;Onboarding Issue: Menue / Backup&apos;)), 
+
+CaseSolutionCount__c = 0, 
+ISCHANGED(RecordTypeId), 
+RecordType.Name != &apos;Case: General/ Standard&apos; 
+)</errorConditionFormula>
+    <errorMessage>You have to provide at least one Case Solution before you can change the record type</errorMessage>
+</ValidationRule>

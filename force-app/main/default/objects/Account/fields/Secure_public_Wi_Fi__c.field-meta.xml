@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secure_public_Wi_Fi__c</fullName>
+    <description>Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How is the prospect&apos;s stand on secure public wifi? Ask him: „In terms of Wi-Fi for your guests there is legally a lot to consider – have you concerned yourself with that before&quot; Filled in by Sales Rep</inlineHelpText>
+    <label>Secure public Wi-Fi</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>already in place</fullName>
+                <default>false</default>
+                <label>already in place</label>
+            </value>
+            <value>
+                <fullName>has public WiFi but not secure</fullName>
+                <default>false</default>
+                <label>has public WiFi but not secure</label>
+            </value>
+            <value>
+                <fullName>would, if secure</fullName>
+                <default>false</default>
+                <label>would, if secure</label>
+            </value>
+            <value>
+                <fullName>not interested</fullName>
+                <default>false</default>
+                <label>not interested</label>
+            </value>
+            <value>
+                <fullName>info please</fullName>
+                <default>false</default>
+                <label>info please</label>
+            </value>
+            <value>
+                <fullName>not specified (do not use!)</fullName>
+                <default>false</default>
+                <label>not specified (do not use!)</label>
+            </value>
+            <value>
+                <fullName>third party country</fullName>
+                <default>false</default>
+                <label>third party country</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

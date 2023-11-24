@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "272f1eea-833a-43d4-a232-911937fb6579",
+  "appPageId" : "604a159d-9c1d-4f0c-a775-45dee85652a1",
+  "configurationTags" : [ ],
+  "devName" : "ttt__c",
+  "id" : "87ba7fd3-dac9-4c61-a2ea-f880d6fee89b",
+  "label" : "ttt",
+  "routeType" : "custom-ttt",
+  "type" : "route",
+  "urlPrefix" : "ttt"
+}

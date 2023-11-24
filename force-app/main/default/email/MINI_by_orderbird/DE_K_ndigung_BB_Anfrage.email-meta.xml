@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DE Kündigung Bambora: Anfrage</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Kündigung BB: Anfrage</name>
+    <style>none</style>
+    <subject>MINI by orderbird: Kündigungsanfrage für Bambora</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+Danke für Deine Nachricht und schade, dass Du die integrierte Kartenzahlung nicht mehr weiter nutzen willst!
+
+
+Im Anhang findest Du ein vorbereitetes Kündigungsschreiben:
+
+Setze Deine Unterschrift drunter, um den Vertrag für Deine Kartenzahlung zu beenden.
+Danach schickst Du das unterzeichnete Dokument zurück, damit wir es zur Bearbeitung einreichen können.
+
+Du bekommst von uns abschließend noch eine Mail mit der Kündigungsbestätigung der Kartenzahlung.
+
+
+Falls Du noch Fragen zur Vertragskündigung oder generelle Anregungen hast, antworte mir einfach auf diese E-Mail oder schreibe hier: Anfrage. Du erreichst uns wochentags von 10-16 Uhr auch über den Chat in MY orderbird.
+
+
+Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter supportmini.orderbird.com.
+
+Vielen Dank und liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

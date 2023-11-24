@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaidDate__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Payment__r.GatewayState__c==&quot;Settled&quot;,Payment__r.SettledOn__c,Payment__r.EffectiveDate__c)</formula>
+    <label>Paid Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

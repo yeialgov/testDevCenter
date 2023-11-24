@@ -1,0 +1,14 @@
+<messaging:emailTemplate subject="{!relatedTo.Dunning_0_Subject__c} {!relatedTo.Name} {!relatedTo.CustomerID__c}" recipientType="Contact" relatedToType="Account">
+
+    <messaging:htmlEmailBody >
+        <c:FriendlyReminder AccountId="{!relatedTo.Id}"/>
+    </messaging:htmlEmailBody>
+ 
+    <messaging:attachment renderAs="pdf">
+        <html>
+            <link rel='stylesheet' type='text/css' href='{!$Resource.accountstatementcss}' />
+            <c:AccountStatement AccountId="{!relatedTo.Id}"/>
+        </html>
+    </messaging:attachment>
+ 
+</messaging:emailTemplate>

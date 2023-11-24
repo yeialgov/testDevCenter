@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Package__c</fullName>
+    <description>https://jira.orderbird.com/browse/CRMT-3569</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Has this opportunity come with a special package?</inlineHelpText>
+    <label>Sales Package</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CC Hellenic - Package Light</fullName>
+                <default>false</default>
+                <label>CC Hellenic - Package Light</label>
+            </value>
+            <value>
+                <fullName>CC Hellenic - Package Standard</fullName>
+                <default>false</default>
+                <label>CC Hellenic - Package Standard</label>
+            </value>
+            <value>
+                <fullName>CC Hellenic - Package Lighthouse</fullName>
+                <default>false</default>
+                <label>CC Hellenic - Package Lighthouse</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

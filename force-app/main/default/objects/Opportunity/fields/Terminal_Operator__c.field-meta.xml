@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terminal_Operator__c</fullName>
+    <description>https://jira.orderbird.com/browse/SFDC-1303</description>
+    <externalId>false</externalId>
+    <label>Terminal Operator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Concardis</fullName>
+                <default>false</default>
+                <label>Concardis</label>
+            </value>
+            <value>
+                <fullName>Card Complete</fullName>
+                <default>false</default>
+                <label>Card Complete</label>
+            </value>
+            <value>
+                <fullName>B+S Card Service</fullName>
+                <default>false</default>
+                <label>B+S Card Service</label>
+            </value>
+            <value>
+                <fullName>Elavon Payments International</fullName>
+                <default>false</default>
+                <label>Elavon Payments International</label>
+            </value>
+            <value>
+                <fullName>FirstData Europe</fullName>
+                <default>false</default>
+                <label>FirstData Europe</label>
+            </value>
+            <value>
+                <fullName>Ingenico Payment Services</fullName>
+                <default>false</default>
+                <label>Ingenico Payment Services</label>
+            </value>
+            <value>
+                <fullName>InterCard AG</fullName>
+                <default>false</default>
+                <label>InterCard AG</label>
+            </value>
+            <value>
+                <fullName>Six Payment Services</fullName>
+                <default>false</default>
+                <label>Six Payment Services</label>
+            </value>
+            <value>
+                <fullName>Wirecard</fullName>
+                <default>false</default>
+                <label>Wirecard</label>
+            </value>
+            <value>
+                <fullName>izettel</fullName>
+                <default>false</default>
+                <label>izettel</label>
+            </value>
+            <value>
+                <fullName>sumup</fullName>
+                <default>false</default>
+                <label>sumup</label>
+            </value>
+            <value>
+                <fullName>other bank reader</fullName>
+                <default>false</default>
+                <label>other bank reader</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+{!Task.LastModifiedBy} has assigned the following task to you: 
+
+Link to the record: {!Task.Link}
+
+Date: {!Task.ActivityDate}
+
+Comments:
+{!Task.Description}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ACCS, Kunde will nach Kündigung zurückkommen</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Re-Aktivierung Account</name>
+    <style>none</style>
+    <subject>Re-Aktivierung Deines MY orderbird-Accounts</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

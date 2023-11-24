@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <name>Account_has_Primary_Contact</name>
+        <label>Account has Primary Contact</label>
+        <locationX>657</locationX>
+        <locationY>393</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>It_HAS_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PrimaryContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Link_Case_Acct_Contc</targetReference>
+            </connector>
+            <label>It HAS Contact</label>
+        </rules>
+        <rules>
+            <name>It_HAS_NOT_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PrimaryContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Link_Case_Account</targetReference>
+            </connector>
+            <label>It HAS NOT Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Not all cases should be included in the flow</description>
+        <name>Case_has_VenueID</name>
+        <label>Case has VenueID</label>
+        <locationX>668</locationX>
+        <locationY>50</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>VenueID_Positive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.VenueID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account_Name</targetReference>
+            </connector>
+            <label>VenueID Positive</label>
+        </rules>
+        <rules>
+            <name>Venue_Id_Negative</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.VenueID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>delete_account_and_related_contact</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Venue Id Negative</label>
+        </rules>
+    </decisions>
+    <description>https://jira.orderbird.com/browse/CRMT-3409</description>
+    <interviewLabel>Related Account of BOT cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Related Account &amp; Contact by VenueID</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account_Name</name>
+        <label>Get Account_Name</label>
+        <locationX>676</locationX>
+        <locationY>229</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Primary_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MyOrderbirdId__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.VenueID__c</elementReference>
+            </value>
+        </filters>
+        <object>MyObVenue__c</object>
+        <outputAssignments>
+            <assignToReference>VenueID_Account</assignToReference>
+            <field>Account__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Primary_Contact</name>
+        <label>Get Primary Contact</label>
+        <locationX>842</locationX>
+        <locationY>229</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_has_Primary_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>PrimaryContactId</assignToReference>
+            <field>Primary_Contact__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>if venueid changed to null then delete the related account and contact of the case</description>
+        <name>delete_account_and_related_contact</name>
+        <label>delete account and related contact</label>
+        <locationX>988</locationX>
+        <locationY>47</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Use venue id to link the case with the right SF account</description>
+        <name>Link_Case_Account</name>
+        <label>Link Case-Account</label>
+        <locationX>383</locationX>
+        <locationY>466</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>If Account has a Primary Contact link it with the Chat Case</description>
+        <name>Link_Case_Acct_Contc</name>
+        <label>Link Case Acct&amp;Contc</label>
+        <locationX>952</locationX>
+        <locationY>477</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>PrimaryContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>16</locationY>
+        <connector>
+            <targetReference>Case_has_VenueID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>VenueID__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Primary Contact Id in the linked Account</description>
+        <name>PrimaryContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the record that start the flow</description>
+        <name>RecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the Case to be updated</description>
+        <name>RecordId_Case</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>StringVenueID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Account that match with the value for the VenueID</description>
+        <name>VenueID_Account</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,60 @@
+<aura:component >
+    <aura:attribute name="token" type="String"/>
+    <aura:attribute name="beta" type="Boolean" default="false"/>
+    <c:PortalOption icon="utility:ribbon"
+                    option="tse"
+                    token="{!v.token}"
+                    title="{!$Label.c.TSE_COMPLIANCE}"
+                    description="{!$Label.c.TSE_COMPLIANCE_DESCRIPTION}"/>
+    <c:PortalOption icon="utility:file"
+                    option="invoice"
+                    token="{!v.token}"
+                    title="{!$Label.c.DOWNLOAD_PAST_INVOICES}"
+                    description="{!$Label.c.DOWNLOAD_PAST_INVOICES_DESCRIPTION}"/>
+   <c:PortalOption icon="utility:custom_apps"
+                    option="insights"
+                    token="{!v.token}"
+                    title="{!$Label.c.CONFIGURE_INSIGHTS}"
+                    description="{!$Label.c.INSIGHTS_DESCRIPTION}"/>
+  <c:PortalOption icon="utility:identity"
+                        option="licenses"
+                        token="{!v.token}"
+                        title="Licenses"
+                        description="View and manage your licenses."/>
+    <!--aura:if isTrue="{!v.beta}">
+        <c:PortalOption icon="utility:cart"
+                        option="quotes"
+                        token="{!v.token}"
+                        title="Quotes"
+                        description="View and accept quotes."/>
+    </aura:if>
+    <aura:if isTrue="{!v.beta}">
+        <c:PortalOption icon="utility:identity"
+                        option="licenses"
+                        token="{!v.token}"
+                        title="Licenses"
+                        description="View and manage your licenses."/>
+    </aura:if>
+    <aura:if isTrue="{!v.beta}">
+        <c:PortalOption icon="utility:cart"
+                        option="invoice"
+                        token="{!v.token}"
+                        title="Order Hardware"
+                        description="Philipp, your family loves you."/>
+    </aura:if>
+    <c:PortalOption icon="utility:cart"
+                    option="shop"
+                    token="{!v.token}"
+                    title="Shop"
+                    description="Shopping description. Let's go shopping. Buy our stuff."/>
+    <c:PortalOption icon="utility:user_role"
+                    option="info"
+                    token="{!v.token}"
+                    title="Update Information"
+                    description="Update your billing address and other account details."/>
+    <c:PortalOption icon="utility:money"
+                    option="payment"
+                    token="{!v.token}"
+                    title="Payments"
+                    description="Payments description. Let's go paying. Pay for our stuff."/-->
+</aura:component>

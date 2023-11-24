@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC Feedback - closed lost</name>
+    <style>freeForm</style>
+    <subject>Clientes orderbird promocionan a clientes: aún no te has decidido</subject>
+    <textOnly>www.orderbird.com
+ayuda@orderbird.com
++34911680466
+
+
+Querido/a cliente de orderbird,
+
+Decidirse por un nuevo sistema de cajas lleva su tiempo. Lamentamos que aún no te hayas decidido {!Account.Name} por orderbird. Nos mantenemos a la espera para que puedas sacarle el máximo provecho de nuestro cliente que te ha recomendado.
+
+Si durante este tiempo conoces a alguien al que le pueda interesar orderbird, solo tienes que recomendarnos y conseguirás de manera segura una licencia PRO anual orderbird totalmente gratuita por cada recomendación que consigas con éxito.
+
+¡Muchas gracias por tu colaboración y hasta la próxima!
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

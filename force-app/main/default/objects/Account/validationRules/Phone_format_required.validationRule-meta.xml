@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_format_required</fullName>
+    <active>false</active>
+    <description>Requires a standard phone number format for Phone
+https://jira.orderbird.com/browse/CRM-770</description>
+    <errorConditionFormula>AND(
+
+NOT(ISCHANGED( ZuoraId__c )),
+NOT(ISCHANGED( AccountStatus__c )),
+NOT(ISCHANGED( Closed_Contract_Paid_Date__c )),
+NOT(ISCHANGED( CommissionDate__c )),
+NOT(ISCHANGED( Dunning_0_Date__c )),
+NOT(ISCHANGED( Dunning_1_Date__c )),
+NOT(ISCHANGED( Dunning_2_Date__c )),
+NOT(ISCHANGED( Interwega_Balance_Difference__c )),
+NOT(ISCHANGED( Interwega_Business_Area__c )),
+NOT(ISCHANGED( Interwega_Debt_Collection_Id__c )),
+NOT(ISCHANGED( Interwega_Open_Balance_wo_fees__c )),
+NOT(ISCHANGED( Interwega_Open_Balance__c )),
+NOT(ISCHANGED( Interwega_Reference_Date__c )),
+NOT(ISCHANGED( Interwega_Status__c )),
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+NOT(ISBLANK(Phone)),
+NOT(ISNEW()),
+NOT(ISCHANGED(FirstOppCloseDate__c)),
+NOT(ISCHANGED(LastOppCloseDate__c)),
+NOT(ISCHANGED(TotalOfCWOpps__c)),
+NOT(ISCHANGED(TotalOfOpps__c)),
+NOT(
+OR(
+REGEX( Phone,&quot;[+]{1}[1-9]{2,2}[1-9]{1}[0-9]{3,9}&quot;),
+REGEX(Phone,&quot;[+]{1}[0-9]{2,3}[0-9]{1}[0-9]{3,15}&quot;),BEGINS(Phone,&quot;n/a&quot;)
+)))</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>For phone numbers please consider the following format: 
++&quot;dial code&quot;+&quot;prefix code&quot;+&quot;phone number&quot; (without leading zero or any spaces), e.g.+4930123456789 
+If the phone number is (still) unknown, enter &quot;n/a&quot;.</errorMessage>
+</ValidationRule>

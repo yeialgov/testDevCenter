@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SuccessfulEvents_del__c</fullName>
+    <description>Stakeholder: UNKNOWN - who wanted this field? BI, Sales? // processes begin this seem to be not setup yet!</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who many successful events have we had with this venue? Filled automatically</inlineHelpText>
+    <label>Successful Events</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,3 @@
+<apex:page >
+    <apex:iframe width="800px" height="600px" src="https://condorboard.orderbird.com/embed/dashboard/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZSI6eyJkYXNoYm9hcmQiOjM5fSwicGFyYW1zIjp7fX0.O-YlbVX0e810GfwQYyMGLZ7yKx_IoY5e6ETeK07jUWw/#bordered=false&titled=false" scrolling="false" id="theIframe"/>
+</apex:page>

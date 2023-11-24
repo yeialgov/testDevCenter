@@ -1,0 +1,357 @@
+<apex:component controller="InvoicePdfController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!iId}" name="InvoiceId" type="String" description="Invoice Id"/>
+    <apex:attribute access="public" assignTo="{!wBool}" name="Watermark" type="Boolean" description="Has Watermark?"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.AttachDocument}"/>
+    </head>
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}" IsMini="{!IsMini}"/>
+    </div>
+    <div id="mainDiv">
+        <apex:outputPanel rendered="{!wBool}">
+            <img src="{!URLFOR($Resource.preview_watermark)}" width="100%" height="100%" 
+                 style="position: fixed;background-repeat:repeat;left: 0cm; top:0cm; z-index:0"/>
+        </apex:outputPanel>
+        <c:birdHeader />
+        <table class="fullWidth grayText" style="font-family: sans-serif;">
+            <tr>
+                <td class="wideCol">
+                    <div class="shrinkText padCell">
+                        <table>
+                            <tr>
+                                <td class="blueText padCell rightBar">
+                                    orderbird AG
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    Ritterstraße 12-14
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    10969 Berlin
+                                </td>
+                                <td class="grayText padCell">
+                                    {!$Label.GERMANY}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="narrCol"></td>
+            </tr>
+            <tr>
+                <td class="topAlign">
+                    <c:AddressBuilder Account="{!Account}" AddressParts="{!AddressParts}"/>
+                </td>
+                <td class="grayText shrinkText topAlign">
+                    <table class="fullWidth">
+                        <tr>
+                            <td class="narrCol">{!$Label.CUSTOMER_NUMBER}:</td>
+                            <td>{!Account.CustomerIdText__c}</td>
+                        </tr>
+                        <apex:outputPanel layout="none" rendered="{!AND(VATId != null, VATId != 'userdata: NULL')}">
+                            <tr>
+                                <td class="narrCol">{!$Label.YOUR_VAT_ID}:</td>
+                                <td>{!VATId}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr><td>&nbsp;</td></tr>
+                        <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                            <tr>
+                                <td class="narrCol">{!$Label.TELEPHONE}:</td>
+                                <td>{!PhoneNumber}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr>
+                            <td class="narrCol">{!$Label.EMAIL}:</td>
+                            <td>{!$Label.SUPPORTEMAILADDRESS}</td>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.INTERNET}:</td>
+                            <td>www.orderbird.com</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.PAYMENT_METHOD}:</td>
+                            <td>
+                                <apex:outputPanel layout="none" rendered="{!CONTAINS(PaymentMethod,'ire')}">
+                                    {!$Label.WIRE_TRANSFER}
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!AND(PaymentMethod != null,!CONTAINS(PaymentMethod,'ire'))}">
+                                    {!$Label.SEPA_DIRECT_DEBIT}
+                                </apex:outputPanel>
+                            </td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.INVOICE_DATE}:</td>
+                            <td><apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Invoice.InvoiceDate__c}" /></apex:outputText></td>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.DUE_DATE}:</td>
+                            <td><apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Invoice.DueDate__c}" /></apex:outputText></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <p class="blueText bigBold" style="font-family: sans-serif;">
+            // {!$Label.YOUR_INVOICE}&nbsp;{!Invoice.Name}&nbsp;{!$Label.DATED}&nbsp;<apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Invoice.InvoiceDate__c}" /></apex:outputText>
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.DEAR_TEAM_AT}&nbsp;{!Account.Name},
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_1_1} <strong>
+            <apex:outputPanel layout="none" rendered="{!!IsMini}">{!$Label.INV_GRAF_1_2}</apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!IsMini}">{!$Label.INV_GRAF_1_2m}</apex:outputPanel>
+            </strong><br/>
+            {!$Label.INV_GRAF_1_3}
+        </p>
+        <table class="StatementTable bme grayText" border="0">
+            <thead style="background-color: rgb(0,163,224);">
+                <tr>
+                    <th class="lftalgn">{!$Label.ARTICLE}</th>
+                    <th style="text-align:center;">{!$Label.QUANTITY}</th>
+                    <th>{!$Label.UNIT_PRICE}<br/>({!Account.CurrencyIsoCode})</th>
+                    <th>{!$Label.TOTAL_PRICE}<br/>({!Account.CurrencyIsoCode})</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!LineItems}" var="item" >
+                    <!--apex:outputPanel layout="none" rendered="{!and(and(item.IsBundle,item.AR['bundleItems']!=1),ABS(item.TotalPrice)!=0)}"-->
+                    <apex:outputPanel layout="none" rendered="{!and(and(item.IsBundle,item.AR['bundleItems']!=1),true)}">
+                        <tr style="page-break-inside:avoid;">
+                            <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:10px;">{!item.AR[
+                                IF(Account.PrimaryLanguage__c=='French',
+                                'nameFR',
+                                IF(Account.PrimaryLanguage__c=='English',
+                                'nameEN',
+                                'nameDE'
+                                )
+                                )
+                                ]}
+                                <apex:outputPanel rendered="{!Account.Name=='Hofmann Leasing'}">&nbsp;<i>({!item.AR['subName']})</i></apex:outputPanel>
+                                <apex:repeat value="{!BundleMap[item.AR['pbid']].Product_Bundle_Assignments__r}" var="subitem">
+                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {!IF(Account.PrimaryLanguage__c=='French',
+                                    subitem.Product__r.Product_Name_FR__c,
+                                    IF(Account.PrimaryLanguage__c=='English',
+                                    subitem.Product__r.Name,
+                                    subitem.Product__r.Product_Name_DE__c
+                                    )
+                                    )}
+                                    <apex:repeat value="{!BundledServicePeriodMap}" var="bspm">
+                                        <apex:outputPanel rendered="{!bspm == BundleMap[item.AR['pbid']].Id & subitem.Product__c}">
+                                            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style="font-style:italic;font-size:75%;">
+                                                {!$Label.SERVICE_PERIOD}:&nbsp;
+                                                <apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                                    <apex:param value="{!BundledServicePeriodMap[bspm].ServiceStartDate__c}"/> 
+                                                </apex:outputText>-<apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                                    <apex:param value="{!BundledServicePeriodMap[bspm].ServiceEndDate__c}"/> 
+                                                </apex:outputText>
+                                            </span>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                </apex:repeat>
+                            </td>
+                            <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputText value="{0, number, 0}">
+                                    <apex:param value="{!item.AR['qty']}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!item.UnitPrice}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!item.TotalPrice}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                                <apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">{!CASE(item.AR['taxcat'], '19%', 'A', '16%', 'B', '0%', 'C', 'X')}</span></apex:outputPanel>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!-- -->
+                    <!--apex:outputPanel layout="none" rendered="{!and(and(item.IsBundle,item.AR['bundleItems']=1),ABS(item.TotalPrice)!=0)}"-->
+                    <apex:outputPanel layout="none" rendered="{!and(and(item.IsBundle,item.AR['bundleItems']=1),true)}">
+                        <tr style="page-break-inside:avoid;">
+                            <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:10px;">{!item.AR[
+                                IF(Account.PrimaryLanguage__c=='French',
+                                'nameFRsp',
+                                IF(Account.PrimaryLanguage__c=='English',
+                                'nameENsp',
+                                'nameDEsp'
+                                )
+                                )
+                                ]}
+                                <apex:repeat value="{!BundledServicePeriodMap}" var="bspm">
+                                    <apex:outputPanel rendered="{!bspm == BundleMap[item.AR['pbid']].Id & item.AR['prodId']}">
+                                        <br/>
+                                        <span style="font-style:italic;font-size:75%;">
+                                            {!$Label.SERVICE_PERIOD}:&nbsp;
+                                            <apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                                <apex:param value="{!BundledServicePeriodMap[bspm].ServiceStartDate__c}"/> 
+                                            </apex:outputText>-<apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                                <apex:param value="{!BundledServicePeriodMap[bspm].ServiceEndDate__c}"/> 
+                                            </apex:outputText>
+                                        </span>
+                                    </apex:outputPanel>
+                                </apex:repeat>
+                            </td>
+                            <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputText value="{0, number, 0}">
+                                    <apex:param value="{!item.AR['qty']}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!item.UnitPrice}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!item.TotalPrice}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                                <apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">{!CASE(item.AR['taxcat'], '19%', 'A', '16%', 'B', '0%', 'C', 'X')}</span></apex:outputPanel>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <!-- -->
+                    <apex:outputPanel layout="none" rendered="{!and(!item.IsBundle,ABS(item.ILI.ChargeAmount__c)!=0)}">
+                        <tr style="page-break-inside:avoid;">
+                            <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:10px;">
+                                {!IF(Account.PrimaryLanguage__c=='French',
+                                item.ILI.SubscriptionLineItem__r.Product__r.Product_Name_FR__c,
+                                IF(Account.PrimaryLanguage__c=='English',
+                                item.ILI.SubscriptionLineItem__r.Product__r.Name,
+                                item.ILI.SubscriptionLineItem__r.Product__r.Product_Name_DE__c
+                                )
+                                )}<i>
+                                {!IF(Account.Name=='Hofmann Leasing',' ('&item.ILI.SubscriptionLineItem__r.Subscription__r.Name&')','')}</i>
+                                <apex:outputPanel layout="none" rendered="{!item.ILI.ShowServicePeriod__c}">
+                                    <br/>
+                                    <span style="font-style:italic;font-size:75%;">
+                                        {!$Label.SERVICE_PERIOD}:&nbsp;
+                                        <apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                            <apex:param value="{!item.ILI.ServiceStartDate__c}"/> 
+                                        </apex:outputText>-<apex:outputText value="{0,date,dd.MM.yyyy}"> 
+                                            <apex:param value="{!item.ILI.ServiceEndDate__c}"/> 
+                                        </apex:outputText>
+                                    </span>
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!item.ILI.SubscriptionLineItem__r.Product__r.Name == 'Commission Online Orders (4%)'}">
+                                    <br/>
+                                    <span style="font-style:italic;font-size:75%;">
+                                        {!$Label.SERVICE_PERIOD}:&nbsp;
+                                        <apex:outputText value="{0,date,MM.yyyy}"> 
+                                            <apex:param value="{!item.ILI.ServiceStartDate__c}"/> 
+                                        </apex:outputText>
+                                    </span>
+                                </apex:outputPanel>
+                            </td>
+                            <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputPanel layout="none" rendered="{!item.ILI.SubscriptionLineItem__r.Product__r.Name != 'Commission Online Orders (4%)'}">
+                                    <apex:outputText value="{0, number, 0}">
+                                        <apex:param value="{!IF(item.ILI.Quantity__c == null, 0, item.ILI.Quantity__c)}" />
+                                    </apex:outputText>
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!item.ILI.SubscriptionLineItem__r.Product__r.Name == 'Commission Online Orders (4%)'}">
+                                    <c:Curr Value="{!item.ILI.Quantity__c}" Currency="" Country="{!Country}"/>
+                                </apex:outputPanel>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);">
+                                <c:Curr Value="{!IF(item.ILI.UnitPrice__c == null, 0, item.ILI.UnitPrice__c)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);">
+                                <c:Curr Value="{!item.ILI.ChargeAmount__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                                <apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">{!CASE(item.ILI.TaxCategory__c, '19%', 'A', '16%', 'B', '0%', 'C', 'X')}</span></apex:outputPanel>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </apex:repeat>
+                <apex:outputPanel layout="none" rendered="false"><!--{!UseDiscountTotal}"-->
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TOTAL}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!NonDiscountTotal}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #fff; color: #fff;font-family: 'Lucida Console', Monaco, monospace;">X</span></apex:outputPanel></td>
+                    </tr>
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.YOUR_DISCOUNT}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!DiscountTotal}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #fff; color: #fff;font-family: 'Lucida Console', Monaco, monospace;">X</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="true"><!--{!!UseDiscountTotal}"-->
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TOTAL}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!Invoice.AmountWithoutTax__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #fff; color: #fff;font-family: 'Lucida Console', Monaco, monospace;">X</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!and(ABS(Invoice.Tax_Rollup_19__c) > 0, Not(VATNewEULaw))}">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn" style="">
+                            {!$Label.TAX_TOTAL}&nbsp;19%:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!Invoice.Tax_Rollup_19__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">A</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!and(ABS(Invoice.Tax_Rollup_16__c) > 0, Not(VATNewEULaw))}">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn" style="">
+                            {!$Label.TAX_TOTAL}&nbsp;16%:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!Invoice.Tax_Rollup_16__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">B</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                
+                <apex:outputPanel layout="none" rendered="{!and(ABS(Invoice.TaxAmount__c) > 0,VATNewEULaw)}">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn" style="">
+                            {!$Label.TAX_TOTAL}&nbsp;{!Invoice.VAT_TaxLabel__c}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!Invoice.TaxAmount__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">C</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                
+                <apex:outputPanel layout="none" rendered="{!ABS(Invoice.Tax_Rollup_0__c) > 0}">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn" style="">
+                            {!$Label.TAX_TOTAL}&nbsp;0%:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="0" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #9C9C9C; color: #9C9C9C;font-family: 'Lucida Console', Monaco, monospace;">C</span></apex:outputPanel></td>
+                    </tr>
+                </apex:outputPanel>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">{!$Label.TOTAL_AMOUNT}</td>
+                    <td style="border-top: solid 1px rgb(0,163,224);background-color:#fff;font-weight:bolder;"><c:Curr Value="{!Invoice.Amount__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/><apex:outputPanel layout="none" rendered="{!Invoice.MixedTax__c}"><span style="margin-left: 2px;padding: 0 3px; border: solid 1px #fff; color: #fff;font-family: 'Lucida Console', Monaco, monospace;">X</span></apex:outputPanel></td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_2}
+        </p>
+        <apex:outputPanel layout="none" rendered="{!TaxExemptReason == 'EU reverse charge mechanism'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_3}
+            </p>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!TaxExemptReason == 'Third country jurisdictions'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_4}
+            </p>
+        </apex:outputPanel>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_5_1}&nbsp;<a href="{!$Label.INV_GRAF_5_2}">{!$Label.INV_GRAF_5_2}</a>&nbsp;{!$Label.INV_GRAF_5_3}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_6}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_7_1}&nbsp;{!Account.CustomerIdText__c}&nbsp;{!$Label.INV_GRAF_7_2}
+        </p>
+        <apex:outputPanel layout="none" rendered="{!DiffCustomerAccount != null}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_8}:&nbsp;{!DiffCustomerAccount}
+            </p>
+        </apex:outputPanel>
+    </div>
+</apex:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute type="Decimal" name="Value" description="Currency Value"/>
+    <aura:attribute type="String" name="Currency" description="Currency Name"/>
+    <aura:attribute type="String" name="Country" description="Country Name"/>
+    <aura:attribute type="String" name="Output" description="Country Name"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    {!v.Output}
+</aura:component>

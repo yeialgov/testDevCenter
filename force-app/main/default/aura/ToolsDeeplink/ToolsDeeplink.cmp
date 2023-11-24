@@ -1,0 +1,71 @@
+<aura:component controller="AccountLightningController">
+    
+    <aura:attribute type="String" name="VenueId"/> 
+    <aura:attribute name="Venue" type="Object" />
+    <aura:attribute name="Icon" type="String" default="standard:steps" />
+    <aura:attribute name="UncertaintyIcon" type="String" default="action:canvas" />
+    <aura:attribute name="ActiveClass" type="String" default="activeWhite" />
+    <aura:attribute type="String" name="VenueSFId"/> 
+    <aura:attribute type="Boolean" name="Uncertain" default="False"/>
+    <aura:attribute type="Boolean" name="HideBamboraButton" default="False"/>
+    <aura:attribute name="Fields" type="List"
+                    default="['Id',
+                             'Account__r.Venue__c',
+                             'Login__c',
+                             'Channel__c',
+                             'Hidden__c',
+                             'CanRefreshBambora__c',
+                             'Uncertainty__c',
+                             'Days_Since_Last_Shift_Open__c',
+                             'Name']"/>
+    
+    <force:recordData aura:id="recordLoader1"
+                      recordId="{!v.VenueSFId}"
+                      fields="{!v.Fields}"
+                      mode="EDIT"
+                      targetFields="{!v.Venue}"
+                      recordUpdated="{!c.doInit}" />
+    <aura:if isTrue="{!v.Venue != null}">
+        <div class="{!v.Venue.Id != v.Venue.Account__r.Venue__c ? 'DLCardX' : 'DLCard'}">
+            <table style="width:100%;">
+                <tr>
+                    <!--td style="padding: 0.5rem 1rem;">
+                    <img src="https://my.orderbird.com/static/svg/ob_logo.svg" style="max-height:2rem;"/>
+                </td-->
+                    <td style="padding: 0.5rem 1rem;">
+                        <lightning:icon onclick="{!c.deepLink}" iconName="{!v.Venue.Id != v.Venue.Account__r.Venue__c ? 'standard:resource_absence' : v.Icon}" class="blueIcon"/>
+                    </td>
+                    <td style="max-width: 150px; padding: 0.5rem 0;text-align:left;">
+                        <!--lightning:badge label="{!'Venue ' + v.VenueId}"/-->
+                        <div onclick="{!c.deepLink}">
+                            <aura:if isTrue="{!v.Venue.Login__c != null}"><p class="slds-truncate" title="{!v.Venue.Login__c}">{!v.Venue.Login__c}</p></aura:if>
+                            <p class="slds-truncate">
+                                <b>{!v.Venue.Id != v.Venue.Account__r.Venue__c ? 'Unlinked ' : ''}{!'Venue ' + v.VenueId}</b>&nbsp;
+                                <lightning:icon class="{!v.ActiveClass}" size="x-small" iconName="utility:record"/>
+                            </p>
+                        </div>
+                    </td>
+                    <td style="padding: 0.5rem 1rem;text-align:right;">
+                        <aura:if isTrue="{!v.Venue.Hidden__c}">
+                            <div onclick="{!c.Unhide}">
+                                <lightning:icon iconName="action:close" size="x-small"/>
+                            </div>
+                            <aura:set attribute="else">
+                                <div onclick="{!c.Hide}">
+                                    <lightning:icon iconName="{!v.UncertaintyIcon}" size="x-small"/>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <aura:if isTrue="{!and(!v.HideBamboraButton,v.Venue.CanRefreshBambora__c)}">
+            <lightning:button onclick="{!c.resendBambora}"
+                              label="Re-send Bambora Email" 
+                              iconName="utility:email" 
+                              iconPosition="right" />
+            <hr/>
+        </aura:if>
+    </aura:if>
+</aura:component>

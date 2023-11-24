@@ -1,0 +1,13 @@
+<aura:component access="global"
+implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" >
+    
+    <aura:attribute name="token" type="String" default="!23"/>
+       <aura:attribute name="tre" type="String" default="!23"/>
+    <aura:attribute name="someParam" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+<div class="page-headliner">
+        <h4>TESTTING  {!v.token}</h4>
+    </div>
+</aura:component>

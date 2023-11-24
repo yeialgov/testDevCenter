@@ -1,0 +1,714 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-10-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<aura:component access="global" controller="PortalController"
+    implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="token" type="String" />
+    <aura:attribute name="IsMobile" type="Boolean" default="false" />
+    <aura:attribute name="ShowModal" type="Boolean" default="false" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true" />
+    <aura:attribute name="Data" type="Object" />
+    <aura:attribute name="CombinedChanges" type="Integer" default="0" />
+    <aura:attribute name="Index" type="Integer" default="0" />
+    <aura:attribute name="PageSize" type="Integer" default="5" />
+    <aura:attribute name="serviceData" type="List" />
+    <aura:attribute name="cashBookData" type="List" />
+    <aura:attribute name="hasCashBook" type="Boolean" default="false" />
+    <aura:attribute name="hasTse" type="Boolean" default="false" />
+    <aura:attribute name="tseData" type="List" />
+    <aura:attribute name="showCashBook" type="Boolean" default="false" />
+    <aura:attribute name="hasGuest" type="Boolean" default="false" />
+    <aura:attribute name="tseGuestBook" type="List" />
+    <aura:attribute name="showGuestMgm" type="Boolean" default="false" />
+    <aura:attribute name="hasActiveLicense" type="Boolean" default="false" />
+    <aura:attribute name="activeLicense" type="List" />
+    <aura:attribute name="removeList" type="List" />
+    <aura:attribute name="addList" type="List" />
+    <aura:attribute name="addLicense" type="Boolean" default="false"/>
+    <aura:attribute name="showCancelLicenseModal" type="Boolean" default="false"/>
+    <aura:attribute name="endDate" type="String"/>
+    <aura:attribute name="changedStartDate" type="Date"/>
+    <aura:attribute name="changedAmount" type="Integer" default="0"/>
+    <aura:attribute name="changedYearlyAmount" type="Integer" default="0"/>
+    <aura:attribute name="changedYearlyStartDate" type="Date"/>
+    <aura:attribute name="changed3YearsAmount" type="Integer" default="0"/>
+    <aura:attribute name="changed3YearsStartDate" type="Date"/>
+    <aura:attribute name="prodCat" type="String"/>
+    <aura:attribute name="monthlyPrice" type="Decimal" default="0.00"/>
+    <aura:attribute name="yearlyPrice" type="Decimal" default="0.00"/>
+    <aura:attribute name="year3yPrice" type="Decimal" default="0.00"/>
+    <aura:attribute name="completeCancelation" type="Boolean" default="false"/>
+    <aura:attribute name="options" type="List" default="[
+        { label: 'Out of business', value: 'Out of business' },
+        { label: 'Owner Change', value: 'Owner Change' },
+        { label: 'Insolvency', value: 'Insolvency' },
+        { label: 'Service Experience', value: 'Service Experience' },
+        { label: 'Orderbird App', value: 'Orderbird App' },
+        { label: 'myOrderBird', value: 'myOrderBird' }]"/>
+    <aura:attribute name="cancelReasons" type="List" />
+    <aura:attribute name="callBackOptions" type="List" default="[
+    {'label': 'Yes', 'value': 'Yes'}
+    ]"/>   
+    <aura:attribute name="value" type="List" default="Yes"/> 
+    <aura:attribute name="callBackValue" type ="Boolean" />
+    <aura:attribute name="showAdditional" type ="Boolean" default="false" />
+    <lightning:navigation aura:id="navService" />
+    <div style="overflow:hidden;margin-left: 0;">
+        <div class="page-headliner">
+            <h4>Licenses</h4>
+            <div class="page-headliner-subtitle">
+                <a href="javascript:void(0);" onclick="{!c.back}">{!$Label.c.BACK_TO_OPTIONS}</a>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.ShowSpinner}">
+            <lightning:spinner size="large" />
+        </aura:if>
+        <aura:if isTrue="{!v.Data != null}">
+            <lightning:tabset class="biggerText">
+                <lightning:tab label="{!$Label.c.LICENSE_OWNED}">
+                    <table class="slds-table slds-table_fixed-layout slds-table_bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset slds-text-title_caps">
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="{!$Label.c.LICENSE_YOUOWN}">
+                                        {!$Label.c.LICENSE_YOUOWN}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        {!$Label.c.LICENSE_SERVICEPERIOD}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Industry">
+                                        {!$Label.c.LICENSE_CANCELED}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Phone">
+                                        {!$Label.c.LICENSE_STATUS}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Actions"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.serviceData}" var="serv">
+                                <tr class="slds-hint-parent">
+                                    <th data-label="Service License" scope="row">
+                                        <div class="slds-truncate" title="Service License">
+                                            <div class="slds-media__figure">
+                                                <span class="slds-icon_container slds-icon-standard-file"
+                                                    title="Service License">
+                                                    <lightning:icon iconName="standard:contract" size="large"
+                                                        alternativeText="Service License" />
+                                                </span>
+                                                <b>&nbsp;&nbsp;{!$Label.c.LICENSE_SERVICE_LICENSE}</b>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        <div class="slds-truncate" title="{!serv.efStartDate -!serv.efEndDate }">
+                                            {!serv.efStartDate} - {!serv.efEndDate}</div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                        <aura:if isTrue="{!serv.status =='Active'}">
+                                            <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                {!$Label.c.NO}</div>
+                                            <aura:set attribute="else">
+                                                <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                    {!$Label.c.YES}</div>
+                                            </aura:set>
+                                        </aura:if>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                        <div class="slds-truncate" title="{!serv.status}">{!serv.status}</div>
+                                    </td>
+                                    <td data-label="Action">
+
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                            <tr class="slds-hint-parent">
+                                <th data-label="TSE License" scope="row">
+                                    <div class="slds-truncate" title="TSE License">
+                                        <div class="slds-media__figure">
+                                            <span class="slds-icon_container slds-icon-standard-file"
+                                                title="TSELicense">
+                                                <lightning:icon iconName="standard:entitlement_policy" size="Large"
+                                                    alternativeText="TSE License" />
+                                            </span>
+                                            <b>&nbsp;&nbsp;{!$Label.c.LICENSE_TSE}</b>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:if isTrue="{!!v.hasTse}">
+                                    <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <b>-</b>
+                                        </div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}"> <b>-</b></div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                        <div class="slds-truncate">Inactive</div>
+                                    </td>
+                                    <td data-label="Action">
+
+                                    </td>
+                                </aura:if>
+                                <aura:if isTrue="{!v.hasTse}">
+                                    <aura:iteration items="{!v.tseData}" var="tse">
+                                        <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <div class="slds-truncate" title="{!tse.efStartDate -!tse.efEndDate }">
+                                                {!tse.efStartDate} - {!tse.efEndDate}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                            <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                {!$Label.c.NO}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                            <div class="slds-truncate" title="{!tse.status}">{!tse.status}</div>
+                                        </td>
+                                    </aura:iteration>
+                                    <td data-label="Action">
+
+                                    </td>
+                                </aura:if>
+                            </tr>
+                            <tr class="slds-hint-parent">
+                                <th data-label="Cashbook License" scope="row">
+                                    <div class="slds-truncate" title="Cashbook License">
+                                        <div class="slds-media__figure">
+                                            <span class="slds-icon_container slds-icon-standard-file"
+                                                title="Cashbook License">
+                                                <lightning:icon iconName="standard:partner_fund_claim" size="Large"
+                                                    alternativeText="Cashbook License" />
+                                            </span>
+                                            <b>&nbsp;&nbsp;{!$Label.c.LICENSE_CASHBOOK}</b>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:if isTrue="{!v.hasCashBook}">
+                                    <aura:iteration items="{!v.cashBookData}" var="cash">
+                                        <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <div class="slds-truncate" title="{!cash.efStartDate -!cash.efEndDate }">
+                                                {!cash.efStartDate} - {!cash.efEndDate}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                            <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                {!$Label.c.NO}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                            <div class="slds-truncate" title="{Active}">Active</div>
+                                        </td>
+                                    </aura:iteration>
+                                </aura:if>
+                                <aura:if isTrue="{!!v.hasCashBook}">
+                                    <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <b>-</b>
+                                        </div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}"> <b>-</b></div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                        <div class="slds-truncate">Inactive</div>
+                                    </td>
+                                    <td data-label="Action">
+                                        <lightning:button label="{!$Label.c.LICENSE_ACTI_CASHB}" iconName="utility:edit"
+                                            iconPosition="left" variant="brand-outline"
+                                            onclick="{!c.handleCashDialog}" />
+                                    </td>
+                                </aura:if>
+                            </tr>
+                            <tr class="slds-hint-parent">
+                                <th data-label="Guestmanagement" scope="row">
+                                    <div class="slds-truncate" title="Guestmanagement">
+                                        <div class="slds-media__figure">
+                                            <span class="slds-icon_container slds-icon-standard-file"
+                                                title="Guestmanagement">
+                                                <lightning:icon iconName="standard:article" size="Large"
+                                                    alternativeText="Guestmanagement" />
+                                            </span>
+                                            <b>&nbsp;&nbsp;{!$Label.c.LICENSE_GUESTMGN}</b>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:if isTrue="{!v.hasGuest}">
+                                    <aura:iteration items="{!v.tseGuestBook}" var="guest">
+                                        <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <div class="slds-truncate" title="{!guest.efStartDate -!guest.efEndDate }">
+                                                {!guest.efStartDate} - {!guest.efEndDate}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                            <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                {!$Label.c.NO}</div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                            <div class="slds-truncate" title="{Active}">Active</div>
+                                        </td>
+                                    </aura:iteration>
+                                </aura:if>
+                                <aura:if isTrue="{!!v.hasGuest}">
+                                    <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                            <b>-</b>
+                                        </div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}"> <b>-</b></div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                        <div class="slds-truncate">Inactive</div>
+                                    </td>
+                                    <td data-label="Action">
+                                        <lightning:button label="{!$Label.c.LICENSE_ACTI_GUEST}" iconName="utility:edit"
+                                            iconPosition="left" variant="brand-outline"
+                                            onclick="{!c.handleGuestMgmhDialog}" />
+                                    </td>
+                                </aura:if>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <table class="slds-table slds-table_fixed-layout slds-table_bordered">
+                        <thead>
+                            <tr class="slds-size_1-of-5 slds-text-title_caps">
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="{!$Label.c.LICENSE_DEVICE_LIC}">
+                                        {!$Label.c.LICENSE_DEVICE_LIC}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        {!$Label.c.LICENSE_SERVICEPERIOD}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Canceled">
+                                        {!$Label.c.LICENSE_CANCELED}
+                                    </div>
+                                </th>
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Status">
+                                        {!$Label.c.LICENSE_AMOUNT}
+                                    </div>
+                                </th>
+                           
+                                <th class="slds-size_1-of-5" scope="col">
+                                    <div class="slds-truncate" title="Actions"></div>
+                                </th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.activeLicense}" var="li" indexVar="index">
+                            <tr class="slds-hint-parent">
+                                    <th data-label="Device License" scope="row">
+                                        <div class="slds-truncate" title="Device License">
+                                            <div class="slds-media__figure">
+                                                <span class="slds-icon_container slds-icon-standard-file"
+                                                    title="Device Licensee">
+                                                    <lightning:icon iconName="custom:custom28" size="Large"
+                                                        alternativeText="Device License" />
+                                                </span>
+                                                <b>&nbsp;&nbsp;{!index + 1}-{!$Label.c.LICENSE_DEVINE_MO}:{!li.bp}</b>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td data-label="{!$Label.c.LICENSE_SERVICEPERIOD}">
+                                        <div class="slds-truncate" title="Service Period">
+                                            {!li.startDate} - {!li.endDate}</div>
+                                    </td>
+                                    <aura:if isTrue="{!li.status =='Active'}">
+                                        <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                            <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                {!$Label.c.NO}</div>
+                                        </td>
+                                        <aura:set attribute="else">
+                                            <td data-label="{!$Label.c.LICENSE_CANCELED}">
+                                                <div class="slds-truncate" title="{!$Label.c.LICENSE_CANCELED}">
+                                                 {!$Label.c.YES}</div>
+                                            </td>
+                                        </aura:set>
+                                    </aura:if>
+                                    <td data-label="{!$Label.c.LICENSE_STATUS}">
+                                        <div class="slds-truncate">{!li.quantity}</div>
+                                    </td>
+                                
+                                    <td data-label="Action">
+                                        <lightning:button label="{!$Label.c.LICENSE_REMOVE_DEV}" name="{!li.subLineItemId}"  iconName="utility:dash"
+                                        iconPosition="left" variant="brand-outline"
+                                        onclick="{!c.remDev}" tabindex="{!index}" />
+                                    </td>
+                            </tr>
+                        </aura:iteration>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <div class="slds-clearfix">
+                        <lightning:button label="{!$Label.c.LICENSE_ADD_DEVICE}" class="slds-float_left" onclick="{!c.handleAddDev}"/>
+                    </div>
+                    <div class="slds-clearfix">
+                        <lightning:button label="{!$Label.c.LICENSE_CANCEL_DEV}" class="slds-float_right slds-button slds-button_destructive" onclick="{!c.handleCancelLicenses}"/>
+                    </div>
+                </lightning:tab>
+                <div class="slds-m-around_xx-large">
+                <aura:if isTrue="{!v.showCancelLicenseModal}">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                        <div class="slds-modal__container">
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">  
+                                <div class ="center">                         
+                                <h2>Are you really sure?</h2>
+                                <br/>
+                                <h2>The cancellation of the service license your POS will not work anymore {!v.endDate}</h2>
+                                <h2>All other licenses beyond that will lose their functionality at the same day.</h2>  
+                                <h2>All other licenses that have an end date prior to that will stop at the next possible moment</h2>
+                            </div> 
+                                <br/>
+                                <br/> 
+                                <aura:iteration items="{!v.activeLicense}" var="li" indexVar="index">
+                                    <div class ="center">
+                                    <tr>
+                                    <th data-label="Device License" scope="row">
+                                        <div class="slds-truncate" title="Device License">
+                                            <div class="slds-media__figure" style="text-align: center;">                                            
+                                                <b>&nbsp;&nbsp;{!li.quantity}X -{!$Label.c.LICENSE_DEVINE_MO}&nbsp;&nbsp;{!li.billingPeriod}&nbsp;&nbsp;{!li.endDate}</b>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    </tr> 
+                                    </div>                                   
+                                    </aura:iteration>
+                                    <br/>
+                                    <div class ="center">
+                                <h2>This action cannot be revoked</h2>
+                                </div>
+                                <br/>
+                                <div class="slds-clearfix">
+                                    <div class="slds-float_left">
+                                
+                                    <lightning:button label="{!$Label.c.LICENSE_CANCEL_DEV_YES}"  onclick="{!c.handleCancelDevYes}"/>                            
+                                </div>
+                                <div class="slds-float_right">
+                                
+                                    <lightning:button label="{!$Label.c.LICENSE_CANCEL_DEV_NO}"  onclick="{!c.handleCancelDevNo}"/>                               
+                                </div>
+                                </div>                             
+                            </div>                      
+                        </div>
+                    </section>
+                </aura:if>
+                </div>
+            </lightning:tabset>
+        </aura:if>
+    </div>
+    <!--modal component Cashbook-->
+    <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.showCashBook}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                        <h1 class="slds-text-heading--medium">{!$Label.c.LICENSE_ACTI_CASHB}</h1>
+                    </header>
+                    <!--Modal Box Header End-->
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <center><b>{!$Label.c.LICENSE_HOW_CASHBOOK}</b></center>
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-align_absolute-center">
+                            <lightning:button name='Close' label='{!$Label.c.LICENSE_CLOSE}'
+                                onclick='{!c.handleCloseCashDialog}' />
+                        </div>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div>
+    <!--modal component Guest Managament-->
+    <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.showGuestMgm}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                        <h1 class="slds-text-heading--medium">{!$Label.c.LICENSE_ACTI_GUEST}</h1>
+                    </header>
+                    <!--Modal Box Header End-->
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <center><b>{!$Label.c.LICENSE_HOW_GUEST}</b></center>
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-align_absolute-center">
+                            <lightning:button name='Close' label='{!$Label.c.LICENSE_CLOSE}'
+                                onclick='{!c.handleGuestCloseMgmhDialog}' />
+                        </div>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div>
+     <!--modal component Add Devices-->
+     <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.addLicense}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open slds-modal_large">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                        <h1 class="slds-text-heading--medium">{!$Label.c.LICENSE_ADDITIONAL_DEV}</h1>
+                    </header>
+                    <!--Modal Box Header End-->
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--large">
+                        <table class="slds-table slds-table_fixed-layout slds-table_bordered">
+                            <thead>
+                                <tr class="slds-size_1-of-5 slds-text-title_caps">
+                                    <th class="slds-size_1-of-5" scope="col">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_ADDI_ADD}">
+                                            {!$Label.c.LICENSE_ADDI_ADD}
+                                        </div>
+                                    </th>
+                                    <th class="slds-size_1-of-5" scope="col">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_START_DATE}">
+                                            {!$Label.c.LICENSE_START_DATE}
+                                        </div>
+                                    </th>
+                                    <th class="slds-size_1-of-5" scope="col">
+                                        <div class="slds-truncate" title="{!$Label.c.LICENSE_AMOUNT}">
+                                            {!$Label.c.LICENSE_AMOUNT}
+                                        </div>
+                                    </th>
+                                    <th class="slds-size_1-of-5" scope="col">
+                                        <div class="slds-truncate" title="Status">
+                                            {!$Label.c.LICENSE_PRICE}
+                                        </div>
+                                    </th>
+                               
+                                    <th class="slds-size_1-of-5" scope="col">
+                                        
+                                    </th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="slds-hint-parent">
+                                    <th data-label="Device License" scope="row">
+                                        <div class="slds-truncate" title="Device License">
+                                            <div class="slds-media__figure">
+                                                <span class="slds-icon_container slds-icon-standard-file"
+                                                    title="Device Licensee">
+                                                    <lightning:icon iconName="custom:custom28" size="Large"
+                                                        alternativeText="Device License" />
+                                                </span>
+                                                <b>&nbsp;&nbsp;{!$Label.c.LICENSE_MONTHLY}</b>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td data-label="{!$Label.c.LICENSE_START_DATE}">
+                                        <div class="slds-truncate" title="Start Date">
+                                            <lightning:input type="date" name="startDateMonthly" required="true" aura:id="startDateMonthly"/>
+                                           </div>
+                                    </td>
+                                    <td data-label="{!$Label.c.LICENSE_AMOUNT}">
+                                        <div class="slds-truncate" title="Start Date">
+                                            <lightning:input type="number" aura:id="amountMonthly"  name="amountMonthly" disabled="true"  value="{!v.changedAmount}"/>
+                                           </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-box slds-box_small">
+                                        {!v.monthlyPrice} x {!v.changedAmount}€  = {!(v.monthlyPrice*v.changedAmount)}€ 
+                                    </div>
+                                    </td>
+                                    <td>
+                                        <lightning:button iconName="utility:add" variant="base" class="slds-button_icon-container slds-button__icon_large" onclick="{!c.handleChangedAmount}"/>
+                                    </td>
+                                    </tr>
+                                    <br/>
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="Device License" scope="row">
+                                            <div class="slds-truncate" title="Device License">
+                                                <div class="slds-media__figure">
+                                                    <span class="slds-icon_container slds-icon-standard-file"
+                                                        title="Device Licensee">
+                                                        <lightning:icon iconName="custom:custom28" size="Large"
+                                                            alternativeText="Device License" />
+                                                    </span>
+                                                    <b>&nbsp;&nbsp;{!$Label.c.LICENSE_YEARLY}</b>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td data-label="{!$Label.c.LICENSE_START_DATE}">
+                                            <div class="slds-truncate" title="Start Date">
+                                                <lightning:input type="date" name="startDateYearly" aura:id="startDateYearly" required="true"/>
+                                               </div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_AMOUNT}">
+                                            <div class="slds-truncate" title="Start Date">
+                                                <lightning:input type="number" aura:id="amountYearly" name="amountYearly" disabled="true"  value="{!v.changedYearlyAmount}"/>
+                                               </div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-box slds-box_small">
+                                            {!v.yearlyPrice} x {!v.changedYearlyAmount}€  = {!(v.yearlyPrice*v.changedYearlyAmount)}€ 
+                                        </div>
+                                        </td>
+                                        <td>
+                                            <lightning:button iconName="utility:add" variant="base" class="slds-button_icon-container slds-button__icon_large" onclick="{!c.handleChangedAmountYearly}"/>
+                                        </td>
+                                        </tr>
+                                        <br/>
+                                    <tr class="slds-hint-parent">
+                                        <th data-label="Device License" scope="row">
+                                            <div class="slds-truncate" title="Device License">
+                                                <div class="slds-media__figure">
+                                                    <span class="slds-icon_container slds-icon-standard-file"
+                                                        title="Device Licensee">
+                                                        <lightning:icon iconName="custom:custom28" size="Large"
+                                                            alternativeText="Device License" />
+                                                    </span>
+                                                    <b>&nbsp;&nbsp;{!$Label.c.LICENSE_3_YEARS}</b>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td data-label="{!$Label.c.LICENSE_START_DATE}">
+                                            <div class="slds-truncate" title="Start Date">
+                                                <lightning:input type="date" name="startDate3Years" aura:id="startDate3Years" required="true" />
+                                               </div>
+                                        </td>
+                                        <td data-label="{!$Label.c.LICENSE_AMOUNT}">
+                                            <div class="slds-truncate" title="Start Date">
+                                                <lightning:input type="number" name="amount3Years" aura:id="amount3Years"  disabled="true"  value="{!v.changed3YearsAmount}"/>
+                                               </div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-box slds-box_small">
+                                            {!v.year3yPrice} x {!v.changed3YearsAmount}€  = {!(v.year3yPrice*v.changed3YearsAmount)}€ 
+                                        </div>
+                                        </td>
+                                        <td>
+                                            <lightning:button iconName="utility:add" variant="base" class="slds-button_icon-container slds-button__icon_large" onclick="{!c.handleChangedAmount3Year}"/>
+                                        </td>
+                                        </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-align_absolute-center">
+                                <lightning:button name='AddDevices' variant="success" label='{!$Label.c.LICENSE_ADD_DEVICE}'
+                                    onclick='{!c.handleAddAdditionalDev}' />
+                            <lightning:button name='Close' label='{!$Label.c.LICENSE_CLOSE}'
+                                onclick='{!c.handleCancelAddDev}' />
+                        </div>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div>
+    <!--modal component Complete Cancelation-->
+    <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.completeCancelation}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open slds-modal_large ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                    </header>
+                    <!--Modal Box Header End-->
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--large">
+                        <center><b>{!$Label.c.LICENSE_CANCEL_REASON}</b></center>
+                        <br/>
+                        <lightning:dualListbox name="languages"
+                           label= "Select Languages"
+                           sourceLabel="Available"
+                           selectedLabel="Selected"
+                           fieldLevelHelp="Select your preferred languages"
+                           options="{!v.options}"
+                           onchange="{! c.handleChangeReason }"/>
+                           <br/>
+                           <div class="slds-align_absolute-center">
+                           <lightning:checkboxGroup name="Checkbox Group"
+                             label="{!$Label.c.LICENSE_CANCEL_CALLBACK}"
+                             options="{! v.callBackOptions }"
+                             value="{! v.value }"
+                             onchange="{! c.handleChange }"/>
+                             </div>
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-align_absolute-center">
+                            <div class="slds-align_absolute-center">
+                                <lightning:button name='CompleteCancelation' variant="destructive" label='{!$Label.c.LICENSE_COMPLETE_CANCEL}'
+                                    onclick='{!c.handleCompleteCancel}' />
+                            <lightning:button name='Cancel' label='{!$Label.c.LICENSE_CANCEL}'
+                                onclick='{!c.handleCancelCompleteCancel}' />
+                        </div>
+                        </div>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div>
+     <!--modal component Additonal Screen-->
+     <div class="slds-m-around_xx-large">
+        <aura:if isTrue="{!v.showAdditional}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open slds-modal_large ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                    </header>
+                    <!--Modal Box Header End-->
+                    <!--Modal Box Content Start-->
+                    <div class="slds-modal__content slds-p-around--large">
+                        {!$Label.c.LICENSE_ADDITIONAL}
+                    </div>
+                    <!--Modal Box Content End-->
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-align_absolute-center">
+                            <div class="slds-align_absolute-center">
+                                <lightning:button name='OK' variant="success" label='OK'
+                                    onclick='{!c.handleCloseAdditional}' />
+                        </div>
+                        </div>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div>
+</aura:component>
