@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Task_for_you</fullName>
+        <description>New Task for you</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/New_Task_for_you</template>
+    </alerts>
+    <alerts>
+        <fullName>Task_3_overdue_alert</fullName>
+        <description>Task 3 days overdue alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sfdc@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Task_three_days_overdue</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Task_Next_Step_Trigger</fullName>
+        <field>Notes_and_Comments__c</field>
+        <formula>Notes_and_Comments__c + &apos;.&apos;</formula>
+        <name>Task &gt; Next Step Trigger</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_Status_Completed</fullName>
+        <description>Sets a task&apos;s status to completed</description>
+        <field>Status</field>
+        <literalValue>Completed</literalValue>
+        <name>Task &gt; Status &gt; Completed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_Successful_TRUE</fullName>
+        <field>Successful__c</field>
+        <literalValue>1</literalValue>
+        <name>Task &gt; Successful &gt; TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Task_tester</fullName>
+        <field>Notes_and_Comments__c</field>
+        <formula>Notes_and_Comments__c + &apos; more&apos;</formula>
+        <name>Task tester</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto Complete Tasks with NExt Steps</fullName>
+        <actions>
+            <name>Task_Next_Step_Trigger</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Task_Status_Completed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Next_Step_relevant__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <description>When &quot;Next Step relevant&quot; is checked, call status gets automatically set to completed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto close when outcome is set</fullName>
+        <actions>
+            <name>Task_Status_Completed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Outcome__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Defaults for Onboarding Tasks</fullName>
+        <active>false</active>
+        <description>Sets standard values for automatically generated tasks for support</description>
+        <formula>AND( 
+ISNULL(Account__c),
+ISPICKVAL(Type__c, &apos;Sales - Sales Talk&apos;),
+CONTAINS(Subject, &apos;onboarding&apos;),
+Owner:User.UserRole.Id = &apos;Customer Success&apos;
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Task for you</fullName>
+        <actions>
+            <name>New_Task_for_you</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>https://jira.orderbird.com/browse/CDS-1115</description>
+        <formula>AND(
+OwnerId &lt;&gt; LastModifiedById,
+ISCHANGED(OwnerId),
+Owner:User.Profile.Name = &apos;Sales&apos;
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task set Successful</fullName>
+        <actions>
+            <name>Task_Successful_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.Outcome__c</field>
+            <operation>equals</operation>
+            <value>Reached but busy,Reached but not willing to talk,Successful,Successful - Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <description>For certain outcome values, the Successful checkbox automatically updates to TRUE when closing an activity.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>test</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Subject</field>
+            <operation>equals</operation>
+            <value>asdfqwert</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

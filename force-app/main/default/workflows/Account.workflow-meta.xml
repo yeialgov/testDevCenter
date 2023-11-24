@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Eetmee</fullName>
+        <description>DE PM Bestätigung Eetmee</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Eetmee</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Frag_Paul</fullName>
+        <description>DE PM Bestätigung Frag Paul</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Frag_Paul</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Gigmit</fullName>
+        <description>DE PM Bestätigung Gigmit</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Gigmit</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Gronda_EU</fullName>
+        <description>DE PM Bestätigung Gronda.EU</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_GrondaEU</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Locafox</fullName>
+        <description>DE PM Bestätigung Locafox</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Locafox</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Reputami</fullName>
+        <description>DE PM Bestätigung Reputami</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Reputami</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Best_tigung_Website</fullName>
+        <description>DE PM Bestätigung Website</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Best_tigung_Kontaktaufnahme_Website</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Confirmation_Contact_Eurodata</fullName>
+        <description>DE PM Confirmation Contact Eurodata</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Confirmation_Contact_Eurodata</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Confirmation_Contact_HoReCa_Digital</fullName>
+        <description>DE PM Confirmation Contact HoReCa Digital</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Confirmation_Contact_HoReCa_Digital</template>
+    </alerts>
+    <alerts>
+        <fullName>DE_PM_Confirmation_Contact_Yourcareergroup</fullName>
+        <description>DE PM Confirmation Contact Yourcareergroup</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Caller_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/DE_PM_Confirmation_Contact_Yourcareergroup</template>
+    </alerts>
+    <alerts>
+        <fullName>MINI_Account_with_yearly_license_has_been_created</fullName>
+        <description>MINI Account with yearly license has been created</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sfdc@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfdc@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_MINI_Acc_with_yearly_L</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Customer_Unpaid</fullName>
+        <description>New Customer Unpaid</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>dieter@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfdc@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Customer_Unpaid</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Customer_has_not_Paid</fullName>
+        <description>New Customer has not Paid</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderAddress>sfdc@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Customer_has_not_paid</template>
+    </alerts>
+    <alerts>
+        <fullName>New_active_Customer_alert</fullName>
+        <description>New active Customer alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>RegionalManager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Workflow_Email_Notifications/New_active_paying_customer</template>
+    </alerts>
+    <alerts>
+        <fullName>SEPA_Payment_paused_DE</fullName>
+        <description>SEPA Payment paused DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SF_BillTo_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/SEPA_paused_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>SEPA_Payment_paused_ENG</fullName>
+        <description>SEPA Payment paused ENG</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SF_BillTo_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/SEPA_paused_ENG</template>
+    </alerts>
+    <alerts>
+        <fullName>SEPA_Payment_paused_FR</fullName>
+        <description>SEPA Payment paused FR</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SF_BillTo_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>assistance@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/SEPA_paused_FR</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Account_ComDate_CCPD</fullName>
+        <description>https://jira.orderbird.com/browse/CDS-958</description>
+        <field>CommissionDate__c</field>
+        <formula>Closed_Contract_Paid_Date__c</formula>
+        <name>Account&gt;ComDate&gt;CCPD</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Onboarding_Status_Picklist</fullName>
+        <field>Onboard_Status__c</field>
+        <literalValue>No Onboarding</literalValue>
+        <name>Account &gt; Onboard_Status_c &gt; Default</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Partner_Owner</fullName>
+        <description>Set Partner Accounts automatically to a representative of Partner Management</description>
+        <field>OwnerId</field>
+        <lookupValue>christian.scheper-stuke@orderbird.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Account&gt;Partner&gt;Owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_PrimaryContact_Phone</fullName>
+        <field>Phone</field>
+        <formula>Primary_Contact__r.Phone</formula>
+        <name>Account &gt; PrimaryContact &gt; Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Primary_Contact_Email</fullName>
+        <field>Email__c</field>
+        <formula>Primary_Contact__r.Email</formula>
+        <name>Account &gt; Primary Contact &gt; Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Record_Type_Customer</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Customer</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Account &gt; Record Type &gt; Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Record_Type_Partner</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Partner</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Account &gt; Record Type &gt; Partner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Status_Partner</fullName>
+        <field>Account_Status__c</field>
+        <literalValue>Partner</literalValue>
+        <name>Account Status Partner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Status_Prospect</fullName>
+        <field>Account_Status__c</field>
+        <literalValue>Prospect</literalValue>
+        <name>Account Status Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Tax_Exempt_Reason_True</fullName>
+        <field>Tax_Exempt_Reason__c</field>
+        <literalValue>EU reverse charge mechanism</literalValue>
+        <name>Account &gt; Tax Exempt Reason &gt; True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Account_Tax_Exempted_True</fullName>
+        <field>taxExempted__c</field>
+        <literalValue>1</literalValue>
+        <name>Account &gt; Tax Exempted &gt; True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_VAT_Credit_Memo_Tax_Number</fullName>
+        <description>https://jira.orderbird.com/browse/CDS-1484</description>
+        <field>VAT_Credit_Memo_Tax_Number__c</field>
+        <formula>VATNumber_disp__c</formula>
+        <name>Update VAT Credit Memo Tax Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>account_update_active_status</fullName>
+        <field>Date_when_became_Active_Customer__c</field>
+        <formula>NOW()</formula>
+        <name>account_update_active_status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Account New</fullName>
+        <actions>
+            <name>Account_Onboarding_Status_Picklist</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account New Customer Notification</fullName>
+        <actions>
+            <name>New_active_Customer_alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Closed_Contract_Paid_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Set_CCPD_manually__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.OwnerId</field>
+            <operation>notEqual</operation>
+            <value>System User</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Record Type Customer</fullName>
+        <actions>
+            <name>Account_Record_Type_Customer</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+OR(
+ISNEW(),
+ISCHANGED( AccountType__c )),
+
+ISPICKVAL(AccountType__c ,&quot;Customer&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account Record Type Partner</fullName>
+        <actions>
+            <name>Account_Partner_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Account_Record_Type_Partner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+OR(
+ISNEW(),
+ISCHANGED( AccountType__c )),
+
+ISPICKVAL(AccountType__c ,&quot;Partner&quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account VAT Logic SImple</fullName>
+        <actions>
+            <name>Account_Tax_Exempted_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( OR( ISNEW(), ISCHANGED( Tax_Exempt_Reason__c )), OR( ISPICKVAL( Tax_Exempt_Reason__c , &quot;EU reverse charge mechanism&quot;), ISPICKVAL(Tax_Exempt_Reason__c , &quot;Third country jurisdictions&quot;) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Account Status%3A Partner</fullName>
+        <actions>
+            <name>Account_Status_Partner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Default Account Status%3A Prospect</fullName>
+        <actions>
+            <name>Account_Status_Prospect</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Account_Status__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Customer</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fill Commission Date</fullName>
+        <actions>
+            <name>Account_ComDate_CCPD</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Closed_Contract_Paid_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.CommissionDate__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-958</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Customer has not paid</fullName>
+        <actions>
+            <name>New_Customer_has_not_Paid</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>Dunning_0_Date__c != null &amp;&amp; Closed_Contract_Paid_Date__c = null &amp;&amp; Account_Balance_2__c &gt; 0 &amp;&amp; today() - 30 &lt;= Closed_Contract_Date__c</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PrimaryContactChange</fullName>
+        <actions>
+            <name>Account_PrimaryContact_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Account_Primary_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( Primary_Contact__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEPA Paused DE</fullName>
+        <actions>
+            <name>SEPA_Payment_paused_DE</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.AutoPayUncheckedReason__c</field>
+            <operation>equals</operation>
+            <value>Failed Payment Attempts</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1231</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEPA Paused ENG</fullName>
+        <actions>
+            <name>SEPA_Payment_paused_ENG</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.AutoPayUncheckedReason__c</field>
+            <operation>equals</operation>
+            <value>Failed Payment Attempts</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>English</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1231</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SEPA Paused FR</fullName>
+        <actions>
+            <name>SEPA_Payment_paused_FR</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.AutoPayUncheckedReason__c</field>
+            <operation>equals</operation>
+            <value>Failed Payment Attempts</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>French</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1231</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>VAT Credit Memo Tax Number</fullName>
+        <actions>
+            <name>Update_VAT_Credit_Memo_Tax_Number</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.BillingCountryCode__c</field>
+            <operation>equals</operation>
+            <value>DE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.VATNumber_disp__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.VATNumber_disp__c</field>
+            <operation>notEqual</operation>
+            <value>userdata: NULL</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1484</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>account_update_active_status</fullName>
+        <actions>
+            <name>account_update_active_status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.ZuoraId__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Date_when_became_Active_Customer__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Date when the account gets active customer</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Eetmee</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Eetmee was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Eetmee</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Frag_Paul</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Frag Paul was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Frag Paul</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Gigmit</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Gigmit was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Gigmit</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Gronda_EU</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Gronda.EU was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Gronda.EU</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Locafox</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Locafox was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Locafox</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Reputami</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Reputami was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Reputami</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Best_tigung_Website</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Bestätigung Website was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Bestätigung Website</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Confirmation_Contact_Eurodata</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Confirmation Contact Eurodata (edtime/edpep) was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Confirmation Contact Eurodata</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Confirmation_Contact_HoReCa_Digital</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Confirmation Contact HoReCa Digital was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Confirmation Contact HoReCa Digital</subject>
+    </tasks>
+    <tasks>
+        <fullName>Email_DE_PM_Confirmation_Contact_Yourcareergroup</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Email: DE PM Confirmation Contact Yourcareergroup was sent</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Email: DE PM Confirmation Contact Yourcareergroup</subject>
+    </tasks>
+</Workflow>

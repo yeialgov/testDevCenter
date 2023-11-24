@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Nurturing_DE_01</fullName>
+        <description>Nurturing DE 01</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_DE_01_Welcome</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_DE_02</fullName>
+        <description>Nurturing DE 02</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_DE_02_Testimonial_Babanbe</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_DE_03</fullName>
+        <description>Nurturing DE 03</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_DE_03_Testimonial_BurgerDeVille</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_DE_04</fullName>
+        <description>Nurturing DE 04</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_DE_04_Testimonial_TheBarn</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_DE_05</fullName>
+        <description>Nurturing DE 05</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_DE_05_Testimonial_ULA</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_FR_01</fullName>
+        <description>Nurturing FR 01</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_FR_01_Welcome</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_FR_02</fullName>
+        <description>Nurturing FR 02</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_FR_02_Testimonial_Babanbe</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_FR_03</fullName>
+        <description>Nurturing FR 03</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_FR_03_Testimonial_BurgerDeVille</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_FR_04</fullName>
+        <description>Nurturing FR 04</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_FR_04_Testimonial_TheBarn</template>
+    </alerts>
+    <alerts>
+        <fullName>Nurturing_FR_05</fullName>
+        <description>Nurturing FR 05</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Nurturing/ON_FR_05_Testimonial_ULA</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Contact_Nurturing_False</fullName>
+        <field>Nurturing__c</field>
+        <literalValue>0</literalValue>
+        <name>Contact &gt; Nurturing &gt; False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TS_Marketing_opt_in</fullName>
+        <field>TS_Marketing_opt_in_update__c</field>
+        <formula>NOW()</formula>
+        <name>TS_Marketing opt-in</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Nurturing DE</fullName>
+        <actions>
+            <name>Nurturing_DE_01</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Nurturing_DE_Email_1</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+OR( 
+MailingCountry = &quot;Germany&quot;, 
+MailingCountry = &quot;DE&quot;), 
+HasOptedOutOfEmail = false, 
+Nurturing__c = true,
+ISBLANK(Account.FirstOppCloseDate__c)
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_DE_05</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Contact_Nurturing_False</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Nurturing_DE_Email_5</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>28</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_DE_04</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_DE_Email_4</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>21</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_DE_03</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_DE_Email_3</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_DE_02</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_DE_Email_2</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Nurturing FR</fullName>
+        <actions>
+            <name>Nurturing_FR_01</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Nurturing_FR_Email_1</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( HasOptedOutOfEmail = false, Nurturing__c = true, MailingCountry = &quot;France&quot;, ISBLANK(Account.LastOppCloseDate__c) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_FR_02</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_FR_Email_2</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_FR_03</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_FR_Email_3</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>14</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_FR_05</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Contact_Nurturing_False</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Nurturing_FR_Email_5</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>28</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Nurturing_FR_04</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Nurturing_FR_Email_4</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>21</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>TS_Marketing opt-in</fullName>
+        <actions>
+            <name>TS_Marketing_opt_in</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( DoubleOptIn__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Nurturing_DE_Email_1</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing DE Email 1 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing DE Email 1</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_DE_Email_2</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing DE Email 2 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing DE Email 2</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_DE_Email_3</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing DE Email 3 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing DE Email 3</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_DE_Email_4</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing DE Email 4 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing DE Email 4</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_DE_Email_5</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing DE Email 5 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing DE Email 5</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_FR_Email_1</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing FR Email 1 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing FR Email 1</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_FR_Email_2</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing FR Email 2 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing FR Email 2</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_FR_Email_3</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing FR Email 3 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing FR Email 3</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_FR_Email_4</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing FR Email 4 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing FR Email 4</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nurturing_FR_Email_5</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Nurturing FR Email 5 was sent.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Nurturing FR Email 5</subject>
+    </tasks>
+</Workflow>

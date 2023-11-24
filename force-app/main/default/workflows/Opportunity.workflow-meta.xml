@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_to_German_Partner_informing_them_that_a_referred_lead_went_closed_lost</fullName>
+        <description>Partner Feedback DE - Closed Lost</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>stefan.kutz@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/DE_Partner_Feedback_Closed_Lost_DU</template>
+    </alerts>
+    <alerts>
+        <fullName>Missing_feature</fullName>
+        <ccEmails>inbox-u4xyiqapl3dxqhzuzqn6rbcy@inbound.productboard.com</ccEmails>
+        <description>Closed lost opportunity because of a missing feature</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/Missing_Feature</template>
+    </alerts>
+    <alerts>
+        <fullName>Opp_without_follow_up_alert</fullName>
+        <description>Opp without follow up alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>sfdc@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Opp_without_Follow_Up</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_DE_Claim_Denied</fullName>
+        <description>Partner Feedback DE - Claim Denied</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>christian.scheper-stuke@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/DE_Partner_Feedback_Claim_Denied_DU</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_DE_Lead_accepted</fullName>
+        <description>Partner Feedback DE - Lead accepted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>stefan.kutz@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/DE_Partner_Feedback_Lead_accepted_DU</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_DE_Sale_Without_Commission</fullName>
+        <description>Partner Feedback DE - Sale Without Commission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>stefan.kutz@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/DE_Partner_Feedback_Sale_w_o_commission_DU</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_FR_Claim_Denied</fullName>
+        <description>Partner Feedback FR - Claim Denied</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/Partner_Feedback_FR_Claim_Denied</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_FR_Closed_Lost</fullName>
+        <description>Partner Feedback FR - Closed Lost</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/Partner_Feedback_FR_Closed_Lost</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_FR_Lead_accepted</fullName>
+        <description>Partner Feedback FR - Lead accepted</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/Partner_Feedback_FR_Lead_accepted</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Feedback_FR_Sale_Without_Commission</fullName>
+        <description>Partner Feedback FR - Sale Without Commission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/Partner_Feedback_FR_Sale_w_o_commission</template>
+    </alerts>
+    <alerts>
+        <fullName>Update_E_Mail_for_partner_with_commission</fullName>
+        <description>Update-E-Mail for partner about referred lead with commission</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ReferralContact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>stefan.kutz@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Partner_Management/DE_Partner_Feedback_Sale_with_commission_DU</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>NB_Opportunity_type</fullName>
+        <description>AccM solution CDS-1831 and CDS-1827</description>
+        <field>Opportunity_type_1__c</field>
+        <literalValue>New Business</literalValue>
+        <name>NB Opportunity type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>OppNameChange</fullName>
+        <field>Name</field>
+        <formula>&quot;[&quot;
+&amp; TEXT(YEAR(DATEVALUE(CreatedDate)))
+&amp; &quot;-&quot;
+&amp; IF(MONTH(DATEVALUE(CreatedDate))&lt;10,&quot;0&quot;,&quot;&quot;)
+&amp; TEXT(MONTH(DATEVALUE(CreatedDate)))
+&amp; &quot;]-&quot;
+&amp; Account.Name
+&amp; &quot;-&quot;
+&amp; IF(ISPICKVAL( OppCategory__c, &quot;MINI by orderbird&quot;),&quot;MINI-&quot;,&quot;PRO-&quot;)
+&amp; IF( CampaignId &lt;&gt;&quot;&quot;,&quot; Email Marketing&quot;, TEXT ( Opportunity_type_1__c ))</formula>
+        <name>OppNameChange</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Metro_Opp_Status_Accepted_Progr</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>In_Progress</literalValue>
+        <name>Opp &gt; Metro Opp Status &gt;  Accepted Progr</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Metro_Opp_Status_Auto_Accepted</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Opportunity Auto Accepted</literalValue>
+        <name>Opp &gt; Metro Opp Status &gt; Auto Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Metro_Opp_Status_Closed_Lost</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Closed Lost</literalValue>
+        <name>Opp &gt; Metro Opp Status &gt; Closed Lost</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Metro_Opp_Status_Closed_Won</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Closed Won</literalValue>
+        <name>Opp &gt; Metro Opp Status &gt; Closed Won</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Metro_Opp_Status_Opp_to_be_acce</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Opportunity To be accepted</literalValue>
+        <name>Opp &gt; Metro Opp Status &gt;  Opp to be acce</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_RT_Close</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Closed</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Opp&gt;RT&gt;Close</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_RT_Close_AccM</fullName>
+        <description>AccM solution CDS-1831 and CDS-1827</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Closed_AccM</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Opp&gt;RT&gt;Close AccM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_RT_Open</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Open</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Opp&gt;RT&gt;Open</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_RT_Open_AccM</fullName>
+        <description>AccM solution CDS-1831 and CDS-1827</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Open_AccM</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Opp&gt;RT&gt;Open AccM</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opp_Sales_Rep_Priority_HIGH</fullName>
+        <description>Pre-populates the Sales Rep Priority to &quot;High&quot; when an Opportunity is created</description>
+        <field>Sales_Rep_Priority__c</field>
+        <literalValue>High</literalValue>
+        <name>Opp &gt; Sales Rep Priority &gt; HIGH</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Opportunity_Metro_Status_Rejected</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>rejected</literalValue>
+        <name>Opportunity &gt; Metro Status &gt; Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetAmend_Opp_Name</fullName>
+        <description>redundant to ChangeOppName</description>
+        <field>Name</field>
+        <formula>&quot;[&quot;
+&amp; TEXT(YEAR(DATEVALUE(CreatedDate)))
+&amp; &quot;-&quot;
+&amp; IF(MONTH(DATEVALUE(CreatedDate))&lt;10,&quot;0&quot;,&quot;&quot;)
+&amp; TEXT(MONTH(DATEVALUE(CreatedDate)))
+&amp; &quot;]-&quot;
+&amp; Account.Name
+&amp; &quot; -&quot;
+&amp; TEXT(Opportunity_type_1__c)</formula>
+        <name>SetAmend Opp Name (retired)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetNewBus</fullName>
+        <field>NewBusiness__c</field>
+        <literalValue>1</literalValue>
+        <name>Set New Business</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_New_Business_Opp_Name</fullName>
+        <field>Name</field>
+        <formula>&quot;[&quot; 
+&amp; TEXT(YEAR(DATEVALUE(CreatedDate)))
+&amp; &quot;-&quot; 
+&amp; IF(MONTH(DATEVALUE(CreatedDate))&lt;10,&quot;0&quot;,&quot;&quot;)
+&amp; TEXT(MONTH(DATEVALUE(CreatedDate))) 
+&amp; &quot;]-&quot;
+&amp; Account.Name
+&amp;IF( CampaignId &lt;&gt;&quot;&quot;,&quot;-Email Marketing&quot;, &quot;-new business&quot;)</formula>
+        <name>Set New Business Opp Name (retired)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>MSOP 7 Day Alert %28Opp%29</fullName>
+        <active>true</active>
+        <description>Sends tasks to owner of METRO opp if 7 days after handover MSOP is empty</description>
+        <formula>AND(        NOT(ISBLANK(METROOpportunityID__c)),    NOT(ISBLANK(DateOfHandover__c)),    TODAY() - DateOfHandover__c &lt;=8,     ISPICKVAL (  MSOP__c, &quot;&quot;) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>MSOP_still_open</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Opportunity.DateOfHandover__c</offsetFromField>
+            <timeLength>7</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update Auto Accept</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.METROOppStatus__c</field>
+            <operation>equals</operation>
+            <value>Opportunity To be accepted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.METROOppStatus__c</field>
+            <operation>notEqual</operation>
+            <value>rejected,In_Progress,Closed Won,Closed Lost,Existing Customer</value>
+        </criteriaItems>
+        <description>After the 14th days after hand over the Opp gets automatically accepted if the METRO Opp status is still &quot;to be accepted&quot;, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Opp_Metro_Opp_Status_Auto_Accepted</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.DateOfHandover__c</offsetFromField>
+            <timeLength>15</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update Closed Lost</fullName>
+        <actions>
+            <name>Opp_Metro_Opp_Status_Closed_Lost</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>After the 14th days after hand over the METRO Opp gets set to Closed Lost, in case the Opp is lost, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <formula>AND( 
+ISPICKVAL(StageName, &quot;Closed Lost&quot;), 
+OR( 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity To be accepted&quot;), 
+ISPICKVAL( METROOppStatus__c , &quot;In_Progress&quot;), 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity auto accepted&quot;)) 
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update Closed Won</fullName>
+        <actions>
+            <name>Opp_Metro_Opp_Status_Closed_Won</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>After the 14th days after hand over the METRO Opp gets set to Closed Won, in case the Opp is won, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <formula>AND( 
+ISPICKVAL(StageName, &quot;Closed Won&quot;), 
+OR( 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity To be accepted&quot;), 
+ISPICKVAL( METROOppStatus__c , &quot;In_Progress&quot;), 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity auto accepted&quot;)) 
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update In Progress</fullName>
+        <active>true</active>
+        <description>If within 14 days after hand over the MSOPs get sets the all-clear, the METRO Opp gets set to In Progress, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <formula>AND( 
+OR( 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity To be Accepted&quot;), 
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity Auto Accepted&quot;),
+ISPICKVAL( METROOppStatus__c , &quot;To be accepted&quot;)), 
+ISPICKVAL ( MSOP__c , &quot;All-Clear&quot;) 
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Opp_Metro_Opp_Status_Accepted_Progr</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update Rejected</fullName>
+        <actions>
+            <name>Opportunity_Metro_Status_Rejected</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If within 14 days after hand over the MSOP fails, the METRO Opp Status gets set to &quot;Rejected&quot;, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <formula>AND(     
+TODAY() - DateOfHandover__c &lt;= 14,      
+OR(        
+ISPICKVAL( METROOppStatus__c , &quot;Opportunity To be accepted&quot;),        ISPICKVAL( METROOppStatus__c , &quot;In_Progress&quot;)),        
+AND (          
+NOT(ISPICKVAL ( MSOP__c, &quot;All-Clear&quot;)),          NOT(ISBLANK(TEXT( MSOP__c))))       
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Metro Opp Status Update to be accepted</fullName>
+        <actions>
+            <name>Opp_Metro_Opp_Status_Opp_to_be_acce</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.METROOpportunityID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.METROOppStatus__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>If an opportunity has a METRO Opp ID, the METRO Opp status gets set to &quot;To be accepted&quot;, see https://jira.orderbird.com/browse/SFDC-1310</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Missing feature</fullName>
+        <actions>
+            <name>Missing_feature</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Missing_feature__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1457</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp%3ERT%3EClose</fullName>
+        <actions>
+            <name>Opp_RT_Close</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp%3ERT%3EClose AccM</fullName>
+        <actions>
+            <name>Opp_RT_Close_AccM</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Open AccM</value>
+        </criteriaItems>
+        <description>AccM solution CDS-1831 and CDS-1827</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp%3ERT%3EOpen</fullName>
+        <actions>
+            <name>Opp_RT_Open</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PossibleNameChange</fullName>
+        <actions>
+            <name>OppNameChange</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED( Opportunity_type_1__c ) || ISCHANGED ( OppCategory__c ) || ISCHANGED(CampaignId)
+
+/*(Campaign.Name = &quot;&quot;) &amp;&amp; ((ISCHANGED(QuoteCount__c) || ISCHANGED(CancellationQuoteCount__c)) &amp;&amp; NOT(NewBusiness__c))*/         /*Initial value: (ISCHANGED(QuoteCount__c) || ISCHANGED(CancellationQuoteCount__c)) &amp;&amp; NOT(NewBusiness__c)*/</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SetAmend</fullName>
+        <actions>
+            <name>OppNameChange</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Opp_RT_Open_AccM</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>NOT(ISBLANK( Account.ZuoraId__c )) &amp;&amp; 
+NOT(ISPICKVAL( OppCategory__c, &apos;MINI by orderbird&apos;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SetNewBus</fullName>
+        <actions>
+            <name>NB_Opportunity_type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>OppNameChange</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Opp_RT_Open</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>SetNewBus</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISBLANK( Account.ZuoraId__c )
+&amp;&amp;  
+NOT(ISPICKVAL(Opportunity_type_1__c, &apos;MINI Consultation&apos;))
+&amp;&amp;
+NOT(ISPICKVAL( OppCategory__c, &apos;MINI by orderbird&apos;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>MSOP_still_open</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>This METRO opportunity has been handed over 7 days ago and one or both MSOP fields are not yet filled in</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>MSOP still open</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_DE_Claim_Denied_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback DE - Claim Denied Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_DE_Closed_Lost_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback DE - Closed Lost Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_DE_Lead_accepted_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback DE - Lead accepted Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_FR_Claim_Denied_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback FR - Claim Denied Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_FR_Closed_Lost_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback FR - Closed Lost Email</subject>
+    </tasks>
+    <tasks>
+        <fullName>Partner_Feedback_FR_Lead_accepted_Email</fullName>
+        <assignedTo>sfdc@orderbird.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Partner Feedback FR - Lead accepted Email</subject>
+    </tasks>
+</Workflow>

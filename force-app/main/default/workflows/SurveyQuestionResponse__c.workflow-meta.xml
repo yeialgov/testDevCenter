@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Survey_Response_Response_Number_Form</fullName>
+        <field>Response_Number__c</field>
+        <formula>IF(
+Response__c =&quot;★☆☆☆☆&quot;, 0 ,
+IF(
+Response__c =&quot;★★☆☆☆&quot;, 25 ,
+IF(
+Response__c =&quot;★★★☆☆&quot;, 50 ,
+IF(
+Response__c =&quot;★★★★☆&quot;, 75 ,
+IF(
+Response__c =&quot;★★★★★&quot;, 100 ,
+IF(
+Response__c =&quot;Ja&quot; , 100 ,
+IF(
+Response__c =&quot;Nein&quot; , 0 ,
+IF(
+Response__c =&quot;Yes&quot; , 100 ,
+IF(
+Response__c =&quot;No&quot; , 0 ,
+IF(
+Response__c =&quot;Oui&quot; , 100 ,
+IF(
+Response__c =&quot;Non&quot; , 0 ,
+
+0
+)))))))))))</formula>
+        <name>Survey Response &gt; Response Number &gt; Form</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Survey Response Number</fullName>
+        <actions>
+            <name>Survey_Response_Response_Number_Form</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  NOT(ISBLANK(Response__c)),   OR(  Response__c =&quot;★☆☆☆☆&quot;,  Response__c =&quot;★★☆☆☆&quot;,  Response__c =&quot;★★★☆☆&quot;,  Response__c =&quot;★★★★☆&quot;,  Response__c =&quot;★★★★★&quot;,  Response__c =&quot;Ja&quot;,  Response__c =&quot;Nein&quot;,  Response__c =&quot;Yes&quot;,  Response__c =&quot;No&quot;,  Response__c =&quot;Oui&quot;,  Response__c =&quot;Non&quot; )     )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Change_Owner</fullName>
+        <description>No Guest User can Own records</description>
+        <field>OwnerId</field>
+        <lookupValue>sfdc@orderbird.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Change Owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Assign to System User</fullName>
+        <actions>
+            <name>Change_Owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>SurveyTaker__c.CreatedById</field>
+            <operation>equals</operation>
+            <value>00558000001cwZ5</value>
+        </criteriaItems>
+        <description>No Guest Users can own records</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>
