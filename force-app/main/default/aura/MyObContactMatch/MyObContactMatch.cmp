@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" 
+                controller="AccountLightningController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getData}"/>
+
+    <aura:attribute name="Data" type="Object"/>
+    
+    <lightning:card title="{!v.Data.TargetContact.Account.Name}">
+        <p style="padding: 0 1rem;">
+            {!v.Data.TargetContact.MailingCity}, {!v.Data.TargetContact.MailingCountry}
+            <br/>
+            {!v.Data.TargetContact.Email}
+        </p>
+    </lightning:card>
+    <hr style="border-bottom: solid 4px #1ba3dd;"/>
+    <aura:iteration items="{!v.Data.MatchContacts}" var="MatchContact">
+        <c:MyObMatch Contact="{!MatchContact}" MyObVenueId="{!v.recordId}"/>
+    </aura:iteration>
+	
+</aura:component>

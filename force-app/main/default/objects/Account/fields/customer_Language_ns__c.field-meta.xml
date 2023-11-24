@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>customer_Language_ns__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(PrimaryLanguage__c,
+&apos;German&apos;,&apos;German &apos;,
+&apos;English&apos;,&apos;English (U.S.)&apos;,
+&apos;French&apos;, &apos;French (France)&apos;,
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>customer : Language</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

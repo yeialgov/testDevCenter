@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sent to English speaking customers IN GERMANY</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>EN for DE - Pay Onboarding - DU</name>
+    <style>none</style>
+    <subject>[PAY] Register Your Card Reader</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

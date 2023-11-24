@@ -1,0 +1,8 @@
+Dear SDRs,
+
+A contact reacted on the Campaign "{!wbsendit__Campaign_Activity__c.Name}" and wants to be called
+
+Contact: {!wbsendit__Campaign_Activity__c.wbsendit__Contact__c} 
+Email: {!wbsendit__Campaign_Activity__c.wbsendit__Email_Address__c}
+
+Link: https://orderbird.lightning.force.com/lightning/r/Contact/{!wbsendit__Campaign_Activity__c.wbsendit__ContactId__c}/view

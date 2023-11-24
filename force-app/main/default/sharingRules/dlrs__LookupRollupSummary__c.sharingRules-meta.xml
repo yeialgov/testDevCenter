@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Mini_Onboarding</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>access to dlrs records</description>
+        <label>Mini Onboarding</label>
+        <sharedTo>
+            <guestUser>my_Orderbird_API</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>dlrs__Active__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

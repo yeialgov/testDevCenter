@@ -1,0 +1,223 @@
+<aura:component >
+    <aura:attribute name="AccountId" type="String"/>
+    <aura:attribute name="QuoteId" type="String"/>
+    <aura:attribute name="CDId" type="String"/>
+    <aura:attribute name="Account" type="Object"/>
+    <aura:attribute name="Quote" type="Object"/>
+    <aura:attribute name="PayByInstalment" type="Boolean"/>
+    <aura:attribute name="NeedsSEPAMandate" type="Boolean"/>
+    <aura:attribute name="Display" type="Boolean" default="false"/>
+    
+    <force:recordData aura:id="recordHandler2"
+                      recordId="{!v.AccountId}"
+                      fields="Id, Name,
+                              Id_Card__c,
+                              Id_Card_chk__c,
+                              Instalment_Contract__c,
+                              Instalment_Contract_chk__c,
+                              SEPA_Mandate__c,
+                              SEPA_Mandate_chk__c,
+                              Credit_Check__c,
+                              Credit_Check_chk__c,
+                              Registration_certificate__c,
+                              Registration_certificate_chk__c"
+                      mode="EDIT"
+                      targetFields="{!v.Account}"
+                      recordUpdated="{!c.handleRecordUpdated}"/>
+    <force:recordData aura:id="recordHandlerQ"
+                      recordId="{!v.QuoteId}"
+                      fields="Id, Email_Alert__c"
+                      mode="EDIT"
+                      targetFields="{!v.Quote}"/>
+    <force:recordData aura:id="recordHandlerCD"
+                      recordId="{!v.CDId}"
+                      fields="Id"/>
+                      
+    <lightning:recordEditForm recordId="{!v.AccountId}"
+                              objectApiName="Account"
+                              aura:id="reForm"
+                              onload="{!c.ShowForm}"
+                              onsuccess="{!c.refSuccess}">
+        <lightning:messages />
+        <lightning:outputField name="Name"/>
+        <aura:if isTrue="{!v.Display}">
+            <!-- the messages component is for error messages -->
+            <lightning:messages />
+            
+            <table style="margin-top:0.5rem;">
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.Registration_certificate__c != null}">
+                            <aura:if isTrue="{!v.Account.Registration_certificate_chk__c != null}">
+                                <lightning:icon class="hovCurs" iconName="utility:success" size="xx-small" variant="success" onclick="{!c.RegistrationCertificateDelete}"/>
+                                <aura:set attribute="else">
+                                    <lightning:icon class="hovCurs" iconName="utility:new" size="xx-small" variant="warning" onclick="{!c.RegistrationCertificateClick}"/>
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.Registration_certificate__c != null}">
+                            <lightning:outputField fieldName="Registration_certificate__c"/>
+                            <aura:set attribute="else">
+                                <lightning:fileUpload name="fileUploader"
+                                                      label= "Registration certificate"
+                                                      multiple="true"
+                                                      accept=".pdf, .png, .jpg"
+                                                      recordId="{!v.AccountId}"
+                                                      onuploadfinished="{! c.handleUploadFinished }"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                </tr>
+            </table>
+            <aura:if isTrue="{!v.PayByInstalment}">
+                <table style="margin-top:0.5rem;">
+                    <tr>
+                        <td style="border: 1px solid #654B8D;border-right:transparent;">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Instalment_Contract__c != null}">
+                                <aura:if isTrue="{!v.Account.Instalment_Contract_chk__c != null}">
+                                    <lightning:icon class="hovCurs" iconName="utility:success" size="xx-small" variant="success" onclick="{!c.InstalmentContractDelete}"/>
+                                    <aura:set attribute="else">
+                                        <lightning:icon class="hovCurs" iconName="utility:new" size="xx-small" variant="warning" onclick="{!c.InstalmentContractClick}"/>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:clear" size="xx-small"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Instalment_Contract__c != null}">
+                                <lightning:outputField fieldName="Instalment_Contract__c"/>
+                                <aura:set attribute="else">
+                                    <lightning:fileUpload name="fileUploader"
+                                                          label= "Instalment Contract"
+                                                          multiple="true"
+                                                          accept=".pdf, .png, .jpg"
+                                                          recordId="{!v.AccountId}"
+                                                          onuploadfinished="{! c.handleInstalmentContractUploadFinished }"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin-top:0.5rem;">
+                    <tr>
+                        <td style="border: 1px solid #654B8D;border-right:transparent;">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Credit_Check__c != null}">
+                                <aura:if isTrue="{!v.Account.Credit_Check_chk__c != null}">
+                                    <lightning:icon class="hovCurs" iconName="utility:success" size="xx-small" variant="success" onclick="{!c.CreditCheckDelete}"/>
+                                    <aura:set attribute="else">
+                                        <lightning:icon class="hovCurs" iconName="utility:new" size="xx-small" variant="warning" onclick="{!c.CreditCheckClick}"/>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:clear" size="xx-small"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Credit_Check__c != null}">
+                                <lightning:outputField fieldName="Credit_Check__c"/>
+                                <aura:set attribute="else">
+                                    <lightning:fileUpload name="fileUploader"
+                                                          label= "Credit Check"
+                                                          multiple="true"
+                                                          accept=".pdf, .png, .jpg"
+                                                          recordId="{!v.AccountId}"
+                                                          onuploadfinished="{! c.handleCreditCheckUploadFinished }"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin-top:0.5rem;">
+                    <tr>
+                        <td style="border: 1px solid #654B8D;border-right:transparent;">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Id_Card__c != null}">
+                                <aura:if isTrue="{!v.Account.Id_Card_chk__c != null}">
+                                    <lightning:icon class="hovCurs" iconName="utility:success" size="xx-small" variant="success" onclick="{!c.IdCardDelete}"/>
+                                    <aura:set attribute="else">
+                                        <lightning:icon class="hovCurs" iconName="utility:new" size="xx-small" variant="warning" onclick="{!c.IdCardClick}"/>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:clear" size="xx-small"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.Id_Card__c != null}">
+                                <lightning:outputField fieldName="Id_Card__c"/>
+                                <aura:set attribute="else">
+                                    <lightning:fileUpload name="fileUploader"
+                                                          label= "Id Card"
+                                                          multiple="true"
+                                                          accept=".pdf, .png, .jpg"
+                                                          recordId="{!v.AccountId}"
+                                                          onuploadfinished="{! c.handleIdCardUploadFinished }"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </table>
+            </aura:if>
+            <aura:if isTrue="{!v.NeedsSEPAMandate}">
+                <table style="margin-top:0.5rem;">
+                    <tr>
+                        <td style="border: 1px solid #654B8D;border-right:transparent;">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!or(v.Account.SEPA_Mandate__c != null,v.Account.SEPA_Mandate_chk__c != null)}">
+                                <aura:if isTrue="{!v.Account.SEPA_Mandate_chk__c != null}">
+                                    <lightning:icon class="hovCurs" iconName="utility:success" size="xx-small" variant="success" onclick="{!c.SEPAMandateDelete}"/>
+                                    <aura:set attribute="else">
+                                        <lightning:icon class="hovCurs" iconName="utility:new" size="xx-small" variant="warning" onclick="{!c.SEPAMandateClick}"/>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:clear" size="xx-small" onclick="{!c.setSEPAchk}"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!v.Account.SEPA_Mandate__c != null}">
+                                <lightning:outputField fieldName="SEPA_Mandate__c"/>
+                                <aura:set attribute="else">
+                                    <lightning:fileUpload name="fileUploader"
+                                                          label= "SEPA Mandate"
+                                                          multiple="true"
+                                                          accept=".pdf, .png, .jpg"
+                                                          recordId="{!v.AccountId}"
+                                                          onuploadfinished="{! c.handleSEPAMandateUploadFinished }"/>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </table>
+            </aura:if>
+            <div class="slds-m-top_medium">
+                <!--
+            <lightning:button disabled="{!v.disabled}" variant="brand" type="submit" name="save" label="Save" />
+-->        
+            </div>
+        </aura:if>
+    </lightning:recordEditForm>
+</aura:component>

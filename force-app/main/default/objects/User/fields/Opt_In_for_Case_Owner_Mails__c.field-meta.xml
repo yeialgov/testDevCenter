@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opt_In_for_Case_Owner_Mails__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://jira.orderbird.com/browse/CDS-352</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do you wanna get a notification mail when a case gets assigned to you?</inlineHelpText>
+    <label>Opt In for Case Owner Mails</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

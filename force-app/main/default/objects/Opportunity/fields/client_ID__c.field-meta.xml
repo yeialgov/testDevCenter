@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>client_ID__c</fullName>
+    <description>Stakeholder: MKT</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In case the lead this opp is based on came through our online marketing: What is the lead&apos;s client ID? Set automatically on creation if available</inlineHelpText>
+    <label>client ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

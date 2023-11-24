@@ -1,0 +1,33 @@
+<aura:component >
+    <aura:attribute name="SLI" type="Object"/>
+    <aura:attribute name="Amt" type="Integer" default="0" />
+    
+    <article class="slds-card slds-card_inner"  style="margin-right:1rem;border: 1px solid rgb(221, 219, 218);">
+        <table>
+            <tr>
+                <td rowspan="2" width="65" style="padding: 0.25rem;">
+                    <lightning:button label="{!v.Amt > 0 ? '(' + v.Amt + ')' : '-'}" 
+                                      variant="{!v.Amt > 0 ? 'destructive' : 'brand'}"
+                                      onclick="{!c.changeAmt}"/>
+                </td>
+                <td>
+                    <div style="float:left;">
+                        <span class="QtyBadge">{!v.SLI.Quantity__c}</span>&nbsp;
+                    </div>
+                    <div style="float:left;line-height:50%;padding-top:4px;">
+                        <span class="SLIProdName">{!v.SLI.Product__r.Name}</span>
+                        <span class="SLIProdCat"><br/>{!v.SLI.Product__r.ProductCategory__r.Name}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {!v.SLI.Subscription__r.TermType__c}&nbsp;
+                    <ui:outputDate value="{!v.SLI.EffectiveStartDate__c}"/>
+                </td>
+            </tr>
+        </table>
+    </article>
+    
+    
+</aura:component>

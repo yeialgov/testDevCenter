@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadMedium__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Medium</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Automation</fullName>
+                <default>false</default>
+                <label>Automation</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Campaign Landing Page</fullName>
+                <default>false</default>
+                <label>Campaign Landing Page</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Coca Cola Hellenic</fullName>
+                <default>false</default>
+                <label>Coca Cola Hellenic</label>
+            </value>
+            <value>
+                <fullName>CRC Form</fullName>
+                <default>false</default>
+                <label>CRC Form</label>
+            </value>
+            <value>
+                <fullName>DEHOGA Berlin</fullName>
+                <default>false</default>
+                <label>DEHOGA Berlin</label>
+            </value>
+            <value>
+                <fullName>Distribution Partner</fullName>
+                <default>false</default>
+                <label>Distribution Partner</label>
+            </value>
+            <value>
+                <fullName>Ebook Business Plan</fullName>
+                <default>false</default>
+                <label>Ebook Business Plan</label>
+            </value>
+            <value>
+                <fullName>Ebook Digitalförderung</fullName>
+                <default>false</default>
+                <label>Ebook Digitalförderung</label>
+            </value>
+            <value>
+                <fullName>Ebook Kassensicherungsverordnung</fullName>
+                <default>false</default>
+                <label>Ebook Kassensicherungsverordnung</label>
+            </value>
+            <value>
+                <fullName>Ebook Marketing</fullName>
+                <default>false</default>
+                <label>Ebook Marketing</label>
+            </value>
+            <value>
+                <fullName>Ebook New Opening</fullName>
+                <default>false</default>
+                <label>Ebook New Opening</label>
+            </value>
+            <value>
+                <fullName>E-mail</fullName>
+                <default>false</default>
+                <label>E-mail</label>
+            </value>
+            <value>
+                <fullName>ETL</fullName>
+                <default>false</default>
+                <label>ETL</label>
+            </value>
+            <value>
+                <fullName>facebook lead form</fullName>
+                <default>false</default>
+                <label>facebook lead form</label>
+            </value>
+            <value>
+                <fullName>File Upload</fullName>
+                <default>false</default>
+                <label>File Upload</label>
+            </value>
+            <value>
+                <fullName>Founder Award DGGP</fullName>
+                <default>false</default>
+                <label>Founder Award DGGP</label>
+            </value>
+            <value>
+                <fullName>Hotline</fullName>
+                <default>false</default>
+                <label>Hotline</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Lead Form</fullName>
+                <default>false</default>
+                <label>LinkedIn Lead Form</label>
+            </value>
+            <value>
+                <fullName>METRO</fullName>
+                <default>false</default>
+                <label>METRO</label>
+            </value>
+            <value>
+                <fullName>myob</fullName>
+                <default>false</default>
+                <label>myob</label>
+            </value>
+            <value>
+                <fullName>OB-Mini</fullName>
+                <default>false</default>
+                <label>OB-Mini</label>
+            </value>
+            <value>
+                <fullName>ob website</fullName>
+                <default>false</default>
+                <label>ob website</label>
+            </value>
+            <value>
+                <fullName>Pepperbill</fullName>
+                <default>false</default>
+                <label>Pepperbill</label>
+            </value>
+            <value>
+                <fullName>Personal Network</fullName>
+                <default>false</default>
+                <label>Personal Network</label>
+            </value>
+            <value>
+                <fullName>Postal Service</fullName>
+                <default>false</default>
+                <label>Postal Service</label>
+            </value>
+            <value>
+                <fullName>Private Referral</fullName>
+                <default>false</default>
+                <label>Private Referral</label>
+            </value>
+            <value>
+                <fullName>Purchased</fullName>
+                <default>false</default>
+                <label>Purchased</label>
+            </value>
+            <value>
+                <fullName>Referral of successor</fullName>
+                <default>false</default>
+                <label>Referral of successor</label>
+            </value>
+            <value>
+                <fullName>Referral Partner</fullName>
+                <default>false</default>
+                <label>Referral Partner</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Shore</fullName>
+                <default>false</default>
+                <label>Shore</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Texting</fullName>
+                <default>false</default>
+                <label>Texting</label>
+            </value>
+            <value>
+                <fullName>Trade Fair</fullName>
+                <default>false</default>
+                <label>Trade Fair</label>
+            </value>
+            <value>
+                <fullName>TSE Preorder Webform</fullName>
+                <default>false</default>
+                <label>TSE Preorder Webform</label>
+            </value>
+            <value>
+                <fullName>Video Cash Mgmt with ETL</fullName>
+                <default>false</default>
+                <label>Video Cash Mgmt with ETL</label>
+            </value>
+            <value>
+                <fullName>Walk In</fullName>
+                <default>false</default>
+                <label>Walk In</label>
+            </value>
+            <value>
+                <fullName>Webform MINI</fullName>
+                <default>false</default>
+                <label>Webform MINI</label>
+            </value>
+            <value>
+                <fullName>Webform PRO</fullName>
+                <default>false</default>
+                <label>Webform PRO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

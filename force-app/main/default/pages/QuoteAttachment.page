@@ -1,0 +1,13 @@
+<apex:page standardController="Quote" renderAs="pdf">
+    <html>
+        <apex:outputPanel rendered="{!and(Quote.SpecialOffer__c = null, Quote.SpecialRestart__c == 0)}">
+            <c:quoteBody QuoteId="{!Quote.Id}"/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!and(Quote.SpecialOffer__c = 'GuestMgmt 199EUR', Quote.SpecialRestart__c == 0)}">
+            <c:quoteBody_A QuoteId="{!Quote.Id}"/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!Quote.SpecialRestart__c != 0}">
+            <c:quoteBody_B QuoteId="{!Quote.Id}"/>
+        </apex:outputPanel>
+    </html>
+</apex:page>

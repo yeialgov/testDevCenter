@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Description</fullName>
+    <inlineHelpText>What are the details of this task? What has been discussed? Usually filled in by the Sales Rep after the conversation as documentation. Can also be used in scheduled calls for longer input if necessary</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
 </CustomField>

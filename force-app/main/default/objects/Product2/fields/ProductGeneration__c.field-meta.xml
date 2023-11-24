@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductGeneration__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Generation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>V_1</fullName>
+                <default>false</default>
+                <label>V-1</label>
+            </value>
+            <value>
+                <fullName>V0</fullName>
+                <default>false</default>
+                <label>V0</label>
+            </value>
+            <value>
+                <fullName>V1</fullName>
+                <default>false</default>
+                <label>V1</label>
+            </value>
+            <value>
+                <fullName>v2</fullName>
+                <default>false</default>
+                <label>v2</label>
+            </value>
+            <value>
+                <fullName>POS201609FR</fullName>
+                <default>false</default>
+                <label>POS201609FR</label>
+            </value>
+            <value>
+                <fullName>POS201708DEATCHFR (V2)</fullName>
+                <default>false</default>
+                <label>POS201708DEATCHFR (V2)</label>
+            </value>
+            <value>
+                <fullName>POS201507DEATCHnewPrice (V1)</fullName>
+                <default>false</default>
+                <label>POS201507DEATCHnewPrice (V1)</label>
+            </value>
+            <value>
+                <fullName>POS201507DEATCHoldPrice (V0)</fullName>
+                <default>false</default>
+                <label>POS201507DEATCHoldPrice (V0)</label>
+            </value>
+            <value>
+                <fullName>POS201109DEATCH (V-1)</fullName>
+                <default>false</default>
+                <label>POS201109DEATCH (V-1)</label>
+            </value>
+            <value>
+                <fullName>A</fullName>
+                <default>false</default>
+                <label>A</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>C</fullName>
+                <default>false</default>
+                <label>C</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

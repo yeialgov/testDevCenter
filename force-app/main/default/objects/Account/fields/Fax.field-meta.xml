@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Fax</fullName>
+    <inlineHelpText>Has the account a fax number we are supposed to use? If a relevant fax number is know please leave it here. DO NOT USE FOR ANY OTHER NUMBERS!</inlineHelpText>
     <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
 </CustomField>

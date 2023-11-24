@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Milest_Compl_Before_Case_Create</fullName>
+    <active>false</active>
+    <description>Validates that the milestone&apos;s Completion Date has occurred after
+the case&apos;s Date/Time Opened.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+true
+)</errorConditionFormula>
+    <errorMessage>The milestone Completion Date must occur after the date the case was
+created and before the case was closed.</errorMessage>
+</ValidationRule>

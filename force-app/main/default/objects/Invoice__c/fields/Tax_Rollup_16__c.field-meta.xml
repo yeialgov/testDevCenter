@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Rollup_16__c</fullName>
+    <externalId>false</externalId>
+    <label>Tax Rollup 16%</label>
+    <summarizedField>InvoiceLineItem__c.TaxAmount__c</summarizedField>
+    <summaryFilterItems>
+        <field>InvoiceLineItem__c.TaxCategory__c</field>
+        <operation>equals</operation>
+        <value>16%</value>
+    </summaryFilterItems>
+    <summaryForeignKey>InvoiceLineItem__c.Invoice__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

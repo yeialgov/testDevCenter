@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X002_Inbound_Leads_ALL_Regions</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Origin__c</columns>
+    <columns>Region__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>ALL: Inbound Leads</label>
+</ListView>

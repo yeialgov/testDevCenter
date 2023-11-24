@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Gets send to Salesagent if they have a task that is 3 days overdue</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Task three days overdue</name>
+    <style>none</style>
+    <subject>Task 3 days overdue! Opportunity at risk of expiration</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

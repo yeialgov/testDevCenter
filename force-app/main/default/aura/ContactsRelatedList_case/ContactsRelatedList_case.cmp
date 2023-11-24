@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global"
+                controller="LiveChatTranscriptController">
+    
+    <aura:attribute type="String" name="recordId" />
+    <aura:attribute type="Object" name="Case" />
+    <aura:attribute type="String" name="AcctId"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, CaseId"
+                      targetFields="{!v.Case}"/>
+
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getAcctId}"/>
+    <c:ContactsRelatedList recordId="{!v.AcctId}"/>
+</aura:component>

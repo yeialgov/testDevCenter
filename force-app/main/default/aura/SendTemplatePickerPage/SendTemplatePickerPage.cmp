@@ -1,0 +1,42 @@
+<aura:component implements="flexipage:availableForAllPageTypes" 
+                access="global" 
+                controller="NewQuoteController">
+
+    <aura:attribute name="sObjectName" type="String"/>
+    <aura:attribute name="sObjectId" type="String"/>
+    <aura:attribute name="Name" type="String"/>
+    <aura:attribute name="EmailText" type="String"/>
+    <aura:attribute name="Templates" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div style="margin-bottom:1rem;margin-left:50px;">
+	    <lightning:button iconName="utility:back" label="{!'Back to ' + v.sObjectName}" onclick="{!c.exit}"/>
+    </div>
+    
+    <div style="margin-bottom: 1rem;">
+        <table>
+            <tr>
+                <td style="text-align:right;padding-right:0.5rem;width:50px;">
+                    <lightning:buttonIcon iconName="utility:add" variant="border-inverse" onclick="{!c.AddNew}"/>
+                </td>
+                <td>
+                    <lightning:card title="Add a new Template">
+                        <div class="slds-card__header" style="margin-top: 1px solid black;">
+                            <lightning:input label="Template Name" name="test1" value="{!v.Name}"/>
+                        </div>
+                        <div class="slds-card__body slds-card__body_inner">
+                            <lightning:inputRichText variant="email" value="{!v.EmailText}"/>
+                        </div>
+                    </lightning:card>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <aura:iteration items="{!v.Templates}" var="Template">
+        <aura:if isTrue="{!Template.Default__c == null}">
+	        <c:SendTemplatePicker Template="{!Template}"/>
+        </aura:if>
+    </aura:iteration>
+    
+</aura:component>

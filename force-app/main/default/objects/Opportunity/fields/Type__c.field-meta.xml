@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>First time customer with a new business or upselling for an existing customer? Set on creation. Determines available Subtypes</inlineHelpText>
+    <label>Type (Deprecated)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>new business</fullName>
+                <default>true</default>
+                <label>new business</label>
+            </value>
+            <value>
+                <fullName>upselling</fullName>
+                <default>false</default>
+                <label>upselling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

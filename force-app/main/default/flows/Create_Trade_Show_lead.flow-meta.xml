@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>myVariable_waitStartTimeAssignment</name>
+        <label>myVariable_waitStartTimeAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>New Form incoming</label>
+        </rules>
+    </decisions>
+    <description>https://jira.orderbird.com/browse/CDS-1187</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&apos;Prio: &apos; + TEXT([Trade_Show_Form__c].Prio__c) + &apos; // &apos; +
+TEXT([Trade_Show_Form__c].Type__c ) + &apos; // &apos; +
+&apos;Talked to: &apos; +[Trade_Show_Form__c].Owner:User.FirstName + &apos; // &apos; +
+&apos;Start Date: &apos; + TEXT([Trade_Show_Form__c].Planned_Start_Date__c) + &apos; // &apos; +
+&apos;Contact on &apos; + TEXT([Trade_Show_Form__c].Date_for_Contact__c) + &apos; // &apos; +
+
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Zeitgold__c)) ,&apos;&apos;, &apos;Zeitgold: &apos; + TEXT([Trade_Show_Form__c].Zeitgold__c ) + &apos; // &apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Website__c)) ,&apos;&apos;, &apos;Website: &apos; + TEXT([Trade_Show_Form__c].Website__c ) + &apos; // &apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Cashbook__c)) ,&apos;&apos;, &apos;Cashbook: &apos; + TEXT([Trade_Show_Form__c].Cashbook__c ) + &apos; // &apos;) +
+
+
+IF(ISBLANK([Trade_Show_Form__c].Comments__c) ,&apos;&apos;, &apos;Additional Info: &apos; +[Trade_Show_Form__c].Comments__c  + &apos; // &apos;) +
+
+
+&apos;Offer: &apos; + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Starter_Package__c )) ,&apos;&apos;, &apos;Starter Package &apos; + TEXT([Trade_Show_Form__c].Starter_Package__c )) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].iPad__c )) ,&apos;&apos;,&apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].iPad__c)  + &apos;x iPad 9.7&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Stand__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].Stand__c ) + &apos;x Stand&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].iPad_Pro__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].iPad_Pro__c ) + &apos;x iPad Pro&apos;) + 
+ 
+IF(ISBLANK(TEXT([Trade_Show_Form__c].iPod_Touch__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].iPod_Touch__c ) + &apos;x iPod Touch&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].JoJo_Case__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].JoJo_Case__c ) + &apos;x JoJo Case&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Card_Reader__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].Card_Reader__c ) + &apos;x Card Reader&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Printer__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].Printer__c ) + &apos;x Printer&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Cash_Drawer__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].Cash_Drawer__c ) + &apos;x Cash Drawer&apos;) +
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Router__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].Router__c ) + &apos;x Router&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].Service_License__c )) ,&apos;&apos;, &apos; &amp;&amp; Service License: &apos; + TEXT([Trade_Show_Form__c].Service_License__c )) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].DL_Month__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].DL_Month__c ) + &apos;x ML&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].DL_Year__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].DL_Year__c ) + &apos;x YL&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].DL_3_Years__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].DL_3_Years__c ) + &apos;x 3YL&apos;) + 
+
+IF(ISBLANK(TEXT([Trade_Show_Form__c].DL_Lifetime__c )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT([Trade_Show_Form__c].DL_Lifetime__c ) + &apos;x Lifetime&apos;) + 
+
+IF([Trade_Show_Form__c].Basic_Onside_Installation__c,&apos; &amp;&amp; Basic Onside Installment&apos;,&apos;&apos;) 
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A1_4273440398</name>
+        <dataType>String</dataType>
+        <expression>&apos;Prio: &apos; + TEXT({!myVariable_current.Prio__c}) + &apos; // &apos; +
+TEXT({!myVariable_current.Type__c} ) + &apos; // &apos; +
+&apos;Talked to: &apos; +{!myVariable_current.Owner:User.FirstName} + &apos; // &apos; +
+&apos;Start Date: &apos; + TEXT({!myVariable_current.Planned_Start_Date__c}) + &apos; // &apos; +
+&apos;Contact on &apos; + TEXT({!myVariable_current.Date_for_Contact__c}) + &apos; // &apos; +
+
+
+IF(ISBLANK(TEXT({!myVariable_current.Zeitgold__c})) ,&apos;&apos;, &apos;Zeitgold: &apos; + TEXT({!myVariable_current.Zeitgold__c} ) + &apos; // &apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Website__c})) ,&apos;&apos;, &apos;Website: &apos; + TEXT({!myVariable_current.Website__c} ) + &apos; // &apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Cashbook__c})) ,&apos;&apos;, &apos;Cashbook: &apos; + TEXT({!myVariable_current.Cashbook__c} ) + &apos; // &apos;) +
+
+
+IF(ISBLANK({!myVariable_current.Comments__c}) ,&apos;&apos;, &apos;Additional Info: &apos; +{!myVariable_current.Comments__c}  + &apos; // &apos;) +
+
+
+&apos;Offer: &apos; + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Starter_Package__c} )) ,&apos;&apos;, &apos;Starter Package &apos; + TEXT({!myVariable_current.Starter_Package__c} )) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.iPad__c} )) ,&apos;&apos;,&apos; &amp;&amp; &apos; + TEXT({!myVariable_current.iPad__c})  + &apos;x iPad 9.7&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Stand__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.Stand__c} ) + &apos;x Stand&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.iPad_Pro__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.iPad_Pro__c} ) + &apos;x iPad Pro&apos;) + 
+ 
+IF(ISBLANK(TEXT({!myVariable_current.iPod_Touch__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.iPod_Touch__c} ) + &apos;x iPod Touch&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.JoJo_Case__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.JoJo_Case__c} ) + &apos;x JoJo Case&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Card_Reader__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.Card_Reader__c} ) + &apos;x Card Reader&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Printer__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.Printer__c} ) + &apos;x Printer&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Cash_Drawer__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.Cash_Drawer__c} ) + &apos;x Cash Drawer&apos;) +
+
+IF(ISBLANK(TEXT({!myVariable_current.Router__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.Router__c} ) + &apos;x Router&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.Service_License__c} )) ,&apos;&apos;, &apos; &amp;&amp; Service License: &apos; + TEXT({!myVariable_current.Service_License__c} )) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.DL_Month__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.DL_Month__c} ) + &apos;x ML&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.DL_Year__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.DL_Year__c} ) + &apos;x YL&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.DL_3_Years__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.DL_3_Years__c} ) + &apos;x 3YL&apos;) + 
+
+IF(ISBLANK(TEXT({!myVariable_current.DL_Lifetime__c} )) ,&apos;&apos;, &apos; &amp;&amp; &apos; + TEXT({!myVariable_current.DL_Lifetime__c} ) + &apos;x Lifetime&apos;) + 
+
+IF({!myVariable_current.Basic_Onside_Installation__c},&apos; &amp;&amp; Basic Onside Installment&apos;,&apos;&apos;)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>[Trade_Show_Form__c].Tradeshow__c  + &apos; - &apos; + TEXT([Trade_Show_Form__c].Type__c )</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A1_3057553999</name>
+        <dataType>String</dataType>
+        <expression>{!myVariable_current.Tradeshow__c}  + &apos; - &apos; + TEXT({!myVariable_current.Type__c} )</expression>
+    </formulas>
+    <formulas>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>true</expression>
+    </formulas>
+    <interviewLabel>Create_Trade_Show_lead-2_InterviewLabel</interviewLabel>
+    <label>Create Trade Show lead</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Trade_Show_Form__c</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onCreateOnly</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordCreates>
+        <name>myRule_1_A1</name>
+        <label>Create Lead</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>City</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>City</field>
+            <value>
+                <elementReference>myVariable_current.City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Comments</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Comments__c</field>
+            <value>
+                <elementReference>formula_2_myRule_1_A1_4273440398</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Venue name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Company</field>
+            <value>
+                <elementReference>myVariable_current.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Country</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Country</field>
+            <value>
+                <elementReference>myVariable_current.Country__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Email</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Email</field>
+            <value>
+                <elementReference>myVariable_current.Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>First Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>FirstName</field>
+            <value>
+                <elementReference>myVariable_current.First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>LAC ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>LAC_ID__c</field>
+            <value>
+                <elementReference>myVariable_current.LAC_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Last Name</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>LastName</field>
+            <value>
+                <elementReference>myVariable_current.Last_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Web2Lead Origin</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Origin__c</field>
+            <value>
+                <elementReference>formula_3_myRule_1_A1_3057553999</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Owner ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Group;User</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>myVariable_current.OwnerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Phone</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Phone</field>
+            <value>
+                <elementReference>myVariable_current.Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Zip/Postal Code</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>PostalCode</field>
+            <value>
+                <elementReference>myVariable_current.ZIP__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Primary Language</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>PrimaryLanguage__c</field>
+            <value>
+                <elementReference>myVariable_current.Primary_Language__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Status</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Street</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Street</field>
+            <value>
+                <elementReference>myVariable_current.Street__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Trade Show Form</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Trade_Show_Form__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Trade_Show_Form__c</field>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordCreates>
+    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Trade_Show_Form__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Trade_Show_Form__c</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_waitStartTimeVariable</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Flow.CurrentDateTime</elementReference>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>MY orderbird Login | Passwort vergessen | abgelaufener Registrierungslink</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE MINI MY orderbird Login</name>
+    <style>none</style>
+    <subject>MINI by orderbird: Logge Dich jetzt in MY orderbird ein</subject>
+    <textOnly>Willkommen auf MY orderbird
+
+Hallo {!Contact.FirstName},
+
+
+und Gratulation zur Registrierung auf MY orderbird!
+
+
+Dein nächster Schritt
+
+Logge Dich auf MY orderbird ein: Öffne my.orderbird.com und melde Dich mit Deiner E-Mailadresse {!Account.myOrderbirdEmail__c} und Deinem Passwort an.
+
+
+Passwort vergessen? Ungültiger Registrierungslink?
+
+Falls Du Dein Passwort nicht mehr weißt oder der Registrierungslink nicht mehr gültig ist, öffne my.orderbird.com und klicke auf &quot;Passwort vergessen&quot;.
+
+Setze dann Dein Passwort zurück und logge Dich ein - auch auf Deinem MINI by orderbird.
+
+Solltest Du noch Fragen oder Anregungen haben, erreichst Du uns…
+
+wochentags von 10-16 Uhr auch über den Chat in Deinem MY orderbird Account,
+
+über unser Anfrage-Formular,
+oder Du antwortest mir einfach auf diese E-Mail.
+
+Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter supportmini.orderbird.com.
+
+Vielen Dank und liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

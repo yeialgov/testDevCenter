@@ -9,7 +9,10 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Idea</tabs>
-    <tabs>standard-IdeaTheme</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Payment__c</tabs>
+    <tabs>CaseSolution__c</tabs>
+    <tabs>Trade_Show_Form__c</tabs>
+    <tabs>Work_Order__c</tabs>
 </CustomApplication>

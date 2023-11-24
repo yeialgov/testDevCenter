@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubCategory__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sub-Category of this case. Depends on Category</inlineHelpText>
+    <label>SubCategory (old)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(User) Training Issue</fullName>
+                <default>false</default>
+                <label>(User) Training Issue</label>
+            </value>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Apple Device</fullName>
+                <default>false</default>
+                <label>Apple Device</label>
+            </value>
+            <value>
+                <fullName>Apple Devices</fullName>
+                <default>false</default>
+                <label>Apple Devices</label>
+            </value>
+            <value>
+                <fullName>Backend</fullName>
+                <default>false</default>
+                <label>Backend</label>
+            </value>
+            <value>
+                <fullName>Belege</fullName>
+                <default>false</default>
+                <label>Belege</label>
+            </value>
+            <value>
+                <fullName>Bill/Docket</fullName>
+                <default>false</default>
+                <label>Bill/Docket</label>
+            </value>
+            <value>
+                <fullName>Bug Report - Salesforce</fullName>
+                <default>false</default>
+                <label>Bug Report - Salesforce</label>
+            </value>
+            <value>
+                <fullName>Bug Report - Zuora</fullName>
+                <default>false</default>
+                <label>Bug Report - Zuora</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Cardreader</fullName>
+                <default>false</default>
+                <label>Cardreader</label>
+            </value>
+            <value>
+                <fullName>Cashbox</fullName>
+                <default>false</default>
+                <label>Cashbox</label>
+            </value>
+            <value>
+                <fullName>Cashdrawer</fullName>
+                <default>false</default>
+                <label>Cashdrawer</label>
+            </value>
+            <value>
+                <fullName>Cash Drawer &amp; Components</fullName>
+                <default>false</default>
+                <label>Cash Drawer &amp; Components</label>
+            </value>
+            <value>
+                <fullName>Could not be reached</fullName>
+                <default>false</default>
+                <label>Could not be reached</label>
+            </value>
+            <value>
+                <fullName>Critique</fullName>
+                <default>false</default>
+                <label>Critique</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>Device Integration</fullName>
+                <default>false</default>
+                <label>Device Integration</label>
+            </value>
+            <value>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+                <label>Downgrade</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Exports</fullName>
+                <default>false</default>
+                <label>Exports</label>
+            </value>
+            <value>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+                <label>Feature Request</label>
+            </value>
+            <value>
+                <fullName>First Steps</fullName>
+                <default>false</default>
+                <label>First Steps</label>
+            </value>
+            <value>
+                <fullName>Fiscal Trust</fullName>
+                <default>false</default>
+                <label>Fiscal Trust</label>
+            </value>
+            <value>
+                <fullName>Food Notify</fullName>
+                <default>false</default>
+                <label>Food Notify</label>
+            </value>
+            <value>
+                <fullName>General Question</fullName>
+                <default>false</default>
+                <label>General Question</label>
+            </value>
+            <value>
+                <fullName>Guest Wifi</fullName>
+                <default>false</default>
+                <label>Guest Wifi</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+            <value>
+                <fullName>Internal Wifi</fullName>
+                <default>false</default>
+                <label>Internal Wifi</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>iPad Stand</fullName>
+                <default>false</default>
+                <label>iPad Stand</label>
+            </value>
+            <value>
+                <fullName>Journal</fullName>
+                <default>false</default>
+                <label>Journal</label>
+            </value>
+            <value>
+                <fullName>Licence</fullName>
+                <default>false</default>
+                <label>Licence</label>
+            </value>
+            <value>
+                <fullName>Login Issue</fullName>
+                <default>false</default>
+                <label>Login Issue</label>
+            </value>
+            <value>
+                <fullName>Lunchio</fullName>
+                <default>false</default>
+                <label>Lunchio</label>
+            </value>
+            <value>
+                <fullName>Masterdata</fullName>
+                <default>false</default>
+                <label>Masterdata</label>
+            </value>
+            <value>
+                <fullName>Master Data</fullName>
+                <default>false</default>
+                <label>Master Data</label>
+            </value>
+            <value>
+                <fullName>Menu Service</fullName>
+                <default>false</default>
+                <label>Menu Service</label>
+            </value>
+            <value>
+                <fullName>my.orderbird</fullName>
+                <default>false</default>
+                <label>my.orderbird</label>
+            </value>
+            <value>
+                <fullName>myOB</fullName>
+                <default>false</default>
+                <label>myOB</label>
+            </value>
+            <value>
+                <fullName>n/a (please specify in case comments)</fullName>
+                <default>false</default>
+                <label>n/a (please specify in case comments)</label>
+            </value>
+            <value>
+                <fullName>NEST: escalated issues to SFDC/ Zuora Support</fullName>
+                <default>false</default>
+                <label>NEST: escalated issues to SFDC/ Zuora Support</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>No Account</fullName>
+                <default>false</default>
+                <label>No Account</label>
+            </value>
+            <value>
+                <fullName>Not Reachable</fullName>
+                <default>false</default>
+                <label>Not Reachable</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Online Shop</fullName>
+                <default>false</default>
+                <label>Online Shop</label>
+            </value>
+            <value>
+                <fullName>On-site Installation</fullName>
+                <default>false</default>
+                <label>On-site Installation</label>
+            </value>
+            <value>
+                <fullName>Open Orders</fullName>
+                <default>false</default>
+                <label>Open Orders</label>
+            </value>
+            <value>
+                <fullName>orderbird App</fullName>
+                <default>false</default>
+                <label>orderbird App</label>
+            </value>
+            <value>
+                <fullName>Ordering Pad</fullName>
+                <default>false</default>
+                <label>Ordering Pad</label>
+            </value>
+            <value>
+                <fullName>orderpad</fullName>
+                <default>false</default>
+                <label>orderpad</label>
+            </value>
+            <value>
+                <fullName>Other (see comments)</fullName>
+                <default>false</default>
+                <label>Other (see comments)</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Partners</fullName>
+                <default>false</default>
+                <label>Partners</label>
+            </value>
+            <value>
+                <fullName>Pay</fullName>
+                <default>false</default>
+                <label>Pay</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Printer &amp; Components</fullName>
+                <default>false</default>
+                <label>Printer &amp; Components</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Print Jobs</fullName>
+                <default>false</default>
+                <label>Print Jobs</label>
+            </value>
+            <value>
+                <fullName>Question Mark</fullName>
+                <default>false</default>
+                <label>Question Mark</label>
+            </value>
+            <value>
+                <fullName>Reporting (my.ob)</fullName>
+                <default>false</default>
+                <label>Reporting (my.ob)</label>
+            </value>
+            <value>
+                <fullName>Reporting (orderbird app)</fullName>
+                <default>false</default>
+                <label>Reporting (orderbird app)</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Resmio</fullName>
+                <default>false</default>
+                <label>Resmio</label>
+            </value>
+            <value>
+                <fullName>Router</fullName>
+                <default>false</default>
+                <label>Router</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Shift</fullName>
+                <default>false</default>
+                <label>Shift</label>
+            </value>
+            <value>
+                <fullName>Simple Order</fullName>
+                <default>false</default>
+                <label>Simple Order</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Stands &amp; Cases</fullName>
+                <default>false</default>
+                <label>Stands &amp; Cases</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>Superscale</fullName>
+                <default>false</default>
+                <label>Superscale</label>
+            </value>
+            <value>
+                <fullName>Swarm</fullName>
+                <default>false</default>
+                <label>Swarm</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Users</fullName>
+                <default>false</default>
+                <label>Users</label>
+            </value>
+            <value>
+                <fullName>Venue</fullName>
+                <default>false</default>
+                <label>Venue</label>
+            </value>
+            <value>
+                <fullName>WiFi Pro</fullName>
+                <default>false</default>
+                <label>WiFi Pro</label>
+            </value>
+            <value>
+                <fullName>Zenchef</fullName>
+                <default>false</default>
+                <label>Zenchef</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

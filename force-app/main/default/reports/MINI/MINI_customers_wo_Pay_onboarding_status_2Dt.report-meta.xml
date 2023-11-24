@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_51451402</developerName>
+        <masterLabel>grouped age</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.MyOrderbird_Log_ons__r$Age__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>6</to>
+            </sourceValues>
+            <value>1 week</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>6</from>
+                <to>13</to>
+            </sourceValues>
+            <value>2 weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>13</from>
+                <to>20</to>
+            </sourceValues>
+            <value>3 weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>20</from>
+                <to>27</to>
+            </sourceValues>
+            <value>4 weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>27</from>
+            </sourceValues>
+            <value>too old</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.MyOrderbird_Log_ons__r$Age__c</field>
+    </columns>
+    <columns>
+        <field>Account$Account_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account$Primary_Contact__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account$SF_BillTo_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Primary_Contact__c.Email</field>
+    </columns>
+    <columns>
+        <field>Account$PrimaryLanguage__c</field>
+    </columns>
+    <columns>
+        <field>Account.MyOrderbird_Log_ons__r$MyOrderbirdId__c</field>
+    </columns>
+    <columns>
+        <field>Account.MyOrderbird_Log_ons__r$BamboraId__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Needed in preparation of https://jira.orderbird.com/browse/CDS-2644</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.MyOrderbird_Log_ons__r$BamboraId__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Pay_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Account_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Lost Customer</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_51451402</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MINI customers w/o Pay onboarding status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>MyOb_Venues_w_Accounts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Account.MyOrderbird_Log_ons__r$Age__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

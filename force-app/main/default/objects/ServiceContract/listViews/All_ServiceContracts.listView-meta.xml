@@ -7,5 +7,5 @@
     <columns>CONTRACT.ENDDATE</columns>
     <columns>CONTRACT.STATUS</columns>
     <filterScope>Everything</filterScope>
-    <label>Alle Serviceverträge</label>
+    <label>All Service Contracts</label>
 </ListView>

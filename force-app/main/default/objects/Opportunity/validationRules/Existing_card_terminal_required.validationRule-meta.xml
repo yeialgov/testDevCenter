@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Existing_card_terminal_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+
+ISCHANGED(StageName),
+OR(
+ISPICKVAL(StageName , &quot;Proposal&quot;),
+ISPICKVAL(StageName , &quot;Committed&quot;)),
+ISPICKVAL( ExistingCardTerminal__c , &quot;&quot;)
+
+)</errorConditionFormula>
+    <errorDisplayField>ExistingCardTerminal__c</errorDisplayField>
+    <errorMessage>Please specify if the customer has an existing card Terminal!</errorMessage>
+</ValidationRule>

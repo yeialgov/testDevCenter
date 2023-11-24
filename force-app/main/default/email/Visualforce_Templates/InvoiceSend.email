@@ -1,0 +1,13 @@
+<messaging:emailTemplate subject="Orderbird Invoice #{!relatedTo.Name}" recipientType="Contact" relatedToType="Invoice__c">
+    <messaging:htmlEmailBody >
+        <p>Invoice Attached</p><br/>
+        <p>Need text...</p>
+    </messaging:htmlEmailBody>
+ 
+    <messaging:attachment renderAs="pdf" filename="Invoice">
+        <html>
+            <!--link rel='stylesheet' type='text/css' href='{!$Resource.accountstatementcss}' /-->
+            <c:invoiceBody InvoiceId="{!relatedTo.Id}"/>
+        </html>
+    </messaging:attachment>
+</messaging:emailTemplate>

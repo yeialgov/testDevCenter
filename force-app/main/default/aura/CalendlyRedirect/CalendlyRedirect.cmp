@@ -1,0 +1,19 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global" >
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Case" type="Object" />
+    
+    <force:recordData aura:id="caseData"
+                      recordId="{!v.recordId}"
+                      fields="Id,Owner.FirstName,Contact.FirstName,Contact.LastName,Contact.Email,Account.CustomerID__c,Contact.Phone,Account.Name"
+                      targetFields="{!v.Case}"
+                      recordUpdated="{!c.doInit}" />
+
+    <lightning:card class="pad">
+        Opened in new window...
+        <div style="margin-top:0.5rem;">
+	        <lightning:button label="Re-open" iconName="utility:new_window" onclick="{!c.doInit}" variant="brand"/>
+        </div>
+    </lightning:card>
+    
+</aura:component>

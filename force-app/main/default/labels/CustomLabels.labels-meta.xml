@@ -1,0 +1,2280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AMOUNT</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>ANY_PREVIOUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ANY PREVIOUS</shortDescription>
+        <value>Any previous</value>
+    </labels>
+    <labels>
+        <fullName>ANY_PREVIOUS_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ANY PREVIOUS 1</shortDescription>
+        <value>xx</value>
+    </labels>
+    <labels>
+        <fullName>ANY_PREVIOUS_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ANY PREVIOUS 2</shortDescription>
+        <value>xx</value>
+    </labels>
+    <labels>
+        <fullName>ARTICLE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ARTICLE</shortDescription>
+        <value>Article</value>
+    </labels>
+    <labels>
+        <fullName>Admin_Users</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>https://jira.orderbird.com/browse/SAL-64</shortDescription>
+        <value>0051t000004TSbP //  Yeisson Gonzalez
+0051t000003Slw6 // Safa Mrad
+00558000002YYmQ //Bart Collins
+0055800&lt;-- // --&gt;0001dIAW // Peter Helf
+00558000001b4lB // Max Seibert
+00558000002SbGL // Marketing User
+0051t000004S3sx // Marketing Email Site User
+00558000001bxV8 //Migration User
+00558000001KczG //System User
+00558000001KYzn // keylight@orderbird.com
+00558000001ba1l // Connection user
+00558000002SrSw // zuora@orderbird.com
+00558000001cwZ5 // Survey user
+00558000002ZBN5 // calendlyAPI
+00558000003Wynj // Customer Data API Guest User
+0051t000003J2zz // SFDC Admin
+00558000001FzzD // Automated Processes
+00558000003gMULAA2 // BI Data API</value>
+    </labels>
+    <labels>
+        <fullName>BACK_TO_OPTIONS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BACK TO OPTIONS</shortDescription>
+        <value>Back to Account overview</value>
+    </labels>
+    <labels>
+        <fullName>BALANCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BALANCE</shortDescription>
+        <value>Balance</value>
+    </labels>
+    <labels>
+        <fullName>BAR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BAR</shortDescription>
+        <value>Bar</value>
+    </labels>
+    <labels>
+        <fullName>BEGINNING_BALANCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BEGINNING_BALANCE</shortDescription>
+        <value>Beginning Balance</value>
+    </labels>
+    <labels>
+        <fullName>CANNOT_FIND_BILLING_INFO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CANNOT FIND BILLING INFO</shortDescription>
+        <value>We&apos;re having difficulty finding your Billing information. Please contact support.</value>
+    </labels>
+    <labels>
+        <fullName>CANNOT_VERIFY_CONTACT_SUPPORT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CANNOT VERIFY CONTACT SUPPORT</shortDescription>
+        <value>Please contact support if you are unable to verify.</value>
+    </labels>
+    <labels>
+        <fullName>CHARGE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CHARGE</shortDescription>
+        <value>Charge</value>
+    </labels>
+    <labels>
+        <fullName>CITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CITY</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageCancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Cancel</shortDescription>
+        <value>Cancel and Discard Changes</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageSave</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Save</shortDescription>
+        <value>Reached - Save &amp; Update</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageSaveAndEmail</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Save And Email</shortDescription>
+        <value>Not Reached - Save &amp; Send E-Mail</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageTaskTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Task Title</shortDescription>
+        <value>Communication Documentation</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageTextOther</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Text: Other</shortDescription>
+        <value>Other</value>
+    </labels>
+    <labels>
+        <fullName>COMLOGInterviewPageTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMLOG Title</shortDescription>
+        <value>Communication Interview</value>
+    </labels>
+    <labels>
+        <fullName>COMMENTS_QUESTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMMENTS QUESTION</shortDescription>
+        <value>Anything else you want to tell us?</value>
+    </labels>
+    <labels>
+        <fullName>COMPANY_NAME</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMPANY NAME</shortDescription>
+        <value>Company Name</value>
+    </labels>
+    <labels>
+        <fullName>CONFIGURE_INSIGHTS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONFIGURE INSIGHTS</shortDescription>
+        <value>Configure your Insights settings</value>
+    </labels>
+    <labels>
+        <fullName>CONFIGURE_LICENSES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONFIGURE LICENSES</shortDescription>
+        <value>Licenses</value>
+    </labels>
+    <labels>
+        <fullName>CONFIG_INSIGHTS_SETTIINGS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONFIG INSIGHTS SETTIINGS</shortDescription>
+        <value>Configure your email settings</value>
+    </labels>
+    <labels>
+        <fullName>CONFING_INSIGHTS_SUB_MANAGEMENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONFING INSIGHTS SUB MANAGEMENT</shortDescription>
+        <value>Configure your Insight settings:</value>
+    </labels>
+    <labels>
+        <fullName>CONFIRMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONFIRMATION</shortDescription>
+        <value>Confirmation</value>
+    </labels>
+    <labels>
+        <fullName>CONTACT_PERSON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CONTACT_PERSON</shortDescription>
+        <value>Contact Person</value>
+    </labels>
+    <labels>
+        <fullName>CORRECTED_INVOICE_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CORRECTED INVOICE AMOUNT</shortDescription>
+        <value>Corrected invoice amount:</value>
+    </labels>
+    <labels>
+        <fullName>CREDIT_MEMO_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CREDIT MEMO DATE</shortDescription>
+        <value>Credit Memo Date</value>
+    </labels>
+    <labels>
+        <fullName>CURRENCY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CURRENCY</shortDescription>
+        <value>Currency</value>
+    </labels>
+    <labels>
+        <fullName>CURRENT_EMAIL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CURRENT EMAIL</shortDescription>
+        <value>Update currently registered email for receiving Insights information</value>
+    </labels>
+    <labels>
+        <fullName>CURRENT_EMAIL_ADDR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CURRENT EMAIL ADDR</shortDescription>
+        <value>Registered email:</value>
+    </labels>
+    <labels>
+        <fullName>CUSTOMER_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CUSTOMER_ID</shortDescription>
+        <value>Customer ID</value>
+    </labels>
+    <labels>
+        <fullName>CUSTOMER_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CUSTOMER_NUMBER</shortDescription>
+        <value>Customer number</value>
+    </labels>
+    <labels>
+        <fullName>DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DATE</shortDescription>
+        <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>DATED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DATED</shortDescription>
+        <value>dated</value>
+    </labels>
+    <labels>
+        <fullName>DAYS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DAYS</shortDescription>
+        <value>Days</value>
+    </labels>
+    <labels>
+        <fullName>DEAR_TEAM_AT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEAR TEAM AT</shortDescription>
+        <value>Dear team at</value>
+    </labels>
+    <labels>
+        <fullName>DEPARTMENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEPARTMENT</shortDescription>
+        <value>Department</value>
+    </labels>
+    <labels>
+        <fullName>DESCRIPTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DESCRIPTION</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>DESKTOP_ONLY_DOWNLOAD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DESKTOP ONLY DOWNLOAD</shortDescription>
+        <value>Downloading the necessary documents is possible only via PC, not via mobile devices.</value>
+    </labels>
+    <labels>
+        <fullName>DIFFERENCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DIFFERENCE</shortDescription>
+        <value>Difference:</value>
+    </labels>
+    <labels>
+        <fullName>DOWNLOAD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DOWNLOAD</shortDescription>
+        <value>Download</value>
+    </labels>
+    <labels>
+        <fullName>DOWNLOAD_LETTER_AS_PDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DOWNLOAD LETTER AS PDF</shortDescription>
+        <value>Download the Letter as PDF</value>
+    </labels>
+    <labels>
+        <fullName>DOWNLOAD_PAST_INVOICES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DOWNLOAD PAST INVOICES</shortDescription>
+        <value>Download Past Invoices</value>
+    </labels>
+    <labels>
+        <fullName>DOWNLOAD_PAST_INVOICES_DESCRIPTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DOWNLOAD PAST INVOICES DESCRIPTION</shortDescription>
+        <value>View details and download PDFs of invoices you have been sent by orderbird.</value>
+    </labels>
+    <labels>
+        <fullName>DUE_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUE DATE</shortDescription>
+        <value>Due date</value>
+    </labels>
+    <labels>
+        <fullName>DUE_IMMEDIATELY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUE IMMEDIATELY</shortDescription>
+        <value>Due immediately</value>
+    </labels>
+    <labels>
+        <fullName>DUE_UPON_RECEIPT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUE UPON RECEIPT</shortDescription>
+        <value>Due Upon Receipt</value>
+    </labels>
+    <labels>
+        <fullName>EMAIL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMAIL</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>EMAIL_FINANCE_OFFICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EMAIL FINANCE OFFICE</shortDescription>
+        <value>Email Finance Office</value>
+    </labels>
+    <labels>
+        <fullName>ERROR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERROR</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>Error_Deleting_Demos</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Deleting Demos</shortDescription>
+        <value>It is not possible to delete Demos</value>
+    </labels>
+    <labels>
+        <fullName>FISCALIZATION_ONLY_IN_GERMANY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FISCALIZATION ONLY IN GERMANY</shortDescription>
+        <value>Lucky for you, there is nothing to do here for you! The letter to extend a TSE Grace Period is only applicable for customers in Germany</value>
+    </labels>
+    <labels>
+        <fullName>FOOTER_HEADING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FOOTER HEADING</shortDescription>
+        <value>Evolve your hospitality business!</value>
+    </labels>
+    <labels>
+        <fullName>FOR_INVOICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FOR INVOICE</shortDescription>
+        <value>for invoice</value>
+    </labels>
+    <labels>
+        <fullName>FROM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FROM</shortDescription>
+        <value>from</value>
+    </labels>
+    <labels>
+        <fullName>GENERAL_ERROR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GENERAL ERROR</shortDescription>
+        <value>An error has occurred!</value>
+    </labels>
+    <labels>
+        <fullName>GERMANY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GERMANY</shortDescription>
+        <value>Germany</value>
+    </labels>
+    <labels>
+        <fullName>GRAND_TOTAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GRAND TOTAL</shortDescription>
+        <value>Grand total</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHTS_DESCRIPTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHTS DESCRIPTION</shortDescription>
+        <value>Configure Insight settings: email recipient, subscription status</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_METRICS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT METRICS</shortDescription>
+        <value>Configure Insight Metrics:</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_METRIC_AVG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT METRIC AVG</shortDescription>
+        <value>Average Revenue:</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_METRIC_FOOD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT METRIC FOOD</shortDescription>
+        <value>Food-Drinks Ratio:</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_METRIC_REVE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT METRIC REVE</shortDescription>
+        <value>Hourly Revenue:</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_METRIC_UPD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT METRIC UPD</shortDescription>
+        <value>Update Metrics</value>
+    </labels>
+    <labels>
+        <fullName>INSIGHT_NO_EMAIL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSIGHT NO EMAIL</shortDescription>
+        <value>Email address cannot be blank!</value>
+    </labels>
+    <labels>
+        <fullName>INSTAL_PMT_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INSTAL PMT 3</shortDescription>
+        <value>Instalment Payment (3 Inst.)</value>
+    </labels>
+    <labels>
+        <fullName>INTERNET</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INTERNET</shortDescription>
+        <value>Web</value>
+    </labels>
+    <labels>
+        <fullName>INVALID_TOKEN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INVALID TOKEN</shortDescription>
+        <value>The link has expired, please use a newer Insights email</value>
+    </labels>
+    <labels>
+        <fullName>INVOICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INVOICE</shortDescription>
+        <value>Invoice</value>
+    </labels>
+    <labels>
+        <fullName>INVOICES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Invoices</shortDescription>
+        <value>Invoices</value>
+    </labels>
+    <labels>
+        <fullName>INVOICE_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INVOICE DATE</shortDescription>
+        <value>Invoice date</value>
+    </labels>
+    <labels>
+        <fullName>INVOICE_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INVOICE NUMBER</shortDescription>
+        <value>Invoice Number</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 1 1</shortDescription>
+        <value>Thank you for choosing</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 1 2</shortDescription>
+        <value>Europe&apos;s leading iPad POS for the hospitality industry.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_2m</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_1_2m</shortDescription>
+        <value>MINI by orderbird, the smart and mobile POS.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 1 3</shortDescription>
+        <value>Following charges apply for our products and services:</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_3cm</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 1 3cm</shortDescription>
+        <value>Following items will be credited to you</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_1_vat_adj</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_1_vat_adj</shortDescription>
+        <value>Due to the temporary reduction of the VAT rate by legislation, there is a correction of the VAT of the above invoice number.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 2</shortDescription>
+        <value>The date of delivery is found on the Delivery note.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_2_vat_adj</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_2_vat_adj</shortDescription>
+        <value>The tax rate amount of the following services is corrected because the tax rate amount in the period of service provision differs with the tax rate amount at the time of fee collection.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 3</shortDescription>
+        <value>Items on this invoice are either subject to the intra-community supply of goods or to the reverse charge method.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_3_vat_adj</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_3_vat_adj</shortDescription>
+        <value>The following items on the original invoice are affected:</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 4</shortDescription>
+        <value>Items on this invoice are tax-exempt export deliveries or non-taxable services.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_4_vat_adj</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_4_vat_adj</shortDescription>
+        <value>Negative invoice amounts represent a credit on your orderbird account.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_5_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 5 1</shortDescription>
+        <value>Our General Terms &amp; Conditions apply, which are available at</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_5_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 5 2</shortDescription>
+        <value>http://www.orderbird.com/en/terms</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_5_2m</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV_GRAF_5_2m</shortDescription>
+        <value>https://www.orderbird.com/de/agb-mini-by-orderbird</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_5_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 5 3</shortDescription>
+        <value>.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 6</shortDescription>
+        <value>Services are, unless otherwise specified, provided within the month of invoicing.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_7_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 7 1</shortDescription>
+        <value>In case you wire us the payment manually remember to include
+your customer number</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_7_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 7 2</shortDescription>
+        <value>as comment in the transfer.</value>
+    </labels>
+    <labels>
+        <fullName>INV_GRAF_8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>INV GRAF 8</shortDescription>
+        <value>Customer Name:</value>
+    </labels>
+    <labels>
+        <fullName>KIND_REGARDS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KIND REGARDS</shortDescription>
+        <value>Kind regards</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_AddQuestion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Question</shortDescription>
+        <value>Add Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Anonymous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Anonymous</shortDescription>
+        <value>Anonymous</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Answer_as</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Answer as</shortDescription>
+        <value>Answer as</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter</shortDescription>
+        <value>Chatter</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter_Link</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter Link</shortDescription>
+        <value>Chatter Link</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Community</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Community</shortDescription>
+        <value>Community</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Edit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_Anonymous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link, Anonymous</shortDescription>
+        <value>Email Link, Anonymous</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Case_Merge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact &amp; Case Merge</shortDescription>
+        <value>Email Link w/ Contact &amp; Case Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Merge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact Merge</shortDescription>
+        <value>Email Link w/ Contact Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_External_Please_Create_Site</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For external facing surveys, please create a site first.  You may still create i</shortDescription>
+        <value>For external facing surveys, please create a site first.  You may still create internal surveys without creating a site.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_For_community_assistance_with_Survey_Force</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For community assistance with Survey Force</shortDescription>
+        <value>For community assistance with Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Getting_Help</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Help</shortDescription>
+        <value>Getting Help</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_HeaderAndThankYou</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header and Thank You</shortDescription>
+        <value>Header, Thank You &amp; CSS</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Installation_Guide</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Installation Guide</shortDescription>
+        <value>Installation Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Learn_More</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Learn More</shortDescription>
+        <value>Learn More</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeANewSurvey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make A New Survey</shortDescription>
+        <value>Make A New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeNewSurvey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make New Survey</shortDescription>
+        <value>Make New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Make_a_Sample_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make a Sample Survey</shortDescription>
+        <value>Make a Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Next_Steps</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next Steps</shortDescription>
+        <value>Next Steps</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_PleaseEnterTheList</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please enter the list</shortDescription>
+        <value>Please enter the list of answers/responses in the field below. Each value should be separated by a new line.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Question</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Question</shortDescription>
+        <value>Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Required</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required</shortDescription>
+        <value>required</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_RequiredQuestion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Question</shortDescription>
+        <value>Required Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Resources</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Results</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Results</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SELECTTYPE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>--SELECT--</shortDescription>
+        <value>--SELECT--</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Salesforce_Answers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Salesforce Answers</shortDescription>
+        <value>Salesforce Answers</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SaveOrder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save Order</shortDescription>
+        <value>Save Order</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SelectQuestionType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Question Type</shortDescription>
+        <value>Select Question Type</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share</shortDescription>
+        <value>Share</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share_My_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share My Survey</shortDescription>
+        <value>Share My Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Sharing_Options</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sharing Options</shortDescription>
+        <value>Sharing Options</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SubmitSurvey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submit Survey</shortDescription>
+        <value>Submit Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SurveyForceIsOpenSource</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SurveyForceIsOpenSource</shortDescription>
+        <value>Survey Force is Open Source software.  We welcome your issue reports, ideas, documentation, code tweaks and all other participation.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_is_unsupported</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force is unsupported</shortDescription>
+        <value>Survey Force is unsupported.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_on_Github</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force on Github</shortDescription>
+        <value>Survey Force on Github</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Submitted_Thank_you</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your survey has been submitted. Thank you for taking our survey.</shortDescription>
+        <value>Your survey has been submitted. Thank you for taking our survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_To_submit_ideas_or_issues</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To submit ideas or issues</shortDescription>
+        <value>To submit ideas or issues</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_User_Guide</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>User Guide</shortDescription>
+        <value>User Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Results_In_New_Window</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Results In New Window</shortDescription>
+        <value>View Results In New Window</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Sample_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Sample Survey</shortDescription>
+        <value>View Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Welcome_to_Survey_Force</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Welcome to Survey Force</shortDescription>
+        <value>Welcome to Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X1_Create_a_sample_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>1. Create a sample survey by clicking the button below.</shortDescription>
+        <value>1. Create a sample survey by clicking the button below.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X2_External_Setup_Site</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>2. Set up a site if you would like to have external-facing surveys.</shortDescription>
+        <value>2. Set up a site if you would like to have external-facing surveys.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X3_Start_creating_your_first_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>3. Start creating your first survey.</shortDescription>
+        <value>3. Start creating your first survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_You_have_already_taken_this_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You have already taken this survey!</shortDescription>
+        <value>You have already taken this survey!</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Your_next_few_steps_are_easy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your next few steps are easy.</shortDescription>
+        <value>Your next few steps are easy.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_please_visit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>please visit</shortDescription>
+        <value>please visit</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04I5J000000Gvga_8209517</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04I5J000000Gvga_8209517</shortDescription>
+        <value>Don&apos;t worry, you can save the transcript after the chat ends. Click on &quot;Confirm Chat Ending&quot;, and then click on &quot;Save Transcript&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateEnd_04I5J000000Gvga_8950839</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateEnd_04I5J000000Gvga_8950839</shortDescription>
+        <value>Confirm Chat Ending</value>
+    </labels>
+    <labels>
+        <fullName>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogBo_04I5J000000Gvga_2719594</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_OfflineSupport_CloseConfirmation_ConfirmationDialogBo_04I5J000000Gvga_2719594</shortDescription>
+        <value>Thank you! We have received your message and will get back to you as soon as possible the next working day.</value>
+    </labels>
+    <labels>
+        <fullName>LA_OfflineSupport_SupportForm_HeaderText_04I5J000000Gvga_1187867</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_OfflineSupport_SupportForm_HeaderText_04I5J000000Gvga_1187867</shortDescription>
+        <value>Leave a message</value>
+    </labels>
+    <labels>
+        <fullName>LA_OfflineSupport_SupportForm_SupportFormButton_04I5J000000Gvga_9139959</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_OfflineSupport_SupportForm_SupportFormButton_04I5J000000Gvga_9139959</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>LA_PreChat_Base_BannerAltText_04I5J000000Gvga_1675559</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_PreChat_Base_BannerAltText_04I5J000000Gvga_1675559</shortDescription>
+        <value>https://orderbird--c.eu32.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=0685J0000009qbE&amp;operationContext=CHATTER&amp;contentId=05T5J000005xtdp</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_Error_ErrorNoConnectionBodyApology_04I5J000000Gvga_2563663</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_Error_ErrorNoConnectionBodyApology_04I5J000000Gvga_2563663</shortDescription>
+        <value>Hmmm... looks like we couldn’t connect you with our experts.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_Error_ErrorNoConnectionBodyRequest_04I5J000000Gvga_8841509</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_Error_ErrorNoConnectionBodyRequest_04I5J000000Gvga_8841509</shortDescription>
+        <value>Please try to start a new chat or refresh your page.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_Error_ErrorNoConnectionHeader_04I5J000000Gvga_8593969</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_Error_ErrorNoConnectionHeader_04I5J000000Gvga_8593969</shortDescription>
+        <value>Connection issue.</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingCancelChatRequest_04I5J000000Gvga_4812940</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingCancelChatRequest_04I5J000000Gvga_4812940</shortDescription>
+        <value>Leave the Chat</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_3_YEARS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE 3 YEARS</shortDescription>
+        <value>3 Years</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ACTI_CASHB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ACTI CASHB</shortDescription>
+        <value>How to activate Cashbook</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ACTI_GUEST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ACTI GUEST</shortDescription>
+        <value>How to activate Guestmanagement</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ADDITIONAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ADDITIONAL</shortDescription>
+        <value>Earn 350€ by recommending us to others or the new Owner :) 
+All your best in your future endeavours! :)</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ADDITIONAL_DEV</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ADDITIONAL DEV</shortDescription>
+        <value>Add additional device license(s)</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ADDI_ADD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ADDI ADD</shortDescription>
+        <value>Additional Licenses</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_ADD_DEVICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE ADD DEVICE</shortDescription>
+        <value>Add Devices</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE AMOUNT</shortDescription>
+        <value>Amount</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCELED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCELED</shortDescription>
+        <value>Canceled</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL_CALLBACK</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL CALLBACK</shortDescription>
+        <value>Can we contact you in case we want to understand your reasons better?</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL_DEV</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL DEV</shortDescription>
+        <value>Cancel all remaining licenses</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL_DEV_NO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL DEV NO</shortDescription>
+        <value>No, I don&apos;t want to cancel all licenses</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL_DEV_YES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL DEV YES</shortDescription>
+        <value>Yes, I want to cancel all licenses asap</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CANCEL_REASON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CANCEL REASON</shortDescription>
+        <value>Please tell us why you are cancelling the license?</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CASHBOOK</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CASHBOOK</shortDescription>
+        <value>Cashbook</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CLOSE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CLOSE</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_COMPLETE_CANCEL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE COMPLETE CANCEL</shortDescription>
+        <value>Complete Cancelation</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_CONFIRM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE CONFIRM</shortDescription>
+        <value>Thanks, we got your order. In 80% of cases we activate it in less than 1hr, latest in 24 hrs. If you need it faster, pls give our hotline a quick call.</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_DEVICE_LIC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE DEVICE LIC</shortDescription>
+        <value>Device Licenses</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_DEVINE_MO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE DEVINE MO</shortDescription>
+        <value>Device License</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_GUESTMGN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE GUESTMGN</shortDescription>
+        <value>Guestmanagement</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_HOW_CASHBOOK</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE HOW CASHBOOK</shortDescription>
+        <value>Please activate your Cashbook in the Orderbird App or in my orderbird. After the 14 days trial period we automatically create the cashbook license for you.
+If you want to cancel your cashbook license within 14 days you can do this here.</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_HOW_GUEST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE HOW GUEST</shortDescription>
+        <value>In oder to Activate Guestmanagement TO BE COMPLETED</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_MONTHLY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE MONTHLY</shortDescription>
+        <value>Monthly</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_OWNED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE_OWNED</shortDescription>
+        <value>Currently Owned</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_PRICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE PRICE</shortDescription>
+        <value>Price (excl. VAT)</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_REMOVE_DEV</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE REMOVE DEV</shortDescription>
+        <value>Remove License</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_SERVICEPERIOD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE SERVICEPERIOD</shortDescription>
+        <value>Service Period</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_SERVICE_LICENSE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE SERVICE LICENSE</shortDescription>
+        <value>Service License</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_START_DATE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE START DATE</shortDescription>
+        <value>Start Date</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_STATUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE STATUS</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_TSE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE TSE</shortDescription>
+        <value>TSE</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_YEARLY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE YEARLY</shortDescription>
+        <value>Yearly</value>
+    </labels>
+    <labels>
+        <fullName>LICENSE_YOUOWN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LICENSE YOUOWN</shortDescription>
+        <value>You currently own</value>
+    </labels>
+    <labels>
+        <fullName>MISSING_TSE_REDIRECT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MISSING TSE REDIRECT</shortDescription>
+        <value>It appears you do not have a TSE. The first step is to go through our fiscalization wizard.</value>
+    </labels>
+    <labels>
+        <fullName>MY_FINANCE_OFFICE_INFORMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MY FINANCE OFFICE INFORMATION</shortDescription>
+        <value>My Finance Office Information</value>
+    </labels>
+    <labels>
+        <fullName>MY_INFORMATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MY INFORMATION</shortDescription>
+        <value>My Information</value>
+    </labels>
+    <labels>
+        <fullName>NAME</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NAME</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>NEW_TOTAL_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NEW TOTAL AMOUNT</shortDescription>
+        <value>New Total Amount:</value>
+    </labels>
+    <labels>
+        <fullName>NO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NO</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>NPS_NOT_LIKELY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPS NOT LIKELY</shortDescription>
+        <value>Not at all likely</value>
+    </labels>
+    <labels>
+        <fullName>NPS_QUESTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPS QUESTION</shortDescription>
+        <value>How likely is it that you would recommend orderbird to a friend or colleague who has a business like yours?</value>
+    </labels>
+    <labels>
+        <fullName>NPS_SURVEY_COMPLETE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPS SURVEY COMPLETE</shortDescription>
+        <value>Thanks a lot for your feedback! It will help us to improve your experience with orderbird. This survey is not a support channel: if you need any help, you can write us at help@orderbird.com.</value>
+    </labels>
+    <labels>
+        <fullName>NPS_SURVEY_HEADING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPS SURVEY HEADING</shortDescription>
+        <value>Your opinion matters!</value>
+    </labels>
+    <labels>
+        <fullName>NPS_VERY_LIKELY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NPS VERY LIKELY</shortDescription>
+        <value>Extremely likely</value>
+    </labels>
+    <labels>
+        <fullName>NewLine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewLine</shortDescription>
+        <value>-
+-</value>
+    </labels>
+    <labels>
+        <fullName>OFFLINE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Offline</shortDescription>
+        <value>Offline</value>
+    </labels>
+    <labels>
+        <fullName>OF_THE_FOLLOWING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OF THE FOLLOWING</shortDescription>
+        <value>of the following:</value>
+    </labels>
+    <labels>
+        <fullName>OLD_TOTAL_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OLD TOTAL AMOUNT</shortDescription>
+        <value>Old Total Amount:</value>
+    </labels>
+    <labels>
+        <fullName>ONBOARDSTATUS_CASENOSUB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ONBOARDSTATUS_CASENOSUB</shortDescription>
+        <value>Awaiting Subscription</value>
+    </labels>
+    <labels>
+        <fullName>ONBOARDSTATUS_NOCASE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ONBOARDSTATUS_NOCASE</shortDescription>
+        <value>Awaiting Case</value>
+    </labels>
+    <labels>
+        <fullName>ONBOARDSTATUS_NOSUB</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ONBOARDSTATUS_NOSUB</shortDescription>
+        <value>No Onboarding</value>
+    </labels>
+    <labels>
+        <fullName>ONE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ONE</shortDescription>
+        <value>one</value>
+    </labels>
+    <labels>
+        <fullName>ONE_TIME_SECURITY_VERI</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ONE TIME SECURITY VERI</shortDescription>
+        <value>This verification is required only one time to ensure the security of your financial details.</value>
+    </labels>
+    <labels>
+        <fullName>ORDERBIRD_COUNSELLOR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ORDERBIRD COUNSELLOR</shortDescription>
+        <value>orderbird Counsellor</value>
+    </labels>
+    <labels>
+        <fullName>ORIGINALLY_BILLED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ORIGINALLY BILLED</shortDescription>
+        <value>Originally invoiced:</value>
+    </labels>
+    <labels>
+        <fullName>PAYMENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PAYMENT</shortDescription>
+        <value>Payment</value>
+    </labels>
+    <labels>
+        <fullName>PAYMENT_METHOD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PAYMENT METHOD</shortDescription>
+        <value>Payment method</value>
+    </labels>
+    <labels>
+        <fullName>PAYMENT_TERMS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PAYMENT TERMS</shortDescription>
+        <value>Terms of Payment</value>
+    </labels>
+    <labels>
+        <fullName>PAYPAL_LINK</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PayPal Link</shortDescription>
+        <value>Click here to pay with PayPal.</value>
+    </labels>
+    <labels>
+        <fullName>POSTAL_CODE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>POSTAL CODE</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>PREORDER_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pre-order Amount</shortDescription>
+        <value>Pre-order Amount</value>
+    </labels>
+    <labels>
+        <fullName>P_Base_Router</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Base Router</shortDescription>
+        <value>Base Router</value>
+    </labels>
+    <labels>
+        <fullName>P_Card_Reader_Miura_M010</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Card Reader Miura M010</shortDescription>
+        <value>Card Reader Miura M010</value>
+    </labels>
+    <labels>
+        <fullName>P_Cashbook_1_year</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Cashbook 1 year</shortDescription>
+        <value>Cashbook 1 year</value>
+    </labels>
+    <labels>
+        <fullName>P_Device_license_monthly</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Device license monthly</shortDescription>
+        <value>Device license monthly</value>
+    </labels>
+    <labels>
+        <fullName>P_Discount_Starter_Package</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Discount Starter Package</shortDescription>
+        <value>Discount Starter Package</value>
+    </labels>
+    <labels>
+        <fullName>P_Onboarding_Standard</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Onboarding Standard</shortDescription>
+        <value>Onboarding Standard</value>
+    </labels>
+    <labels>
+        <fullName>P_Printer_Epson_TM_m30_cable_bound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Printer Epson TM-m30 cable-bound</shortDescription>
+        <value>Printer Epson TM-m30 cable-bound</value>
+    </labels>
+    <labels>
+        <fullName>P_Service_charge_1_year</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P Service charge 1 year</shortDescription>
+        <value>Service charge 1 year</value>
+    </labels>
+    <labels>
+        <fullName>P_iPad_10_2_Wi_Fi_32GB_Space_Gray</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P iPad 10.2 Wi-Fi 32GB Space Gray</shortDescription>
+        <value>iPad 10.2 Wi-Fi 32GB Space Gray</value>
+    </labels>
+    <labels>
+        <fullName>P_orderbird_Starter_Package</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P orderbird Starter Package</shortDescription>
+        <value>orderbird Starter Package</value>
+    </labels>
+    <labels>
+        <fullName>P_orderbird_online_TSE_1_year</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P orderbird online TSE 1 year</shortDescription>
+        <value>orderbird online TSE 1 year</value>
+    </labels>
+    <labels>
+        <fullName>QUANTITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUANTITY</shortDescription>
+        <value>Quantity</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_B_TEXT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE B TEXT</shortDescription>
+        <value>With acceptance of this offer, Hardware and Service fees become due. You can use orderbird POS for free until 31.05.2021. On 01.06.2021 we will charge your bank account (SEPA mandate) for selected licenses.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_1_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 1 1</shortDescription>
+        <value>Thanks so much for your interest in</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_1_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 1 2</shortDescription>
+        <value>Europe&apos;s leading iPad POS for the hospitality industry!</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_1_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 1 3</shortDescription>
+        <value>As discussed, we are happy to send you this quote, which we found to be the most suitable for you
+and your business.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2 1</shortDescription>
+        <value>Please note: Your quote is only valid until</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2 2</shortDescription>
+        <value>.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2_3</shortDescription>
+        <value>To accept this offer, please wire EUR 199,00 as prepayment to the following bank account using</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2_4</shortDescription>
+        <value>as reference. Alternatively, use this</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2_5</shortDescription>
+        <value>to make your partial prepayment.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2_6</shortDescription>
+        <value>Please get in touch with us at any time when you would like to start using your orderbird POS system.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_GRAF_2_7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE GRAF 2_7</shortDescription>
+        <value>Please note: if we do not hear from you, we will activate the orderbird PRO license together with the online TSE no later than the end of the non-objection period, i.e. on 01.04.2021, 0.00 am.</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_HEADING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE HEADING</shortDescription>
+        <value>The best choice for you and more than 10,000 restaurant owners</value>
+    </labels>
+    <labels>
+        <fullName>QUOTE_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>QUOTE NUMBER</shortDescription>
+        <value>Quote Number</value>
+    </labels>
+    <labels>
+        <fullName>REFRESH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REFRESH</shortDescription>
+        <value>Refresh</value>
+    </labels>
+    <labels>
+        <fullName>REFRESH_TSE_INSTRUCTIONS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REFRESH TSE INSTRUCTIONS</shortDescription>
+        <value>You have made some changes in the section &quot;My information&quot;? Please click here to see if the displayed tax office is still correct:</value>
+    </labels>
+    <labels>
+        <fullName>REFUND</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REFUND</shortDescription>
+        <value>Refund</value>
+    </labels>
+    <labels>
+        <fullName>REQ_PROCESSED_FAILED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REQ PROCESSED FAILED</shortDescription>
+        <value>You&apos;re request could not be processed at this time</value>
+    </labels>
+    <labels>
+        <fullName>REQ_PROCESSED_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>REQ PROCESSED SUCCESS</shortDescription>
+        <value>Your request was processed successfully!</value>
+    </labels>
+    <labels>
+        <fullName>RESUBSCRIBE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RESUBSCRIBE</shortDescription>
+        <value>Re-Subscribe</value>
+    </labels>
+    <labels>
+        <fullName>RESUB_CONFIRM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RESUB CONFIRM</shortDescription>
+        <value>Please confirm the re-activation of your subscription to Insights</value>
+    </labels>
+    <labels>
+        <fullName>SEPA_DIRECT_DEBIT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEPA DIRECT DEBIT</shortDescription>
+        <value>SEPA Direct Debit</value>
+    </labels>
+    <labels>
+        <fullName>SERVICE_PERIOD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SERVICE PERIOD</shortDescription>
+        <value>Service period</value>
+    </labels>
+    <labels>
+        <fullName>SESSION_EXPIRED_MUST_REFRESH</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SESSION EXPIRED MUST REFRESH</shortDescription>
+        <value>Your session has expired and you need to refresh the page.</value>
+    </labels>
+    <labels>
+        <fullName>STATEMENT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STATEMENT</shortDescription>
+        <value>Statement</value>
+    </labels>
+    <labels>
+        <fullName>STATUS_SUBSCRIBED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STATUS SUBSCRIBED</shortDescription>
+        <value>Subscribed</value>
+    </labels>
+    <labels>
+        <fullName>STATUS_UNSUBSCRIBED</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STATUS UNSUBSCRIBED</shortDescription>
+        <value>Unsubscribed</value>
+    </labels>
+    <labels>
+        <fullName>STREET_ADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>STREET ADDRESS</shortDescription>
+        <value>Street Address</value>
+    </labels>
+    <labels>
+        <fullName>SUBCRIPTION_STATUS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUBCRIPTION STATUS</shortDescription>
+        <value>The current status of your subscription to Insight emails:</value>
+    </labels>
+    <labels>
+        <fullName>SUBMIT_BUTTON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUBMIT BUTTON</shortDescription>
+        <value>Submit</value>
+    </labels>
+    <labels>
+        <fullName>SUPPORTEMAILADDRESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SUPPORT EMAIL ADDRESS</shortDescription>
+        <value>help@orderbird.com</value>
+    </labels>
+    <labels>
+        <fullName>SURVEY_NOT_AVAILABLE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SURVEY NOT AVAILABLE</shortDescription>
+        <value>This survey is no longer available.</value>
+    </labels>
+    <labels>
+        <fullName>TAKE_ME_TO_FISCALIZATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TAKE ME TO FISCALIZATION</shortDescription>
+        <value>Take me to the Fiscalization Wizard</value>
+    </labels>
+    <labels>
+        <fullName>TAX_NUMBER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TAX NUMBER</shortDescription>
+        <value>Tax Number</value>
+    </labels>
+    <labels>
+        <fullName>TAX_TOTAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TAX TOTAL</shortDescription>
+        <value>VAT</value>
+    </labels>
+    <labels>
+        <fullName>TELEPHONE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TELEPHONE</shortDescription>
+        <value>Phone</value>
+    </labels>
+    <labels>
+        <fullName>TO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TO</shortDescription>
+        <value>to</value>
+    </labels>
+    <labels>
+        <fullName>TOTAL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TOTAL</shortDescription>
+        <value>Total</value>
+    </labels>
+    <labels>
+        <fullName>TOTAL_AFTER_DISCOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TOTAL AFTER DISCOUNT</shortDescription>
+        <value>Total after discount</value>
+    </labels>
+    <labels>
+        <fullName>TOTAL_AMOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TOTAL AMOUNT</shortDescription>
+        <value>Total Amount</value>
+    </labels>
+    <labels>
+        <fullName>TOTAL_LIST_PRICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TOTAL LIST PRICE</shortDescription>
+        <value>Total list price</value>
+    </labels>
+    <labels>
+        <fullName>TOTAL_PRICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TOTAL PRICE</shortDescription>
+        <value>Total Price</value>
+    </labels>
+    <labels>
+        <fullName>TO_THE_APPLICATION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TO THE APPLICATION</shortDescription>
+        <value>To the application</value>
+    </labels>
+    <labels>
+        <fullName>TO_VERIFY_PLEASE_ENTER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TO VERIFY PLEASE ENTER</shortDescription>
+        <value>To verify your account information, please enter</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_1_TEXT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD 1 TEXT</shortDescription>
+        <value>Download the Paragraph 148 letter requesting grace period extension for the implementation of a cloud-TSS as PDF</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_2_TEXT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD 2 TEXT</shortDescription>
+        <value>Download statement on delay of certification from fiskaly Germany GmbH as PDF</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_2_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD 2 URL</shortDescription>
+        <value>https://orderbird.my.salesforce.com/sfc/p/58000000PJMf/a/5J000000xU1N/SKZBQuFRFuSt4VL1PJEU3B0Yx.1m0e78_Md.jTiCwnw</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_3_TEXT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD 3 TEXT</shortDescription>
+        <value>Download statement on delay of certification from orderbird as POS provider and integrator as PDF</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_3_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD 3 URL</shortDescription>
+        <value>https://orderbird.my.salesforce.com/sfc/p/58000000PJMf/a/5J000000xU2x/io5LyF_7eTrmEci8DNDsV_6arpTg4iUQECERh2rBgpo</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_BODY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD BODY</shortDescription>
+        <value>Great, you have successfully sent the letter to your tax office. Now you can sit back and enjoy the good feeling of being on the safe side. If you want to read up again on what you sent to your tax office or if your auditor is in the shop and wants a copy of the documents, you can also download everything here:</value>
+    </labels>
+    <labels>
+        <fullName>TSE_148_DOWNLOAD_HEADING</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE 148 DOWNLOAD HEADING</shortDescription>
+        <value>Documents for letter requesting grace period extension for the implementation of a cloud-TSS</value>
+    </labels>
+    <labels>
+        <fullName>TSE_COMPLIANCE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE COMPLIANCE</shortDescription>
+        <value>TSE Compliance</value>
+    </labels>
+    <labels>
+        <fullName>TSE_COMPLIANCE_DESCRIPTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE COMPLIANCE DESCRIPTION</shortDescription>
+        <value>Create Paragraph 148 letter requesting grace period extension for the implementation of a cloud-TSS
+(Only applicable in Germany)
+
+Downloading the necessary documents is possible only via PC, not via mobile devices.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_BODY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION BODY</shortDescription>
+        <value>You have activated your TSE correctly and the TSE was fully certified by the German Federal Office for Information Security (BSI) on 28.05.2021.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_BODY_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION BODY 1</shortDescription>
+        <value>And now?</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_BODY_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION BODY 2</shortDescription>
+        <value>Soon the fully certified version of the TSE will be connected to your orderbird register. Until then, you will still see the status &quot;In Evaluation&quot; on your receipts. As a cash register operator, you are obliged to submit an application for the continued toleration of the use of a TSE with the status &quot;In Evaluierung&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_BODY_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION BODY 3</shortDescription>
+        <value>The good news is that you can have your application filled out completely automatically and submit it directly to your tax office within three minutes!</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_BODY_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION BODY 4</shortDescription>
+        <value>Tip: You can start the application process as often as you like. This gives you the opportunity to download the documents required for the application as a PDF here.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_EXPLANATION_HEAD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE EXPLANATION HEAD</shortDescription>
+        <value>Why do I have to submit an application?</value>
+    </labels>
+    <labels>
+        <fullName>TSE_FORM_BODY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE FORM BODY</shortDescription>
+        <value>This is the data we send to the tax office for you. Please check and correct possible errors, as you are responsible for the accuracy of the data.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_WARNING_0</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE WARNING 0</shortDescription>
+        <value>Based on your zip code, you will receive a suggestion for the tax office responsible for you. Please check if this is correct and adjust it if necessary.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_WARNING_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE WARNING 1</shortDescription>
+        <value>Please click on &quot;Download the Letter as PDF&quot;. Then send the application including the attachment manually to the above email address of your tax office with your email program.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_WARNING_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE WARNING 2</shortDescription>
+        <value>You are here by cell phone or tablet and nothing happens when you click on &quot;Mail application to your tax office&quot;? Then please open the page on a computer.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_WARNING_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE WARNING 3</shortDescription>
+        <value>You are on this page via computer and nothing happens or you get an &quot;error 400&quot; when you click on &quot;Email Finance Office&quot;? 
+Please click on &quot;Download the Letter&quot;. Afterwards you can send the application including the attachment manually to the above mentioned e-mail address of your tax office with your E-Mail-App.</value>
+    </labels>
+    <labels>
+        <fullName>TSE_WARNING_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE WARNING 4</shortDescription>
+        <value>Please make sure that no pop-up blocker in your browser blocks the download.</value>
+    </labels>
+    <labels>
+        <fullName>UNIT_PRICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UNIT PRICE</shortDescription>
+        <value>Unit Price</value>
+    </labels>
+    <labels>
+        <fullName>UNSUBSCRIBE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UNSUBSCRIBE</shortDescription>
+        <value>Unsubscribe</value>
+    </labels>
+    <labels>
+        <fullName>UNSUB_CONFIRM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UNSUB CONFIRM</shortDescription>
+        <value>Are you sure you want to unsubscribe?</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_EMAIL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE EMAIL</shortDescription>
+        <value>Update Email</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_ERROR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE ERROR</shortDescription>
+        <value>An error has occurred!</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_ERROR_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE ERROR MSG</shortDescription>
+        <value>Please refresh your browser window and try again!</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_IVALID_ERROR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE IVALID ERROR</shortDescription>
+        <value>Invalid email address</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_IVALID_ERROR_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE IVALID ERROR MSG</shortDescription>
+        <value>The email address you have entered is invalid. Please enter a valid email address!</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_SUCCESS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE SUCCESS</shortDescription>
+        <value>Success!</value>
+    </labels>
+    <labels>
+        <fullName>UPDATE_SUCCESS_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UPDATE SUCCESS MSG</shortDescription>
+        <value>The record has been updated successfully</value>
+    </labels>
+    <labels>
+        <fullName>VERIFICATION_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VERIFICATION ID</shortDescription>
+        <value>VERIFICATION ID</value>
+    </labels>
+    <labels>
+        <fullName>VERIFY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VERIFY</shortDescription>
+        <value>Verify</value>
+    </labels>
+    <labels>
+        <fullName>WIRE_TRANSFER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WIRE TRANSFER</shortDescription>
+        <value>Wire Transfer</value>
+    </labels>
+    <labels>
+        <fullName>YES</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YES</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>YOUR</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR</shortDescription>
+        <value>Your</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_CREDIT_MEMO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR CREDIT MEMO</shortDescription>
+        <value>Your credit memo</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_DISCOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR DISCOUNT</shortDescription>
+        <value>Your Discount</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_INVOICE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR INVOICE</shortDescription>
+        <value>Your invoice</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_INVOICE_CORRECTION</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR INVOICE CORRECTION</shortDescription>
+        <value>Your invoice correction</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_ORDERBIRD_ACCOUNT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR ORDERBIRD ACCOUNT</shortDescription>
+        <value>Your orderbird account</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_QUOTE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR QUOTE</shortDescription>
+        <value>Your quote</value>
+    </labels>
+    <labels>
+        <fullName>YOUR_VAT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>YOUR VAT ID</shortDescription>
+        <value>Your VAT ID</value>
+    </labels>
+    <labels>
+        <fullName>apostrophe</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>apostrophe</shortDescription>
+        <value>&apos;</value>
+    </labels>
+    <labels>
+        <fullName>linebreak</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>linebreak</shortDescription>
+        <value>-
+-</value>
+    </labels>
+</CustomLabels>

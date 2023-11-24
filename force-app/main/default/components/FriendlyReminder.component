@@ -1,0 +1,4 @@
+<apex:component controller="dunningMessageController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!acctId}" name="AccountId" type="String" description="Account Id"/>
+    <apex:outputText value="{!d0Text}" escape="false"/>
+</apex:component>

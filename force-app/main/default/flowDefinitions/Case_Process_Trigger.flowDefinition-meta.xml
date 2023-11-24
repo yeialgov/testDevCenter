@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Sets trigger word for PB &quot;A - Case&quot; to start the onboarding reminder cycle new</description>
+    <masterLabel>Trigger Case Onboarding New</masterLabel>
+</FlowDefinition>

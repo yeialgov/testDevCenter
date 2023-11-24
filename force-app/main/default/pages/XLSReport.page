@@ -1,0 +1,27 @@
+<apex:page contentType="application/vnd.ms-excel#{!FileName}_{!today()}.xls" controller="CSVReportEngine" cache="true">
+
+        <apex:dataTable value="{!ReportData}" var="data">
+            <apex:repeat value="{!Fields}" var="fld">
+                <apex:column >
+                    <apex:facet name="header">{!fld.Header__c}</apex:facet>
+                    <apex:outputPanel rendered="{!and(!fld.IsDate__c,!fld.IsInteger__c)}" layout="none">="</apex:outputPanel>
+                    <apex:outputText value="{!data[fld.Id]}" rendered="{!and(!fld.IsDate__c,!fld.IsInteger__c)}"/>
+                    <apex:outputPanel rendered="{!and(!fld.IsDate__c,!fld.IsInteger__c)}" layout="none">"</apex:outputPanel>
+                    <apex:outputText value="{0,date,dd.MM.yyyy}" rendered="{!fld.IsDate__c}">
+                        <apex:param value="{!data[fld.Id]}"/>
+                    </apex:outputText>
+                    <apex:outputText value="{0,number,0}" rendered="{!fld.IsInteger__c}">
+                    <apex:param value="{!data[fld.Id]}"/>
+                    </apex:outputText>
+                </apex:column>
+            </apex:repeat>
+        </apex:dataTable>
+
+
+    <!--apex:repeat value="{!ReportData}" var="data">
+        {!newLine}
+        <apex:repeat value="{!Fields}" var="fld">
+
+        </apex:repeat>
+    </apex:repeat-->
+</apex:page>

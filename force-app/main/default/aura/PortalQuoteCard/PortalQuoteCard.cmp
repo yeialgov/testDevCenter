@@ -1,0 +1,34 @@
+<aura:component controller="PortalController">
+    <aura:attribute name="Token" type="String"/>
+    <aura:attribute name="Quote" type="Object"/>
+    <aura:attribute name="IsMobile" type="Boolean" default="false"/>
+    <lightning:navigation aura:id="navService2"/>   
+    <div class="row rowSpacer hoverPoint" onclick="{!c.clicked}">
+        <div class="col-sm-8 col-xs-12">
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-webcart" title="webcart">
+                                <lightning:icon iconName="standard:webcart" size="large"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 style="font-size: 1.5em; color: #13834d;">
+                                {!v.Quote.QuoteNumber}
+                            </h2>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <table style="table-layout: fixed; width: 100%;" >
+                        <tr>
+                            <td style="width: 50%;text-align: left;">Expires: <b><ui:outputDate value="{!v.Quote.ExpirationDate}" format="dd.MM.yyyy"/></b></td>
+                            <td style="width: 50%;text-align: right;">{!$Label.c.AMOUNT}: <b><ui:outputNumber value="{!v.Quote.Subtotal}" format="0.00"/>&nbsp;{!v.Quote.CurrencyIsoCode == 'EUR' ? '€' : v.Quote.CurrencyIsoCode}</b></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+    </div>
+</aura:component>

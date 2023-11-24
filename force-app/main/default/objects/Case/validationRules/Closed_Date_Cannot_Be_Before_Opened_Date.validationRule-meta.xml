@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Date_Cannot_Be_Before_Opened_Date</fullName>
+    <active>true</active>
+    <description>Validates that the Case Closed Date does not come before Opened Date.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+CreatedDate  &gt;  ClosedDate
+)</errorConditionFormula>
+    <errorDisplayField>ClosedDate</errorDisplayField>
+    <errorMessage>Closed Date Cannot Be Before Opened Date.</errorMessage>
+</ValidationRule>

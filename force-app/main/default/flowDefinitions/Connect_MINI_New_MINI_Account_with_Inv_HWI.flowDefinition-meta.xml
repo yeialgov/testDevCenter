@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>Connect MINI Account with OB Invoice via Serial number CDS-3018, CDS-3122, CRMT-3295, CRMT-3291</description>
+    <masterLabel>Connect MINI New MINI Account with Inv HWI</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lead Attribute Combo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lead Attribute Combos</value>
+    </caseValues>
+    <layouts>
+        <layout>Lead Attribute Combo Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

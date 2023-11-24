@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>update e-mail for partner about referred lead close lost</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_FR</letterhead>
+    <name>FR - Partner Feedback - Closed Lost</name>
+    <style>freeForm</style>
+    <subject>Nous restons en attente d’une décision en faveur d’orderbird</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>retried, now bb confirmation change</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Pay BB Umstellung Bankverbindung</name>
+    <style>none</style>
+    <subject>orderbird PAY: Erfolgreiche Umstellung Deiner Bankverbindung</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

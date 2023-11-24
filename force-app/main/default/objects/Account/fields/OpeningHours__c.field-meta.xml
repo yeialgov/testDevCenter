@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpeningHours__c</fullName>
+    <description>Stakeholder: Sales &amp; PaM (METRO)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What are the venue&apos;s business hours? To be filled in by Sales. 
+e.g. Tuesday till Sunday from 10:00 AM - 11:00 PM</inlineHelpText>
+    <label>Opening Hours (free text)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

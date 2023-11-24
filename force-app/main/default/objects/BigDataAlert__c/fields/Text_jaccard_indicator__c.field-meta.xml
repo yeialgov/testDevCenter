@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Text_jaccard_indicator__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( waggon_wheel_jaccard_indicator__c , &quot;AUFFÄLLIG!&quot;, &quot;unauffällig&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Text: jaccard_indicator</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

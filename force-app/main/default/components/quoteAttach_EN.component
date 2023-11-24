@@ -1,0 +1,126 @@
+<apex:component >
+    <apex:attribute access="public" name="Quote" type="Quote" description="Quote"/>
+    <apex:attribute access="public" name="Account" type="Account" description="Account"/>
+    <apex:attribute access="public" name="AddressParts" type="List" description=""/>
+    <apex:attribute access="public" name="AddressPartsShip" type="List" description=""/>
+    <head>
+        <apex:stylesheet value="{!$Resource.quotecss2}"/>
+    </head>
+    <div style="text-align:right;">
+        <img src="{!$Resource.orderbird_logo}" class="height: 60px;"/>
+    </div>
+    <p class="blueText bigBold" style="font-family: sans-serif;text-size:80%;">
+        Order confirmation and booking authorization
+        <br/>
+        for your quote&nbsp;{!Quote.QuoteNumber}&nbsp;//&nbsp;{!Account.Name}
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:79%;">
+        I hereby authorize the orderbird AG to debit my account when payments are due by means of direct debit, for which my bank shall have a standing order for payments.
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:79%;">
+        Should there be insufficient funds in my account, the account-holding bank does not have the obligation to honour the payment. Partial payments are not made by direct debit.
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:79%;">
+        Money-back guarantee: As the satisfaction of our customers is essential, if you are not completly satisfied, you are able to return the product within 30 days from the date of delivery if our performance doesn’t correspond to the performance specifications in accordance with our general standard terms and conditions.
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:79%;">
+        With my signature, I confirm that I read and accepted the general terms and conditions at www.orderbird.com/en/terms.
+    </p>
+    <div style="font-family: sans-serif;font-size:90%;">
+        <table class="grayText" style="width:100%;font-family: sans-serif;font-size:90%;">
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Account Holder:</td>
+                <td style="width:65%;border-bottom:1px solid #787878;"/>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">IBAN:</td>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'Germany'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        D E&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'France'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        F R&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'Austria'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        A T&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry != 'Austria' && Account.ShippingCountry != 'Germany' && Account.ShippingCountry != 'France'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;"/>
+                </apex:outputPanel>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Place, Date:</td>
+                <td style="width:65%;border-bottom:1px solid #787878;"/>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Signature:</td>
+                <td style="width:65%;border-bottom:1px solid #787878;"/>
+            </tr>
+            <tr>
+                <td valign="top" style="width:35%;padding-bottom: 15px;padding-top:10px;">
+                    Shipping Address:
+                </td>
+                <td style="width:65%;font-weight:bolder;padding-top:10px;font-size:90%;">
+                    <!--{!Account.Name}<br/>
+                    <apex:outputPanel layout="none" rendered="{!Account.SF_SoldTo_Contact__r.FirstName != '[not provided]'}">
+                        {!Account.SF_SoldTo_Contact__r.Name}<br/>
+                    </apex:outputPanel>
+                    {!Account.ShippingStreet}<br/>
+                    {!Account.ShippingPostalCode} {!Account.ShippingCity}<br/>
+                    {!Account.ShippingCountry}-->
+                    <c:AddressBuilder_shipping Account="{!Account}" AddressParts="{!AddressPartsShip}"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:35%;text-align:center;">
+                    <img src="{!$Resource.QuoteCircle}" style="width:65%;"/>
+                    <p style="text-align:center;font-size:100%;">
+                        orderbird offers a lovely allaround-<br/>
+                        carefree-support.<br/>
+                        Even the setup was<br/>
+                        surprisingly easy –<br/>
+                        just plug and play.
+                    </p>
+                    <p class="blueText" style="text-align:center;font-size:100%;font-weight:bolder;">
+                        Martial, <br/>
+                        Homies del Mar Restaurant
+                    </p>
+                </td>
+                <td style="width:65%;padding-left:20px;padding-bottom: 0;font-size:80%;">
+                    <strong>Please send the fully executed document to:<br/><br/></strong>
+                    <table>
+                        <tr>
+                            <td>Fax:</td>
+                            <td>+ 49 (0) 321 214 681 89</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right:15px;">Email:</td>
+                            <td>{!Quote.Opportunity.Owner.Email}</td>
+                        </tr>
+                        <tr>
+                            <td>Web:</td>
+                            <td>Activation at my.orderbird.com</td>
+                        </tr>
+                        <tr>
+                            <td>Post:</td>
+                            <td>orderbird AG, Ritterstraße 12-14,<br/>10969 Berlin, Germany</td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <strong>Any questions or requests for modification?<br/></strong>
+                    Give me a call at&nbsp;
+                    {!IF( Quote.Opportunity.Owner.Phone != null,Quote.Opportunity.Owner.Phone,IF(Account.ShippingCountry = 'France','+33 (0) 1 76 36 06 40',IF(Account.ShippingCountry = 'Austria','+43 (0) 1 361 022 499',IF(Account.ShippingCountry = 'Switzerland','+41 (0) 41 525 20 99','+49 (0) 30 208 983 098'))))}
+                    &nbsp;or send an email to
+                    {!Quote.Opportunity.Owner.Email}!<br/><br/>
+                    Kind regards<br/>
+                    {!Quote.Opportunity.Owner.Name}
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:component>

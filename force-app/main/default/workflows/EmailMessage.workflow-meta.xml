@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Case_First_Email_sent_date_NOW</fullName>
+        <field>First_Email_sent_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Case &gt; First Email sent date &gt; NOW</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Number_of_Emails_Formula</fullName>
+        <field>Number_of_Emails_sent__c</field>
+        <formula>IF(
+ISBLANK( Parent.Number_of_Emails_sent__c ),
+1 ,
+Parent.Number_of_Emails_sent__c + 1
+)</formula>
+        <name>Case &gt; Number of Emails &gt; Formula</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_Old_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Customer_Service</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Case &gt; Owner &gt; Old Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_Open</fullName>
+        <field>Status</field>
+        <literalValue>Open</literalValue>
+        <name>Case &gt; Status &gt; Open</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_Re_Open</fullName>
+        <field>Status</field>
+        <literalValue>Re-Open</literalValue>
+        <name>Case &gt; Status &gt; Re-Open</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EmailCase_Origin_MINI</fullName>
+        <field>Origin</field>
+        <literalValue>E-Mail MINI</literalValue>
+        <name>EmailCase &gt; Origin &gt; MINI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>EmailCase_Owner_MINI_queue</fullName>
+        <description>Assign the case to the MINI incoming cases queue</description>
+        <field>OwnerId</field>
+        <lookupValue>MINI_incoming_Case_queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>EmailCase &gt; Owner &gt; MINI queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Case to Open</fullName>
+        <actions>
+            <name>Case_Status_Open</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( Incoming = true, Parent.IsClosed = false, NOT(ISPICKVAL(Parent.Status , &quot;New&quot;)),  NOT(ISPICKVAL(Parent.Status , &quot;Re-Open&quot;)), NOT(ISPICKVAL(Parent.Status , &quot;Open&quot;)) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case to Re-Open %28Finance%29</fullName>
+        <actions>
+            <name>Case_Status_Re_Open</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>https://jira.orderbird.com/browse/CRMT-3555</description>
+        <formula>AND( 
+   Incoming = true, 
+   Parent.IsClosed = true,
+   ISPICKVAL(Parent.Origin,&apos;Finance Processes&apos;)
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Subjet-Origin%3EMINI</fullName>
+        <actions>
+            <name>EmailCase_Origin_MINI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>EmailCase_Owner_MINI_queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Add the word MINI to the subject line</description>
+        <formula>AND(
+ToAddress = &quot;mini-contactform@orderbird.com&quot;, 
+Incoming = true,
+NOT(CONTAINS( TextBody , &quot;mini-contactform@orderbird.com&quot;)) 
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Case First Email sent Date</fullName>
+        <actions>
+            <name>Case_First_Email_sent_date_NOW</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  Incoming = false,  ISBLANK( Parent.First_Email_sent_Date__c ) ,  NOT(CONTAINS(CreatedBy.Username , &quot;sfdc@orderbird&quot;)) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Case Number of Emails</fullName>
+        <actions>
+            <name>Case_Number_of_Emails_Formula</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  Incoming = false,  NOT(CONTAINS(CreatedBy.Username , &quot;sfdc@orderbird&quot;)) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

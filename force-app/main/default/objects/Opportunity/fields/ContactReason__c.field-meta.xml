@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactReason__c</fullName>
+    <description>Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are any particular reasons known why the prospect contacted us? Carried over from lead on conversion</inlineHelpText>
+    <label>Contact Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2nd Venue</fullName>
+                <default>false</default>
+                <label>2nd Venue</label>
+            </value>
+            <value>
+                <fullName>Recommendation</fullName>
+                <default>false</default>
+                <label>Recommendation</label>
+            </value>
+            <value>
+                <fullName>Immediate Need</fullName>
+                <default>false</default>
+                <label>Immediate Need</label>
+            </value>
+            <value>
+                <fullName>Wants to Switch</fullName>
+                <default>false</default>
+                <label>Wants to Switch</label>
+            </value>
+            <value>
+                <fullName>New opening</fullName>
+                <default>false</default>
+                <label>New opening</label>
+            </value>
+            <value>
+                <fullName>Law conform POS</fullName>
+                <default>false</default>
+                <label>Law conform POS</label>
+            </value>
+            <value>
+                <fullName>Info request for 3rd party</fullName>
+                <default>false</default>
+                <label>Info request for 3rd party</label>
+            </value>
+            <value>
+                <fullName>General information</fullName>
+                <default>false</default>
+                <label>General information</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

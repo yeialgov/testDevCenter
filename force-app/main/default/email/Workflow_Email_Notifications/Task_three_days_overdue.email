@@ -1,0 +1,7 @@
+Hello Dear Task Owner
+
+Your Task with the Subject "{!Task.Subject}" is now three days overdue without a documented outcome 
+You have 4 days to catch up to your ToDos, or the Opportunity related to the task will be set to Closed Lost
+
+Task: https://orderbird.lightning.force.com/{!Task.Id}
+Opportunity: https://orderbird.lightning.force.com/{!Task.OpportunityId__c}

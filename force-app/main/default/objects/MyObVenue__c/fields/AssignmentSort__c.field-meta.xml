@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssignmentSort__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Inactive__c || ISBLANK( MyOrderbirdId__c ) ,0, 
+
+IF(ISBLANK(Days_Since_Last_Shift_Open__c), 
+(CreatedDate - DATETIMEVALUE( &quot;1970-01-01 00:00:00&quot; )),
+1000000 + IF (Days_Since_Last_Shift_Open__c = 0, 1000001, 1000000/Days_Since_Last_Shift_Open__c))
+)</formula>
+    <label>Assignment Sort</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

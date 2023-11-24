@@ -1,0 +1,72 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78)}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78); min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78)}
+span.s1 {font-kerning: none}
+</style>
+
+
+<p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style="">Hallo {!Contact.FirstName},</font></span></p><p class="p2" style=""><font face="Arial, sans-serif" size="2"><span class="s1"></span><br></font></p><p class="p1"><span class="s1">um die Übersicht über Dein Concardis-Konto nicht zu verlieren, kannst Du Dich für das elektronische Abrechnungssystem (ESP) von Concardis registrieren.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2"><span class="s1"></span><br></p><p class="p1"><span class="s1">Dort findest Du detaillierte Informationen zu den Auszahlungen, Transaktionen und Gebühren.<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p2"><span class="s1"></span><br></p><p class="p1"><span class="s1">Registriere Dich gleich unter folgendem Link:</span></p><p class="p2"><span class="s1"></span><br></p><p class="p3"><span class="s2"><a href="https://www.concardis.com/esp-formular">https://www.concardis.com/esp-formular</a></span></p><p class="p2"><span class="s1"></span><br></p><p class="p1" style="">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6}
+span.s1 {font-kerning: none}
+span.s2 {text-decoration: underline ; font-kerning: none}
+</style>
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1"><span class="s1">Alternativ findest Du im Anhang eine Anleitung zur Interpretation der Gutschriften von Concardis auf deinem Kontoauszug.</span></p><p class="p2" style=""><font face="Arial, sans-serif" size="2"><br></font></p><p class="p2" style=""><font face="Arial, sans-serif" size="2">Bei Fragen wende Dich gerne an uns.</font></p><p class="p1" style=""><font face="Arial, sans-serif" size="2"><br></font></p><p class="p1" style=""><span class="s1"><font face="Arial, sans-serif" size="2">Vielen Dank und viele Grüße</font></span></p><p class="p2" style=""><font face="Arial, sans-serif" size="2"><span class="s1"></span><br></font></p><p class="p1" style="">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.48); -webkit-text-stroke: rgba(0, 0, 0, 0.48)}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.48); -webkit-text-stroke: rgba(0, 0, 0, 0.48); min-height: 14.0px}
+span.s1 {font-kerning: none}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style="">{!User.FirstName}</font></span></p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style=""><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Helvetica; color: #8b8b8b; -webkit-text-stroke: #8b8b8b; background-color: #fefefe}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Helvetica; color: #8b8b8b; -webkit-text-stroke: #8b8b8b; background-color: #ffffff; min-height: 16.0px}
+span.s1 {font-kerning: none}
+</style>]]></td>
+</tr>
+</table>

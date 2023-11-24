@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                controller="AccountLightningController">
+    
+    <aura:attribute type="List" name="Venues"/>
+    <aura:attribute type="String" name="recordId"/>
+    <aura:attribute type="Object" name="Contact"/>
+    
+	<aura:handler name="change" value="{!v.Contact}" action="{!c.getVenues}"/>
+    
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      mode="VIEW"
+                      targetFields="{!v.Contact}" />
+
+    <aura:iteration items="{!v.Venues}" var="Venue">
+        <aura:if isTrue="{!Venue.Contact__c == v.recordId}">
+            <c:ToolsDeeplink VenueSFId="{!Venue.Id}" 
+                             VenueId="{!Venue.MyOrderbirdId__c}" 
+                             Uncertain="{!and(Venue.Uncertainty__c != null, Venue.Uncertainty__c != 0)}"/>
+        </aura:if>
+    </aura:iteration>
+
+</aura:component>

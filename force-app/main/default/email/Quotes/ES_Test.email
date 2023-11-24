@@ -1,0 +1,5 @@
+Hello {!zqu__BillToContact__r.FirstName} 
+Here is your orderbird quote!
+Please click on following the link and check out to complete your purchase.
+https://my.orderbird.com/quote/entry/{!DecryptedQuoteLink__c}
+your orderbird team

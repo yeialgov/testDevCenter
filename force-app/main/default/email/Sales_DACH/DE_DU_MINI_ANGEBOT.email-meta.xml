@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Dein Angebot für das MINI by orderbird</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE-DU-MINI-ANGEBOT</name>
+    <style>none</style>
+    <subject>Dein Angebot für das MINI by orderbird inkl. TSE</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

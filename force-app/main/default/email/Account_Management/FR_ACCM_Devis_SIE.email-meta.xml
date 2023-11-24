@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_FR</letterhead>
+    <name>FR - ACCM-Devis - SIE</name>
+    <style>freeForm</style>
+    <subject>Votre devis</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

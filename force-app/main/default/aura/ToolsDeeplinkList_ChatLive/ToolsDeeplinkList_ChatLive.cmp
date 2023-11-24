@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                controller="LiveChatTranscriptController">
+    
+	<aura:attribute type="String" name="recordId"/> 
+    <aura:attribute type="Object" name="Object"/>
+    <aura:attribute type="List" name="Venues"/>
+    
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, CaseId"
+                      mode="VIEW"
+                      targetFields="{!v.Object}" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getVenues}"/>
+    <!--aura:handler name="change" value="{!v.Case}" action="{!c.getVenues}"/-->
+
+    <aura:iteration items="{!v.Venues}" var="Venue">
+        <c:ToolsDeeplink VenueSFId="{!Venue.Id}" 
+                         VenueId="{!Venue.MyOrderbirdId__c}" />
+    </aura:iteration>
+
+</aura:component>

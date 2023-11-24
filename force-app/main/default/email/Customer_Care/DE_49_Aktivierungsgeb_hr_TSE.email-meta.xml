@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Kundenbeschwerde wegen 49 € Aktivierungsgebühr TSE</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Beschwerde 49 € Aktivierungsgebühr TSE</name>
+    <style>none</style>
+    <subject>Deine Rückfrage zur Aktivierungsgebühr für die Online-TSE</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

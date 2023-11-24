@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>METROOppStatus__c</fullName>
+    <description>Stakeholder: PaM (METRO)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the status of this opportunity in relation to the METRO agreement? Filled automatically!</inlineHelpText>
+    <label>METRO Opp Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Opportunity To be accepted</fullName>
+                <default>false</default>
+                <label>Opportunity To be Accepted</label>
+            </value>
+            <value>
+                <fullName>rejected</fullName>
+                <default>false</default>
+                <label>Opportunity Rejected</label>
+            </value>
+            <value>
+                <fullName>In_Progress</fullName>
+                <default>false</default>
+                <label>Opportunity accepted / In Progress</label>
+            </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Opportunity Auto Accepted</fullName>
+                <default>false</default>
+                <label>Opportunity Auto Accepted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

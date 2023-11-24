@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>English_Marketing_Double_Opt_In_Email</fullName>
+        <description>English Marketing Double Opt In Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Double_Opt_in_English</template>
+    </alerts>
+    <alerts>
+        <fullName>French_Marketing_Double_Opt_In_Email</fullName>
+        <description>French Marketing Double Opt In Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Double_Opt_in_French</template>
+    </alerts>
+    <alerts>
+        <fullName>German_Marketing_Double_Opt_In_Email</fullName>
+        <description>German Marketing Double Opt In Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Double_Opt_in_German</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook1_mail_AT</fullName>
+        <description>MKT ebook1 mail AT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook1_Businessplan_AT</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook1_mail_CH</fullName>
+        <description>MKT ebook1 mail CH</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook1_Businessplan_CH</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook1_mail_DE</fullName>
+        <description>MKT ebook1 mail DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook1_Businessplan_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook2_mail_AT</fullName>
+        <description>MKT ebook2 mail AT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook2_Marketing_AT</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook2_mail_CH</fullName>
+        <description>MKT ebook2 mail CH</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook2_Marketing_CH</template>
+    </alerts>
+    <alerts>
+        <fullName>MKT_ebook2_mail_DE</fullName>
+        <description>MKT ebook2 mail DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MKT_ebook2_Marketing_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>New_GM_Lead</fullName>
+        <description>New GM Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maximilian.glass@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Inbound_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead</fullName>
+        <description>New Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SDRs_DACH</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Inbound_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead_Auto_Response_DE</fullName>
+        <description>New Lead Auto Response DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Visualforce_Templates/Auto_reply_for_new_lead_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead_Auto_Response_ENG</fullName>
+        <description>New Lead Auto Response ENG</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Visualforce_Templates/Auto_reply_for_new_lead_ENG</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead_Auto_Response_FR</fullName>
+        <description>New Lead Auto Response FR</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonjour@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Visualforce_Templates/Auto_reply_for_new_lead_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Lead_FR</fullName>
+        <description>New Lead FR</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SDRs_FR</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Inbound_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>New_MINI_Lead</fullName>
+        <ccEmails>sdr@orderbird.com</ccEmails>
+        <description>New MINI Lead</description>
+        <protected>false</protected>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/New_Inbound_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>Trade_Show_Follow_Up_Customer</fullName>
+        <description>Trade Show Follow Up Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Trade_show_follow_up_Customer</template>
+    </alerts>
+    <alerts>
+        <fullName>Trade_Show_Follow_Up_Lead</fullName>
+        <description>Trade Show Follow Up Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/Trade_show_follow_up_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>Trade_Show_Follow_Up_Partner</fullName>
+        <description>Trade Show Follow Up Partner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Trade_show_follow_up_Partner</template>
+    </alerts>
+    <alerts>
+        <fullName>Trade_show_follow_up_METRO_Lead</fullName>
+        <description>Trade Show Follow Up METRO Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>beratung@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Trade_show_follow_up_METRO_Lead</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Date_of_Handover_TODAY</fullName>
+        <description>If Referral Contact or Referral Account on Lead get set, but not Date of Handover, the latter automatically gets set to today</description>
+        <field>DateOfHandover__c</field>
+        <formula>TODAY()</formula>
+        <name>Date of Handover TODAY</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Email_Opt_Out</fullName>
+        <description>Set the Email Opt out to true</description>
+        <field>HasOptedOutOfEmail</field>
+        <literalValue>1</literalValue>
+        <name>Lead &gt; Email Opt Out</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Metro_Opp_Status_Auto_Accepted</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Opportunity Auto Accepted</literalValue>
+        <name>Lead &gt; Metro Opp Status &gt; Auto Accepted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Metro_Opp_Status_Opp_to_be_acce</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Opportunity To be accepted</literalValue>
+        <name>Lead &gt; Metro Opp Status &gt; Opp to be acce</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Metro_Status_Rejected</fullName>
+        <field>METROOppStatus__c</field>
+        <literalValue>Opportunity Rejected</literalValue>
+        <name>Lead &gt; Metro Status &gt; Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Status_Unqualified</fullName>
+        <description>https://jira.orderbird.com/browse/CDS-1001</description>
+        <field>Status</field>
+        <literalValue>Unqualified</literalValue>
+        <name>Lead &gt; Status &gt; Unqualified</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Lead_Unqualified_Bad_data</fullName>
+        <description>https://jira.orderbird.com/browse/CDS-1001</description>
+        <field>RejectedReason__c</field>
+        <literalValue>Bad/ incomplete contact details</literalValue>
+        <name>Lead &gt; Unqualified &gt; Bad data</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>TS_Marketing_opt_in</fullName>
+        <field>TS_Marketing_opt_in_update__c</field>
+        <formula>NOW()</formula>
+        <name>TS_Marketing opt-in</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Date of Handover TODAY</fullName>
+        <actions>
+            <name>Date_of_Handover_TODAY</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If Referral Contact or Referral Account on Lead get set, but not Date of Handover, the latter automatically gets set to today</description>
+        <formula>AND(
+ OR(
+   NOT(ISBLANK(ReferralAccount__c)),
+   NOT(ISBLANK(ReferralContact__c))
+ ),
+ ISBLANK(DateOfHandover__c)
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email New Lead MINI</fullName>
+        <actions>
+            <name>New_MINI_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>https://jira.orderbird.com/browse/CDS-2398</description>
+        <formula>Or ( 
+LAC_ID__c = &apos;130&apos;,
+LAC_ID__c = &apos;211&apos;
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email New Leads DACH</fullName>
+        <actions>
+            <name>New_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>https://jira.orderbird.com/browse/CDS-1038</description>
+        <formula>And ( 
+NOT(CONTAINS(Company, &apos;www.&apos;)),
+NOT(CONTAINS(Company, &apos;http://&apos;)),
+NOT(CONTAINS(Company, &apos;https://&apos;)),
+NOT(ISPICKVAL( LAC_Lookup__r.LeadSource__c , &quot;Outbound&quot; )),
+NOT(ISPICKVAL(  PrimaryLanguage__c , &quot;French&quot; )),
+NOT(BEGINS(LAC_ID__c, &apos;10&apos;)),
+NOT(BEGINS(LAC_ID__c, &apos;7&apos;)),
+NOT(BEGINS(LAC_ID__c, &apos;3&apos;)),
+NOT(BEGINS(LAC_ID__c, &apos;5&apos;)),
+LAC_ID__c != &apos;110&apos;,
+LAC_ID__c != &apos;129&apos;,
+LAC_ID__c != &apos;130&apos;,
+LAC_ID__c != &apos;180&apos;,
+LAC_ID__c != &apos;201&apos;,
+LAC_ID__c != &apos;202&apos;,
+LAC_ID__c != &apos;203&apos;,
+LAC_ID__c != &apos;211&apos;,
+Company != &apos;Test XYZ&apos;,
+FirstName != &apos;Test XYZ&apos;,
+IF(ISBLANK(Origin__c),TRUE,NOT(CONTAINS(Origin__c , &apos;Ebook&apos;)))
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email New Leads FR</fullName>
+        <actions>
+            <name>New_Lead_FR</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND (
+NOT(ISPICKVAL( LAC_Lookup__r.LeadSource__c , &quot;Outbound&quot; )),
+OR (
+ ISPICKVAL(Region__c, &quot;France&quot;),
+ ISPICKVAL( PrimaryLanguage__c , &quot;French&quot; )
+),
+NOT(BEGINS(LAC_ID__c, &apos;7&apos;)), 
+NOT(BEGINS(LAC_ID__c, &apos;3&apos;)), 
+NOT(BEGINS(LAC_ID__c, &apos;4&apos;))
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Lead Auto Response DE</fullName>
+        <actions>
+            <name>New_Lead_Auto_Response_DE</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>equals</operation>
+            <value>110</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>notContain</operation>
+            <value>ebook</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-71</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Lead Auto Response ENG</fullName>
+        <actions>
+            <name>New_Lead_Auto_Response_ENG</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>equals</operation>
+            <value>110</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>English</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>notContain</operation>
+            <value>ebook</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-71</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Lead Auto Response FR</fullName>
+        <actions>
+            <name>New_Lead_Auto_Response_FR</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>equals</operation>
+            <value>110</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>French</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>notContain</operation>
+            <value>ebook</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-71</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>TS_Marketing opt-in</fullName>
+        <actions>
+            <name>TS_Marketing_opt_in</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>ISCHANGED(DoubleOptIn__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Test Lead removal</fullName>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Company</field>
+            <operation>equals</operation>
+            <value>Test XYZ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.FirstName</field>
+            <operation>equals</operation>
+            <value>Test XYZ</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1001</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Lead_Status_Unqualified</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Lead_Unqualified_Bad_data</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>3</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Trade show follow up Customer</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>startsWith</operation>
+            <value>5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>contains</operation>
+            <value>Existing Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.IsConverted</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1187</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Trade_Show_Follow_Up_Customer</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Trade show follow up Lead</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5) AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>startsWith</operation>
+            <value>5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>contains</operation>
+            <value>Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>contains</operation>
+            <value>Already</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.IsConverted</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.PrimaryContact__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1187</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Trade_Show_Follow_Up_Lead</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Trade show follow up METRO Lead</fullName>
+        <actions>
+            <name>Trade_show_follow_up_METRO_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>equals</operation>
+            <value>404</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1187</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Trade show follow up Partner</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Lead.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LAC_ID__c</field>
+            <operation>startsWith</operation>
+            <value>5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Origin__c</field>
+            <operation>contains</operation>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.IsConverted</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/CDS-1187</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Trade_Show_Follow_Up_Partner</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>24</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>MSOP_still_open</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>This METRO lead has been handed over 7 days ago and one or both MSOP fields are not yet filled in</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>MSOP still open</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BlubCriteriaForDecision__c</fullName>
+    <description>Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Do we know what are the most important aspects the prospect is looking for? Part of BLUBZEWE. Filled by Sales Agent</inlineHelpText>
+    <label>Criteria for Decision</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>well known</fullName>
+                <default>false</default>
+                <label>well known</label>
+            </value>
+            <value>
+                <fullName>known</fullName>
+                <default>false</default>
+                <label>known</label>
+            </value>
+            <value>
+                <fullName>partly known</fullName>
+                <default>false</default>
+                <label>partly known</label>
+            </value>
+            <value>
+                <fullName>unknown</fullName>
+                <default>false</default>
+                <label>unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_POS_Start_Date_2__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-511</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When did this customer&apos;s first subscription start?</inlineHelpText>
+    <label>First Subscription Start Date</label>
+    <summarizedField>Subscription__c.SubscriptionStartDate__c</summarizedField>
+    <summaryForeignKey>Subscription__c.Account__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

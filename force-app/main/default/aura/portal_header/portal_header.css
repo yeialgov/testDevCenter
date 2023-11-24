@@ -1,0 +1,21 @@
+.THIS .ovrTxtInput {
+    margin-bottom: 2em;
+    font-size: 14px;
+}
+.THIS .ovrTxtInput::placeholder{
+    font-size: 14px;
+}
+.THIS .ovrLabel {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+.THIS .clearTabs {
+    background-color: transparent;
+}
+.THIS .whiteTab {
+    background-color: #fff;
+}
+.THIS .redNotify a span lightning-icon lightning-primitive-icon svg{
+    fill: red;
+}

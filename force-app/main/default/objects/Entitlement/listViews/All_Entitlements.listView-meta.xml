@@ -7,5 +7,5 @@
     <columns>ENTITLEMENT.ENDDATE</columns>
     <columns>ENTITLEMENT.STATUS</columns>
     <filterScope>Everything</filterScope>
-    <label>Alle Ansprüche</label>
+    <label>All Entitlements</label>
 </ListView>

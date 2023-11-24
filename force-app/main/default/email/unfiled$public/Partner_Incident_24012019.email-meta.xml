@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Partner Incident 24012019</name>
+    <style>none</style>
+    <subject>Systemfehler - Email Information</subject>
+    <textOnly>Lieber orderbird-Partner,
+
+aufgrund eines Systemfehlers sind heute im Laufe des nachmittags Emails verschickt worden, mit dem Betreff “Super - Du erhält 250€ für Deine Empfehlung”.
+
+Solltest Du diese Email von uns erhalten haben bitten wir Dich diese zu ignorieren. Dies sind alles erfolgreiche Vermittlungen aus der Vergangenheit, die wir bereits mir Dir abgerechnet haben.
+
+Ich entschuldige mich vielmals im Namen des ganzen Teams für dieses Missgeschick.
+
+Bei Fragen sende bitte eine kurze Email an partner@orderbird.com
+
+
+Viele Grüße aus Berlin
+
+Christian Scheper-Stuke</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

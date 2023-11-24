@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>OUTDATED | DE - Pay - Los geht&apos;s! mit AMEX</name>
+    <style>none</style>
+    <subject>orderbird Pay - Du kannst loslegen mit American Express: Starte Deine App neu!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

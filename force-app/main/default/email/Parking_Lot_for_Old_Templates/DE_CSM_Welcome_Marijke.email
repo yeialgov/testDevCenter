@@ -1,0 +1,637 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head>
+    <!--[if gte mso 9]><xml>
+     <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    
+    
+    <style type="text/css" id="media-query">
+      body {
+  margin: 0;
+  padding: 0; }
+
+table, tr, td {
+  vertical-align: top;
+  border-collapse: collapse; }
+
+.ie-browser table, .mso-container table {
+  table-layout: fixed; }
+
+* {
+  line-height: inherit; }
+
+a[x-apple-data-detectors=true] {
+  color: inherit !important;
+  text-decoration: none !important; }
+
+[owa] .img-container div, [owa] .img-container button {
+  display: block !important; }
+
+[owa] .fullwidth button {
+  width: 100% !important; }
+
+[owa] .block-grid .col {
+  display: table-cell;
+  float: none !important;
+  vertical-align: top; }
+
+.ie-browser .num12, .ie-browser .block-grid, [owa] .num12, [owa] .block-grid {
+  width: 600px !important; }
+
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+  line-height: 100%; }
+
+.ie-browser .mixed-two-up .num4, [owa] .mixed-two-up .num4 {
+  width: 200px !important; }
+
+.ie-browser .mixed-two-up .num8, [owa] .mixed-two-up .num8 {
+  width: 400px !important; }
+
+.ie-browser .block-grid.two-up .col, [owa] .block-grid.two-up .col {
+  width: 300px !important; }
+
+.ie-browser .block-grid.three-up .col, [owa] .block-grid.three-up .col {
+  width: 200px !important; }
+
+.ie-browser .block-grid.four-up .col, [owa] .block-grid.four-up .col {
+  width: 150px !important; }
+
+.ie-browser .block-grid.five-up .col, [owa] .block-grid.five-up .col {
+  width: 120px !important; }
+
+.ie-browser .block-grid.six-up .col, [owa] .block-grid.six-up .col {
+  width: 100px !important; }
+
+.ie-browser .block-grid.seven-up .col, [owa] .block-grid.seven-up .col {
+  width: 85px !important; }
+
+.ie-browser .block-grid.eight-up .col, [owa] .block-grid.eight-up .col {
+  width: 75px !important; }
+
+.ie-browser .block-grid.nine-up .col, [owa] .block-grid.nine-up .col {
+  width: 66px !important; }
+
+.ie-browser .block-grid.ten-up .col, [owa] .block-grid.ten-up .col {
+  width: 60px !important; }
+
+.ie-browser .block-grid.eleven-up .col, [owa] .block-grid.eleven-up .col {
+  width: 54px !important; }
+
+.ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .col {
+  width: 50px !important; }
+
+@media only screen and (min-width: 620px) {
+  .block-grid {
+    width: 600px !important; }
+  .block-grid .col {
+    vertical-align: top; }
+    .block-grid .col.num12 {
+      width: 600px !important; }
+  .block-grid.mixed-two-up .col.num4 {
+    width: 200px !important; }
+  .block-grid.mixed-two-up .col.num8 {
+    width: 400px !important; }
+  .block-grid.two-up .col {
+    width: 300px !important; }
+  .block-grid.three-up .col {
+    width: 200px !important; }
+  .block-grid.four-up .col {
+    width: 150px !important; }
+  .block-grid.five-up .col {
+    width: 120px !important; }
+  .block-grid.six-up .col {
+    width: 100px !important; }
+  .block-grid.seven-up .col {
+    width: 85px !important; }
+  .block-grid.eight-up .col {
+    width: 75px !important; }
+  .block-grid.nine-up .col {
+    width: 66px !important; }
+  .block-grid.ten-up .col {
+    width: 60px !important; }
+  .block-grid.eleven-up .col {
+    width: 54px !important; }
+  .block-grid.twelve-up .col {
+    width: 50px !important; } }
+
+@media (max-width: 620px) {
+  .block-grid, .col {
+    min-width: 320px !important;
+    max-width: 100% !important;
+    display: block !important; }
+  .block-grid {
+    width: calc(100% - 40px) !important; }
+  .col {
+    width: 100% !important; }
+    .col > div {
+      margin: 0 auto; }
+  img.fullwidth {
+    max-width: 100% !important; } }
+
+    </style>
+</head>
+<body class="clean-body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #eaeced">
+  <style type="text/css" id="media-query-bodytag">
+    @media (max-width: 520px) {
+      .block-grid {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+      }
+
+      .col {
+        min-width: 320px!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        display: block!important;
+      }
+
+        .col > div {
+          margin: 0 auto;
+        }
+
+      img.fullwidth {
+        max-width: 100%!important;
+      }
+    }
+  </style>
+  <!--[if IE]><div class="ie-browser"><![endif]-->
+  <!--[if mso]><div class="mso-container"><![endif]-->
+  <div class="nl-container" style="min-width: 320px;Margin: 0 auto;background-color: #eaeced">
+    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #eaeced;"><![endif]-->
+
+    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: transparent;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div align="center" class="img-container center fullwidth" style="padding-right: 0px;  padding-left: 0px;">
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
+  <a href="https://calendly.com/Marijke_orderbird/wcall?sfid={!Case.Id}&amp;amp;name={!Contact.FirstName}+{!Contact.LastName}&amp;amp;email={!Contact.Email}&amp;amp;a1={!Contact.Phone}&amp;amp;a2={!Account.CustomerID__c}+{!Account.Name}" target="_blank">
+    <img class="center fullwidth" align="center" border="0" src="https://c.eu6.content.force.com/servlet/servlet.ImageServer?id=01558000002a2bi&oid=00D58000000PJMf&lastMod=1504259507000" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px" width="600" />
+  </a>
+<!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#283C4B; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:18px;color:#283C4B;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 18px; line-height: 27px; color: rgb(0, 163, 224);"><strong><span style="line-height: 27px; font-size: 18px;">Lass uns losfliegen!</span></strong></span></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 0px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#323435; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 0px;">	
+	<div style="font-size:12px;line-height:18px;color:#323435;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 21px;"><span style="color: rgb(118, 118, 118); line-height: 21px; font-size: 14px;">Ich bin</span> <span style="color: rgb(0, 163, 224); line-height: 21px; font-size: 14px;"><strong>Marijke&#160;</strong></span><span style="color: rgb(118, 118, 118); line-height: 21px; font-size: 14px;">und stehe Dir in den nächsten <strong>30 Tagen</strong> mit Rat und Tat zur Seite!</span></span></p><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="color: rgb(118, 118, 118); font-size: 14px; line-height: 21px;">&#160;</span></p><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="color: rgb(118, 118, 118); font-size: 14px; line-height: 21px;">Lass uns gleich mit einer kurzen <strong>Vorbesprechung</strong>&#160;anfangen, in der wir die nächsten Schritte zusammen durchgehen. </span><span style="color: rgb(118, 118, 118); font-size: 14px; line-height: 21px;">Buche den Termin am Besten, sobald Du diese </span></p><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="color: rgb(118, 118, 118); font-size: 14px; line-height: 21px;">E-Mail erhältst.</span></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    
+<div align="center" class="button-container center" style="padding-right: 0px; padding-left: 0px; padding-top:25px; padding-bottom:0px;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:25px; padding-bottom:0px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://calendly.com/Marijke_orderbird/wcall?sfid={!Case.Id}&amp;name={!Contact.FirstName}+{!Contact.LastName}&amp;email={!Contact.Email}&amp;a1={!Contact.Phone}&amp;a2={!Account.CustomerID__c}+{!Account.Name}" style="height:48px; v-text-anchor:middle; width:286px;" arcsize="0%" strokecolor="#00A3E0" fillcolor="#00A3E0"><w:anchorlock/><center style="color:#ffffff; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:14px;"><![endif]-->
+    <a href="https://calendly.com/Marijke_orderbird/wcall?sfid={!Case.Id}&amp;name={!Contact.FirstName}+{!Contact.LastName}&amp;email={!Contact.Email}&amp;a1={!Contact.Phone}&amp;a2={!Account.CustomerID__c}+{!Account.Name}" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #ffffff; background-color: #00A3E0; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; max-width: 560px; width: 40%; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;mso-border-alt: none">
+      <span style="font-size:12px;line-height:24px;"><span style="font-size: 14px; line-height: 28px;" data-mce-style="font-size: 14px; line-height: 36px;">Vorbesprechung buchen</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 20px; padding-left: 20px; padding-top: 20px; padding-bottom: 5px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:120%;color:#555555; padding-right: 20px; padding-left: 20px; padding-top: 20px; padding-bottom: 5px;">	
+	<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><br /></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: transparent;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+  <!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+  <div align="center"><div style="border-top: 0px solid transparent; width:100%; line-height:0px; height:0px; font-size:0px;">&#160;</div></div>
+  <!--[if (mso)]></td></tr></table></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:120%;color:#3AAEE0; padding-right: 10px; padding-left: 10px; padding-top: 30px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:14px;color:#3AAEE0;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;line-height: 22px;font-size: 18px;text-align: center"><strong><a style="color:#00A3E0;text-decoration: none;" href="https://calendly.com/Marijke_orderbird/wcall?sfid={!Case.Id}&amp;name={!Contact.FirstName}+{!Contact.LastName}&amp;email={!Contact.Email}&amp;a1={!Contact.Phone}&amp;a2={!Account.CustomerID__c}+{!Account.Name}" target="_blank" rel="noopener noreferrer">Termin gebucht? Sehr gut! Wie geht's jetzt weiter?</a></strong></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid two-up">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="260" style=" width:260px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF;" valign="top"><![endif]-->
+            <div class="col num6" style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div align="center" class="img-container center fullwidth" style="padding-right: 30px;  padding-left: 30px;">
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px;" align="center"><![endif]-->
+<div style="line-height:30px;font-size:1px">&#160;</div>  <a href="https://support.orderbird.com/hc/de/articles/115003845363" target="_blank">
+    <img class="center fullwidth" align="center" border="0" src="https://c.eu6.content.force.com/servlet/servlet.ImageServer?id=01558000002a1K2&amp;oid=00D58000000PJMf&amp;lastMod=1504167588000" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 200px" width="200" />
+  </a>
+<div style="line-height:30px;font-size:1px">&#160;</div><!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#01426a; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:18px;color:#01426a;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;line-height: 27px;font-size: 18px;text-align: center"><strong><a style="color:#01426a;text-decoration: none;" href="https://support.orderbird.com/hc/de/articles/115003845363" target="_blank" rel="noopener noreferrer">Speisekarte</a></strong></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#323435; padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;">	
+	<div style="font-size:12px;line-height:18px;color:#323435;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 21px;text-align: center">Fülle die Vorlage für die</p><p style="margin: 0;font-size: 14px;line-height: 21px;text-align: center">Speisekarte aus und schicke sie</p><p style="margin: 0;font-size: 14px;line-height: 21px;text-align: center">an <a style="color:#00A3E0;color:#00A3E0;color:#00A3E0;text-decoration: underline;" title="hilfe@orderbird.com" href="mailto:hilfe@orderbird.com?subject=Speisekarte {!Account.CustomerID__c} {!Account.Name}">hilfe@orderbird.com</a></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    
+<div align="center" class="button-container center" style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://support.orderbird.com/hc/de/articles/115003845363" style="height:42px; v-text-anchor:middle; width:228px;" arcsize="0%" strokecolor="#00A3E0" fillcolor="#00A3E0"><w:anchorlock/><center style="color:#FFFFFF; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px;"><![endif]-->
+    <a href="https://support.orderbird.com/hc/de/articles/115003845363" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00A3E0; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; max-width: 300px; width: 70%; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;mso-border-alt: none">
+      <span style="font-size:16px;line-height:32px;"><span style="font-size: 14px; line-height: 28px;" data-mce-style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 14px; line-height: 24px;">Vorlage herunterladen</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+              <!--[if (mso)|(IE)]></td><td align="center" width="260" style=" width:260px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF;" valign="top"><![endif]-->
+            <div class="col num6" style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div align="center" class="img-container center fullwidth" style="padding-right: 30px;  padding-left: 30px;">
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px;" align="center"><![endif]-->
+<div style="line-height:30px;font-size:1px">&#160;</div>  <a href="https://support.orderbird.com/hc/de/articles/217767723-So-baust-Du-Dein-orderbird-WiFi-auf-und-nimmst-die-Drucker-in-Betrieb" target="_blank">
+    <img class="center fullwidth" align="center" border="0" src="https://c.eu6.content.force.com/servlet/servlet.ImageServer?id=01558000002a1K7&amp;oid=00D58000000PJMf&amp;lastMod=1504167633000" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 200px" width="200" />
+  </a>
+<div style="line-height:30px;font-size:1px">&#160;</div><!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#01426a; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:18px;color:#01426a;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;line-height: 27px;font-size: 18px;text-align: center"><strong><a style="color:#01426a;text-decoration: none;" href="https://support.orderbird.com/hc/de/articles/217767723-So-baust-Du-Dein-orderbird-WiFi-auf-und-nimmst-die-Drucker-in-Betrieb" target="_blank" rel="noopener noreferrer">Hardware &amp; Netzwerk</a></strong></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#323435; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px;">	
+	<div style="font-size:12px;line-height:18px;color:#323435;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 21px;">Baue die Hardware und&#160;</span><span style="font-size: 14px; line-height: 21px;">das </span></p><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 21px;">Netzwerk auf und lade </span><span style="font-size: 14px; line-height: 21px;">orderbird </span></p><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 21px;">aus </span><span style="font-size: 14px; line-height: 21px;">dem&#160;</span><span style="font-size: 14px; background-color: transparent; line-height: 21px;">App Store herunter</span></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    
+<div align="center" class="button-container center" style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://support.orderbird.com/hc/de/articles/217767723-So-baust-Du-Dein-orderbird-WiFi-auf-und-nimmst-die-Drucker-in-Betrieb" style="height:42px; v-text-anchor:middle; width:228px;" arcsize="0%" strokecolor="#00A3E0" fillcolor="#00A3E0"><w:anchorlock/><center style="color:#FFFFFF; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px;"><![endif]-->
+    <a href="https://support.orderbird.com/hc/de/articles/217767723-So-baust-Du-Dein-orderbird-WiFi-auf-und-nimmst-die-Drucker-in-Betrieb" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00A3E0; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; max-width: 300px; width: 70%; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;mso-border-alt: none">
+      <span style="font-size:16px;line-height:32px;"><span style="font-size: 14px; line-height: 28px;" data-mce-style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 14px; line-height: 24px;">Video</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;" class="block-grid two-up">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#FFFFFF;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="260" style=" width:260px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF;" valign="top"><![endif]-->
+            <div class="col num6" style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div align="center" class="img-container center fullwidth" style="padding-right: 30px;  padding-left: 30px;">
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px;" align="center"><![endif]-->
+<div style="line-height:30px;font-size:1px">&#160;</div>  <a href="https://support.orderbird.com/hc/de/articles/216527063-DATEV-einstellen" target="_blank">
+    <img class="center fullwidth" align="center" border="0" src="https://c.eu6.content.force.com/servlet/servlet.ImageServer?id=01558000002a1KC&amp;oid=00D58000000PJMf&amp;lastMod=1504167658000" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 200px" width="200" />
+  </a>
+<div style="line-height:30px;font-size:1px">&#160;</div><!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#01426a; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:18px;color:#01426a;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;line-height: 27px;font-size: 18px;text-align: center"><strong><a style="color:#01426a;text-decoration: none;" href="https://support.orderbird.com/hc/de/articles/216527063-DATEV-einstellen" target="_blank" rel="noopener noreferrer">DATEV</a></strong></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#323435; padding-right: 15px; padding-left: 15px; padding-top: 5px; padding-bottom: 5px;">	
+	<div style="font-size:12px;line-height:18px;color:#323435;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 14px;line-height: 21px;text-align: center">Frag' den Steuerberater nach<br />dem Standardkontenrahmen<br />samt Kontonummern</p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    
+<div align="center" class="button-container center" style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:20px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://support.orderbird.com/hc/de/articles/216527063-DATEV-einstellen" style="height:42px; v-text-anchor:middle; width:228px;" arcsize="0%" strokecolor="#00A3E0" fillcolor="#00A3E0"><w:anchorlock/><center style="color:#FFFFFF; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px;"><![endif]-->
+    <a href="https://support.orderbird.com/hc/de/articles/216527063-DATEV-einstellen" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00A3E0; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; max-width: 300px; width: 70%; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;mso-border-alt: none">
+      <span style="font-size:16px;line-height:32px;"><span style="font-size: 14px; line-height: 28px;" data-mce-style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 14px; line-height: 24px;">Mehr Info</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+              <!--[if (mso)|(IE)]></td><td align="center" width="260" style=" width:260px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF;" valign="top"><![endif]-->
+            <div class="col num6" style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;background-color: #FFFFFF;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 20px solid #FFFFFF; border-left: 20px solid #FFFFFF; border-bottom: 20px solid #FFFFFF; border-right: 20px solid #FFFFFF; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div align="center" class="img-container center fullwidth" style="padding-right: 30px;  padding-left: 30px;">
+<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px;" align="center"><![endif]-->
+<div style="line-height:30px;font-size:1px">&#160;</div>  <a href="https://support.orderbird.com/hc/de/articles/200264427-orderbird-Pay-powered-by-Concardis" target="_blank">
+    <img class="center fullwidth" align="center" border="0" src="https://c.eu6.content.force.com/servlet/servlet.ImageServer?id=01558000002a1KH&amp;oid=00D58000000PJMf&amp;lastMod=1504167694000" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 200px" width="200" />
+  </a>
+<div style="line-height:30px;font-size:1px">&#160;</div><!--[if mso]></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#01426a; padding-right: 0px; padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:18px;color:#01426a;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;line-height: 27px;font-size: 18px;text-align: center"><strong><a style="color:#01426a;text-decoration: none;" href="https://support.orderbird.com/hc/de/articles/200264427-orderbird-Pay-powered-by-Concardis" target="_blank" rel="noopener noreferrer">Kartenzahlung</a></strong></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 5px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:150%;color:#323435; padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 5px;">	
+	<div style="font-size:12px;line-height:18px;color:#323435;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 18px;text-align: center"><span style="font-size: 14px; line-height: 21px;">Falls Du den Kartenleser von<br />orderbird hast, registriere Dich<br />über die Registrierungsmail</span></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    
+<div align="center" class="button-container center" style="padding-right: 0px; padding-left: 0px; padding-top:20px; padding-bottom:20px;">
+  <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-right: 0px; padding-left: 0px; padding-top:20px; padding-bottom:20px;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://support.orderbird.com/hc/de/articles/200264427-orderbird-Pay-powered-by-Concardis" style="height:42px; v-text-anchor:middle; width:228px;" arcsize="0%" strokecolor="#00A3E0" fillcolor="#00A3E0"><w:anchorlock/><center style="color:#FFFFFF; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:16px;"><![endif]-->
+    <a href="https://support.orderbird.com/hc/de/articles/200264427-orderbird-Pay-powered-by-Concardis" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #00A3E0; border-radius: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; max-width: 300px; width: 70%; border-top: 0px solid transparent; border-right: 0px solid transparent; border-bottom: 0px solid transparent; border-left: 0px solid transparent; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;mso-border-alt: none">
+      <span style="font-size:16px;line-height:32px;"><span style="font-size: 14px; line-height: 28px;" data-mce-style="font-family: 'lucida sans unicode', 'lucida grande', sans-serif; font-size: 14px; line-height: 24px;">Mehr Info</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:transparent;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: transparent;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+  <!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px;padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+  <div align="center"><div style="border-top: 0px solid transparent; width:100%; line-height:0px; height:0px; font-size:0px;">&#160;</div></div>
+  <!--[if (mso)]></td></tr></table></td></tr></table><![endif]-->
+</div>
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #00A3E0;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#00A3E0;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: #00A3E0;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 0px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:120%;color:#ffffff; padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom: 0px;">	
+	<div style="font-size:12px;line-height:14px;color:#ffffff;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 18px; line-height: 21px;">KONTAKT</span></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 0px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:120%;color:#ffffff; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 0px;">	
+	<div style="font-size:12px;line-height:14px;color:#ffffff;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px;">Nach der Vorbesprechung kannst Du mich gerne&#160;via</span></p><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px;">E-Mail oder&#160;per Rückrufservice erreichen!</span></p><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px;">&#160;</span></p><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px;">Ich freue mich von Dir zu hören!</span></p><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center"><span style="font-size: 14px; line-height: 16px;"></span><br /><span style="font-size: 14px; line-height: 16px;">Marijke von orderbird</span></p><p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center"><span style="font-size: 14px; line-height: 16px;"></span><span style="font-size: 14px; line-height: 16px;"><a style="color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;text-decoration: underline;" title="marijke.vanstraten@orderbird.com" href="mailto:marijke.vanstraten@orderbird.com?subject={!Account.CustomerID__c} {!Account.Name}">marijke.vanstraten@orderbird.com</a></span></p><p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center">&#160;<span style="font-size: 14px; line-height: 16px;"><a style="color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;color:#FECC00;text-decoration: underline;" href="https://calendly.com/Marijke_orderbird/scall?sfid={!Case.Id}&amp;name={!Contact.FirstName}+{!Contact.LastName}&amp;email={!Contact.Email}&amp;a1={!Contact.Phone}&amp;a2={!Account.CustomerID__c}+{!Account.Name}" target="_blank" rel="noopener noreferrer">Rückrufservice</a></span></p><p style="margin: 0;font-size: 12px;line-height: 14px;text-align: center">&#160;&#160;<br /></p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>    <div style="background-color:transparent;">
+      <div style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #323435;" class="block-grid ">
+        <div style="border-collapse: collapse;display: table;width: 100%;">
+          <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width: 600px;"><tr class="layout-full-width" style="background-color:#323435;"><![endif]-->
+
+              <!--[if (mso)|(IE)]><td align="center" width="600" style=" width:600px; padding-right: 0px; padding-left: 0px; padding-top:15px; padding-bottom:30px; border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent;" valign="top"><![endif]-->
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;background-color: #323435;">
+              <div style="background-color: transparent; width: 100% !important;">
+              <!--[if (!mso)&(!IE)]><!--><div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:15px; padding-bottom:30px; padding-right: 0px; padding-left: 0px;"><!--<![endif]-->
+
+                  
+                    
+<div align="left" style="padding-right: 10px; padding-left: 10px; padding-bottom: 0px;">
+  <div style="display: table; max-width:245px;">
+  <!--[if (mso)|(IE)]><table width="225" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-collapse:collapse; padding-right: 10px; padding-left: 10px; padding-bottom: 0px;"  align="left"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace: 0pt;mso-table-rspace: 0pt; width:225px;"><tr><td width="32" style="width:32px; padding-right: 10px;" valign="top"><![endif]-->
+    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px">
+      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <a href="https://www.facebook.com/orderbird.deutschland" title="Facebook" target="_blank">
+          <img src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/facebook.png" alt="Facebook" title="Facebook" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" />
+        </a>
+      <div style="line-height:5px;font-size:1px">&#160;</div>
+      </td></tr>
+    </tbody></table>
+      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 10px;" valign="top"><![endif]-->
+    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px">
+      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <a href="https://twitter.com/orderbird" title="Twitter" target="_blank">
+          <img src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/twitter.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" />
+        </a>
+      <div style="line-height:5px;font-size:1px">&#160;</div>
+      </td></tr>
+    </tbody></table>
+      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 10px;" valign="top"><![endif]-->
+    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px">
+      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <a href="https://www.youtube.com/user/orderbird" title="YouTube" target="_blank">
+          <img src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/youtube@2x.png" alt="YouTube" title="YouTube" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" />
+        </a>
+      <div style="line-height:5px;font-size:1px">&#160;</div>
+      </td></tr>
+    </tbody></table>
+      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 10px;" valign="top"><![endif]-->
+    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px">
+      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <a href="https://www.instagram.com/orderbird/" title="Instagram" target="_blank">
+          <img src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/instagram@2x.png" alt="Instagram" title="Instagram" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" />
+        </a>
+      <div style="line-height:5px;font-size:1px">&#160;</div>
+      </td></tr>
+    </tbody></table>
+      <!--[if (mso)|(IE)]></td><td width="32" style="width:32px; padding-right: 0;" valign="top"><![endif]-->
+    <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 0">
+      <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+        <a href="https://plus.google.com/+Orderbird/posts" title="Google+" target="_blank">
+          <img src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/googleplus.png" alt="Google+" title="Google+" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" />
+        </a>
+      <div style="line-height:5px;font-size:1px">&#160;</div>
+      </td></tr>
+    </tbody></table>
+    <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+  </div>
+</div>
+
+                  
+                  
+                    <div style="padding-right: 5px; padding-left: 5px; padding-top: 5px; padding-bottom: 5px;">
+  <!--[if (mso)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 5px;padding-left: 5px; padding-top: 5px; padding-bottom: 5px;"><table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+  <div align="center"><div style="border-top: 0px solid #BBBBBB; width:100%; line-height:0px; height:0px; font-size:0px;">&#160;</div></div>
+  <!--[if (mso)]></td></tr></table></td></tr></table><![endif]-->
+</div>
+
+                  
+                  
+                    <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
+<div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:120%;color:#767676; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">	
+	<div style="font-size:12px;line-height:14px;color:#767676;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;"><p style="margin: 0;font-size: 12px;line-height: 14px">orderbird AG • Ritterstraße 12-14 • 10969 Berlin • Deutschland<br />Sitz der Gesellschaft: Berlin • Amtsgericht Berlin - Charlottenburg</p><p style="margin: 0;font-size: 12px;line-height: 14px">HRB 134011 • UstID: DE276722316<br />Vorstandsvorsitzender: Jakob Schreyer</p><p style="margin: 0;font-size: 12px;line-height: 14px">Vorsitzender des Aufsichtsrats: Carlo Kölzer&#160;</p><p style="margin: 0;font-size: 12px;line-height: 14px"><br />orderbird AG © 2011-2017 All Rights Reserved</p></div>	
+</div>
+<!--[if mso]></td></tr></table><![endif]-->
+
+                  
+              <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+              </div>
+            </div>
+          <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
+        </div>
+      </div>
+    </div>   <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+  </div>
+  <!--[if (mso)|(IE)]></div><![endif]-->
+
+
+</body></html>

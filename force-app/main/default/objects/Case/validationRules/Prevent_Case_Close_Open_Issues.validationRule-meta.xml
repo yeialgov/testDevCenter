@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Case_Close_Open_Issues</fullName>
+    <active>true</active>
+    <description>Validates that a case can only be closed if all (child) issues are closed.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+ISCHANGED( Status), 
+OR(
+ ISPICKVAL( Status, &quot;Closed&quot; ),
+ ISPICKVAL( Status, &quot;Closed - Not Solved&quot; )),
+  Open_Issues_Count__c   &gt;  0
+)</errorConditionFormula>
+    <errorMessage>You can&apos;t close a case with open issues.</errorMessage>
+</ValidationRule>

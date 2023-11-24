@@ -1,0 +1,115 @@
+<apex:component >
+    <apex:attribute access="public" name="Quote" type="Quote" description="Quote"/>
+    <apex:attribute access="public" name="Account" type="Account" description="Account"/>
+    <apex:attribute access="public" name="AddressParts" type="List" description=""/>
+    <apex:attribute access="public" name="AddressPartsShip" type="List" description=""/>
+    <head>
+        <apex:stylesheet value="{!$Resource.quotecss2}"/>
+    </head>
+    <div style="text-align:right;">
+        <img src="{!$Resource.orderbird_logo}" class="height: 60px;"/>
+    </div>
+    <p class="blueText bigBold grayText" style="font-family: sans-serif;font-size:100%;">
+         Confirmation de commande et autorisation
+        <br/>
+        de prelèvement pour votre offre&nbsp;{!Quote.QuoteNumber}&nbsp;//&nbsp;{!Account.Name}
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:100%;">
+        J'autorise orderbird AG à percevoir les paiements payables par moi à partir de mon compte lors de l'échéance au moyen d'un débit direct de mon compte. En même temps, j'envoie des instructions à ma banque pour débiter mon compte conformément aux instructions de orderbird AG.
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:100%;">
+        S'il n'y a pas assez de fonds sur mon compte, la banque qui détient le compte n'a pas l'obligation d'honorer le paiement. Les paiements partiels ne sont pas effectués par prélèvement automatique.
+    </p>
+    <p class="grayText" style="font-family: sans-serif;font-size:100%;">
+        Avec ma signature, je confirme avoir lu et accepté les conditions générales de vente sur www.orderbird.fr/conditions-generales.
+    </p>
+    <div style="font-family: sans-serif;font-size:90%;">
+        <table class="grayText" style="width:100%;font-family: sans-serif;font-size:90%;">
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Titulaire de compte:</td>
+                <td style="width:65%;border-bottom:1px solid black;"/>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">IBAN:</td>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'Germany'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        D E&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'France'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        F R&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry == 'Austria'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;">
+                        A T&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_&nbsp;&nbsp;_
+                    </td>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!Account.ShippingCountry != 'Austria' && Account.ShippingCountry != 'Germany' && Account.ShippingCountry != 'France'}">
+                    <td style="width:65%;border-bottom:1px solid #787878;"/>
+                </apex:outputPanel>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Lieu et date:</td>
+                <td style="width:65%;border-bottom:1px solid black;"/>
+            </tr>
+            <tr>
+                <td style="width:35%;padding-bottom: 15px;">Signature:</td>
+                <td style="width:65%;border-bottom:1px solid black;"/>
+            </tr>
+            <tr>
+                <td valign="top" style="width:35%;padding-bottom: 15px;padding-top:10px;">
+                    Subscription:
+                </td>
+                <td style="width:65%;font-weight:bolder;padding-top:10px;font-size:90%;">
+                    <c:AddressBuilder_shipping Account="{!Account}" AddressParts="{!AddressPartsShip}"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:35%;text-align:center;">
+                    <img src="{!$Resource.QuoteCircleFR}" style="width:65%;"/>
+                    <p style="text-align:center;font-size:85%;">
+                        orderbird offre un service de<br/>
+                        support à l'écoute et<br/>
+                        efficace. La configuration est<br/>
+                        simple, il suffit de brancher<br/>
+                        le matériel et c'est parti!
+                    </p>
+                    <p class="blueText" style="text-align:center;font-size:100%;font-weight:bolder;">
+                        Yoni Saada,<br/>
+                        restaurant Bagnard
+                    </p>
+                </td>
+                <td style="width:65%;padding-left:20px;padding-bottom: 0;font-size:100%;">
+                    <strong>Nous vous prions d'envoyer cette page signée à:<br/><br/></strong>
+                    <table>
+                        <tr>
+                            <td>Fax:</td>
+                            <td>+ 49 (0) 321 214 681 89</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right:15px;">E-Mail:</td>
+                            <td>{!Quote.Opportunity.Owner.Email}</td>
+                        </tr>
+                        <tr>
+                            <td>Site internet:</td>
+                            <td>activation sur my.orderbird.com</td>
+                        </tr>
+                        <!--tr>
+                            <td>Adresse postale:</td>
+                            <td>25, rue Sainte Apolline, 75002 Paris</td>
+                        </tr-->
+                    </table>
+                    <br/>
+                    <strong>Des questions ou demandes de modification?<br/></strong>
+                    Appelez-nous au&nbsp;
+                    {!IF( Quote.Opportunity.Owner.Phone != null,Quote.Opportunity.Owner.Phone,IF(Account.ShippingCountry = 'France','+33 (0) 1 76 36 06 40',IF(Account.ShippingCountry = 'Austria','+43 (0) 1 361 022 499',IF(Account.ShippingCountry = 'Switzerland','+41 (0) 41 525 20 99','+49 (0) 30 208 983 098'))))}
+                    &nbsp;ou écrivez- nous à {!Quote.Opportunity.Owner.Email}!<br/><br/>
+                    Cordialement<br/>
+                    {!Quote.Opportunity.Owner.Name}
+                </td>
+            </tr>
+        </table>
+    </div>
+</apex:component>

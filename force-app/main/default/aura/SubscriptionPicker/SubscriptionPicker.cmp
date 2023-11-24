@@ -1,0 +1,16 @@
+<aura:component controller="SubscriptionPickerController">
+    
+    <aura:attribute name="AccountId" type="String"/>
+    <aura:attribute name="Subscriptions" type="List" />
+    
+    <aura:handler name="change" value="{!v.AccountId}" action="{!c.acctChange}"/>
+    
+    <div class="slds-grid slds-wrap">
+        <aura:iteration var="sub" items="{!v.Subscriptions}">
+            <div class="slds-col slds-size_1-of-2">
+                <c:SubscriptionPickerItem Subscription="{!sub}"/>
+            </div>
+        </aura:iteration>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ordering_License_Campaign</fullName>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Onboarding_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Open,On Hold,Waiting for Customer Reply,Re-Open,Escalated</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Bestellung 1 Geraetelizenz,Bestellung 2 Geraetelizenzen,Bestellung 1 iPod touch plus 1 Geratelizenz,Bestellung 2 iPod touch plus 2 Geraetelizenzen</value>
+    </filters>
+    <label>Ordering License Campaign</label>
+</ListView>

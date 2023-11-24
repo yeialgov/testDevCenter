@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LostRejectedReason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the lost reason for an opportunity. Required if Stage = Closed Lost</inlineHelpText>
+    <label>Lost/ Rejected Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>OppCategory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Already Customer</fullName>
+                <default>false</default>
+                <label>Already Customer</label>
+            </value>
+            <value>
+                <fullName>Android</fullName>
+                <default>false</default>
+                <label>Android</label>
+            </value>
+            <value>
+                <fullName>Apple only</fullName>
+                <default>false</default>
+                <label>Apple only</label>
+            </value>
+            <value>
+                <fullName>Cannot be reached</fullName>
+                <default>false</default>
+                <label>Cannot be reached</label>
+            </value>
+            <value>
+                <fullName>Cannot be reached after first contact</fullName>
+                <default>false</default>
+                <label>Cannot be reached after first contact</label>
+            </value>
+            <value>
+                <fullName>Closing down</fullName>
+                <default>false</default>
+                <label>Closing down</label>
+            </value>
+            <value>
+                <fullName>Contact details incorrect</fullName>
+                <default>false</default>
+                <label>Contact details incorrect</label>
+            </value>
+            <value>
+                <fullName>Corona Virus</fullName>
+                <default>false</default>
+                <label>Corona Virus</label>
+            </value>
+            <value>
+                <fullName>Crucial feature request</fullName>
+                <default>false</default>
+                <label>Crucial feature request</label>
+            </value>
+            <value>
+                <fullName>Customer churned</fullName>
+                <default>false</default>
+                <label>Customer churned</label>
+            </value>
+            <value>
+                <fullName>Customer closed down</fullName>
+                <default>false</default>
+                <label>Customer closed down</label>
+            </value>
+            <value>
+                <fullName>Data Quality Issue</fullName>
+                <default>false</default>
+                <label>Data Quality Issue</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Existing cash register is being upgraded</fullName>
+                <default>false</default>
+                <label>Existing cash register is being upgraded</label>
+            </value>
+            <value>
+                <fullName>Foreign country / incompatible</fullName>
+                <default>false</default>
+                <label>Foreign country / incompatible</label>
+            </value>
+            <value>
+                <fullName>GM - already GM Customer (old model)</fullName>
+                <default>false</default>
+                <label>GM - already GM Customer (old model)</label>
+            </value>
+            <value>
+                <fullName>GM - Crucial feature request</fullName>
+                <default>false</default>
+                <label>GM - Crucial feature request</label>
+            </value>
+            <value>
+                <fullName>GM - Existing contract</fullName>
+                <default>false</default>
+                <label>GM - Existing contract</label>
+            </value>
+            <value>
+                <fullName>GM - Guest Registration only</fullName>
+                <default>false</default>
+                <label>GM - Guest Registration only</label>
+            </value>
+            <value>
+                <fullName>GM - Maybe later</fullName>
+                <default>false</default>
+                <label>GM - Maybe later</label>
+            </value>
+            <value>
+                <fullName>GM - No integration in orderbird</fullName>
+                <default>false</default>
+                <label>GM - No integration in orderbird</label>
+            </value>
+            <value>
+                <fullName>GM - Too complicated</fullName>
+                <default>false</default>
+                <label>GM - Too complicated</label>
+            </value>
+            <value>
+                <fullName>GM - Too cost intensive</fullName>
+                <default>false</default>
+                <label>GM - Too cost intensive</label>
+            </value>
+            <value>
+                <fullName>Insufficient reliability</fullName>
+                <default>false</default>
+                <label>Insufficient reliability</label>
+            </value>
+            <value>
+                <fullName>Internal Testing</fullName>
+                <default>false</default>
+                <label>Internal Testing</label>
+            </value>
+            <value>
+                <fullName>Language barrier</fullName>
+                <default>false</default>
+                <label>Language barrier</label>
+            </value>
+            <value>
+                <fullName>MINI as Swarm device</fullName>
+                <default>false</default>
+                <label>MINI as Swarm device</label>
+            </value>
+            <value>
+                <fullName>No/bad internet</fullName>
+                <default>false</default>
+                <label>No/bad internet</label>
+            </value>
+            <value>
+                <fullName>Only free version</fullName>
+                <default>false</default>
+                <label>Only free version</label>
+            </value>
+            <value>
+                <fullName>On-site demo / support needed</fullName>
+                <default>false</default>
+                <label>On-site demo / support needed</label>
+            </value>
+            <value>
+                <fullName>Opportunity Expired</fullName>
+                <default>false</default>
+                <label>Opportunity Expired</label>
+            </value>
+            <value>
+                <fullName>Outside the industry / no fit</fullName>
+                <default>false</default>
+                <label>Outside the industry / no fit</label>
+            </value>
+            <value>
+                <fullName>Pay lost - Cash only</fullName>
+                <default>false</default>
+                <label>Pay lost - Cash only</label>
+            </value>
+            <value>
+                <fullName>Pay lost - does not want to use pay</fullName>
+                <default>false</default>
+                <label>Pay lost - does not want to use pay</label>
+            </value>
+            <value>
+                <fullName>Pay lost - existing contract</fullName>
+                <default>false</default>
+                <label>Pay lost - existing contract</label>
+            </value>
+            <value>
+                <fullName>Pay lost - existing contract within hotel solution</fullName>
+                <default>false</default>
+                <label>Pay lost - existing contract within hotel solution</label>
+            </value>
+            <value>
+                <fullName>Pay lost - fees too high</fullName>
+                <default>false</default>
+                <label>Pay lost - fees too high</label>
+            </value>
+            <value>
+                <fullName>Pay lost - maybe later</fullName>
+                <default>false</default>
+                <label>Pay lost - maybe later</label>
+            </value>
+            <value>
+                <fullName>Pay lost - no Internet</fullName>
+                <default>false</default>
+                <label>Pay lost - no Internet</label>
+            </value>
+            <value>
+                <fullName>Pay lost - onboarding aborted</fullName>
+                <default>false</default>
+                <label>Pay lost - onboarding aborted</label>
+            </value>
+            <value>
+                <fullName>Pay lost - prefers other solution</fullName>
+                <default>false</default>
+                <label>Pay lost - prefers other solution</label>
+            </value>
+            <value>
+                <fullName>Pay lost - rejected by Bambora</fullName>
+                <default>false</default>
+                <label>Pay lost - rejected by Bambora</label>
+            </value>
+            <value>
+                <fullName>Pay lost - takes Concardis</fullName>
+                <default>false</default>
+                <label>Pay lost - takes Concardis</label>
+            </value>
+            <value>
+                <fullName>Pay reader too expensive</fullName>
+                <default>false</default>
+                <label>Pay reader too expensive</label>
+            </value>
+            <value>
+                <fullName>Project cancelled</fullName>
+                <default>false</default>
+                <label>Project cancelled</label>
+            </value>
+            <value>
+                <fullName>Project delayed</fullName>
+                <default>false</default>
+                <label>Project delayed</label>
+            </value>
+            <value>
+                <fullName>Technical requirements too high</fullName>
+                <default>false</default>
+                <label>Technical requirements too high</label>
+            </value>
+            <value>
+                <fullName>Too complicated</fullName>
+                <default>false</default>
+                <label>Too complicated</label>
+            </value>
+            <value>
+                <fullName>Too cost-intensive</fullName>
+                <default>false</default>
+                <label>Too cost-intensive</label>
+            </value>
+            <value>
+                <fullName>Too cost intensive (Hardware)</fullName>
+                <default>false</default>
+                <label>Too cost intensive (Hardware)</label>
+            </value>
+            <value>
+                <fullName>Too cost intensive (Pay)</fullName>
+                <default>false</default>
+                <label>Too cost intensive (Pay)</label>
+            </value>
+            <value>
+                <fullName>Too cost intensive (Software)</fullName>
+                <default>false</default>
+                <label>Too cost intensive (Software)</label>
+            </value>
+            <value>
+                <fullName>Too small</fullName>
+                <default>false</default>
+                <label>Too small</label>
+            </value>
+            <value>
+                <fullName>Transfer to Nurturing</fullName>
+                <default>false</default>
+                <label>Transfer to Nurturing</label>
+            </value>
+            <value>
+                <fullName>Unknown / other</fullName>
+                <default>false</default>
+                <label>Unknown / other</label>
+            </value>
+            <value>
+                <fullName>VAT Number Issue</fullName>
+                <default>false</default>
+                <label>VAT Number Issue</label>
+            </value>
+            <value>
+                <fullName>Venue owner changed</fullName>
+                <default>false</default>
+                <label>Venue owner changed</label>
+            </value>
+            <value>
+                <fullName>Wrong Account assigned</fullName>
+                <default>false</default>
+                <label>Wrong Account assigned</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Already Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Android</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Apple only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Cannot be reached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Cannot be reached after first contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Closing down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Contact details incorrect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Corona Virus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Crucial feature request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Data Quality Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Existing cash register is being upgraded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Foreign country / incompatible</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Insufficient reliability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Internal Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Language barrier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>No/bad internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Only free version</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>On-site demo / support needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Opportunity Expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Outside the industry / no fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay reader too expensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Project cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Project delayed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Technical requirements too high</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too complicated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too cost-intensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too cost intensive (Hardware)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too cost intensive (Pay)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too cost intensive (Software)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Too small</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>Unknown / other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>VAT Number Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Venue owner changed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Wrong Account assigned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Customer churned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Customer closed down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - already GM Customer (old model)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Crucial feature request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Existing contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Guest Registration only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Maybe later</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - No integration in orderbird</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Too complicated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>GM - Too cost intensive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - Cash only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - does not want to use pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - existing contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - existing contract within hotel solution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - fees too high</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - maybe later</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - no Internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - onboarding aborted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - prefers other solution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - rejected by Bambora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>Pay lost - takes Concardis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MINI by orderbird</controllingFieldValue>
+            <valueName>MINI as Swarm device</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

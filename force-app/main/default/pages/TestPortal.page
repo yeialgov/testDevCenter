@@ -1,0 +1,15 @@
+<apex:page >
+  <apex:includeLightning />
+    <div  id="compContainer" />
+  <script>
+     $Lightning.use("c:SampleApplication", function() {
+         $Lightning.createComponent("c:portal_header",
+             {token:"pPyGQdJZUMctT3YW7jUG9y7QnA83_3uH_uTUbIQOWdj4sH9VZ0D-gSvhsUK6s1PKij4F6S4cS0atnE0dssCSH7gBclIwvwTvHRVQXctESPZTadsYL76UNSAaDiC0_qBGEL_y_d6bd0i2Ewa4NsU43cOj8klSZLrMOScPzYSjhG0"},
+             "compContainer",
+             function(cmp) {
+          console.log("c:VFPageApp loaded successfully in VF page");
+             }
+         );
+     });
+  </script>
+</apex:page>

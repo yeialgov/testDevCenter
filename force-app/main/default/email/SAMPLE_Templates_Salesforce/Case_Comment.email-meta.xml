@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Comment Case</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>Case Comment</name>
+    <style>freeForm</style>
+    <subject>New Comment on: Case # {!Case.CaseNumber}</subject>
+    <textOnly>Dear {!Contact.Name}, 
+
+Thank you for submitting your question to us! 
+
+We have received your email and created a case to ensure that it is 
+answered quickly. Below are the details of your case for future 
+reference. 
+
+Case Information 
+Date/Time Opened: {!Case.CreatedDate} 
+Case #: {!Case.CaseNumber} 
+Subject: {!Case.Subject} 
+Description: {!Case.Description} 
+
+We will respond as soon as possible. If you have additional comments or updates to this case, please reply to this email. 
+Thank you, 
+Customer Service 
+{!Organization.Name} 
+
+Case Reference ID: {!Case.Thread_Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

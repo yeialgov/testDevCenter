@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubCategory__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sub-Category of this case. Depends on Category</inlineHelpText>
+    <label>SubCategory</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apple Devices</fullName>
+                <default>false</default>
+                <label>Apple Devices</label>
+            </value>
+            <value>
+                <fullName>Bill/Docket</fullName>
+                <default>false</default>
+                <label>Bill/Docket</label>
+            </value>
+            <value>
+                <fullName>Cardreader</fullName>
+                <default>false</default>
+                <label>Cardreader</label>
+            </value>
+            <value>
+                <fullName>Cash Drawer &amp; Components</fullName>
+                <default>false</default>
+                <label>Cash Drawer &amp; Components</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Device Integration</fullName>
+                <default>false</default>
+                <label>Device Integration</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Exports</fullName>
+                <default>false</default>
+                <label>Exports</label>
+            </value>
+            <value>
+                <fullName>First Steps</fullName>
+                <default>false</default>
+                <label>First Steps</label>
+            </value>
+            <value>
+                <fullName>Fiscal Trust</fullName>
+                <default>false</default>
+                <label>Fiscal Trust</label>
+            </value>
+            <value>
+                <fullName>Food Notify</fullName>
+                <default>false</default>
+                <label>Food Notify</label>
+            </value>
+            <value>
+                <fullName>Guest Wifi</fullName>
+                <default>false</default>
+                <label>Guest Wifi</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+            <value>
+                <fullName>Internal Wifi</fullName>
+                <default>false</default>
+                <label>Internal Wifi</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>Invoicing</fullName>
+                <default>false</default>
+                <label>Invoicing</label>
+            </value>
+            <value>
+                <fullName>Lunchio</fullName>
+                <default>false</default>
+                <label>Lunchio</label>
+            </value>
+            <value>
+                <fullName>Masterdata</fullName>
+                <default>false</default>
+                <label>Masterdata</label>
+            </value>
+            <value>
+                <fullName>Menu Service</fullName>
+                <default>false</default>
+                <label>Menu Service</label>
+            </value>
+            <value>
+                <fullName>my.orderbird</fullName>
+                <default>false</default>
+                <label>my.orderbird</label>
+            </value>
+            <value>
+                <fullName>myOB</fullName>
+                <default>false</default>
+                <label>myOB</label>
+            </value>
+            <value>
+                <fullName>No Account</fullName>
+                <default>false</default>
+                <label>No Account</label>
+            </value>
+            <value>
+                <fullName>Not Reachable</fullName>
+                <default>false</default>
+                <label>Not Reachable</label>
+            </value>
+            <value>
+                <fullName>Online Shop</fullName>
+                <default>false</default>
+                <label>Online Shop</label>
+            </value>
+            <value>
+                <fullName>Open Orders</fullName>
+                <default>false</default>
+                <label>Open Orders</label>
+            </value>
+            <value>
+                <fullName>Ordering Pad</fullName>
+                <default>false</default>
+                <label>Ordering Pad</label>
+            </value>
+            <value>
+                <fullName>orderpad</fullName>
+                <default>false</default>
+                <label>orderpad</label>
+            </value>
+            <value>
+                <fullName>Other (see comments)</fullName>
+                <default>false</default>
+                <label>Other (see comments)</label>
+            </value>
+            <value>
+                <fullName>Partners</fullName>
+                <default>false</default>
+                <label>Partners</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Printer &amp; Components</fullName>
+                <default>false</default>
+                <label>Printer &amp; Components</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Reporting (my.ob)</fullName>
+                <default>false</default>
+                <label>Reporting (my.ob)</label>
+            </value>
+            <value>
+                <fullName>Reporting (orderbird app)</fullName>
+                <default>false</default>
+                <label>Reporting (orderbird app)</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Resmio</fullName>
+                <default>false</default>
+                <label>Resmio</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Shift</fullName>
+                <default>false</default>
+                <label>Shift</label>
+            </value>
+            <value>
+                <fullName>Simple Order</fullName>
+                <default>false</default>
+                <label>Simple Order</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Stands &amp; Cases</fullName>
+                <default>false</default>
+                <label>Stands &amp; Cases</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Users</fullName>
+                <default>false</default>
+                <label>Users</label>
+            </value>
+            <value>
+                <fullName>Zenchef</fullName>
+                <default>false</default>
+                <label>Zenchef</label>
+            </value>
+            <value>
+                <fullName>General Question</fullName>
+                <default>false</default>
+                <label>General Question</label>
+            </value>
+            <value>
+                <fullName>Login Issue</fullName>
+                <default>false</default>
+                <label>Login Issue</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Bug Report - Salesforce</fullName>
+                <default>false</default>
+                <label>Bug Report - Salesforce</label>
+            </value>
+            <value>
+                <fullName>Bug Report - Zuora</fullName>
+                <default>false</default>
+                <label>Bug Report - Zuora</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>(User) Training Issue</fullName>
+                <default>false</default>
+                <label>(User) Training Issue</label>
+            </value>
+            <value>
+                <fullName>NEST: escalated issues to SFDC/ Zuora Support</fullName>
+                <default>false</default>
+                <label>NEST: escalated issues to SFDC/ Zuora Support</label>
+            </value>
+            <value>
+                <fullName>Feature Request</fullName>
+                <default>false</default>
+                <label>Feature Request</label>
+            </value>
+            <value>
+                <fullName>n/a (please specify in case comments)</fullName>
+                <default>false</default>
+                <label>n/a (please specify in case comments)</label>
+            </value>
+            <value>
+                <fullName>WiFi Pro</fullName>
+                <default>false</default>
+                <label>WiFi Pro</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <valueName>Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Upselling</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Menu Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Reports &amp; Dashboards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Bill/Docket</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Device Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Integrations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>myOB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Ordering Pad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Other (see comments)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Request</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>orderbird App</controllingFieldValue>
+            <valueName>orderpad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>orderbird App</controllingFieldValue>
+            <controllingFieldValue>Pay</controllingFieldValue>
+            <valueName>Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>orderbird App</controllingFieldValue>
+            <valueName>Printing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>orderbird App</controllingFieldValue>
+            <valueName>Reporting (orderbird app)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>orderbird App</controllingFieldValue>
+            <valueName>Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Exports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Masterdata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Online Shop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Open Orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Reporting (my.ob)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>my.orderbird</controllingFieldValue>
+            <valueName>Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>Guest Wifi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>Internal Wifi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <valueName>WiFi Pro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Apple Devices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Cash Drawer &amp; Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Printer &amp; Components</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <valueName>Stands &amp; Cases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Fiscal Trust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Food Notify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Lunchio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Resmio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Simple Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add-ons</controllingFieldValue>
+            <valueName>Zenchef</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Invoicing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account</controllingFieldValue>
+            <valueName>Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay</controllingFieldValue>
+            <valueName>Cardreader</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay</controllingFieldValue>
+            <valueName>First Steps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unavailable</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unavailable</controllingFieldValue>
+            <valueName>No Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unavailable</controllingFieldValue>
+            <valueName>Not Reachable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>unavailable</controllingFieldValue>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>n/a (please specify in case comments)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>General Question</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Login Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Data Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>User Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Bug Report - Salesforce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Bug Report - Zuora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>(User) Training Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>NEST: escalated issues to SFDC/ Zuora Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEST Support</controllingFieldValue>
+            <valueName>Feature Request</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

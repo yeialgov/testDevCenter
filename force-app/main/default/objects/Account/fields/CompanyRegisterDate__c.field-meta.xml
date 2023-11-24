@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompanyRegisterDate__c</fullName>
+    <description>Stakeholder: UNKNOWN // finance has no use for this info, until stakeholder comes forward: not used</description>
+    <externalId>false</externalId>
+    <inlineHelpText>NOT USED</inlineHelpText>
+    <label>Company Register Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

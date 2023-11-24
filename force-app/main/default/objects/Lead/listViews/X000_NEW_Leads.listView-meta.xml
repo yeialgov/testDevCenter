@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X000_NEW_Leads</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LAC_ID__c</columns>
+    <columns>Origin__c</columns>
+    <columns>Region__c</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Best_time_to_contact__c</columns>
+    <columns>LEAD.CONVERTED</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>LeadType__c</field>
+        <operation>equals</operation>
+        <value>Customer</value>
+    </filters>
+    <filters>
+        <field>LEAD.FIRST_NAME</field>
+        <operation>notEqual</operation>
+        <value>Test XYZ</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notEqual</operation>
+        <value>Test XYZ</value>
+    </filters>
+    <label>000 NEW Leads</label>
+</ListView>

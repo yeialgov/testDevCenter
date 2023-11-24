@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Analysis_Segment__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Industry,
+&quot;Restaurant&quot;, &quot;1&quot;,
+&quot;Cafe&quot;, &quot;2&quot;,
+&quot;Pub / Bar&quot;, &quot;3&quot;,
+&quot;Pub&quot;, &quot;3&quot;,
+&quot;Snack / Takeaway&quot;, &quot;4&quot;,
+&quot;&quot;,&quot;0&quot;,
+&quot;5&quot;)
+&amp;
+CASE(Employees__c,
+&quot;0-4&quot;, &quot;1&quot;,
+&quot;5-7&quot;, &quot;2&quot;,
+&quot;8-12&quot;, &quot;3&quot;,
+&quot;13-18&quot;, &quot;4&quot;,
+&quot;19+&quot;, &quot;5&quot;,
+&quot;0 - 4&quot;, &quot;1&quot;,
+&quot;5 - 7&quot;, &quot;2&quot;,
+&quot;8 - 12&quot;, &quot;3&quot;,
+&quot;13 - 18&quot;, &quot;4&quot;,
+&quot;&gt; 19&quot;, &quot;5&quot;,
+&quot;0&quot;)
+&amp;
+CASE(IndoorSeats__c,
+&quot;&lt;10&quot;, &quot;1&quot;,
+&quot;&lt;20&quot;, &quot;1&quot;,
+&quot;10-20&quot;, &quot;1&quot;,
+&quot;21-30&quot;, &quot;2&quot;,
+&quot;31-50&quot;, &quot;2&quot;,
+&quot;21-50&quot;, &quot;2&quot;,
+&quot;51-75&quot;, &quot;3&quot;,
+&quot;76-100&quot;, &quot;3&quot;,
+&quot;51-100&quot;, &quot;3&quot;,
+&quot;101-150&quot;, &quot;4&quot;,
+&quot;151-200&quot;, &quot;4&quot;,
+&quot;101-200&quot;, &quot;4&quot;,
+&quot;200+&quot;, &quot;5&quot;,
+&quot;0&quot;)
+&amp;
+CASE(OutdoorSeats__c,
+&quot;&lt;10&quot;, &quot;1&quot;,
+&quot;&lt;20&quot;, &quot;1&quot;,
+&quot;10-20&quot;, &quot;1&quot;,
+&quot;21-30&quot;, &quot;2&quot;,
+&quot;31-50&quot;, &quot;2&quot;,
+&quot;21-50&quot;, &quot;2&quot;,
+&quot;51-75&quot;, &quot;3&quot;,
+&quot;76-100&quot;, &quot;3&quot;,
+&quot;51-100&quot;, &quot;3&quot;,
+&quot;101-150&quot;, &quot;4&quot;,
+&quot;151-200&quot;, &quot;4&quot;,
+&quot;101-200&quot;, &quot;4&quot;,
+&quot;200+&quot;, &quot;5&quot;,
+&quot;0&quot;)</formula>
+    <label>Analysis Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

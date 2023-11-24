@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - Customer not reached - TU</name>
+    <style>freeForm</style>
+    <subject>Tus ventajas con orderbird</subject>
+    <textOnly>Hola querido equipo de ...,
+
+querido/a ... ,
+
+seguramente hoy has tenido una jornada gastro típica y has estado muy liado. Por desgracia no te hemos podido localizar..
+
+Por favor avísanos de cómo y cuándo prefieres que nos pongamos en contacto contigo.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

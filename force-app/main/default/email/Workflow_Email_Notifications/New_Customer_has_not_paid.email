@@ -1,0 +1,5 @@
+(Automated Email)
+
+Please be aware that new customer {!Account.Name} has not yet paid.
+
+{!Account.Link}

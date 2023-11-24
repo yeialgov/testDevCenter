@@ -1,0 +1,56 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78)}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78); min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; color: #424242; color: rgba(66, 66, 66, 0.78); -webkit-text-stroke: rgba(66, 66, 66, 0.78)}
+span.s1 {font-kerning: none}
+</style>
+
+
+<p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style="">Hallo {!Contact.FirstName},</font></span></p><p class="p2" style="font-size: 12pt;"><font face="Arial, sans-serif" size="2"><span class="s1"></span><br></font></p><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989">die Kartenzahlung mit orderbird PAY ist ab sofort freigeschaltet.&nbsp;</font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989"><br></font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989">Verbinde Deinen Kartenleser per Bluetooth mit Deinem iOS Gerät und nutze zum Zahlen die Bezahlungsart “Kartenzahlung”.</font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989"><br></font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989">Klicke <a href="https://support.orderbird.com/hc/de/articles/205673945-Start-bargeldloses-Bezahlen-mit-orderbird-mit-Videoanleitung">hier</a> um die Anleitung zum Koppeln des Kartenlesers im Online Handbuch aufzurufen.</font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989"><br></font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989">Tipp: Wenn eine Rechnung per Kartenzahlung mit orderbird PAY abgerechnet und anschließend aus dem Rechnungsarchiv wiederhergestellt wird, wird der Rechnungsbetrag dem Karteninhaber wieder <b>gutgeschrieben</b>.&nbsp;</font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989"><br></font></div><div style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><font face="Arial" size="2" color="#898989">Solltest Du noch Fragen oder Anregungen haben, freuen wir uns von Dir zu hören!</font></div><div><font face="Arial" size="2" color="#898989"><br></font></div><p class="p1" style="font-size: 12pt;"><span class="s1"><font face="Arial, sans-serif" size="2">Vielen Dank und viele Grüße</font></span></p><p class="p2" style="font-size: 12pt;"><font face="Arial, sans-serif" size="2"><span class="s1"></span><br></font></p><p class="p1" style="font-size: 12pt;">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.48); -webkit-text-stroke: rgba(0, 0, 0, 0.48)}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; color: rgba(0, 0, 0, 0.48); -webkit-text-stroke: rgba(0, 0, 0, 0.48); min-height: 14.0px}
+span.s1 {font-kerning: none}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style="">{!User.FirstName}</font></span></p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><p class="p1" style="font-size: 12pt;"><span class="s1" style=""><font face="Arial, sans-serif" size="2" style=""><br></font></span></p><style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Helvetica; color: #8b8b8b; -webkit-text-stroke: #8b8b8b; background-color: #fefefe}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Helvetica; color: #8b8b8b; -webkit-text-stroke: #8b8b8b; background-color: #ffffff; min-height: 16.0px}
+span.s1 {font-kerning: none}
+</style><style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 14.0px}
+p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Arial; color: #00b3e6; -webkit-text-stroke: #00b3e6}
+span.s1 {font-kerning: none}
+span.s2 {text-decoration: underline ; font-kerning: none}
+</style>]]></td>
+</tr>
+</table>

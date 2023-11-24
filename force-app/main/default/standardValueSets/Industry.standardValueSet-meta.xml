@@ -1,164 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sorted>false</sorted>
+    <sorted>true</sorted>
     <standardValue>
-        <fullName>Agriculture</fullName>
+        <fullName>Bakery</fullName>
         <default>false</default>
-        <label>Agriculture</label>
+        <label>Bakery</label>
     </standardValue>
     <standardValue>
-        <fullName>Apparel</fullName>
+        <fullName>Beauty / Wellness</fullName>
         <default>false</default>
-        <label>Apparel</label>
+        <label>Beauty / Wellness</label>
     </standardValue>
     <standardValue>
-        <fullName>Banking</fullName>
+        <fullName>Cafe</fullName>
         <default>false</default>
-        <label>Banking</label>
+        <label>Cafe</label>
     </standardValue>
     <standardValue>
-        <fullName>Biotechnology</fullName>
+        <fullName>Canteen</fullName>
         <default>false</default>
-        <label>Biotechnology</label>
+        <label>Canteen</label>
     </standardValue>
     <standardValue>
-        <fullName>Chemicals</fullName>
+        <fullName>Catering / Events</fullName>
         <default>false</default>
-        <label>Chemicals</label>
+        <label>Catering / Events</label>
     </standardValue>
     <standardValue>
-        <fullName>Communications</fullName>
+        <fullName>Cosmetic / Beauty Culture</fullName>
         <default>false</default>
-        <label>Communications</label>
+        <label>Cosmetic / Beauty Culture</label>
     </standardValue>
     <standardValue>
-        <fullName>Construction</fullName>
+        <fullName>Culture / Event / Tickets</fullName>
         <default>false</default>
-        <label>Construction</label>
+        <label>Culture / Event / Tickets</label>
     </standardValue>
     <standardValue>
-        <fullName>Consulting</fullName>
+        <fullName>Delivery Service</fullName>
         <default>false</default>
-        <label>Consulting</label>
+        <label>Delivery Service</label>
     </standardValue>
     <standardValue>
-        <fullName>Education</fullName>
+        <fullName>Foodtruck</fullName>
         <default>false</default>
-        <label>Education</label>
+        <label>Foodtruck</label>
     </standardValue>
     <standardValue>
-        <fullName>Electronics</fullName>
+        <fullName>Hairdresser</fullName>
         <default>false</default>
-        <label>Electronics</label>
+        <label>Hairdresser</label>
     </standardValue>
     <standardValue>
-        <fullName>Energy</fullName>
+        <fullName>Hotel / Pension</fullName>
         <default>false</default>
-        <label>Energy</label>
+        <label>Hotel / Pension</label>
     </standardValue>
     <standardValue>
-        <fullName>Engineering</fullName>
+        <fullName>Massage Parlour</fullName>
         <default>false</default>
-        <label>Engineering</label>
+        <label>Massage Parlour</label>
     </standardValue>
     <standardValue>
-        <fullName>Entertainment</fullName>
+        <fullName>Nailstudio</fullName>
         <default>false</default>
-        <label>Entertainment</label>
+        <label>Nailstudio</label>
     </standardValue>
     <standardValue>
-        <fullName>Environmental</fullName>
+        <fullName>Nightclub / Disco</fullName>
         <default>false</default>
-        <label>Environmental</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Finance</fullName>
-        <default>false</default>
-        <label>Finance</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Food &amp; Beverage</fullName>
-        <default>false</default>
-        <label>Food &amp; Beverage</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Government</fullName>
-        <default>false</default>
-        <label>Government</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Healthcare</fullName>
-        <default>false</default>
-        <label>Healthcare</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Hospitality</fullName>
-        <default>false</default>
-        <label>Hospitality</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Insurance</fullName>
-        <default>false</default>
-        <label>Insurance</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Machinery</fullName>
-        <default>false</default>
-        <label>Machinery</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Manufacturing</fullName>
-        <default>false</default>
-        <label>Manufacturing</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Media</fullName>
-        <default>false</default>
-        <label>Media</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Not For Profit</fullName>
-        <default>false</default>
-        <label>Not For Profit</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Recreation</fullName>
-        <default>false</default>
-        <label>Recreation</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Retail</fullName>
-        <default>false</default>
-        <label>Retail</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Shipping</fullName>
-        <default>false</default>
-        <label>Shipping</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Technology</fullName>
-        <default>false</default>
-        <label>Technology</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Telecommunications</fullName>
-        <default>false</default>
-        <label>Telecommunications</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Transportation</fullName>
-        <default>false</default>
-        <label>Transportation</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Utilities</fullName>
-        <default>false</default>
-        <label>Utilities</label>
+        <label>Nightclub / Disco</label>
     </standardValue>
     <standardValue>
         <fullName>Other</fullName>
         <default>false</default>
         <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Podiatrist / Foot Care</fullName>
+        <default>false</default>
+        <label>Podiatrist / Foot Care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pub / Bar</fullName>
+        <default>false</default>
+        <label>Pub / Bar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Restaurant</fullName>
+        <default>false</default>
+        <label>Restaurant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retail / Sale</fullName>
+        <default>false</default>
+        <label>Retail / Sale</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Service / Crafts</fullName>
+        <default>false</default>
+        <label>Service / Crafts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shisha Bar</fullName>
+        <default>false</default>
+        <label>Shisha Bar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Snack / Takeaway</fullName>
+        <default>false</default>
+        <label>Snack / Takeaway</label>
     </standardValue>
 </StandardValueSet>

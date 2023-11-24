@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wbsendit__Campaign_Monitor__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( wbsendit__Campaign_Monitor_Id__c == null,
+    
+    HYPERLINK(&quot;/apex/wbsendit__LinkCampaign?Id=&quot; + Id , &quot;Link to Campaign Monitor&quot;, &quot;_self&quot;),
+
+    /** Else  */
+    HYPERLINK(IF($User.UIThemeDisplayed=&quot;Theme4d&quot;, &quot;/lightning/cmp/wbsendit__CampaignMonitor&quot; ,&quot;/apex/wbsendit__SendItReports&quot;) + &quot;?wbsendit__campaignId=&quot; + wbsendit__Campaign_Monitor_Id__c + &quot;&amp;wbsendit__reportId=1&quot;, &quot;View Report&quot;, &quot;_self&quot;) + &quot; &quot; 
+    + HYPERLINK(&quot;/apex/wbsendit__Disconnect?Id=&quot; + Id, &quot;[Disconnect]&quot;, &quot;_self&quot;)
+)</formula>
+    <inlineHelpText>Connect this Salesforce Campaign to sent campaigns in Campaign Monitor. Use this to manage campaign reports from within Salesforce. Send It will add any members it finds in Campaign Monitor to this campaign.</inlineHelpText>
+    <label>Campaign Monitor</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

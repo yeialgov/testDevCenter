@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Month_MINI_Lead_Costs</fullName>
+    <columns>Date__c</columns>
+    <columns>Marketing_Channel__c</columns>
+    <columns>UTMCampaign__c</columns>
+    <columns>Term__c</columns>
+    <columns>Ad_Cost__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_MONTH</value>
+    </filters>
+    <filters>
+        <field>Marketing_Type__c</field>
+        <operation>notEqual</operation>
+        <value>PRO</value>
+    </filters>
+    <filters>
+        <field>Marketing_Channel__c</field>
+        <operation>notEqual</operation>
+        <value>other</value>
+    </filters>
+    <label>Last Month - MINI - Lead Costs</label>
+</ListView>

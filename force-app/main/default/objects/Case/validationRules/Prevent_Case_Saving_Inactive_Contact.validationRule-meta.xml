@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Case_Saving_Inactive_Contact</fullName>
+    <active>true</active>
+    <description>This uses a custom checkbox field on contacts called inactive employee.</description>
+    <errorConditionFormula>AND( 
+
+Contact.inactiveEmployee__c,
+NOT( RecordType.Id = &apos;012580000002RGo&apos;),
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )), 
+NOT(IsClosed))</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>Unable to save this case because the related contact is no longer with the company. To continue, choose another contact.</errorMessage>
+</ValidationRule>

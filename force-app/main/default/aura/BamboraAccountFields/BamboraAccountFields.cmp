@@ -1,0 +1,145 @@
+<aura:component >
+    <aura:attribute name="AccountId" type="String"/>
+    <aura:attribute name="Account" type="Object"/>
+    <aura:attribute name="Display" type="Boolean" default="false"/>
+    
+    <force:recordData aura:id="recordHandler2"
+                      recordId="{!v.AccountId}"
+                      fields="Id, Name, Payment_Provider__c,
+                              Registration_certificate__c,
+                              Name_of_official_authorized_signatory__c,
+                              E_Mail_of_official_authorized_signatory__c,
+                              Phone_of_official_authorized_signatory__c,
+                              Registration_number__c,
+                              VAT_number_USt_ID__c"
+                      mode="EDIT"
+                      targetFields="{!v.Account}"/>
+    <lightning:recordEditForm recordId="{!v.AccountId}"
+                              objectApiName="Account"
+                              aura:id="reForm"
+                              onload="{!c.ShowForm}"
+                              onsuccess="{!c.refSuccess}">
+            <lightning:messages />
+        <lightning:outputField name="Name"/>
+        <aura:if isTrue="{!v.Display}">
+            <!-- the messages component is for error messages -->
+            <lightning:messages />
+            
+            <table>
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.Payment_Provider__c != null}">
+                            <lightning:icon iconName="utility:success" size="xx-small" variant="success"/>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="Payment_Provider__c" />
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-top:0.5rem;">
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.Name_of_official_authorized_signatory__c != null}">
+                            <lightning:icon iconName="utility:success" size="xx-small" variant="success"/>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="Name_of_official_authorized_signatory__c" />
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-top:0.5rem;">
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.E_Mail_of_official_authorized_signatory__c != null}">
+                            <lightning:icon iconName="utility:success" size="xx-small" variant="success"/>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="E_Mail_of_official_authorized_signatory__c" />
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-top:0.5rem;">
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!v.Account.Phone_of_official_authorized_signatory__c != null}">
+                            <lightning:icon iconName="utility:success" size="xx-small" variant="success"/>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="Phone_of_official_authorized_signatory__c" />
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-top:0.5rem;">
+                <tr>
+                    <td style="border: 1px solid #654B8D;border-right:transparent;">
+                        &nbsp;
+                    </td>
+                    <td>
+                        <aura:if isTrue="{!or(or(v.Account.Registration_number__c != null,
+                                         v.Account.VAT_number_USt_ID__c != null),
+                                         v.Account.Registration_certificate__c != null)}">
+                            <lightning:icon iconName="utility:success" size="xx-small" variant="success"/>
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:clear" size="xx-small"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                    <td>
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="Registration_number__c" />
+                        <lightning:inputField onchange="{!c.FieldChange}"
+                                              fieldName="VAT_number_USt_ID__c" />
+                        <aura:if isTrue="{!v.Account.Registration_certificate__c != null}">
+                            <lightning:outputField fieldName="Registration_certificate__c"/>
+                            <aura:set attribute="else">
+                                <lightning:fileUpload name="fileUploader"
+                                                      label= "Registration certificate"
+                                                      multiple="true"
+                                                      accept=".pdf, .png, .jpg"
+                                                      recordId="{!v.AccountId}"
+                                                      onuploadfinished="{! c.handleUploadFinished }"/>
+                            </aura:set>
+                        </aura:if>
+                    </td>
+                </tr>
+            </table>
+            <div class="slds-m-top_medium">
+                <!--
+            <lightning:button disabled="{!v.disabled}" variant="brand" type="submit" name="save" label="Save" />
+-->        
+            </div>
+        </aura:if>
+    </lightning:recordEditForm>
+</aura:component>

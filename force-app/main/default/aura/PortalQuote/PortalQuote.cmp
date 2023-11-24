@@ -1,0 +1,176 @@
+<aura:component access="global" controller="PortalController"
+                implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="token" type="String"/>
+    <aura:attribute name="quoteId" type="String"/>    
+    <aura:attribute name="IsMobile" type="Boolean" default="false"/>
+    <aura:attribute name="Quote" type="Object"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <lightning:navigation aura:id="navService"/>   
+    <div style="overflow:hidden;margin-left: 0;">
+        <div class="page-headliner">
+            <h4>{!$Label.c.YOUR_QUOTE}&nbsp;{!v.Quote.Quote.QuoteNumber}</h4> <!-- needs custom label -->
+            <div class="page-headliner-subtitle">
+                <a href="javascript:void(0);" onclick="{!c.back}">Back to Quotes</a>
+            </div>
+        </div>
+        <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Article">
+                            Article
+                            <div class="slds-hide_medium" style="font-weight: 400;">
+                                <i>Quantity</i>&nbsp;|&nbsp;<i>Unit Price</i>&nbsp;|&nbsp;<i>Total Price</i>
+                            </div>
+                        </div>
+                        
+                    </th>
+                    <th class="slds-text-align_right slds-show_medium" scope="col">
+                        <div class="slds-truncate" title="Quantity">Quantity</div>
+                    </th>
+                    <th class="slds-text-align_right slds-show_medium" scope="col">
+                        <div class="slds-truncate" title="Unit Price">Unit Price</div>
+                    </th>
+                    <th class="slds-text-align_right slds-show_medium" scope="col">
+                        <div class="slds-truncate" title="Total Price">Total Price</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration var="item" items="{!v.Quote.LineItems}">
+                    <aura:if isTrue="{!item.IsBundle}">
+                        <tr class="slds-hint-parent">
+                            <th data-label="Article" scope="row">
+                                <div class="slds-truncate">
+                                    <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='English'}">
+                                        {!item.AR.nameEN}
+                                        <aura:set attribute="else">
+                                            <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='French'}">
+                                                {!item.AR.nameFR}
+                                                <aura:set attribute="else">
+                                                    {!item.AR.nameDE}
+                                                </aura:set>
+                                            </aura:if>
+                                        </aura:set>
+                                    </aura:if>
+                                    <aura:iteration var="subitem" items="{!item.Bundle.Product_Bundle_Assignments__r.records}">
+                                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='English'}">
+                                            {!subitem.Product__r.Name}
+                                            <aura:set attribute="else">
+                                                <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='French'}">
+                                                    {!subitem.Product__r.Product_Name_FR__c}
+                                                    <aura:set attribute="else">
+                                                        {!subitem.Product__r.Product_Name_DE__c}
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:iteration>
+                                </div>
+                                <div class="slds-hide_medium">
+                                    <table class="transpTopBorder slds-table slds-table_col-bordered">
+                                        <tr class="transpTopBorder">
+                                            <td class="transpTopBorder" style="text-align: left;padding-left: 0.5rem;">
+                                                <div class="slds-truncate"><ui:outputNumber value="{!item.AR.qty}"/></div>
+                                            </td>
+                                            <td class="transpTopBorder" style="text-align: center;">
+                                                <aura:if isTrue="{!item.StrikeoutUnitPrice != null}">
+                                                    <span style="text-decoration: line-through;">
+                                                        <c:Curr Value="{!item.StrikeoutUnitPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/>
+                                                    </span>
+                                                </aura:if>
+                                                <div class="slds-truncate"><c:Curr Value="{!item.UnitPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                                            </td>
+                                            <td class="transpTopBorder" style="text-align: right;padding-right: 0.5rem;">
+                                                <aura:if isTrue="{!item.StrikeoutPrice != null}">
+                                                    <span style="text-decoration: line-through;">
+                                                        <c:Curr Value="{!item.StrikeoutPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/>
+                                                    </span>
+                                                </aura:if>
+                                                <div class="slds-truncate"><c:Curr Value="{!item.TotalPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </th>
+                            <td class="slds-text-align_right slds-show_medium" data-label="Quantity">
+                                <div class="slds-truncate"><ui:outputNumber value="{!item.AR.qty}"/></div>
+                            </td>
+                            <td class="slds-text-align_right slds-show_medium" data-label="Unit Price">
+                                <aura:if isTrue="{!item.StrikeoutUnitPrice != null}">
+                                    <span style="text-decoration: line-through;">
+                                        <c:Curr Value="{!item.StrikeoutUnitPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/>
+                                    </span>
+                                </aura:if>
+                                <div class="slds-truncate"><c:Curr Value="{!item.UnitPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                            </td>
+                            <td class="slds-text-align_right slds-show_medium" data-label="Total Price">
+                                <aura:if isTrue="{!item.StrikeoutPrice != null}">
+                                    <span style="text-decoration: line-through;">
+                                        <c:Curr Value="{!item.StrikeoutPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/>
+                                    </span>
+                                </aura:if>
+                                <div class="slds-truncate"><c:Curr Value="{!item.TotalPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                            </td>
+                        </tr>
+                        <aura:set attribute="else">
+                            <tr class="slds-hint-parent">
+                                <th data-label="Article" scope="row">
+                                    <div class="slds-truncate">
+                                        <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='English'}">
+                                            {!item.QLI.Product2.Name}
+                                            <aura:set attribute="else">
+                                                <aura:if isTrue="{!v.Quote.Account.PrimaryLanguage__c=='French'}">
+                                                    {!item.QLI.Product2.Product_Name_FR__c}
+                                                    <aura:set attribute="else">
+                                                        {!item.QLI.Product2.Product_Name_DE__c}
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                    </div>
+                                </th>
+                                <td class="slds-text-align_right slds-show_medium" data-label="Quantity">
+                                    <div class="slds-truncate"><ui:outputNumber value="{!item.QLI.Quantity}"/></div>
+                                </td>
+                                <td class="slds-text-align_right slds-show_medium" data-label="Unit Price">
+                                    <div class="slds-truncate"><c:Curr Value="{!item.QLI.UnitPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                                </td>
+                                <td class="slds-text-align_right slds-show_medium" data-label="Total Price">
+                                    <div class="slds-truncate"><c:Curr Value="{!item.QLI.TotalPrice}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                                </td>
+                            </tr>
+                        </aura:set>
+                    </aura:if>
+                </aura:iteration>
+            </tbody>
+        </table>
+        <div class="slds-grid slds-grid_align-end">
+            <div class="slds-size_1-of-1 slds-medium-size_1-of-2">
+                <table class="slds-table slds-table_cell-buffer slds-no-row-hover boldText">
+                    <aura:if isTrue="{!v.Quote.UseDiscountTotal}">
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.TOTAL_LIST_PRICE}" scope="row">
+                                {!$Label.c.TOTAL_LIST_PRICE}
+                            </th>
+                            <td class="slds-text-align_right">
+                                <div class="slds-truncate"><c:Curr Value="{!v.Quote.NonDiscountTotal}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                            </td>
+                        </tr>
+                        <tr class="slds-hint-parent">
+                            <th data-label="{!$Label.c.TOTAL_LIST_PRICE}" scope="row">
+                                {!$Label.c.YOUR_DISCOUNT}
+                            </th>
+                            <td class="slds-text-align_right">
+                                <div class="slds-truncate"><c:Curr Value="{!v.Quote.DiscountTotal}" Country="{!v.Quote.Account.BillingCountry}" Currency="{!v.Quote.Account.CurrencyIsoCode}"/></div>
+                            </td>
+                        </tr>
+                    </aura:if>
+                </table>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.ShowSpinner}"><lightning:spinner size="large"/></aura:if>
+    </div>
+</aura:component>

@@ -1,0 +1,24 @@
+<apex:page standardController="Account" extensions="JointSalesExtension" showHeader="false" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Joint Sales for {!Account.Name}">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!jsSave}"/>
+                <apex:commandButton value="Cancel" action="{!jsCancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:repeat value="{!Partners}" var="p">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!p.Name}"/>
+                        <apex:inputCheckbox value="{!p.Selected}" disabled="{!p.Disabled}"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Comment"/>
+                    <apex:inputTextarea value="{!comment}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

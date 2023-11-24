@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_PRO_Opp_on_MINI_Customer</fullName>
+    <active>true</active>
+    <description>https://jira.orderbird.com/browse/CDS-2407</description>
+    <errorConditionFormula>Account.Target_Product__c = &quot;MINI&quot; &amp;&amp;  ISPICKVAL(OppCategory__c, &quot;New Business&quot;)</errorConditionFormula>
+    <errorDisplayField>OppCategory__c</errorDisplayField>
+    <errorMessage>You can not create an orderbird PRO Opportunity on a MINI Customer Account</errorMessage>
+</ValidationRule>

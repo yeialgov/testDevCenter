@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Price_Issue__c</fullName>
+    <externalId>false</externalId>
+    <formula>not(isblank( SubscriptionLineItem__c ))
+&amp;&amp;
+not(isblank( SubscriptionLineItem__r.QuoteLineItem__c ))
+&amp;&amp;
+not(contains(SubscriptionLineItem__r.Product__r.Model__c,&quot;discount&quot;))
+&amp;&amp;
+ UnitPrice__c  &lt;&gt;   SubscriptionLineItem__r.QuoteLineItem__r.UnitPrice</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quote Price Issue</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

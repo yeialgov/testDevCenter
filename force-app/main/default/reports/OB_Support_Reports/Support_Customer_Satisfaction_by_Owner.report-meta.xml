@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>SurveyQuestionResponse__c.Response_Number__c:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Average Rating</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>Case.IsClosed:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Sum Closed</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_15319958</developerName>
+        <masterLabel>Team Satisfaction</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Case$Owner</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Corven Hauck</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Martin Räder</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Berenice Prochnow</sourceValue>
+            </sourceValues>
+            <value>Tech</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Marcel Häntzsch</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eric Wiener</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Benjamin Zietz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ekaterina Kuialanskas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Katrin Lück</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denise Machauer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Christian Botterill</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sabrina Grahl</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denise Doerschel</sourceValue>
+            </sourceValues>
+            <value>CCA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Dragana Tomic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Stefan Kramer</sourceValue>
+            </sourceValues>
+            <value>AccSp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Nico Staffeldt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hannah Brandes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shahin Irantalab</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fabio Sgroi</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Judith Baumann</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Evgeny Zenkin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>David Meyer</sourceValue>
+            </sourceValues>
+            <value>CSM</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Tim Dahlmann</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ilaria Baldo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joachim Groß</sourceValue>
+            </sourceValues>
+            <value>Pay</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Valeria Meißner</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Uta Niessner</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fredericke Eberhardt</sourceValue>
+            </sourceValues>
+            <value>MINI</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Yana Korniichuk</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Yana Koval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Yana Tymoshenko</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ihor Kozhevin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Olha Zaporozhets</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marija Milosavljević</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Andrea Wendik</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Halyna Trycheheub</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Olesia Martyniuk</sourceValue>
+            </sourceValues>
+            <value>Nightowls</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Christopher Persee</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Olivia Bonhomme</sourceValue>
+            </sourceValues>
+            <value>France</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Case$Owner</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.SurveyTakers__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.SurveyTakers__r.Survey_Question_Answers__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.SurveyTakers__r.Survey_Question_Answers__r$Response_Number__c</field>
+    </columns>
+    <columns>
+        <field>Case$Subject</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Account Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.SurveyTakers__r.Survey_Question_Answers__r$Response_Number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner.UserRole</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Account Management</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Support Customer Satisfaction by Owner</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>Cases_with_Survey_Replies__c</reportType>
+    <scope>useronly</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Case$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

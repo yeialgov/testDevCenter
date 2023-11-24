@@ -2,8 +2,8 @@
 <ContentSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableCMSC2CConnections>true</enableCMSC2CConnections>
     <enableChatterFileLink>true</enableChatterFileLink>
-    <enableContent>true</enableContent>
-    <enableContentAutoAssign>true</enableContentAutoAssign>
+    <enableContent>false</enableContent>
+    <enableContentAutoAssign>false</enableContentAutoAssign>
     <enableContentDistForPortalUsers>false</enableContentDistForPortalUsers>
     <enableContentDistPwOptionsBit1>true</enableContentDistPwOptionsBit1>
     <enableContentDistPwOptionsBit2>true</enableContentDistPwOptionsBit2>

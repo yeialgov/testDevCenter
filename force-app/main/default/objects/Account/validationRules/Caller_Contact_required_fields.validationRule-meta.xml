@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caller_Contact_required_fields</fullName>
+    <active>false</active>
+    <description>https://jira.orderbird.com/browse/SFDC-1365</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+
+      NOT ( ISBLANK(  Caller_Contact__c  )),
+
+NOT(ISCHANGED( ZuoraId__c )),
+NOT(ISCHANGED( Account_Status__c )),
+NOT(ISCHANGED( Closed_Contract_Paid_Date__c )),
+NOT(ISCHANGED( CommissionDate__c )),
+NOT(ISCHANGED( Dunning_0_Date__c )),
+NOT(ISCHANGED( Dunning_1_Date__c )),
+NOT(ISCHANGED( Dunning_2_Date__c )),
+NOT(ISCHANGED( Interwega_Balance_Difference__c )),
+NOT(ISCHANGED( Interwega_Business_Area__c )),
+NOT(ISCHANGED( Interwega_Debt_Collection_Id__c )),
+NOT(ISCHANGED( Interwega_Open_Balance_wo_fees__c )),
+NOT(ISCHANGED( Interwega_Open_Balance__c )),
+NOT(ISCHANGED( Interwega_Reference_Date__c )),
+NOT(ISCHANGED( Interwega_Status__c )),
+      
+OR(
+ISBLANK( Caller_Contact__r.Email ),
+ISBLANK(  Caller_Contact__r.Phone ))
+
+)</errorConditionFormula>
+    <errorDisplayField>Caller_Contact__c</errorDisplayField>
+    <errorMessage>The caller contact does not match the needed criteria! Please Fill the Email and the Phone!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute type="String" name="Badge"/>
+    <span class="badge">{!v.Badge}</span>
+</aura:component>

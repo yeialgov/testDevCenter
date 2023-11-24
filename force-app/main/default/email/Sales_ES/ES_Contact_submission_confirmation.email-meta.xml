@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - Contact submission confirmation</name>
+    <style>freeForm</style>
+    <subject>¡Muchas gracias por registrarte!</subject>
+    <textOnly>¡Nos alegra mucho darte la bienvenida a orderbird!
+
+Nuestro equipo se pondrá de inmediato en contacto contigo y te explicará los primeros pasos a seguir con tu nuevo sistema de caja TPV para iPad orderbird.
+
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

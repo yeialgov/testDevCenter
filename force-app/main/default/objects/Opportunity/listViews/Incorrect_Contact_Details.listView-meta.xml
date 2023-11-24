@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incorrect_Contact_Details</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Type__c</columns>
+    <columns>LAC_ID__c</columns>
+    <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>UTMCampaign__c</columns>
+    <columns>UTMSource__c</columns>
+    <columns>UTMMedium__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>5/1/2021 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>Christina Wittek,Sebastian Frank,Oliver Friebel,Toni Schmidt,Jennifer Friedrich,Omid Shahradnia</value>
+    </filters>
+    <filters>
+        <field>LAC_Shorthand__c</field>
+        <operation>notEqual</operation>
+        <value>Facebook Scraper,Cold Call</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <filters>
+        <field>LostRejectedReason__c</field>
+        <operation>equals</operation>
+        <value>Contact details incorrect</value>
+    </filters>
+    <filters>
+        <field>LAC_ID__c</field>
+        <operation>notEqual</operation>
+        <value>114,115,116,117,255,257</value>
+    </filters>
+    <label>Incorrect Contact Details</label>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restriction_to_revoke_Opt_Out</fullName>
+    <active>true</active>
+    <description>Only PaM and Sysadmins should be able to revoke an Opt out (uncheck the checkbox)</description>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+$User.ProfileId &lt;&gt; &quot;00e58000000SLnr&quot; , /* Partner Man */ 
+
+ISCHANGED( Customer_Opt_Out__c ), 
+
+Customer_Opt_Out__c = false
+)</errorConditionFormula>
+    <errorDisplayField>Customer_Opt_Out__c</errorDisplayField>
+    <errorMessage>You are not allowed to uncheck Customer Opt Out. Please contact Partner Management in order to uncheck the box</errorMessage>
+</ValidationRule>

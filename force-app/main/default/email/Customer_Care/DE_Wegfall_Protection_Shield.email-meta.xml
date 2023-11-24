@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Wegfall des EU-US-Privacy-Shields Shield, Update DGSVO 2020</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Ende EU-US-Privacy-Shields Shield</name>
+    <style>none</style>
+    <subject>Frage zur Beendigung des EU-US-Privacy-Shields</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

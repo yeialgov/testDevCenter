@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+                controller="NewQuoteController">
+
+    <aura:attribute type="Object" name="Quote"/>
+    <aura:attribute type="Boolean" name="CardVisibility" default="false"/>
+
+    <aura:registerEvent name="NeedsBambora" type="c:NeedsBambora"/>
+    
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      mode="VIEW"
+                      targetFields="{!v.Quote}"
+                      recordUpdated="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.CardVisibility}">
+        <lightning:card>
+            <aura:set attribute="title">
+                <img src="/resource/obpay" style="height:40px;"/>
+            </aura:set>
+            <div style="padding: 0 1rem;">
+                <c:BamboraAccountFields AccountId="{!v.Quote.AccountId}"/>
+            </div>
+        </lightning:card>
+    </aura:if>
+
+</aura:component>

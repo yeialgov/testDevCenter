@@ -1,0 +1,3 @@
+{!Invoice__c.Name}
+
+{!Invoice__c.Link}

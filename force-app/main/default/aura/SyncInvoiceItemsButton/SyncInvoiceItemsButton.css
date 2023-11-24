@@ -1,0 +1,8 @@
+.THIS.hiliter:hover div{
+    cursor: pointer;
+    background-color: #02A3E0;
+    color: #fff;
+}
+.THIS.hiliter:hover div span{
+    background-color: #10426A;
+}

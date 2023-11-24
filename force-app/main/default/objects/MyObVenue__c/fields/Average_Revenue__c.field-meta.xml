@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <label>Average Revenue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>By Invoice</fullName>
+                <default>true</default>
+                <label>By Invoice</label>
+            </value>
+            <value>
+                <fullName>By Guest</fullName>
+                <default>false</default>
+                <label>By Guest</label>
+            </value>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

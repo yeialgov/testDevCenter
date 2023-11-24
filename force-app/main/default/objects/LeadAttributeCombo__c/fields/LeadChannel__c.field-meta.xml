@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadChannel__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>As Medium</fullName>
+                <default>false</default>
+                <label>As Medium</label>
+            </value>
+            <value>
+                <fullName>Companeo</fullName>
+                <default>false</default>
+                <label>Companeo</label>
+            </value>
+            <value>
+                <fullName>Dolead</fullName>
+                <default>false</default>
+                <label>Dolead</label>
+            </value>
+            <value>
+                <fullName>Facebook Scraper</fullName>
+                <default>false</default>
+                <label>Facebook Scraper</label>
+            </value>
+            <value>
+                <fullName>Kassensystemevergleich.de</fullName>
+                <default>false</default>
+                <label>Kassensystemevergleich.de</label>
+            </value>
+            <value>
+                <fullName>Kassen-Vergleich.com</fullName>
+                <default>false</default>
+                <label>Kassen-Vergleich.com</label>
+            </value>
+            <value>
+                <fullName>METRO - Dish</fullName>
+                <default>false</default>
+                <label>METRO - Dish</label>
+            </value>
+            <value>
+                <fullName>METRO - HD Landingpage</fullName>
+                <default>false</default>
+                <label>METRO - HD Landingpage</label>
+            </value>
+            <value>
+                <fullName>Neugeschaeft</fullName>
+                <default>false</default>
+                <label>Neugeschaeft</label>
+            </value>
+            <value>
+                <fullName>Postcard 2020</fullName>
+                <default>false</default>
+                <label>Postcard 2020</label>
+            </value>
+            <value>
+                <fullName>Print Campaign</fullName>
+                <default>false</default>
+                <label>Print Campaign</label>
+            </value>
+            <value>
+                <fullName>Roadshow</fullName>
+                <default>false</default>
+                <label>Roadshow</label>
+            </value>
+            <value>
+                <fullName>Shopify</fullName>
+                <default>false</default>
+                <label>Shopify</label>
+            </value>
+            <value>
+                <fullName>Trade Register Scraper</fullName>
+                <default>false</default>
+                <label>Trade Register Scraper</label>
+            </value>
+            <value>
+                <fullName>TradingTwins</fullName>
+                <default>false</default>
+                <label>TradingTwins</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -5,9 +5,9 @@
     <enableAsyncRelatedLists>false</enableAsyncRelatedLists>
     <enableClickjackUserPageHeaderless>false</enableClickjackUserPageHeaderless>
     <enableCollapsibleSections>true</enableCollapsibleSections>
-    <enableCollapsibleSideBar>false</enableCollapsibleSideBar>
-    <enableCustomObjectTruncate>false</enableCustomObjectTruncate>
-    <enableCustomeSideBarOnAllPages>false</enableCustomeSideBarOnAllPages>
+    <enableCollapsibleSideBar>true</enableCollapsibleSideBar>
+    <enableCustomObjectTruncate>true</enableCustomObjectTruncate>
+    <enableCustomeSideBarOnAllPages>true</enableCustomeSideBarOnAllPages>
     <enableDeleteFieldHistory>false</enableDeleteFieldHistory>
     <enableExternalObjectAsyncRelatedLists>true</enableExternalObjectAsyncRelatedLists>
     <enableHoverDetails>true</enableHoverDetails>
@@ -16,7 +16,7 @@
     <enablePersonalCanvas>true</enablePersonalCanvas>
     <enablePrintableListViews>true</enablePrintableListViews>
     <enableProfileCustomTabsets>true</enableProfileCustomTabsets>
-    <enableQuickCreate>true</enableQuickCreate>
+    <enableQuickCreate>false</enableQuickCreate>
     <enableRelatedListHovers>true</enableRelatedListHovers>
     <enableTabOrganizer>true</enableTabOrganizer>
 </UserInterfaceSettings>

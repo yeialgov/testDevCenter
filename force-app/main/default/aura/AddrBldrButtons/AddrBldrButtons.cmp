@@ -1,0 +1,99 @@
+<aura:component >
+    <aura:attribute name="Label" type="String"/>
+    <aura:attribute name="Account" type="Object"/>
+    <aura:attribute name="Type" type="String"/>
+    
+	<div>
+        <lightning:buttonGroup>
+            <aura:if isTrue="{!v.Type == 'BILL'}">
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == null}">
+                    <c:AddrBldrButton Label="Use for Ship To" 
+                                      Sync="BILL-SHIP"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Venue" 
+                                      Sync="BILL-VENUE"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-SHIP'}">
+                    <c:AddrBldrButton Label="Separate Bill To/Ship To" 
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Venue" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-VENUE'}">
+                    <c:AddrBldrButton Label="Separate Bill To/Venue" 
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Ship To" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'SHIP-VENUE'}">
+                    <c:AddrBldrButton Label="Use for Ship To/Venue" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'ALL'}">
+                    <c:AddrBldrButton Label="Separate Bill To" 
+                                      Sync="SHIP-VENUE"
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Separate Ship To" 
+                                      Sync="BILL-VENUE"
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Separate Venue" 
+                                      Sync="BILL-SHIP"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!v.Type == 'SHIP'}">
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == null}">
+                    <c:AddrBldrButton Label="Use for Bill To" 
+                                      Sync="BILL-SHIP"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Venue" 
+                                      Sync="SHIP-VENUE"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-VENUE'}">
+                    <c:AddrBldrButton Label="Use for Bill To/Venue" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'SHIP-VENUE'}">
+                    <c:AddrBldrButton Label="Separate Ship To/Venue" 
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Bill To" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!v.Type == 'VENUE'}">
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == null}">
+                    <c:AddrBldrButton Label="Use for Bill To" 
+                                      Sync="BILL-VENUE"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                    <c:AddrBldrButton Label="Use for Ship To" 
+                                      Sync="SHIP-VENUE"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-SHIP'}">
+                    <c:AddrBldrButton Label="Use for Bill To/Ship To" 
+                                      Sync="ALL"
+                                      Winner="{!v.Type}"
+                                      Account="{!v.Account}"/>
+                </aura:if>
+            </aura:if>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

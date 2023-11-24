@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute type="String" name="recordId" />
+    <aura:attribute type="Object" name="Opportunity" />
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      targetFields="{!v.Opportunity}"/>
+    <c:ContactsRelatedList recordId="{!v.Opportunity.AccountId}"/>
+</aura:component>

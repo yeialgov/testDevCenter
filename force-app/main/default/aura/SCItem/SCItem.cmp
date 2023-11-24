@@ -1,0 +1,31 @@
+<aura:component >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="Item" type="Object"/>
+    <aura:attribute name="Selected" type="String"/>
+    <aura:attribute name="CountdownClock" type="String" default=""/>
+    <aura:attribute name="CountdownValue" type="Integer" default=""/>
+    
+    <div class="slds-card" 
+         style="{!if(v.Selected == v.Item.Id,
+                'color:#10426a;background-color:rgb(229,246,252); border:#02a3e0 3px solid;padding: 0.5rem;cursor: pointer;',
+                'padding: 0.5rem;cursor: pointer;')}" 
+         onclick="{!c.Clicked}">
+        <div class="hoverMe">
+            <lightning:tile >
+                <aura:set attribute="media">
+                    <lightning:avatar fallbackIconName="{!'standard:'+v.Item.ObjectType}" variant="circle"/>
+                </aura:set>
+                <p>{!v.Item.Name}</p>
+                <p>{!v.Item.Venue}</p>
+                <lightning:progressBar value="{!v.CountdownValue}" 
+                                       variant="circular" 
+                                       class="{!if(v.CountdownValue >= 80, 'red', '')}"/>
+                <div style="text-align:center;">
+                    <lightning:badge label="{!v.CountdownClock}"/>
+                </div>
+            </lightning:tile>
+        </div>  
+    </div>
+</aura:component>

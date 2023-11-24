@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Sent after Pay is activated</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - Pay - Los geht&apos;s!</name>
+    <style>freeForm</style>
+    <subject>orderbird Pay - Du kannst loslegen!</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

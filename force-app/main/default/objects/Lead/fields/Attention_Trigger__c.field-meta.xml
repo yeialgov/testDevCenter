@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attention_Trigger__c</fullName>
+    <description>Stakeholder: Sales / BI https://jira.orderbird.com/browse/CDS-440</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What triggered the prospect&apos;s attention for orderbird? Answer to the question &quot;how did you first got to know about orderbird?&quot; Filled by Sales</inlineHelpText>
+    <label>Attention Trigger</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Customer Network / Recommendation</fullName>
+                <default>false</default>
+                <label>Customer Network / Recommendation</label>
+            </value>
+            <value>
+                <fullName>Customer recruits Customer</fullName>
+                <default>false</default>
+                <label>Customer recruits Customer</label>
+            </value>
+            <value>
+                <fullName>DGGP</fullName>
+                <default>false</default>
+                <label>DGGP</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Google Research</fullName>
+                <default>false</default>
+                <label>Google Research</label>
+            </value>
+            <value>
+                <fullName>Instagram</fullName>
+                <default>false</default>
+                <label>Instagram</label>
+            </value>
+            <value>
+                <fullName>knows us from previous occupation</fullName>
+                <default>false</default>
+                <label>knows us from previous occupation</label>
+            </value>
+            <value>
+                <fullName>Mentioning by competitor</fullName>
+                <default>false</default>
+                <label>Mentioning by competitor</label>
+            </value>
+            <value>
+                <fullName>orderbird mailing</fullName>
+                <default>false</default>
+                <label>orderbird mailing</label>
+            </value>
+            <value>
+                <fullName>Recommendation by Tax Advisor</fullName>
+                <default>false</default>
+                <label>Recommendation by Tax Advisor</label>
+            </value>
+            <value>
+                <fullName>Referral Partner</fullName>
+                <default>false</default>
+                <label>Referral Partner</label>
+            </value>
+            <value>
+                <fullName>Trade fair</fullName>
+                <default>false</default>
+                <label>Trade fair</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>Walk In</fullName>
+                <default>false</default>
+                <label>Walk In</label>
+            </value>
+            <value>
+                <fullName>WOM / Discovered in action</fullName>
+                <default>false</default>
+                <label>WOM / Discovered in action</label>
+            </value>
+            <value>
+                <fullName>Square</fullName>
+                <default>false</default>
+                <label>Square</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

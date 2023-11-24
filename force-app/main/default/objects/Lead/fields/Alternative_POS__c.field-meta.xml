@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_POS__c</fullName>
+    <externalId>false</externalId>
+    <label>Alternative POS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NO OTHER POS</fullName>
+                <default>false</default>
+                <label>NO OTHER POS</label>
+            </value>
+            <value>
+                <fullName>9 Cookies</fullName>
+                <default>false</default>
+                <label>9 Cookies</label>
+            </value>
+            <value>
+                <fullName>AddiPos</fullName>
+                <default>false</default>
+                <label>AddiPos</label>
+            </value>
+            <value>
+                <fullName>AIDA/Linecker</fullName>
+                <default>false</default>
+                <label>AIDA/Linecker</label>
+            </value>
+            <value>
+                <fullName>Alfo PC-POS</fullName>
+                <default>false</default>
+                <label>Alfo PC-POS</label>
+            </value>
+            <value>
+                <fullName>Amadeus</fullName>
+                <default>false</default>
+                <label>Amadeus</label>
+            </value>
+            <value>
+                <fullName>Android POS</fullName>
+                <default>false</default>
+                <label>Android POS</label>
+            </value>
+            <value>
+                <fullName>Ankerdata PC-POS</fullName>
+                <default>false</default>
+                <label>Ankerdata PC-POS</label>
+            </value>
+            <value>
+                <fullName>Apple computers</fullName>
+                <default>false</default>
+                <label>Apple computers</label>
+            </value>
+            <value>
+                <fullName>APRO</fullName>
+                <default>false</default>
+                <label>APRO</label>
+            </value>
+            <value>
+                <fullName>Bistro-Cash</fullName>
+                <default>false</default>
+                <label>Bistro-Cash</label>
+            </value>
+            <value>
+                <fullName>Bleep</fullName>
+                <default>false</default>
+                <label>Bleep</label>
+            </value>
+            <value>
+                <fullName>Bogan</fullName>
+                <default>false</default>
+                <label>Bogan</label>
+            </value>
+            <value>
+                <fullName>Bonissimo</fullName>
+                <default>false</default>
+                <label>Bonissimo</label>
+            </value>
+            <value>
+                <fullName>bonit.at</fullName>
+                <default>false</default>
+                <label>bonit.at</label>
+            </value>
+            <value>
+                <fullName>Breadcrumb</fullName>
+                <default>false</default>
+                <label>Breadcrumb</label>
+            </value>
+            <value>
+                <fullName>CashIT</fullName>
+                <default>false</default>
+                <label>CashIT</label>
+            </value>
+            <value>
+                <fullName>CashPad</fullName>
+                <default>false</default>
+                <label>CashPad</label>
+            </value>
+            <value>
+                <fullName>cash register</fullName>
+                <default>false</default>
+                <label>cash register</label>
+            </value>
+            <value>
+                <fullName>Cash Till Old</fullName>
+                <default>false</default>
+                <label>Cash Till Old</label>
+            </value>
+            <value>
+                <fullName>Casio</fullName>
+                <default>false</default>
+                <label>Casio</label>
+            </value>
+            <value>
+                <fullName>casio Android</fullName>
+                <default>false</default>
+                <label>casio Android</label>
+            </value>
+            <value>
+                <fullName>Casio Touchscreen</fullName>
+                <default>false</default>
+                <label>Casio Touchscreen</label>
+            </value>
+            <value>
+                <fullName>Centegra</fullName>
+                <default>false</default>
+                <label>Centegra</label>
+            </value>
+            <value>
+                <fullName>Close</fullName>
+                <default>false</default>
+                <label>Close</label>
+            </value>
+            <value>
+                <fullName>Clover</fullName>
+                <default>false</default>
+                <label>Clover</label>
+            </value>
+            <value>
+                <fullName>Cobra POS / PC Cash</fullName>
+                <default>false</default>
+                <label>Cobra POS / PC Cash</label>
+            </value>
+            <value>
+                <fullName>Dongle system</fullName>
+                <default>false</default>
+                <label>Dongle system</label>
+            </value>
+            <value>
+                <fullName>DuG POS</fullName>
+                <default>false</default>
+                <label>DuG POS</label>
+            </value>
+            <value>
+                <fullName>Easy Bill</fullName>
+                <default>false</default>
+                <label>Easy Bill</label>
+            </value>
+            <value>
+                <fullName>Enfore</fullName>
+                <default>false</default>
+                <label>Enfore</label>
+            </value>
+            <value>
+                <fullName>EPS POS</fullName>
+                <default>false</default>
+                <label>EPS POS</label>
+            </value>
+            <value>
+                <fullName>EuCaSoft</fullName>
+                <default>false</default>
+                <label>EuCaSoft</label>
+            </value>
+            <value>
+                <fullName>Existing cash register</fullName>
+                <default>false</default>
+                <label>Existing cash register</label>
+            </value>
+            <value>
+                <fullName>Existing PC touch</fullName>
+                <default>false</default>
+                <label>Existing PC touch</label>
+            </value>
+            <value>
+                <fullName>Existing proprietary system</fullName>
+                <default>false</default>
+                <label>Existing proprietary system</label>
+            </value>
+            <value>
+                <fullName>gastroAssistent</fullName>
+                <default>false</default>
+                <label>gastroAssistent</label>
+            </value>
+            <value>
+                <fullName>GastroFix</fullName>
+                <default>false</default>
+                <label>GastroFix</label>
+            </value>
+            <value>
+                <fullName>GastroNovi</fullName>
+                <default>false</default>
+                <label>GastroNovi</label>
+            </value>
+            <value>
+                <fullName>GastroPro</fullName>
+                <default>false</default>
+                <label>GastroPro</label>
+            </value>
+            <value>
+                <fullName>Gastro Touch</fullName>
+                <default>false</default>
+                <label>Gastro Touch</label>
+            </value>
+            <value>
+                <fullName>Gastware</fullName>
+                <default>false</default>
+                <label>Gastware</label>
+            </value>
+            <value>
+                <fullName>Geil POS</fullName>
+                <default>false</default>
+                <label>Geil POS</label>
+            </value>
+            <value>
+                <fullName>hellocash</fullName>
+                <default>false</default>
+                <label>hellocash</label>
+            </value>
+            <value>
+                <fullName>helloTESS!</fullName>
+                <default>false</default>
+                <label>helloTESS!</label>
+            </value>
+            <value>
+                <fullName>Hypersoft</fullName>
+                <default>false</default>
+                <label>Hypersoft</label>
+            </value>
+            <value>
+                <fullName>IBM</fullName>
+                <default>false</default>
+                <label>IBM</label>
+            </value>
+            <value>
+                <fullName>iKentoo</fullName>
+                <default>false</default>
+                <label>iKentoo</label>
+            </value>
+            <value>
+                <fullName>Indatec</fullName>
+                <default>false</default>
+                <label>Indatec</label>
+            </value>
+            <value>
+                <fullName>Ingenico POS</fullName>
+                <default>false</default>
+                <label>Ingenico POS</label>
+            </value>
+            <value>
+                <fullName>Inka</fullName>
+                <default>false</default>
+                <label>Inka</label>
+            </value>
+            <value>
+                <fullName>Inventorum</fullName>
+                <default>false</default>
+                <label>Inventorum</label>
+            </value>
+            <value>
+                <fullName>Isis POS</fullName>
+                <default>false</default>
+                <label>Isis POS</label>
+            </value>
+            <value>
+                <fullName>Kassandro</fullName>
+                <default>false</default>
+                <label>Kassandro</label>
+            </value>
+            <value>
+                <fullName>KasSys GmbH - Miami POS</fullName>
+                <default>false</default>
+                <label>KasSys GmbH - Miami POS</label>
+            </value>
+            <value>
+                <fullName>L&apos;Addition</fullName>
+                <default>false</default>
+                <label>L&apos;Addition</label>
+            </value>
+            <value>
+                <fullName>LA Cash POS</fullName>
+                <default>false</default>
+                <label>LA Cash POS</label>
+            </value>
+            <value>
+                <fullName>local POS salesman</fullName>
+                <default>false</default>
+                <label>local POS salesman</label>
+            </value>
+            <value>
+                <fullName>Macaroon</fullName>
+                <default>false</default>
+                <label>Macaroon</label>
+            </value>
+            <value>
+                <fullName>Matrix POS</fullName>
+                <default>false</default>
+                <label>Matrix POS</label>
+            </value>
+            <value>
+                <fullName>Megara</fullName>
+                <default>false</default>
+                <label>Megara</label>
+            </value>
+            <value>
+                <fullName>Merkl - partner company of orderbird</fullName>
+                <default>false</default>
+                <label>Merkl - partner company of orderbird</label>
+            </value>
+            <value>
+                <fullName>Metro POS</fullName>
+                <default>false</default>
+                <label>Metro POS</label>
+            </value>
+            <value>
+                <fullName>METRO register (Sigma)</fullName>
+                <default>false</default>
+                <label>METRO register (Sigma)</label>
+            </value>
+            <value>
+                <fullName>Micros Fidelio</fullName>
+                <default>false</default>
+                <label>Micros Fidelio</label>
+            </value>
+            <value>
+                <fullName>Mobex</fullName>
+                <default>false</default>
+                <label>Mobex</label>
+            </value>
+            <value>
+                <fullName>MsPos</fullName>
+                <default>false</default>
+                <label>MsPos</label>
+            </value>
+            <value>
+                <fullName>NCR</fullName>
+                <default>false</default>
+                <label>NCR</label>
+            </value>
+            <value>
+                <fullName>NEC Mini POS</fullName>
+                <default>false</default>
+                <label>NEC Mini POS</label>
+            </value>
+            <value>
+                <fullName>New cash register</fullName>
+                <default>false</default>
+                <label>New cash register</label>
+            </value>
+            <value>
+                <fullName>New PC touch</fullName>
+                <default>false</default>
+                <label>New PC touch</label>
+            </value>
+            <value>
+                <fullName>New proprietary system</fullName>
+                <default>false</default>
+                <label>New proprietary system</label>
+            </value>
+            <value>
+                <fullName>Noris</fullName>
+                <default>false</default>
+                <label>Noris</label>
+            </value>
+            <value>
+                <fullName>Novacom</fullName>
+                <default>false</default>
+                <label>Novacom</label>
+            </value>
+            <value>
+                <fullName>Oktopos</fullName>
+                <default>false</default>
+                <label>Oktopos</label>
+            </value>
+            <value>
+                <fullName>Olymp</fullName>
+                <default>false</default>
+                <label>Olymp</label>
+            </value>
+            <value>
+                <fullName>OneTap</fullName>
+                <default>false</default>
+                <label>OneTap</label>
+            </value>
+            <value>
+                <fullName>Orderman</fullName>
+                <default>false</default>
+                <label>Orderman</label>
+            </value>
+            <value>
+                <fullName>other iPad POS</fullName>
+                <default>false</default>
+                <label>other iPad POS</label>
+            </value>
+            <value>
+                <fullName>other Tablet POS</fullName>
+                <default>false</default>
+                <label>other Tablet POS</label>
+            </value>
+            <value>
+                <fullName>Panasonic</fullName>
+                <default>false</default>
+                <label>Panasonic</label>
+            </value>
+            <value>
+                <fullName>PC Cash</fullName>
+                <default>false</default>
+                <label>PC Cash</label>
+            </value>
+            <value>
+                <fullName>Pepperbill</fullName>
+                <default>false</default>
+                <label>Pepperbill</label>
+            </value>
+            <value>
+                <fullName>Pix tech</fullName>
+                <default>false</default>
+                <label>Pix tech</label>
+            </value>
+            <value>
+                <fullName>Point one</fullName>
+                <default>false</default>
+                <label>Point one</label>
+            </value>
+            <value>
+                <fullName>Popina</fullName>
+                <default>false</default>
+                <label>Popina</label>
+            </value>
+            <value>
+                <fullName>Porsche similar</fullName>
+                <default>false</default>
+                <label>Porsche similar</label>
+            </value>
+            <value>
+                <fullName>PosBill</fullName>
+                <default>false</default>
+                <label>PosBill</label>
+            </value>
+            <value>
+                <fullName>POS Lavu</fullName>
+                <default>false</default>
+                <label>POS Lavu</label>
+            </value>
+            <value>
+                <fullName>Postec</fullName>
+                <default>false</default>
+                <label>Postec</label>
+            </value>
+            <value>
+                <fullName>Provendis</fullName>
+                <default>false</default>
+                <label>Provendis</label>
+            </value>
+            <value>
+                <fullName>Quatra net</fullName>
+                <default>false</default>
+                <label>Quatra net</label>
+            </value>
+            <value>
+                <fullName>Quest Solutions</fullName>
+                <default>false</default>
+                <label>Quest Solutions</label>
+            </value>
+            <value>
+                <fullName>Quorion POS Concerto</fullName>
+                <default>false</default>
+                <label>Quorion POS Concerto</label>
+            </value>
+            <value>
+                <fullName>Ready2order</fullName>
+                <default>false</default>
+                <label>Ready2order</label>
+            </value>
+            <value>
+                <fullName>Revel</fullName>
+                <default>false</default>
+                <label>Revel</label>
+            </value>
+            <value>
+                <fullName>Rimanco Touch Screen</fullName>
+                <default>false</default>
+                <label>Rimanco Touch Screen</label>
+            </value>
+            <value>
+                <fullName>Ritty</fullName>
+                <default>false</default>
+                <label>Ritty</label>
+            </value>
+            <value>
+                <fullName>ROC</fullName>
+                <default>false</default>
+                <label>ROC</label>
+            </value>
+            <value>
+                <fullName>Sanyo</fullName>
+                <default>false</default>
+                <label>Sanyo</label>
+            </value>
+            <value>
+                <fullName>Schultes</fullName>
+                <default>false</default>
+                <label>Schultes</label>
+            </value>
+            <value>
+                <fullName>SERD</fullName>
+                <default>false</default>
+                <label>SERD</label>
+            </value>
+            <value>
+                <fullName>Sharp</fullName>
+                <default>false</default>
+                <label>Sharp</label>
+            </value>
+            <value>
+                <fullName>Shopify</fullName>
+                <default>false</default>
+                <label>Shopify</label>
+            </value>
+            <value>
+                <fullName>Shore</fullName>
+                <default>false</default>
+                <label>Shore</label>
+            </value>
+            <value>
+                <fullName>Siemens</fullName>
+                <default>false</default>
+                <label>Siemens</label>
+            </value>
+            <value>
+                <fullName>SperrstundIS</fullName>
+                <default>false</default>
+                <label>SperrstundIS</label>
+            </value>
+            <value>
+                <fullName>Square</fullName>
+                <default>false</default>
+                <label>Square</label>
+            </value>
+            <value>
+                <fullName>Stocklink</fullName>
+                <default>false</default>
+                <label>Stocklink</label>
+            </value>
+            <value>
+                <fullName>SumUp</fullName>
+                <default>false</default>
+                <label>SumUp</label>
+            </value>
+            <value>
+                <fullName>TacTill</fullName>
+                <default>false</default>
+                <label>TacTill</label>
+            </value>
+            <value>
+                <fullName>Taylor made Ipad</fullName>
+                <default>false</default>
+                <label>Taylor made Ipad</label>
+            </value>
+            <value>
+                <fullName>TCPOS</fullName>
+                <default>false</default>
+                <label>TCPOS</label>
+            </value>
+            <value>
+                <fullName>Tiller Systems</fullName>
+                <default>false</default>
+                <label>Tiller Systems</label>
+            </value>
+            <value>
+                <fullName>TiPOS</fullName>
+                <default>false</default>
+                <label>TiPOS</label>
+            </value>
+            <value>
+                <fullName>Tissl</fullName>
+                <default>false</default>
+                <label>Tissl</label>
+            </value>
+            <value>
+                <fullName>touchbistro</fullName>
+                <default>false</default>
+                <label>touchbistro</label>
+            </value>
+            <value>
+                <fullName>Uniwell</fullName>
+                <default>false</default>
+                <label>Uniwell</label>
+            </value>
+            <value>
+                <fullName>user scripted software</fullName>
+                <default>false</default>
+                <label>user scripted software</label>
+            </value>
+            <value>
+                <fullName>Vectron</fullName>
+                <default>false</default>
+                <label>Vectron</label>
+            </value>
+            <value>
+                <fullName>Vend</fullName>
+                <default>false</default>
+                <label>Vend</label>
+            </value>
+            <value>
+                <fullName>Viktoria</fullName>
+                <default>false</default>
+                <label>Viktoria</label>
+            </value>
+            <value>
+                <fullName>WaiterOne</fullName>
+                <default>false</default>
+                <label>WaiterOne</label>
+            </value>
+            <value>
+                <fullName>Xenia Mircosoft POS</fullName>
+                <default>false</default>
+                <label>Xenia Mircosoft POS</label>
+            </value>
+            <value>
+                <fullName>Zelty</fullName>
+                <default>false</default>
+                <label>Zelty</label>
+            </value>
+            <value>
+                <fullName>UNKNOWN</fullName>
+                <default>false</default>
+                <label>UNKNOWN</label>
+            </value>
+            <value>
+                <fullName>KDS Kassen GmbH</fullName>
+                <default>false</default>
+                <label>KDS Kassen GmbH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

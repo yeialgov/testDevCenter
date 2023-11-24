@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>prevent_account_name_change</fullName>
+    <active>true</active>
+    <description>to make sure users can&apos;t reparent a contact which is used as billing or shipping</description>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+OR (PRIORVALUE(Zuora_BillTo_Contact__c) = True,
+    PRIORVALUE(Zuora_SoldTo_Contact__c) = True),
+
+ISCHANGED (AccountId), 
+
+NOT(PRIORVALUE(AccountId) = &quot;&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>You can&apos;t change the Account if the Contact is used as Billing or Shipping Contact</errorMessage>
+</ValidationRule>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Define the record of the case object</description>
+        <name>Assign_Record_Id</name>
+        <label>Assign Record Id</label>
+        <locationX>363</locationX>
+        <locationY>100</locationY>
+        <assignmentItems>
+            <assignToReference>RecordId_Case</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>RecordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Case_Venue_ID</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Account_has_Primary_Contact</name>
+        <label>Account has Primary Contact</label>
+        <locationX>583</locationX>
+        <locationY>393</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>It_HAS_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PrimaryContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Link_Case_Acct_Contc</targetReference>
+            </connector>
+            <label>It HAS Contact</label>
+        </rules>
+        <rules>
+            <name>It_HAS_NOT_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PrimaryContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Link_Case_Account</targetReference>
+            </connector>
+            <label>It HAS NOT Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Not all cases should be included in the flow</description>
+        <name>Case_has_VenueID</name>
+        <label>Case has VenueID</label>
+        <locationX>593</locationX>
+        <locationY>50</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>VenueID_Positive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>StringVenueID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Account_Name</targetReference>
+            </connector>
+            <label>VenueID Positive</label>
+        </rules>
+    </decisions>
+    <description>https://jira.orderbird.com/browse/CDS-2723
+Adding the primary contact on the linked account as the related contact for the case</description>
+    <interviewLabel>Link Mini Cases &amp; Accounts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Link Mini Cases &amp; Accounts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Account_Name</name>
+        <label>Get Account_Name</label>
+        <locationX>600</locationX>
+        <locationY>230</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Primary_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>MyOrderbirdId__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>StringVenueID</elementReference>
+            </value>
+        </filters>
+        <object>MyObVenue__c</object>
+        <outputAssignments>
+            <assignToReference>VenueID_Account</assignToReference>
+            <field>Account__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Case_Venue_ID</name>
+        <label>Get Case Venue ID</label>
+        <locationX>458</locationX>
+        <locationY>101</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Case_has_VenueID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordId_Case</elementReference>
+            </value>
+        </filters>
+        <object>Case</object>
+        <outputAssignments>
+            <assignToReference>StringVenueID</assignToReference>
+            <field>VenueID__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Primary_Contact</name>
+        <label>Get Primary Contact</label>
+        <locationX>769</locationX>
+        <locationY>231</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_has_Primary_Contact</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>PrimaryContactId</assignToReference>
+            <field>Primary_Contact__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <description>Use venue id to link the case with the right SF account</description>
+        <name>Link_Case_Account</name>
+        <label>Link Case-Account</label>
+        <locationX>309</locationX>
+        <locationY>465</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordId_Case</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>If Account has a Primary Contact link it with the Chat Case</description>
+        <name>Link_Case_Acct_Contc</name>
+        <label>Link Case Acct&amp;Contc</label>
+        <locationX>878</locationX>
+        <locationY>477</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordId_Case</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>VenueID_Account</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>PrimaryContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <start>
+        <locationX>28</locationX>
+        <locationY>82</locationY>
+        <connector>
+            <targetReference>Assign_Record_Id</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Primary Contact Id in the linked Account</description>
+        <name>PrimaryContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the record that start the flow</description>
+        <name>RecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the Case to be updated</description>
+        <name>RecordId_Case</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>StringVenueID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Account that match with the value for the VenueID</description>
+        <name>VenueID_Account</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

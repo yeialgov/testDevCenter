@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Customers</fullName>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Account_Status__c</columns>
+    <columns>Last_Status_Update__c</columns>
+    <columns>SF_BillTo_Contact__c</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>TotalOfOpps__c</columns>
+    <columns>TotalOfCWOpps__c</columns>
+    <columns>Target_Product__c</columns>
+    <columns>PrimaryLanguage__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Customer</value>
+    </filters>
+    <filters>
+        <field>Account_Status__c</field>
+        <operation>equals</operation>
+        <value>Active Customer,Future Customer,Paused Customer</value>
+    </filters>
+    <label>Active Customers</label>
+</ListView>

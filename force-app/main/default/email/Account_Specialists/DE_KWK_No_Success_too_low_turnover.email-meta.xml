@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>KWK</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE KWK: No Success - too low turnover</name>
+    <style>none</style>
+    <subject>orderbird-Kunden werben Kunden: Das Starterpaket Deiner Empfehlung</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Shorthand__c</columns>
+    <columns>Group__c</columns>
+    <columns>LeadSource__c</columns>
+    <columns>LeadMedium__c</columns>
+    <columns>LeadChannel__c</columns>
+    <columns>Marketing_Opt_in_implied__c</columns>
+    <columns>OBJECT_ID</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

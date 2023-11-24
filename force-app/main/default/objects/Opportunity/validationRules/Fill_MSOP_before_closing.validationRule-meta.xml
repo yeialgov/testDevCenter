@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fill_MSOP_before_closing</fullName>
+    <active>true</active>
+    <description>prevent a METRO Opp from getting set to Close Won/Lost without filling in MSOP</description>
+    <errorConditionFormula>AND( 
+   NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+   METROOpportunityID__c &lt;&gt; &apos;&apos;,
+  ISPICKVAL ( MSOP__c,&quot;&quot; ), 
+OR( ISPICKVAL (StageName, &quot;Closed Won&quot;),
+   ISPICKVAL (StageName, &quot;Committed&quot;),
+   ISPICKVAL (StageName, &quot;Closed Lost&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>MSOP__c</errorDisplayField>
+    <errorMessage>Please fill in MSOP before closing the opportunity</errorMessage>
+</ValidationRule>

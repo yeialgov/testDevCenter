@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DACH_Emails</fullName>
+    <booleanFilter>(1 AND 2 AND  3 AND 4 AND 5 ) OR  (1 AND 2 AND 5 AND 6)</booleanFilter>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Onboarding_Status__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.ORIGIN</field>
+        <operation>notEqual</operation>
+        <value>Voicemail</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Open,On Hold,Waiting for Customer Reply,Re-Open,Escalated</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Issue_Satisfaction_Call</value>
+    </filters>
+    <filters>
+        <field>CASES.PRIORITY</field>
+        <operation>notEqual</operation>
+        <value>High</value>
+    </filters>
+    <filters>
+        <field>CASES.SUBJECT</field>
+        <operation>notContain</operation>
+        <value>Bestellung 2 iPod touch plus 2 Geraetelizenzen,Bestellung 1 iPod touch plus 1 Geratelizenz,Bestellung 2 Geraetelizenzen,Bestellung 1 Geraetelizenz</value>
+    </filters>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Case.Finance_Case,Case.Issue_Satisfaction_Call</value>
+    </filters>
+    <label>DACH Emails</label>
+    <queue>DACH_Incoming_Case_Queue</queue>
+    <sharedTo>
+        <role>Support_Management</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_for_specific_Venue_number</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>MyOrderbirdId__c</columns>
+    <columns>my_ob_ID_as_number__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>HasToken__c</columns>
+    <columns>Email__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>my_ob_ID_as_number__c</field>
+        <operation>equals</operation>
+        <value>137</value>
+    </filters>
+    <label>Search for specific Venue number</label>
+</ListView>

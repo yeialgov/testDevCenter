@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DENISE ONLY!</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>§ 148 Mustereinspruch</name>
+    <style>none</style>
+    <subject>Mustereinspruch § 148 Abgabenordnung</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+wie telefonisch besprochen sende ich Dir einen Mustereinspruch. Bitte kopiere den unteren Text und passe ihn in Deiner Textverarbeitung an.
+
+—————————————————————————————————————————————
+
+Max Mustermann
+
+Musterstraße 12
+
+12345 Musterstadt
+
+(↑ Trage hier Deinen Vor- und Zunamen sowie Postanschrift ein ↑)
+
+
+An das
+
+Finanzamt Musterstadt
+
+12030 Musterhausen
+
+(↑ Trage hier die Postanschrift Deines zuständigen Finanzamts ein ↑)
+
+
+Musterstadt, XX.XX.XXXX (← Trage hier das aktuelle Datum ein)
+
+
+Einspruch gegen Ablehnung des Antrag nach § 148 AO (Abgabenordnung) – Verlängerung der Frist zur vollständigen Implementierung einer Cloud-TSE vom XX.XX.XXXX ( ← Trage hier das Antragsdatum ein)
+
+
+Steuernummer: …../...../..... ( ← Trage hier Deine Steuernummer ein)
+
+Aktenzeichen: … ( ← Trage hier das Aktenzeichen ein)
+
+
+Sehr geehrte Damen und Herren,
+
+hiermit lege ich gegen den oben genannten Steuerbescheid frist- und formgerecht
+
+Einspruch ein.
+
+
+Meine Begründung lautet wie folgt: (Es folgen drei Beispiele)
+
+Sämtlich angefragten Daten liegen dem Schreiben bereits als Links, welche den Download der Dateien ermöglichen, bei.
+Nach Rücksprache mit Ihnen wurde uns mitgeteilt, dass die Bewilligungslage sich mittlerweile geändert hat und der Antrag durch diesen Einspruch rückwirkend akzeptiert wird.
+Mit Ausnahme des 31.12.2021 als Ende des Duldungszeitraum steht dem Antrag keinerlei Ablehnungsgrund gegenüber. Daher sehen wir eine Verkürzung des Duldungszeitraums auf den 30.09.2021 als legitim, sowie eine Erneuerung des Antrags als obsolet an.
+
+Sofern ich nichts Gegenteiliges von Ihnen höre, gehe ich davon aus, dass Sie diesem Antrag entsprechen.
+
+
+Bitte bestätigen Sie mir den Eingang meines Einspruchs.
+
+
+Mit freundlichen Grüßen
+
+
+
+
+(Unterschrift)
+
+———————————————————————————————————————
+
+Solltest Du noch Fragen oder Anmerkungen haben, melde Dich gerne bei uns: hilfe@orderbird.com.
+
+
+Viele Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

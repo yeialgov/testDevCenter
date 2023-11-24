@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <description>Depends on Opportunity Type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Depends on the Opportunity Type. For upsell opportunities we are differentiating between Software, Hardware and Pay.</inlineHelpText>
+    <label>Subtype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>POS</fullName>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Pay</fullName>
+                <default>false</default>
+                <label>Pay</label>
+            </value>
+            <value>
+                <fullName>SimpleOrder</fullName>
+                <default>false</default>
+                <label>SimpleOrder</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>upselling</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>upselling</controllingFieldValue>
+            <valueName>Hardware</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>upselling</controllingFieldValue>
+            <valueName>Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>upselling</controllingFieldValue>
+            <valueName>SimpleOrder</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>new business</controllingFieldValue>
+            <valueName>POS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

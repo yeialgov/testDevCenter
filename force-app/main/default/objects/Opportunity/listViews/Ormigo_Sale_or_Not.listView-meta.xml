@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ormigo_Sale_or_Not</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>LAC_ID__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>LostRejectedReason__c</columns>
+    <columns>Missing_feature__c</columns>
+    <columns>Category_Branding__c</columns>
+    <columns>OppCategory__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Inbound</value>
+    </filters>
+    <filters>
+        <field>LAC_ID__c</field>
+        <operation>equals</operation>
+        <value>255</value>
+    </filters>
+    <filters>
+        <field>OppCategory__c</field>
+        <operation>equals</operation>
+        <value>MINI by orderbird</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_90_DAYS</value>
+    </filters>
+    <label>Ormigo Sale or Not ?</label>
+</ListView>

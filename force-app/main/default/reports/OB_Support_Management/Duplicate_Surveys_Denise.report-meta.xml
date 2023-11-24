@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Sabrina Grahl,Dragana Tomic,Yana Koval,Marcel Häntzsch,Corven Hauck,Berenice Prochnow,Martin Räder,Stefan Kramer,Tim Dahlmann,Tereza-Tetiana Yakovyna,Denise Doerschel,Svitlana Sokolovska,Joachim Groß,Valeria meißner,Iuliia Orlova,Olha Zaporozhets,Ihor Kozhevin,Eric Wiener,Andrii Vernyhor,Marija Milosavljevic,Halyna Trychehrub,Benjamin zietz,katrin lück,Ekaterina Kuialanskas,Yana Tymoshenko,Denise Machauer,Yana Korniichuk,Ilaria Baldo,Christian Botterill,Uta niessner</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_CASE_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>Duplicate Surveys Denise</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SurveyTaker__c@SurveyTaker__c.Case__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2021-09-14</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2021-08-22</startDate>
+    </timeFrameFilter>
+</Report>

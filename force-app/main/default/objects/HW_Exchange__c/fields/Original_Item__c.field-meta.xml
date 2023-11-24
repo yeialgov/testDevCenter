@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_Item__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Look-up to the Item entered into the exchange process</inlineHelpText>
+    <label>Original Item</label>
+    <referenceTo>HardwareFulfilment__c</referenceTo>
+    <relationshipLabel>HW Exchanges</relationshipLabel>
+    <relationshipName>HW_Exchanges</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

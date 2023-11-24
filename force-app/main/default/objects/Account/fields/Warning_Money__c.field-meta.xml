@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warning_Money__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+	OR(
+		Netsuite_Open_Balance__c &gt; 115,
+		AND(
+			Combined_Balance__c &gt; 115,
+			OR (
+				Dunning_Status__c = &apos;2nd Dunning&apos;,
+				AND(
+					Dunning_Status__c = &apos;1st Dunning&apos;,
+					Dunning_1_Date__c &lt;= TODAY() - 10
+				)
+			)
+		)
+	),
+	IMAGE(
+		&quot;https://orderbird--c.eu6.content.force.com/servlet/servlet.FileDownload?file=01558000002BUmV&quot;, &quot;n/a&quot;, 150, 200
+	),
+	&quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Warning Money</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

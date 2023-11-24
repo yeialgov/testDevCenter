@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r.Subscription_Products__r$Name</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Filter by products that contain &quot;printers, ipad, ipod&quot; in the name with commission date equals this month and with price greater than 0</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Price__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>EUR 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Product__c.RecognizedRevenueAccountingCode__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Hardware</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$ProductName__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>iPad 10.2 Wi-Fi 32GB Space Gray,iPad 9.7 Wi-Fi 32GB Space Gray refurbished,iPod Touch 32GB,Printer Epson TM-m30 cable-bound,Cash Drawer black - auto,Display Epson DM-D30 black USB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Subscriptions__r.Subscription_Products__r$ProductName__c</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>Sold Hardware W/o CardReaders this MONTH</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_subscriptions_with_SLI__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CommissionDate__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

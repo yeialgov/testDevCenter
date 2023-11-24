@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Starter_Package__c</name>
+    <picklistValues>
+        <masterLabel>SPK incl. PAY (699 €)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPK without PAY (599 €)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

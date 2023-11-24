@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MergeName__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(
+OR(
+FirstName == &quot;MyOrderbird&quot;,
+FirstName == &quot;[not provided]&quot;,
+FirstName == &quot;Primary&quot;,
+FirstName == &quot;n/a&quot;,
+FirstName == &quot;-&quot;,
+FirstName == &quot;.&quot;,
+FirstName == &quot;&quot;,
+ISBLANK(FirstName))
+,
+OR(
+LastName == &quot;[not provided]&quot;,
+LastName == &quot;Contact&quot;,
+LastName == &quot;n/a&quot;,
+LastName == &quot;Facebook Scrapper&quot;,
+LastName == &quot;N/A&quot;,
+LastName == &quot;*&quot;,
+LastName == &quot;-&quot;,
+LastName == &quot;.&quot;)),&quot;&quot;,TRIM(FirstName)&amp;&quot; &quot;&amp;TRIM(LastName))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Merge Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

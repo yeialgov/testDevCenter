@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Primary_Contact__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account$Primary_Contact__c.Email</field>
+    </columns>
+    <columns>
+        <field>Account$CustomerID__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account$Account_Po1__c</field>
+    </columns>
+    <columns>
+        <field>Account$Account_Status__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>ProductName__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Guest Management Free Trial</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Account$Id</primaryTableColumn>
+        <relatedTable>SubscriptionLineItem__c</relatedTable>
+        <relatedTableJoinColumn>Account__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>EUR</currency>
+    <description>https://jira.orderbird.com/browse/CRMT-3296</description>
+    <format>Tabular</format>
+    <name>Customers with Free GM-4 Markus</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X2_0_Subscription_from_Accounts_with_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$Primary_Contact__c.CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

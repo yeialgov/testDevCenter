@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Invoice_Upcoming_Special__c</fullName>
+    <externalId>false</externalId>
+    <formula>Frequency__c = &apos;Month&apos;
+||
+(
+Frequency__c = &apos;Year&apos; &amp;&amp; (MONTH(BillingStartDate__c) = 1 || MONTH(BillingStartDate__c) = 2 || (MONTH(BillingStartDate__c) = 12 &amp;&amp; DAY(BillingStartDate__c) &gt; 18))
+)||
+(
+Frequency__c = &apos;Three_Year&apos; &amp;&amp; ((MONTH(BillingStartDate__c) = 1 &amp;&amp; YEAR(BillingStartDate__c) = 2018) || (MONTH(BillingStartDate__c) = 2 &amp;&amp; YEAR(BillingStartDate__c) = 2018) || (MONTH(BillingStartDate__c) = 12 &amp;&amp; DAY(BillingStartDate__c) &gt; 18 &amp;&amp; YEAR(BillingStartDate__c) = 2017)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Invoice Upcoming Special</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

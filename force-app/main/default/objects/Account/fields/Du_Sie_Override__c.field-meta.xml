@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Du_Sie_Override__c</fullName>
+    <externalId>false</externalId>
+    <label>Du/Sie Override</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PrimaryLanguage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Du</fullName>
+                <default>false</default>
+                <label>Du</label>
+            </value>
+            <value>
+                <fullName>Sie</fullName>
+                <default>false</default>
+                <label>Sie</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>German</controllingFieldValue>
+            <valueName>Du</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>German</controllingFieldValue>
+            <valueName>Sie</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

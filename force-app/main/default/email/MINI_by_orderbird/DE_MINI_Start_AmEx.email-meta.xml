@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Start with American Express</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE MINI Start AmEx</name>
+    <style>none</style>
+    <subject>MINI by orderbird: Los geht&apos;s mit American Express</subject>
+    <textOnly>Du kannst loslegen!
+
+
+Die Kartenzahlung mit American Express ist ab sofort für Dich freigeschaltet!
+
+Dein nächster Schritt
+
+Damit Du gleich mit Deinem MINI by orderbird Amex-Karten annehmen kannst, synchronisiere bitte einmal die Masterdaten. Gehe dazu ins Menü auf Deinem MINI by orderbird und tippe dann auf Einstellungen &gt; Masterdaten synchronisieren.
+
+
+Neu im Kartenbusiness?
+
+Du möchtest wissen, wie Du mit Deinem MINI by orderbird eine kontaktlose Bezahlung oder eine Kartenzahlung abwickelst? Dann schaue hier vorbei: Kontaktlos bezahlen
+
+
+WICHTIG
+
+Beim Wiederherstellen einer Rechnung, die auf Kartenzahlung abgeschlossen wurde, wird der komplette Betrag automatisch zurücküberwiesen! Zur erneuten Abrechnung, auch mit derselben Karte, brauchst Du zwingend wieder eine Karte oder das Bargeld!
+
+Dein Partner American Express
+
+American Express Kreditkarten sind bei Privat- und Geschäftskunden weltweit beliebt. Das zeigen überdurchschnittliche Umsätze und der häufige Karteneinsatz.
+
+Restaurants und kleine Händler unterstützt American Express mit besonderen Konditionen und kostenfreiem Marketing.
+
+Schon gewusst: Das Serviceentgelt ist einheitlich für alle Kartenarten und Kosten entstehen nur bei tatsächlicher Nutzung!
+
+Solltest Du noch Fragen oder Anregungen haben, erreichst Du uns…
+
+wochentags von 10-16 Uhr auch über den Chat in Deinem MY orderbird Account,
+
+über unser Anfrage-Formular,
+oder Du antwortest mir einfach auf diese E-Mail.
+
+Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter supportmini.orderbird.com.
+
+Vielen Dank und liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

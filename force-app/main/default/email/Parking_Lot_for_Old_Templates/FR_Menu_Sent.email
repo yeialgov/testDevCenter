@@ -1,0 +1,57 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span id="docs-internal-guid-6bb84371-a397-bf7c-8071-b3183e6d4ec1" style=""><font style=""><span id="docs-internal-guid-e4ac52c4-a3a0-e58d-7fa7-9912e62b3c68" style="font-family: arial;"><div style="font-family: arial; margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span id="docs-internal-guid-e4ac52c4-a3a0-e58d-7fa7-9912e62b3c68" style="font-family: Helvetica; font-size: 12px; text-size-adjust: auto;"><div style="color: rgb(0, 0, 0); font-family: arial; margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><div style="text-size-adjust: auto; font-size: 12pt; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><div style="font-size: 12px; margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><div style="margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><span id="docs-internal-guid-e4ac52c4-a3a0-e58d-7fa7-9912e62b3c68" style="font-family: Helvetica;"><div style="font-family: arial; margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;"><font color="#808080"><span id="docs-internal-guid-e4ac52c4-a3a0-e58d-7fa7-9912e62b3c68" style="font-family: Helvetica;"><div style="font-family: arial; margin-top: 0pt; margin-bottom: 0pt; line-height: 1.38;">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Arial; color: #808080; min-height: 15.0px}
+span.s1 {font-kerning: none}
+</style>
+
+
+<p class="p1"><span class="s1">Cher {!Contact.FirstName},<span class="Apple-converted-space">&nbsp;</span></span></p><p class="p1"><span class="s1">Chère {!Contact.FirstName},</span></p><p class="p2"><span class="s1"></span><br></p><p class="p3"><span class="s1">Votre carte est maintenant prête à être téléchargée dans l’appli orderbird! Si vous avez déjà téléchargé l’appli orderbird sur votre appareil, nous vous demandons de cloire la session, supprimer l’appli et télécharger l’appli à nouveau sur l’App Store. Si vous utilisez plusieurs appareils, veillez à effacer l’appli sur tous les appareils et à la télécharger de nouveau.</span></p><p class="p3"><span class="s1">Une fois ceci fait, ouvrez orderbird et identifiez-vous avec votre compte my.orderbird. Votre carte sera installée automatiquement si vous êtes connecté à Internet.</span></p><p class="p4"><span class="s1">Vous pouvez modifier les paramètres suivantes :</span></p><ul class="ul1">
+<li class="li5"><span class="s2"></span><span class="s3">Modèle de facture&nbsp;(Vous pouvez saisir votre adresse ou une salutation pour vos clients - en-tête et pied de page seront créés par vos soins). Vous trouverez le modèle de facture dans l’appli orderbird sous paramètres / modèle de facture.</span></li>
+<li class="li6"><span class="s4"><a href="https://support.orderbird.com/hc/fr-fr/articles/212898183"><span class="s5">Enregistrer le logo pour le ticket de caisse</span></a></span></li>
+<li class="li7"><span class="s6"><a href="https://support.orderbird.com/hc/fr-fr/articles/211384666"><span class="s5">Créer des utilisateurs</span></a></span><span class="s3">&nbsp;(Attribuer des codes PIN) et définissez des rôles et droits d’utilisateur</span></li>
+<li class="li5"><span class="s7"></span><span class="s3">En cas de besoin :&nbsp;<a href="https://support.orderbird.com/hc/fr-fr/articles/211386046"><span class="s8">Créer des favoris</span></a></span></li>
+</ul><p class="p3"><span class="s1">Notre&nbsp;<a href="https://support.orderbird.com/hc/fr-fr"><span class="s8">Guide d’utilisation en ligne</span></a>&nbsp;contient toutes les explications !</span></p><p class="p3"><span class="s1">Si vous avez des questions ou des remarques, je me tiens à votre disposition.</span></p><p class="p1">
+
+
+
+
+<style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #808080; -webkit-text-stroke: #808080}
+p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.0px; font: 13.0px Arial; color: #808080; -webkit-text-stroke: #808080; min-height: 15.0px}
+p.p3 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 19.0px; font: 12.0px Arial; color: #8b8b8b; -webkit-text-stroke: #8b8b8b; background-color: #fefefe}
+p.p4 {margin: 0.0px 0.0px 10.0px 0.0px; line-height: 18.0px; font: 12.0px Arial; color: #32a3ce; -webkit-text-stroke: #32a3ce; background-color: #fefefe}
+li.li5 {margin: 0.0px 0.0px 5.0px 0.0px; line-height: 15.0px; font: 12.0px Arial; color: #8b8b8b; -webkit-text-stroke: #8b8b8b}
+li.li6 {margin: 0.0px 0.0px 5.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #2199e8; -webkit-text-stroke: #2199e8}
+li.li7 {margin: 0.0px 0.0px 5.0px 0.0px; line-height: 16.0px; font: 12.0px Arial; color: #8b8b8b; -webkit-text-stroke: #8b8b8b}
+span.s1 {font-kerning: none}
+span.s2 {background-color: #fefefe; -webkit-text-stroke: 0px #32a3ce}
+span.s3 {font-kerning: none; background-color: #fefefe}
+span.s4 {background-color: #fefefe; -webkit-text-stroke: 0px #8b8b8b}
+span.s5 {font-kerning: none; -webkit-text-stroke: 0px #2199e8}
+span.s6 {color: #2199e8; background-color: #fefefe}
+span.s7 {background-color: #fefefe}
+span.s8 {font-kerning: none; color: #2199e8; -webkit-text-stroke: 0px #2199e8}
+ul.ul1 {list-style-type: disc}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="p3"><span class="s1">Meilleures salutation,</span></p><p class="p3"><span class="s1">Votre équipe orderbird</span></p></div></span></font></div></span></div></div></div></div></div></div></span></div></span></font></span>]]></td>
+</tr>
+</table>

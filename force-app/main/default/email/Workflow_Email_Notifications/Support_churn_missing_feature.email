@@ -1,0 +1,11 @@
+Dear Product team,
+
+The customer {!Case.Account}  decided to churn.
+Here is their feedback: {!Case.Missing_feature_comment__c}
+
+Contact name: {!Case.Contact}
+Contact email: {!Case.Contact_email_custom__c}
+
+Link to the case: {!Case.Link}
+
+OB Support team

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentMethod__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>How is the customer going to pay recurring fees? Bank transfer (orderbird charges, SEPA Mandate / Direct Debit) or Wire transfer (customer wires money)?</inlineHelpText>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank Transfer</fullName>
+                <default>true</default>
+                <label>Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer</fullName>
+                <default>false</default>
+                <label>Wire Transfer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

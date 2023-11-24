@@ -1,0 +1,50 @@
+<apex:page showHeader="false" renderAs="pdf" controller="TSE_Bestellbestaetigung_controller" >
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
+    <div style="border: solid black 2px; padding: 5px;font-family: Arial, Helvetica, sans-serif;">
+    <apex:form >
+        <apex:outputPanel rendered="{!ShowPage}">
+            <br/>
+            <div style="text-align:center;font-size:175%;font-weight:bold;">
+                Bestellbestätigung für {!AccountName} über eine cloudbasierte TSE
+            </div>
+            <p>
+                Der Betrieb {!AccountName} ist Kunde der orderbird AG sowie Betreiber eines orderbird Kassensystems.
+            </p>
+            <p>
+                Zum aktuellen Zeitpunkt bestätigen wir, dass der Betrieb {!AccountName} folgende Schritte zur Einhaltung der technischen Auflagen der KassenSichV bereits durchgeführt hat:
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;orderbird-Kundennummer:&nbsp;{!CustomerNumber}
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;TSE bestellt:&nbsp;<img style="background-color:white;" src="/img/checkbox_checked.gif"/>
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;TSE aktiviert:&nbsp;<img src="/img/checkbox_checked.gif"/>
+            </p>
+            <p>
+                Hinweis: Bitte beachten Sie, dass die o.g. Daten stündlich aktualisiert werden.
+            </p>
+            <p>
+                Eine Kundennummer bei orderbird ist immer eindeutig einer Kasse sowie einer hieran angeschlossenen TSE zuordenbar.
+            </p>
+            <p>
+                Bei Rückfragen wenden Sie sich bitte direkt an den Betrieb {!AccountName}, um eine entsprechende Rechnung über die Bestellung der Online-TSE oder, bei bereits aktivierter TSE, einen signierten Kassenbon aus dem Kassensystem als Nachweis zu erhalten.
+            </p>
+            <p>
+                <b>Wichtig:</b> Diese Seite ist nur durch einen personalisierten Link aufrufbar, der an den intendierten Empfänger, die zuständige Finanzbehörde des oben genannten Kunden, durch den Kunden selbst gesendet wurde. Die Seite ist nicht über Suchmaschinen aufrufbar und wurde seitens orderbird nicht öffentlich verlinkt. Die Weitergabe der URL dieser Seite an unberechtigte Dritte ist untersagt.
+            </p>
+            <p>
+                <b>orderbird AG</b>
+                Ritterstraße 12-14, Aufg. 3
+                D-10969 Berlin
+                Germany
+            </p>
+            <p>
+                <b>Vorstand</b><br/>
+                Mark Schoen (Vorstandsvorsitzender), Jakob Schreyer, c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+            </p>
+            <p>
+                <b>Vorsitzender des Aufsichtsrats</b><br/>
+                Oliver Kaltner, c/o orderbird AG, Ritterstraße 12-14, Aufg. 3, 10969 Berlin
+            </p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!!ShowPage}">
+        </apex:outputPanel>
+        </apex:form>
+    </div>
+</apex:page>

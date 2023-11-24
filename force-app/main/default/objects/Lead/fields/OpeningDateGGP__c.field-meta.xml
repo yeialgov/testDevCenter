@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpeningDateGGP__c</fullName>
+    <description>Stakeholder: MKT (Gründerpreis)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Part of the Gastro Founder award: When is the opening planned in relation to the Award Season? (Filled in by applicant through online form)</inlineHelpText>
+    <label>Opening Date (GGP)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

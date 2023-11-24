@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_34780913</developerName>
+        <masterLabel>Queue Topic</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Tech Misc</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Network</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Printer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Exports</sourceValue>
+            </sourceValues>
+            <value>Tech</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Pay Misc</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pay Registration</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cardreader</sourceValue>
+            </sourceValues>
+            <value>Pay</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>MINI incoming Case queue</sourceValue>
+            </sourceValues>
+            <value>MINI</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>App</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>App Error</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cashbook</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CCA Misc</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GLS</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>My.Ob</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Consulting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Invoices</sourceValue>
+            </sourceValues>
+            <value>CCA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>FR - Incoming Case Queue</sourceValue>
+            </sourceValues>
+            <value>France</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Fiskalisierung AT</sourceValue>
+            </sourceValues>
+            <value>FT AT</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Customer Success</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Guestmanagement</sourceValue>
+            </sourceValues>
+            <value>CSM</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>DACH - Incoming Case Queue</sourceValue>
+            </sourceValues>
+            <value>Incoming Emails</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Account Specialists</sourceValue>
+            </sourceValues>
+            <value>AccSp</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Nightowls</sourceValue>
+            </sourceValues>
+            <value>Nightowls</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_34780913</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed,Closed - Not Solved,Closed as Duplicate,On Hold,Waiting for Customer Reply,Postponed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>GLOBAL SPAM,Finance,NEST Support,Insights</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_34780913</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Support Open Queue Cases by Topic</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>queue</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

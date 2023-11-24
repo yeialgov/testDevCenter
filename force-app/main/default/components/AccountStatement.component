@@ -1,0 +1,136 @@
+<apex:component controller="AccountStatementController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!acctId}" name="AccountId" type="String" description="Account Id"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.accountstatementcss2}"/>
+    </head>
+    <!--div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}"/>
+    </div-->
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}"/>
+    </div>
+    <div id="mainDiv">
+        <c:birdHeader />
+        <table class="fullWidth" style="font-family: sans-serif;">
+            <tr>
+                <td class="wideCol">
+                    <div class="shrinkText padCell">
+                        <table>
+                            <tr>
+                                <td class="blueText padCell rightBar">
+                                    orderbird AG
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    Ritterstraße 12-14
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    10969 Berlin
+                                </td>
+                                <td class="grayText padCell">
+                                    Germany
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="narrCol"></td>
+            </tr>
+            <tr>
+                <td class="topAlign">
+                    <c:AddressBuilder Account="{!acct}" AddressParts="{!AddressParts}"/>
+                </td>
+                <td class="grayText shrinkText topAlign">
+                    <table class="fullWidth">
+                        <tr>
+                            <td class="narrCol">{!$Label.CUSTOMER_ID}:</td>
+                            <td>{!acct.CustomerIdText__c}</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.CONTACT_PERSON}:</td>
+                            <td>{!acct.AccountManager__r.Name}</td>
+                        </tr>
+                        <apex:outputPanel rendered="{!acct.AccountManager__r.Department != null}" layout="none">
+                            <tr>
+                                <td class="narrCol">{!$Label.DEPARTMENT}:</td>
+                                <td>{!acct.AccountManager__r.Department}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr><td>&nbsp;</td></tr>
+                        <apex:outputPanel rendered="false" layout="none">
+                            <tr>
+                                <td class="narrCol">{!$Label.TELEPHONE}:</td>
+                                <td>{!acct.AccountManager__r.Phone}</td>
+                            </tr>
+                            <tr>
+                                <td class="narrCol">Email:</td>
+                                <td>{!acct.AccountManager__r.Email}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr>
+                            <td class="narrCol">{!$Label.TELEPHONE}:</td>
+                            <td>+49 30 208 983 098</td>
+                        </tr>                            
+                        <tr>
+                            <td class="narrCol">Email:</td>
+                            <td>hilfe@orderbird.com</td>
+                        </tr>                        
+                        <tr>
+                            <td class="narrCol">{!$Label.INTERNET}:</td>
+                            <td>www.orderbird.com</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.DATE}:</td>
+                            <td><apex:outputText value="{0,date,dd-MM-yyyy}"><apex:param value="{!TODAY()}" /></apex:outputText></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <p class="blueText bigBold" style="font-family: sans-serif;">
+            {!$Label.STATEMENT}
+        </p>
+        <table class="StatementTable bme" border="1">
+            <thead>
+                <tr>
+                    <th class="lftalgn">{!$Label.DATE}</th>
+                    <th class="lftalgn" colspan="2">{!$Label.DESCRIPTION}</th>
+                    <th>{!$Label.CHARGE}</th>
+                    <th>{!$Label.PAYMENT}</th>
+                    <th>{!$Label.BALANCE}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!items}" var="item" >
+                <tr>
+                    <td class="lftalgn rtbar"><apex:outputText value="{0,date,dd.MM.yyy}"><apex:param value="{!item.DateStamp}"/></apex:outputText></td>
+                    <td class="lftalgn rtbar" colspan="2">{!$Label[item.Description]}{!IF(item.RefNum!=null,' #'+item.RefNum,'')}</td>
+                    <td class="rtbar"><c:Curr Value="{!item.Charge}"/></td>
+                    <td class="rtbar"><c:Curr Value="{!item.Payment}"/></td>
+                    <td><c:Curr Value="{!item.Balance}"/></td>
+                </tr>
+                </apex:repeat>
+                <tr class="grywht">
+                    <td>0 {!$Label.DAYS}</td>
+                    <td>1-10 {!$Label.DAYS}</td>
+                    <td>11-20 {!$Label.DAYS}</td>
+                    <td>21-30 {!$Label.DAYS}</td>
+                    <td>>30 {!$Label.DAYS}</td>
+                    <td rowspan="2" id="bigBalance" style="margin-right:0;padding-right:0;">
+                        <c:Curr Value="{!acct.Combined_Balance__c}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <apex:repeat var="aged" value="{!InvoiceBreakdown}">
+                        <td class="rtbar"><c:Curr Value="{!aged}"/></td>
+                    </apex:repeat>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: right; font-family: sans-serif;">
+            {!$Label.CURRENCY}: {!acct.CurrencyIsoCode}
+        </p>
+    </div>
+</apex:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>pre-release mailing for menu editor on myob for previous beta-tester and feature-requests</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DE Menu Editor Pre-Release</name>
+    <style>none</style>
+    <subject>Ab sofort kannst Du Deine Speisekarte auf MY orderbird bearbeiten!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

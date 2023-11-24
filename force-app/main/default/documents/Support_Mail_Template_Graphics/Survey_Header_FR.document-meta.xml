@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Header for survey in French in Survey Force</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Survey Header FR</name>
+    <public>true</public>
+</Document>

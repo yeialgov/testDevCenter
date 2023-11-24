@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Set_CCPD_manually__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>https://jira.orderbird.com/browse/CDS-8</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Should the Closed Contract Paid Date for this account be managed manually? (And not by the automatism)</inlineHelpText>
+    <label>Manual CCPD</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

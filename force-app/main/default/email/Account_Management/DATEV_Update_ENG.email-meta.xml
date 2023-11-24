@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>one time mailing to all customers (english speaking)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DATEV Update ENG</name>
+    <style>none</style>
+    <subject>orderbird: Update to the DATEV export in the app</subject>
+    <textOnly>orderbird: Update to the DATEV export in the app
+
+Dear orderbird Customer,
+
+
+On June 1, 2019, we will update the DATEV export for you, so you can provide your tax advisor with DATEV exports according to the latest standards.
+
+
+What‘s new for you
+
+
+As of June 1, 2019, we will no longer offer the outdated SKR 70 as the default standard for your DATEV exports. This means that if you have not made changes to the DATEV settings in the orderbird app by then, you will not receive DATEV exports in the future.
+
+
+Additionally, beginning in June, you will find the chart of accounts you have set visible at my.orderbird under Exports &gt; DATEV. There you have the opportunity to enter additional information, such as your Client ID. The advantage of this is that it makes work even easier for your tax advisor, which can save him time and you money.
+
+
+Please update your DATEV settings
+
+
+Please carefully review your settings for DATEV export. If you have not yet entered an account number in the orderbird app under Settings &gt; DATEV, please do so now so that you can receive DATEV exports in the future.
+
+
+We recommend the settings SKR 03 or SKR 04 for Germany, and SKR 07 for Austria, as these are typically used in the catering industry. Please set the standard chart of accounts that is appropriate for you and your country.
+
+
+It’s best to consult with your tax advisor, in order to be on the safe side. The orderbird app will continue to support all standard charts of accounts. All information can be found HERE!
+
+If you entered old account numbers according to SKR 70 in the orderbird app under Settings &gt; DATEV, you will receive your DATEV export according to SKR 70, as usual. Again, it is best to talk with your tax advisor about which chart of accounts makes the most sense for you. This is to ensure that you are up to date.
+
+
+If you have not used DATEV in the past and do not intend to use it in the future, you do not need to do anything at this point.
+
+
+If you have questions about this topic, please contact our support at help@orderbird.com.
+
+
+Best regards from Berlin,
+
+Your orderbird team
+
+orderbird AG
+
+
+Ritterstraße 12-14, Ste. 3
+
+D-10969 Berlin
+
+Germany
+
+
+E-Mail: hello@orderbird.com
+Telefon: +49 30 208 983 099 (international number)
++49 30 208 983 099 aus dem Ausland
+Fax: +49 321 214 681 89
+Company HQ: Berlin
+
+Court of registration: District Court Berlin - Charlottenburg
+Registration number: HRB 134011 B
+VAT ID:  DE276722316
+
+Management Board:
+Mark Schoen (chairman of the management board), Jakob Schreyer, Patrick Brienen-Lucius, c/o orderbird AG, Ritterstraße 12-14, Ste. 3, 10969 Berlin
+
+Chair of Supervisory Board :
+Oliver Kaltner, c/o orderbird AG, Ritterstraße 12-14, Ste. 3, 10969 Berlin
+
+
+
+© 2011-2019 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

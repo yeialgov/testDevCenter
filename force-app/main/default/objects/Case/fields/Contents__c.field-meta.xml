@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contents__c</fullName>
+    <description>Stakeholder: unknown</description>
+    <externalId>false</externalId>
+    <inlineHelpText>INPUT NEEDED</inlineHelpText>
+    <label>Contents</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Main menu</fullName>
+                <default>false</default>
+                <label>Main menu</label>
+            </value>
+            <value>
+                <fullName>Orderpad</fullName>
+                <default>false</default>
+                <label>Orderpad</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Print jobs</fullName>
+                <default>false</default>
+                <label>Print jobs</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Sales Dashboard</fullName>
+                <default>false</default>
+                <label>Sales Dashboard</label>
+            </value>
+            <value>
+                <fullName>Exports</fullName>
+                <default>false</default>
+                <label>Exports</label>
+            </value>
+            <value>
+                <fullName>Invoices and Open Orders</fullName>
+                <default>false</default>
+                <label>Invoices and Open Orders</label>
+            </value>
+            <value>
+                <fullName>DATEV &amp; GDPdU</fullName>
+                <default>false</default>
+                <label>DATEV &amp; GDPdU</label>
+            </value>
+            <value>
+                <fullName>Settings, bank details, Logo</fullName>
+                <default>false</default>
+                <label>Settings, bank details, Logo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caller_Contact</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+NOT(Id =  Account.Privacy_Contact__c),
+Caller_Contact__c,
+
+NOT(ISBLANK( Account.Caller_Contact__c )), 
+
+OR(
+ISBLANK( Email ),
+ISBLANK( Phone ))
+
+)</errorConditionFormula>
+    <errorMessage>This is the Account Caller Contact. Please Fill the Email, the Phone and the address!</errorMessage>
+</ValidationRule>

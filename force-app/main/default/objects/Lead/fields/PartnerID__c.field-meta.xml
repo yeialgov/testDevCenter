@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerID__c</fullName>
+    <description>Stakeholder: PaM // potential later use: the ID of the Partner who send us the lead; requires workflow to transfer this information into &quot;Partner Contact&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the ID of the Partner who send us this lead? Automatically looks up the contact and populates the according field here on the lead</inlineHelpText>
+    <label>Partner ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Updated salesforce classic footer</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Letterhead Footer 2018 FR</name>
+    <public>true</public>
+</Document>

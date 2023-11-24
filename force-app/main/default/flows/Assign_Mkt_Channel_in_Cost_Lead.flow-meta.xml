@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>CH_Display_Prospecting</name>
+        <label>CH Display Prospecting</label>
+        <locationX>467</locationX>
+        <locationY>557</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Display Prospecting</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_Display_Remarketing</name>
+        <label>CH Display Remarketing</label>
+        <locationX>362</locationX>
+        <locationY>496</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Display Remarketing</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>broad+narrow=Prospecting</description>
+        <name>CH_facebook_broad</name>
+        <label>CH facebook broad</label>
+        <locationX>817</locationX>
+        <locationY>52</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>facebook Prospecting</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>narrow+broad=prospecting</description>
+        <name>CH_facebook_narrow</name>
+        <label>CH: facebook narrow</label>
+        <locationX>573</locationX>
+        <locationY>37</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>facebook Prospecting</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_facebook_remarketing</name>
+        <label>CH facebook remarketing</label>
+        <locationX>938</locationX>
+        <locationY>146</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>facebook remarketing</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_No_Ass</name>
+        <label>CH No Ass</label>
+        <locationX>568</locationX>
+        <locationY>667</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>other</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_SEA_Brand</name>
+        <label>CH SEA Brand</label>
+        <locationX>763</locationX>
+        <locationY>356</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SEA Brand</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_SEA_Competitor</name>
+        <label>CH SEA Competitor</label>
+        <locationX>918</locationX>
+        <locationY>267</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SEA Competitor</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>CH_SEA_Generic</name>
+        <label>CH SEA Generic</label>
+        <locationX>634</locationX>
+        <locationY>506</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Channel__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SEA Generic - PRO</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>MINI_Campaign</name>
+        <label>MINI Campaign</label>
+        <locationX>126</locationX>
+        <locationY>313</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>MINI</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HasMarketingChannel</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>PRO_Campaign</name>
+        <label>PRO Campaign</label>
+        <locationX>134</locationX>
+        <locationY>544</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Marketing_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>PRO</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>HasMarketingChannel</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Assign_Mkt_Channel</name>
+        <label>Assign Mkt Channel</label>
+        <locationX>533</locationX>
+        <locationY>219</locationY>
+        <defaultConnector>
+            <targetReference>CH_No_Ass</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>facebook_broad</name>
+            <conditionLogic>2 OR (1 AND NOT (3 OR 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_tLA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>tBR(ALG)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>(1%)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>(2%)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_facebook_broad</targetReference>
+            </connector>
+            <label>facebook broad</label>
+        </rules>
+        <rules>
+            <name>facebook_remarketing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_tREM</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_facebook_remarketing</targetReference>
+            </connector>
+            <label>facebook remarketing</label>
+        </rules>
+        <rules>
+            <name>facebook_narrow</name>
+            <conditionLogic>1 AND ( 2 OR 3 ) OR 4 OR 5 OR 6</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_tLA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>(1%)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>(2%)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_tI</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_tB</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Anzeigengruppe</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_facebook_narrow</targetReference>
+            </connector>
+            <label>facebook narrow</label>
+        </rules>
+        <rules>
+            <name>SEA_Brand</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_kgbrd</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_SEA_Brand</targetReference>
+            </connector>
+            <label>SEA Brand</label>
+        </rules>
+        <rules>
+            <name>SEA_Competitor</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_kgcmp</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_SEA_Competitor</targetReference>
+            </connector>
+            <label>SEA Competitor</label>
+        </rules>
+        <rules>
+            <name>SEA_Generic</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_kgCSR</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_kgCSR(B)</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_SEA_Generic</targetReference>
+            </connector>
+            <label>SEA Generic</label>
+        </rules>
+        <rules>
+            <name>Display_Prospecting</name>
+            <conditionLogic>1 OR 2 OR ( 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>tcui</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>taut</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>pgdn</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>tlal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_Display_Prospecting</targetReference>
+            </connector>
+            <label>Display Prospecting</label>
+        </rules>
+        <rules>
+            <name>Display_Remarketing</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>trem</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CH_Display_Remarketing</targetReference>
+            </connector>
+            <label>Display Remarketing</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Allows creation of records manually</description>
+        <name>HasMarketingChannel</name>
+        <label>HasMarketingChannel</label>
+        <locationX>266</locationX>
+        <locationY>289</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Channel_is_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Marketing_Channel__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Mkt_Channel</targetReference>
+            </connector>
+            <label>Channel is Empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Allows entry of campaings manually</description>
+        <name>HasType</name>
+        <label>HasType</label>
+        <locationX>23</locationX>
+        <locationY>203</locationY>
+        <defaultConnector>
+            <targetReference>HasMarketingChannel</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Type_is_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Marketing_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>test</targetReference>
+            </connector>
+            <label>Type is Empty</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>test</name>
+        <label>Pro or MINI</label>
+        <locationX>26</locationX>
+        <locationY>403</locationY>
+        <defaultConnector>
+            <targetReference>PRO_Campaign</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MINI</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.UTMCampaign__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>_prMIN</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MINI_Campaign</targetReference>
+            </connector>
+            <label>MINI</label>
+        </rules>
+    </decisions>
+    <description>Use info about the campaign name to assign it to specific Mkt Channel - change facebook narrow and facebook broad definition-
+Add changes from CRMT-3535</description>
+    <interviewLabel>Assign Mkt Channel in Cost Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assign Mkt Channel in Cost Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>103</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>HasType</targetReference>
+        </connector>
+        <object>CostLeadData__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

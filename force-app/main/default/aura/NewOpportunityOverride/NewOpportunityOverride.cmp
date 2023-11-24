@@ -1,0 +1,3 @@
+<aura:component implements="lightning:actionOverride" access="global" >
+    <lightning:card title="Opportunities can only be created by converting a lead or with the 'New Opportunity' Button on the Account."/>
+</aura:component>

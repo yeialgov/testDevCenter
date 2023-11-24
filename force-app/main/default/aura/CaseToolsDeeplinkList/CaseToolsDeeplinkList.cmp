@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                controller="AccountLightningController">
+    
+    <aura:attribute name="Case" type="Object"/>
+    <aura:attribute type="List" name="Venues"/>
+
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      mode="VIEW"
+                      targetFields="{!v.Case}" />
+    
+    <!--aura:handler name="init" value="{!this}" action="{!c.getVenues}"/-->
+    <aura:handler name="change" value="{!v.Case}" action="{!c.getVenues}"/>
+
+    <aura:iteration items="{!v.Venues}" var="Venue">
+        <c:ToolsDeeplink VenueSFId="{!Venue.Id}" 
+                         VenueId="{!Venue.MyOrderbirdId__c}" 
+                         Uncertain="{!and(Venue.Uncertainty__c != null, Venue.Uncertainty__c != 0)}"/>
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Netsuite_Open_Balance__c</fullName>
+    <description>https://jira.orderbird.com/browse/SAL-1230</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Open Balance migrated from Netsuite. Updated on regular basis by NEST.</inlineHelpText>
+    <label>Netsuite Open Balance</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

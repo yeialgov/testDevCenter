@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nurturing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Stakeholder: MKT &amp; Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Should the Primary Contact for this opp receive nurturing mails? It is recommended to always use nurturing! If the contact asks to stop the mails, please uncheck.</inlineHelpText>
+    <label>Nurturing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

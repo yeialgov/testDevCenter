@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>MINI by orderbird - Starte Dein Gerät neu</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE MINI Neustart für Sync</name>
+    <style>none</style>
+    <subject>MINI by orderbird - Starte Dein Gerät neu</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

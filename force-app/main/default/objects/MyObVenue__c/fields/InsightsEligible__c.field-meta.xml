@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InsightsEligible__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISBLANK(InsightsEmail__c)
+ &amp;&amp;
+Account__r.Target_Product__c = &quot;MINI&quot;
+ &amp;&amp;
+ISBLANK(Account__r.Dunning_0_Date__c)
+ &amp;&amp;
+(
+  CONTAINS(Channel__c, &quot;Food&quot;) 
+   || 
+  CONTAINS(Channel__c, &quot;Cafe&quot;) 
+   || 
+  CONTAINS(Channel__c, &quot;Drinks&quot;) 
+   || 
+  CONTAINS(Channel__c, &quot;Big Night Out&quot;)
+)
+ &amp;&amp;
+(
+  TEXT(Account__r.Account_Status__c) = &quot;Active Customer&quot;
+   ||
+  TEXT(Account__r.Account_Status__c) = &quot;Future Customer&quot;
+)
+ &amp;&amp;
+(
+  ISBLANK(TEXT(Account__r.PrimaryLanguage__c))
+   ||
+  TEXT(Account__r.PrimaryLanguage__c) = &quot;German&quot;
+   ||
+  TEXT(Account__r.PrimaryLanguage__c) = &quot;English&quot;
+)</formula>
+    <label>Insights Eligible</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

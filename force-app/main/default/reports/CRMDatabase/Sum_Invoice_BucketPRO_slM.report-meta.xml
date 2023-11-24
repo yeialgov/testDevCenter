@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_39138680</developerName>
+        <masterLabel>Billing Group</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.BillingAmount__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>1,000</to>
+            </sourceValues>
+            <value>Less 1K Billed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,000</from>
+                <to>2,000</to>
+            </sourceValues>
+            <value>Between 1K-2K Billed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>2,000</from>
+            </sourceValues>
+            <value>More 2K Billed</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_16897142</developerName>
+        <masterLabel>age in years</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.Age_in_Days__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>360</to>
+            </sourceValues>
+            <value>New Customers</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>360</from>
+                <to>1,080</to>
+            </sourceValues>
+            <value>Regulars</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,080</from>
+            </sourceValues>
+            <value>Old School</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_93424136</developerName>
+        <masterLabel>by years</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account.Age_in_Days__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>365</to>
+            </sourceValues>
+            <value>1 year</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>365</from>
+                <to>730</to>
+            </sourceValues>
+            <value>2 year</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>730</from>
+                <to>1,095</to>
+            </sourceValues>
+            <value>3 year</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,095</from>
+                <to>1,450</to>
+            </sourceValues>
+            <value>4 year</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,450</from>
+            </sourceValues>
+            <value>5 or more</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account.BillingAmount__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account.Invoice_Count__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account.Age_in_Days__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.TotalOfOpps__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.TotalOfCWOpps__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Target_Product__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>MINI</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Customer</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_39138680</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_93424136</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sum Invoice Bucket-PRO</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Invoice__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Age_in_Days__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

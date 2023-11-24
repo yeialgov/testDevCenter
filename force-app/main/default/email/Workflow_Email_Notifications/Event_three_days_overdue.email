@@ -1,0 +1,7 @@
+Hello Dear Demo Owner 
+
+Your Demo with the Subject "{!Event.Subject}" is now three days overdue without a documented outcome
+You have 4 days to catch up to your ToDos, or the Opportunity related to the demo will be set to Closed Lost
+
+Demo: https://orderbird.lightning.force.com/{!Event.Id}
+Opportunity: https://orderbird.lightning.force.com/{!Event.OpportunityId__c}

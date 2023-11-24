@@ -1,0 +1,12 @@
+<aura:component controller="CaseLightningController"
+                implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" >
+    
+    <aura:attribute type="List" name="Tasks" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:iteration items="{!v.Tasks}" var="Task">
+        <c:OpenCaseActivity Task="{!Task}"/>
+    </aura:iteration>
+    
+</aura:component>

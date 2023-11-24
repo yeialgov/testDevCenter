@@ -1,0 +1,12 @@
+<aura:component controller="AddressBuilderController">
+    <aura:attribute name="Label" type="String"/>
+    <aura:attribute name="Account" type="Object"/>
+    <aura:attribute name="Sync" type="String"/>
+    <aura:attribute name="Winner" type="String"/>
+    
+    <aura:registerEvent name="appEvent" type="c:AddressBuilderChange"/>
+    
+    <lightning:button label="{!v.Label}" onclick="{!c.Click}"
+                      iconName="{!v.Winner == null ? 'utility:expand_alt' : 'utility:merge'}"/>
+    
+</aura:component>

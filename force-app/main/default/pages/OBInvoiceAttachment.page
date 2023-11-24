@@ -1,0 +1,5 @@
+<apex:page standardController="OBInvoice__c" renderAs="pdf">
+    <html>
+        <c:obInvoiceBody InvoiceId="{!OBInvoice__c.Id}" Watermark="false"/>
+    </html>
+</apex:page>

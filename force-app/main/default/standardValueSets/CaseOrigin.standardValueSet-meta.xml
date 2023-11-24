@@ -2,18 +2,118 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Phone</fullName>
+        <fullName>Ebot7</fullName>
         <default>false</default>
-        <label>Phone</label>
+        <label>Ebot7</label>
     </standardValue>
     <standardValue>
-        <fullName>Email</fullName>
+        <fullName>Live Call</fullName>
         <default>false</default>
-        <label>Email</label>
+        <label>Live Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Call After Hours</fullName>
+        <default>false</default>
+        <label>Live Call After Hours</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <label>Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Slack</fullName>
+        <default>false</default>
+        <label>Slack</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail</fullName>
+        <default>false</default>
+        <label>Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail After Hours</fullName>
+        <default>false</default>
+        <label>Voicemail After Hours</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail EN</fullName>
+        <default>false</default>
+        <label>E-Mail EN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail FR</fullName>
+        <default>false</default>
+        <label>E-Mail FR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail DACH</fullName>
+        <default>false</default>
+        <label>E-Mail DACH</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail MINI</fullName>
+        <default>false</default>
+        <label>E-Mail MINI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SFDC Support</fullName>
+        <default>false</default>
+        <label>SFDC Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Survey Feedback</fullName>
+        <default>false</default>
+        <label>Survey Feedback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Finance Mail</fullName>
+        <default>false</default>
+        <label>Finance Mail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interwega</fullName>
+        <default>false</default>
+        <label>Interwega</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support/Logistics</fullName>
+        <default>false</default>
+        <label>Support/Logistics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>my.orderbird</fullName>
+        <default>false</default>
+        <label>my.orderbird</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Department</fullName>
+        <default>false</default>
+        <label>Sales Department</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Finance Processes</fullName>
+        <default>false</default>
+        <label>Finance Processes</label>
     </standardValue>
     <standardValue>
         <fullName>Web</fullName>
         <default>false</default>
         <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Insights</fullName>
+        <default>false</default>
+        <label>Insights</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail CCH</fullName>
+        <default>false</default>
+        <label>E-Mail CCH</label>
     </standardValue>
 </StandardValueSet>

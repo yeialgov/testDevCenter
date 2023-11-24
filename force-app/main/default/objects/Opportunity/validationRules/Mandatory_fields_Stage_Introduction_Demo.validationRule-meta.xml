@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_fields_Stage_Introduction_Demo</fullName>
+    <active>false</active>
+    <description>Triggers when an Demo gets created
+(currently replaced by VR on Task)</description>
+    <errorConditionFormula>AND( 
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+ISCHANGED(StageName), 
+OR( 
+ISPICKVAL(StageName , &quot;Introduction / Demo&quot;), 
+ISPICKVAL(StageName , &quot;Proposal&quot;), 
+ISPICKVAL(StageName , &quot;Committed&quot;) 
+), 
+
+OR( 
+
+ISPICKVAL( Account.Industry , &quot;&quot;), 
+ISPICKVAL( Account.CuisineAndDishes__c, &quot;&quot;), 
+ISBLANK( Account.Number_of_Locations__c), 
+ISPICKVAL( Account.Employees__c , &quot;&quot; ), 
+ISPICKVAL( Account.IndoorSeats__c , &quot;&quot; ), 
+ISPICKVAL( Account.OutdoorSeats__c , &quot;&quot; ), 
+ISPICKVAL( Account.Exisiting_POS__c, &quot;&quot;), 
+ISPICKVAL( Account.PrimaryLanguage__c , &quot;&quot;), 
+
+
+ISPICKVAL( NewOpening__c , &quot;&quot;), 
+ISPICKVAL( WhyInterested__c , &quot;&quot;) 
+
+) 
+
+)</errorConditionFormula>
+    <errorMessage>You are trying to change the stage, but are missing mandatory fields! 
+Please make sure all fields in the account tab as well as New Opening and Why interested are filled!</errorMessage>
+</ValidationRule>

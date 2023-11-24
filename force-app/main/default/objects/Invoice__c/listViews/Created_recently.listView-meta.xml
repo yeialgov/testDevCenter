@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_recently</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>HasBeenEmailed__c</columns>
+    <columns>Account__c</columns>
+    <columns>EmailContactId__c</columns>
+    <columns>HeldInvoiceItems__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>10/15/2019 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>HasBeenEmailed__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>INV00614721</value>
+    </filters>
+    <label>Created recently</label>
+</ListView>

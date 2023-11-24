@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comments__c</fullName>
+    <description>Stakeholder: LM &amp; Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifically related to Sales activities. Information moves over to the opportunity after lead conversion.</inlineHelpText>
+    <label>Comments</label>
+    <length>3000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

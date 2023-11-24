@@ -1,0 +1,14 @@
+<aura:component controller="CockpitController">
+    <aura:attribute name="AccountId" type="String" />
+    <aura:attribute name="Licenses" type="List" />
+    
+    <aura:handler name="change" value="{!v.AccountId}" action="{!c.getAcctId}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getAcctId}"/>
+    
+    <aura:iteration items="{!v.Licenses}" var="License">
+        <p>
+            <span style="border-radius:1rem;padding:0 0.5rem;border: 2px solid #1ba3dd;">{!License.Qty}</span>
+            &nbsp;{!License.Prod}
+        </p>
+    </aura:iteration>
+</aura:component>

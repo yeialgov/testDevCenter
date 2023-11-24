@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="Case" type="Object"/>
+
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId"
+                      targetFields="{!v.Case}"
+                      recordUpdated="{!c.doInit}"/>
+
+    {!v.body}
+	
+</aura:component>

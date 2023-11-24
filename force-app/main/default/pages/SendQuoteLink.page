@@ -1,0 +1,244 @@
+<apex:page ><!-- standardController="zqu__Quote__c" extensions="SendQuoteController">
+
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" />
+    <style>
+        select {
+            width: 100%;
+            height: 80px;
+        }
+
+        h3 {    
+            padding-left: 8px;
+        }
+        ::selection { 
+            background: #ddb929;
+             }
+        ::-moz-selection { 
+            background: #ddb929; 
+        }
+        fieldset {
+            padding: 0;
+        }
+        table {
+            padding: 0 0 ;
+        }
+        .bPageBlock .detailList .data2Col {
+            padding: 0;
+        }
+        .labelCol {
+            display: block;
+        }
+
+        table th label {
+            width: 100%;
+            display: block;
+        }
+        .table-header {
+            font-weight: bold;
+            line-height: 40px;
+            font-size: 1.1em;
+        }
+
+        td label {
+            vertical-align: middle;
+        }
+        td input {
+            vertical-align: middle;
+        }
+        .checkbox-list td {
+            display: block;
+        }
+        .email-input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .email-input:hover {
+            border-color: grey;
+        }
+        .email-input:focus {
+            border-color: black;
+        }
+        .textarea {
+            height: 300px;
+            font-size: 1.2em;
+        }
+        .bPageBlock.brandSecondaryBrd.apexDefaultPageBlock.secondaryPalette {
+            border: none;
+        }
+        .pbSubheader.brandTertiaryBgr.first.tertiaryPalette {
+            border-radius: 4px;
+            line-height: 17px;
+        }
+        .monoPg {
+            width: 33%;
+        }
+        input[type=submit] {
+            /*background-color: #4CAF50;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;*/
+
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-position: : 0;   
+            background: #b3b3b3;
+        }
+    
+
+        /**
+         * (C)Leanest CSS spinner ever
+         */
+
+         .hidden {
+            visibility: hidden;
+         }
+
+         .spinner-wrapper {
+            display: inline;
+            line-height: 30px;
+         }
+
+         .spinner-text {
+            display: inline;
+            line-height: 30px;
+            vertical-align: middle;
+         }
+
+        @keyframes spin {
+            to { transform: rotate(1turn); }
+        }
+
+        .progress {
+            position: relative;
+            display: inline-block;
+            width: 5em;
+            height: 5em;
+            margin: 0 .5em;
+            font-size: 12px;
+            text-indent: 999em;
+            overflow: hidden;
+            animation: spin 1s infinite steps(8);
+        }
+
+        .small.progress {
+            font-size: 6px;
+        }
+
+        .large.progress {
+            font-size: 24px;
+        }
+
+        .progress:before,
+        .progress:after,
+        .progress > div:before,
+        .progress > div:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 2.25em; /* (container width - part width)/2  */
+            width: .5em;
+            height: 1.5em;
+            border-radius: .2em;
+            background: #eee;
+            box-shadow: 0 3.5em #eee; /* container height - part height */
+            transform-origin: 50% 2.5em; /* container height / 2 */
+        }
+
+        .progress:before {
+            background: #555;
+        }
+
+        .progress:after {
+            transform: rotate(-45deg);
+            background: #777;
+        }
+
+        .progress > div:before {
+            transform: rotate(-90deg);
+            background: #999;
+        }
+
+        .progress > div:after {
+            transform: rotate(-135deg);
+            background: #bbb;
+        }
+
+    </style>
+    <script>
+        function populatevouchernum(elm){       
+            CallApexMethod();   
+        }
+    </script>
+    <div class="all">
+
+        <apex:form >    
+        <apex:actionFunction name="CallApexMethod" action="{!copyText}"/>
+            <apex:pageBlock title="Send Quotes">
+       
+            
+        
+                <apex:panelGrid columns="3" style="width: 100%" columnClasses="monoPg">
+                    <apex:pageBlock >
+
+                        <apex:pageBlockSection title="Email" columns="1" collapsible="false" rendered="true">
+                                <label class="table-header">Please choose a template:</label>
+                                <apex:selectList value="{!item}" onclick="populatevouchernum('{!item}')">                   
+                                    <apex:selectOptions value="{!items}"/>
+                                </apex:selectList>          
+
+                                <label class="table-header">Subject:</label>
+                                <input class="email-input" id="subject" value="{!email.subject}"/>
+                                <!-.-<apex:inputText value="{!email.subject}" styleClass="email-input" />-.->
+                                <label class="table-header">Message:</label>
+                                <apex:inputTextarea id="content" value="{!email.content}" styleClass="email-input textarea"/>                                                                                 
+                        </apex:pageBlockSection> 
+            
+                    </apex:pageBlock>
+                    
+                    <apex:pageBlock >
+
+                            <apex:pageBlockSection title="Recipients" columns="1" collapsible="false">      
+                                <label class="table-header">Send to: </label>
+                                <!-.-<apex:outputLink value="/{!contact.Id}">{!contact.Name}</apex:outputLink>-.->
+                                <apex:inputText value="{!selectedContact}" styleClass="email-input" />
+
+                                <label class="table-header">Cc:</label>
+                                <apex:inputText value="{!contactRecipientCcInput}" styleClass="email-input" />
+                                 <label class="table-header">Quote Anhängen </label>
+                                    <apex:inputCheckbox value="{!attach}"/> 
+                            </apex:pageBlockSection>
+
+                    </apex:pageBlock>
+
+                </apex:panelGrid>
+              
+                <apex:pageBlockButtons >    
+                
+                <apex:commandButton value="Cancel" action="{!cancel}" />
+                <apex:commandButton value="Send E-Mail" action="{!sendEmail}" styleClass="send-button"/>
+                    <div class="spinner-wrapper hidden">                        
+                        <div class="small progress"></div>
+                        <div class="spinner-text">Sending…</div>
+                    </div>
+            
+                </apex:pageBlockButtons>
+            </apex:pageBlock>           
+        </apex:form>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $('input.send-button').click(function() {
+                $('input.send-button').addClass('hidden');
+                $('div.spinner-wrapper').removeClass('hidden');
+             });
+        });
+    </script>-->
+</apex:page>

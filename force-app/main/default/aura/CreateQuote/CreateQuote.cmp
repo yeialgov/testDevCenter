@@ -1,0 +1,60 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Opportunity" type="Object" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="FirstRun" type="Boolean" default="true"/>
+    <aura:attribute name="ErrorMessages" type="List" default="[]"/>
+
+	<aura:handler name="SaveHandler" event="force:recordSaveSuccess" action="{!c.handleRecordSave}"/>
+
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, 
+                              OppCategory__c,
+                              AccountId,
+                              Account.Subscription_Count__c,
+                              Account.SF_BillTo_Contact__c,
+                              Account.BillingStreet,
+                              Account.BillingPostalCode,
+                              Account.BillingCity,
+                              Account.BillingCountry,
+                              Account.SF_BillTo_Contact__r.Email,
+                              Account.SF_BillTo_Contact__r.PrimaryLanguage__c,
+                              Account.SF_BillTo_Contact__r.FirstName,
+                              Account.SF_BillTo_Contact__r.LastName,
+                              Account.SF_SoldTo_Contact__c,
+                              Account.ShippingStreet,
+                              Account.ShippingPostalCode,
+                              Account.ShippingCity,
+                              Account.ShippingCountry,
+                              Account.LegalCompanyName__c,
+                              Account.PrimaryLanguage__c,
+                              Account.Tax_Exempt_Reason__c,
+                              Account.VATNumber__c,
+                              Account.Batch_Payment_Method__c, 
+                              Account.ZuoraId__c"
+                      targetFields="{!v.Opportunity}"
+                      recordUpdated="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large"/>
+    </aura:if>
+    <aura:iteration var="msg" items="{!v.ErrorMessages}">
+        <div style="margin-bottom:0.5rem;" class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_x-small" title="Description of icon when needed">
+                <lightning:icon iconName="utility:error" variant="inverse" size="small"/>
+            </span>
+            <h2>{!msg}</h2>
+        </div>
+    </aura:iteration>
+    <aura:if isTrue="{!v.ErrorMessages.length > 0}">
+        <div style="text-align:center;">
+            <lightning:button iconName="standard:account" label="Edit Account" onclick="{!c.EditAccount}"/>
+            <lightning:button iconName="standard:contact" label="Edit Billing Contact" onclick="{!c.EditBillTo}"/>
+            <lightning:button iconName="standard:contact" label="Edit Shipping Contact" onclick="{!c.EditSoldTo}"/>
+        </div>        
+    </aura:if>
+    
+</aura:component>

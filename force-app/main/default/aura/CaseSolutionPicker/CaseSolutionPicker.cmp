@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" 
+                controller="CaseSolutionController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute access="private" type="List" name="selection" default="[]"/>
+    <aura:attribute access="private" type="List" name="errors" default="[]"/>
+    <aura:attribute type="Id" name="recordId"/>
+    
+    <aura:attribute name="headerTitle" type="Aura.Component[]">
+        <h2>
+            <b>Case Solutions ({!v.selection.length})</b>
+        </h2>
+    </aura:attribute>
+    
+    <lightning:card iconName="custom:custom94" title="{!v.headerTitle}">
+        <aura:set attribute="actions">
+            <lightning:button label="New" onclick="{!c.NewCaseSolution}"/>
+        </aura:set>
+        <div style="margin: 0 1rem;">
+            <c:Lookup aura:id="lookup" 
+                      placeholder="Find a Case Solution..." 
+                      isMultiEntry="true" 
+                      selection="{!v.selection}" 
+                      onSearch="{!c.lookupSearch}" 
+                      onSelection="{!c.addCSJ}"
+                      onRemoval="{!c.delCSJ}"
+                      label="Search"/>
+        </div>
+    </lightning:card>
+    
+</aura:component>

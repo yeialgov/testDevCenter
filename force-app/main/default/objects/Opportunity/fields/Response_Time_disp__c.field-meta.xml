@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response_Time_disp__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(isblank(Response_Time__c),&quot;&quot;,
+if(Response_Time__c &gt;= 3600, TEXT(FLOOR(Response_Time__c / 3600)) &amp; &quot; Hour&quot; &amp;
+if(FLOOR(Response_Time__c / 3600) = 1, &quot;&quot;, &quot;s&quot;)
+&amp; &quot;, &quot;,&quot;&quot;)
+&amp;
+if(Response_Time__c &gt;= 60, TEXT(FLOOR(MOD(Response_Time__c, 3600) / 60)) &amp; &quot; Minute&quot;&amp;
+if(FLOOR(MOD(Response_Time__c, 3600) / 60) = 1, &quot;&quot;, &quot;s&quot;)
+&amp; &quot;, &quot;, &quot;&quot;)
+&amp;
+TEXT(MOD(Response_Time__c, 60)) &amp; &quot; Second&quot;&amp;
+if(MOD(Response_Time__c, 60) = 1, &quot;&quot;, &quot;s&quot;))</formula>
+    <label>Response Time</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

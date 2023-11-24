@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wbsendit__Activity_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of the last Campaign Monitor activity.</inlineHelpText>
+    <label>Activity Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

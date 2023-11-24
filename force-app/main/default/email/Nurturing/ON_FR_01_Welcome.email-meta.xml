@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-6</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ON FR 01 Welcome</name>
+    <style>freeForm</style>
+    <subject>Votre soutien à la clientèle personnelle!</subject>
+    <textOnly>orderbird vous souhaite la bienvenue!
+
+Nous vous remercions de l&apos;intérêt porté pour orderbird.
+
+Nous pensons que votre système de caisse devrait vous permettre d&apos;économiser du temps et de l&apos;argent, afin de vous laisser vous concentrer sur l&apos;essentiel : vos clients !
+
+
+Nous sommes parfaitement conscients que dans la restauration, chaque établissement a des besoins qui lui sont propres.
+
+Afin de répondre au mieux aux vôtres, votre conseiller personnel se tient en permanence à votre disposition et répond avec plaisir à toutes vos questions concernant notre produit.
+
+Salutations
+{!Opportunity.OwnerFirstName}
+
+Votre conseiller à la clientèle personnelleName: {!Account.OwnerFirstName}
+
+E-mail: {!Account.OwnerEmail}
+téléphone: +33 176360640
+
+Notre présentation du produit : La meilleure façon de savoir orderbird!
+
+Avec le partage d&apos;écran , nos consultants expérimentés , l&apos;ordre d&apos;opération Bird et répond en même temps à toutes vos questions . Tout ce que vous avez à faire est de vous asseoir dans votre fauteuil et de poursuivre notre présentation de produit sur votre propre PC. garantie gain de temps! Gratuit et sans engagement.
+
+Nous allons également certaines villes en France.
+
+Demande de rendez- vous maintenant!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

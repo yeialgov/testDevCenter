@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Erinnerung für trödelnde Kunden, dass sie Antrag bei BB digital unterschreiben müssen</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DE MINI Digitale Unterschrift Reminder</name>
+    <style>none</style>
+    <subject>MINI by orderbird - Schließe die Aktivierung Deiner Kartenzahlung ab!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

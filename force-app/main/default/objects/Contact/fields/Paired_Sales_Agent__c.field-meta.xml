@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paired_Sales_Agent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stakeholder: PaM https://jira.orderbird.com/browse/CDS-1880</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If and who is the assigned Sales Agent for this Ambassador?</inlineHelpText>
+    <label>Paired Sales Agent</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>equals</operation>
+            <value>Sales</value>
+        </filterItems>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>equals</operation>
+            <value>Sales/AccM France</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Paired_Ambassadors</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,80 @@
+<apex:component >
+    <apex:attribute access="public" name="Language" type="String" description="Language"/>
+    <apex:attribute access="public" name="IsMini" type="Boolean" default="false" description="IsMini"/>
+    <div style="width:100%;">
+        <table class="grayText" style="border-top:1px solid #02a1e2;width:100%;font-family: sans-serif;">
+            <tr>
+                <td style="width:22px;"/>
+                <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                    <td colspan="5" style="font-size:15px;color:#02a1e2;">{!$Label.FOOTER_HEADING}</td>
+                </apex:outputPanel>
+            </tr>
+            <apex:outputPanel layout="none" rendered="{!AND(Language != 'fr',Language != 'en')}">
+                <tr style="font-size: 8px;">
+                    <td/>
+                    <td>
+                        orderbird AG<br/>Ritterstraße 12-14<br/>10969 Berlin<br/>Deutschland
+                    </td>
+                    <td>
+                        <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                            Hotline +49 30 208 983 098<br/>Telefon +49 30 208 983 099<br/>Fax +49 321 214 681 89<br/>Email: hello@orderbird.com
+                        </apex:outputPanel>  
+                    </td>
+                    <td>
+                        Sitz der Gesellschaft<br/>Amtsgericht: Berlin-Charlottenburg<br/>HRB: 134011 B<br/>USt-ID-Nr.: DE276722316
+                    </td>
+                    <td>
+                        Vorstand: Mark Schoen,<br/>Jakob Schreyer<br/>Vorsitzender des Aufsichtsrats:<br/>Oliver Kaltner
+                    </td>
+                    <td>
+                        Bank: Deutsche Bank<br/>IBAN: DE68 1007 0124 0112 1359 00<br/>SWIFT: DEUTDEDB101
+                    </td>
+                </tr>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!Language == 'fr'}">
+                <tr style="font-size: 8px;">
+                    <td/>
+                    <td>
+                        orderbird AG<br/>Ritterstraße 12-14<br/>10969 Berlin<br/>Allemagne
+                    </td>
+                    <td>
+                        <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                            Téléphone: +41 (0) 41 525 20 99<br/>Fax +49 321 214 681 89<br/>E-mail: bonjour@orderbird.com
+                        </apex:outputPanel>  
+                    </td>
+                    <td>
+                        Registre du commerce de<br/>l'Amtsgericht Berlin-Charlottenburg<br/>HRB: 134011 B<br/>Numéro de TVA: DE276722316
+                    </td>
+                    <td>
+                        Comité directeur: Mark Schoen,<br/>Jakob Schreyer<br/>Président du comité directeur:<br/>Oliver Kaltner
+                    </td>
+                    <td>
+                        Banque: Deutsche Bank<br/>IBAN: DE68 1007 0124 0112 1359 00<br/>SWIFT: DEUTDEDB101
+                    </td>
+                </tr>
+            </apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!Language == 'en'}">
+                <tr style="font-size: 8px;">
+                    <td/>
+                    <td>
+                        orderbird AG<br/>Ritterstraße 12-14<br/>10969 Berlin<br/>Germany
+                    </td>
+                    <td>
+                        <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                            Phone: +49 30 208 983 099<br/>Fax +49 321 214 681 89<br/>E-mail: hello@orderbird.com
+                        </apex:outputPanel>  
+                    </td>
+                    <td>
+                        Company Headquarters: Berlin<br/>District Court: Berlin-Charlottenburgg<br/>HRB: 134011 B<br/>VAT ID.: DE276722316
+                    </td>
+                    <td>
+                        Board: Mark Schoen,<br/>Jakob Schreyer<br/>Chairman of the Supervisory<br/>Board: Oliver Kaltner
+                    </td>
+                    <td>
+                        Bank: Deutsche Bank<br/>IBAN: DE68 1007 0124 0112 1359 00<br/>SWIFT: DEUTDEDB101
+                    </td>
+                </tr>
+            </apex:outputPanel>
+        </table>
+    </div>
+</apex:component>

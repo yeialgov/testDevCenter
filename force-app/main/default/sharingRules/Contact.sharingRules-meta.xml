@@ -1,3 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>MyOb_Read_Contacts</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Grant access to all contacts to the MyOb integration to see Invoices</description>
+        <label>MyOb Read Contacts</label>
+        <sharedTo>
+            <guestUser>my_Orderbird_API</guestUser>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Contact</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Orderbird_read_all_Contacts</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Granting access to all contacts for the integration</description>
+        <label>Orderbird read all Contacts</label>
+        <sharedTo>
+            <guestUser>orderbird</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Fax</field>
+            <operation>notContain</operation>
+            <value>zzz876</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>SurveySite</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SurveySite</label>
+        <sharedTo>
+            <guestUser>Survey</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Fax</field>
+            <operation>notContain</operation>
+            <value>zzz876</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Marketing_upselling_rule</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>https://jira.orderbird.com/browse/CRMT-3293</description>
+        <label>Marketing upselling rule</label>
+        <sharedTo>
+            <guestUser>Marketing_Email</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Campaign_type__c</field>
+            <operation>equals</operation>
+            <value>Upselling</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

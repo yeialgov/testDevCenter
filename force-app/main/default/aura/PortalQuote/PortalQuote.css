@@ -1,0 +1,9 @@
+.THIS .rowSpacer {
+    margin-bottom: 1em;
+}
+.THIS .transpTopBorder {
+    border-top: solid 0px transparent;
+}
+.THIS .boldText {
+    font-weight: 600;
+}

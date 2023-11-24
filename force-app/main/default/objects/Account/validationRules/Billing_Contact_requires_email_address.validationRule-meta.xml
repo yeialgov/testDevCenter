@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Contact_requires_email_address</fullName>
+    <active>false</active>
+    <description>https://jira.orderbird.com/browse/CRM-924</description>
+    <errorConditionFormula>AND(
+
+NOT(ISCHANGED( ZuoraId__c )),
+NOT(ISCHANGED( Account_Status__c )),
+NOT(ISCHANGED( Closed_Contract_Paid_Date__c )),
+NOT(ISCHANGED( CommissionDate__c )),
+NOT(ISCHANGED( Dunning_0_Date__c )),
+NOT(ISCHANGED( Dunning_1_Date__c )),
+NOT(ISCHANGED( Dunning_2_Date__c )),
+NOT(ISCHANGED( Interwega_Balance_Difference__c )),
+NOT(ISCHANGED( Interwega_Business_Area__c )),
+NOT(ISCHANGED( Interwega_Debt_Collection_Id__c )),
+NOT(ISCHANGED( Interwega_Open_Balance_wo_fees__c )),
+NOT(ISCHANGED( Interwega_Open_Balance__c )),
+NOT(ISCHANGED( Interwega_Reference_Date__c )),
+NOT(ISCHANGED( Interwega_Status__c )),
+
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id ))/*,
+      NOT ( ISBLANK( SF_BillTo_Contact__c )),
+      ISBLANK( SF_BillTo_Contact__r.Email)*/
+
+
+)</errorConditionFormula>
+    <errorDisplayField>SF_BillTo_Contact__c</errorDisplayField>
+    <errorMessage>The Billing Contact you selected does not have an email address! Please add it on the related contact and save again.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>HardwareFulfilment__c$Name</field>
+    </columns>
+    <columns>
+        <field>HardwareFulfilment__c$Id</field>
+    </columns>
+    <columns>
+        <field>HardwareFulfilment__c$InternalIDHW__c</field>
+    </columns>
+    <columns>
+        <field>HardwareFulfilment__c$InternalIDSalesOrder__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>HardwareFulfilment__c$Item_ID__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>HardwareFulfilment__c$ArticleName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>HWF Overview</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Hardware_Fulfilment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>HardwareFulfilment__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

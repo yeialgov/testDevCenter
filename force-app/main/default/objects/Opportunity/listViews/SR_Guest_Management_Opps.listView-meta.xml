@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SR_Guest_Management_Opps</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Type__c</columns>
+    <columns>LAC_ID__c</columns>
+    <columns>OPPORTUNITY.LAST_ACTIVITY</columns>
+    <columns>Next_Step_PL__c</columns>
+    <columns>Next_Step_Comments__c</columns>
+    <columns>NextStepDate__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.NAME</field>
+        <operation>contains</operation>
+        <value>Guest</value>
+    </filters>
+    <filters>
+        <field>Lead_Created_Date_Time__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>9/1/2020 12:00 AM</value>
+    </filters>
+    <label>SR Guest Management Opps</label>
+</ListView>

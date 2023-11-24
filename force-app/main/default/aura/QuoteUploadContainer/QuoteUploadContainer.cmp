@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+                controller="NewQuoteController">
+
+    <aura:attribute type="Object" name="Quote"/>
+    <aura:attribute type="Boolean" name="CardVisibility" default="false"/>
+    
+    <force:recordData aura:id="recordHandler"
+                      recordId="{!v.recordId}"
+                      fields="Id, AccountId, Pay_by_Instalment__c, Contains_Recurring_Items__c, PaymentMethod__c, WireFirstPayment__c"
+                      mode="VIEW"
+                      targetFields="{!v.Quote}"
+                      recordUpdated="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.CardVisibility}">
+        <lightning:card title="Required Upload(s)">
+            <div style="padding: 0 1rem;">
+                <c:QuoteUploadFields AccountId="{!v.Quote.AccountId}" QuoteId="{!v.recordId}" PayByInstalment="{!v.Quote.Pay_by_Instalment__c}" NeedsSEPAMandate="{!or(and(v.Quote.PaymentMethod__c == 'Bank Transfer',!v.Quote.WireFirstPayment__c),v.Quote.Contains_Recurring_Items__c)}"/>
+            </div>
+        </lightning:card>
+    </aura:if>
+
+</aura:component>

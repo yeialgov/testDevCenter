@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alte 3-Jahres-Lizenzen wrden zu 1-jahres-Lizenzen umgestellt und in neues Lizenzmodell umgezogen</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DENISE ONLY DE Neues Lizenzmodell 3 zu 1</name>
+    <style>none</style>
+    <subject>Wichtige Information zur Verlängerung Deiner Drei-Jahres-Lizenz</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

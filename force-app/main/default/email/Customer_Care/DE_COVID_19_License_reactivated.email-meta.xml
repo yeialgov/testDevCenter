@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reaktivierung von Lizenzen, die während Corona pausiert wurden.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE COVID-19 License reactivated</name>
+    <style>none</style>
+    <subject>Deine Geräte-Lizenz(en) sind reaktiviert</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

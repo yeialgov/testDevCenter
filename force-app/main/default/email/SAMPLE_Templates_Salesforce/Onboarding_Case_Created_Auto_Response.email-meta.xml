@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Onboarding Case created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>Onboarding Case Created Auto-Response</name>
+    <style>freeForm</style>
+    <subject>Welcome to {!Organization.Name}</subject>
+    <textOnly>Dear {!Contact.Name}, 
+
+Thank you for contacting {!Organization.Name} Support! 
+
+This email is confirmation that we have received your request and a case was created for you. A Customer Support Agent will be working to get back to you with an answer as soon as possible. For your reference, here are your case details: 
+
+Case #: {!Case.CaseNumber} 
+Subject: {!Case.Subject} 
+Description: {!Case.Description} 
+
+Because the majority of requests require research to resolve, it can sometimes take us up to 48 hours to respond, though we make every effort to get back to you as quickly as possible and most queries are answered within 24 hours. 
+
+Though we will do our best to respond to you as quickly as possible, sometimes the best way to get immediate answers is to search our knowledgebase at http://support.{!Organization.Name}.com 
+
+We hope this is helpful and again, thank you for contacting us. We’ll be getting back to you as soon as possible! 
+
+Sincerely, 
+
+{!Organization.Name} Customer Service 
+
+Case Reference ID: {!Case.Thread_Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

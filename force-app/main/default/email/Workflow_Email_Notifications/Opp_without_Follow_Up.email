@@ -1,0 +1,6 @@
+Hello {!Opportunity.OwnerFirstName}
+
+Your Opportunity {!Opportunity.Name} for the Account {!Opportunity.Account} had their last activity three days ago and no follow up
+You have a 4 days to create the follow up, or the Opportunity will be set to Closed Lost
+
+Opportunity: https://orderbird.lightning.force.com/{!Opportunity.Id}

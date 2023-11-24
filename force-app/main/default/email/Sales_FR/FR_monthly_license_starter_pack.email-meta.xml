@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>FR - monthly license starter pack</name>
+    <style>freeForm</style>
+    <subject>monthly license starter pack</subject>
+    <textOnly>www.orderbird.com
+{!User.Email}
+{!User.Phone}
+
+
+Bonjour ...,
+
+Nous vous remercions de l&apos;intérêt que vous portez à orderbird. Je souhaiterais vous présenter orderbird plus en détail : vous pourrez ainsi décider vous-même si orderbird vous convient ou non.
+
+Je me ferais un plaisir de vous présenter orderbird, la caisse enregistreuse iPad leader dans le secteur de la restauration. Par quel canal êtes-vous joignable ?
+
+J&apos;attends avec impatience votre réponse.
+
+Meilleures salutations,
+
+Votre équipe orderbird
+
+
+Parmi nos plus de {!User.Happy_Customers__c} clients, 98 % se disent prêts à nous recommander ! Gagnant du prix de l&apos;innovation</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

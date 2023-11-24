@@ -1,0 +1,5 @@
+Customer: {!Account.Name}
+{!Account.Link}
+
+This is ten days overdue without initial payment.
+In ten more days a cancellation case will automatically be created.

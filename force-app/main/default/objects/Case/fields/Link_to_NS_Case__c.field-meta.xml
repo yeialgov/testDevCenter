@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link_to_NS_Case__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISNULL(NetSuiteId__c),
+
+HYPERLINK(&quot;https://system.eu2.netsuite.com/app/crm/support/supportcase.nl?id=&quot; &amp; RIGHT(NetSuiteId__c, LEN( NetSuiteId__c) - 4) &amp; &quot;&amp;whence=&quot;, &quot;Click here&quot;),
+
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Link to NS Case</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

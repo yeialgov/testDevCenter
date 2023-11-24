@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Data__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( LastName != &apos;n/a&apos; &amp;&amp; LastName != &apos;N/A&apos;,
+  CASE( PrimaryLanguage__c, &apos;English&apos;, &apos;Your Name: &apos;, &apos;French&apos;, &apos;Votre nom: &apos;, &apos;Name: &apos;) + IF( FirstName != &apos;n/a&apos; &amp;&amp; FirstName != &apos;N/A&apos;, FirstName + &apos; &apos;, &apos;&apos;) + LastName + BR(), &apos;&apos;) +
+IF( Company != &apos;[not provided]&apos; &amp;&amp; Company != &apos;n/a&apos;, CASE(PrimaryLanguage__c, &apos;English&apos;, &apos;Establishment: &apos;, &apos;French&apos;, &apos;Nom de l´entreprise: &apos;, &apos;Betrieb: &apos;) + Company + BR(), &apos;&apos;) +
+IF( Phone != &apos;n/a&apos; &amp;&amp; Phone!=&apos;&apos;, CASE(PrimaryLanguage__c, &apos;English&apos;, &apos;Phone: &apos;, &apos;French&apos;, &apos;Numéro de téléphone : &apos;, &apos;Telefonnummer: &apos;) + Phone + BR(), &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Data</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

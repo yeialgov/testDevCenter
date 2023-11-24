@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>MyOrderbirdId__c</columns>
+    <columns>my_ob_ID_as_number__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>HasToken__c</columns>
+    <columns>Email__c</columns>
+    <columns>Black_Spot__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Age__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

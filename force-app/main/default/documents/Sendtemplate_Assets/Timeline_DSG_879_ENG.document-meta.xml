@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Pro Rata Invoice Timeine https://jira.orderbird.com/browse/CDS-2307</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Timeline_DSG-879-ENG</name>
+    <public>true</public>
+</Document>

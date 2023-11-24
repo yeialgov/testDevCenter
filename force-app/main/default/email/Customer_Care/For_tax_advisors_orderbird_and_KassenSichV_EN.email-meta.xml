@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>EN For tax advisors- orderbird and KassenSichV</name>
+    <style>none</style>
+    <subject>How orderbird implements the requirements of the KassenSichV</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+
+Thank you for your inquiry about the Kassensicherungsverordnung (KassenSichV)!
+
+
+How does orderbird POS implement the requirements of the KassenSichV?
+orderbird POS can be upgraded with an Online-TSE via a cloud-based solution. Users of orderbird POS have to log in the backend my.orderbird.com to activate the Online-TSE. In order to be able to work in compliance with KassenSichV 2020, users must have installed orderbird POS version 7.0 or later on all Apple devices that are operated with orderbird POS.
+
+
+Online-TSE and certification
+The online TSE is provided by our partner fiskaly and is connected to orderbird POS via an interface. The TSE is currently in the certification process of the BSI under the certification number BSI-DSZ-CC-1130. Further information on the current status of the certification process can be found on the BSI website: &quot;Products undergoing certification&quot;.
+
+The CSP component (Cryptographic Service Provider Light) is already certified by the BSI with certification identification number BSI-DSZ-CC-1153-2021.
+
+The certification ID of the TSE will be provided as soon as we have it.
+
+
+DSFinV-K Export
+The data for the DSFinV-K export is stored securely in the fiskaly backend. In the future, orderbird POS users will be able to create the export independently at any time. To do so, they access the fiskaly portal via my.orderbird.com and create the export for the desired period. As soon as access to the fiskaly portal is available to our customers, they will be informed by mail.
+
+
+Serial number of the TSE
+The serial number of the TSE is printed on each receipt.
+
+
+Serial number of the orderbird POS system
+The serial number of the orderbird POS system is identical with the serial number of the TSE. You will find this number printed on every receipt.
+
+
+If you still have questions about the KassenSichV or the Online-TSE, have a look here: “Kassensicherungsverordnung” in Germany
+
+
+Greetings from Berlin
+
+{!User.FirstName} from orderbird
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+10969 Berlin
+Germany
+
+
+Headquarters: Berlin
+
+District Court: Amtsgericht Berlin - Charlottenburg
+
+Commercial Register Number: HRB 134011
+
+VAT-ID: DE276722316
+
+
+Board of Directors: Mark Schoen (Chariman), Jakob Schreyer
+
+Chairman of Supervisory Board: Oliver Kaltner
+
+
+© 2011-2020 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

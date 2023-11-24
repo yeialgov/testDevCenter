@@ -1,3 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
-
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Auto Replies</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Customer_Care_DACH,Bereitschaft,Emergency</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@orderbird.com</replyToEmail>
+            <senderEmail>noreply@orderbird.com</senderEmail>
+            <senderName>orderbird</senderName>
+            <template>Customer_Care/DE_Auto_Reply_DU_NEW</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Customer Care FR</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@orderbird.com</replyToEmail>
+            <senderEmail>noreply@orderbird.com</senderEmail>
+            <senderName>orderbird</senderName>
+            <template>Customer_Care/FR_Auto_Reply_SIE_NEW</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Customer Care ENG</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@orderbird.com</replyToEmail>
+            <senderEmail>noreply@orderbird.com</senderEmail>
+            <senderName>orderbird</senderName>
+            <template>Customer_Care/EN_Auto_Reply_DU_NEW</template>
+        </ruleEntry>
+        <ruleEntry>
+            <formula>Age__c  &gt;= 3
+&amp;&amp;
+ Owner:User.Alias = &quot;ygonz&quot;  
+ &amp;&amp; 
+  ISPICKVAL(  Origin  , &quot;E-Mail DACH&quot;)</formula>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>noreply@orderbird.com</replyToEmail>
+            <senderEmail>noreply@orderbird.com</senderEmail>
+            <senderName>Magda</senderName>
+            <template>MINI_by_orderbird/DE_Blank_Template_MINI</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

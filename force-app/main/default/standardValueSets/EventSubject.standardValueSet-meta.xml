@@ -2,28 +2,43 @@
 <StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <sorted>false</sorted>
     <standardValue>
-        <fullName>Call</fullName>
+        <fullName>On-site meeting</fullName>
         <default>false</default>
-        <label>Call</label>
+        <label>On-site meeting</label>
     </standardValue>
     <standardValue>
-        <fullName>Email</fullName>
+        <fullName>Needs follow-up</fullName>
         <default>false</default>
-        <label>Email</label>
+        <label>Needs follow-up</label>
     </standardValue>
     <standardValue>
-        <fullName>Meeting</fullName>
+        <fullName>Generally interested, wants to have a Demo</fullName>
         <default>false</default>
-        <label>Meeting</label>
+        <label>Generally interested, wants to have a Demo</label>
     </standardValue>
     <standardValue>
-        <fullName>Send Letter/Quote</fullName>
+        <fullName>Not available/ no-show, follow-up needed</fullName>
         <default>false</default>
-        <label>Send Letter/Quote</label>
+        <label>Not available/ no-show, follow-up needed</label>
     </standardValue>
     <standardValue>
-        <fullName>Other</fullName>
+        <fullName>Initial draft offer made, follow-up needed</fullName>
         <default>false</default>
-        <label>Other</label>
+        <label>Initial draft offer made, follow-up needed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demo completed, send quote</fullName>
+        <default>false</default>
+        <label>Demo completed, send quote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Check on potential upsell opportunities</fullName>
+        <default>false</default>
+        <label>Check on potential upsell opportunities</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not_available</fullName>
+        <default>false</default>
+        <label>Not available</label>
     </standardValue>
 </StandardValueSet>

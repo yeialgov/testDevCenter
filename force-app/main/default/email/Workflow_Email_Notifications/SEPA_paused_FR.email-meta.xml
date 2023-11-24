@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/CDS-1231</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SEPA paused FR</name>
+    <style>none</style>
+    <subject>Votre mandat de prélèvement SEPA est suspendu</subject>
+    <textOnly>Bonjour {!Account.SF_BillTo_Contact__c},
+
+Nos deux dernières tentatives de prélèvement ayant échoué, nous sommes contraints de suspendre votre mandat de prélèvement SEPA immédiatement et jusqu&apos;à nouvel ordre
+
+Qu&apos;est-ce que cela signifie et que dois-je faire maintenant ?
+
+Nous avons fait 2 tentatives de prélèvement sur votre compte bancaire qui ont échoué. Ces transactions sans suite nous ont coûté de l&apos;argent. Afin d&apos;éviter de tels coûts à l&apos;avenir, nous interrompons votre mandat de prélèvement SEPA.
+
+Conseil : Si vous avez encore des factures impayées, nous vous invitons dans les cinq jours ouvrables à nous transférer le montant impayé sur notre compte bancaire en précisant le libellé le numéro de votre facture. Cela évitera que nous engagions à votre encontre une procédure de recouvrement qui vous ajoutera des frais supplémentaires.
+
+Si vos quatre prochains paiements ou transferts se déroulent bien, envoyez un e-mail à assistance@orderbird.com et nous réactiverons votre mandat de prélèvement SEPA après un bref contrôle.
+
+Notre compte bancaire
+
+orderbird AG
+Banque : Deutsche Bank
+IBAN : DE68 1007 0124 01124 0112 1359 00
+BIC : DEUTDEDB101
+
+Vos paiements n&apos;ont pas été effectués ? Est-ce juste un malentendu ?
+
+Si vous estimez que votre mandat SEPA fonctionne bien et que vos prélèvements ont bien fonctionné, veuillez nous contacter dès que possible.Vous pouvez nous joindre par courriel à assistance@orderbird.com. Renseignez l’objet du mail suivant &quot;Mandat de prélèvement SEPA interrompu&quot;.
+
+Merci de votre compréhension.
+
+Bonne journée,
+Votre équipe Orderbird
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+10969 Berlin
+
+Allemagne
+
+E-Mail: hello@orderbird.com
+Téléphone: 030 208 983 098
+Fax: +49 321 214 681 89
+
+
+Siège social de la société: Berlin
+
+Registre du commerce de: l&apos;Amtsgericht Berlin - Charlottenburg
+
+Registre Numéro: HRB 134011 B
+
+Numéro de TVA: DE276722316
+
+
+Comité directeur: Mark Schoen (Président), Jakob Schreyer, Patrick Brienen-Lucius
+
+Président du comité directeur: Oliver Kaltner
+
+
+© orderbird AG 2011-{!User.Current_Year__c} All Rights Reserved</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kunde hat Fragen zu seiner rückwirkenden Rechnungsanpassung mit 16 %</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Rückfrage Rechnung 16 %</name>
+    <style>none</style>
+    <subject>Deine Rückfrage zu Deiner Rechnungsanpassung mit 16 %</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

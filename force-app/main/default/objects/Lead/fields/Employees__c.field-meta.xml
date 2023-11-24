@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employees__c</fullName>
+    <description>https://jira.orderbird.com/browse/SAL-1372</description>
+    <externalId>false</externalId>
+    <label># Employees</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-4</fullName>
+                <default>false</default>
+                <label>0-4</label>
+            </value>
+            <value>
+                <fullName>5-7</fullName>
+                <default>false</default>
+                <label>5-7</label>
+            </value>
+            <value>
+                <fullName>8-12</fullName>
+                <default>false</default>
+                <label>8-12</label>
+            </value>
+            <value>
+                <fullName>13-18</fullName>
+                <default>false</default>
+                <label>13-18</label>
+            </value>
+            <value>
+                <fullName>19+</fullName>
+                <default>false</default>
+                <label>19+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outstanding_Invoice_Amount_2__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-509</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How high is the combined open balance of all related invoices?</inlineHelpText>
+    <label>Outstanding Invoice Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,206 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" >
+    <lightning:workspaceAPI aura:id="workspace" />
+    <aura:attribute name="isSubTab" type="Boolean" default="true"/>
+    <aura:attribute name="isExpanded" type="Boolean" default="true"/>
+    <aura:attribute name="Account" type="Object" />
+    <aura:attribute name="Opportunity" type="Object" />
+    <aura:attribute name="Case" type="Object" />
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="Cockpit" type="Object" />
+    <aura:attribute name="TestParticipants" type="List"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="countryIcon" type="String" />
+    <aura:attribute name="languageIcon" type="String" />
+    <aura:attribute name="closeModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="hV" type="String" default="50" />
+    <aura:attribute name="vV" type="String" default="50" />
+    <aura:attribute name="hC" type="String" default="FD5F00" />
+    <aura:attribute name="vC" type="String" default="FD5F00" />
+    <aura:attribute name="Fields" type="List"
+                    default="['Id',
+                             'Name',
+                             'CustomerID__c',
+                             'Account_Status__c',
+                             'Onboard_Status__c',
+                             'BillingCountry',
+                             'Target_Product__c',
+                             'PrimaryLanguage__c',
+                             'Du_Sie__c',
+                             'Warning_Money__c',
+                             'Primary_Contact__r.LastName',
+                             'Primary_Contact__r.Name',
+                             'Product_Test_Participation__c',
+                             'RecordType.Name']"/>
+    
+    
+    <aura:if isTrue="{!v.sObjectName == 'Account'}">
+        <force:recordData aura:id="recordLoader1"
+                          recordId="{!v.recordId}"
+                          fields="{!v.Fields}"
+                          targetFields="{!v.Account}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Opportunity'}">
+        <force:recordData aura:id="recordLoader2"
+                          recordId="{!v.recordId}"
+                          fields="Id,AccountId"
+                          targetFields="{!v.Opportunity}"
+                          recordUpdated="{!c.reloadRL3}"/>
+        <force:recordData aura:id="recordLoader3"
+                          recordId="{!v.Opportunity.AccountId}"
+                          fields="{!v.Fields}"
+                          targetFields="{!v.Account}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Case'}">
+        <force:recordData aura:id="recordLoader2"
+                          recordId="{!v.recordId}"
+                          fields="Id,AccountId"
+                          targetFields="{!v.Case}"
+                          recordUpdated="{!c.reloadRL3}"/>
+        <force:recordData aura:id="recordLoader3"
+                          recordId="{!v.Case.AccountId}"
+                          fields="{!v.Fields}"
+                          targetFields="{!v.Account}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!and(v.Account.Id != null, not(v.isSubTab))}">
+        <aura:if isTrue="{!v.isExpanded}">
+            <div class="slds-panel" style="white-space: nowrap; overflow-x:hidden; overflow-y:hidden; height: 7.25rem;">
+                <div class="slds-panel__section slds-grid slds-wrap" style="{!v.Account.Target_Product__c == 'MINI' ? 'background-color: #1ba4dd;border-bottom: 0.125rem solid #fed230;' : 'background-color: #064369;border-bottom: 0.125rem solid #00A3E0;'}">
+                    <aura:if isTrue="{!v.Account.Target_Product__c != 'MINI'}">
+                        <div>
+                            <img ondblclick="{!c.collapse}" src="{!$Resource.ob_bbg2}" style="height:4.75rem;padding-right:1rem;"/> 
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.Account.Target_Product__c == 'MINI'}">
+                        <div>
+                            <img ondblclick="{!c.collapse}" src="{!$Resource.minilogo}" style="background-color: white; height:3.75rem;padding: 0.5rem;margin: 0.5rem 1rem 0rem 0rem;"/> 
+                        </div>
+                    </aura:if>
+                    <div>
+                        <table>
+                            <aura:if isTrue="{!v.Account.BillingCountry != null}">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <img title="{!v.Account.BillingCountry}" src="{!$Resource.countryPins + '/png/' + v.countryIcon + '.png'}" style="width:2rem; margin-right:1rem;"/> 
+                                    </td>
+                                </tr>
+                            </aura:if>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="{!$Resource.languages + '/languages/' + v.languageIcon + '.png'}" style="width:2rem; margin-right:1rem;margin-top: 0.25rem; border: solid 2px gray; padding: 0 0;"/> 
+                                </td>
+                            </tr>
+                            <aura:if isTrue="{!v.Account.Du_Sie__c != null}">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <div class="slds-text-title_caps" style="font-weight: bold;color: #fff;background-color: gray;margin-right: 1rem; margin-top: 3px;">{!v.Account.Du_Sie__c}</div>
+                                    </td>
+                                </tr>
+                            </aura:if>
+                        </table>
+                    </div>
+                    <div class="slds-col slds-truncate_container" style="max-width:40%;">
+                        <div class="nameTitle slds-truncate" style="font-family: 'Comfortaa';">
+                            {!v.Cockpit.Name}
+                        </div>
+                        <aura:if isTrue="{!v.Account.Account_Status__c != null}">
+                            <div style="float:left;">
+                                <aura:if isTrue="{!v.Account.Target_Product__c != 'MINI'}">
+                                    <span class="slds-text-title_caps" style="margin-top:1px;padding:1.5px 0.25rem 1.5px 0.5rem;background-color: #1ba3dd;color:#fff;border-radius: 0.5rem 0 0 0.5rem;">
+                                        {!v.Account.Account_Status__c}
+                                    </span>
+                                </aura:if>
+                                <aura:if isTrue="{!v.Account.Target_Product__c == 'MINI'}">
+                                    <span class="slds-text-title_caps" style="margin-top:1px;padding:1.5px 0.25rem 1.5px 0.5rem;background-color: #09577a;color:#fff;border-radius: 0.5rem 0 0 0.5rem;">
+                                        {!v.Account.Account_Status__c}
+                                    </span>
+                                </aura:if>
+                                <span class="{!'slds-text-title_caps statusExtra ' + v.Cockpit.StatusExtra}">
+                                    <lightning:icon class="statusBadge" size="x-small" iconName="{!v.Cockpit.StatusIcon}"/>
+                                </span>
+                            </div>
+                        </aura:if>
+                        <span class="slds-text-title_caps custId">{!'Cust•Id ' + v.Account.CustomerID__c}</span>
+                        <aura:if isTrue="{!v.Account.Warning_Money__c}">
+                            <div style="margin-top:0.125rem;float:left;line-height:0;">
+                                <span class="slds-text-title_caps pastDue">
+                                    Past Due
+                                </span>
+                                <aura:if isTrue="{!and(v.Account.Primary_Contact__r.LastName != '[not provided]', v.Account.Primary_Contact__r.Name != null)}">
+                                    <br/>
+                                    <span class="slds-text-title_caps"
+                                          style="font-size:0.6rem;margin-left:1rem;color:#fff;font-style: italic;">
+                                        ATTN: {!v.Account.Primary_Contact__r.Name}
+                                    </span>
+                                </aura:if>
+                            </div>
+                        </aura:if>
+                    </div>
+                    <div class="slds-col" style="max-width:25%;transform: skewX(-30deg); background-color: #fdfdfd; margin: -1rem 2rem -1rem 1rem; height: 7.125rem;">
+                        <div style="transform: skewX(30deg); color: #064369; height:100%;">
+                            <div class="slds-text-heading_small slds-text-align_center" 
+                                 style="margin: 2.3125rem 0 0 1.73rem; text-align: center;">
+                                <c:CockpitActiveLicenses AccountId="{!v.Account.Id}"/>
+                                <aura:iteration items="{!v.TestParticipants}" var="testpart">
+                                    <p>Testing: {!testpart}</p>
+                                </aura:iteration>
+                            </div>
+                        </div>
+                    </div>
+                    <c:AcctMRR AccountId="{!v.Account.Id}"/>
+                    <c:AcctNPS AccountId="{!v.Account.Id}"/>
+                </div>
+                <aura:if isTrue="{!v.closeModalOpen}">
+                    <div style="background-color: #064369; border-bottom: 3rem solid #32CD32; text-align:center; ">
+                        <img src="{!$Resource.sample1}" style="padding: 2rem 30%;width:100%;"/>
+                        <img src="{!$Resource.sample2}" style="padding: 2rem 30%;width:100%;"/>
+                    </div>
+                </aura:if>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!!v.isExpanded}">
+            <div style="{!v.Account.Target_Product__c == 'MINI' ? 'background-color:#1ba4dd;' : 'background-color:#064369;'}">
+                <div class="">
+                    <aura:if isTrue="{!v.Account.Account_Status__c != null}">
+                        <span style="margin: 0 0.25rem;color:#fff;font-size:1rem;font-weight:900;font-family: 'Comfortaa';">
+                            {!v.Cockpit.Name}
+                        </span>
+                        <aura:if isTrue="{!v.Account.Target_Product__c != 'MINI'}">
+                            <span class="slds-text-title_caps" style="margin-top:1px;padding:1.5px 0.25rem 1.5px 0.5rem;background-color: #1ba3dd;color:#fff;border-radius: 0.5rem 0 0 0.5rem;">
+                                {!v.Account.Account_Status__c}
+                            </span>
+                        </aura:if>
+                        <aura:if isTrue="{!v.Account.Target_Product__c == 'MINI'}">
+                            <span class="slds-text-title_caps" style="margin-top:1px;padding:1.5px 0.25rem 1.5px 0.5rem;background-color: #09577a;color:#fff;border-radius: 0.5rem 0 0 0.5rem;">
+                                {!v.Account.Account_Status__c}
+                            </span>
+                        </aura:if>
+                        <span class="{!'slds-text-title_caps statusExtra ' + v.Cockpit.StatusExtra}">
+                            <lightning:icon class="statusBadge" size="x-small" iconName="{!v.Cockpit.StatusIcon}"/>
+                        </span>
+                    </aura:if>
+                    <span class="slds-text-title_caps custId">{!'Cust•Id ' + v.Account.CustomerID__c}</span>
+                    <aura:if isTrue="{!v.Account.Warning_Money__c}">
+                        <span class="slds-text-title_caps pastDue">
+                            Past Due
+                        </span>
+                        <aura:if isTrue="{!and(v.Account.Primary_Contact__r.LastName != '[not provided]', v.Account.Primary_Contact__r.Name != null)}">
+                            <span class="slds-text-title_caps"
+                                  style="font-size:0.6rem;margin-left:0.5rem;color:#fff;font-style: italic;">
+                                ATTN: {!v.Account.Primary_Contact__r.Name}
+                            </span>
+                        </aura:if>
+                    </aura:if>
+                    <c:AcctMRR AccountId="{!v.Account.Id}" isExpanded="false"/>
+                    <c:AcctNPS AccountId="{!v.Account.Id}" isExpanded="false"/>
+                </div>
+            </div>
+        </aura:if>
+    </aura:if>
+    
+</aura:component>

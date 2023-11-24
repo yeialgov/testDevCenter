@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Batch7_SinceMay__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Batch7_Age__c)), IF(Batch7_Age__c &lt; (TODAY()-DATE(2019,5,1)),TRUE,FALSE) ,FALSE)</formula>
+    <label>Batch7 SinceMay</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Änderung Auszahlungsrhythmus, Bankverbindung, Buchungstext, Adresse</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>MINI DE BB Confirmation of Change</name>
+    <style>none</style>
+    <subject>MINI by orderbird - Deine Änderung bei Bambora wurde bestätigt</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

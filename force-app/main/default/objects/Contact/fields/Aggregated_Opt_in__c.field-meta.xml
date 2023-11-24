@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aggregated_Opt_in__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+ISPICKVAL(DoubleOptIn__c, &quot;Confirmed&quot;) , True, 
+
+(IF(
+ISPICKVAL(DoubleOptIn__c, &quot;Implied&quot;) , True,
+
+(IF(
+ISPICKVAL(DoubleOptIn__c, &quot;Verbal Ok&quot;) , True, false))
+)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Aggregated Opt-in</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

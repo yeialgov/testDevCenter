@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone_format_required</fullName>
+    <active>true</active>
+    <description>Requires a standard phone number format for MobilePhone</description>
+    <errorConditionFormula>AND( 
+ NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+ $User.Id != &apos;00558000001bDOy&apos;,
+NOT( $User.ProfileId = &quot;00e58000000SLnr&quot;),
+ NOT(ISPICKVAL(RejectedReason__c,&quot;Bad/ incomplete contact details&quot;)), 
+ NOT(ISBLANK(MobilePhone)),
+ OR(
+ISNEW(),
+ISCHANGED(MobilePhone)), 
+NOT( 
+ OR( 
+   REGEX(MobilePhone,&quot;[+]{1}[1-9]{2,2}[1-9]{1}[0-9]{3,9}&quot;), 
+   REGEX(MobilePhone,&quot;[+]{1}[1-9]{2,3}[1-9]{1}[0-9]{3,10}&quot;),
+BEGINS(MobilePhone,&quot;n/a&quot;) 
+)) 
+)</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>For phone numbers please consider the following format: 
++&quot;dial code&quot;+&quot;prefix code&quot;+&quot;phone number&quot; (without leading zero or any spaces),e.g.+4930123456789 
+If the phone number is (still) unknown, enter &quot;n/a&quot;.</errorMessage>
+</ValidationRule>

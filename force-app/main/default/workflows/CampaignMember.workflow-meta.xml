@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Trade_show_follow_up_mail_to_customer_happy</fullName>
+        <description>Send Trade show follow up mail to customer happy</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>am@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Tradeshow_Follow_Up_Customer_Happy</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Trade_show_follow_up_mail_to_customer_sad</fullName>
+        <description>Send Trade show follow up mail to customer sad</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Tradeshow_Follow_Up_Customer_Sad</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Trade_show_follow_up_mail_to_lead</fullName>
+        <description>Send Trade show follow up mail to lead</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hello@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Tradeshow_Follow_Up_Lead</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Trade_show_follow_up_mail_to_partner</fullName>
+        <description>Send Trade show follow up mail to partner</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>partner@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/Tradeshow_Follow_Up_Partner</template>
+    </alerts>
+    <rules>
+        <fullName>Tradeshow Follow Up Mail - Customer Happy</fullName>
+        <actions>
+            <name>Send_Trade_show_follow_up_mail_to_customer_happy</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>Intergastra 2018: Customer Happy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/MESSE-63</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tradeshow Follow Up Mail - Customer Sad</fullName>
+        <actions>
+            <name>Send_Trade_show_follow_up_mail_to_customer_sad</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>Intergastra 2018: Customer Sad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/MESSE-63</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tradeshow Follow Up Mail - Lead</fullName>
+        <actions>
+            <name>Send_Trade_show_follow_up_mail_to_lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>Intergastra 2018: Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/MESSE-63</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tradeshow Follow Up Mail - Partner</fullName>
+        <actions>
+            <name>Send_Trade_show_follow_up_mail_to_partner</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Campaign.Name</field>
+            <operation>equals</operation>
+            <value>Intergastra 2018: Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>CampaignMember.Email</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>https://jira.orderbird.com/browse/MESSE-63</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

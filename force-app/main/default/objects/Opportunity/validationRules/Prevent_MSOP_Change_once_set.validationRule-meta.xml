@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_MSOP_Change_once_set</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+$User.ProfileId &lt;&gt; &quot;00e58000000SLnr&quot; , /* Partner Man */ 
+$User.ProfileId &lt;&gt; &quot;00e58000001547e&quot; , /* Lead Man */ 
+
+ISCHANGED( MSOP__c ), 
+
+NOT(ISPICKVAL(PRIORVALUE(MSOP__c), &quot;&quot;)) 
+)</errorConditionFormula>
+    <errorDisplayField>MSOP__c</errorDisplayField>
+    <errorMessage>You cannot change the MSOP field anymore, please reach out to PM or LM to get it changed!</errorMessage>
+</ValidationRule>

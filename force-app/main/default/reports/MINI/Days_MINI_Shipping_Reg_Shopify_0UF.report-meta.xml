@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Invoice_Hardware_Item__c.Addressee__c</field>
+    </columns>
+    <columns>
+        <field>FK_$OBInvoice__c.Attention__c</field>
+    </columns>
+    <columns>
+        <field>FK_$OBInvoice__c.First_Device_Registration__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Invoice_Hardware_Item__c.Date_Shipping__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <customDetailFormulas>
+        <calculatedFormula>FK_OBInvoice__c.First_Device_Registration__c - DATEVALUE(CUST_CREATED_DATE)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Days Sipping - Registration</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>https://jira.orderbird.com/browse/CRMT-3295</description>
+    <format>Tabular</format>
+    <name>Days MINI Shipping &lt;&gt; Reg (Shopify)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Invoice_Hardware_Item__c@Invoice_Hardware_Item__c.OB_Invoice__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CDF1</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

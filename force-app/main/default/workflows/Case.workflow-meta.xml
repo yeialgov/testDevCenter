@@ -1,13 +1,1237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Close_Customer_Notification</fullName>
+        <description>Case Close Customer Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Case_Close_Customer_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_General_Email_DE</fullName>
+        <description>Case Close Survey General Email DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Closed_General_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_General_Email_EN</fullName>
+        <description>Case Close Survey General Email EN</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Closed_General_EN</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_General_Email_FR</fullName>
+        <description>Case Close Survey General Email FR</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>assistance@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Closed_General_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Menu_Card_Email_DE</fullName>
+        <description>Case Close Survey Menu Card Email DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Menu_Card_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Menu_Card_Email_EN</fullName>
+        <description>Case Close Survey Menu Card Email EN</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Menu_Card_EN</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Menu_Card_Email_FR</fullName>
+        <description>Case Close Survey Menu Card Email FR</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>assistance@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Menu_Card_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Onboarding_Email_DE</fullName>
+        <description>Case Close Survey Onboarding Email DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Onboarding_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Onboarding_Email_EN</fullName>
+        <description>Case Close Survey Onboarding Email EN</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Onboarding_EN</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Close_Survey_Onboarding_Email_FR</fullName>
+        <description>Case Close Survey Onboarding Email FR</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>assistance@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Surveys/Case_Close_Onboarding_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>Customer_answers_after_30_days</fullName>
+        <description>Customer answers after 30 days</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>noreply@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>MINI_by_orderbird/EN_Customer_Answers_After_30_Days</template>
+    </alerts>
+    <alerts>
+        <fullName>MINI_Form_Auto_Reply</fullName>
+        <description>MINI Form Auto Reply</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Zendesk_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>mini-contactform@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Workflow_Email_Notifications/MINI_Form_Auto_Reply</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_First_Response_SUCCESSFUL</fullName>
+        <description>Milestone - First Response - SUCCESSFUL</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Milestone_First_Response_SUCCESS</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_First_Response_VIOLATION</fullName>
+        <description>Milestone - First Response - VIOLATION</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Milestone_First_Response_VIOLATION</template>
+    </alerts>
+    <alerts>
+        <fullName>Milestone_First_Response_WARNING</fullName>
+        <description>Milestone - First Response - WARNING</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Milestone_First_Response_WARNING</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_for_User_after_they_got_a_case_assigned</fullName>
+        <description>Notification for User after they got a case assigned</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/Case_owner_change</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_Case_Creation_Customer_Notification</fullName>
+        <description>Onboarding Case Creation Customer Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Onboarding_Case_Created_Auto_Response</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_Reminder_New_DE_Mail_1</fullName>
+        <description>Onboarding Reminder &apos;New&apos; DE Mail 1</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Onboarding_Automation/DE_First_Reminder_On_Hold</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_Reminder_New_DE_Mail_2</fullName>
+        <description>Onboarding Reminder &apos;New&apos; DE Mail 2</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hilfe@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Onboarding_Automation/DE_Last_Chance_Reminder_On_Hold</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_Reminder_New_ENG_Mail_1</fullName>
+        <description>Onboarding Reminder &apos;New&apos; ENG Mail 1</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Onboarding_Automation/EN_First_Reminder_On_Hold</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_Reminder_New_ENG_Mail_2</fullName>
+        <description>Onboarding Reminder &apos;New&apos; ENG Mail 2</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>help@orderbird.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Onboarding_Automation/EN_Last_Chance_Reminder_On_Hold</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_postponed_Mail_DE</fullName>
+        <description>Onboarding postponed Mail DE</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Onboarding_Automation/DE_onboarding_postponed</template>
+    </alerts>
+    <alerts>
+        <fullName>Onboarding_postponed_Mail_ENG</fullName>
+        <description>Onboarding postponed Mail ENG</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Onboarding_Automation/EN_Auto_Onboarding_postponed</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Onboarding_Case_Closed_Feedback_Email_to_Customer</fullName>
+        <description>Send &quot;Onboarding Case Closed – Feedback&quot; Email to Customer</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>SAMPLE_Templates_Salesforce/Onboarding_Case_Closed_Feedback</template>
+    </alerts>
+    <alerts>
+        <fullName>Support_missing_feature</fullName>
+        <ccEmails>product-feedback@orderbird.com</ccEmails>
+        <description>Support missing feature</description>
+        <protected>false</protected>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Workflow_Email_Notifications/Support_missing_feature</template>
+    </alerts>
+    <alerts>
+        <fullName>Support_missing_feature_churn</fullName>
+        <ccEmails>inbox-m879pmzd92unczaz59mjrn3z@inbound.productboard.com</ccEmails>
+        <description>Support missing feature-churn</description>
+        <protected>false</protected>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Workflow_Email_Notifications/Support_churn_missing_feature</template>
+    </alerts>
+    <alerts>
+        <fullName>test_to_cds</fullName>
+        <description>test to cds</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>max.seibert@orderbird.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Workflow_Email_Notifications/Case_owner_change</template>
+    </alerts>
     <fieldUpdates>
-        <fullName>ChangePriorityToHigh</fullName>
-        <field>Priority</field>
-        <literalValue>High</literalValue>
-        <name>Ändert die Kundenvorgangspriorität zu &quot;H</name>
+        <fullName>CASE_Owner_Global_Spam</fullName>
+        <field>OwnerId</field>
+        <lookupValue>GLOBAL_SPAM</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>CASE &gt; Owner &gt; Global Spam</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Case_Origin_Spam</fullName>
+        <field>Origin</field>
+        <literalValue>SPAM</literalValue>
+        <name>Case &gt; Case Origin &gt; Spam</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Escalated_TRUE</fullName>
+        <field>IsEscalated</field>
+        <literalValue>1</literalValue>
+        <name>Case &gt; Escalated &gt; TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_LockCase_TRUE</fullName>
+        <field>LockCase__c</field>
+        <literalValue>1</literalValue>
+        <name>Case &gt; LockCase &gt; TRUE</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Origin_MINI</fullName>
+        <description>Setting the origin field into MINI for cases created with the Web-Form</description>
+        <field>Origin</field>
+        <literalValue>E-Mail MINI</literalValue>
+        <name>Case &gt; Origin &gt; MINI</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Owner_MINI_queue</fullName>
+        <description>Assigning the case created with the web form to the MINI queue</description>
+        <field>OwnerId</field>
+        <lookupValue>MINI_incoming_Case_queue</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Case &gt; Owner &gt; MINI queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Priority_High</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Case &gt; Priority &gt; High</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Priority_Low</fullName>
+        <description>The priority for freemium customer is automatically and only low.</description>
+        <field>Priority</field>
+        <literalValue>Low</literalValue>
+        <name>Case &gt; Priority &gt; Low</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_Closed_Solved</fullName>
+        <description>When all Issues related to a Case have been closed, the Case Status automatically changes to &quot;Closed-Solved&quot;.</description>
+        <field>Status</field>
+        <literalValue>Closed - Solved</literalValue>
+        <name>Case &gt; Status &gt; Closed Solved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_Escalated</fullName>
+        <field>Status</field>
+        <literalValue>Escalated</literalValue>
+        <name>Case &gt; Status &gt; Escalated</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_In_Progress</fullName>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>Case &gt; Status &gt; In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Status_not_relevant</fullName>
+        <field>Status</field>
+        <literalValue>Not relevant</literalValue>
+        <name>Case &gt; Status &gt; Not relevant</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Superscale_Link_Account_Value</fullName>
+        <field>SuperscaleLink__c</field>
+        <formula>Account.SuperscaleLink__c</formula>
+        <name>Case &gt; Superscale Link &gt; Account Value</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto Case-Close after Issues Solved</fullName>
+        <actions>
+            <name>Case_Status_Closed_Solved</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Open_Issues_Count__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </criteriaItems>
+        <description>When all Issues related to a Case have been closed, the Case Status automatically changes to &quot;Closed-solved&quot;.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Close Customer Notification</fullName>
+        <actions>
+            <name>Case_Close_Customer_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed - Solved</value>
+        </criteriaItems>
+        <description>When a case is solved and gets closed, the customer receives an email notification.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey General DE</fullName>
+        <active>false</active>
+        <formula>AND( 
+   ISPICKVAL(Status , &quot;Closed&quot;),
+   ISPICKVAL( Contact.PrimaryLanguage__c , &quot;German&quot;),
+   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,
+   OR(  
+      RecordTypeId = &quot;01258000000FAvs&quot; , /* General Case */
+      RecordTypeId = &quot;01258000000FBaH&quot; , /* Issue Damage */
+      RecordTypeId = &quot;01258000000FBa7&quot; , /* Issue Data */
+      RecordTypeId = &quot;01258000000FBPc&quot; , /* Issue General */
+      RecordTypeId = &quot;01258000000FBa2&quot; , /* Issue Invoicing */
+      RecordTypeId = &quot;01258000000VX2k&quot; , /* Issue Pay */
+      RecordTypeId = &quot;01258000000FBaM&quot;   /* Issue Tech */ 
+   )  
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_General_Email_DE</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey General EN</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;English&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  OR(  RecordTypeId = &quot;01258000000FAvs&quot; , /* General Case */  RecordTypeId = &quot;01258000000FBaH&quot; , /* Issue Damage */  RecordTypeId = &quot;01258000000FBa7&quot; , /* Issue Data */  RecordTypeId = &quot;01258000000FBPc&quot; , /* Issue General */  RecordTypeId = &quot;01258000000FBa2&quot; , /* Issue Invoicing */  RecordTypeId = &quot;01258000000VX2k&quot; , /* Issue Pay */  RecordTypeId = &quot;01258000000FBaM&quot;   /* Issue Tech */ )  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_General_Email_EN</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey General FR</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;French&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  OR(  RecordTypeId = &quot;01258000000FAvs&quot; , /* General Case */  RecordTypeId = &quot;01258000000FBaH&quot; , /* Issue Damage */  RecordTypeId = &quot;01258000000FBa7&quot; , /* Issue Data */  RecordTypeId = &quot;01258000000FBPc&quot; , /* Issue General */  RecordTypeId = &quot;01258000000FBa2&quot; , /* Issue Invoicing */  RecordTypeId = &quot;01258000000VX2k&quot; , /* Issue Pay */  RecordTypeId = &quot;01258000000FBaM&quot;   /* Issue Tech */ )  )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_General_Email_FR</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Menu Card DE</fullName>
+        <active>false</active>
+        <formula>AND( 
+ISPICKVAL(Status , &quot;Closed&quot;), 
+ISPICKVAL( Contact.PrimaryLanguage__c , &quot;German&quot;),
+NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  
+RecordTypeId = &quot;01258000000FDOe&quot;  /* Menu Card */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Menu_Card_Email_DE</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Menu Card EN</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;English&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  RecordTypeId = &quot;01258000000FDOe&quot;  /* Menu Card */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Menu_Card_Email_EN</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Menu Card FR</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;French&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  RecordTypeId = &quot;01258000000FDOe&quot;  /* Menu Card */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Menu_Card_Email_FR</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Onboarding DE</fullName>
+        <active>false</active>
+        <formula>AND( 
+ISPICKVAL(Status , &quot;Closed&quot;), 
+ISPICKVAL( Contact.PrimaryLanguage__c , &quot;German&quot;),   
+NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  
+RecordTypeId = &quot;01258000000FAvx&quot;  /* Onboarding */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Onboarding_Email_DE</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Onboarding EN</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;English&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  RecordTypeId = &quot;01258000000FAvx&quot;  /* Onboarding */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Onboarding_Email_EN</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Close Survey Onboarding FR</fullName>
+        <active>false</active>
+        <formula>AND( ISPICKVAL(Status , &quot;Closed&quot;), ISPICKVAL( Contact.PrimaryLanguage__c , &quot;French&quot;),   NOT(SuppliedEmail = &quot;noreply@orderbird.com&quot;) ,  RecordTypeId = &quot;01258000000FAvx&quot;  /* Onboarding */ )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Case_Close_Survey_Onboarding_Email_FR</name>
+                <type>Alert</type>
+            </actions>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Case Fill Superscale Link</fullName>
+        <actions>
+            <name>Case_Superscale_Link_Account_Value</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR( ISNEW(), ISCHANGED( AccountId ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Case Lock</fullName>
+        <actions>
+            <name>Case_LockCase_TRUE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.ClosedDate</field>
+            <operation>greaterThan</operation>
+            <value>LAST 7 DAYS</value>
+        </criteriaItems>
+        <description>Locks an invisible checkbox &quot;CaseLock&quot; to restrict editing of Cases that are closed for more than 7 days.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cases to Spam Queue</fullName>
+        <actions>
+            <name>CASE_Owner_Global_Spam</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Case_Case_Origin_Spam</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Case_Status_not_relevant</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>https://jira.orderbird.com/browse/SAL-66</description>
+        <formula>OR( 
+CONTAINS( Description , &quot;global@orderbird.com&quot;), 
+BEGINS( Subject , &quot;Erinnerung: [BESTELLBLOCK] Tägliches Arbeiten mit orderbird&quot;), 
+BEGINS( Subject , &quot;Erinnerung: [MANAGER] Einstellungen und Programmieren&quot;), 
+BEGINS( Subject , &quot;Bestätigung - [MANAGER] Einstellungen und Programmieren&quot;), 
+BEGINS( Subject , &quot;Bestätigung - [BESTELLBLOCK] Tägliches Arbeiten mit orderbird&quot;) 
+)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Freemium Customer Case Priority</fullName>
+        <actions>
+            <name>Case_Priority_Low</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Entitlement.SlaProcessId</field>
+            <operation>equals</operation>
+            <value>Freemium Support Process</value>
+        </criteriaItems>
+        <description>The priority for freemium customer is automatically and only low.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Insight Queue Notification Mail on Owner change</fullName>
+        <actions>
+            <name>Notification_for_User_after_they_got_a_case_assigned</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Sends out an email to inform members of Insight about newly assigned cases</description>
+        <formula>And(
+OwnerId = &apos;00G5J000001KEqB&apos;,
+ISCHANGED(OwnerId)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Menue Card Open %3E 4 Days</fullName>
+        <actions>
+            <name>Menue_Card_Open_4_Days</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>Menue Card Open &gt; 4 Days</description>
+        <formula>NOW()-CreatedDate=4
+&amp;&amp;  
+ RecordType.Name  = &quot;Onboarding Issue: Menue / Backup&quot;
+ &amp;&amp; 
+(ISPICKVAL( Status , &quot;Open&quot;)
+ || 
+ISPICKVAL( Status , &quot;In Progress&quot;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notification Mail on Owner change</fullName>
+        <actions>
+            <name>Notification_for_User_after_they_got_a_case_assigned</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Sends out an email to inform newly assigned case owner.</description>
+        <formula>And(
+OwnerId &lt;&gt; LastModifiedById,
+ISCHANGED(OwnerId),
+Owner:User.Opt_In_for_Case_Owner_Mails__c
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Case Creation Customer Notification</fullName>
+        <actions>
+            <name>Onboarding_Case_Creation_Customer_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: Onboarding</value>
+        </criteriaItems>
+        <description>When an onboarding case is created, the customer receives an email notification.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Case Open %3E 30 Days</fullName>
+        <actions>
+            <name>Case_Priority_High</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Onboarding_Case_Open_30_Days</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>Onboarding Case Open more than 30 Days</description>
+        <formula>NOW()-CreatedDate=30
+&amp;&amp;  
+ RecordType.Name  = &quot;Case: Onboarding&quot;
+ &amp;&amp; 
+(ISPICKVAL( Status , &quot;Open&quot;)
+ || 
+ISPICKVAL( Status , &quot;In Progress&quot;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Ketchup Call</fullName>
+        <actions>
+            <name>Ketchup_Call_Onboarding</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: Onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Onboarding_Type__c</field>
+            <operation>notContain</operation>
+            <value>resmio</value>
+        </criteriaItems>
+        <description>sets a call 1 month from trigger date after an onboarding case successfully closes</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Postponed Mail DE</fullName>
+        <actions>
+            <name>Onboarding_postponed_Mail_DE</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Onboarding_postponed_mail_has_been_send</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: Onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Postponed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>German</value>
+        </criteriaItems>
+        <description>Send Mail to German speaking Customers, informing them that their onboarding has been postponed for the time being</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Onboarding Postponed Mail ENG</fullName>
+        <actions>
+            <name>Onboarding_postponed_Mail_ENG</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Onboarding_postponed_mail_has_been_send</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: Onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Postponed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.PrimaryLanguage__c</field>
+            <operation>equals</operation>
+            <value>English</value>
+        </criteriaItems>
+        <description>Send Mail to English speaking Customers, informing them that their onboarding has been postponed for the time being</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Origin of MINI cases with Web-Form</fullName>
+        <actions>
+            <name>Case_Origin_MINI</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>E-Mail DACH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>contains</operation>
+            <value>MINI</value>
+        </criteriaItems>
+        <description>Assigning cases related with MINI to the same Origin</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pay Onboarding</fullName>
+        <actions>
+            <name>Pay</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Pay_Activation</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Pay_Dosuments_received</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Pay_Identification_Missing_Input</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Pay_Info_Call</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Category__c</field>
+            <operation>equals</operation>
+            <value>Pay</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SubCategory__c</field>
+            <operation>equals</operation>
+            <value>First Steps</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Issue: Pay</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Re-Assign case to MINI queue</fullName>
+        <actions>
+            <name>Case_Owner_MINI_queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(ISPICKVAL(Origin, &quot;E-Mail MINI&quot;),
+ OR(Owner:User.Alias  = &quot;suser&quot;, Owner:User.Alias  = &quot;autoproc&quot; ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Record Type Onboarding Status Closed-Solved</fullName>
+        <actions>
+            <name>Send_Onboarding_Case_Closed_Feedback_Email_to_Customer</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Case: Onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed - Not Solved</value>
+        </criteriaItems>
+        <description>When Case Record Type is „Onboarding“ and Status is „Closed-Solved“ send auto mail &quot;Onboarding Case Closed – Feedback&quot;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Support-Missing Feature</fullName>
+        <actions>
+            <name>Support_missing_feature</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>https://jira.orderbird.com/browse/CDS-1602</description>
+        <formula>OR ( 
+(RecordTypeId &lt;&gt; &quot;01258000000FAvx&quot; &amp;&amp; Cancellation_solution_count__c = 0 &amp;&amp; Missing_feature_comment__c &lt;&gt; &quot;&quot;), 
+
+(RecordTypeId = &quot;01258000000FAvx&quot; &amp;&amp; Cancellation_solution_count__c = 0 &amp;&amp; Missing_feature_comment__c &lt;&gt; &quot;&quot; &amp;&amp; ISPICKVAL( Status, &quot;Closed&quot;) ) 
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Support-Missing Feature-Churn</fullName>
+        <actions>
+            <name>Support_missing_feature_churn</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>https://jira.orderbird.com/browse/CDS-1491</description>
+        <formula>Cancellation_solution_count__c &gt;= 1 &amp;&amp;  Missing_feature_comment__c &lt;&gt; &quot;&quot;</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Welcome Call Open %3E 2 Days</fullName>
+        <actions>
+            <name>Welcome_Call_Open_2_Days</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>Welcome Call Open &gt; 2 Days</description>
+        <formula>NOW()-CreatedDate=2
+&amp;&amp;  
+ RecordType.Name  = &quot;Onboarding Issue: Welcome Call&quot;
+ &amp;&amp; 
+(ISPICKVAL( Status , &quot;Open&quot;)
+ || 
+ISPICKVAL( Status , &quot;In Progress&quot;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Auto_Mail_for_Menu_Card_Recieved</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Auto Mail for Menu Card Recieved</subject>
+    </tasks>
+    <tasks>
+        <fullName>Auto_Mail_for_Menu_Card_Uploaded</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Auto Mail for Menu Card Uploaded</subject>
+    </tasks>
+    <tasks>
+        <fullName>Auto_Notification_for_Bad_Onboarding_Ratings</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Auto Notification for Bad Onboarding Ratings</subject>
+    </tasks>
+    <tasks>
+        <fullName>Auto_Prioritising_for_Opening_Date</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Auto Prioritising for Opening Date</subject>
+    </tasks>
+    <tasks>
+        <fullName>Auto_Reminder_when_Menu_Card_is_missing</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Auto Reminder when Menu Card is missing</subject>
+    </tasks>
+    <tasks>
+        <fullName>Case_Close_Pending</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Case Close Pending</subject>
+    </tasks>
+    <tasks>
+        <fullName>Case_Close_Pending_2</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Case Close Pending</subject>
+    </tasks>
+    <tasks>
+        <fullName>Case_Close_VIOLATION</fullName>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Milestone - Case Close - VIOLATION</subject>
+    </tasks>
+    <tasks>
+        <fullName>Case_Solution_Pending</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Case Solution Pending</subject>
+    </tasks>
+    <tasks>
+        <fullName>Issue_Milestone_Violation</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Issue Milestone Violation</subject>
+    </tasks>
+    <tasks>
+        <fullName>Issue_Milestone_Violation2</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Issue Milestone Violation</subject>
+    </tasks>
+    <tasks>
+        <fullName>Issue_Milestone_Violation3</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Issue Milestone Violation</subject>
+    </tasks>
+    <tasks>
+        <fullName>Issue_Milestone_Violation4</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Issue Milestone Violation</subject>
+    </tasks>
+    <tasks>
+        <fullName>Ketchup_Call_Onboarding</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Ketchup Call Onboarding</subject>
+    </tasks>
+    <tasks>
+        <fullName>Menue_Card_Open_4_Days</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Menue Card Open &gt; 4 Days</subject>
+    </tasks>
+    <tasks>
+        <fullName>Milestone_Case_Close_VIOLATION</fullName>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Milestone - Case Close - VIOLATION</subject>
+    </tasks>
+    <tasks>
+        <fullName>Milestone_Solution_VIOLATION</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Milestone - Solution - VIOLATION</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_Case_Open_30_Days</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Onboarding Case Open = 30 Days</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onboarding_postponed_mail_has_been_send</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Onboarding postponed mail has been send</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pay</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Pay: Documents sent</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pay_Activation</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Pay: Activation</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pay_Dosuments_received</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Pay: Documents received</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pay_Identification_Missing_Input</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Pay: Identification/Missing Input</subject>
+    </tasks>
+    <tasks>
+        <fullName>Pay_Info_Call</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Medium</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Pay: Info Call</subject>
+    </tasks>
+    <tasks>
+        <fullName>Welcome_Call_Open_2_Days</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Welcome Call Open &gt; 2 Days</subject>
+    </tasks>
 </Workflow>

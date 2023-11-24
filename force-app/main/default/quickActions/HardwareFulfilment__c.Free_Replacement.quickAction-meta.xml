@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Triggers Hardware Exchange Process by creating a new HW Exchange record</description>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>&apos;EX &apos; +  HardwareFulfilment__c.InternalIDHW__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Original_Item__c</field>
+        <formula>HardwareFulfilment__c.Id</formula>
+    </fieldOverrides>
+    <label>Free Replacement</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Hardware exchange process has been initiated</successMessage>
+    <targetObject>HW_Exchange__c</targetObject>
+    <targetParentField>Original_Item__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

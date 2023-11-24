@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stakeholder: Sales &amp; CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How is the person in charge of the sales talk on the prospect side? This Contact should also include all the relevant contact information (phone, email). Mailings go there. Update if necessary!</inlineHelpText>
+    <label>Primary Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Primary Contact)</relationshipLabel>
+    <relationshipName>PrimaryContactForOpp</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

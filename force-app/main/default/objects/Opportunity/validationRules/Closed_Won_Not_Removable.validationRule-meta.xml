@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Won_Not_Removable</fullName>
+    <active>true</active>
+    <description>Updated according to CDS-1110</description>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+NOT(ISCHANGED( Skip_Validation__c )), 
+ISCHANGED( StageName ),
+OR(
+ISPICKVAL( PRIORVALUE(StageName) , &quot;Closed Won&quot;), 
+ISPICKVAL( PRIORVALUE(StageName) , &quot;Closed Lost&quot;) 
+) 
+)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>The Opportunity is Closed  and should therefore not be changed any more.</errorMessage>
+</ValidationRule>

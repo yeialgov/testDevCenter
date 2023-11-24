@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryLanguage__c</fullName>
+    <defaultValue>&quot;German&quot;</defaultValue>
+    <description>Stakeholder: Sales &amp; CS with MKT</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What language do we use to communicate with this venue? Filled in as soon as known. Updated if necessary!</inlineHelpText>
+    <label>Primary Language</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Language</valueSetName>
+    </valueSet>
+</CustomField>

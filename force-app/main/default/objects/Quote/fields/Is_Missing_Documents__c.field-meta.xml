@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Missing_Documents__c</fullName>
+    <externalId>false</externalId>
+    <formula>Opportunity.Account.BillingCountryCode__c = &quot;DE&quot; &amp;&amp;
+Opportunity.NewBusiness__c &amp;&amp;
+
+(
+ISBLANK( Opportunity.Account.Registration_certificate_chk__c )
+
+||
+
+(Pay_by_Instalment__c &amp;&amp; (
+ISBLANK( Opportunity.Account.Instalment_Contract_chk__c ) ||
+ISBLANK( Opportunity.Account.Credit_Check_chk__c ) ||
+ISBLANK( Opportunity.Account.Id_Card_chk__c ) 
+))
+
+||
+
+( (  (NOT(WireFirstPayment__c) &amp;&amp; TEXT(PaymentMethod__c) = &quot;Bank Transfer&quot;) || Contains_Recurring_Items__c) &amp;&amp; ISBLANK(  Opportunity.Account.SEPA_Mandate_chk__c  ))
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Missing Documents</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

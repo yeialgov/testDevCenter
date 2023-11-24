@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:map height="200px"
+              width="100%"
+              zoomLevel="15"
+              center="{!$CurrentPage.parameters.Street},{!$CurrentPage.parameters.PostalCode},{!$CurrentPage.parameters.City},{!$CurrentPage.parameters.Country}">
+        <apex:mapMarker position="{!$CurrentPage.parameters.Street},{!$CurrentPage.parameters.PostalCode},{!$CurrentPage.parameters.City},{!$CurrentPage.parameters.Country}"/>
+    </apex:map>
+</apex:page>

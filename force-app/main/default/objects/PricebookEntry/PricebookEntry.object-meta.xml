@@ -120,5 +120,8 @@
         <searchResultsAdditionalFields>PRODUCT.DEFAULT_PRICE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>PRODUCT2.FAMILY_ENUM</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.ACTIVE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Key__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Record_ID__c</searchResultsAdditionalFields>
     </searchLayouts>
 </CustomObject>
