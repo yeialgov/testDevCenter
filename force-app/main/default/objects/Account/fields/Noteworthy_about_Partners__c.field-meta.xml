@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Noteworthy_about_Partners__c</fullName>
+    <description>The field is pre-filled with the content in the &quot;Comments&quot; field in the Lead object. For Partners this field is defined directly in the form that users filled in orderbird webpage.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specific information about this partner that came from the partner lead form.</inlineHelpText>
+    <label>Noteworthy about Partners</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

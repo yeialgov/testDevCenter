@@ -1,0 +1,5 @@
+Dear Sales-Team {!Account.Region__c},
+
+This is to confirm that we've received a payment from customer "{!Account.Name}" today and that the invoice is now settled:
+
+https://orderbird.my.salesforce.com/{!Account.Id}

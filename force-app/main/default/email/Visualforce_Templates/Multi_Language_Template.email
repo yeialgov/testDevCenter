@@ -1,0 +1,91 @@
+<!-- 
+Standard Header Configuration of the E-Mail Template
+Use "recipientType" to define the object type of the receiving person (Lead, Contact or User)
+Use "relatedToType" to define related object to pull data from to use in the Template (e.g. Opportunity, Case, etc ...)
+
+The subject can be made multilanguage compatible by applying a Salesforce Formula
+-->
+<messaging:emailTemplate subject="{!CASE(Recipient.PrimaryLanguage__c,
+                'English','English Subject',
+                'German','Deutsches Subject',
+                'French','Sujet Francais',
+                'Fallback Subject if no Language is available (English)')
+             }" 
+    recipientType="Contact" 
+    relatedToType="Case"
+    >
+    
+    <!--Start of the HTML E-Mail Body -->
+    <messaging:HTMLEmailBody >
+    
+    
+    <!-- Definition of the Language Variable to be used to render the correct content Block. Default = English -->
+    <apex:variable var="UseLanguage" 
+                   value="{!CASE(Recipient.PrimaryLanguage__c,
+                           'German','German',
+                           'French','French',
+                           'English')}"
+                   />
+
+        
+    <html>
+        <header>
+            
+            <!-- Visualforce Component containing the CSS code for displaying this E-Mail -->
+            <c:EMailCSS />
+        
+        </header>
+    
+    
+        <body>
+            
+            <p>
+                <!-- Visualforce Component that displays the language specific Salutation  -->
+                <c:EMailSalutation Salutation="{!Recipient.Salutation}" 
+                    Language="{!Recipient.00N5800000C0xCG}" 
+                    FirstName="{!Recipient.FirstName}" 
+                    LastName="{!Recipient.LastName}"  />
+            </p>
+            
+            
+            <!-- PUT YOUR OWN HTML Message here (Language specific content blocks)
+                 https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_compref.htm -->
+            
+            
+            <!-- DEFAULT/ENGLISH Content -->
+            <apex:outputPanel layout="block" 
+                rendered="{!UseLanguage='English'}">
+                <p>
+                    ENGLISCH CONTENT TEXT WITH NORMAL HTML MARKUP
+                </p>
+            </apex:outputPanel>
+            
+            
+            <!-- GERMAN Content -->
+            <apex:outputPanel layout="block" rendered="{!UseLanguage='German'}">
+                <p>
+                    DEUTSCHER TEXT INKLUSIVE NORMALEM HTML 
+                </p>
+            </apex:outputPanel>
+            
+            
+            <!-- FRENCH Content -->
+            <apex:outputPanel layout="block" rendered="{!UseLanguage='French'}">
+                <p>
+                    TEXT FRANCAISE (oder so) AVEC HTML MARKUP NORMALE ... 
+                </p>
+            </apex:outputPanel>
+    
+    <!-- Footer Component to render the E-Mail Footer -->
+    
+    <c:EMailFooter ContactCountry="{!Recipient.MailingCountry}" 
+        AccountCountry="{!Recipient.Account.BillingCountry}" 
+        ContactLanguage="{!Recipient.00N5800000C0xCG}"
+        AccountLanguage="{!Recipient.Account.PrimaryLanguage__c}"
+        />
+        
+    </body>
+    </html>
+    </messaging:HTMLEMailBody>
+
+</messaging:emailTemplate>

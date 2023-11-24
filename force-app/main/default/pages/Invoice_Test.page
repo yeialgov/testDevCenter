@@ -1,0 +1,18 @@
+<apex:page standardController="Invoice__c" renderAs="pdf" applyHtmlTag="false" showHeader="false">
+    <!--head>
+        <style>
+            @page { size: 8.27in 11.69in; /* A4 width and height */ }
+        </style>
+    </head-->
+    <apex:outputPanel rendered="{!Invoice__c.VAT_Adjustment_Lines__c < 1}">
+        <c:invoiceBody_2021 InvoiceId="{!Invoice__c.Id}" Watermark="true"/>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!and(Invoice__c.VAT_Adjustment_Lines__c >= 1, Invoice__c.Amount__c>=0)}">
+        <c:invoiceVatAdjBody InvoiceId="{!Invoice__c.Id}" Watermark="true"/>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!and(Invoice__c.VAT_Adjustment_Lines__c >= 1, Invoice__c.Amount__c<0)}">
+        <c:invoiceVatAdjBody2 InvoiceId="{!Invoice__c.Id}" Watermark="true"/>
+    </apex:outputPanel>
+
+
+</apex:page>

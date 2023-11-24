@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE_KWK_Bestätigung_erfolgreiche_Werbung</name>
+    <style>freeForm</style>
+    <subject>Kunden-werben-Kunden-Programm von orderbird: Deine Empfehlung war erfolgreich!</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

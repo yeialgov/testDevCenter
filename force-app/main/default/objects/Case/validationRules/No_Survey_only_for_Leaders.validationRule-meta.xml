@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Survey_only_for_Leaders</fullName>
+    <active>true</active>
+    <description>https://jira.orderbird.com/browse/CDS-1275</description>
+    <errorConditionFormula>AND( 
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+$User.UserRoleId &lt;&gt; &quot;00E58000000bx0z&quot;, /* Support Mgt */ 
+
+ISCHANGED(No_Survey__c)
+
+)</errorConditionFormula>
+    <errorDisplayField>No_Survey__c</errorDisplayField>
+    <errorMessage>You are not allowed to use this field. Please contact your team lead</errorMessage>
+</ValidationRule>

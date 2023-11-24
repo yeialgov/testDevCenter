@@ -1,0 +1,4 @@
+ACCOUNT: {!MyObVenue__c.Account__c}
+CONTACT: {!MyObVenue__c.Contact__c}
+
+LINK: https://orderbird.lightning.force.com/lightning/r/Account/{!MyObVenue__c.AccountId__c}/view

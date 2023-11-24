@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_New_Amb_Acc_creation</fullName>
+    <active>true</active>
+    <description>Allows to use this Action only on Unassociated Ambassador Account</description>
+    <errorConditionFormula>AccountId != &apos;0011t000018q0ah&apos;
+&amp;&amp;
+New_Account_Name__c !=&apos;&apos;
+&amp;&amp;
+ISCHANGED(New_Account_Name__c)</errorConditionFormula>
+    <errorMessage>This action is only available for Contacts that are not yet associated to a proper Account</errorMessage>
+</ValidationRule>

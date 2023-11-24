@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Origin_Change_for_Email_and_Voic</fullName>
+    <active>true</active>
+    <description>If the Case origin is Voicemail, Voicemail After Hours, E-Mail DACH, E-Mail FR or E-Mail EN it must not be changed (exception Support manager)</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+$UserRole.Name != &quot;Support Management&quot;,
+ISCHANGED(Origin),
+OR(
+AND(
+ISPICKVAL(PRIORVALUE( Origin ), &quot;Voicemail&quot;),
+NOT(ISPICKVAL(Origin, &quot;Voicemail&quot;))),
+AND(
+ISPICKVAL(PRIORVALUE( Origin ), &quot;Voicemail After Hours&quot;),
+NOT(ISPICKVAL(Origin, &quot;Voicemail After Hours&quot;))),
+AND(
+ISPICKVAL(PRIORVALUE( Origin ), &quot;E-Mail DACH&quot;),
+NOT(ISPICKVAL(Origin, &quot;E-Mail DACH&quot;))),
+AND(
+ISPICKVAL(PRIORVALUE( Origin ), &quot;E-Mail FR&quot;),
+NOT(ISPICKVAL(Origin, &quot;E-Mail FR&quot;))),
+AND(
+ISPICKVAL(PRIORVALUE( Origin ), &quot;E-Mail EN&quot;),
+NOT(ISPICKVAL(Origin, &quot;E-Mail EN&quot;)))
+)
+)</errorConditionFormula>
+    <errorDisplayField>Origin</errorDisplayField>
+    <errorMessage>You are not allowed to change the Origin, when it is Email or Voicemail</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Successful__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was the call/ meeting successful? E.g. did you reach someone?</inlineHelpText>
+    <label>Successful</label>
+    <type>Checkbox</type>
+</CustomField>

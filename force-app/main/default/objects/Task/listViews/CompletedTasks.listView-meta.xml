@@ -17,14 +17,14 @@
         <value>1</value>
     </filters>
     <filters>
-        <field>IS_RECURRENCE</field>
-        <operation>equals</operation>
-        <value>0</value>
-    </filters>
-    <filters>
         <field>LAST_UPDATE</field>
         <operation>equals</operation>
         <value>TODAY,LAST_N_DAYS:30</value>
     </filters>
-    <label>ENCODED:{!FilterNames.Task_CompletedTasks}</label>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Task.Next_Step</value>
+    </filters>
+    <label>Recently Completed Tasks</label>
 </ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_active_subscriptions_2__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-511</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many active subscriptions does this account have?</inlineHelpText>
+    <label>Number of active subscriptions</label>
+    <summaryFilterItems>
+        <field>Subscription__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Subscription__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

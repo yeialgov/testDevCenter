@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Origin_Email_and_Voicemail</fullName>
+    <active>true</active>
+    <description>Only the system and Support Managers are allowed to set the origin to Voicemail, Voicemail After Hours, E-Mail DACH, E-Mail FR or E-Mail EN.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+$UserRole.Name != &quot;Support Management&quot;,
+ISCHANGED(Origin),
+OR(
+ISPICKVAL(Origin, &quot;Voicemail&quot;),
+ISPICKVAL(Origin, &quot;Voicemail After Hours&quot;),
+ISPICKVAL(Origin, &quot;E-Mail DACH&quot;),
+ISPICKVAL(Origin, &quot;E-Mail FR&quot;),
+ISPICKVAL(Origin, &quot;E-Mail EN&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Origin</errorDisplayField>
+    <errorMessage>You are not allowed to use or change the Origins for Email or Voicemail (check back with Support Management)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrictions_on_Street_Fields</fullName>
+    <active>false</active>
+    <description>Limits the address field to fit API requirements (Zuora)
+https://jira.orderbird.com/browse/CRM-1188</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+OR(
+NOT(
+OR(
+REGEX(
+BillingStreet,
+&quot;.{0,254}&quot;
+),
+REGEX(
+BillingStreet,
+&quot;.{0,254}\r\n.{0,254}&quot;
+), 
+ISNEW()
+)
+), 
+NOT(
+OR(
+REGEX(
+ShippingStreet,
+&quot;.{0,254}&quot;
+),
+REGEX(
+ShippingStreet,
+&quot;.{0,254}\r\n.{0,254}&quot;
+), 
+ISNEW()
+)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You&apos;ve exceeded the max. allowed length (255) or lines (2). Please limit the address to only relevant information on the Account</errorMessage>
+</ValidationRule>

@@ -1,0 +1,34 @@
+.THIS .addressCard {
+    border: 1px solid rgb(221, 219, 218);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+}
+.THIS .Invisible {
+    display: none;
+}
+.THIS .trash {
+    margin-left: 0.75rem;
+}
+.THIS .bumpdown {
+    margin-top: 0.75rem;
+}
+.THIS .freeTextInput {
+    padding-left: 0;
+    border: transparent;
+    display: inline;
+    width: 75%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -0.25rem;
+    margin-bottom: -0.5rem;
+}
+.THIS .lineAdder {
+    background-color: rgb(236, 235, 234);
+    border-radius: 0.25rem;
+    text-align: center;
+}
+.THIS .lineAdder:hover {
+    cursor: pointer;
+}

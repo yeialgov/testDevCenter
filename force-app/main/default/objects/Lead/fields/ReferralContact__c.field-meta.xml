@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReferralContact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stakeholder: PaM &amp; Sales (CRC)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who referred this lead to us? Filled in by leads or sales as soon as known, preferably on creation</inlineHelpText>
+    <label>Referral Contact</label>
+    <lookupFilter>
+        <active>false</active>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <filterItems>
+            <field>Contact.Ambassador_ID__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.PartnerID__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Email</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <infoMessage>Please make sure to add the Ambassador ID to the Ambassador contact</infoMessage>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Leads (as Ambassador)</relationshipLabel>
+    <relationshipName>Leads</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Business_Category__c</fullName>
+    <description>Stakeholder: PaM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which sector does the partner comes from? Managed by PaM</inlineHelpText>
+    <label>Type of Business / Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(ex-)gastronomer</fullName>
+                <default>false</default>
+                <label>(ex-)gastronomer</label>
+            </value>
+            <value>
+                <fullName>Accountant</fullName>
+                <default>false</default>
+                <label>Accountant</label>
+            </value>
+            <value>
+                <fullName>Apple Store</fullName>
+                <default>false</default>
+                <label>Apple Store</label>
+            </value>
+            <value>
+                <fullName>Bank</fullName>
+                <default>false</default>
+                <label>Bank</label>
+            </value>
+            <value>
+                <fullName>Brewery</fullName>
+                <default>false</default>
+                <label>Brewery</label>
+            </value>
+            <value>
+                <fullName>ConCardis Field Agent</fullName>
+                <default>false</default>
+                <label>ConCardis Field Agent</label>
+            </value>
+            <value>
+                <fullName>ConCardis Call Center</fullName>
+                <default>false</default>
+                <label>ConCardis Call Center</label>
+            </value>
+            <value>
+                <fullName>ConCardis Commercial Representative</fullName>
+                <default>false</default>
+                <label>ConCardis Commercial Representative</label>
+            </value>
+            <value>
+                <fullName>ex-orderbird employee</fullName>
+                <default>false</default>
+                <label>ex-orderbird employee</label>
+            </value>
+            <value>
+                <fullName>Financial Service Provider</fullName>
+                <default>false</default>
+                <label>Financial Service Provider</label>
+            </value>
+            <value>
+                <fullName>Franchise Provider</fullName>
+                <default>false</default>
+                <label>Franchise Provider</label>
+            </value>
+            <value>
+                <fullName>(gastronomy) consultant</fullName>
+                <default>false</default>
+                <label>(gastronomy) consultant</label>
+            </value>
+            <value>
+                <fullName>Beverage Manufacturer</fullName>
+                <default>false</default>
+                <label>Beverage Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Beverage Specialist Wholesaler</fullName>
+                <default>false</default>
+                <label>Beverage Specialist Wholesaler</label>
+            </value>
+            <value>
+                <fullName>Commercial Representative (not ConCardis)</fullName>
+                <default>false</default>
+                <label>Commercial Representative (not ConCardis)</label>
+            </value>
+            <value>
+                <fullName>architect / interior designer / etc.</fullName>
+                <default>false</default>
+                <label>architect / interior designer / etc.</label>
+            </value>
+            <value>
+                <fullName>IT Consultant / Dealer</fullName>
+                <default>false</default>
+                <label>IT Consultant / Dealer</label>
+            </value>
+            <value>
+                <fullName>POS Merchant</fullName>
+                <default>false</default>
+                <label>POS Merchant</label>
+            </value>
+            <value>
+                <fullName>Kitchen Outfitter</fullName>
+                <default>false</default>
+                <label>Kitchen Outfitter</label>
+            </value>
+            <value>
+                <fullName>Kitchen Manufacturer</fullName>
+                <default>false</default>
+                <label>Kitchen Manufacturer</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Education and Training Facility</fullName>
+                <default>false</default>
+                <label>Education and Training Facility</label>
+            </value>
+            <value>
+                <fullName>Software Developer - Integration wanted</fullName>
+                <default>false</default>
+                <label>Software Developer - Integration wanted</label>
+            </value>
+            <value>
+                <fullName>Software Developer - Integration necessary</fullName>
+                <default>false</default>
+                <label>Software Developer - Integration necessary</label>
+            </value>
+            <value>
+                <fullName>Software Developer - Integration unnecessary</fullName>
+                <default>false</default>
+                <label>Software Developer - Integration unnecessary</label>
+            </value>
+            <value>
+                <fullName>Other Gastronomy Supplier</fullName>
+                <default>false</default>
+                <label>Other Gastronomy Supplier</label>
+            </value>
+            <value>
+                <fullName>Tax Accountant</fullName>
+                <default>false</default>
+                <label>Tax Accountant</label>
+            </value>
+            <value>
+                <fullName>Association</fullName>
+                <default>false</default>
+                <label>Association</label>
+            </value>
+            <value>
+                <fullName>Publisher</fullName>
+                <default>false</default>
+                <label>Publisher</label>
+            </value>
+            <value>
+                <fullName>Webshop</fullName>
+                <default>false</default>
+                <label>Webshop</label>
+            </value>
+            <value>
+                <fullName>ad / design agency</fullName>
+                <default>false</default>
+                <label>ad / design agency</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_51924705</developerName>
+        <masterLabel>Hardware Products</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.Invoices1__r.Invoice_Line_Items__r$SubscriptionLineItem__c.Product__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Printer Epson TM-m30 cable-bound</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Printer Epson TM-P20</sourceValue>
+            </sourceValues>
+            <value>Printers</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Card Reader Miura M010</sourceValue>
+            </sourceValues>
+            <value>Card Reader</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>iPad 10.2 Wi-Fi 32GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad 9.7 Wi-Fi 32GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad 9.7 Wi-Fi 32GB Space Gray refurbished</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad mini (5. Gen. 2019) Wi-Fi 64GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad mini 4 Wi-Fi 128GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad Pro 10.5-inch 64GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad Pro 12.9-inch 32GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad Pro 12.9-inch 64GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad Pro 2018 12.9-inch 64GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPad Pro 2020 12.9-inch 128GB Space Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPod Touch 16GB</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>iPod Touch 32GB</sourceValue>
+            </sourceValues>
+            <value>iPad &amp; iPod</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Invoices1__r.Invoice_Line_Items__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Invoices1__r.Invoice_Line_Items__r$TotalAmount__c.CONVERT</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>Revenue by</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Invoices1__r.Invoice_Line_Items__r$IsNewBusiness__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$CommissionDate__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_MONTH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Invoices1__r.Invoice_Line_Items__r$SubscriptionLineItem__c.Product__c.RecognizedRevenueAccountingCode__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Revenue Hardware</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>Sum</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_51924705</field>
+        <sortByName>Account.Invoices1__r.Invoice_Line_Items__r$TotalAmount__c.CONVERT</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <groupingsDown>
+        <aggregateType>Sum</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Invoices1__r.Invoice_Line_Items__r$SubscriptionLineItem__c.Product__c</field>
+        <sortByName>Account.Invoices1__r.Invoice_Line_Items__r$TotalAmount__c.CONVERT</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>Hardware Revenue this MONTH</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accts_Invs_ILIs_w_SLIs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Close Onboarding EN</name>
+    <style>none</style>
+    <subject>Ready to take off with orderbird?</subject>
+    <textOnly>You are ready to take off!
+
+You made it to the end of your onboarding, what a great journey!
+
+Together we customised your register to your every need and discovered everything orderbird can do to let your business take flight.
+
+Thank you from Berlin!
+
+{!Case.OwnerFirstName} from orderbird
+
+Want to tell us how it was?
+
+Don&apos;t worry! We won&apos;t leave you hanging!
+
+Your Customer Data
+
+
+
+#{!Account.CustomerID__c}
+
+{!Account.Name}
+
+{!Account.myOrderbirdEmail__c}
+
+This is how you reach us
+
+
+
+0800 67 337 24
+
+help@orderbird.com﻿
+
+support.orderbird.com
+
+orderbird AG
+
+
+
+Ritterstraße 12-14, Aufg. 3
+D-10969 Berlin
+Germany
+
+
+
+Headquaters: Berlin
+District Court: Amtsgericht Berlin – Charlottenburg
+HRB 134011
+VAT-ID: DE276722316
+
+
+
+CEO: Jakob Schreyer
+
+Chairman of the Board: Carlo Kölzer
+
+
+© 2010–2017 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_from_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Stakeholder: AccM
+https://jira.orderbird.com/browse/CDS-1167</description>
+    <externalId>false</externalId>
+    <inlineHelpText>With whome has Support been in contact?</inlineHelpText>
+    <label>Contact from Case</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Contact from Case)</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

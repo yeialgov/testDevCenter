@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SentBrochure__c</fullName>
+    <description>Stakeholder: Sales with Leadmanagement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the prospect request a flyer send by traditional mail, and if so: which one? Service currently only available in DACH. Set by Sales. LM handles the shipping once per day at 5pm</inlineHelpText>
+    <label>Sent Brochure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>POS Flyer</fullName>
+                <default>false</default>
+                <label>POS Flyer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>DE MINI Daten für Umfirmierung abfragen</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE MINI Umfirmierungsformular</name>
+    <style>none</style>
+    <subject>MINI by orderbird: Daten bzgl. Umformierung</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+Du hast uns darüber informiert, dass sich in Deinem Betrieb Änderungen ergeben werden bzw. ergeben haben. Bitte bestätige bzw. informiere uns über die folgenden Eckdaten:
+
+
+Stand vor der Änderung
+
+1. Betreibergesellschaft, Handelsregisternummer und USt-ID:
+2. Inhaber und/oder Geschäftsführer:
+3. Name und Adresse des Unternehmens:
+4. my.orderbird E-Mail-Adresse:
+
+Stand nach der Änderung
+1. Datum der Änderung:
+2. Betreibergesellschaft, Handelsregisternummer und USt-ID:
+3. Inhaber und/oder Geschäftsführer:
+4. Name und Adresse des Unternehmens:
+5. my.orderbird E-Mail-Adresse:
+
+
+Sobald wir Deine Eckdaten erhalten haben, prüfen wir umgehend, ob die Weiterführung der aktiven Accounts bei MY orderbird und Bambora möglich ist.
+
+
+Weitere Infos, wie Du bei einer Umfirmierung vorgehst, findest Du hier: Das musst Du bei Umfirmierung / Besitzerwechsel / Weiterverkauf beachten
+
+Solltest Du noch Fragen oder Anregungen haben, erreichst Du uns…
+
+wochentags von 10-16 Uhr auch über den Chat in Deinem MY orderbird Account,
+
+über unser Anfrage-Formular,
+oder Du antwortest mir einfach auf diese E-Mail.
+
+Schon gewusst: Mehr Information zum MINI by orderbird findest Du auf den Support-Seiten unter supportmini.orderbird.com.
+
+Vielen Dank und liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

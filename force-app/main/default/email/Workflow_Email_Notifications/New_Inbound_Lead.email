@@ -1,0 +1,16 @@
+Dear {!Lead.OwnerFirstName},
+
+a new {!Lead.LeadSource} lead has been submitted. Please make sure to call them asap!
+
+The details are as follows:
+
+Company: {!Lead.Company} 
+Name: {!Lead.Name}
+Phone: {!Lead.Phone}
+ 
+Email: {!Lead.Email}
+
+Link to the record: {!Lead.Link}
+
+LAC ID: {!Lead.LAC_ID__c}
+Web2Lead Origin: {!Lead.Origin__c}

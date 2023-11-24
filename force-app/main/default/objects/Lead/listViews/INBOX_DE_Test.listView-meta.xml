@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INBOX_DE_Test</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>Region__c</columns>
+    <columns>First_Activity_Date__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>Origin__c</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Inbound,Customer,Partner</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>Origin__c</field>
+        <operation>notContain</operation>
+        <value>AT,FR,CH</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>notEqual</operation>
+        <value>France,Austria,Switzerland</value>
+    </filters>
+    <label>INBOX DE</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Lead_Management</role>
+        <role>Sales</role>
+    </sharedTo>
+</ListView>

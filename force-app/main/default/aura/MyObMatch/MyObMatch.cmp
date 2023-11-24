@@ -1,0 +1,19 @@
+<aura:component controller="AccountLightningController">
+    <aura:attribute name="Contact" type="Object"/>
+    <aura:attribute name="MyObVenueId" type="String"/>
+
+    <lightning:card title="{!v.Contact.Account.Name + ' (' + v.Contact.Account.CustomerID__c + ')'}">
+        <div style="margin-left: 1rem; height:3.5rem;">
+            <div style="float:left;"><lightning:buttonIcon variant="brand" iconName="utility:merge" onclick="{!c.mergeVenue}"/></div>
+            <div style="float:left;margin-left:0.75rem;">
+                <p>
+                    {!v.Contact.Name}&nbsp;<aura:if isTrue="{!v.Contact.Primary_Contact__c}"><span style="border-radius:1rem;background-color:black;padding: 2px 4px;color:#fff;">P</span></aura:if>
+                    <br/>
+                    {!v.Contact.MailingCity}, {!v.Contact.MailingCountry}
+                    <br/>
+                    {!v.Contact.Email}
+                </p>
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

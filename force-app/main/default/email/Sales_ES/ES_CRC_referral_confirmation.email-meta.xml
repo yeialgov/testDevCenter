@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC referral confirmation</name>
+    <style>freeForm</style>
+    <subject>Clientes orderbird promocionan a clientes: ¡gracias por tus recomendaciones!</subject>
+    <textOnly>www.orderbird.com
+ayuda@orderbird.com
++34911680466
+
+
+
+Querido/a cliente de orderbird,
+
+Desde orderbird te queremos dar las gracias por tu ayuda y por recomendarnos. {!Opportunity.OwnerFullName} Nos pondremos inmediatamente en contacto con el cliente que nos has facilitado, {!Opportunity.OwnerFullName}.
+
+En cuanto tengamos noticias al respecto, nos pondremos en contacto de nuevo contigo.
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

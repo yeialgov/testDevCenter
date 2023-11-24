@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseReason__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does this problem come from a lack of knowledge? Is it a setup question? Note: Please only use SOS if instructed</inlineHelpText>
+    <label>Case Reason (custom)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SubCategory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>How To</fullName>
+                <default>false</default>
+                <label>How To</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Trouble</fullName>
+                <default>false</default>
+                <label>Trouble</label>
+            </value>
+            <value>
+                <fullName>Inadequate Info</fullName>
+                <default>false</default>
+                <label>Inadequate Info</label>
+            </value>
+            <value>
+                <fullName>SOS</fullName>
+                <default>false</default>
+                <label>SOS</label>
+            </value>
+            <value>
+                <fullName>Billing / Sales</fullName>
+                <default>false</default>
+                <label>Billing / Sales</label>
+            </value>
+            <value>
+                <fullName>Replacements</fullName>
+                <default>false</default>
+                <label>Replacements</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Invoices</controllingFieldValue>
+            <controllingFieldValue>Exports</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Open Orders</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>How To</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Invoices</controllingFieldValue>
+            <controllingFieldValue>Masterdata</controllingFieldValue>
+            <controllingFieldValue>Exports</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Open Orders</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Invoices</controllingFieldValue>
+            <controllingFieldValue>Masterdata</controllingFieldValue>
+            <controllingFieldValue>Exports</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Open Orders</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>WiFi Pro</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>Trouble</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Invoices</controllingFieldValue>
+            <controllingFieldValue>Masterdata</controllingFieldValue>
+            <controllingFieldValue>Exports</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Open Orders</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>WiFi Pro</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>Inadequate Info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting (orderbird app)</controllingFieldValue>
+            <controllingFieldValue>Invoices</controllingFieldValue>
+            <controllingFieldValue>Masterdata</controllingFieldValue>
+            <controllingFieldValue>Exports</controllingFieldValue>
+            <controllingFieldValue>Menu Service</controllingFieldValue>
+            <controllingFieldValue>Partners</controllingFieldValue>
+            <controllingFieldValue>Open Orders</controllingFieldValue>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>orderpad</controllingFieldValue>
+            <controllingFieldValue>Status</controllingFieldValue>
+            <controllingFieldValue>Printing</controllingFieldValue>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>WiFi Pro</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>SOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Shop</controllingFieldValue>
+            <controllingFieldValue>Internal Wifi</controllingFieldValue>
+            <controllingFieldValue>Guest Wifi</controllingFieldValue>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <controllingFieldValue>Simple Order</controllingFieldValue>
+            <controllingFieldValue>Resmio</controllingFieldValue>
+            <controllingFieldValue>Zenchef</controllingFieldValue>
+            <controllingFieldValue>Food Notify</controllingFieldValue>
+            <controllingFieldValue>Lunchio</controllingFieldValue>
+            <controllingFieldValue>WiFi Pro</controllingFieldValue>
+            <controllingFieldValue>Fiscal Trust</controllingFieldValue>
+            <controllingFieldValue>Data</controllingFieldValue>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>Invoicing</controllingFieldValue>
+            <controllingFieldValue>First Steps</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <controllingFieldValue>Reporting (my.ob)</controllingFieldValue>
+            <valueName>Billing / Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hardware</controllingFieldValue>
+            <controllingFieldValue>Stands &amp; Cases</controllingFieldValue>
+            <controllingFieldValue>Apple Devices</controllingFieldValue>
+            <controllingFieldValue>Printer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Cash Drawer &amp; Components</controllingFieldValue>
+            <controllingFieldValue>Cardreader</controllingFieldValue>
+            <valueName>Replacements</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

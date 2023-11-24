@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="ZuoraSyncController">
+    <aura:attribute name="ShowSpinner" type="Boolean" default="false"/>
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large"/>
+    </aura:if>
+    <lightning:card title="Zuora Integration">
+        <div style="text-align:center;">
+	        <lightning:button variant="brand" iconName="utility:download" label="Download Product Catalog" onclick="{!c.UpdateCatalog}"/>	
+        </div>
+    </lightning:card>
+</aura:component>

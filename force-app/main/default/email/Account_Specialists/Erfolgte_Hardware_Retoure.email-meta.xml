@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Hardware Austausch und Retouren</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AB DE Erfolgte Hardware Retoure</name>
+    <style>none</style>
+    <subject>Deine Hardware-Retoure ist abgeschlossen</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>3 DE - Closed tab not fully paid (PHOE-32)</name>
+    <style>none</style>
+    <subject>Deine Frage zu Deinem Gesamtumsatz</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

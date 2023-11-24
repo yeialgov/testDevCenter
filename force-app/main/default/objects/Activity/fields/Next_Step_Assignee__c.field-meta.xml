@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step_Assignee__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>https://jira.orderbird.com/browse/CDS-1095</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Should the Next step task be assigned to somebody else? Gets assigned to you if empty</inlineHelpText>
+    <label>Next Step Assignee</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Activities</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

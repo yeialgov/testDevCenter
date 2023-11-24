@@ -1,0 +1,12 @@
+.THIS.cardBtn{
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px 0 #dddbda;
+}
+.THIS.cardBtn:hover{
+    background-color: #dddbda;
+    cursor: pointer;
+}
+.THIS .clearCard {
+    background-color: transparent;
+}

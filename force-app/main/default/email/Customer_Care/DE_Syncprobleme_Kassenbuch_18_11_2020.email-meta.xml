@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Keine Datenübertragung von Barumsätzen in Kassenbuch am 18.11.2020</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Syncprobleme Kassenbuch - 18.11.2020</name>
+    <style>none</style>
+    <subject>Deine Anfrage bzgl. der Inkongruenz zwischen Kassenbuch und orderbird POS</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( CountryCode__c ,
+&quot;AL&quot;,&quot;Albania&quot;,
+&quot;AU&quot;,&quot;Australia&quot;,
+&quot;AT&quot;,&quot;Austria&quot;,
+&quot;BY&quot;,&quot;Belarus&quot;,
+&quot;BG&quot;,&quot;Bulgaria&quot;,
+&quot;CN&quot;,&quot;China&quot;,
+&quot;CR&quot;,&quot;Costa Rica&quot;,
+&quot;CY&quot;,&quot;Cyprus&quot;,
+&quot;CZ&quot;,&quot;Czech Republic&quot;,
+&quot;DK&quot;,&quot;Denmark&quot;,
+&quot;DO&quot;,&quot;Dominican Republic&quot;,
+&quot;EG&quot;,&quot;Egypt&quot;,
+&quot;EE&quot;,&quot;Estonia&quot;,
+&quot;FI&quot;,&quot;Finland&quot;,
+&quot;FR&quot;,&quot;France&quot;,
+&quot;GM&quot;,&quot;Gambia&quot;,
+&quot;DE&quot;,&quot;Germany&quot;,
+&quot;GH&quot;,&quot;Ghana&quot;,
+&quot;GR&quot;,&quot;Greece&quot;,
+&quot;GD&quot;,&quot;Grenada&quot;,
+&quot;GP&quot;,&quot;Guadeloupe&quot;,
+&quot;HU&quot;,&quot;Hungary&quot;,
+&quot;IS&quot;,&quot;Iceland&quot;,
+&quot;IN&quot;,&quot;India&quot;,
+&quot;IE&quot;,&quot;Ireland&quot;,
+&quot;IT&quot;,&quot;Italy&quot;,
+&quot;LI&quot;,&quot;Liechtenstein&quot;,
+&quot;LU&quot;,&quot;Luxembourg&quot;,
+&quot;MY&quot;,&quot;Malaysia&quot;,
+&quot;MT&quot;,&quot;Malta&quot;,
+&quot;MX&quot;,&quot;Mexico&quot;,
+&quot;ME&quot;,&quot;Montenegro&quot;,
+&quot;NL&quot;,&quot;Netherlands&quot;,
+&quot;NO&quot;,&quot;Norway&quot;,
+&quot;PE&quot;,&quot;Peru&quot;,
+&quot;PH&quot;,&quot;Philippines&quot;,
+&quot;PL&quot;,&quot;Poland&quot;,
+&quot;RO&quot;,&quot;Romania&quot;,
+&quot;RU&quot;,&quot;Russian Federation&quot;,
+&quot;SG&quot;,&quot;Singapore&quot;,
+&quot;ES&quot;,&quot;Spain&quot;,
+&quot;LK&quot;,&quot;Sri Lanka&quot;,
+&quot;SZ&quot;,&quot;Swaziland&quot;,
+&quot;SE&quot;,&quot;Sweden&quot;,
+&quot;CH&quot;,&quot;Switzerland&quot;,
+&quot;TH&quot;,&quot;Thailand&quot;,
+&quot;TR&quot;,&quot;Turkey&quot;,
+&quot;UA&quot;,&quot;Ukraine&quot;,
+&quot;AE&quot;,&quot;United Arab Emirates&quot;,
+&quot;GB&quot;,&quot;United Kingdom&quot;,
+&quot;US&quot;,&quot;United States&quot;,
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Country</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

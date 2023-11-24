@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Batch__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(isblank(OldBatch__c),
+IF(
+Batch__c=&quot;Batch1&quot; || Batch__c=&quot;Batch2&quot; || AND(
+Batch__c=&quot;Batch7&quot;,NOT(ISBLANK(FirstInvoiceDate__c))
+|| AND(
+Batch__c=&quot;Batch7&quot;,NOT(ISBLANK(Closed_Contract_Paid_Date__c))
+)
+),
+IF(
+AND(Batch__c=&quot;Batch7&quot;,NOT(ISBLANK(Closed_Contract_Paid_Date__c))),
+&quot;Batch3&quot;,
+IF(
+NOT(ISBLANK(DefaultPaymentMethod__r.BankTransferAccountNumberMask__c))
+&amp;&amp; DefaultPaymentMethod__r.BankTransferType__c = &quot;SEPA&quot;,
+&quot;Batch5&quot;,
+IF(
+Count_Wire_Transfers__c&gt;1
+||AND(Batch__c=&quot;Batch2&quot;,Last_Payment_Rollup__c),
+&quot;Batch3&quot;,
+IF(
+Batch__c&lt;&gt;&quot;Batch2&quot;,
+&quot;Batch2&quot;,
+IF(
+PaymentTerm__c=&quot;Due Upon Receipt&quot;
+|| ISBLANK(FirstInvoiceDate__c),
+&quot;&quot;,
+Batch__c
+)
+)
+)
+)
+),
+IF(
+Batch__c =&quot;Batch8&quot; || Batch__c =&quot;Batch9&quot;,
+IF(
+OR(Last_Payment_Rollup__c, Account_Balance_2__c &lt; 1,
+AND(Account_Balance_2__c &lt; 39,  DAY(TODAY()) = 10)),
+&quot;Batch5&quot;,
+&quot;&quot;
+),
+IF(
+PaymentTerm__c=&quot;Due Upon Receipt&quot; || ISBLANK(FirstInvoiceDate__c),
+&quot;&quot;,
+Batch__c
+)
+)
+),
+if(
+begins(OldBatch__c,&quot;x&quot;),&quot;Batch25&quot;,OldBatch__c
+))</formula>
+    <label>Target Batch</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

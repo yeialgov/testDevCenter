@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Needed for Intern in PaM</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Product_Test_Participation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Edit Product Test Accounts</label>
+</PermissionSet>

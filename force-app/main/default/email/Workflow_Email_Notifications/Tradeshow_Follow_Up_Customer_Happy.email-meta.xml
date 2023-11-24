@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/MESSE-63</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>Tradeshow Follow Up - Customer Happy</name>
+    <style>freeForm</style>
+    <subject>Danke für Deinen orderbird-Besuch auf der INTERGASTRA 2018</subject>
+    <textOnly>Lieber orderbird-Kunde,
+
+
+
+danke, dass Du Dir auf der diesjährigen INTERGASTRA Zeit für uns genommen hast. Es war wie immer schön Dich zu sehen.
+
+
+
+Als treuen Kunden möchten wir Dir deshalb ein besonderes Messeangebot machen:
+
+Sicher Dir jetzt unsere Lifetime-Lizenz und nutze orderbird 10 Jahre, zahle aber nur 4!
+
+
+
+Wichtige Info: Kennst Du außerdem schon unser Online-Handbuch? Unter support.orderbird.com findest Du viele spannende und hilfreiche Artikel rund um Deine orderbird-Kasse.
+
+
+
+Extra-Tipp: Bist Du schon für das kommende Saisongeschäft gerüstet? Nutze Funkbonieren von orderbird auf mehreren mobilen Geräten, um Deinen Gästen einen noch besseren Service zu bieten und Deinen Umsatz zu beflügeln. Willst Du mehr erfahren? Dann melde Dich einfach unter hilfe@orderbird.com.
+
+
+
+
+Viele Grüße
+
+
+Dein orderbird-Support-Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

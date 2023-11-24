@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Documents__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+Opportunity.Account.BillingCountryCode__c = &quot;DE&quot; &amp;&amp;
+Opportunity.NewBusiness__c,
+
+
+IF(ISBLANK( Opportunity.Account.Registration_certificate_chk__c ),
+IF(ISBLANK( Opportunity.Account.Registration_certificate__c ),IMAGE(&quot;http://tiny.cc/ym7ekz&quot;,&quot;Missing&quot;,12,12),IMAGE(&quot;http://tiny.cc/0d8ekz&quot;,&quot;Unconfirmed&quot;,12,12))
++&quot; Registration Certificate&quot;+BR(),&quot;&quot;)
+
++
+
+IF(Pay_by_Instalment__c &amp;&amp; ISBLANK( Opportunity.Account.Instalment_Contract_chk__c ),
+IF(ISBLANK( Opportunity.Account.Instalment_Contract__c ),IMAGE(&quot;http://tiny.cc/ym7ekz&quot;,&quot;Missing&quot;,12,12),IMAGE(&quot;http://tiny.cc/0d8ekz&quot;,&quot;Unconfirmed&quot;,12,12))
++&quot; Instalment Contract&quot;+BR(),&quot;&quot;)
+
++
+
+IF(Pay_by_Instalment__c &amp;&amp; ISBLANK( Opportunity.Account.Credit_Check_chk__c ),
+IF(ISBLANK( Opportunity.Account.Credit_Check__c ),IMAGE(&quot;http://tiny.cc/ym7ekz&quot;,&quot;Missing&quot;,12,12),IMAGE(&quot;http://tiny.cc/0d8ekz&quot;,&quot;Unconfirmed&quot;,12,12))
++&quot; Credit Check&quot;+BR(),&quot;&quot;)
+
++
+
+IF(Pay_by_Instalment__c &amp;&amp; ISBLANK( Opportunity.Account.Id_Card_chk__c ),
+IF(ISBLANK( Opportunity.Account.Id_Card__c ),IMAGE(&quot;http://tiny.cc/ym7ekz&quot;,&quot;Missing&quot;,12,12),IMAGE(&quot;http://tiny.cc/0d8ekz&quot;,&quot;Unconfirmed&quot;,12,12))
++&quot; Id Card&quot;+BR(),&quot;&quot;)
+
++
+
+IF(( (NOT(WireFirstPayment__c) &amp;&amp; TEXT(PaymentMethod__c) = &quot;Bank Transfer&quot;) || Contains_Recurring_Items__c) &amp;&amp; ISBLANK( Opportunity.Account.SEPA_Mandate_chk__c ),
+IF(ISBLANK( Opportunity.Account.SEPA_Mandate__c ),IMAGE(&quot;http://tiny.cc/ym7ekz&quot;,&quot;Missing&quot;,12,12),IMAGE(&quot;http://tiny.cc/0d8ekz&quot;,&quot;Unconfirmed&quot;,12,12))
++&quot; SEPA Mandate&quot;+BR(),&quot;&quot;)
+
+,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Required Documents</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

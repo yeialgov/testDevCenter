@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LAC_Shorthand__c</fullName>
+    <description>Stakeholder: CDS, BI, MKT, Sales https://jira.orderbird.com/browse/CDS-138</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the relevant Lead Attribution Combo. If it is not on the list use the field LAC ID</inlineHelpText>
+    <label>LAC Shorthand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>LAC_Shorthands</valueSetName>
+    </valueSet>
+</CustomField>

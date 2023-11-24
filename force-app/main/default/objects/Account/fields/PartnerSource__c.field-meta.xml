@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerSource__c</fullName>
+    <description>Stakeholder: PaM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How has a partner heard about our partner programs? Filled manually during call. Managed by PaM</inlineHelpText>
+    <label>Partner Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ETL RS_2016</fullName>
+                <default>false</default>
+                <label>ETL RS_2016</label>
+            </value>
+            <value>
+                <fullName>Trade Show INTERGASTRA 2016 Stuttgart</fullName>
+                <default>false</default>
+                <label>Trade Show INTERGASTRA 2016 Stuttgart</label>
+            </value>
+            <value>
+                <fullName>Trade Show INTERNORGA 2016 Hamburg</fullName>
+                <default>false</default>
+                <label>Trade Show INTERNORGA 2016 Hamburg</label>
+            </value>
+            <value>
+                <fullName>Trade Show IGEHO 2015 Basel</fullName>
+                <default>false</default>
+                <label>Trade Show IGEHO 2015 Basel</label>
+            </value>
+            <value>
+                <fullName>Field Agent Network ob</fullName>
+                <default>false</default>
+                <label>Field Agent Network ob</label>
+            </value>
+            <value>
+                <fullName>Online Research</fullName>
+                <default>false</default>
+                <label>Online Research</label>
+            </value>
+            <value>
+                <fullName>pepperbill</fullName>
+                <default>false</default>
+                <label>pepperbill</label>
+            </value>
+            <value>
+                <fullName>facebook</fullName>
+                <default>false</default>
+                <label>facebook</label>
+            </value>
+            <value>
+                <fullName>Personal Contact</fullName>
+                <default>false</default>
+                <label>Personal Contact</label>
+            </value>
+            <value>
+                <fullName>Airfy</fullName>
+                <default>false</default>
+                <label>Airfy</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Other Partner</fullName>
+                <default>false</default>
+                <label>Other Partner</label>
+            </value>
+            <value>
+                <fullName>Acquisition by orderbird Partner Management</fullName>
+                <default>false</default>
+                <label>Acquisition by orderbird Partner Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

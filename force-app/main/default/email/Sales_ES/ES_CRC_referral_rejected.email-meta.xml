@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - CRC referral rejected</name>
+    <style>freeForm</style>
+    <subject>Tu recomendación para el programa de clientes orderbird- promocionan a- clientes</subject>
+    <textOnly>www.orderbird.com
+ayuda@orderbird.com
++34911680466
+
+
+Estimado/a cliente de orderbird,
+
+Desgraciadamente no podemos admitir el contacto que nos has remitido a nuestro programa de clientes- promocionan a- clientes. Ya nos hemos puesto en contacto anteriormente con {!Account.Name}. Te adjuntamos a continuación el párrafo correspondiente:
+
+Te pedimos comprensión, ya que solamente se podrá conceder esta bonificación en el caso que nos hayas notificado y hecho llegar toda la información acerca del interesado y en los últimos seis meses no haya recibido ningún tipo de respuesta por nuestra parte ni personal ni por teléfono. Asimismo, para que se haga efectiva la venta el interesado tendrá seis meses para incluir sus datos de contacto. Pasado este período vencerá la posibilidad de que se le conceda dicha bonificación.
+
+Si tienes cualquier pregunta no dudes en llamarnos o envíanos un email a ayuda@orderbird.com. Nos encantaría recibir noticias tuyas pronto y quién sabe; ¿ya tienes a alguien que pueda estar interesado?
+
+Muchas gracias y saludos cordiales,
+
+Tu equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_POS_mandatory</fullName>
+    <active>true</active>
+    <description>https://jira.orderbird.com/browse/SFDC-1403</description>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+
+ISCHANGED(StageName),
+ISPICKVAL(StageName , &quot;Closed Lost&quot;),
+ISPICKVAL(  AlternativePOS__c  , &quot;&quot;),
+RecordTypeId = &apos;01258000000QiNRAA0&apos; /*Opportunity open RT*/
+
+)</errorConditionFormula>
+    <errorDisplayField>AlternativePOS__c</errorDisplayField>
+    <errorMessage>Alternative POS cannot be left blank!</errorMessage>
+</ValidationRule>

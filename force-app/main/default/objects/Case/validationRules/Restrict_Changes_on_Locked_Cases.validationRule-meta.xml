@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Changes_on_Locked_Cases</fullName>
+    <active>true</active>
+    <description>Case Close Date &gt; 7 days in the past triggers Locked Case Checkbox and restricts any updates on the Case record.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+NOT(ISCHANGED( Open_Issues_Count__c )),
+NOT(ISCHANGED( CaseSolutionCount__c )),
+NOT(ISCHANGED(  Subject )),
+$User.UserRoleId != &apos;00E58000000bx0z&apos;, 
+$User.UserRoleId != &apos;00E58000000bx1T&apos;,  
+OR(
+AND(
+  TODAY() - DATEVALUE( ClosedDate ) &gt;= 7,
+  IsClosed),
+  LockCase__c=TRUE)
+)</errorConditionFormula>
+    <errorMessage>Case Edit Restricted (7 Days after Case Close Date).</errorMessage>
+</ValidationRule>

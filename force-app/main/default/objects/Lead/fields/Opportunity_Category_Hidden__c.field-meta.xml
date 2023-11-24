@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Category_Hidden__c</fullName>
+    <description>CDS-1827</description>
+    <externalId>false</externalId>
+    <label>Opportunity Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Business</fullName>
+                <default>true</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>MINI by orderbird</fullName>
+                <default>false</default>
+                <label>MINI by orderbird</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

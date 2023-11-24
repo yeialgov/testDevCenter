@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terminal_operator_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )),
+
+ISCHANGED( ExistingCardTerminal__c ),
+
+NOT(ISPICKVAL( ExistingCardTerminal__c  , &quot;none&quot;)),
+NOT(ISPICKVAL( ExistingCardTerminal__c  , &quot;dont know&quot;)),
+
+ISPICKVAL(  Terminal_Operator__c , &quot;&quot;)
+
+)</errorConditionFormula>
+    <errorDisplayField>Terminal_Operator__c</errorDisplayField>
+    <errorMessage>Please specify the Terminal Operator!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kündigungen Vertrag</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>3 DE - Cashbook - Void successful</name>
+    <style>none</style>
+    <subject>Erfolgreiche Stornierung Deines Kassenbuchs</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

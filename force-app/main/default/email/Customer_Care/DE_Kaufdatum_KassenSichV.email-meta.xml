@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Kaufdatum KassenSichV</name>
+    <style>none</style>
+    <subject>So findest Du das Kaufdatum Deiner Kasse für die KassenSichV heraus</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

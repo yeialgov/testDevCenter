@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send out by SDRs after setting up a demo with the prospect for sales</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>DE 2.0 - Live Demo confirmation - SDR</name>
+    <relatedEntityType>Opportunity</relatedEntityType>
+    <style>none</style>
+    <subject>Terminbestätigung für Deine orderbird Live-Demo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

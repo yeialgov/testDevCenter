@@ -180,7 +180,24 @@
     <tabs>standard-Case</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Lead</tabs>
+    <tabs>standard-Knowledge</tabs>
+    <tabs>Payment__c</tabs>
+    <tabs>CaseSolution__c</tabs>
+    <tabs>Trade_Show_Form__c</tabs>
+    <tabs>Work_Order__c</tabs>
     <workspaceConfig>
+        <mappings>
+            <tab>CaseSolution__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Payment__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Trade_Show_Form__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Work_Order__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>
@@ -191,6 +208,9 @@
         <mappings>
             <fieldName>AccountId</fieldName>
             <tab>standard-Contact</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Knowledge</tab>
         </mappings>
         <mappings>
             <tab>standard-Lead</tab>

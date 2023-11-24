@@ -1,0 +1,92 @@
+<apex:page controller="taskListView" tabStyle="Task" sidebar="false">
+    <style>
+        .XLink {
+            color: #015ba7 !important; 
+            font-weight: normal; 
+            text-decoration: none;
+        }
+        .XLink:hover {
+            text-decoration: underline;
+        }
+        .redText {
+            color: #900;
+        }
+        .fntNormal {
+            font-size: 100% !important;
+        }
+    </style>
+    <apex:includeScript value="/support/console/41.0/integration.js"/>
+        <apex:form >
+            <apex:actionFunction name="rangeChange" action="{!rangeQuery}" rerender="pbt">
+                <apex:param name="firstParam" assignTo="{!dateRange}" value=""/>
+            </apex:actionFunction> 
+            <apex:actionFunction name="closeTask" action="{!taskClose}" rerender="pbt">
+                <apex:param name="taskId" assignTo="{!taskToClose}" value=""/>
+            </apex:actionFunction>
+            <apex:pageBlock >
+                <apex:facet name="header">
+                    <div class="pbHeader">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td class="pbTitle">
+                                        <img src="/img/s.gif" alt="" width="1" height="1" class="minWidth" title=""/>
+                                        &nbsp;<h3>My Tasks</h3>
+                                    </td>
+                                    <td class="pbButton">
+                                        <input value=" New " class="btn" name="newTask" onclick="sforce.console.openPrimaryTab(null, '/00T/e', true);" title="New Task" type="button"/>
+                                    </td>
+                                    <td class="pbHelp">
+                                        <select class="fntNormal" onchange="rangeChange(this.value);return false;">
+                                            <option value="Today + Overdue">Today + Overdue</option>
+                                            <option value="Overdue">Overdue</option>
+                                            <option value="Today">Today</option>
+                                            <option value="Tomorrow">Tomorrow</option>
+                                            <option value="Next 7 Days">Next 7 Days</option>
+                                            <option value="Next 7 Days + Overdue">Next 7 Days + Overdue</option>
+                                            <option value="This Month">This Month</option>
+                                            <option value="All Open">All Open</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </apex:facet>
+                <apex:pageBlockTable id="pbt" value="{!tasks}" var="t">
+                    <apex:column headerValue="Complete">
+                        <a href="#" onclick="closeTask('{!t.Id}');" class="XLink">X</a>
+                    </apex:column>
+                    <apex:column headerValue="Due Date">
+                        <apex:outputPanel rendered="{!t.ActivityDate != null}" layout="none">
+                            <apex:outputText value="{0, date, dd.MM.yyyy}" styleClass="{!IF(t.ActivityDate < TODAY(),'redText','')}">
+                                <apex:param value="{!t.ActivityDate}"/>
+                            </apex:outputText>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="Reminder Date/Time">
+                        <apex:outputPanel rendered="{!t.ReminderDateTime != null}" layout="none">
+                            <apex:outputText value="{0, date, dd.MM.yyyy HH.mm}" styleClass="{!IF(t.ReminderDateTime < NOW(),'redText','')}">
+                                <apex:param value="{!t.ReminderDateTime+(1/24)}"/>
+                            </apex:outputText>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <!--<apex:column value="{!t.Status}"/>-->
+                    <apex:column headerValue="Subject">
+                        <a href="#" onclick="sforce.console.openPrimaryTab(null, '/{!t.Id}', true);">{!t.Subject}</a>
+                    </apex:column>
+                    <apex:column headerValue="Related To">
+                        <a href="#" onclick="sforce.console.openPrimaryTab(null, '/{!t.WhatId}', true);">{!t.What.Name}</a>
+                    </apex:column>
+                    <apex:column headerValue="Account">
+                        <a href="#" onclick="sforce.console.openPrimaryTab(null, '/{!t.AccountId}', true);">{!t.Account.Name}</a>
+                    </apex:column>
+                    <apex:column headerValue="Lead/Contact">
+                        <a href="#" onclick="sforce.console.openPrimaryTab(null, '/{!t.WhoId}', true);">{!t.Who.Name}</a>
+                    </apex:column>
+                    <apex:column value="{!t.Activity_Type__c}"/>
+                    <apex:column value="{!t.Type__c}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:form>
+</apex:page>

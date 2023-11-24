@@ -1,0 +1,241 @@
+<aura:component controller="NewQuoteController">
+    
+    <!--aura:handler name="init" value="{!this}" action="{!c.doInit}"/-->
+    <aura:handler name="change" value="{!v.Currency}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.Quote}" action="{!c.SetQuote}"/>
+    <aura:handler name="change" value="{!v.isAcctMgmt}" action="{!c.SetQuote}"/>
+    <aura:handler event="c:NewQuoteItem" action="{!c.handleApplicationEvent}"/>
+    <aura:handler event="c:QuoteButtonSave" action="{!c.saveButton}"/>
+
+    <lightning:navigation aura:id="navService"/>   
+    
+    <aura:registerEvent name="appEvent" type="c:PayByInstalment"/>
+    
+    <aura:attribute name="PresetValue" type="String" default=""/>
+    <aura:attribute name="Currency" type="String" default=""/>
+    <aura:attribute name="Data" type="Object"/>
+    <aura:attribute name="DataStr" type="String"/>
+    <aura:attribute name="Opportunity" type="Object"/>
+    <aura:attribute name="PriceMap" type="Object"/>
+    <aura:attribute name="BundleMap" type="Object"/>
+    <aura:attribute name="QuoteWarnings" type="List"/>
+    <aura:attribute name="OneTime" type="Double" default="0.0"/>
+    <aura:attribute name="Recurring" type="Double" default="0.0"/>
+    <aura:attribute name="Subtotal" type="Double" default="0.0"/>
+    <aura:attribute name="VAT" type="Double" default="0.0"/>
+    <aura:attribute name="Total" type="Double" default="0.0"/>
+    <aura:attribute name="QuoteId" type="String" />
+    <aura:attribute name="Quote" type="Object" />
+    <aura:attribute name="AccountId" type="String" />
+    <aura:attribute name="Account" type="Object" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="isAcctMgmt" type="Boolean" default="false"/>
+    <aura:attribute name="IsAmendment" type="Boolean" default="true"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.QuoteId}"
+                      fields="Id,Account.BillingCountry,Account.ShippingCountry,Account.CurrencyIsoCode,Account.ZuoraId__c,InvoiceDate__c,ContractEffectiveDate__c,POS_Start_Date__c,ExpirationDate,WireFirstPayment__c,Pay_by_Instalment__c,PaymentMethod__c,PayPalLink__c"
+                      targetFields="{!v.Quote}"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.AccountId}"
+                      fields="CurrencyIsoCode,ZuoraId__c,BillingCountry,ShippingCountry"
+                      targetFields="{!v.Account}"/>
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner/>
+    </aura:if>
+    
+    <c:QuoteBuilderWarning disp="{!or(v.Account.BillingCountry != v.Account.ShippingCountry,v.Quote.Account.BillingCountry != v.Quote.Account.ShippingCountry)}" 
+                           msg="Billing and Shipping Country do not match. Please discuss with Finance as this could cause accounting issues."/>
+    
+    <c:QuoteBuilderError disp="{!and(and(and(!v.Data.Details.WireFirstPayment,v.Subtotal>=4000),!v.IsAmendment),!v.Data.Details.PayByInstalment)}"
+                         msg="{!'Quotes over 4,000 ' + v.Currency + ' must select Wire First Payment.'}"/>
+    
+    <aura:iteration items="{!v.QuoteWarnings}" var="QW">
+        <c:QuoteBuilderWarning disp="{!and(QW.Flag__c, !QW.IsError__c)}" msg="{!QW.Message__c}"/>
+        <c:QuoteBuilderError disp="{!and(QW.Flag__c, QW.IsError__c)}" msg="{!QW.Message__c}"/>
+    </aura:iteration>
+    
+    <article class="slds-card slds-card_inner"  style="margin-right:1rem;border: 1px solid rgb(221, 219, 218);">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                        <lightning:icon class="blueIcon" iconName="standard:quotes"/>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-text-heading_small">Quote Summary <span style="text-size:65%;">({!v.Currency})</span></span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-scrollable_x">
+            <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col" style="">
+                            <div class="slds-truncate" title="Name">Item</div>
+                        </th>
+                        <th scope="col" style="text-align:right;">
+                            <div class="slds-truncate" title="Company">Qty</div>
+                        </th>
+                        <th scope="col" style="text-align:right;">
+                            <div class="slds-truncate" title="Title">Unit</div>
+                        </th>
+                        <th scope="col" style="text-align:right;">
+                            <div class="slds-truncate" title="Email">Total</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration var="item" items="{!v.Data.Items}">
+                        <tr class="slds-hint-parent">
+                            <th scope="col">
+                                <div class="slds-truncate">{!item.Name}</div>
+                            </th>
+                            <td style="text-align:right;">
+                                <aura:if isTrue="{!item.Num != null}">
+                                    <div class="slds-truncate">{!item.Num}</div>
+                                </aura:if>
+                            </td>
+                            <td style="text-align:right;">
+                                <aura:if isTrue="{!item.unitprice != null}">
+                                    <div class="slds-truncate"><ui:outputNumber value="{!item.unitprice}" format="#,##0.00"/></div>
+                                </aura:if>
+                            </td>
+                            <td style="text-align:right;">
+                                <aura:if isTrue="{!item.totalprice != null}">
+                                    <div class="slds-truncate"><ui:outputNumber value="{!item.totalprice}" format="#,##0.00"/></div>
+                                </aura:if>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                    <tr class="slds-hint-parent slds-is-selected">
+                        <th scope="col">One-time Charge</th>
+                        <th scope="col"/>
+                        <th scope="col"/>
+                        <td style="text-align:right;font-weight:700;">
+                            <div class="slds-truncate"><ui:outputNumber value="{!v.OneTime}" format="#,##0.00"/></div>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent slds-is-selected">
+                        <th scope="col">Recurring Charge</th>
+                        <th scope="col"/>
+                        <th scope="col"/>
+                        <td style="text-align:right;font-weight:700;">
+                            <div class="slds-truncate"><ui:outputNumber value="{!v.Recurring}" format="#,##0.00"/></div>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <th scope="col">Total</th>
+                        <th scope="col"/>
+                        <th scope="col"/>
+                        <td style="text-align:right;font-weight:700;">
+                            <div class="slds-truncate"><ui:outputNumber value="{!v.Subtotal}" format="#,##0.00"/></div>
+                        </td>
+                    </tr>
+                    <!--tr class="slds-hint-parent">
+                        <th scope="col">VAT 19%</th>
+                        <th scope="col"/>
+                        <th scope="col"/>
+                        <td style="text-align:right;font-weight:700;">
+                            <div class="slds-truncate"><ui:outputNumber value="{!v.VAT}" format="#,##0.00"/></div>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent slds-is-selected">
+                        <th scope="col">Total</th>
+                        <th scope="col"/>
+                        <th scope="col"/>
+                        <td style="text-align:right;font-weight:700;">
+                            <div class="slds-truncate"><ui:outputNumber value="{!v.Total}" format="#,##0.00"/></div>
+                        </td>
+                    </tr-->
+                </tbody>
+            </table>
+            <!--{!v.DataStr}-->
+        </div>
+    </article>
+    <div class="slds-grid slds-gutters slds-wrap" style="padding: 1rem 3rem 0;">
+        <div class="slds-col slds-size_1-of-2 padBot">
+            <lightning:helptext content="Relevant date for Hardware shipment (if payments are confirmed) and date printed on the invoice." />
+            <lightning:input type="date" label="Contract Effective Date" 
+                             value="{!v.Data.Details.ContractEffectiveDate}"
+                             onchange="{!c.DateChange}"/>
+        </div>
+        <div class="slds-col slds-size_1-of-2 padBot">
+            <lightning:helptext content="Date that indicates the date when the customer intents to start working with orderbird POS or WiFi (formerly POS Start Date). Cannot be before Contract Effective Date." />
+            <lightning:input type="date" label="Service Activation Date" 
+                             value="{!v.Data.Details.ServiceActivationDate}" 
+                             onchange="{!c.DateChange}"/>
+        </div>
+        <aura:if isTrue="{!!v.IsAmendment}">
+            <div class="slds-col slds-size_1-of-2 padBot">
+                <lightning:helptext content="How is the customer going to pay recurring fees? Bank transfer (orderbird charges, SEPA Mandate / Direct Debit) or Wire transfer (customer wires money)?" />
+                <lightning:select label="Payment Method" 
+                                  value="{!v.Data.Details.PaymentMethod}"
+                                  disabled="{!v.Data.Details.PayByInstalment}">
+                    <option value="Bank Transfer">Bank Transfer</option>
+                    <option value="Wire Transfer">Wire Transfer</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col slds-size_1-of-2 padBot">
+                <lightning:helptext content="Who is going to pay for the invoice? Default is the customer; alternatively our leasing partners Hofmann Leasing (Germany) and Leascorp (France)" />
+                <lightning:select label="Invoice Owner"
+                                  value="{!v.Data.Details.InvoiceOwner}">
+                    <option value="0">--Customer--</option>
+                    <option value="1">Hofmann Leasing</option>
+                    <option value="2">Leascorp</option>
+                    <option value="3">Other</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col slds-size_1-of-2 padBot">
+                <lightning:helptext content="Will the first payment be sent as Wire Transfer while the regular Payment Method is different? This is only for cases where the first payment needs to be verified quickly. Not possible with instalment!" />
+                <aura:if isTrue="{!v.Data.Details.PayByInstalment}">
+                    <aura:set attribute="else">
+                        <lightning:input type="checkbox" label="Wire First Payment"
+                                         checked="{!v.Data.Details.WireFirstPayment}"
+		                                 disabled="{!v.Data.Details.PayPalLink}"
+                                         onchange="{!c.WireFirstPayment}"/>
+                    </aura:set>
+                    <lightning:input type="checkbox" label="Wire First Payment"
+                                     checked="true"
+                                     disabled="true"/>
+                </aura:if>
+            </div>
+            <div class="slds-col slds-size_1-of-2 padBot">
+                <lightning:helptext content="Does the customer request to pay by three monthly instalments? This automatically adds the instalment fee to the quote. Only available with Bank transfer" />
+                <lightning:input type="checkbox" label="Pay by Instalment"
+                                 checked="{!v.Data.Details.PayByInstalment}"
+                                 onchange="{!c.PayByInstalEvent}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-2 padBot">
+                <lightning:helptext content="A link will be sent in the Quote PDF that enables the customer to use PayPal as payment method." />
+                <lightning:input type="checkbox" label="Enable PayPal Link"
+                                 disabled="{!!v.Data.Details.WireFirstPayment}"
+                                 checked="{!v.Data.Details.PayPalLink}"
+                                 onchange="{!c.PayByPayPal}"/>
+            </div>
+        </aura:if>
+        <div class="slds-col slds-size_1-of-2 padBot">
+            <lightning:helptext content="Defines the date on which orderbird's offer expires. Default is one month. Quotes may be accepted after this date if terms and prices are still valid." />
+            <lightning:input type="date" label="Quote Expiration Date"
+                             value="{!v.Data.Details.ExpirationDate}" 
+                             onchange="{!c.DateChange}"/>
+        </div>
+    </div>
+    
+    <c:QuoteBuilderWarning disp="{!or(v.Account.BillingCountry != v.Account.ShippingCountry,v.Quote.Account.BillingCountry != v.Quote.Account.ShippingCountry)}" 
+                           msg="Billing and Shipping Country do not match. Please discuss with Finance as this could cause accounting issues."/>
+    
+    <c:QuoteBuilderError disp="{!and(and(and(!v.Data.Details.WireFirstPayment,v.Subtotal>=4000),!v.IsAmendment),!v.Data.Details.PayByInstalment)}"
+                         msg="{!'Quotes over 4,000 ' + v.Currency + ' must select Wire First Payment.'}"/>
+    
+    <aura:iteration items="{!v.QuoteWarnings}" var="QW">
+        <c:QuoteBuilderWarning disp="{!and(QW.Flag__c, !QW.IsError__c)}" msg="{!QW.Message__c}"/>
+        <c:QuoteBuilderError disp="{!and(QW.Flag__c, QW.IsError__c)}" msg="{!QW.Message__c}"/>
+    </aura:iteration>
+    
+</aura:component>

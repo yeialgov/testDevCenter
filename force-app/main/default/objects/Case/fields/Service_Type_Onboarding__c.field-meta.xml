@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type_Onboarding__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What part of onboarding is this issue about? It is usually pre-filled.</inlineHelpText>
+    <label>Type (Onboarding)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cardreader Config</fullName>
+                <default>false</default>
+                <label>Cardreader Config</label>
+            </value>
+            <value>
+                <fullName>Menue / Backup</fullName>
+                <default>false</default>
+                <label>Menue / Backup</label>
+            </value>
+            <value>
+                <fullName>My.Ob Setup</fullName>
+                <default>false</default>
+                <label>My.Ob Setup</label>
+            </value>
+            <value>
+                <fullName>Service Staff Briefing</fullName>
+                <default>false</default>
+                <label>Service Staff Briefing</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Welcome Call</fullName>
+                <default>true</default>
+                <label>Welcome Call</label>
+            </value>
+            <value>
+                <fullName>Wrap Up</fullName>
+                <default>false</default>
+                <label>Wrap Up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

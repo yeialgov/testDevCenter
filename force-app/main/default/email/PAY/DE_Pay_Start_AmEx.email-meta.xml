@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Start with American Express</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Pay Start AmEx</name>
+    <style>none</style>
+    <subject>orderbird Pay: Leg los mit American Express</subject>
+    <textOnly>Du kannst loslegen!
+
+Die Kartenzahlung mit American Express ist ab sofort für Dich freigeschaltet!
+
+
+Überflieger
+
+Diese sind Deine nächsten Schritte, um mit der Kartenzahlungen schnell durchzustarten:
+
+Schließe die aktuelle Schicht.
+Schließe orderbird.
+Verbinde Deinen Kartenleser per Bluetooth mit Deinem iPad.
+Öffne eine neue Schicht und mache eine Testbuchung mit der Zahlungsart &quot;Kartenzahlung&quot;.
+Stelle die Rechnung aus dem Rechnungsarchiv wieder her.
+
+ACHTUNG: Beim Wiederherstellen einer Rechnung, die auf Kartenzahlung abgeschlossen wurde, wird der komplette Betrag automatisch zurücküberwiesen! Zur erneuten Abrechnung, auch mit derselben Karte, brauchst Du zwingend wieder eine Karte oder das Bargeld!
+
+
+Ausführlich Informationen zu den einzelnen Schritte bekommst Du hier: Schritt 5.3: Kartenleser koppeln und gleich loslegen mit einer Testbuchung.
+
+Unser Partner American Express
+
+American Express Kreditkarten sind bei Privat- und Geschäftskunden weltweit beliebt. Das zeigen überdurchschnittliche Umsätze und der häufige Karteneinsatz.
+
+Restaurants und kleine Händler unterstützt American Express mit besonderen Konditionen und kostenfreiem Marketing.
+
+Schon gewusst: Das Serviceentgelt ist einheitlich für alle Kartenarten und Kosten entstehen nur bei tatsächlicher Nutzung!
+
+Solltest Du noch Fragen oder Anregungen haben, freue ich mich von Dir zu hören.
+
+
+Vielen Dank und liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

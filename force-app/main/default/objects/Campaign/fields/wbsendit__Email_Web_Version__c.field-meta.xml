@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>wbsendit__Email_Web_Version__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Web version of the email campaign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Web version of the email campaign.</inlineHelpText>
+    <label>Email Web Version</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

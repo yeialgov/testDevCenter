@@ -1,0 +1,94 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" 
+                controller="PortalController" access="global" >
+    <aura:attribute name="token" type="String" access="global"/>
+    <aura:attribute name="Data" type="Object" />
+    <aura:attribute name="HasError" type="Boolean" default="false"/>
+    <aura:attribute name="beta" type="String" default="false"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="FailCount" type="Integer" default="0"/>
+    <ltng:require styles="{!$Resource.myob1}" />
+    <ltng:require styles="{!$Resource.myob2}" />
+    <ltng:require styles="{!$Resource.myob3}" />
+    <ltng:require styles="{!$Resource.myob4}" />
+    <ltng:require styles="{!$Resource.myob5}" />
+    <ltng:require styles="{!$Resource.myob6}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div style="overflow:hidden;margin-left: 0;">
+        <div class="row head">
+            <div class="col-md-12">
+                <h4>{!$Label.c.YOUR_ORDERBIRD_ACCOUNT}</h4>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.ShowSpinner}"><lightning:spinner size="large"/></aura:if>
+        <aura:if isTrue="{!v.HasError}">
+            <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                    <div class="flash_message flash_message-error">
+                        {!$Label.c.CANNOT_FIND_BILLING_INFO}
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.Data != null}">
+            <aura:if isTrue="{!v.Data.Account.Name != null}">
+                <c:PortalOptions token="{!v.token}" beta="{!v.beta}"/>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.Data.TokenWrapper.Expired}">
+                        <div class="row">
+                            <div class="col-sm-8 col-xs-12">
+                                <div class="flash_message flash_message-error">
+                                    {!$Label.c.SESSION_EXPIRED_MUST_REFRESH}
+                                </div>
+                            </div>
+                        </div>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.FailCount > 2}">
+                                <aura:set attribute="else">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-xs-12">
+                                            <div class="flash_message flash_message-info">
+                                                {!$Label.c.ONE_TIME_SECURITY_VERI}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-holder">
+                                        <div class="col-sm-8 col-xs-12">
+                                            <label class="ovrLabel control-label section-label">
+                                                {!$Label.c.VERIFICATION_ID}
+                                            </label>
+                                            <ui:inputText aura:id="custId" placeholder="456789 / INV01234567 / Q012345" class="form-control ovrTxtInput"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-xs-12">
+                                            {!$Label.c.TO_VERIFY_PLEASE_ENTER}&nbsp;<span style="font-weight:bold;font-style:underline;">{!$Label.c.ONE}</span>&nbsp;{!$Label.c.OF_THE_FOLLOWING}
+                                            <ul style="list-style-type:none;margin-left:1em;">
+                                                <li> ♦ {!$Label.c.YOUR}&nbsp;<b>{!$Label.c.CUSTOMER_ID}</b></li>
+                                                <li> ♦ {!$Label.c.ANY_PREVIOUS}&nbsp;<b>{!$Label.c.INVOICE_NUMBER}</b>&nbsp;{!$Label.c.ANY_PREVIOUS_1 == 'xx' ? '' : $Label.c.ANY_PREVIOUS_1}</li>
+                                                <li> ♦ {!$Label.c.ANY_PREVIOUS}&nbsp;<b>{!$Label.c.QUOTE_NUMBER}</b>&nbsp;{!$Label.c.ANY_PREVIOUS_2 == 'xx' ? '' : $Label.c.ANY_PREVIOUS_2}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-8 col-xs-12">
+                                            <lightning:button onclick="{!c.ConfirmCustomerId}" label="{!$Label.c.VERIFY}" class="btn btn-primary pull-right"/>
+                                        </div>
+                                    </div>
+                                </aura:set>
+                                <div class="row">
+                                    <div class="col-sm-8 col-xs-12">
+                                        <div class="flash_message flash_message-info">
+                                            {!$Label.c.CANNOT_VERIFY_CONTACT_SUPPORT}
+                                        </div>
+                                    </div>
+                                </div>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+    </div>
+    <!--/div-->
+</aura:component>

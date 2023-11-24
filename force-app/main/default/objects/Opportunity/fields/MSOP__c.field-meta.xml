@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MSOP__c</fullName>
+    <description>Stakeholder: PaM https://jira.orderbird.com/browse/CDS-27</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the opportunity fulfil all necessary requirements for MSOP? &quot;All-clear&quot; should only be set by Sales agent!</inlineHelpText>
+    <label>MSOP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All-Clear</fullName>
+                <default>false</default>
+                <label>All-Clear</label>
+            </value>
+            <value>
+                <fullName>Open METRO Opportunity Already Existing (Duplicate)</fullName>
+                <default>false</default>
+                <label>Open METRO Opportunity Already Existing (Duplicate)</label>
+            </value>
+            <value>
+                <fullName>Doesn&apos;t Speak Language</fullName>
+                <default>false</default>
+                <label>Doesn&apos;t Speak Language</label>
+            </value>
+            <value>
+                <fullName>Wrong Branch</fullName>
+                <default>false</default>
+                <label>Wrong Branch</label>
+            </value>
+            <value>
+                <fullName>Activity Within The Last 90 Days</fullName>
+                <default>false</default>
+                <label>Activity Within The Last 90 Days</label>
+            </value>
+            <value>
+                <fullName>Customer Within The Last 6 Months</fullName>
+                <default>false</default>
+                <label>Customer Within The Last 6 Months</label>
+            </value>
+            <value>
+                <fullName>Wrong Number/Email</fullName>
+                <default>false</default>
+                <label>Wrong Number/Email</label>
+            </value>
+            <value>
+                <fullName>Unreachable</fullName>
+                <default>false</default>
+                <label>Unreachable</label>
+            </value>
+            <value>
+                <fullName>No Interest</fullName>
+                <default>false</default>
+                <label>No Interest</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

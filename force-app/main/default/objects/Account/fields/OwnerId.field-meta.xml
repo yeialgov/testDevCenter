@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>OwnerId</fullName>
+    <inlineHelpText>Who is the primary or last active orderbird representative in charge of correspondence with the account. Usually this means a sales rep for potential customers or an account manager for paying customers. Only to be changed by authorized personal</inlineHelpText>
     <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <type>Lookup</type>
 </CustomField>

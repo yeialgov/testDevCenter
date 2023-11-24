@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Status_of_Reopened_Cases</fullName>
+    <active>true</active>
+    <description>Validates that the case Status is “Re-opened” when a closed case is
+opened again.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+ISCHANGED( Status ),
+OR(
+ISPICKVAL(PRIORVALUE( Status ), &quot;Closed&quot;),
+ISPICKVAL(PRIORVALUE( Status ),
+&quot;Closed - Not Solved&quot;)),
+NOT( ISPICKVAL( Status, &quot;Re-Open&quot;))
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Closed case can only be changed to “Re-Open&quot;.</errorMessage>
+</ValidationRule>

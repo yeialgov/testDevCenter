@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates an opportunity for bampora pay onboarding</description>
+    <fieldOverrides>
+        <field>CloseDate</field>
+        <formula>TODAY() + 30</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Name</field>
+        <formula>&apos;x&apos;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>OppCategory__c</field>
+        <literalValue>Account Management</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Opportunity_type_1__c</field>
+        <literalValue>pay onboarding</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>OwnerId</field>
+        <formula>Account.AccountManager__c</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Process_Trigger_Date__c</field>
+        <formula>TODAY()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Process_Trigger_Text__c</field>
+        <formula>&quot;New Onboarding Opp&quot;</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>StageName</field>
+        <literalValue>Potential</literalValue>
+    </fieldOverrides>
+    <label>New Pay Onboarding</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>OwnerId</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Alternative_Opp_Owner__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <successMessage>A new Opportunity has successfully been created</successMessage>
+    <targetObject>Opportunity</targetObject>
+    <targetParentField>Account</targetParentField>
+    <targetRecordType>Opportunity.Open_AccM</targetRecordType>
+    <type>Create</type>
+</QuickAction>

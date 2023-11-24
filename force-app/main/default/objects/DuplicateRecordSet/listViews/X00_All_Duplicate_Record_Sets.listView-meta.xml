@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X00_All_Duplicate_Record_Sets</fullName>
+    <columns>CreatedDate</columns>
+    <columns>DuplicateRule</columns>
+    <columns>Name</columns>
+    <columns>RecordCount</columns>
+    <columns>LastModifiedDate</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordCount</field>
+        <operation>greaterThan</operation>
+        <value>1</value>
+    </filters>
+    <label>00 All Duplicate Record Sets</label>
+</ListView>

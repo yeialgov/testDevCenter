@@ -1,0 +1,5 @@
+CRM Team Go!
+
+New MINI Account with yearly license spotted:
+{!Account.CustomerID__c} {!Account.Link}
+Serial number: {!Account.Serial_Number__c}

@@ -1,0 +1,106 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" >
+
+    <aura:attribute name="Account" type="Object" />
+    <aura:attribute name="Opportunity" type="Object" />
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="Cockpit" type="Object" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="closeModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="hV" type="String" default="50" />
+    <aura:attribute name="vV" type="String" default="50" />
+    <aura:attribute name="hC" type="String" default="FD5F00" />
+    <aura:attribute name="vC" type="String" default="FD5F00" />
+    
+    
+    <aura:if isTrue="{!v.sObjectName == 'Account'}">
+        <force:recordData aura:id="recordLoader1"
+                          recordId="{!v.recordId}"
+                          fields="Id,Name,Account_Status__c,Onboard_Status__c,RecordType.Name,Age__c,Subscription_Count__c,LeadSource__c,Value_Score__c,Health_Score__c"
+                          targetFields="{!v.Account}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Opportunity'}">
+        <force:recordData aura:id="recordLoader2"
+                          recordId="{!v.recordId}"
+                          fields="Id,AccountId"
+                          targetFields="{!v.Opportunity}"
+                          recordUpdated="{!c.reloadRL3}"/>
+        <force:recordData aura:id="recordLoader3"
+                          recordId="{!v.Opportunity.AccountId}"
+                          fields="Id,Name,Account_Status__c,Onboard_Status__c,RecordType.Name,Age__c,Subscription_Count__c,LeadSource__c,Value_Score__c,Health_Score__c"
+                          targetFields="{!v.Account}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <div class="slds-panel">
+        <div class="slds-panel__section slds-grid slds-wrap" style="background-color: #064369;border-bottom: 3px solid #00A3E0;">
+            <div>
+                <img src="{!$Resource.ob_bbg2}" style="height:4.75rem;padding-right:1rem;"/> 
+            </div>
+            <div class="slds-col slds-truncate_container_33">
+                <div class="nameTitle slds-truncate" style="font-family: 'Comfortaa';">
+                    {!v.Cockpit.Name}
+                </div>
+                <div class="slds-text-title_caps" style="color: #1ba3dd;">
+                    {!v.Cockpit.Status}
+                </div>
+            </div>
+            <div class="slds-col" style="transform: skewX(-30deg); background-color: #fdfdfd; margin: -1rem 15% -1rem 1rem; height: 7.125rem;">
+                <div style="transform: skewX(30deg); color: #064369; height:100%;">
+                    <div class="slds-text-heading_small slds-text-align_center" 
+                         style="margin: 2.3125rem 0 0 1.73rem; text-align: center;">
+                        <!--aura:iteration items="{!v.Cockpit.Lines}" var="Line">
+                        	<p>{!Line}</p>
+                        </aura:iteration-->
+                    </div>
+                </div>
+            </div>
+            <!--c:AccountGauge Label="Value" Value="13" Color="DD0048"/>
+            <c:AccountGauge Label="Health" Value="95" Color="32CD32"/-->
+            <!--c:AccountGauge Label="Value" ValueScore="{!v.Account.Value_Score__c}" Color="32CD32"/>
+            <c:AccountGauge Label="Health" ValueScore="{!v.Account.Health_Score__c}" Color="{!v.hC}"/-->
+            <!--div class="slds-col" style="font-family: 'Orbitron'; color: #DD0048;">
+                <div class="clickMe" style="border-radius: 4rem; border: 0.5rem solid #DD0048;text-align:center;width:5.75rem;">
+                    <p style="margin:1rem 0 0;padding:0;font-size:2rem;line-height:1.5rem;">13</p>
+                    <p style="margin:0 0 0.5rem;padding:0;color:white;font-size:0.75rem;">Value</p>
+                </div>    
+            </div>
+            <div class="slds-col" style="font-family: 'Orbitron'; color: #32CD32;">
+                <div class="clickMe" style="border-radius: 4rem; border: 0.5rem solid #32CD32;text-align:center;width:5.75rem;" onclick="{!c.HealthClick}">
+                    <p style="margin:1rem 0 0;padding:0;font-size:2rem;line-height:1.5rem;">95</p>
+                    <p style="margin:0 0 0.5rem;padding:0;color:white;font-size:0.75rem;">Health</p>
+                </div>    
+            </div-->
+        </div>
+        <!--aura:if isTrue="{!v.closeModalOpen}">
+            <div style="background-color: #064369; border-bottom: 3rem solid #32CD32; text-align:center; ">
+                <img src="{!$Resource.sample1}" style="padding: 2rem 30%;width:100%;"/>
+                <img src="{!$Resource.sample2}" style="padding: 2rem 30%;width:100%;"/>
+            </div>
+        </aura:if-->
+    </div>
+    
+    <!--
+    <aura:if isTrue="{!v.closeModalOpen}">
+        <div>
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" style="margin-top: 4rem;">
+                    <header class="slds-modal__header">
+                        <lightning:button iconName="utility:close" variant="bare"
+                                          class="modalClose slds-button slds-button_icon slds-modal__close slds-button_icon-inverse slds-button_icon-large"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal Header</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis. Cillum sunt ad dolore
+                            quis aute consequat ipsum magna exercitation reprehenderit magna. Tempor cupidatat consequat elit dolor adipisicing.</p>
+                        <p>Dolor eiusmod sunt ex incididunt cillum quis nostrud velit duis sit officia. Lorem aliqua enim laboris do dolor eiusmod officia. Mollit incididunt nisi consectetur esse laborum eiusmod pariatur proident. Eiusmod et adipisicing culpa deserunt nostrud
+                            ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>    
+    </aura:if>
+-->
+</aura:component>

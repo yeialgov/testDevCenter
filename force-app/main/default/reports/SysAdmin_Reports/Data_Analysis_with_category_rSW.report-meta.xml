@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_93437272</developerName>
+        <masterLabel>Product Categ</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>SubscriptionLineItem__c.Product_category__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>7 A POS Service License</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 D POS Service License France</sourceValue>
+            </sourceValues>
+            <value>Service License</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7 B POS Base License</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 C POS Base License</sourceValue>
+            </sourceValues>
+            <value>Base License</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7 B POS Device License</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 C POS Device License</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 E2 POS Device Licenses (iPad/iPod)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 F2 POS Device Licenses (iPad/iPod)</sourceValue>
+            </sourceValues>
+            <value>Device License</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7 E1 POS Service charge (no device)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>7 F1 POS Service charge (no device)</sourceValue>
+            </sourceValues>
+            <value>Service Charge</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>9 Account Management issues</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>9 Installation Services (CUSTOMERS IN GERMANY ONLY)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>9 Rental Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>9 Sonos (pls check with Partner Management before using)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>9 Warehouse Deals</sourceValue>
+            </sourceValues>
+            <value>9 all</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.Analysis_Segment__c</field>
+    </columns>
+    <columns>
+        <field>SubscriptionLineItem__c.Product_category__c</field>
+    </columns>
+    <columns>
+        <field>SubscriptionLineItem__c.ProductName__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>SubscriptionLineItem__c.Quantity__c</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_INDUSTRY</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.Employees__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.OutdoorSeats__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.IndoorSeats__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_93437272</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Data Analysis with category</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SubscriptionLineItem__c@SubscriptionLineItem__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

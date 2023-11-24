@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Component__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What secondary component of our product is affected by this issue? Note: This field is dependent on the category field.</inlineHelpText>
+    <label>Component (old)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>accumulated turnover (open/cleared)</fullName>
+                <default>false</default>
+                <label>accumulated turnover (open/cleared)</label>
+            </value>
+            <value>
+                <fullName>Address Information</fullName>
+                <default>false</default>
+                <label>Address Information</label>
+            </value>
+            <value>
+                <fullName>android</fullName>
+                <default>false</default>
+                <label>android</label>
+            </value>
+            <value>
+                <fullName>App</fullName>
+                <default>false</default>
+                <label>App</label>
+            </value>
+            <value>
+                <fullName>Apple Device</fullName>
+                <default>false</default>
+                <label>Apple Device</label>
+            </value>
+            <value>
+                <fullName>Apple ID</fullName>
+                <default>false</default>
+                <label>Apple ID</label>
+            </value>
+            <value>
+                <fullName>arrange items on orderpad</fullName>
+                <default>false</default>
+                <label>arrange items on orderpad</label>
+            </value>
+            <value>
+                <fullName>asian character</fullName>
+                <default>false</default>
+                <label>asian character</label>
+            </value>
+            <value>
+                <fullName>Available Devices</fullName>
+                <default>false</default>
+                <label>Available Devices</label>
+            </value>
+            <value>
+                <fullName>Bank Details</fullName>
+                <default>false</default>
+                <label>Bank Details</label>
+            </value>
+            <value>
+                <fullName>barcode scanner</fullName>
+                <default>false</default>
+                <label>barcode scanner</label>
+            </value>
+            <value>
+                <fullName>Base Router</fullName>
+                <default>false</default>
+                <label>Base Router</label>
+            </value>
+            <value>
+                <fullName>bigger buttons</fullName>
+                <default>false</default>
+                <label>bigger buttons</label>
+            </value>
+            <value>
+                <fullName>bill - bigger total</fullName>
+                <default>false</default>
+                <label>bill - bigger total</label>
+            </value>
+            <value>
+                <fullName>bill has docket number</fullName>
+                <default>false</default>
+                <label>bill has docket number</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>bills accessible after close</fullName>
+                <default>false</default>
+                <label>bills accessible after close</label>
+            </value>
+            <value>
+                <fullName>Bill Template</fullName>
+                <default>false</default>
+                <label>Bill Template</label>
+            </value>
+            <value>
+                <fullName>Boarding</fullName>
+                <default>false</default>
+                <label>Boarding</label>
+            </value>
+            <value>
+                <fullName>by eMail</fullName>
+                <default>false</default>
+                <label>by eMail</label>
+            </value>
+            <value>
+                <fullName>by mail</fullName>
+                <default>false</default>
+                <label>by mail</label>
+            </value>
+            <value>
+                <fullName>Cable</fullName>
+                <default>false</default>
+                <label>Cable</label>
+            </value>
+            <value>
+                <fullName>call system with numbers (self service)</fullName>
+                <default>false</default>
+                <label>call system with numbers (self service)</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>card payment receipt</fullName>
+                <default>false</default>
+                <label>card payment receipt</label>
+            </value>
+            <value>
+                <fullName>Cardreader</fullName>
+                <default>false</default>
+                <label>Cardreader</label>
+            </value>
+            <value>
+                <fullName>Card reader</fullName>
+                <default>false</default>
+                <label>Card reader</label>
+            </value>
+            <value>
+                <fullName>Cashdrawer</fullName>
+                <default>false</default>
+                <label>Cashdrawer</label>
+            </value>
+            <value>
+                <fullName>Cash Drawer</fullName>
+                <default>false</default>
+                <label>Cash Drawer</label>
+            </value>
+            <value>
+                <fullName>chain store management</fullName>
+                <default>false</default>
+                <label>chain store management</label>
+            </value>
+            <value>
+                <fullName>change on bill</fullName>
+                <default>false</default>
+                <label>change on bill</label>
+            </value>
+            <value>
+                <fullName>Check</fullName>
+                <default>false</default>
+                <label>Check</label>
+            </value>
+            <value>
+                <fullName>Close Shift</fullName>
+                <default>false</default>
+                <label>Close Shift</label>
+            </value>
+            <value>
+                <fullName>colourful buttons</fullName>
+                <default>false</default>
+                <label>colourful buttons</label>
+            </value>
+            <value>
+                <fullName>Concardis</fullName>
+                <default>false</default>
+                <label>Concardis</label>
+            </value>
+            <value>
+                <fullName>Copy Masterdata</fullName>
+                <default>false</default>
+                <label>Copy Masterdata</label>
+            </value>
+            <value>
+                <fullName>Could not be reached</fullName>
+                <default>false</default>
+                <label>Could not be reached</label>
+            </value>
+            <value>
+                <fullName>coupon integration</fullName>
+                <default>false</default>
+                <label>coupon integration</label>
+            </value>
+            <value>
+                <fullName>Course Control</fullName>
+                <default>false</default>
+                <label>Course Control</label>
+            </value>
+            <value>
+                <fullName>customer display</fullName>
+                <default>false</default>
+                <label>customer display</label>
+            </value>
+            <value>
+                <fullName>customer management</fullName>
+                <default>false</default>
+                <label>customer management</label>
+            </value>
+            <value>
+                <fullName>daily closing ends shift</fullName>
+                <default>false</default>
+                <label>daily closing ends shift</label>
+            </value>
+            <value>
+                <fullName>Data maintenance</fullName>
+                <default>false</default>
+                <label>Data maintenance</label>
+            </value>
+            <value>
+                <fullName>Data Privacy</fullName>
+                <default>false</default>
+                <label>Data Privacy</label>
+            </value>
+            <value>
+                <fullName>Datev</fullName>
+                <default>false</default>
+                <label>Datev</label>
+            </value>
+            <value>
+                <fullName>deactivate obligatory shift</fullName>
+                <default>false</default>
+                <label>deactivate obligatory shift</label>
+            </value>
+            <value>
+                <fullName>Defect</fullName>
+                <default>false</default>
+                <label>Defect</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>delivery integration</fullName>
+                <default>false</default>
+                <label>delivery integration</label>
+            </value>
+            <value>
+                <fullName>DEP</fullName>
+                <default>false</default>
+                <label>DEP</label>
+            </value>
+            <value>
+                <fullName>deposits</fullName>
+                <default>false</default>
+                <label>deposits</label>
+            </value>
+            <value>
+                <fullName>Device PIN</fullName>
+                <default>false</default>
+                <label>Device PIN</label>
+            </value>
+            <value>
+                <fullName>Devices</fullName>
+                <default>false</default>
+                <label>Devices</label>
+            </value>
+            <value>
+                <fullName>digital menu</fullName>
+                <default>false</default>
+                <label>digital menu</label>
+            </value>
+            <value>
+                <fullName>digital receipt display</fullName>
+                <default>false</default>
+                <label>digital receipt display</label>
+            </value>
+            <value>
+                <fullName>Discounts</fullName>
+                <default>false</default>
+                <label>Discounts</label>
+            </value>
+            <value>
+                <fullName>dispenser system (Schankanlage)</fullName>
+                <default>false</default>
+                <label>dispenser system (Schankanlage)</label>
+            </value>
+            <value>
+                <fullName>docket has bill number</fullName>
+                <default>false</default>
+                <label>docket has bill number</label>
+            </value>
+            <value>
+                <fullName>docket layout optimised</fullName>
+                <default>false</default>
+                <label>docket layout optimised</label>
+            </value>
+            <value>
+                <fullName>Docket Printing</fullName>
+                <default>false</default>
+                <label>Docket Printing</label>
+            </value>
+            <value>
+                <fullName>drinks and food separated on report</fullName>
+                <default>false</default>
+                <label>drinks and food separated on report</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>duplicate bill automated</fullName>
+                <default>false</default>
+                <label>duplicate bill automated</label>
+            </value>
+            <value>
+                <fullName>eat-in/takeaway separation</fullName>
+                <default>false</default>
+                <label>eat-in/takeaway separation</label>
+            </value>
+            <value>
+                <fullName>enter stock &amp; warnings (NOT inventory control)</fullName>
+                <default>false</default>
+                <label>enter stock &amp; warnings (NOT inventory control)</label>
+            </value>
+            <value>
+                <fullName>Expense Receipt</fullName>
+                <default>false</default>
+                <label>Expense Receipt</label>
+            </value>
+            <value>
+                <fullName>Fallback mode</fullName>
+                <default>false</default>
+                <label>Fallback mode</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Floor Plan</fullName>
+                <default>false</default>
+                <label>Floor Plan</label>
+            </value>
+            <value>
+                <fullName>GDPdU</fullName>
+                <default>false</default>
+                <label>GDPdU</label>
+            </value>
+            <value>
+                <fullName>Get It Done</fullName>
+                <default>false</default>
+                <label>Get It Done</label>
+            </value>
+            <value>
+                <fullName>guest check printer (e.g. a5)</fullName>
+                <default>false</default>
+                <label>guest check printer (e.g. a5)</label>
+            </value>
+            <value>
+                <fullName>Guest Count</fullName>
+                <default>false</default>
+                <label>Guest Count</label>
+            </value>
+            <value>
+                <fullName>Guest Counter</fullName>
+                <default>false</default>
+                <label>Guest Counter</label>
+            </value>
+            <value>
+                <fullName>happy hour</fullName>
+                <default>false</default>
+                <label>happy hour</label>
+            </value>
+            <value>
+                <fullName>hotel interface</fullName>
+                <default>false</default>
+                <label>hotel interface</label>
+            </value>
+            <value>
+                <fullName>Identification</fullName>
+                <default>false</default>
+                <label>Identification</label>
+            </value>
+            <value>
+                <fullName>Info</fullName>
+                <default>false</default>
+                <label>Info</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>inventory control</fullName>
+                <default>false</default>
+                <label>inventory control</label>
+            </value>
+            <value>
+                <fullName>Invoices</fullName>
+                <default>false</default>
+                <label>Invoices</label>
+            </value>
+            <value>
+                <fullName>iOS</fullName>
+                <default>false</default>
+                <label>iOS</label>
+            </value>
+            <value>
+                <fullName>iPad</fullName>
+                <default>false</default>
+                <label>iPad</label>
+            </value>
+            <value>
+                <fullName>iPad Stand</fullName>
+                <default>false</default>
+                <label>iPad Stand</label>
+            </value>
+            <value>
+                <fullName>iPod touch</fullName>
+                <default>false</default>
+                <label>iPod touch</label>
+            </value>
+            <value>
+                <fullName>ISP</fullName>
+                <default>false</default>
+                <label>ISP</label>
+            </value>
+            <value>
+                <fullName>item discount</fullName>
+                <default>false</default>
+                <label>item discount</label>
+            </value>
+            <value>
+                <fullName>iZettle</fullName>
+                <default>false</default>
+                <label>iZettle</label>
+            </value>
+            <value>
+                <fullName>Journal</fullName>
+                <default>false</default>
+                <label>Journal</label>
+            </value>
+            <value>
+                <fullName>Kassenbuch / integrated cash reconcilliation</fullName>
+                <default>false</default>
+                <label>Kassenbuch / integrated cash reconcilliation</label>
+            </value>
+            <value>
+                <fullName>kitchen monitor (open orders)</fullName>
+                <default>false</default>
+                <label>kitchen monitor (open orders)</label>
+            </value>
+            <value>
+                <fullName>Language</fullName>
+                <default>false</default>
+                <label>Language</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Licence</fullName>
+                <default>false</default>
+                <label>Licence</label>
+            </value>
+            <value>
+                <fullName>Licences</fullName>
+                <default>false</default>
+                <label>Licences</label>
+            </value>
+            <value>
+                <fullName>Lock Screen</fullName>
+                <default>false</default>
+                <label>Lock Screen</label>
+            </value>
+            <value>
+                <fullName>Logo</fullName>
+                <default>false</default>
+                <label>Logo</label>
+            </value>
+            <value>
+                <fullName>loyalty program</fullName>
+                <default>false</default>
+                <label>loyalty program</label>
+            </value>
+            <value>
+                <fullName>magic button&apos;/&apos;no revenue&apos; transactions</fullName>
+                <default>false</default>
+                <label>magic button&apos;/&apos;no revenue&apos; transactions</label>
+            </value>
+            <value>
+                <fullName>Main page</fullName>
+                <default>false</default>
+                <label>Main page</label>
+            </value>
+            <value>
+                <fullName>Master Data</fullName>
+                <default>false</default>
+                <label>Master Data</label>
+            </value>
+            <value>
+                <fullName>Masterdata summary</fullName>
+                <default>false</default>
+                <label>Masterdata summary</label>
+            </value>
+            <value>
+                <fullName>Meldung</fullName>
+                <default>false</default>
+                <label>Meldung</label>
+            </value>
+            <value>
+                <fullName>Menu</fullName>
+                <default>false</default>
+                <label>Menu</label>
+            </value>
+            <value>
+                <fullName>Menu Card</fullName>
+                <default>false</default>
+                <label>Menu Card</label>
+            </value>
+            <value>
+                <fullName>misc. items with notes in reports</fullName>
+                <default>false</default>
+                <label>misc. items with notes in reports</label>
+            </value>
+            <value>
+                <fullName>Monthly Report</fullName>
+                <default>false</default>
+                <label>Monthly Report</label>
+            </value>
+            <value>
+                <fullName>more devices</fullName>
+                <default>false</default>
+                <label>more devices</label>
+            </value>
+            <value>
+                <fullName>more languages</fullName>
+                <default>false</default>
+                <label>more languages</label>
+            </value>
+            <value>
+                <fullName>Move New Licence Model</fullName>
+                <default>false</default>
+                <label>Move New Licence Model</label>
+            </value>
+            <value>
+                <fullName>my.ob login</fullName>
+                <default>false</default>
+                <label>my.ob login</label>
+            </value>
+            <value>
+                <fullName>my.orderbird</fullName>
+                <default>false</default>
+                <label>my.orderbird</label>
+            </value>
+            <value>
+                <fullName>my.orderbird data filter</fullName>
+                <default>false</default>
+                <label>my.orderbird data filter</label>
+            </value>
+            <value>
+                <fullName>my.orderbird live ticker</fullName>
+                <default>false</default>
+                <label>my.orderbird live ticker</label>
+            </value>
+            <value>
+                <fullName>my.orderbird menu editing</fullName>
+                <default>false</default>
+                <label>my.orderbird menu editing</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>New Feature Request</fullName>
+                <default>false</default>
+                <label>New Feature Request</label>
+            </value>
+            <value>
+                <fullName>New Model</fullName>
+                <default>false</default>
+                <label>New Model</label>
+            </value>
+            <value>
+                <fullName>No Account</fullName>
+                <default>false</default>
+                <label>No Account</label>
+            </value>
+            <value>
+                <fullName>numpad</fullName>
+                <default>false</default>
+                <label>numpad</label>
+            </value>
+            <value>
+                <fullName>Offline Mode</fullName>
+                <default>false</default>
+                <label>Offline Mode</label>
+            </value>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Open Balance</fullName>
+                <default>false</default>
+                <label>Open Balance</label>
+            </value>
+            <value>
+                <fullName>open drawer button</fullName>
+                <default>false</default>
+                <label>open drawer button</label>
+            </value>
+            <value>
+                <fullName>Open Orders</fullName>
+                <default>false</default>
+                <label>Open Orders</label>
+            </value>
+            <value>
+                <fullName>Open Shift</fullName>
+                <default>false</default>
+                <label>Open Shift</label>
+            </value>
+            <value>
+                <fullName>open tables despite closed shift</fullName>
+                <default>false</default>
+                <label>open tables despite closed shift</label>
+            </value>
+            <value>
+                <fullName>orderbird App</fullName>
+                <default>false</default>
+                <label>orderbird App</label>
+            </value>
+            <value>
+                <fullName>Orderflows</fullName>
+                <default>false</default>
+                <label>Orderflows</label>
+            </value>
+            <value>
+                <fullName>Orderlist</fullName>
+                <default>false</default>
+                <label>Orderlist</label>
+            </value>
+            <value>
+                <fullName>Orderpad</fullName>
+                <default>false</default>
+                <label>Orderpad</label>
+            </value>
+            <value>
+                <fullName>Paper Roll</fullName>
+                <default>false</default>
+                <label>Paper Roll</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>Passwords</fullName>
+                <default>false</default>
+                <label>Passwords</label>
+            </value>
+            <value>
+                <fullName>Pay</fullName>
+                <default>false</default>
+                <label>Pay</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Payment Types</fullName>
+                <default>false</default>
+                <label>Payment Types</label>
+            </value>
+            <value>
+                <fullName>paypal</fullName>
+                <default>false</default>
+                <label>paypal</label>
+            </value>
+            <value>
+                <fullName>Payroll</fullName>
+                <default>false</default>
+                <label>Payroll</label>
+            </value>
+            <value>
+                <fullName>payworks</fullName>
+                <default>false</default>
+                <label>payworks</label>
+            </value>
+            <value>
+                <fullName>Pfand</fullName>
+                <default>false</default>
+                <label>Pfand</label>
+            </value>
+            <value>
+                <fullName>PIN</fullName>
+                <default>false</default>
+                <label>PIN</label>
+            </value>
+            <value>
+                <fullName>Power Line</fullName>
+                <default>false</default>
+                <label>Power Line</label>
+            </value>
+            <value>
+                <fullName>prepaid cards</fullName>
+                <default>false</default>
+                <label>prepaid cards</label>
+            </value>
+            <value>
+                <fullName>Printer</fullName>
+                <default>false</default>
+                <label>Printer</label>
+            </value>
+            <value>
+                <fullName>Printers</fullName>
+                <default>false</default>
+                <label>Printers</label>
+            </value>
+            <value>
+                <fullName>printers: not thermal</fullName>
+                <default>false</default>
+                <label>printers: not thermal</label>
+            </value>
+            <value>
+                <fullName>printer settings adjustable (areas)</fullName>
+                <default>false</default>
+                <label>printer settings adjustable (areas)</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Print Jobs</fullName>
+                <default>false</default>
+                <label>Print Jobs</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>prompt for eat-in/takeaway</fullName>
+                <default>false</default>
+                <label>prompt for eat-in/takeaway</label>
+            </value>
+            <value>
+                <fullName>Question Mark</fullName>
+                <default>false</default>
+                <label>Question Mark</label>
+            </value>
+            <value>
+                <fullName>Receipt Archive</fullName>
+                <default>false</default>
+                <label>Receipt Archive</label>
+            </value>
+            <value>
+                <fullName>Receipts</fullName>
+                <default>false</default>
+                <label>Receipts</label>
+            </value>
+            <value>
+                <fullName>recipe list</fullName>
+                <default>false</default>
+                <label>recipe list</label>
+            </value>
+            <value>
+                <fullName>Redo</fullName>
+                <default>false</default>
+                <label>Redo</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>reminder to close the shift</fullName>
+                <default>false</default>
+                <label>reminder to close the shift</label>
+            </value>
+            <value>
+                <fullName>remote access</fullName>
+                <default>false</default>
+                <label>remote access</label>
+            </value>
+            <value>
+                <fullName>Repeater 3rd Party</fullName>
+                <default>false</default>
+                <label>Repeater 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Repeater Cable</fullName>
+                <default>false</default>
+                <label>Repeater Cable</label>
+            </value>
+            <value>
+                <fullName>Repeater Wireless</fullName>
+                <default>false</default>
+                <label>Repeater Wireless</label>
+            </value>
+            <value>
+                <fullName>Report issue</fullName>
+                <default>false</default>
+                <label>Report issue</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>reservation system</fullName>
+                <default>false</default>
+                <label>reservation system</label>
+            </value>
+            <value>
+                <fullName>Restaurant Info</fullName>
+                <default>false</default>
+                <label>Restaurant Info</label>
+            </value>
+            <value>
+                <fullName>retail functions</fullName>
+                <default>false</default>
+                <label>retail functions</label>
+            </value>
+            <value>
+                <fullName>Roles and Permissions</fullName>
+                <default>false</default>
+                <label>Roles and Permissions</label>
+            </value>
+            <value>
+                <fullName>Router</fullName>
+                <default>false</default>
+                <label>Router</label>
+            </value>
+            <value>
+                <fullName>Sales advice</fullName>
+                <default>false</default>
+                <label>Sales advice</label>
+            </value>
+            <value>
+                <fullName>Sales Dashboard</fullName>
+                <default>false</default>
+                <label>Sales Dashboard</label>
+            </value>
+            <value>
+                <fullName>scale connection</fullName>
+                <default>false</default>
+                <label>scale connection</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>several prices per item</fullName>
+                <default>false</default>
+                <label>several prices per item</label>
+            </value>
+            <value>
+                <fullName>Shift</fullName>
+                <default>false</default>
+                <label>Shift</label>
+            </value>
+            <value>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+                <label>Shipping</label>
+            </value>
+            <value>
+                <fullName>Show shifts</fullName>
+                <default>false</default>
+                <label>Show shifts</label>
+            </value>
+            <value>
+                <fullName>SimpleOrder</fullName>
+                <default>false</default>
+                <label>SimpleOrder</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Split Bill</fullName>
+                <default>false</default>
+                <label>Split Bill</label>
+            </value>
+            <value>
+                <fullName>staff management</fullName>
+                <default>false</default>
+                <label>staff management</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>super family group icons changeable</fullName>
+                <default>false</default>
+                <label>super family group icons changeable</label>
+            </value>
+            <value>
+                <fullName>super family group separation on z-reading</fullName>
+                <default>false</default>
+                <label>super family group separation on z-reading</label>
+            </value>
+            <value>
+                <fullName>Superscale</fullName>
+                <default>false</default>
+                <label>Superscale</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>Swarm</fullName>
+                <default>false</default>
+                <label>Swarm</label>
+            </value>
+            <value>
+                <fullName>T&amp;Cs</fullName>
+                <default>false</default>
+                <label>T&amp;Cs</label>
+            </value>
+            <value>
+                <fullName>Table</fullName>
+                <default>false</default>
+                <label>Table</label>
+            </value>
+            <value>
+                <fullName>table handover</fullName>
+                <default>false</default>
+                <label>table handover</label>
+            </value>
+            <value>
+                <fullName>table list</fullName>
+                <default>false</default>
+                <label>table list</label>
+            </value>
+            <value>
+                <fullName>table protection</fullName>
+                <default>false</default>
+                <label>table protection</label>
+            </value>
+            <value>
+                <fullName>Tables issue</fullName>
+                <default>false</default>
+                <label>Tables issue</label>
+            </value>
+            <value>
+                <fullName>Tab Sync</fullName>
+                <default>false</default>
+                <label>Tab Sync</label>
+            </value>
+            <value>
+                <fullName>take-away/in-house on bill</fullName>
+                <default>false</default>
+                <label>take-away/in-house on bill</label>
+            </value>
+            <value>
+                <fullName>Tempered</fullName>
+                <default>false</default>
+                <label>Tempered</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Third Party</fullName>
+                <default>false</default>
+                <label>Third Party</label>
+            </value>
+            <value>
+                <fullName>Till Rolls</fullName>
+                <default>false</default>
+                <label>Till Rolls</label>
+            </value>
+            <value>
+                <fullName>time tracking (staff)</fullName>
+                <default>false</default>
+                <label>time tracking (staff)</label>
+            </value>
+            <value>
+                <fullName>TOS</fullName>
+                <default>false</default>
+                <label>TOS</label>
+            </value>
+            <value>
+                <fullName>total on kitchen receipt</fullName>
+                <default>false</default>
+                <label>total on kitchen receipt</label>
+            </value>
+            <value>
+                <fullName>training mode</fullName>
+                <default>false</default>
+                <label>training mode</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>Undo</fullName>
+                <default>false</default>
+                <label>Undo</label>
+            </value>
+            <value>
+                <fullName>Upgrade Base</fullName>
+                <default>false</default>
+                <label>Upgrade Base</label>
+            </value>
+            <value>
+                <fullName>Upselling</fullName>
+                <default>false</default>
+                <label>Upselling</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>various printer models (star)</fullName>
+                <default>false</default>
+                <label>various printer models (star)</label>
+            </value>
+            <value>
+                <fullName>Venue</fullName>
+                <default>false</default>
+                <label>Venue</label>
+            </value>
+            <value>
+                <fullName>Vouchers</fullName>
+                <default>false</default>
+                <label>Vouchers</label>
+            </value>
+            <value>
+                <fullName>waiter key card/magnetic key</fullName>
+                <default>false</default>
+                <label>waiter key card/magnetic key</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

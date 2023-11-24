@@ -1,0 +1,171 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" 
+                controller="AccountLightningController">
+    
+    <aura:attribute type="Object" name="Account"/>
+    <aura:attribute type="Object" name="VIES"/>
+    <aura:attribute type="Boolean" name="ShowSpinner" default="false"/>
+    <aura:attribute type="Boolean" name="EditMode" default="false"/>
+    <aura:attribute type="Boolean" name="AddressOverride" default="false"/>
+    <aura:attribute type="String" name="VATNumber" />
+    
+    <force:recordData recordId="{!v.recordId}"
+                      fields="Id, VATNumber__c, VATNumber_disp__c, ZuoraId__c, LegalCompanyName__c, SF_BillTo_Contact__r.Name, 
+                              BillingStreet, BillingCity, BillingPostalCode, 
+                              BillingCountryCode"
+                      targetFields="{!v.Account}" 
+                      recordUpdated="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large"/>
+        <aura:set attribute="else">
+            
+            <div class="slds-page-header slds-page-header_record-home">
+                <div class="slds-page-header__row">
+                    <div class="slds-page-header__col-title">
+                        <div class="slds-media">
+                            <div class="slds-media__figure">
+                                <lightning:icon iconName="custom:custom41" size="medium"/>
+                            </div>
+                            <div class="slds-media__body">
+                                <div class="slds-page-header__name">
+                                    <div class="slds-page-header__name-title">
+                                        <h1>
+                                            <aura:if isTrue="{!v.EditMode}">
+                                                <span><ui:inputText value="{!v.VATNumber}"/></span>
+                                                <aura:set attribute="else">
+                                                    <span>VAT Number</span>
+                                                    <span class="slds-page-header__title slds-truncate" title="{!v.Account.VATNumber_disp__c}">{!v.Account.VATNumber_disp__c}</span>
+                                                </aura:set>
+                                            </aura:if>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-page-header__col-actions">
+                        <div class="slds-page-header__controls">
+                            <div class="slds-page-header__control">
+                                <ul class="slds-button-group-list">
+                                    <li>
+                                        <aura:if isTrue="{!v.EditMode}">
+                                            <lightning:button onclick="{!c.verifyMe}" label="Verify"/>
+                                            <aura:set attribute="else">
+                                                <lightning:button onclick="{!c.editModeOn}" label="Edit"/>
+                                            </aura:set>
+                                        </aura:if>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aura:if isTrue="{!v.VIES != null}">
+                <aura:if isTrue="{!v.VIES.isValid}">
+                    <aura:set attribute="else">
+                        <div style="margin-top:0.75rem;text-align:center;background-color:red;padding:0.25rem 0.5rem;color:white;border-radius:0.25rem;">
+                            Unable to Validate
+                        </div>
+                    </aura:set>
+                    <div style="margin-top:0.75rem;text-align:center;background-color:green;padding:0.25rem 0.5rem;color:white;border-radius:0.25rem;">
+                        Valid VAT Number
+                    </div>
+                    <lightning:layout >
+                        <lightning:layoutItem padding="around-small" size="6">
+                            <div class="slds-section slds-is-open">
+                                <h3 class="slds-section__title">
+                                    <div class="slds-section__title-action">
+                                        <span class="slds-truncate" title="Salesforce Account">Salesforce Account</span>
+                                    </div>
+                                </h3>
+                            </div>
+                            <div style="padding: 0 0.5rem;">
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-01">Legal Company Name</label>
+                                    <div class="slds-form-element__control">
+                                        <ui:outputTextArea value="{!v.Account.LegalCompanyName__c}"/>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-01">Billing Address</label>
+                                    <div class="slds-form-element__control">
+                                        <ui:outputTextArea value="{!v.Account.BillingStreet}"/>
+                                        <p>{!v.Account.BillingCountryCode}-{!v.Account.BillingPostalCode}&nbsp;{!v.Account.BillingCity}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="around-small" size="6">
+                            <div style="padding: 0 0.5rem;">
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title">
+                                        <div class="slds-section__title-action">
+                                            <span class="slds-truncate" title="Verification Account">Verification Account</span>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <!--div class="slds-form-element">
+                                <label class="slds-form-element__label" for="form-element-01">Valid</label>
+                                <div class="slds-form-element__control">
+                                    <ui:outputCheckbox value="{!v.VIES.isValid}"/>
+                                </div>
+                            </div-->
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-01">Name</label>
+                                    <div class="slds-form-element__control">
+                                        <ui:outputTextArea value="{!v.VIES.name}"/>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element">
+                                    <label class="slds-form-element__label" for="form-element-01">Address</label>
+                                    <div class="slds-form-element__control">
+                                        <ui:outputTextArea value="{!v.VIES.address}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    	<div class="slds-page-header slds-page-header_record-home">
+                        	<div class="slds-page-header__row">
+                               <aura:if isTrue="{!and(v.VIES.name != null, v.VIES.name != '---')}">
+                                	<div class="slds-page-header__col-title">
+                                    	<div class="slds-media">
+                                        	<div class="slds-media__body">
+                                            	<div class="slds-page-header__name">
+                                                	<div class="slds-page-header__name-title">
+                                                    <lightning:layout>
+                                                        <lightning:layoutItem>
+                                                            <ui:inputCheckbox value="{!v.AddressOverride}"/>
+                                                        </lightning:layoutItem>
+                                                        <lightning:layoutItem>
+                                                            Override Billing Address with Verified Address
+                                                        </lightning:layoutItem>
+                                                    </lightning:layout>
+                                                	</div>
+                                            	</div>
+                                        	</div>
+                                    	</div>
+                                	</div>
+                              </aura:if>
+                              <aura:if isTrue="{!or(v.VIES.name != null, v.VIES.name == '---')}">
+                    	      	<div class="slds-page-header__col-actions">
+                                	<div class="slds-page-header__controls">
+                                    	<div class="slds-page-header__control">
+                                            <ul class="slds-button-group-list">
+                                                <li>
+                                                    <lightning:button iconName="utility:save" onclick="{!c.saveMe}" label="Save" variant="brand"/>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>  
+                              </aura:if>
+                            </div>
+                        </div>                  
+                </aura:if>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

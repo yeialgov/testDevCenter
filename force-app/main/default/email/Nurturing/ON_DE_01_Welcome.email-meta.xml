@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-6</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ON DE 01 Welcome</name>
+    <style>freeForm</style>
+    <subject>Dein persönlicher Kundenberater!</subject>
+    <textOnly>Willkommen bei orderbird!
+
+Wir sind fest davon überzeugt, dass Dein Kassensystem Dir Zeit und Geld sparen sollte. So kannst Du Dich mehr um Deine Gäste kümmern und bist gleichzeitig noch erfolgreicher.
+
+Genau zu diesem Zweck wurde die orderbird-Kasse entwickelt.
+
+Jeder gastronomische Betrieb hat individuelle Bedürfnisse.
+Um Deine bestmöglich zu erfüllen und die für Dich perfekte Lösung zu finden, steht Dir Dein persönlicher Kundenberater jederzeit zur Verfügung und beantwortet Dir gerne all Deine Fragen rund um das orderbird-Kassensystem.
+
+Viele Grüße
+{!Opportunity.OwnerFirstName}
+
+Dein persönlicher KundenberaterName: {!Account.OwnerFirstName}
+
+E-Mail: {!Account.OwnerEmail}
+Telefon: 0800 67 337 24
+
+Unsere Produktpräsentation: der schnellste Weg, um orderbird zu erleben!
+
+In einer kurzen Online-Präsentation zeigt Dir Dein sympathischer Kundenberater die Funktionsweise von orderbird und beantwortet Dir kompetent all Deine Fragen. Du sitzt dabei bequem zuhause und verfolgst die Produktpräsentation zeitsparend am heimischen PC. Kostenlos und unverbindlich.
+
+In einigen deutschen Städten bieten wir auch eine Beratung vor Ort an.
+
+Jetzt Termin anfordern!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

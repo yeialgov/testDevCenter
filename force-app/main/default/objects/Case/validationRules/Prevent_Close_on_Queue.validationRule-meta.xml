@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Close_on_Queue</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+NOT( RecordType.Id = &apos;012580000002RGo&apos;),
+
+ISCHANGED( Status ),
+OR(
+ISPICKVAL( Status, &quot;Closed&quot;),
+ISPICKVAL( Status, &quot;Closed - Not Solved&quot;),
+ISPICKVAL( Status, &quot;Closed as duplicate&quot;)
+),
+
+BEGINS( OwnerId , &quot;00G&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Cases assigned to a queue cannot be closed. Please change the owner and try again.</errorMessage>
+</ValidationRule>

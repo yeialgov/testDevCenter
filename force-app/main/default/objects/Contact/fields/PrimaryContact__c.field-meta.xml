@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryContact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this contact our primary go-to person for their account? The must only be one primary contact per account - if more then one contact have this checked, the account owner must correct this. Un/Checked by Sales</inlineHelpText>
+    <label>Primary Contact Manual</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

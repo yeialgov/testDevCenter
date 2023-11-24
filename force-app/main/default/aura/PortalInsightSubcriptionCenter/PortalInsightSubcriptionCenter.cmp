@@ -1,0 +1,81 @@
+<aura:component access="global" controller="PortalController"
+implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+<aura:attribute name="token" type="String" access="global" />
+<aura:attribute name="emailToken" type="String" access="global" />
+<aura:attribute name="subscriptionStatus" type="String" />
+<aura:attribute name="recordId" type="String" />
+<aura:attribute name="MyOrderbird" type="Object" />
+<aura:attribute name="isResub" type="boolean"/>
+<aura:attribute name="currentSub" type="boolean"/>
+<aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+<aura:attribute name="showLoad" type="Boolean" default="false" />
+<aura:attribute name="showOption" type="Boolean" default="false" />
+<lightning:navigation aura:id="navService"/>
+
+
+<aura:handler name="init" value="{!this}" action="{!c.initHelper}" />
+<aura:if isTrue="{!v.showOption}">
+<div style="overflow:hidden;margin-left: 0;">
+    <div class="page-headliner">
+        <h4>{!$Label.c.CONFING_INSIGHTS_SUB_MANAGEMENT}</h4>
+    </div>
+    <div class="page-headliner-subtitle">
+        <a href="javascript:void(0);" onclick="{!c.back}">{!$Label.c.BACK_TO_OPTIONS}</a>
+    </div>
+    <lightning:card title="{!$Label.c.SUBCRIPTION_STATUS}">
+        <p class="slds-p-horizontal_small">
+            <lightning:input name="subsStatus" disabled="true" value="{!v.subscriptionStatus}" />
+        </p>
+        <aura:set attribute="actions">
+            <aura:if isTrue="{!!v.currentSub}">
+            <lightning:button label="{!$Label.c.UNSUBSCRIBE}" onclick="{!c.handleConfirmDialog}" />
+        </aura:if>
+        <aura:if isTrue="{!v.currentSub}">
+            <lightning:button label="{!$Label.c.RESUBSCRIBE}" onclick="{!c.handleConfirmDialog}" />
+        </aura:if>
+        </aura:set>    
+    </lightning:card>
+</div>
+</aura:if>
+<br/>
+<div class="slds-m-around_xx-large">
+<aura:if isTrue="{!v.showConfirmDialog}">
+            <!--Modal Box Start-->
+            <div role="dialog" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <!--Modal Box Header Start-->
+                    <header class="slds-modal__header">
+                        <h1 class="slds-text-heading--medium">{!$Label.c.CONFIRMATION}</h1>
+                    </header>
+                    <!--Modal Box Header End-->
+                     
+                    <!--Modal Box Content Start-->
+                    <aura:if isTrue="{!!v.currentSub}">
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <center><b>{!$Label.c.UNSUB_CONFIRM}</b></center>
+                    </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.currentSub}">
+                        <div class="slds-modal__content slds-p-around--medium">
+                            <center><b>{!$Label.c.RESUB_CONFIRM}</b></center>
+                        </div>
+                        </aura:if>
+                    <!--Modal Box Content End-->
+                     
+                    <!--Modal Box Button Start-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button name='No' label='{!$Label.c.NO}' onclick='{!c.handleConfirmDialogNo}'/>
+                        <lightning:button variant="brand" name='Yes' label='{!$Label.c.YES}' onclick='{!c.handleConfirmDialogYes}'/>
+                    </footer>
+                    <!--Modal Box Button End-->
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>            
+        </aura:if>
+    </div>
+    <aura:if isTrue="{!v.showLoad}">
+        <div class="showLoading">
+            <lightning:spinner alternativeText="Loading" size="large" />
+        </div>
+        </aura:if>
+</aura:component>

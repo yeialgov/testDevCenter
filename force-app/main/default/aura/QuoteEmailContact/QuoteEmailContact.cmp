@@ -1,0 +1,66 @@
+<aura:component >
+    
+    <aura:registerEvent name="appEvent" type="c:QuoteEmailContactClick"/>
+
+    <aura:attribute name="Contact" type="Object"/>
+    <aura:attribute name="Selected" type="Boolean" default="false"/>
+    <aura:attribute name="SelectedSec" type="Boolean" default="false"/>
+    <aura:attribute name="ObjectName" type="String" />
+    
+    <article class="slds-card" style="padding:0 0.5rem;border: 1px solid #dddbda;border-radius: 0.25rem;-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);">
+        <div class="slds-card__header slds-grid" style="margin-top:0.75rem;">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="">
+                        <lightning:icon iconName="standard:contact" size="small"/>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-card__header-link slds-truncate" style="line-height:80%;">
+                            <span class="slds-text-heading_small">{!v.Contact.Name}</span>
+                            <br/>
+                            <aura:if isTrue="{!v.Contact.IsEmailBounced}">
+                                <lightning:icon size="xx-small" iconName="utility:warning" class="warningIcon"/>
+                            </aura:if>
+                            <span class="slds-text-heading_small" style="font-weight:normal;font-size:0.75rem;">{!v.Contact.Email}</span>
+                        </span>
+                    </h2>
+                </div>
+            </header>
+            <div class="slds-no-flex">
+                <aura:if isTrue="{!and(v.Contact.Secondary_Email__c != null, v.Contact.Secondary_Email__c != '')}">
+                    <aura:if isTrue="{!v.SelectedSec}">
+                        <lightning:buttonIcon iconName="utility:check"
+                                              title="Secondary Email"
+                                              class="boom" 
+                                              onclick="{!c.unselectSec}"/>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.ObjectName != 'Invoice__c'}">
+                                <lightning:buttonIcon iconName="utility:copy" 
+                                                      title="Secondary Email"
+                                                      onclick="{!c.selectSec}" 
+                                                      disabled="{!!v.Selected}"/>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </aura:if>
+                <aura:if isTrue="{!v.Selected}">
+                    <lightning:buttonIcon iconName="utility:check" 
+                                          title="Email"
+                                          class="boom" 
+                                          onclick="{!c.unselect}"/>
+                    <aura:set attribute="else">
+                        <lightning:buttonIcon iconName="utility:email" 
+	                                          title="Email"
+                                              disabled="{!v.Contact.IsEmailBounced}"
+                                              onclick="{!c.select}"/>
+                    </aura:set>
+                </aura:if>
+        </div>
+        </div>
+        <div class="slds-card__body"></div>
+        <footer class="slds-card__footer"></footer>
+    </article>
+    
+</aura:component>

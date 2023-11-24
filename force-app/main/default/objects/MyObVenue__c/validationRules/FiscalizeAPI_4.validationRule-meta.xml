@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FiscalizeAPI_4</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( ISNEW() )
+ &amp;&amp;
+ISCHANGED( Wizard_Complete__c ) 
+ &amp;&amp;
+NOT( ISBLANK( Wizard_Complete__c ))
+ &amp;&amp;
+TEXT( Account__r.Account_Status__c ) != &quot;Active Customer&quot;
+ &amp;&amp;
+TEXT( Account__r.Account_Status__c ) != &quot;Paused Customer&quot;
+ &amp;&amp;
+TEXT( Account__r.Account_Status__c ) != &quot;Future Customer&quot;
+ &amp;&amp;
+(Account__r.Target_Product__c != &quot;MINI&quot; || TEXT( Account__r.Account_Status__c ) = &quot;Lost Customer&quot;)</errorConditionFormula>
+    <errorMessage>%%{&quot;errorCode&quot;:&quot;4&quot;,&quot;errorMessage&quot;:&quot;Customer is not active.&quot;}%%</errorMessage>
+</ValidationRule>

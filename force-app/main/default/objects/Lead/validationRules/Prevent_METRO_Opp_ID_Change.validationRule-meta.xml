@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_METRO_Opp_ID_Change</fullName>
+    <active>true</active>
+    <description>The average user should not be able to change the METRO Opp ID</description>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+$User.ProfileId &lt;&gt; &quot;00e58000000SLnr&quot; , /* Partner Man */ 
+
+ISCHANGED( METROOpportunityID__c ), 
+
+NOT(PRIORVALUE(METROOpportunityID__c)= &quot;&quot;) 
+)</errorConditionFormula>
+    <errorDisplayField>METROOpportunityID__c</errorDisplayField>
+    <errorMessage>You cannot change the METRO Opp ID, please reach out to PM to get it changed!</errorMessage>
+</ValidationRule>

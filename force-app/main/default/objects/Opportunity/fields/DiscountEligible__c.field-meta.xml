@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiscountEligible__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+ NOT(ISNULL(ReferralContact__c )) &amp;&amp;
+(TEXT( Attention_Trigger__c ) = &apos;Customer recruits Customer&apos; || TEXT(Attention_Trigger__c ) = &apos;Referral Partner&apos; || TEXT(Attention_Trigger__c ) = &apos;Tax Advisor&apos; || TEXT(Attention_Trigger__c ) = &apos;ETL&apos;)
+&amp;&amp; Lead_Medium__c &lt;&gt; &apos;METRO&apos;,
+&apos;Ambassador&apos;,null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Discount Eligible</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,29 @@
+.THIS .rowSpacer {
+    margin-bottom: 1em;
+}
+.THIS .biggerText a{
+    font-size: 160%;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+.THIS .ttop {
+    margin-top: -10px;
+}
+.THIS .text807 {
+    color: #807665;
+}
+.THIS .text807b {
+    background-color: #807665;
+    color: white;
+}
+.THIS .textGr {
+    background-color: green;
+    color: white;
+}
+.THIS .textRd {
+    background-color: red;
+    color: white;
+}
+.THIS .center{
+    text-align:center;
+}

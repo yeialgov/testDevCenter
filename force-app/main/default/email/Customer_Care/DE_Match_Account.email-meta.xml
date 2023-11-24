@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Wenn Anfrage keinem Account zugeordnet werden kann</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Match Account</name>
+    <style>none</style>
+    <subject>Zuordnung zu einem Kundenkonto</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

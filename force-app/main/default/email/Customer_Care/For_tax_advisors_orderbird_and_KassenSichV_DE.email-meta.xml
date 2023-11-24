@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>For tax advisors- orderbird and KassenSichV DE</name>
+    <style>none</style>
+    <subject>So setzt orderbird die Auflagen der KassenSichV um</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+vielen Dank für Deine Anfrage zur Kassensicherungsverordnung (KassenSichV) 2020!
+
+
+Wie setzt orderbird POS die Vorgaben der KassenSichV um?
+orderbird POS ist über eine Cloud-basierte Lösung mit einer Online-TSE nachzurüsten. Nutzer von orderbird POS melden sich dazu über das zur Kassen-App gehörende Backend “my.orderbird.com” zur kostenpflichtigen Aktivierung der Online-TSE an. Um KassenSichV-konform arbeiten zu können, muss auf allen Apple-Geräten, die zusammen mit orderbird genutzt werden, mindestens orderbird POS Version 7.0 installiert sein.
+
+
+Online-TSE und Zertifizierung
+Die Online-TSE wird von unserem Partner fiskaly gestellt und ist über eine Schnittstelle an orderbird POS angebunden. Die TSE befindet sich unter der Zertifizierungsnummer BSI-DSZ-CC-1130 aktuell im Zertifizierungsprozess des BSI. Weitere Informationen zum aktuellen Status des Zertifizierungsprozesses können auf den Seiten des BSI abgerufen werden: “Produkte, die sich in Zertifizierung befinden”.
+
+Bereits jetzt ist die CSP Komponente (Cryptographic Service Provider Light) vom BSI mit Zertifizierungskennnummer BSI-DSZ-CC-1153–2021 zertifiziert.
+
+Die Zertifizierungs-ID der TSE wird bereitgestellt, sobald sie uns vorliegt.
+
+
+DSFinV-K Export
+Die Daten für den DSFinV-K Export werden sicher im fiskaly-Backend gespeichert. Zukünftig können orderbird POS Nutzer_Innen den Export jederzeit selbstständig erstellen. Dazu rufen sie über my.orderbird.com das fiskaly-Portal auf und erstellen dort den Export für den gewünschten Zeitraum. Sobald der Zugang für das fiskaly-Portal für unsere Kunden zugänglich ist, werden sie per E-Mail informiert.
+
+
+Seriennummer der TSE
+Die Seriennummer der TSE wird auf jeden Beleg gedruckt. Bitte schaue auf einem Beleg aus der Kasse nach.
+
+
+Seriennummer der orderbird Kasse
+Die Seriennummer des orderbird Kassensystems ist identisch mit der Seriennummer der TSE. Diese findest Du ausgedruckt auf jedem Kassenbeleg.
+
+
+Wenn Du noch Fragen zur KassenSichV oder der Online-TSE hast, schaue mal hier: Kassensicherungsverordnung für Deutschland.
+
+
+Liebe Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+orderbird AG - Kasse. Einfach. Sorgenfrei
+
+
+Ritterstraße 12-14, Aufg. 3
+
+10969 Berlin
+Germany
+
+
+Sitz der Gesellschaft: Berlin
+
+Registergericht: Amtsgericht Berlin - Charlottenburg
+
+Registernummer: HRB 134011
+
+Ust-ID: DE276722316
+
+
+Vorstand: Mark Schoen (Vorsitzender), Jakob Schreyer
+
+Vorsitzender des Aufsichtsrats: Oliver Kaltner
+
+
+© 2011-2020 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

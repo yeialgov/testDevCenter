@@ -1,0 +1,16 @@
+Hello {!Case.OwnerFirstName},
+
+the following case has just been assigned to you:
+
+Account: {!Case.Account}
+Subject: {!Case.Subject}
+
+Case number: {!Case.CaseNumber}
+Type:  {!Case.RecordType}
+Category: {!Case.Category__c}
+Subcategory: {!Case.SubCategory__c}
+Date Created: {!Case.CreatedDate}
+
+Assigned by: {!Case.LastModifiedBy}
+
+Link: https://orderbird.lightning.force.com/lightning/r/Case/{!Case.Id}/view

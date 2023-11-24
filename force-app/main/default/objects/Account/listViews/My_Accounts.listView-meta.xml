@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Accounts</fullName>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Account_Status__c</columns>
+    <columns>Account_Status_Flag__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Region__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <columns>ACCOUNT.INDUSTRY</columns>
+    <columns>TotalOfOpps__c</columns>
+    <columns>TotalOfCWOpps__c</columns>
+    <columns>AccountManager__c</columns>
+    <columns>CSM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>contains</operation>
+        <value>shopify</value>
+    </filters>
+    <label>00 My Accounts</label>
+</ListView>

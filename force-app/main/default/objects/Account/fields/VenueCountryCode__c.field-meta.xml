@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VenueCountryCode__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( TEXT(VenueCountry__c) ,
+&quot;Albania&quot;,&quot;AL&quot;,
+&quot;Australia&quot;,&quot;AU&quot;,
+&quot;Austria&quot;,&quot;AT&quot;,
+&quot;Belarus&quot;,&quot;BY&quot;,
+&quot;Bulgaria&quot;,&quot;BG&quot;,
+&quot;China&quot;,&quot;CN&quot;,
+&quot;Costa Rica&quot;,&quot;CR&quot;,
+&quot;Cyprus&quot;,&quot;CY&quot;,
+&quot;Czech Republic&quot;,&quot;CZ&quot;,
+&quot;Denmark&quot;,&quot;DK&quot;,
+&quot;Dominican Republic&quot;,&quot;DO&quot;,
+&quot;Egypt&quot;,&quot;EG&quot;,
+&quot;Estonia&quot;,&quot;EE&quot;,
+&quot;Finland&quot;,&quot;FI&quot;,
+&quot;France&quot;,&quot;FR&quot;,
+&quot;Gambia&quot;,&quot;GM&quot;,
+&quot;Germany&quot;,&quot;DE&quot;,
+&quot;Ghana&quot;,&quot;GH&quot;,
+&quot;Greece&quot;,&quot;GR&quot;,
+&quot;Grenada&quot;,&quot;GD&quot;,
+&quot;Guadeloupe&quot;,&quot;GP&quot;,
+&quot;Hungary&quot;,&quot;HU&quot;,
+&quot;Iceland&quot;,&quot;IS&quot;,
+&quot;India&quot;,&quot;IN&quot;,
+&quot;Ireland&quot;,&quot;IE&quot;,
+&quot;Italy&quot;,&quot;IT&quot;,
+&quot;Liechtenstein&quot;,&quot;LI&quot;,
+&quot;Luxembourg&quot;,&quot;LU&quot;,
+&quot;Malaysia&quot;,&quot;MY&quot;,
+&quot;Malta&quot;,&quot;MT&quot;,
+&quot;Mexico&quot;,&quot;MX&quot;,
+&quot;Montenegro&quot;,&quot;ME&quot;,
+&quot;Netherlands&quot;,&quot;NL&quot;,
+&quot;Norway&quot;,&quot;NO&quot;,
+&quot;Peru&quot;,&quot;PE&quot;,
+&quot;Philippines&quot;,&quot;PH&quot;,
+&quot;Poland&quot;,&quot;PL&quot;,
+&quot;Romania&quot;,&quot;RO&quot;,
+&quot;Russian Federation&quot;,&quot;RU&quot;,
+&quot;Singapore&quot;,&quot;SG&quot;,
+&quot;Spain&quot;,&quot;ES&quot;,
+&quot;Sri Lanka&quot;,&quot;LK&quot;,
+&quot;Swaziland&quot;,&quot;SZ&quot;,
+&quot;Sweden&quot;,&quot;SE&quot;,
+&quot;Switzerland&quot;,&quot;CH&quot;,
+&quot;Tanzania, United Republic of&quot;,&quot;TZ&quot;,
+&quot;Thailand&quot;,&quot;TH&quot;,
+&quot;Turkey&quot;,&quot;TR&quot;,
+&quot;Ukraine&quot;,&quot;UA&quot;,
+&quot;United Arab Emirates&quot;,&quot;AE&quot;,
+&quot;United Kingdom&quot;,&quot;GB&quot;,
+&quot;United States&quot;,&quot;US&quot;,
+&quot;Virgin Islands, British&quot;,&quot;VG&quot;,
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Venue Country Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

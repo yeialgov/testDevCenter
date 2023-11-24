@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>ES - First Contact - USTED</name>
+    <style>freeForm</style>
+    <subject>Descubra cómo puede ahorrar en tiempo y dinero y reduzca su estrés con orderbird</subject>
+    <textOnly>www.orderbird.com
+{!User.Email}
+{!User.Phone}
+
+
+Hola querido equipo de..., Querido/a…,
+
+Muchas gracias por su interés en orderbird. Nos gustaría presentarle con más detalle a nuestro equipo de orderbird para que pueda tener su propia opinión. Nuestro objetivo es que con ello pueda decidir si le podemos ofrecer lo que está buscando.
+
+Nos gustaría tener el placer de darle a conocer, desde orderbird, nuestro TPV líder para iPad en gastronomía. ¿Cómo podríamos dar con usted?
+
+Quedamos a la espera de su respuesta.
+
+Muchas gracias y saludos cordiales
+
+Su equipo orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaxExemptReason_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Tax_Exempt_Reason__c) &amp;&amp;  NOT(ISBLANK(ZuoraId__c)) &amp;&amp; NOT(CONTAINS($Label.Admin_Users,$User.Id)) &amp;&amp; NOT( $UserRole.Name  = &quot;System Admin&quot;) &amp;&amp; NOT( $UserRole.Name  = &quot;Finance&quot;)</errorConditionFormula>
+    <errorDisplayField>Tax_Exempt_Reason__c</errorDisplayField>
+    <errorMessage>This cannot be changed for an existing customer. Please contact someone in CRM or Finance.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>9 DE Welcome Fabio</name>
+    <style>none</style>
+    <subject>Hallo {!Contact.FirstName}! Ich bin Fabio und ab sofort für Dich zuständig!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

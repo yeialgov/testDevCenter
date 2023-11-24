@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Lookup_Filter_Error__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(SF_SoldTo_Contact__r.AccountId &lt;&gt; Id, SF_SoldTo_Contact__r.AccountId &lt;&gt; Parent.Id, SF_SoldTo_Contact__r.AccountId != null) ||
+AND(SF_BillTo_Contact__r.AccountId &lt;&gt; Id, SF_BillTo_Contact__r.AccountId &lt;&gt; Parent.Id, SF_BillTo_Contact__r.AccountId != null) ||
+AND(SF_Venue_Contact__r.AccountId &lt;&gt; Id, SF_Venue_Contact__r.AccountId &lt;&gt; Parent.Id, SF_Venue_Contact__r.AccountId != null) ||
+AND(Primary_Contact__r.AccountId &lt;&gt; Id, Primary_Contact__r.AccountId &lt;&gt; Parent.Id, Primary_Contact__r.AccountId != null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contact Lookup Filter Error</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

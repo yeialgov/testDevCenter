@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Opportunity</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/006/e?opp9={!TODAY()+90}&amp;accid={!Account.Id}&amp;opp3=&quot;[&quot;+{!TEXT(YEAR(TODAY()))}+&quot;-&quot;+{!TEXT(MONTH(TODAY()))}+&quot;] -&quot;+{!Account.Name}+&quot;-&quot;+{!IF(Account.TotalOfCWOpps__c&gt;=1,&quot;upselling&quot;,&quot;new business&quot;)}&amp;opp11=&quot;Potential&quot;&amp;00N5800000C22lT={!IF(Account.TotalOfCWOpps__c&gt;=1,&quot;upselling&quot;,&quot;new business&quot;)}
+&amp;retURL={!Account.Id}</url>
+</WebLink>

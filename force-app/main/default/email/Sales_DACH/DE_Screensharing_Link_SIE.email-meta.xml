@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/SAL-20</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - Screensharing Link - SIE</name>
+    <style>freeForm</style>
+    <subject>Ihr Link zu Ihrer orderbird-Produktpräsentation</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

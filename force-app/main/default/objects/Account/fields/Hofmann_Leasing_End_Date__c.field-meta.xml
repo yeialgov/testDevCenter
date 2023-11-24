@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hofmann_Leasing_End_Date__c</fullName>
+    <description>https://jira.orderbird.com/browse/CRMT-3270</description>
+    <externalId>false</externalId>
+    <label>Hofmann Leasing End Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Termination_Downgrade</fullName>
+    <active>true</active>
+    <businessProcess>Master</businessProcess>
+    <description>Record Type for Termination/ Downgrade Issues.</description>
+    <label>Retired-Issue: Termination/ Downgrade</label>
+    <picklistValues>
+        <picklist>AMCategory__c</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>De-escalation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dunning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescissions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Assign_to_Queue__c</picklist>
+        <values>
+            <fullName>Account_Specialists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer_Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiskalisierung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightowls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pay_Specialists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech_Support</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CaseReason__c</picklist>
+        <values>
+            <fullName>n%2Fa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>unavailable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Component__c</picklist>
+        <values>
+            <fullName>Address Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Available Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Base Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concardis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copy Masterdata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device PIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expense Receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fallback mode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GDPdU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Count</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ISP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kassenbuch %2F integrated cash reconcilliation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lock Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offline Mode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper Roll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Password</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passwords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Types</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pfand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receipt Archive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Redo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repeater 3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repeater Cable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repeater Wireless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurant Info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roles and Permissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Split Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Status</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26Cs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tab Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tempered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upselling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vouchers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>accumulated turnover %28open%2Fcleared%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>arrange items on orderpad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>asian character</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>barcode scanner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bigger buttons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bill - bigger total</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bill has docket number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bills accessible after close</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>call system with numbers %28self service%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>card payment receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>chain store management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>change on bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>colourful buttons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>coupon integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>customer display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>customer management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>daily closing ends shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>deactivate obligatory shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>delivery integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>deposits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>digital menu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>digital receipt display</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dispenser system %28Schankanlage%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>docket has bill number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>docket layout optimised</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>drinks and food separated on report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>duplicate bill automated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eat-in%2Ftakeaway separation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>enter stock %26 warnings %28NOT inventory control%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>guest check printer %28e%2Eg%2E a5%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>happy hour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hotel interface</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPod touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iZettle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>inventory control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>item discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>kitchen monitor %28open orders%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>loyalty program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>magic button%27%2F%27no revenue%27 transactions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>misc%2E items with notes in reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>more languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eob login</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eorderbird data filter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eorderbird live ticker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eorderbird menu editing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>numpad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open drawer button</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open tables despite closed shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>paypal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>prepaid cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>printer settings adjustable %28areas%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>printers%3A not thermal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>prompt for eat-in%2Ftakeaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>recipe list</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>reminder to close the shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>remote access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>reservation system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>retail functions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>scale connection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>several prices per item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>staff management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>super family group icons changeable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>super family group separation on z-reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>table handover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>table protection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>take-away%2Fin-house on bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>time tracking %28staff%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>total on kitchen receipt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>training mode</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>various printer models %28star%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>waiter key card%2Fmagnetic key</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contents__c</picklist>
+        <values>
+            <fullName>Main menu</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HardwareDevice__c</picklist>
+        <values>
+            <fullName>Card Reader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Drawer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Powerbank%2F Cases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad - Special Regulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad TM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IssueReason__c</picklist>
+        <values>
+            <fullName>Cashbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Claim settled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closing Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - accounting%2F customer account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint - product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint against staff%2F service complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Revocked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data cleanup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insolvency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Feature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notification of claim - unavailable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Owner Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price increase rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reliability Lacking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescission before delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescission denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescission forwarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seasonal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terms and conditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Through orderbird%2F debt collection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning after cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning correct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning incorrect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IssueType__c</picklist>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hardware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Item__c</picklist>
+        <values>
+            <fullName>Card Reader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Drawer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Powerbank%2F Cases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Router</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter Package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad - Special Regulation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iPad TM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Onboarding_Type__c</picklist>
+        <values>
+            <fullName>Onboarding Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resmio Activation Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resmio Onboarding</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>E-Mail CCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Mail DACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Mail EN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Mail FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Mail MINI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live Call After Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail After Hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_NPS_Internal__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Type_Onboarding__c</picklist>
+        <values>
+            <fullName>Cardreader Config</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menue %2F Backup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My%2EOb Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Staff Briefing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welcome Call</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Wrap Up</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SubCategory__c</picklist>
+        <values>
+            <fullName>Bill%2FDocket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masterdata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menu Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Reachable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ordering Pad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28see comments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Users</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eorderbird</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>myOB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa %28please specify in case comments%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

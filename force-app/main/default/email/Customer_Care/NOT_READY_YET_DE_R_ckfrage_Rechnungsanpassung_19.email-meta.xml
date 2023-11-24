@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kunde hat Fragen zur rückwirkenden Rechnungsanpassung mit 19 % | Januar 2021</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Rückfrage Rechnungsanpassung 19 %</name>
+    <style>none</style>
+    <subject>Deine Rückfrage zu Deiner Rechnungsanpassung mit 19 %</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+danke für Deine Frage zu Deiner Rechnung von orderbird und den darin angepassten Steuersatz von 19 Prozent Mehrwertsteuer.
+
+
+Wie Du sicherlich weißt, sah das Konjunktur- und Zukunftspaket der Bundesregierung 2020 vor, dass vom 01.07.2020 bis zum 31.12.2020 für sechs Monate unter anderem der reguläre Mehrwertsteuersatz von 19 Prozent auf 16 Prozent gesenkt wurde. Dieser Zeitraum ist verstrichen und der reguläre Mehrwertsteuersatz von 19 % ist wieder gültig.
+
+
+Dies betrifft auch Deine Rechnung //INV99999999// für Deine Gerätelizenz/ Kassenbuch-Lizenz/ Lizenz für die Online-TSE/ Servicepauschale, da das ausschlaggebende Auslaufdatum der Lizenz(en) außerhalb des Zeitraums der Mehrwertsteuersenkung fällt.
+
+
+Deshalb hast Du von uns zwei Rechnungen erhalten:
+
+Eine Rechnung mit einem Guthaben über den Betrag aller Rechnungen mit 16 % MwSt., die in den Zeitraum der Steuersenkung (01.07.2020-31.12.2020) fallen.
+Eine Rechnung mit der Zahlungsaufforderung über den Betrag aller Rechnungen mit 19 % MwSt-Anpassung, die in den Zeitraum der Steuersenkung (01.07.2020-31.12.2020) fallen, aber nach dem 31.12.2020 auslaufen.
+
+Mehr Informationen bekommst Du in diesem Artikel: Die Mehrwertsteueranpassung auf 19 % in Deutschland ab Januar 2021.
+
+
+Der Rechnungsbetrag, der sich aus diesen beiden Rechnungen durch die 3 % Steuererhöhung ergibt, wird mit Deiner nächsten Rechnung verrechnet.
+
+Schon gewusst? Du kannst Deine Rechnungen in Deinem Rechnungsportal auf MY orderbird jederzeit abrufen und herunterladen.
+
+
+Liebe Grüße aus Berlin
+
+{!User.FirstName}
+
+
+
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

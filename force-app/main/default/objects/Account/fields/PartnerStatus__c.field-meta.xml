@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerStatus__c</fullName>
+    <description>Stakeholder: PaM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is this company&apos;s status as an orderbird partner? Managed by PaM</inlineHelpText>
+    <label>Partner Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>true</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Lostnotregionalfieldagent</fullName>
+                <default>false</default>
+                <label>Lost - not regional field agent</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Lost - lost confidence in product</fullName>
+                <default>false</default>
+                <label>Lost - lost confidence in product</label>
+            </value>
+            <value>
+                <fullName>Lost - No relevant Contact</fullName>
+                <default>false</default>
+                <label>Lost - No relevant Contact</label>
+            </value>
+            <value>
+                <fullName>Lost - out of business</fullName>
+                <default>false</default>
+                <label>Lost - out of business</label>
+            </value>
+            <value>
+                <fullName>Lost - teamed up with other POS system</fullName>
+                <default>false</default>
+                <label>Lost - teamed up with other POS system</label>
+            </value>
+            <value>
+                <fullName>Lost - unattractive commission model</fullName>
+                <default>false</default>
+                <label>Lost - unattractive commission model</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

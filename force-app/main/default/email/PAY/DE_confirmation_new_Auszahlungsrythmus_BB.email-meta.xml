@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>adresse, IBAN, Buchungstext, Auszahlungsrhythmus Änderung</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE confirmation change BB</name>
+    <style>none</style>
+    <subject>orderbird Pay - Dein Änderungswunsch wurde von Bambora bestätigt</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

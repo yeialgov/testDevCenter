@@ -1,0 +1,12 @@
+.THIS .alertBadge{
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    background-color: #c23934;
+    color: #fff;
+    padding: 0.2rem 0.5rem 0.5rem;
+    right: 3.5rem;
+    top: 1rem;
+    position: absolute;
+}

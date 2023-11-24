@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Walk-In</fullName>
+        <default>false</default>
+        <label>Walk-In</label>
+    </customValue>
+    <customValue>
+        <fullName>Hotline</fullName>
+        <default>false</default>
+        <label>Hotline</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Network</fullName>
+        <default>false</default>
+        <label>Personal Network</label>
+    </customValue>
+    <customValue>
+        <fullName>E-mail</fullName>
+        <default>false</default>
+        <label>E-mail</label>
+    </customValue>
+    <customValue>
+        <fullName>CRC - Referral of successor</fullName>
+        <default>false</default>
+        <label>CRC - Referral of successor</label>
+    </customValue>
+    <customValue>
+        <fullName>CRC - E-mail</fullName>
+        <default>false</default>
+        <label>CRC - E-mail</label>
+    </customValue>
+    <customValue>
+        <fullName>CRC - Hotline</fullName>
+        <default>false</default>
+        <label>CRC - Hotline</label>
+    </customValue>
+    <customValue>
+        <fullName>CRC - Webform</fullName>
+        <default>false</default>
+        <label>CRC - Webform</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral by Partner</fullName>
+        <default>false</default>
+        <label>Referral by Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Research - Public Register</fullName>
+        <default>false</default>
+        <label>Research - Public Register</label>
+    </customValue>
+    <customValue>
+        <fullName>Research - Other</fullName>
+        <default>false</default>
+        <label>Research - Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook</fullName>
+        <default>false</default>
+        <label>Facebook</label>
+    </customValue>
+    <customValue>
+        <fullName>Twitter</fullName>
+        <default>false</default>
+        <label>Twitter</label>
+    </customValue>
+    <customValue>
+        <fullName>Instagram</fullName>
+        <default>false</default>
+        <label>Instagram</label>
+    </customValue>
+    <customValue>
+        <fullName>Kassensystemevergleich.de</fullName>
+        <default>false</default>
+        <label>Kassensystemevergleich.de</label>
+    </customValue>
+    <customValue>
+        <fullName>Kassen-Vergleich.com</fullName>
+        <default>false</default>
+        <label>Kassen-Vergleich.com</label>
+    </customValue>
+    <customValue>
+        <fullName>Companeo</fullName>
+        <default>false</default>
+        <label>Companeo</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook Scraper</fullName>
+        <default>false</default>
+        <label>Facebook Scraper</label>
+    </customValue>
+    <customValue>
+        <fullName>Toques de restauration</fullName>
+        <default>false</default>
+        <label>Toques de restauration</label>
+    </customValue>
+    <customValue>
+        <fullName>Chardasso</fullName>
+        <default>false</default>
+        <label>Chardasso</label>
+    </customValue>
+    <customValue>
+        <fullName>Trade Register Scraper</fullName>
+        <default>false</default>
+        <label>Trade Register Scraper</label>
+    </customValue>
+    <customValue>
+        <fullName>TradingTwins</fullName>
+        <default>false</default>
+        <label>TradingTwins</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Texting</fullName>
+        <default>false</default>
+        <label>Outbound Texting</label>
+    </customValue>
+    <customValue>
+        <fullName>my.ob Reg</fullName>
+        <default>false</default>
+        <label>my.ob Reg</label>
+    </customValue>
+    <customValue>
+        <fullName>Neugeschaeft</fullName>
+        <default>false</default>
+        <label>Neugeschaeft</label>
+    </customValue>
+    <customValue>
+        <fullName>ETL-Print</fullName>
+        <default>false</default>
+        <label>ETL-Print</label>
+    </customValue>
+    <customValue>
+        <fullName>Cold Call</fullName>
+        <default>false</default>
+        <label>Cold Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Preorder</fullName>
+        <default>false</default>
+        <label>Preorder</label>
+    </customValue>
+    <customValue>
+        <fullName>Postcard 2020</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Postcard 2020</label>
+    </customValue>
+    <description>For the convenient use of Lead Attributes: Users can use Keywords instead of IDs</description>
+    <masterLabel>LAC Shorthands</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

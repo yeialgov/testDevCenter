@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number__c</fullName>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <displayFormat>Opp-{000000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>What is a short ID zu use for internal communication? Not intended for external use! Filled automatically</inlineHelpText>
+    <label>Opportunity Number</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

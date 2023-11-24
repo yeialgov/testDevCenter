@@ -1,0 +1,21 @@
+<messaging:emailTemplate subject="{!relatedTo.Dunning_1_Subject__c} {!relatedTo.Name} {!relatedTo.CustomerID__c}" recipientType="Contact" relatedToType="Account">
+
+    <messaging:htmlEmailBody >
+        <c:DunningOne AccountId="{!relatedTo.Id}"/>
+    </messaging:htmlEmailBody>
+
+    <messaging:attachment renderAs="pdf">
+        <html>
+            <link rel='stylesheet' type='text/css' href='{!$Resource.accountstatementcss}' />
+            <c:DunningOne AccountId="{!relatedTo.Id}"/>
+        </html>
+    </messaging:attachment> 
+
+    <messaging:attachment renderAs="pdf">
+        <html>
+            <link rel='stylesheet' type='text/css' href='{!$Resource.accountstatementcss}' />
+            <c:AccountStatement AccountId="{!relatedTo.Id}"/>
+        </html>
+    </messaging:attachment> 
+
+</messaging:emailTemplate>

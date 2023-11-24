@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/CDS-1231</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SEPA paused DE</name>
+    <style>none</style>
+    <subject>Dein SEPA-Lastschrift Mandat wurde pausiert</subject>
+    <textOnly>Hallo {!Account.SF_BillTo_Contact__c},
+
+da Deine letzten zwei Lastschriftzahlungen an uns nicht eingezogen werden konnten, sehen wir uns gezwungen, ab sofort und bis auf Weiteres Dein SEPA-Lastschriftmandat zu pausieren.
+
+Was heißt das und was muss ich jetzt tun?
+
+In der Vergangenheit ist Dein Konto zweimal nicht ausreichend für unsere offenen Forderungen gedeckt gewesen. Durch diese geplatzten Transaktionen sind uns Kosten entstanden. Um solche Kosten in Zukunft zu vermeiden, pausieren wir daher Dein SEPA-Lastschriftmandat.
+
+Tipp: Falls Du noch ausstehende Rechnungsbeträge hast, überweise diese bitte innerhalb von fünf Werktagen auf unser Bankkonto unter Nennung der entsprechenden Rechnungsnummer. So ersparst Du Dir ein Mahnverfahren mit anfallenden Mahngebühren!
+
+Sofern Deine nächsten vier Zahlungen bzw. Überweisungen reibungslos klappen, schreibe eine Mail an hilfe@orderbird.com und wir reaktivieren nach einer kurzen Prüfung Dein SEPA-Lastschriftmandat.
+
+Unsere Bankverbindung
+
+orderbird AG
+Bank: Deutsche Bank
+IBAN: DE68 1007 0124 0112 1359 00
+BIC: DEUTDEDB101
+
+Deine Zahlungen sind gar nicht geplatzt? Es handelt sich um ein Missverständnis?
+
+Wenn Du der Meinung bist, dass Dein Lastschriftmandat bisher immer reibungslos funktioniert hat und es keine geplatzten Zahlungen gegeben hat, nimm bitte schnellstmöglich Kontakt mit uns auf: Du erreichst uns jederzeit per E-Mail unter hilfe@orderbird.com. Gib einfach den Betreff “SEPA-Lastschriftmandat fälschlicherweise pausiert” an.
+
+Wir bedanken uns für Dein Verständnis.
+
+Herzliche Grüße
+Dein orderbird Team
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+D- 10969 Berlin
+
+Germany
+
+E-Mail: hello@orderbird.com
+Telefon: 030 208 983 098
+Fax: +49 321 214 681 89
+
+
+Sitz der Gesellschaft: Berlin
+
+Registergericht: Amtsgericht Berlin - Charlottenburg
+
+Registernummer: HRB 134011 B
+
+Ust-ID: DE276722316
+
+
+Vorstand: Mark Schoen (Vorsitzender), Jakob Schreyer, Patrick Brienen-Lucius
+
+Vorsitzender des Aufsichtsrats: Oliver Kaltner
+
+
+© orderbird AG 2011-{!User.Current_Year__c} All Rights Reserved</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

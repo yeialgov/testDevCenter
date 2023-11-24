@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DLI_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(DLI_Date__c))
+&amp;&amp;
+(
+YEAR(DLI_Date__c) &lt;&gt; YEAR(TODAY())
+)</errorConditionFormula>
+    <errorDisplayField>DLI_Date__c</errorDisplayField>
+    <errorMessage>You probably meant to make this effective this year?</errorMessage>
+</ValidationRule>

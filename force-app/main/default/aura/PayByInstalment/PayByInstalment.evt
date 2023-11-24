@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="Num" type="Integer" default="0"/>
+</aura:event>

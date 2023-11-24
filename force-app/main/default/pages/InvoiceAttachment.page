@@ -1,0 +1,10 @@
+<apex:page standardController="Invoice__c" renderAs="pdf">
+    <html>
+        <apex:outputPanel rendered="{!Invoice__c.VAT_Adjustment_Lines__c < 1}">
+            <c:invoiceBody_2021 InvoiceId="{!Invoice__c.Id}" Watermark="false"/>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!Invoice__c.VAT_Adjustment_Lines__c >= 1}">
+            <c:invoiceVatAdjBody InvoiceId="{!Invoice__c.Id}" Watermark="false"/>
+        </apex:outputPanel>
+    </html>
+</apex:page>

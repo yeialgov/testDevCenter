@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;div&gt;&lt;br&gt;&lt;font face=&quot;tahoma, geneva, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;a href=&quot;https://eu6.salesforce.com/01Z58000000Zj4d&quot; target=&quot;_blank&quot;&gt;&lt;span style=&quot;color: #FFA500;&quot;&gt;View full dashboard&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;a href=&quot;https://eu6.salesforce.com/01Z58000000Zj4d&quot;&gt;&lt;span style=&quot;color: #FFA500;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt; here &lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/font&gt;&lt;/div&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

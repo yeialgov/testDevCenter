@@ -1,0 +1,41 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global"
+                controller="SurveyController">
+    <aura:attribute name="Lead" type="String"/>
+    <aura:attribute name="Comment" type="String"/>
+    <aura:attribute name="NPSChoice" type="Integer"/>
+    <aura:attribute name="token" type="String"/>
+    <aura:attribute name="ShowSurvey" type="Boolean" default="false"/>
+    <aura:attribute name="ShowError" type="Boolean" default="false"/>
+    <aura:attribute name="ShowThanks" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div>
+        <div style="max-width: 600px; margin: 0 auto;background-color: white;">
+            <aura:if isTrue="{!v.ShowSurvey}">
+                <div style="text-align: center; font-weight: bold; color: #1ba4dd;" class="slds-text-heading_large">{!$Label.c.NPS_SURVEY_HEADING}</div>
+                <div style="padding: 1rem;">
+                    <div class="slds-text-heading_medium" style="padding-bottom: 0.5rem;">
+                        {!$Label.c.NPS_QUESTION}
+                    </div>
+                    <c:NPSQuestion Lead="{!v.Lead}" NPSChoice="{!v.NPSChoice}" token="{!v.token}"/>	
+                    <div class="slds-text-heading_medium" style="padding-bottom: 0.5rem;">
+                        {!$Label.c.COMMENTS_QUESTION}
+                    </div>
+                    <lightning:textarea variant="label-hidden" value="{!v.Comment}"/>
+                    <div style="text-align: center;margin-top: 1rem;">
+                        <lightning:button onclick="{!c.Submit}" variant="brand" iconName="utility:send" label="{!$Label.c.SUBMIT_BUTTON}"/>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <div style="padding: 1rem;text-align: center;">
+                        <aura:if isTrue="{!v.ShowError}">
+                            {!$Label.c.SURVEY_NOT_AVAILABLE}
+                        </aura:if>
+                        <aura:if isTrue="{!v.ShowThanks}">
+                            {!$Label.c.NPS_SURVEY_COMPLETE}
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

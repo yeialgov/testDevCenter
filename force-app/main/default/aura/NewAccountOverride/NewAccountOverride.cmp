@@ -1,0 +1,3 @@
+<aura:component implements="lightning:actionOverride" access="global" >
+    <lightning:card title="Accounts can only be created by converting a lead."/>
+</aura:component>

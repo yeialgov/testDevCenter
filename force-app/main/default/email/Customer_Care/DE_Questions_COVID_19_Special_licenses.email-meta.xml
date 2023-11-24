@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Temporäre Umstellung zu Monatslizenzen wegen Corona</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Questions COVID-19 Special licenses</name>
+    <style>none</style>
+    <subject>Deine Frage zur COVID-19 Sonderlizenz</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

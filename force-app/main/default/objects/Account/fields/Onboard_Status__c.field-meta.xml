@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboard_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Onboarding Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Onboarding</fullName>
+                <default>true</default>
+                <label>No Onboarding</label>
+            </value>
+            <value>
+                <fullName>Awaiting Case</fullName>
+                <default>false</default>
+                <label>Awaiting Case</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer Reply</fullName>
+                <default>false</default>
+                <label>Waiting for Customer Reply</label>
+            </value>
+            <value>
+                <fullName>Re-Open</fullName>
+                <default>false</default>
+                <label>Re-Open</label>
+            </value>
+            <value>
+                <fullName>Escalated</fullName>
+                <default>false</default>
+                <label>Escalated</label>
+            </value>
+            <value>
+                <fullName>Postponed</fullName>
+                <default>false</default>
+                <label>Postponed</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Closed/Uncompleted</fullName>
+                <default>false</default>
+                <label>Closed/Uncompleted</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (New)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (New)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Open)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Open)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (On Hold)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (On Hold)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Waiting for Customer Reply)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Waiting for Customer Reply)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Re-Open)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Re-Open)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Escalated)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Escalated)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Postponed)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Postponed)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Completed)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Completed)</label>
+            </value>
+            <value>
+                <fullName>Awaiting Subscription (Closed/Uncompleted)</fullName>
+                <default>false</default>
+                <label>Awaiting Subscription (Closed/Uncompleted)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

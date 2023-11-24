@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FiscalizeAPI_5</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( ISNEW() )
+ &amp;&amp;
+ISCHANGED( Wizard_Complete__c ) 
+ &amp;&amp;
+NOT( ISBLANK( Wizard_Complete__c ))
+ &amp;&amp;
+ Hidden__c</errorConditionFormula>
+    <errorMessage>%%{&quot;errorCode&quot;:&quot;5&quot;,&quot;errorMessage&quot;:&quot;This mapping has been deactivated and therefore this venue is not billable.&quot;}%%</errorMessage>
+</ValidationRule>

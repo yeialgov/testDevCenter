@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opening_Date_Mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+
+ISBLANK( OpeningDateNewVenue__c ), 
+ISPICKVAL( NewVenue__c , &quot;Yes&quot;)  
+
+)</errorConditionFormula>
+    <errorDisplayField>OpeningDateNewVenue__c</errorDisplayField>
+    <errorMessage>Please specify the opening date of the new venue!</errorMessage>
+</ValidationRule>

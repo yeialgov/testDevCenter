@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" 
+                access="global" controller="CockpitController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="MRR" type="Decimal" />
+    
+    <lightning:card title="MRR">
+        <div style="padding: 0 1rem;text-align:center;"><ui:outputCurrency value="{!v.MRR}"/></div>
+    </lightning:card>
+	
+</aura:component>

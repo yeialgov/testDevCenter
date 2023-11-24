@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Account Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Customer</fullName>
+                <color>#66FF99</color>
+                <default>false</default>
+                <label>Active Customer</label>
+            </value>
+            <value>
+                <fullName>Future Customer</fullName>
+                <default>false</default>
+                <label>Future Customer</label>
+            </value>
+            <value>
+                <fullName>Hardware Customer</fullName>
+                <default>false</default>
+                <label>Hardware Customer</label>
+            </value>
+            <value>
+                <fullName>Incomplete Customer</fullName>
+                <default>false</default>
+                <label>Incomplete Customer</label>
+            </value>
+            <value>
+                <fullName>Legacy NetSuite Customer</fullName>
+                <default>false</default>
+                <label>Legacy NetSuite Customer</label>
+            </value>
+            <value>
+                <fullName>Lost Customer</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Lost Customer</label>
+            </value>
+            <value>
+                <fullName>Lost Hardware Customer</fullName>
+                <default>false</default>
+                <label>Lost Hardware Customer</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Paused Customer</fullName>
+                <default>false</default>
+                <label>Paused Customer</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <color>#DDDDDD</color>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Prospect (Closed Lost)</fullName>
+                <default>false</default>
+                <label>Prospect (Closed Lost)</label>
+            </value>
+            <value>
+                <fullName>Prospect (Committed)</fullName>
+                <default>false</default>
+                <label>Prospect (Committed)</label>
+            </value>
+            <value>
+                <fullName>Prospect (Introduction / Demo)</fullName>
+                <default>false</default>
+                <label>Prospect (Introduction / Demo)</label>
+            </value>
+            <value>
+                <fullName>Prospect (Potential)</fullName>
+                <default>false</default>
+                <label>Prospect (Potential)</label>
+            </value>
+            <value>
+                <fullName>Prospect (Proposal)</fullName>
+                <default>false</default>
+                <label>Prospect (Proposal)</label>
+            </value>
+            <value>
+                <fullName>Prospect (Qualification)</fullName>
+                <default>false</default>
+                <label>Prospect (Qualification)</label>
+            </value>
+            <value>
+                <fullName>Product Test Only</fullName>
+                <default>false</default>
+                <label>Product Test Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

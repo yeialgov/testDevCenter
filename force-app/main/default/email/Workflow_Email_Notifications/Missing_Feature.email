@@ -1,0 +1,8 @@
+Customer: {!Account.Name}
+Primary contact email: {!Opportunity.Primary_contact_email__c}
+
+Opportunity: {!Opportunity.Link}
+
+Missing feature: {!Opportunity.Missing_feature__c}
+
+Product: {!Account.Target_Product__c}

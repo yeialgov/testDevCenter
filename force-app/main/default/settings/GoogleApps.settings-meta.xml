@@ -3,9 +3,10 @@
     <enableGmailButtons>false</enableGmailButtons>
     <enableGmailButtonsAndLinks>false</enableGmailButtonsAndLinks>
     <enableGmailLinks>false</enableGmailLinks>
-    <enableGoogleDocs>false</enableGoogleDocs>
+    <enableGoogleDocs>true</enableGoogleDocs>
     <enableGoogleDocsTab>false</enableGoogleDocsTab>
     <enableGoogleTalk>false</enableGoogleTalk>
+    <googleAppsDomain>orderbird.com</googleAppsDomain>
     <googleAppsDomainLinked>false</googleAppsDomainLinked>
     <googleAppsDomainValidated>false</googleAppsDomainValidated>
 </GoogleAppsSettings>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>https://jira.orderbird.com/browse/MESSE-63</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>Tradeshow Follow Up - Customer Sad</name>
+    <style>freeForm</style>
+    <subject>Danke für Deinen orderbird-Besuch auf der INTERGASTRA 2018</subject>
+    <textOnly>Lieber orderbird-Kunde,
+
+
+
+wir haben uns sehr über Deinen Besuch auf unserem orderbird-Stand gefreut und danken Dir für Dein ehrliches Feedback. Deine Zufriedenheit ist uns sehr wichtig, denn wir wollen orderbird immer besser machen. Unsere Arbeit misst sich an Deiner Zufriedenheit.
+
+
+
+Deshalb meldet sich ein Kollege aus unserem Support-Team in Kürze bei Dir, um Deine Fragen, Anregungen oder Probleme zu klären.
+
+
+
+Extra Tipp: Kennst Du schon unser Online-Handbuch? Unter support.orderbird.com findest Du viele spannende und hilfreiche Artikel rund um Deine orderbird-Kasse.
+
+
+
+
+Viele Grüße
+
+
+Dein orderbird-Support-Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

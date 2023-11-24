@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Complete_Contact_Info__c</fullName>
+    <description>Formula to check if all contact information are filled in</description>
+    <externalId>false</externalId>
+    <formula>AND( 
+FirstName != &apos;&apos;,
+Street != &apos;&apos;,
+City != &apos;&apos;,
+PostalCode != &apos;&apos;,
+Country != &apos;&apos;,
+Phone != &apos;&apos;,
+Email!=&apos;&apos;,
+Company!=&apos;&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has Complete Contact Info</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

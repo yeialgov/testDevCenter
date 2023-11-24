@@ -1,0 +1,8 @@
+<apex:component access="global">
+    <head>
+        <apex:stylesheet value="{!$Resource.headerstyle}"/>
+    </head>
+    <div class="rtAlign">
+        <img src="{!$Resource.orderbird_logo}" id="logo"/>
+    </div>
+</apex:component>

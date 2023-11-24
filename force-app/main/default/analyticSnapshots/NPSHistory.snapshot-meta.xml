@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupColumn>BucketField_64359442</groupColumn>
+    <mappings>
+        <sourceField>FORMULA1</sourceField>
+        <sourceType>summary</sourceType>
+        <targetField>NPS_History__c.NPS__c</targetField>
+    </mappings>
+    <name>NPSHistory</name>
+    <runningUser>sfdc@orderbird.com</runningUser>
+    <sourceReport>OB_Support_Reports/Net_Promoter_Score_w_Formula</sourceReport>
+    <targetObject>NPS_History__c</targetObject>
+</AnalyticSnapshot>

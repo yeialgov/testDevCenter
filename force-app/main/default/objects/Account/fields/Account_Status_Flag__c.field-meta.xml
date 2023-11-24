@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Status_Flag__c</fullName>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+CASE(Account_Status__c, 
+&quot;Active Customer&quot;,&quot;/resource/icons/icons/check.png&quot;,
+&quot;Lost Customer&quot;,&quot;/resource/icons/icons/close.png&quot;,
+&quot;Paused Customer&quot;,&quot;/resource/icons/icons/pause.png&quot;,
+&quot;Future Customer&quot;,&quot;/resource/icons/icons/clock.png&quot;,
+&quot;Hardware Customer&quot;,&quot;/resource/icons/icons/desktop.png&quot;,
+&quot;Incomplete Customer&quot;,&quot;/resource/icons/icons/info_alt.png&quot;,
+&quot;Lost Hardware Customer&quot;,&quot;/resource/icons/icons/close.png&quot;,
+&quot;Legacy NetSuite Customer&quot;,&quot;/resource/icons/icons/database.png&quot;,
+&quot;Partner&quot;,&quot;/resource/icons/icons/crossfilter.png&quot;,
+&quot;Prospect (Closed Lost)&quot;,&quot;/resource/icons/icons/close.png&quot;,
+&quot;/resource/icons/icons/add.png&quot;),
+&quot;n/a&quot;, 25, 25)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Flag</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

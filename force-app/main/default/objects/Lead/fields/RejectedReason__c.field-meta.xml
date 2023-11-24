@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RejectedReason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the unqualified reason for a lead. Required if Lead Status = Unqualified</inlineHelpText>
+    <label>Unqualified Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Already has a POS</fullName>
+                <default>false</default>
+                <label>Already has a POS</label>
+            </value>
+            <value>
+                <fullName>Apple only</fullName>
+                <default>false</default>
+                <label>Apple only</label>
+            </value>
+            <value>
+                <fullName>Closing down</fullName>
+                <default>false</default>
+                <label>Closing down</label>
+            </value>
+            <value>
+                <fullName>Bad/ incomplete contact details</fullName>
+                <default>false</default>
+                <label>Bad/ incomplete contact details</label>
+            </value>
+            <value>
+                <fullName>Foreign country / incompatible</fullName>
+                <default>false</default>
+                <label>Foreign country / incompatible</label>
+            </value>
+            <value>
+                <fullName>Lacking reliability</fullName>
+                <default>false</default>
+                <label>Lacking reliability</label>
+            </value>
+            <value>
+                <fullName>Language Barrier</fullName>
+                <default>false</default>
+                <label>Language Barrier</label>
+            </value>
+            <value>
+                <fullName>Outside the industry / no fit</fullName>
+                <default>false</default>
+                <label>Outside the industry / no fit</label>
+            </value>
+            <value>
+                <fullName>Project cancelled</fullName>
+                <default>false</default>
+                <label>Project cancelled</label>
+            </value>
+            <value>
+                <fullName>Project delayed</fullName>
+                <default>false</default>
+                <label>Project delayed</label>
+            </value>
+            <value>
+                <fullName>Technical requirements too high</fullName>
+                <default>false</default>
+                <label>Technical requirements too high</label>
+            </value>
+            <value>
+                <fullName>Too complicated</fullName>
+                <default>false</default>
+                <label>Too complicated</label>
+            </value>
+            <value>
+                <fullName>unknown / other</fullName>
+                <default>false</default>
+                <label>unknown / other</label>
+            </value>
+            <value>
+                <fullName>Test Lead</fullName>
+                <default>false</default>
+                <label>Test Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

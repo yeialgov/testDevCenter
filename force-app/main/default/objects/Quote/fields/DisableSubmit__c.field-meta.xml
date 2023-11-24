@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisableSubmit__c</fullName>
+    <externalId>false</externalId>
+    <formula>ISBLANK(Opportunity.Account.ZuoraId__c) 
+&amp;&amp; (
+  ISBLANK(InvoiceForecast__c)
+  ||
+  ABS(InvoiceForecast__c - Subtotal - Tax ) &gt; 0.01
+)</formula>
+    <label>Disable Submit</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

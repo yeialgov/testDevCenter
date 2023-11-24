@@ -1,0 +1,19 @@
+<messaging:emailTemplate subject="Aktuellen Kontoauszug: {!relatedTo.Name}" recipientType="Contact" relatedToType="Account" replyTo="noreply@orderbird.com">
+
+    <messaging:htmlEmailBody >
+        <p>Lieber orderbird-Kunde,</p>
+        <p>in der Hektik des Alltags geht das eine oder andere schon einmal unter, eine Rechnung zum Beispiel. Trotzdem würden wir uns freuen, wenn Du die ausstehenden Rechnungsbeträge so schnell wie möglich auf unser Konto überweist. Solltest Du am Lastschriftverfahren teilnehmen, bitten wir um die Überprüfung und gegebenenfalls Aktualisierung der Bankinformationen unter den Einstellungen bei my.orderbird.com.</p>
+        <p>Anbei erhält Du Deinen aktuellen Kontoauszug. Wir erwarten den Ausgleich der Forderungen innerhalb der nächsten 5 Tage. Solltest Du in der Zwischenzeit bereits bezahlt haben, kannst Du diese Erinnerung ignorieren.</p>
+        <p>Wir sind nach § 288 BGB im Verzugsfalle berechtigt, Verzugszinsen und zudem Mahngebühren zu erheben. Wenn Deine Zahlung innerhalb der nächsten 5 Tage auf unser Konto eingeht, nehmen wir von dieser Maßnahme Abstand.</p>
+        <p>Sollte etwas nicht zu Deiner Zufriedenheit sein, schreib uns bitte eine E-Mail an hilfe@orderbird.com.<br/></p>
+        <p>Liebe Grüße von Deinem orderbird-Team</p>
+    </messaging:htmlEmailBody>
+ 
+    <messaging:attachment renderAs="pdf">
+        <html>
+            <link rel='stylesheet' type='text/css' href='{!$Resource.accountstatementcss}' />
+            <c:AccountStatement AccountId="{!relatedTo.Id}"/>
+        </html>
+    </messaging:attachment>
+ 
+</messaging:emailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>TSE - Frist - Ende am 31. März 2020</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>MINI TSE FRIST</name>
+    <style>none</style>
+    <subject>Letzte Frist zur TSE-Pflicht endet am 31. März - Dein Angebot -</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

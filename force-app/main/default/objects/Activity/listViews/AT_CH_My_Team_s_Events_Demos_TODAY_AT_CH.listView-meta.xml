@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AT_CH_My_Team_s_Events_Demos_TODAY_AT_CH</fullName>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>Activity_Type__c</columns>
+    <columns>ACTIVITY_SUBTYPE</columns>
+    <columns>Outcome__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Activity_Type__c</field>
+        <operation>equals</operation>
+        <value>Meeting (onsite),Demo</value>
+    </filters>
+    <filters>
+        <field>TASK.DUE_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Assigned_to_User_Region__c</field>
+        <operation>contains</operation>
+        <value>AT -,CH -</value>
+    </filters>
+    <label>AT/ CH: My Team&apos;s Events/ Demos TODAY</label>
+    <language>en_US</language>
+    <sharedTo></sharedTo>
+</ListView>

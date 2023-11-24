@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zuora_SoldTo_Contact__c</fullName>
+    <description>Stakeholder: Account Management &amp; Finance</description>
+    <externalId>false</externalId>
+    <formula>Id =  Account.SF_SoldTo_Contact__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Is this contact the shipping contact for its Account? This means that the address in this contact needs to be complete and up to date. Checked automatically, when the contact got selected as shipping contact on the Account</inlineHelpText>
+    <label>Shipping Contact (Zuora)</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

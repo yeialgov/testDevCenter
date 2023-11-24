@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>DE - Partner Feedback - Sale with commission - DU</name>
+    <style>freeForm</style>
+    <subject>Super! Du erhältst nun 250,00 Euro für Deine Empfehlung!</subject>
+    <textOnly>Lieber orderbird-Partner,
+
+
+{!Account.Name} ist ab sofort glücklicher orderbird-Kunde!
+
+Wir gratulieren Dir zu Deiner erfolgreichen Vermittlung und 250,00 € Provision. Vielen Dank für Dein Engagement!
+
+Um Dir Deine Provision schnellstmöglich auszahlen zu können, schicke uns einfach eine Rechnung über €250,00 an partner@orderbird.com. Nach Rechnungseingang überweisen wir Deine Provision innerhalb von 14 Tagen auf das von Dir angegebene Konto.
+
+
+Solltest Du keine eigene Rech﻿nungsvorlage besitzen, findest Du hier eine neutrale Version:
+
+Rechnungsvorlage: https://www.orderbird.com/partner/Rechnungsvorlage_Vermittlungsprovision_Unternehmer.pdf
+Rechnungsvorlage für Kleinunternehmer: https://www.orderbird.com/partner/Rechnungsvorlage_Vermittlungsprovision_Kleinunternehmer_ohne_USt.pdf
+
+
+
+Wir freuen uns bereits auf Deine nächste Empfehlung!
+
+
+
+Viele Grüße,
+Dein orderbird-Team
+
+
+
+Wusstest Du&apos;s?
+98% unserer {!User.Happy_Customers__c} Kunden empfehlen uns weiter! Hilf uns und teile Deine Begeisterung: Bewerte uns flott auf Google!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

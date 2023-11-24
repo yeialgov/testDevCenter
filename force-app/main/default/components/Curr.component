@@ -1,0 +1,13 @@
+<apex:component >
+    <apex:attribute type="Decimal" name="Value" description="Currency Value"/>
+    <apex:attribute type="String" name="Currency" description="Currency Name"/>
+    <apex:attribute type="String" name="Country" description="Country Name"/>
+    <apex:outputText value="{0, number, #,###,###,##0.00}" rendered="{!and(Country=='United Kingdom',Value!=null)}">
+        <apex:param value="{!Value}"/>
+    </apex:outputText>
+    <apex:outputPanel layout="none" rendered="{!and(Value!=null,Country!='United Kingdom')}">
+        {!IF(Value>=0,'','-')}
+        {!IF(ABS(Value)-MOD(ABS(Value),1000)>0,TEXT((ABS(Value)-MOD(ABS(Value),1000))/1000)+IF(Country=='Switzerland','’',IF(Country=='France',' ','.'))+IF(MOD(ABS(Value),1000)>=100,'',IF(MOD(ABS(Value),1000)>=10,'0','00')),'')}{!SUBSTITUTE(TEXT(ROUND(MOD(ABS(Value),1000),2)),'.',',')}{!IF(ROUND(MOD(ABS(Value),1),2)>0,'',',00')}{!IF(AND(ROUND(MOD(ABS(Value*10),1),1)=0,ROUND(MOD(ABS(Value),1),2)>0),'0','')}
+    </apex:outputPanel>
+    <span>{!Currency}</span>
+</apex:component>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Add_Record_to_Result_collection</name>
+        <label>Add Record to Result collection</label>
+        <locationX>486</locationX>
+        <locationY>256</locationY>
+        <assignmentItems>
+            <assignToReference>Result_Collection</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_var</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Look_for_unique_Links</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Mark_Unique_URL</name>
+        <label>Mark Unique URL</label>
+        <locationX>689</locationX>
+        <locationY>257</locationY>
+        <assignmentItems>
+            <assignToReference>Unique_URL_List</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_var.GLS_Tracking_Link__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Loop_var.Tracking_Mail_Sent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Add_Record_to_Result_collection</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>New_Unique_Link</name>
+        <label>New Unique Link?</label>
+        <locationX>686</locationX>
+        <locationY>56</locationY>
+        <defaultConnector>
+            <targetReference>Mark_Unique_URL</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes, unique</defaultConnectorLabel>
+        <rules>
+            <name>No_already_in_list</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Unique_URL_List</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>Loop_var.GLS_Tracking_Link__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Look_for_unique_Links</targetReference>
+            </connector>
+            <label>No, already in list</label>
+        </rules>
+    </decisions>
+    <description>Part of https://jira.orderbird.com/browse/CDS-1293</description>
+    <interviewLabel>Unique GLS Link Identifier {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Unique GLS Link Identifier</label>
+    <loops>
+        <description>Looks for records with a unique link and saves the first one found in a new list</description>
+        <name>Look_for_unique_Links</name>
+        <label>Look for unique Links</label>
+        <locationX>401</locationX>
+        <locationY>50</locationY>
+        <assignNextValueToReference>Loop_var</assignNextValueToReference>
+        <collectionReference>Initial_HFW_List</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>New_Unique_Link</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Records_for_Mail</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Searches for HFWs created today</description>
+        <name>All_new_HWF</name>
+        <label>All new HWF</label>
+        <locationX>211</locationX>
+        <locationY>51</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Look_for_unique_Links</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <dateTimeValue>2020-05-25T09:00:00.000Z</dateTimeValue>
+            </value>
+        </filters>
+        <filters>
+            <field>GLS_Tracking_Link__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>https://gls-group.eu/DE/de/paketverfolgung?match=</stringValue>
+            </value>
+        </filters>
+        <object>HardwareFulfilment__c</object>
+        <outputReference>Initial_HFW_List</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>GLS_Tracking_Link__c</queriedFields>
+        <queriedFields>Tracking_Mail_Sent__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Records_for_Mail</name>
+        <label>Update Records for Mail</label>
+        <locationX>273</locationX>
+        <locationY>259</locationY>
+        <inputReference>Result_Collection</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>All_new_HWF</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <description>raw list of all new HFWs</description>
+        <name>Initial_HFW_List</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>HardwareFulfilment__c</objectType>
+    </variables>
+    <variables>
+        <name>Loop_var</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>HardwareFulfilment__c</objectType>
+    </variables>
+    <variables>
+        <description>collection of records with unique URL</description>
+        <name>Result_Collection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>HardwareFulfilment__c</objectType>
+    </variables>
+    <variables>
+        <name>Unique_URL_List</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

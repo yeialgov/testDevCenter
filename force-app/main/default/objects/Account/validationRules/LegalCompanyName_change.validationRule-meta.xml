@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LegalCompanyName_change</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED( LegalCompanyName__c ) 
+&amp;&amp; (NOT(ISBLANK(PRIORVALUE(VATNumber__c))) || NOT(ISBLANK(ZuoraId__c))) 
+&amp;&amp; NOT(CONTAINS($Label.Admin_Users,$User.Id)) 
+&amp;&amp; NOT( $UserRole.Name = &quot;System Admin&quot;)
+&amp;&amp; NOT( $UserRole.Name = &quot;Finance&quot;)</errorConditionFormula>
+    <errorDisplayField>LegalCompanyName__c</errorDisplayField>
+    <errorMessage>This cannot be changed for an existing customer. Please contact someone in CDS or Finance.</errorMessage>
+</ValidationRule>

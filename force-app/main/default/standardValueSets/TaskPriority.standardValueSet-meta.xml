@@ -8,9 +8,9 @@
         <highPriority>true</highPriority>
     </standardValue>
     <standardValue>
-        <fullName>Normal</fullName>
+        <fullName>Medium</fullName>
         <default>true</default>
-        <label>Normal</label>
+        <label>Medium</label>
         <highPriority>false</highPriority>
     </standardValue>
     <standardValue>

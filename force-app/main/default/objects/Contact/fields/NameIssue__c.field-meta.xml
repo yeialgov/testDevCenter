@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NameIssue__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(
+FirstName == &quot;MyOrderbird&quot;,
+FirstName == &quot;[not provided]&quot;,
+FirstName == &quot;Primary&quot;,
+FirstName == &quot;n/a&quot;,
+FirstName == &quot;-&quot;,
+FirstName == &quot;.&quot;,
+FirstName == &quot;&quot;,
+ISBLANK(FirstName),
+LastName == &quot;[not provided]&quot;,
+LastName == &quot;Contact&quot;,
+LastName == &quot;n/a&quot;,
+LastName == &quot;Facebook Scrapper&quot;,
+LastName == &quot;N/A&quot;,
+LastName == &quot;*&quot;,
+LastName == &quot;-&quot;,
+LastName == &quot;.&quot;)</formula>
+    <label>Name Issue</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

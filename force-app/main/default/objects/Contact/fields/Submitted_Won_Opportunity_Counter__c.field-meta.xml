@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submitted_Won_Opportunity_Counter__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-2027</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many successfully won Opportunities has this Ambassador submitted to us?</inlineHelpText>
+    <label>Submitted Won Opportunity Counter</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Attention__c</columns>
+    <columns>Addressee__c</columns>
+    <columns>InvoiceDate__c</columns>
+    <columns>Email__c</columns>
+    <columns>Origin_Opportunity__c</columns>
+    <columns>Transaction_Type__c</columns>
+    <columns>Transaction_Label__c</columns>
+    <columns>Credit_Memo_Amount__c</columns>
+    <columns>NetsuiteSOID__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

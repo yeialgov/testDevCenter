@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Ambassador_Commissions</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Ambassador_Commission__c</columns>
+    <columns>CCPD__c</columns>
+    <columns>Closed_Date_Time__c</columns>
+    <columns>ReferralContact__c</columns>
+    <columns>ReferralAccount__c</columns>
+    <columns>DateOfHandover__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <filters>
+        <field>Ambassador_Commission__c</field>
+        <operation>notEqual</operation>
+        <value>Invoice Paid</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Closed</value>
+    </filters>
+    <filters>
+        <field>ReferralContact__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Closed_Date_Time__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>9/1/2019 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>CCPD__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Open Ambassador Commissions</label>
+</ListView>

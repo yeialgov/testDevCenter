@@ -1,0 +1,9 @@
+<apex:page standardController="OBInvoice__c" renderAs="pdf" applyHtmlTag="false" showHeader="false">
+    <!--head>
+        <style>
+            @page { size: 8.27in 11.69in; /* A4 width and height */ }
+        </style>
+    </head-->
+    <c:obInvoiceBody InvoiceId="{!OBInvoice__c.Id}" Watermark="true"/>
+
+</apex:page>

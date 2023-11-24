@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuoteWarning__c</fullName>
+    <externalId>false</externalId>
+    <label>Quote Warning</label>
+    <referenceTo>QuoteWarning__c</referenceTo>
+    <relationshipLabel>Quote Warning Conditions</relationshipLabel>
+    <relationshipName>QWCs</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

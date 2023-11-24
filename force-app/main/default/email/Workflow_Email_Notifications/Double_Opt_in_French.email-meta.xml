@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Double Opt-in French</name>
+    <style>none</style>
+    <subject>Vous y êtes presque ! Confirmez votre adresse mail</subject>
+    <textOnly>Cher gastronome,
+
+vous vous êtes inscrit sur le site web d’orderbird pour obtenir des informations sur notre caisse enregistreuse simple et bon marché. Pour confirmer votre adresse mail, veuillez cliquer sur le bouton ci-dessous : 
+
+https://orderbird.secure.force.com/customerdata/apex/newsletter_opt_in?lang=fr&amp;id={!Lead.Token__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

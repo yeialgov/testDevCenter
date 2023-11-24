@@ -1,0 +1,83 @@
+<apex:component access="global">
+    <apex:attribute name="ContactCountry" description="Country of Submitted Contact/Lead" type="String"/>
+    <apex:attribute name="AccountCountry" description="Country of Submitted Contact Account if available" type="String"/>
+    <apex:attribute name="ContactLanguage" description="Language"  type="String"/>
+    <apex:attribute name="AccountLanguage" description="Language"  type="String"/>
+    
+    
+    <!-- Definition of the Footer Language varianble that is used to select the correct language block to display. DEFAULT = English -->
+    <apex:variable var="FooterLanguage" 
+        value="{!CASE(ContactLanguage,
+                'German','German',
+                'French','French',
+                'English')}"
+    />
+    
+    <!-- Definition of the Footer Country varianble that is used to select the correct Country Block to display. DEFAULT = Germany -->
+    <apex:variable var="FooterCountry" 
+        value="{!CASE(AccountCountry,
+                'France','France',
+                'Germany')}"
+    />
+    
+    
+    <!-- FOOTER GERMANY -->
+    <apex:outputpanel layout="none" rendered="{!FooterCountry='Germany'}">
+        
+        <!-- English Footer Version-->
+        <apex:outputPanel layout="block" rendered="{!FooterLanguage='English'}">
+            
+            Englisch HTML Footer Germany<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputPanel>
+        
+        
+        <!-- German Footer Version -->
+        <apex:outputpanel layout="block" rendered="{!FooterLanguage='German'}">           
+            
+            German HTML Footer Germany<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputpanel>
+        
+        
+        <!-- French Footer Version -->
+        <apex:outputpanel layout="block" rendered="{!FooterLanguage='French'}">
+            
+            French HTML Footer Germany<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputpanel>
+    </apex:outputpanel>
+    
+
+    <!-- FOOTER France -->
+    <apex:outputpanel layout="none" rendered="{!FooterCountry='France'}">
+        
+        <!-- English Footer Version-->
+        <apex:outputPanel layout="block" rendered="{!FooterLanguage='English'}">
+            Englisch HTML Footer France<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputPanel>
+        
+        
+        <!-- German Footer Version -->
+        <apex:outputpanel layout="block" rendered="{!FooterLanguage='German'}">
+            German HTML Footer France<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputpanel>
+        
+        
+        <!-- French Footer Version -->
+        <apex:outputpanel layout="block" rendered="{!FooterLanguage='French'}">
+            French HTML Footer France<br/>
+            Active User:{!$User.FirstName} {!$User.LastName}
+        </apex:outputpanel> 
+        
+        
+    </apex:outputpanel>    
+    
+
+    
+
+
+
+</apex:component>

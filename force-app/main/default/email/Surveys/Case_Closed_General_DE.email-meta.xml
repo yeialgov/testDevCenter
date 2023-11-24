@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Closed General DE</name>
+    <style>none</style>
+    <subject>Neuigkeiten zum Vorgang &quot;{!Case.Subject}&quot; für {!Account.Name}</subject>
+    <textOnly>Vorgang #{!Case.CaseNumber} &quot;{!Case.Subject}&quot;
+
+{!Case.OwnerFirstName} hat Dir bei Deiner Anfrage geholfen!
+
+Verrätst Du uns noch, wie&apos;s war?
+
+Du hast eine zündende Idee oder noch eine allgemeine Frage?
+
+Online - Handbuch
+Featurewunsch
+
+
+
+orderbird AG
+
+
+
+Ritterstraße 12-14, Aufg. 3
+D-10969 Berlin
+Germany
+
+
+
+Sitz der Gesellschaft: Berlin
+Registergericht: Amtsgericht Berlin – Charlottenburg
+Registernummer: HRB 134011
+USt-ID: DE276722316
+
+
+
+Vorstandsvorsitzender: Jakob Schreyer
+
+Vorsitzender des Aufsichtsrats: Carlo Kölzer
+
+
+© 2010–2017 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

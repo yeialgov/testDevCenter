@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_DE</letterhead>
+    <name>MKT ebook2 Marketing CH</name>
+    <style>freeForm</style>
+    <subject>orderbird-Gründerportal: Dein Download-Link fürs Ebook</subject>
+    <textOnly>Lieber Gastronom,
+
+
+hier findest Du den gewünschten Downloadlink für das Ebook “Marketing für Gastronomie” vom orderbird-Gründerportal: 
+
+https://static.orderbird.com/assets/ebooks/de/marketing-gastronomie.pdf
+
+Wir wünschen Dir viele Erkenntnisse beim Lesen und viel Erfolg für Deine Gastronomie!
+
+Liebe Grüße
+Anne von orderbird
+
+Ps: Du bist Gastro-Gründer oder Gastronom und suchst ein einfaches und effizientes Kassensystem? Ruf uns jetzt für eine kostenlose Beratung unter 030 208 983 098 an oder schreib einfach eine E-Mail an beratung@orderbird.com.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Device_Upsell_Today__c</fullName>
+    <externalId>false</externalId>
+    <formula>Quantity__c &gt; PrecedingSLI__r.Quantity__c
+&amp;&amp;
+Subscription__r.Status__c = &quot;Active&quot;
+&amp;&amp;
+QuoteLineItem__r.Quote.AcceptedDate__c = TODAY()
+&amp;&amp;
+NOT(CONTAINS(Product__r.Name, &quot;Covid&quot;))
+&amp;&amp;
+CONTAINS(Product__r.ProductCategory__r.ProductType__c, &quot;Device&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Device Upsell Today</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

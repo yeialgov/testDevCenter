@@ -1,0 +1,2404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Lead_MINI</fullName>
+    <active>true</active>
+    <businessProcess>Lead Management Process</businessProcess>
+    <label>MINI Lead</label>
+    <picklistValues>
+        <picklist>Alternative_POS__c</picklist>
+        <values>
+            <fullName>9 Cookies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIDA%2FLinecker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AddiPos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alfo PC-POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amadeus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ankerdata PC-POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple computers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bistro-Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bleep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bogan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bonissimo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breadcrumb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Till Old</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CashIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CashPad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casio Touchscreen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centegra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobra POS %2F PC Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dongle system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DuG POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EuCaSoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing PC touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing proprietary system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastro Touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroFix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroNovi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroPro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geil POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypersoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indatec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ingenico POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventorum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isis POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KDS Kassen GmbH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KasSys GmbH - Miami POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kassandro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Addition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA Cash POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METRO register %28Sigma%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macaroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matrix POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Megara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merkl - partner company of orderbird</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micros Fidelio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MsPos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEC Mini POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO OTHER POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New PC touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New proprietary system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novacom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oktopos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olymp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneTap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orderman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POS Lavu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panasonic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pepperbill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pix tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Point one</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Popina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Porsche similar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PosBill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provendis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quatra net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quest Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quorion POS Concerto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready2order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rimanco Touch Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ritty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sanyo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schultes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siemens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SperrstundIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Square</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stocklink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SumUp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TCPOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TacTill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taylor made Ipad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TiPOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiller Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tissl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UNKNOWN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uniwell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vectron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viktoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WaiterOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xenia Mircosoft POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zelty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bonit%2Eat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>casio Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>gastroAssistent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>helloTESS%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hellocash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iKentoo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>local POS salesman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other Tablet POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other iPad POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>touchbistro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>user scripted software</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Attention_Trigger__c</picklist>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Network %2F Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer recruits Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGGP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentioning by competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation by Tax Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Square</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WOM %2F Discovered in action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walk In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>knows us from previous occupation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>orderbird mailing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AutoConvert__c</picklist>
+        <values>
+            <fullName>WITH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WITHOUT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Best_time_to_contact__c</picklist>
+        <values>
+            <fullName>Afternoon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noon</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CommissionClaim__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ContactReason__c</picklist>
+        <values>
+            <fullName>2nd Venue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Immediate Need</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Info request for 3rd party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law conform POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New opening</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants to Switch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cuisine_and_dishes__c</picklist>
+        <values>
+            <fullName>African</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>American</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austrian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fast Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ice Cream Parlor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mediterranean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexican</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oriental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pub</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seafood</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Snack %2F Takeaway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steakhouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vegan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnamese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DoubleOptIn__c</picklist>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refused</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verbal Ok</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Employees__c</picklist>
+        <values>
+            <fullName>0-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13-18</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5-7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8-12</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Existing_POS__c</picklist>
+        <values>
+            <fullName>*No POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>*unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9 Cookies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AIDA%2FLinecker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AddiPos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Addict group</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alfo PC-POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amadeus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Android POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ankerdata PC-POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple computers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bistro-Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bleep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bogan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bonissimo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Breadcrumb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carré POS %28Android%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Till Old</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash box %28%22Offene Ladenkasse%22%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CashIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CashPad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Casio Touchscreen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Centegra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clyo system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobra POS %2F PC Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dongle system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DuG POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPS POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Easy Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EuCaSoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing PC touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing proprietary system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastro Touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroFix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroNovi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GastroPro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastware</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geil POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hypersoft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indatec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ingenico POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Innovorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventorum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isis POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JDC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KSD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KasSys GmbH - Miami POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kassandro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%27Addition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LA Cash POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Light speed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METRO register %28Sigma%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macaroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matrix POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Megara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merkl - partner company of orderbird</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micros Fidelio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MsPos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEC Mini POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New PC touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New proprietary system</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novacom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oktopos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olymp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneTap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Optimalib</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orchestra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orderman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI Electronic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POS Lavu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panasonic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pepperbill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pix tech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Point one</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Popina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Porsche similar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PosBill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provendis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quatra net</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quest Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quorion POS Concerto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready2order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rimanco Touch Screen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ritty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SERD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sanyo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schultes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ShopCaisse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shopify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siemens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solumag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SperrstundIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Square</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stocklink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SumUp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TCPOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEG France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TacTill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tacteo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taylor made Ipad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TiPOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiller Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tissl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uniwell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vectron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viktoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WaiterOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Xenia Mircosoft POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zelty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bonit%2Eat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cash register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>casio Android</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>gastroAssistent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>helloTESS%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hellocash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iKentoo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>local POS salesman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>orderbird</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other Tablet POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other iPad POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>touchbistro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>user scripted software</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FunnelLeadSource__c</picklist>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommendation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade fair</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FunnelPOSInPlace__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IndoorSeats__c</picklist>
+        <values>
+            <fullName>%3C10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101-150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151-200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21-30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31-50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51-75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>76-100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>none</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Bakery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Beauty %2F Wellness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cafe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canteen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catering %2F Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmetic %2F Beauty Culture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culture %2F Event %2F Tickets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foodtruck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hairdresser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel %2F Pension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Massage Parlour</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nailstudio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nightclub %2F Disco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podiatrist %2F Foot Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pub %2F Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restaurant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail %2F Sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service %2F Crafts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shisha Bar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Snack %2F Takeaway</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LAC_Shorthand__c</picklist>
+        <values>
+            <fullName>CRC - E-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRC - Hotline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRC - Referral of successor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CRC - Webform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chardasso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Companeo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETL-Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook Scraper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kassen-Vergleich%2Ecom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kassensystemevergleich%2Ede</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neugeschaeft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Texting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral by Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research - Public Register</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toques de restauration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Register Scraper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TradingTwins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walk-In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>my%2Eob Reg</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadType__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>METROOppStatus__c</picklist>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Auto Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity To be accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity accepted %2F In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qualification</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mind_Set__c</picklist>
+        <values>
+            <fullName>Innovator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pragmatist</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NewVenue__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Category_Hidden__c</picklist>
+        <values>
+            <fullName>Account Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINI by orderbird</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_type_hidden__c</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINI registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>POS Add on products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upselling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>orderbird pay</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OutdoorSeats__c</picklist>
+        <values>
+            <fullName>%3C10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-20</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101-150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>151-200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21-30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31-50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51-75</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>76-100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>none</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PartnerSource__c</picklist>
+        <values>
+            <fullName>Acquisition by orderbird Partner Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Airfy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETL RS_2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Agent Network ob</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show IGEHO 2015 Basel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show INTERGASTRA 2016 Stuttgart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show INTERNORGA 2016 Hamburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pepperbill</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PartnerType__c</picklist>
+        <values>
+            <fullName>ConCardis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distributor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joint Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>METRO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>n%2Fa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PrimaryLanguageOld__c</picklist>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swedish</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PrimaryLanguage__c</picklist>
+        <values>
+            <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swedish</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ProductPartnerCategory__c</picklist>
+        <values>
+            <fullName>Analytics %26 Controlling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel Managment Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Menus Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ordering %28pre or waiters loose order%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reward Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Table Reservation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workforce Management%2C time clock%2C etc%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReferralContactRole__c</picklist>
+        <values>
+            <fullName>Customer Recruits Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE Nord</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE Ost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE Süd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RejectedReason__c</picklist>
+        <values>
+            <fullName>Already has a POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad%2F incomplete contact details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closing down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign country %2F incompatible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lacking reliability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside the industry %2F no fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical requirements too high</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too complicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>unknown %2F other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Package__c</picklist>
+        <values>
+            <fullName>CC Hellenic - Package Light</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC Hellenic - Package Lighthouse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CC Hellenic - Package Standard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_Brochure__c</picklist>
+        <values>
+            <fullName>POS Flyer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Service_Concept__c</picklist>
+        <values>
+            <fullName>Full Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Exempt_Reason__c</picklist>
+        <values>
+            <fullName>EU reverse charge mechanism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Tax Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third country jurisdictions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VenueSize__c</picklist>
+        <values>
+            <fullName>L</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Why_Interested__c</picklist>
+        <values>
+            <fullName>Customers Recruit Customers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Datev export</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Founder award</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>card reader %2F orderbird PAY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>easy to use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>free testing immediately</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>great website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>innovative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>law conformity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>likes apple products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>looking for POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>low cost solution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>no info</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>personal sympathy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>recognised wireless ordering as benefit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>seasonal costs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>single-user solution for free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>won prizes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

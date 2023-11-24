@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>update e-mail for partner about referred lead with commission</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_FR</letterhead>
+    <name>FR - Partner Feedback - Sale with commission</name>
+    <style>freeForm</style>
+    <subject>Bonne nouvelle - Vous recevez 250 EUR pour chaque recommandation !</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

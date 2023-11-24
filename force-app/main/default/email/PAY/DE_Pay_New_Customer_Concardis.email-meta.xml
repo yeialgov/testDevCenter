@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Customer for Concardis</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE Pay New Customer Concardis</name>
+    <style>none</style>
+    <subject>Neuer Vertrag: {!Account.Name}, {!Account.VenueCountryCode__c}, {!Account.Pay_Terminal_ID__c}</subject>
+    <textOnly>Hallo zusammen,
+
+
+hier ein neuer Vertrag zur Bearbeitung für Euch:
+
+Name: !Account.Name}
+Land: {!Account.VenueCountryCode__c}
+Terminal ID: {!Account.Pay_Terminal_ID__c}
+
+
+Falls Du noch Fragen hast, antworte bitte einfach auf diese Mail.
+
+
+Viele Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+{!User.Template_Footer_Insert_DE__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

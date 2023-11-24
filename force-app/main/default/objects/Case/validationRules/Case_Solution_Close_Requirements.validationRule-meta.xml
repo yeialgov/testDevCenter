@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Solution_Close_Requirements</fullName>
+    <active>true</active>
+    <errorConditionFormula>(CaseSolutionCount__c = 0
+|| (ISBLANK(Subject))
+|| (ISBLANK( AccountId ))
+|| (ISBLANK(  ContactId  )) )
+&amp;&amp; (ClosedDate &gt; DATETIMEVALUE(&quot;2018-12-19 09:00:00&quot;) || ISBLANK(ClosedDate)) 
+&amp;&amp;  CONTAINS(TEXT(Status), &quot;Closed&quot;)
+&amp;&amp;  NOT(  RecordType.Name = &quot;SFDC Support&quot;)
+&amp;&amp;  NOT( ISPICKVAL(Status, &quot;Closed as Duplicate&quot;))
+&amp;&amp;  $User.ProfileId != &apos;00e58000001547U&apos;
+&amp;&amp;  NOT(CONTAINS( $Label.Admin_Users , $User.Id ))</errorConditionFormula>
+    <errorMessage>Case cannot be closed without a subject and at least one Case Solution. Closing also requires a related Account and Contact.</errorMessage>
+</ValidationRule>

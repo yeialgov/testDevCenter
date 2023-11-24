@@ -1,0 +1,46 @@
+.THIS.DLCard {
+    margin-bottom:0.75rem;
+    border-radius:0.25rem;
+    background-color:white;
+    border: 2px solid white;
+}
+.THIS.DLCard:hover {
+    cursor: pointer;
+    background-color: #ecebea;
+    border: 2px solid #1ba3dd;
+}
+.THIS.DLCardX {
+    margin-bottom:0.75rem;
+    border-radius:0.25rem;
+    background: repeating-linear-gradient(
+            45deg,
+            #FFFFFF,
+            #FFFFFF 10px,
+            #A0CBDE 10px,
+            #A0CBDE 20px
+            );
+    border: 2px solid white;
+}
+.THIS.DLCardX:hover {
+    cursor: pointer;
+    background-color: #ecebea;
+    border: 2px solid #1ba3dd;
+}
+.THIS .blueIcon {
+    background-color: #064369;
+}
+.THIS .activeGreen svg{
+    fill: #04844b;
+}
+.THIS .activeYellow svg{
+    fill: rgb(242, 207, 91);
+}
+.THIS .activeRed svg{
+    fill: #d4504c;
+}
+.THIS .activeGray svg{
+    fill: gray;
+}
+.THIS .activeWhite svg{
+    fill: white;
+}

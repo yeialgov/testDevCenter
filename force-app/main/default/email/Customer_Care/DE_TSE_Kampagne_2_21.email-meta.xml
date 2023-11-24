@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Rückfragen zur TSE Kampagne nach Preis, Schonfrist, Nichtbeanstandungsregelung, KassenSichV</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE TSE Kampagne 2/21</name>
+    <style>none</style>
+    <subject>Deine Frage zur Aktivierung der TSE</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

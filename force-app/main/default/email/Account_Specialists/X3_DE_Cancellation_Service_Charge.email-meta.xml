@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kündigungen Vertrag</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>A DE - Cancellation Service Charge</name>
+    <style>none</style>
+    <subject>Deine Kündigung der Servicepauschale</subject>
+    <textOnly>Hallo {!Contact.FirstName},
+
+
+Hiermit bestätigt Dir die orderbird AG die Kündigung Deiner Servicepauschale des Kundenkontos mit der my.orderbird E-Mail-Adresse X@X.X zum XX.XX.201X.
+
+
+Wichtiger Hinweis: Mit Ablauf Deiner Servicepauschale werden sämtliche Stammdaten (Speisekarte, Tischliste, Benutzer, ...) Deines Accounts gelöscht. Für eine erneute Herstellung dieser Daten berechnen wir eine Gebühr von 159€ zuzüglich Steuern.
+
+Du möchtest Deine Stammdaten lieber behalten? Dann antworte uns einfach kurz auf diese E-Mail.
+
+
+Bitte beachte:
+
+Derzeit sind noch X€ bei uns offen. Bitte begleiche diese Summe zeitnah. So  vermeidest Du ein sonst entstehendes Mahnverfahren und die damit verbundenen Mehrkosten.
+Deine Kassenbuch-Lizenz bleibt von dieser Kündigung unberührt und bedarf einer gesonderten schriftlichen Kündigung.
+
+
+Viele Grüße aus Berlin
+
+{!User.FirstName} von orderbird
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+10969 Berlin
+
+Germany
+
+
+Sitz der Gesellschaft: Berlin
+
+Registergericht: Amtsgericht Berlin - Charlottenburg
+
+Registernummer: HRB 134011
+
+Ust-ID: DE276722316
+
+
+Vorstand: Mark Schoen (Vorsitzender), Jakob Schreyer, Patrick Brienen-Lucius
+
+Vorsitzender des Aufsichtsrats: Oliver Kaltner
+
+
+© 2011-2019 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

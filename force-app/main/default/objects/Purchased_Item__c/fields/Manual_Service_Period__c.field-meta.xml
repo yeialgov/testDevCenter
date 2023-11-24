@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Service_Period__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicates that the services period of this service product is changed by an agent/operator and does not need to follow the usual rules of service periods.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates that the services period of this service product is changed by an agent/operator and does not need to follow the usual rules of service periods.</inlineHelpText>
+    <label>manual service period</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

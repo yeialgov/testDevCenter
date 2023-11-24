@@ -1,0 +1,202 @@
+<messaging:emailTemplate subject="orderbird – die Kassenexperten für die Gastronomie" recipientType="Lead" relatedToType="Lead" replyTo="beratung@orderbird.com">
+    <messaging:htmlEmailBody >
+<table cellpadding="0" cellspacing="0" class="nl-container" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #eaeced;width: 100%">
+    <tbody>
+        <tr style="vertical-align: top">
+            <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding: 0">
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
+            <div align="center" class="img-container center autowidth fullwidth" style="padding-right: 0px; padding-left: 0px;"><img align="center" alt="Image" border="0" class="center autowidth fullwidth" src="https://orderbird--c.eu16.content.force.com/servlet/servlet.ImageServer?id=01558000003dzXr&oid=00D58000000PJMf&lastMod=1542644926000" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px" title="Image" width="600"/></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+            <div style="color:#767676;line-height:150%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; padding-right: 10px; padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+            <div style="font-size:12px;line-height:18px;color:#767676;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;">
+            <p style="margin: 0;font-size: 14px;line-height: 21px;text-align: left"> 
+Lieber Gastronom,
+<br/><br/>
+vielen Dank, dass Du dich auf unserer Website eingetragen hast!
+<br/><br/>
+Wir leiten Dein Anliegen schnellstmöglich an Deinen orderbird-Berater weiter und melden uns schnellstmöglich bei Dir. Bitte überprüfe jetzt noch einmal die Daten, die Du uns übermittelt hast.
+<br/><br/>
+<b>Deine Daten: </b> <br/>
+<apex:outputPanel rendered="{!and(relatedTo.LastName!='N/A',relatedTo.LastName!='n/a')}">
+    Dein Name: <apex:outputPanel rendered="{!and(relatedTo.FirstName!='N/A',relatedTo.FirstName!='n/a')}">
+{!relatedTo.FirstName} 
+</apex:outputPanel>
+ {!relatedTo.LastName} <br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Company!='[not provided]'}">
+Name des Betriebs: {!relatedTo.Company} <br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.Phone!='n/a'}">
+    Telefonnummer: {!relatedTo.Phone}
+</apex:outputPanel>
+
+<br/><br/>
+Sollte die Anfrage nicht von Dir persönlich stammen, die übermittelten Informationen falsch sein oder Du seit Tagen nichts von uns hören, melde Dich bitte direkt unter +49 30 208 983 098 bei unserem Support-Team.
+<br/><br/>
+Du möchtest in der Zwischenzeit mehr über orderbird erfahren? Besuche uns auf <a href="https://www.orderbird.com/" style="color:#00A3E0;"><span style="line-height: 21px; font-size: 14px;">www.orderbird.com</span></a>!
+<br/><br/>
+Viele Grüße<br/>
+Dein orderbird-Team </p>
+            </div>
+            </div>
+
+            <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <div align="center">
+            <div style="border-top: 0px solid #BBBBBB; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+            <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <div align="center">
+            <div style="border-top: 0px solid transparent; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #323435;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:#323435;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:15px; padding-bottom:30px; padding-right: 0px; padding-left: 0px;">
+            <div align="left" style="padding-right: 10px; padding-left: 30px; padding-bottom: 0px;">
+            <div style="line-height:20px;font-size:1px">&nbsp;</div>
+
+            <div style="display: table; max-width:265px;">
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.orderbird.com" target="_blank" title="Website"><img alt="Website" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/website.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Website" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.facebook.com/orderbird.deutschland" target="_blank" title="Facebook"><img alt="Facebook" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/facebook.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Facebook" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.instagram.com/orderbird/" target="_blank" title="Instagram"><img alt="Instagram" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/instagram@2x.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Instagram" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.youtube.com/user/orderbird" target="_blank" title="YouTube"><img alt="YouTube" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/youtube@2x.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="YouTube" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+
+            <div style="padding-right: 5px; padding-left: 5px; padding-top: 5px; padding-bottom: 5px;">
+            <div align="center">
+            <div style="border-top: 0px solid #BBBBBB; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+
+            <div style="color:#767676;line-height:120%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; padding-right: 30px; padding-left: 30px; padding-top: 20px; padding-bottom: 10px;">
+            <div style="font-size:12px;line-height:14px;color:#767676;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;">
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px; color: rgb(189, 189, 189);"><strong><span style="line-height: 19px; font-size: 16px;">orderbird AG</span></strong></span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">&nbsp;</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">Ritterstra&szlig;e 12-14, Aufg. 3</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">D- 10969 Berlin</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">Germany<br />
+            <br />
+            E-Mail: hello@orderbird.com<br />
+            Telefon: 030 208 983 098<br />
+            Fax: +49 321 214 681 89</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><br />
+            <span style="font-size: 10px; line-height: 12px;">Sitz der Gesellschaft: Berlin</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Registergericht: Amtsgericht Berlin - Charlottenburg</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Registernummer: HRB 134011 B</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Ust-ID: DE276722316</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px">&nbsp;</p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Vorstand: Mark Schoen (Vorsitzender), Jakob Schreyer, Patrick Brienen-Lucius</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Vorsitzender des Aufsichtsrats: Oliver Kaltner</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><br />
+            <span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">&copy; orderbird AG&nbsp;2011-
+            
+             {!relatedTo.CreatedBy.Current_Year__c} All Rights Reserved</span></p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

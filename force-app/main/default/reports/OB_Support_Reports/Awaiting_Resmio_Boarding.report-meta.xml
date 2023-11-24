@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Unique</aggregateTypes>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$CustomerID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r.Subscription_Products__r$Product__c</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Subscriptions__r.Subscription_Products__r$EffectiveStartDate__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Onboarding_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Resmio Onboarding,Resmio Activation Only</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RecordType</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Service_Case_Onboarding</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Account$Id</primaryTableColumn>
+        <relatedTable>Case</relatedTable>
+        <relatedTableJoinColumn>Account</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>EUR</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Account$Account_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Lost Customer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Product__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Onboarding Guest Management,Activation Fee Guest Management,Onboarding Plus,Activation Fee Table Reservation,Activation Fee online ordering,Activation Fee Guest Management Plus,Onboarding Table Reservation,Onboarding online ordering,Onboarding Guest Management Plus</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r.Subscription_Products__r$Product__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>- Guest Management discount</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subscriptions__r$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$BillingCountryCode</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Awaiting GM Activation / Boarding</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>X2_0_Subscription_from_Accounts_with_Line_Items__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Subscriptions__r.Subscription_Products__r$EffectiveStartDate__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Subscriptions__r.Subscription_Products__r$EffectiveStartDate__c</dateColumn>
+        <endDate>2021-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-10-01</startDate>
+    </timeFrameFilter>
+</Report>

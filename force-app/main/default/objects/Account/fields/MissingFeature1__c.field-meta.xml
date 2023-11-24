@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MissingFeature1__c</fullName>
+    <description>Stakeholder: Sales with PM &amp; BI</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What would this caterer like to see as an orderbird feature? Filled in by Sales</inlineHelpText>
+    <label>Missing Feature 1</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>&apos;magic button&apos;/&apos;no revenue&apos; transactions</fullName>
+                <default>false</default>
+                <label>&apos;magic button&apos;/&apos;no revenue&apos; transactions</label>
+            </value>
+            <value>
+                <fullName>Regular Table&apos; Features</fullName>
+                <default>false</default>
+                <label>Regular Table&apos; Features</label>
+            </value>
+            <value>
+                <fullName>Accumulated Turnover (open/cleared)</fullName>
+                <default>false</default>
+                <label>Accumulated Turnover (open/cleared)</label>
+            </value>
+            <value>
+                <fullName>Android</fullName>
+                <default>false</default>
+                <label>Android</label>
+            </value>
+            <value>
+                <fullName>Arrange items/groups in orderpad</fullName>
+                <default>false</default>
+                <label>Arrange items/groups in orderpad</label>
+            </value>
+            <value>
+                <fullName>Asian character</fullName>
+                <default>false</default>
+                <label>Asian character</label>
+            </value>
+            <value>
+                <fullName>Automated duplicate of bill</fullName>
+                <default>false</default>
+                <label>Automated duplicate of bill</label>
+            </value>
+            <value>
+                <fullName>Automatic course management</fullName>
+                <default>false</default>
+                <label>Automatic course management</label>
+            </value>
+            <value>
+                <fullName>Barcode scanner</fullName>
+                <default>false</default>
+                <label>Barcode scanner</label>
+            </value>
+            <value>
+                <fullName>Bigger buttons</fullName>
+                <default>false</default>
+                <label>Bigger buttons</label>
+            </value>
+            <value>
+                <fullName>Bill printing - bigger total</fullName>
+                <default>false</default>
+                <label>Bill printing - bigger total</label>
+            </value>
+            <value>
+                <fullName>Billing Address</fullName>
+                <default>false</default>
+                <label>Billing Address</label>
+            </value>
+            <value>
+                <fullName>bills after shift ending</fullName>
+                <default>false</default>
+                <label>bills after shift ending</label>
+            </value>
+            <value>
+                <fullName>cable printer</fullName>
+                <default>false</default>
+                <label>cable printer</label>
+            </value>
+            <value>
+                <fullName>Call system with numbers (self service)</fullName>
+                <default>false</default>
+                <label>Call system with numbers (self service)</label>
+            </value>
+            <value>
+                <fullName>Cancellation Protection</fullName>
+                <default>false</default>
+                <label>Cancellation Protection</label>
+            </value>
+            <value>
+                <fullName>Card payment receipt</fullName>
+                <default>false</default>
+                <label>Card payment receipt</label>
+            </value>
+            <value>
+                <fullName>Cash card system</fullName>
+                <default>false</default>
+                <label>Cash card system</label>
+            </value>
+            <value>
+                <fullName>cash-in-hand feature</fullName>
+                <default>false</default>
+                <label>cash-in-hand feature</label>
+            </value>
+            <value>
+                <fullName>chain store features</fullName>
+                <default>false</default>
+                <label>chain store features</label>
+            </value>
+            <value>
+                <fullName>chain store management</fullName>
+                <default>false</default>
+                <label>chain store management</label>
+            </value>
+            <value>
+                <fullName>change calculator</fullName>
+                <default>false</default>
+                <label>change calculator</label>
+            </value>
+            <value>
+                <fullName>Change on bill</fullName>
+                <default>false</default>
+                <label>Change on bill</label>
+            </value>
+            <value>
+                <fullName>CHF in my.orderbird</fullName>
+                <default>false</default>
+                <label>CHF in my.orderbird</label>
+            </value>
+            <value>
+                <fullName>Chip &amp; PIN card payment</fullName>
+                <default>false</default>
+                <label>Chip &amp; PIN card payment</label>
+            </value>
+            <value>
+                <fullName>colourful buttons</fullName>
+                <default>false</default>
+                <label>colourful buttons</label>
+            </value>
+            <value>
+                <fullName>Connection to Peripheral Devices</fullName>
+                <default>false</default>
+                <label>Connection to Peripheral Devices</label>
+            </value>
+            <value>
+                <fullName>coupon feature</fullName>
+                <default>false</default>
+                <label>coupon feature</label>
+            </value>
+            <value>
+                <fullName>Course management</fullName>
+                <default>false</default>
+                <label>Course management</label>
+            </value>
+            <value>
+                <fullName>Customer counter</fullName>
+                <default>false</default>
+                <label>Customer counter</label>
+            </value>
+            <value>
+                <fullName>customer display</fullName>
+                <default>false</default>
+                <label>customer display</label>
+            </value>
+            <value>
+                <fullName>customer management</fullName>
+                <default>false</default>
+                <label>customer management</label>
+            </value>
+            <value>
+                <fullName>Customer/Employee Card</fullName>
+                <default>false</default>
+                <label>Customer/Employee Card</label>
+            </value>
+            <value>
+                <fullName>Daily closing ends shift</fullName>
+                <default>false</default>
+                <label>Daily closing ends shift</label>
+            </value>
+            <value>
+                <fullName>deactivate obligatory shift</fullName>
+                <default>false</default>
+                <label>deactivate obligatory shift</label>
+            </value>
+            <value>
+                <fullName>Debitor 0% VAT</fullName>
+                <default>false</default>
+                <label>Debitor 0% VAT</label>
+            </value>
+            <value>
+                <fullName>Delivery integration</fullName>
+                <default>false</default>
+                <label>Delivery integration</label>
+            </value>
+            <value>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+                <label>Deposits</label>
+            </value>
+            <value>
+                <fullName>Digital menu</fullName>
+                <default>false</default>
+                <label>Digital menu</label>
+            </value>
+            <value>
+                <fullName>Digital receipt display</fullName>
+                <default>false</default>
+                <label>Digital receipt display</label>
+            </value>
+            <value>
+                <fullName>Discount on specific items</fullName>
+                <default>false</default>
+                <label>Discount on specific items</label>
+            </value>
+            <value>
+                <fullName>dispenser system interface</fullName>
+                <default>false</default>
+                <label>dispenser system interface</label>
+            </value>
+            <value>
+                <fullName>Double receipt print</fullName>
+                <default>false</default>
+                <label>Double receipt print</label>
+            </value>
+            <value>
+                <fullName>Drinks and food separated on report</fullName>
+                <default>false</default>
+                <label>Drinks and food separated on report</label>
+            </value>
+            <value>
+                <fullName>EAT App</fullName>
+                <default>false</default>
+                <label>EAT App</label>
+            </value>
+            <value>
+                <fullName>EAT with order process</fullName>
+                <default>false</default>
+                <label>EAT with order process</label>
+            </value>
+            <value>
+                <fullName>eat-in/takeaway separation</fullName>
+                <default>false</default>
+                <label>eat-in/takeaway separation</label>
+            </value>
+            <value>
+                <fullName>EC and CC payment directly connected</fullName>
+                <default>false</default>
+                <label>EC and CC payment directly connected</label>
+            </value>
+            <value>
+                <fullName>Edit items during the shift</fullName>
+                <default>false</default>
+                <label>Edit items during the shift</label>
+            </value>
+            <value>
+                <fullName>Enter stock &amp; warnings (not inventory control)</fullName>
+                <default>false</default>
+                <label>Enter stock &amp; warnings (not inventory control)</label>
+            </value>
+            <value>
+                <fullName>ETL ADHOGA FIBU account system</fullName>
+                <default>false</default>
+                <label>ETL ADHOGA FIBU account system</label>
+            </value>
+            <value>
+                <fullName>Excel/PDF Export</fullName>
+                <default>false</default>
+                <label>Excel/PDF Export</label>
+            </value>
+            <value>
+                <fullName>Family group overview improvements</fullName>
+                <default>false</default>
+                <label>Family group overview improvements</label>
+            </value>
+            <value>
+                <fullName>Foreign countries / not compatible</fullName>
+                <default>false</default>
+                <label>Foreign countries / not compatible</label>
+            </value>
+            <value>
+                <fullName>Full Sync</fullName>
+                <default>false</default>
+                <label>Full Sync</label>
+            </value>
+            <value>
+                <fullName>guest check printer (e.g. A5)</fullName>
+                <default>false</default>
+                <label>guest check printer (e.g. A5)</label>
+            </value>
+            <value>
+                <fullName>Guest split</fullName>
+                <default>false</default>
+                <label>Guest split</label>
+            </value>
+            <value>
+                <fullName>Happy Hour</fullName>
+                <default>false</default>
+                <label>Happy Hour</label>
+            </value>
+            <value>
+                <fullName>hotel interface</fullName>
+                <default>false</default>
+                <label>hotel interface</label>
+            </value>
+            <value>
+                <fullName>Images for Dishes in EAT</fullName>
+                <default>false</default>
+                <label>Images for Dishes in EAT</label>
+            </value>
+            <value>
+                <fullName>in house or take-away on receipts</fullName>
+                <default>false</default>
+                <label>in house or take-away on receipts</label>
+            </value>
+            <value>
+                <fullName>integrated cash reconcilliation</fullName>
+                <default>false</default>
+                <label>integrated cash reconcilliation</label>
+            </value>
+            <value>
+                <fullName>inventory control</fullName>
+                <default>false</default>
+                <label>inventory control</label>
+            </value>
+            <value>
+                <fullName>Item discount</fullName>
+                <default>false</default>
+                <label>Item discount</label>
+            </value>
+            <value>
+                <fullName>kitchen monitor (open orders)</fullName>
+                <default>false</default>
+                <label>kitchen monitor (open orders)</label>
+            </value>
+            <value>
+                <fullName>language and font adjustments</fullName>
+                <default>false</default>
+                <label>language and font adjustments</label>
+            </value>
+            <value>
+                <fullName>Limited settings for staff members</fullName>
+                <default>false</default>
+                <label>Limited settings for staff members</label>
+            </value>
+            <value>
+                <fullName>Live Reporting</fullName>
+                <default>false</default>
+                <label>Live Reporting</label>
+            </value>
+            <value>
+                <fullName>Loyalty card/system</fullName>
+                <default>false</default>
+                <label>Loyalty card/system</label>
+            </value>
+            <value>
+                <fullName>main material group icons changeable</fullName>
+                <default>false</default>
+                <label>main material group icons changeable</label>
+            </value>
+            <value>
+                <fullName>Manual in PDF</fullName>
+                <default>false</default>
+                <label>Manual in PDF</label>
+            </value>
+            <value>
+                <fullName>Misc. items with notes in reports</fullName>
+                <default>false</default>
+                <label>Misc. items with notes in reports</label>
+            </value>
+            <value>
+                <fullName>More languages</fullName>
+                <default>false</default>
+                <label>More languages</label>
+            </value>
+            <value>
+                <fullName>Multitasking</fullName>
+                <default>false</default>
+                <label>Multitasking</label>
+            </value>
+            <value>
+                <fullName>my.orderbird data filter</fullName>
+                <default>false</default>
+                <label>my.orderbird data filter</label>
+            </value>
+            <value>
+                <fullName>my.orderbird live ticker</fullName>
+                <default>false</default>
+                <label>my.orderbird live ticker</label>
+            </value>
+            <value>
+                <fullName>my.orderbird menu editing</fullName>
+                <default>false</default>
+                <label>my.orderbird menu editing</label>
+            </value>
+            <value>
+                <fullName>my.orderbird reporting</fullName>
+                <default>false</default>
+                <label>my.orderbird reporting</label>
+            </value>
+            <value>
+                <fullName>NFC</fullName>
+                <default>false</default>
+                <label>NFC</label>
+            </value>
+            <value>
+                <fullName>No interruption of music (PAY)</fullName>
+                <default>false</default>
+                <label>No interruption of music (PAY)</label>
+            </value>
+            <value>
+                <fullName>no requests</fullName>
+                <default>false</default>
+                <label>no requests</label>
+            </value>
+            <value>
+                <fullName>notes while booking on a table</fullName>
+                <default>false</default>
+                <label>notes while booking on a table</label>
+            </value>
+            <value>
+                <fullName>NumPad</fullName>
+                <default>false</default>
+                <label>NumPad</label>
+            </value>
+            <value>
+                <fullName>Online Banking connection</fullName>
+                <default>false</default>
+                <label>Online Banking connection</label>
+            </value>
+            <value>
+                <fullName>Open drawer at the touch of a button</fullName>
+                <default>false</default>
+                <label>Open drawer at the touch of a button</label>
+            </value>
+            <value>
+                <fullName>Open tables despite closed shift</fullName>
+                <default>false</default>
+                <label>Open tables despite closed shift</label>
+            </value>
+            <value>
+                <fullName>orderbird EAT</fullName>
+                <default>false</default>
+                <label>orderbird EAT</label>
+            </value>
+            <value>
+                <fullName>orderbird PAY in Austria/Switzerland</fullName>
+                <default>false</default>
+                <label>orderbird PAY in Austria/Switzerland</label>
+            </value>
+            <value>
+                <fullName>paypal</fullName>
+                <default>false</default>
+                <label>paypal</label>
+            </value>
+            <value>
+                <fullName>Prepaid card interface</fullName>
+                <default>false</default>
+                <label>Prepaid card interface</label>
+            </value>
+            <value>
+                <fullName>Printer bell</fullName>
+                <default>false</default>
+                <label>Printer bell</label>
+            </value>
+            <value>
+                <fullName>Printer settings adjustable (areas)</fullName>
+                <default>false</default>
+                <label>Printer settings adjustable (areas)</label>
+            </value>
+            <value>
+                <fullName>Printers: not thermal</fullName>
+                <default>false</default>
+                <label>Printers: not thermal</label>
+            </value>
+            <value>
+                <fullName>Prompt for eat-in/takeaway</fullName>
+                <default>false</default>
+                <label>Prompt for eat-in/takeaway</label>
+            </value>
+            <value>
+                <fullName>Public Wi-Fi</fullName>
+                <default>false</default>
+                <label>Public Wi-Fi</label>
+            </value>
+            <value>
+                <fullName>Quicker takeaway payment</fullName>
+                <default>false</default>
+                <label>Quicker takeaway payment</label>
+            </value>
+            <value>
+                <fullName>Receipt layout optimised</fullName>
+                <default>false</default>
+                <label>Receipt layout optimised</label>
+            </value>
+            <value>
+                <fullName>Receipt number on bill</fullName>
+                <default>false</default>
+                <label>Receipt number on bill</label>
+            </value>
+            <value>
+                <fullName>Recipe list</fullName>
+                <default>false</default>
+                <label>Recipe list</label>
+            </value>
+            <value>
+                <fullName>Reminder to close the shift</fullName>
+                <default>false</default>
+                <label>Reminder to close the shift</label>
+            </value>
+            <value>
+                <fullName>Remote Access</fullName>
+                <default>false</default>
+                <label>Remote Access</label>
+            </value>
+            <value>
+                <fullName>Reports per items/groups</fullName>
+                <default>false</default>
+                <label>Reports per items/groups</label>
+            </value>
+            <value>
+                <fullName>reservation system</fullName>
+                <default>false</default>
+                <label>reservation system</label>
+            </value>
+            <value>
+                <fullName>retail functions</fullName>
+                <default>false</default>
+                <label>retail functions</label>
+            </value>
+            <value>
+                <fullName>Revier Division</fullName>
+                <default>false</default>
+                <label>Revier Division</label>
+            </value>
+            <value>
+                <fullName>SAP interface</fullName>
+                <default>false</default>
+                <label>SAP interface</label>
+            </value>
+            <value>
+                <fullName>scale connection</fullName>
+                <default>false</default>
+                <label>scale connection</label>
+            </value>
+            <value>
+                <fullName>Service Charge (UK)</fullName>
+                <default>false</default>
+                <label>Service Charge (UK)</label>
+            </value>
+            <value>
+                <fullName>several bill printers</fullName>
+                <default>false</default>
+                <label>several bill printers</label>
+            </value>
+            <value>
+                <fullName>several currencies</fullName>
+                <default>false</default>
+                <label>several currencies</label>
+            </value>
+            <value>
+                <fullName>Several prices per item</fullName>
+                <default>false</default>
+                <label>Several prices per item</label>
+            </value>
+            <value>
+                <fullName>Signaler Kitchen</fullName>
+                <default>false</default>
+                <label>Signaler Kitchen</label>
+            </value>
+            <value>
+                <fullName>Splitt Payment by Amount</fullName>
+                <default>false</default>
+                <label>Splitt Payment by Amount</label>
+            </value>
+            <value>
+                <fullName>Staff key</fullName>
+                <default>false</default>
+                <label>Staff key</label>
+            </value>
+            <value>
+                <fullName>Staff management</fullName>
+                <default>false</default>
+                <label>Staff management</label>
+            </value>
+            <value>
+                <fullName>sub total bills</fullName>
+                <default>false</default>
+                <label>sub total bills</label>
+            </value>
+            <value>
+                <fullName>Super family group reports in my.orderbird</fullName>
+                <default>false</default>
+                <label>Super family group reports in my.orderbird</label>
+            </value>
+            <value>
+                <fullName>Super family group separation on Z-Reading</fullName>
+                <default>false</default>
+                <label>Super family group separation on Z-Reading</label>
+            </value>
+            <value>
+                <fullName>Table diktat</fullName>
+                <default>false</default>
+                <label>Table diktat</label>
+            </value>
+            <value>
+                <fullName>Table handover</fullName>
+                <default>false</default>
+                <label>Table handover</label>
+            </value>
+            <value>
+                <fullName>table plan</fullName>
+                <default>false</default>
+                <label>table plan</label>
+            </value>
+            <value>
+                <fullName>Table protection</fullName>
+                <default>false</default>
+                <label>Table protection</label>
+            </value>
+            <value>
+                <fullName>Table report in my.orderbird</fullName>
+                <default>false</default>
+                <label>Table report in my.orderbird</label>
+            </value>
+            <value>
+                <fullName>time tracking (staff)</fullName>
+                <default>false</default>
+                <label>time tracking (staff)</label>
+            </value>
+            <value>
+                <fullName>Tip inclusion with PAY</fullName>
+                <default>false</default>
+                <label>Tip inclusion with PAY</label>
+            </value>
+            <value>
+                <fullName>Tip on receipt (PAY)</fullName>
+                <default>false</default>
+                <label>Tip on receipt (PAY)</label>
+            </value>
+            <value>
+                <fullName>Total on kitchen receipt</fullName>
+                <default>false</default>
+                <label>Total on kitchen receipt</label>
+            </value>
+            <value>
+                <fullName>training mode</fullName>
+                <default>false</default>
+                <label>training mode</label>
+            </value>
+            <value>
+                <fullName>Turnover per customer</fullName>
+                <default>false</default>
+                <label>Turnover per customer</label>
+            </value>
+            <value>
+                <fullName>UK compatible</fullName>
+                <default>false</default>
+                <label>UK compatible</label>
+            </value>
+            <value>
+                <fullName>Universal DATEV Exports</fullName>
+                <default>false</default>
+                <label>Universal DATEV Exports</label>
+            </value>
+            <value>
+                <fullName>USA compatible</fullName>
+                <default>false</default>
+                <label>USA compatible</label>
+            </value>
+            <value>
+                <fullName>Various printer models (Star)</fullName>
+                <default>false</default>
+                <label>Various printer models (Star)</label>
+            </value>
+            <value>
+                <fullName>VISA &amp; AMEX</fullName>
+                <default>false</default>
+                <label>VISA &amp; AMEX</label>
+            </value>
+            <value>
+                <fullName>Working-time Account for Staff</fullName>
+                <default>false</default>
+                <label>Working-time Account for Staff</label>
+            </value>
+            <value>
+                <fullName>Worldwide currencies</fullName>
+                <default>false</default>
+                <label>Worldwide currencies</label>
+            </value>
+            <value>
+                <fullName>Xero Integration</fullName>
+                <default>false</default>
+                <label>Xero Integration</label>
+            </value>
+            <value>
+                <fullName>Z-Report: Gross revenue split</fullName>
+                <default>false</default>
+                <label>Z-Report: Gross revenue split</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

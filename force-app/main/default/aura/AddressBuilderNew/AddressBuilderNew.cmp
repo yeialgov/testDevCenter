@@ -1,0 +1,69 @@
+<aura:component >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Account" type="Object" />
+    
+    <aura:handler event="c:AddressBuilderChange" action="{!c.reloadData}"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, Name, LegalCompanyName__c, AddressBuilder__c, AddressBuilder_Shipping__c, AddressSyncType__c,
+                              SF_BillTo_Contact__r.Name, SF_BillTo_Contact__r.FirstName, SF_BillTo_Contact__r.Addressee__c, SF_BillTo_Contact__r.Attention__c,
+                              SF_SoldTo_Contact__r.Name, SF_SoldTo_Contact__r.FirstName, SF_SoldTo_Contact__r.Addressee__c, SF_SoldTo_Contact__r.Attention__c,
+                              BillingStreet, BillingPostalCode, BillingCity, BillingCountryCode, BillingCountry,
+                              ShippingStreet, ShippingPostalCode, ShippingCity, ShippingCountryCode, ShippingCountry,
+                              VenueStreet__c, VenuePostalCode__c, VenueCity__c, VenueCountryCode__c, VenueCountry__c"
+                      targetFields="{!v.Account}"/>
+    
+    <aura:if isTrue="{!v.Account != null}">
+        <aura:if isTrue="{!v.Account.AddressSyncType__c == 'ALL'}">
+            <c:AddrBldr aura:id="c1"
+                        Label="Bill To/Ship To/Venue Location"
+                        Type="BILL"
+                        Account="{!v.Account}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-SHIP'}">
+            <c:AddrBldr aura:id="c2"
+                        Label="Bill To/Ship To"
+                        Type="BILL"
+                        Account="{!v.Account}"/>
+            <c:AddrBldr aura:id="c3"
+                        Label="Venue Location"
+                        Type="VENUE"
+                        Account="{!v.Account}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.Account.AddressSyncType__c == 'BILL-VENUE'}">
+            <c:AddrBldr aura:id="c4"
+                        Label="Bill To/Venue Location"
+                        Type="BILL"
+                        Account="{!v.Account}"/>
+            <c:AddrBldr aura:id="c5"
+                        Label="Ship To"
+                        Type="SHIP"
+                        Account="{!v.Account}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.Account.AddressSyncType__c == 'SHIP-VENUE'}">
+            <c:AddrBldr aura:id="c6"
+                        Label="Bill To"
+                        Type="BILL"
+                        Account="{!v.Account}"/>
+            <c:AddrBldr aura:id="c7"
+                        Label="Ship To/Venue Location"
+                        Type="SHIP"
+                        Account="{!v.Account}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.Account.AddressSyncType__c == null}">
+            <c:AddrBldr aura:id="c8"
+                        Label="Bill To"
+                        Type="BILL"
+                        Account="{!v.Account}"/>
+            <c:AddrBldr aura:id="c9"
+                        Label="Ship To"
+                        Type="SHIP"
+                        Account="{!v.Account}"/>
+            <c:AddrBldr aura:id="c0"
+                        Label="Venue Location"
+                        Type="VENUE"
+                        Account="{!v.Account}"/>
+        </aura:if>
+    </aura:if>
+</aura:component>

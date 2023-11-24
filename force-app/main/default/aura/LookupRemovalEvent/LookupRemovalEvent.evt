@@ -1,0 +1,1 @@
+<aura:event access="global" type="COMPONENT" description="Optional component event fired when a removal is made." />

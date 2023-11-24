@@ -1,0 +1,6 @@
+<apex:page ><!--standardController="Zuora__ZInvoice__c" extensions="DownloadInvoiceController">
+    <apex:pageMessages />
+    <apex:form rendered="{!Display != null}">
+        <iframe  style="width: 100%; height: 110vh" src="data:application/pdf;base64,{!Display}"></iframe>      
+    </apex:form>-->
+</apex:page>

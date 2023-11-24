@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Management</fullName>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.EMAIL</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Open,On Hold,Waiting for Customer Reply,Re-Open,Escalated</value>
+    </filters>
+    <label>Account Management</label>
+    <language>en_US</language>
+    <queue>Account_Management</queue>
+    <sharedTo>
+        <roleAndSubordinates>Account_Management</roleAndSubordinates>
+        <roleAndSubordinates>Support_Management</roleAndSubordinates>
+    </sharedTo>
+</ListView>

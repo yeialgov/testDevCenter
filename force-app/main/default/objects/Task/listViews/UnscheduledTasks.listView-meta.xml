@@ -17,13 +17,8 @@
         <value>0</value>
     </filters>
     <filters>
-        <field>IS_RECURRENCE</field>
-        <operation>equals</operation>
-        <value>0</value>
-    </filters>
-    <filters>
         <field>DUE_DATE</field>
         <operation>equals</operation>
     </filters>
-    <label>ENCODED:{!FilterNames.Task_UnscheduledTasks}</label>
+    <label>Unscheduled Tasks</label>
 </ListView>

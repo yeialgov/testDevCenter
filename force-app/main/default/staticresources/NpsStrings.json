@@ -1,0 +1,32 @@
+{
+	"Heading": {
+		"en_gb": "Your opinion matters!",
+		"de": "Deine Meinung zählt!",
+		"fr": "Votre avis compte!"
+	},
+	"SubHeading": {
+		"en_gb": "Customer Survey",
+		"de": "Kunden-Umfrage",
+		"fr": "Questionnaire de satisfaction"
+	},
+	"IntroText": {
+		"en_gb": "Your opinion is really important to us! Please take a minute to answer the following question:",
+		"de": "Dein Feedback ist uns sehr wichtig! Deshalb fänden wir es toll, wenn Du Dir einen Moment Zeit nimmst und die folgende Frage beantwortest:",
+		"fr": "Votre avis est important pour nous! Merci de prendre quelques secondes pour répondre à cette question:"
+	},
+	"NpsQuestion": {
+		"en_gb": "How likely is it that you would recommend orderbird to a friend or colleague who has a business like yours?",
+		"de": "Wie wahrscheinlich ist es, dass Du orderbird einem Freund oder Kollegen, der ein ähnliches Geschäft wie Du führt, weiterempfehlen würdest?",
+		"fr": "Quelle est la probabilité que vous recommandiez orderbird à un ami ou collègue qui détient un établissement similaire au vôtre?"
+	},
+	"LowDesc": {
+		"en_gb": "Not at all likely",
+		"de": "Gar nicht wahrscheinlich",
+		"fr": "Pas du tout probable"
+	},
+	"HighDesc": {
+		"en_gb": "Extremely likely",
+		"de": "Sehr wahrscheinlich",
+		"fr": "Extrêmement probable"
+	}
+}

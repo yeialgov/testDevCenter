@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validfrom__c</fullName>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only for opps with future potential: When should we address the topic (product) of this opp to the contact? Set on creation</inlineHelpText>
+    <label>Valid from</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

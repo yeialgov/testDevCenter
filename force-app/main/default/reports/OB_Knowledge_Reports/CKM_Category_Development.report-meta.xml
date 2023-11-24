@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_47229249</developerName>
+        <masterLabel>Case Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Berenice Prochnow</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ivan Andonow</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Janine Damm</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jenny Tissen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julia Thoma</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Justin Greil</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael Schneider</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Morgaine Marklewitz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nabil Dib</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nico Staffeldt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sophie Hornyik</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Stefan Kramer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tim Pieper</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Account Specialists</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DACH - Incoming Case Queue</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nightowls</sourceValue>
+            </sourceValues>
+            <value>CCA</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Corven Hauck</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tech Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tina Bialucha</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Victor Prietzel</sourceValue>
+            </sourceValues>
+            <value>TECH</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Pay Specialists</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tim Dahlmann</sourceValue>
+            </sourceValues>
+            <value>PAY</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Clarisse Rufo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FR - Incoming Case Queue</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Olivia Bonhomme</sourceValue>
+            </sourceValues>
+            <value>FRANCE</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Yannick Klatte</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Account Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dustin Schmunz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fabian Boom</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael Haut</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Philipp Maxrath</sourceValue>
+            </sourceValues>
+            <value>ACC MGMT</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_41705644</developerName>
+        <masterLabel>Country</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Region__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>DE Ost</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DE Nord</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DE West</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DE Süd</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Austria</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Switzerland</sourceValue>
+            </sourceValues>
+            <value>DACH</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>France</sourceValue>
+            </sourceValues>
+            <value>FRANCE</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CLOSED_DATEONLY</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Case.Category__c</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Huge</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Region__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Case.SFDC_Support,01258000000FBPc</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CLOSED_DATEONLY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case.Category__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_41705644</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RECORDTYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>*CKM Category Development</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CLOSED_DATEONLY</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>*.csv  aus tools an my.ob adresse</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DE - CCA - product list</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>FW: orderbird für Dich!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

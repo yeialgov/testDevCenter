@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AMCategory__c</fullName>
+    <description>Stakeholder: CS</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What account specific problem does this issue relate to? Filled in by anyone who rises the issue</inlineHelpText>
+    <label>AM Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account balance</fullName>
+                <default>false</default>
+                <label>Account balance</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Change bank account information</fullName>
+                <default>false</default>
+                <label>Change bank account information</label>
+            </value>
+            <value>
+                <fullName>Change invoice</fullName>
+                <default>false</default>
+                <label>Change invoice</label>
+            </value>
+            <value>
+                <fullName>Credits</fullName>
+                <default>false</default>
+                <label>Credits</label>
+            </value>
+            <value>
+                <fullName>Customer referrals</fullName>
+                <default>false</default>
+                <label>Customer referrals</label>
+            </value>
+            <value>
+                <fullName>Damage Report</fullName>
+                <default>false</default>
+                <label>Damage Report</label>
+            </value>
+            <value>
+                <fullName>De-escalation</fullName>
+                <default>false</default>
+                <label>De-escalation</label>
+            </value>
+            <value>
+                <fullName>General data</fullName>
+                <default>false</default>
+                <label>General data</label>
+            </value>
+            <value>
+                <fullName>Rescissions</fullName>
+                <default>false</default>
+                <label>Rescissions</label>
+            </value>
+            <value>
+                <fullName>Send out invoice</fullName>
+                <default>false</default>
+                <label>Send out invoice</label>
+            </value>
+            <value>
+                <fullName>Tax data</fullName>
+                <default>false</default>
+                <label>Tax data</label>
+            </value>
+            <value>
+                <fullName>Dunning</fullName>
+                <default>false</default>
+                <label>Dunning</label>
+            </value>
+            <value>
+                <fullName>Upselling</fullName>
+                <default>false</default>
+                <label>Upselling</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

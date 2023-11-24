@@ -1,0 +1,111 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" 
+                controller="AccountLightningController"
+                access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute type="String" name="recordId" />
+    <aura:attribute type="Integer" name="Size" default="0" />
+    <aura:attribute type="Object" name="Data" />
+    <aura:attribute type="Object" name="Account" />
+    
+    <aura:if isTrue="{!v.Size > 0}">
+        <div class="forceRelatedListContainer">
+            <div class="container">
+                <div class="container forceRelatedListSingleContainer">
+                    <article class="slds-card slds-card_boundary forceRelatedListCardDesktop">
+                        <div class="slds-card__header slds-grid">
+                            <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                                <div class="slds-media__figure">
+                                    <div class="extraS mall forceEntityIcon">
+                                        <lightning:icon iconName="doctype:attachment" size="small"/>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2>
+                                        <div class="slds-card__header-link baseCard__header-title-container">
+                                            <span class="slds-card__header-title slds-truncate slds-m-right--xx-small" title="Related Documents">Related Documents</span>
+                                            <span class="slds-card__header-title slds-shrink-none slds-m-right--xx-small" title="{!'('+v.Size+')'}">{!' ('+v.Size+')'}</span>
+                                        </div>
+                                    </h2>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="slds-card__body">
+                            <div class="forceBaseListView forceRelatedListPreviewGrid" style="overflow-x:scroll;">
+                                <aura:if isTrue="{!v.Data.InvoiceDocs.length > 0}">
+                                    <table class="forceRecordLayout slds-table slds-no-row-hover slds-table_cell-buffer uiVirtualDataGrid--default uiVirtualDataGrid">
+                                        <thead>
+                                            <tr>
+                                                <th>Document</th>
+                                                <th>Invoice</th>
+                                                <th>Created</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <aura:iteration var="invDoc" items="{!v.Data.InvoiceDocs}">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="outputLookupContainer forceOutputLookupWithPreview">
+                                                            <a class="textUnderline outputLookupLink slds-truncate forceOutputLookup" 
+                                                               href="{!'/lightning/r/' + invDoc.Id + '/view'}">
+                                                                {!invDoc.Name}
+                                                            </a>
+                                                        </div>
+                                                    </th>
+                                                    <td>
+                                                        <div class="outputLookupContainer forceOutputLookupWithPreview">
+                                                            <a class="textUnderline outputLookupLink slds-truncate forceOutputLookup" 
+                                                               href="{!'/lightning/r/' + invDoc.RelatedId + '/view'}">
+                                                                {!invDoc.RelatedName}
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td><ui:outputDateTime value="{!invDoc.Stamp}"/></td>
+                                                </tr>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </aura:if>
+                                <aura:if isTrue="{!v.Data.QuoteDocs.length > 0}">
+                                    <table class="forceRecordLayout slds-table slds-no-row-hover slds-table_cell-buffer uiVirtualDataGrid--default uiVirtualDataGrid">
+                                        <thead>
+                                            <tr>
+                                                <th>Document</th>
+                                                <th>Quote</th>
+                                                <th>Created</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <aura:iteration var="quoDoc" items="{!v.Data.QuoteDocs}">
+                                                <tr>
+                                                    <th scope="row">
+                                                        <div class="outputLookupContainer forceOutputLookupWithPreview">
+                                                            <a class="textUnderline outputLookupLink slds-truncate forceOutputLookup" 
+                                                               href="{!'/lightning/r/' + quoDoc.Id + '/view'}">
+                                                                {!quoDoc.Name}
+                                                            </a>
+                                                        </div>
+                                                    </th>
+                                                    <td>
+                                                        <div class="outputLookupContainer forceOutputLookupWithPreview">
+                                                            <a class="textUnderline outputLookupLink slds-truncate forceOutputLookup" 
+                                                               href="{!'/lightning/r/' + quoDoc.RelatedId + '/view'}">
+                                                                {!quoDoc.RelatedName}
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td><ui:outputDateTime value="{!quoDoc.Stamp}"/></td>
+                                                </tr>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

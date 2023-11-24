@@ -1,0 +1,5 @@
+<apex:page sidebar="false">
+<script>
+        window.top.location="https://leadcollector.social.com/_command/salescloud/login?orgId={!URLENCODE($Organization.Id)}&orgName={!URLENCODE($Organization.Name)}&userId={!URLENCODE($User.Id)}&username={!URLENCODE($User.Username)}&entrepriseServerUrl={!URLENCODE($Api.Enterprise_Server_URL_370)}";
+</script>
+</apex:page>

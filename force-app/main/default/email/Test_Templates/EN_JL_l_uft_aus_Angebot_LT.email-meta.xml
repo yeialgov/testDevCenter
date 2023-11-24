@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>orderbird_letterhead_EN</letterhead>
+    <name>EN_JL_läuft_aus_/_Angebot_LT</name>
+    <style>freeForm</style>
+    <subject>Your orderbird offer for license renewal</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

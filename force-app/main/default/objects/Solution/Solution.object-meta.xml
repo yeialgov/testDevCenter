@@ -132,6 +132,7 @@
         <customTabListAdditionalFields>SOLUTION.ISSUE</customTabListAdditionalFields>
         <customTabListAdditionalFields>SOLUTION.SOLUTION_NUMBER</customTabListAdditionalFields>
         <customTabListAdditionalFields>SOLUTION.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SOLUTION.PARENT_ISSUE</customTabListAdditionalFields>
         <customTabListAdditionalFields>CORE.USERS.ALIAS</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>SOLUTION.ISSUE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>SOLUTION.SOLUTION_NUMBER</lookupDialogsAdditionalFields>
@@ -143,5 +144,6 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SOLUTION.TIMES_USED</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>SOLUTION.LAST_UPDATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SOLUTION.PARENT_ISSUE</searchResultsAdditionalFields>
     </searchLayouts>
 </CustomObject>

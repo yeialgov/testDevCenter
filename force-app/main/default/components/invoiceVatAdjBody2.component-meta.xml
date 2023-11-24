@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>42.0</apiVersion>
+    <description>change in lines 188, 247, 254 , 258, 268, 277,284, 287, 297</description>
+    <label>invoiceVatAdjBody2</label>
+</ApexComponent>

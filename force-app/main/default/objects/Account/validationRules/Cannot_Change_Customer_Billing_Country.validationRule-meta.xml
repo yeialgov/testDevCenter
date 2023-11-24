@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Customer_Billing_Country</fullName>
+    <active>true</active>
+    <description>CDS-1246 : User cannot change the Billing Contact for a Customer (that has a ZuoraId) if it makes the Billing Country change</description>
+    <errorConditionFormula>NOT(CONTAINS( $Label.Admin_Users , $User.Id ))
+&amp;&amp;
+NOT(ISBLANK(ZuoraId__c))
+&amp;&amp;
+ISCHANGED(BillingCountry)</errorConditionFormula>
+    <errorMessage>You are trying to change the billing country for a Customer. Please contact Finance and/or CDS if this is a legitimate change.</errorMessage>
+</ValidationRule>

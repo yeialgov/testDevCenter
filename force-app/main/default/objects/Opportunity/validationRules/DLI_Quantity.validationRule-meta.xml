@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DLI_Quantity</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK( DLI_Quantity__c ))
+&amp;&amp;
+(DLI_Quantity__c &gt; 9 || DLI_Quantity__c &lt; 1)</errorConditionFormula>
+    <errorDisplayField>DLI_Quantity__c</errorDisplayField>
+    <errorMessage>Quantity must be between 1 and 9</errorMessage>
+</ValidationRule>

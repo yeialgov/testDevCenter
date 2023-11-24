@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OtherPartnerPrograms__c</fullName>
+    <description>Stakeholder: PaM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the partner want to cooperate in other partner programs? Filled in by Partner Management</inlineHelpText>
+    <label>Other Partner Programs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Network Partner</fullName>
+                <default>false</default>
+                <label>Network Partner</label>
+            </value>
+            <value>
+                <fullName>Support Partner</fullName>
+                <default>false</default>
+                <label>Support Partner</label>
+            </value>
+            <value>
+                <fullName>Product Partner</fullName>
+                <default>false</default>
+                <label>Product Partner</label>
+            </value>
+            <value>
+                <fullName>Affiliate Program</fullName>
+                <default>false</default>
+                <label>Affiliate Program</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

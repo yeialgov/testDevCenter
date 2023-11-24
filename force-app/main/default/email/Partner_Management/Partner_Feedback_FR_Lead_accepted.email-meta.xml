@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>update e-mail for partner about referred lead accepted</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>orderbird_letterhead_FR</letterhead>
+    <name>FR - Partner Feedback - Lead accepted</name>
+    <style>freeForm</style>
+    <subject>Bonne nouvelle - Votre contact a été pris en charge par notre service commercial</subject>
+    <textOnly>Cher partenaire orderbird,
+
+Merci pour votre soutien et surtout d’avoir recommandé orderbird à {!Account.Name}.
+
+{!Account.SalesAgent__c} se chargera de démarcher votre contact dans les plus brefs délais.
+
+Nous reviendrons vers vous dès qu&apos;une décision concernant orderbird aura été prise. Ne soyez pas surpris si cela prend jusqu’à six semaines, la décision de se procurer un nouveau système de caisse se doit d’être soigneusement réfléchie !
+
+Nous restons bien évidemment à votre disposition. Pour toutes questions, n’hésitez pas à nous contacter à l’adresse email suivante: recommandation@orderbird.com.
+
+
+
+
+Meilleures salutations
+
+
+
+Votre équipe orderbird</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

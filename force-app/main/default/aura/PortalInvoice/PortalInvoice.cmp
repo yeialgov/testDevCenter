@@ -1,0 +1,44 @@
+<aura:component access="global" controller="PortalController"
+                implements="forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="token" type="String"/>
+    <aura:attribute name="IsMobile" type="Boolean" default="false"/>
+    <aura:attribute name="Invoices" type="List"/>
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="Index" type="Integer" default="0"/>
+    <aura:attribute name="PageSize" type="Integer" default="5"/>
+    <lightning:navigation aura:id="navService"/>   
+    <div style="overflow:hidden;margin-left: 0;">
+        <div class="page-headliner">
+            <h4>{!$Label.c.INVOICES}</h4>
+            <div class="page-headliner-subtitle">
+                <a href="javascript:void(0);" onclick="{!c.back}">{!$Label.c.BACK_TO_OPTIONS}</a>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.ShowSpinner}"><lightning:spinner size="large"/></aura:if>
+        <aura:iteration items="{!v.Invoices}" var="Invoice" indexVar="invIndex">
+            <aura:if isTrue="{!and(invIndex lt (v.Index + v.PageSize),invIndex ge (v.Index))}">
+                <c:PortalInvoiceCard Invoice="{!Invoice}" Token="{!v.token}" IsMobile="{!v.IsMobile}"/>
+            </aura:if>
+        </aura:iteration>
+        <aura:if isTrue="{!v.Invoices.length > 0}">
+            <div class="row rowSpacer">
+                <div class="col-sm-8 col-xs-12">
+                    <div style="text-align: center;">
+                        <lightning:buttonIcon disabled="{!v.Index lt 1}"
+                                              iconName="utility:left" 
+                                              onclick="{!c.IndexM8}"
+                                              variant="border-filled"
+                                              size="large"/>
+                        &nbsp;{!v.Index / v.PageSize + 1}/{!div(v.Invoices.length - mod(v.Invoices.length,v.PageSize),v.PageSize)+1}&nbsp;
+                        <lightning:buttonIcon disabled="{!v.Invoices.length le v.Index + v.PageSize}"
+                                              iconName="utility:right" 
+                                              onclick="{!c.IndexP8}"                                          
+                                              variant="border-filled"
+                                              size="large"/>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

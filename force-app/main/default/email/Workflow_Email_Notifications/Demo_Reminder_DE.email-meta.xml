@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminds Prospects of their upcoming demo</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>24h Demo Reminder DE</name>
+    <style>none</style>
+    <subject>Deine orderbird Demo in 24 Stunden</subject>
+    <textOnly>Hallo {!Event.Who},  
+Ihr Termin zur Online Live-Demo ist morgen um {!Event.StartTime} Uhr.  
+
+Viele Grüße Ihr orderbird-Team
+
+
+
+
+orderbird AG
+
+
+Ritterstraße 12-14, Aufg. 3
+
+D- 10969 Berlin
+
+Germany
+
+E-Mail: hello@orderbird.com
+Telefon: 030 208 983 098
+Fax: +49 321 214 681 89
+
+
+Sitz der Gesellschaft: Berlin
+
+Registergericht: Amtsgericht Berlin - Charlottenburg
+
+Registernummer: HRB 134011 B
+
+Ust-ID: DE276722316
+
+
+Vorstand: Jakob Schreyer, Mark Schoen, Patrick Brienen-Lucius
+
+Vorsitzender des Aufsichtsrats: Oliver Kaltner
+
+
+© orderbird AG 2011-{!User.Current_Year__c} All Rights Reserved</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

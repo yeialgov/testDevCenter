@@ -1,0 +1,12 @@
+.THIS .QtyBadge{
+    background-color: rgb(236, 235, 234);
+    border-radius: 5px;
+    padding: 0 0.5rem;
+}
+.THIS .SLIProdName{
+    font-weight: bold;
+}
+.THIS .SLIProdCat{
+    font-size: 60%;
+    font-style: italic;
+}

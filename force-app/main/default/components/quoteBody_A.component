@@ -1,0 +1,274 @@
+<apex:component controller="QuotePdfController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!qId}" name="QuoteId" type="String" description="Quote Id"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.AttachDocument}"/>
+    </head>
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}"/>
+    </div>
+    <div id="mainDiv">
+        <div style="text-align:right;">
+            <img src="{!$Resource.orderbird_logo}" style="height: 60px;"/>
+        </div>
+        <table class="fullWidth grayText" style="font-family: sans-serif;">
+            <tr>
+                <td class="wideCol">
+                    <div class="shrinkText padCell">
+                        <table>
+                            <tr>
+                                <td class="blueText padCell rightBar">
+                                    orderbird AG
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    Ritterstraße 12-14
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    10969 Berlin
+                                </td>
+                                <td class="grayText padCell">
+                                    {!$Label.GERMANY}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="narrCol"></td>
+            </tr>
+            <tr>
+                <td class="topAlign">
+                    <c:AddressBuilder Account="{!Account}" AddressParts="{!AddressParts}"/>
+                </td>
+                <td class="grayText shrinkText topAlign">
+                    <table class="fullWidth">
+                        <tr>
+                            <td class="narrCol">{!$Label.ORDERBIRD_COUNSELLOR}:</td>
+                            <td>{!Quote.Opportunity.Owner.Name}</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <apex:outputPanel layout="none" rendered="{!Quote.Opportunity.Owner.Phone != null}">
+                            <tr>
+                                <td class="narrCol">{!$Label.TELEPHONE}:</td>
+                                <td>{!Quote.Opportunity.Owner.Phone}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr>
+                            <td class="narrCol">{!$Label.EMAIL}:</td>
+                            <td>{!Quote.Opportunity.Owner.Email}</td>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.INTERNET}:</td>
+                            <td>www.orderbird.com</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.PAYMENT_METHOD}:</td>
+                            <apex:outputPanel layout="none" rendered="{!Quote.PaymentMethod__c == 'Cash'}">
+                                <td>{!$Label.BAR}</td>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!Quote.PaymentMethod__c == 'Bank Transfer'}">
+                                <td>{!$Label.SEPA_DIRECT_DEBIT}</td>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!Quote.PaymentMethod__c == 'Wire Transfer'}">
+                                <td>{!$Label.WIRE_TRANSFER}</td>
+                            </apex:outputPanel>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.PAYMENT_TERMS}:</td>
+                            <apex:outputPanel layout="none" rendered="{!!Quote.Pay_by_Instalment__c}">
+                                <td>{!$Label.DUE_UPON_RECEIPT}</td>
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="none" rendered="{!Quote.Pay_by_Instalment__c}">
+                                <td>{!$Label.INSTAL_PMT_3}</td>
+                            </apex:outputPanel>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p class="blueText bigBold" style="font-family: sans-serif;">
+            {!$Label.QUOTE_HEADING}
+            <br/>
+            //&nbsp;{!$Label.YOUR_QUOTE}&nbsp;{!Quote.QuoteNumber}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.DEAR_TEAM_AT}&nbsp;{!Account.Name},
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_1_1} <strong>{!$Label.QUOTE_GRAF_1_2}</strong><br/>
+            {!$Label.QUOTE_GRAF_1_3}
+        </p>
+        <table class="StatementTable bme grayText" border="0">
+            <thead style="background-color: rgb(0,163,224);">
+                <tr>
+                    <th class="lftalgn">{!$Label.ARTICLE}</th>
+                    <th style="text-align:center;">{!$Label.QUANTITY}</th>
+                    <th>{!$Label.UNIT_PRICE}</th>
+                    <th>{!$Label.TOTAL_PRICE}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!LineItems}" var="item" >
+                    <apex:outputPanel layout="none" rendered="{!item.IsBundle}">
+                        <tr style="break-inside:avoid;">
+                            <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                                {!item.AR[
+                                IF(Account.PrimaryLanguage__c=='French',
+                                'nameFR',
+                                IF(Account.PrimaryLanguage__c=='English',
+                                'nameEN',
+                                'nameDE'
+                                )
+                                )                            
+                                ]}
+                                <apex:repeat value="{!BundleMap[item.AR['pbid']].Product_Bundle_Assignments__r}" var="subitem">
+                                    <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {!IF(Account.PrimaryLanguage__c=='French',
+                                    subitem.Product__r.Product_Name_FR__c,
+                                    IF(Account.PrimaryLanguage__c=='English',
+                                    subitem.Product__r.Name,
+                                    subitem.Product__r.Product_Name_DE__c
+                                    )
+                                    )}
+                                </apex:repeat>
+                            </td>
+                            <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputText value="{0, number, 0}">
+                                    <apex:param value="{!item.AR['qty']}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputPanel rendered="{!item.StrikeoutUnitPrice != null}" layout="none">
+                                    <span style="text-decoration: line-through;"><c:Curr Value="{!ROUND(item.StrikeoutUnitPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></span><br/>
+                                </apex:outputPanel>
+                                <c:Curr Value="{!ROUND(item.UnitPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputPanel rendered="{!item.StrikeoutPrice != null}" layout="none">
+                                    <span style="text-decoration: line-through;"><c:Curr Value="{!ROUND(item.StrikeoutPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></span><br/>
+                                </apex:outputPanel>
+                                <c:Curr Value="{!ROUND(item.TotalPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!!item.IsBundle}">
+                        <tr style="break-inside:avoid;">
+                            <td class="lftalgn" style="border-bottom: solid 1px rgb(0,163,224);padding:5px 10px;">
+                                {!IF(Account.PrimaryLanguage__c=='French',
+                                item.QLI.Product2.Product_Name_FR__c,
+                                IF(Account.PrimaryLanguage__c=='English',
+                                item.QLI.Product2.Name,
+                                item.QLI.Product2.Product_Name_DE__c
+                                )
+                                )}
+                            </td>
+                            <td style="text-align:center;border-bottom: solid 1px rgb(0,163,224);">
+                                <apex:outputText value="{0, number, 0}">
+                                    <apex:param value="{!item.QLI.Quantity}" />
+                                </apex:outputText>
+                            </td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!ROUND(item.QLI.UnitPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                            <td style="border-bottom: solid 1px rgb(0,163,224);"><c:Curr Value="{!ROUND(item.QLI.TotalPrice,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                        </tr>
+                    </apex:outputPanel>
+                </apex:repeat>
+                <apex:outputPanel layout="none" rendered="{!UseDiscountTotal}">
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 0px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TOTAL_LIST_PRICE}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(NonDiscountTotal,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.YOUR_DISCOUNT}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(DiscountTotal,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TOTAL_AFTER_DISCOUNT}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(Quote.SubTotal,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TAX_TOTAL}&nbsp;{!IF(Quote.Tax==0,"0%","16%")}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(Quote.Tax,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                </apex:outputPanel>
+                <apex:outputPanel layout="none" rendered="{!!UseDiscountTotal}">
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.GRAND_TOTAL}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(NonDiscountTotal,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                    <tr style="break-inside:avoid;">
+                        <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                        <td/>
+                        <td class="lftalgn">{!$Label.TAX_TOTAL}&nbsp;{!IF(Quote.Tax==0,"0%","16%")}:</td>
+                        <td style="background-color:#fff;"><c:Curr Value="{!ROUND(Quote.Tax,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                    </tr>
+                </apex:outputPanel>
+                <tr style="break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">{!$Label.TOTAL_AMOUNT}:</td>
+                    <td style="background-color:#fff;border-top: solid 1px rgb(0,163,224);font-weight:bolder;"><c:Curr Value="{!ROUND(Quote.GrandTotal,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                </tr>
+                <tr style="break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">Anzahlung :</td>
+                    <td style="background-color:#fff;border-top: solid 1px rgb(0,163,224);font-weight:bolder;"><c:Curr Value="{!ROUND(199,2)}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.QUOTE_GRAF_2_1}&nbsp;<apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Quote.ExpirationDate}" /></apex:outputText>&nbsp;{!$Label.QUOTE_GRAF_2_2}
+        </p>
+        <apex:outputPanel rendered="{!Quote.PayPalLink__c}">
+            <p>
+                <a href="https://www.paypal.com/cgi-bin/webscr?business=paypal@orderbird.com&cmd=_xclick&currency_code={!Quote.Account.CurrencyIsoCode}&amount={!Quote.GrandTotal/(IF(Quote.Pay_by_Instalment__c,3,1))}&item_name=Quote{!Quote.QuoteNumber}_Customer{!Quote.Account.CustomerID__c}">
+                    {!$Label.PAYPAL_LINK}
+                </a>
+            </p>
+        </apex:outputPanel>
+        <p class="grayText" style="font-family: sans-serif;">
+            Mit der Annahme dieses Angebotes und der Überweisung von 199 EUR als erhalten Sie, neben einem Nachweis der verbindlichen Bestellung, die Linzenzgebühr unseres Gästemanagements kostenlos bis zum 28.02.2021.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            In den 199 EUR Anzahlung sind bereits 49,00 EUR (56,84 EUR inkl. 16% Umsatzsteuer) Aktivierungsgebühr für das orderbird Gästemanagement (Lieferservice*, Abholung* und Verkauf von Tickets** bzw. Gutscheinen**) enthalten sowie 142,16 EUR Anzahlung für ihr individuelles Angebot.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            Bitte beachten Sie, dass der verringerte Mehrwertsteuersatz voraussichtlich nur bis 31.12.2020 gültig ist.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            Bitte begleichen Sie den offenen Rechnungsbetrag mit Angabe der Angebotsnummer bis spätestens 12.02.2021 per Überweisung auf das in der Fußzeile angegebene Konto. Sollten wir bis zum 12.02.2021 keinen Zahlungseingang feststellen, buchen wir den offenen Betrag per Lastschrift von Ihrem Konto ab.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            Die Gästemanagement Lizenzgebühr wird automatisch am 01.03.2021 um ein Jahr verlängert. Selbstverständlich ist es möglich, die Verlängerung für das Gästemanagement bis spätestens 31.01.2021 zu kündigen.
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.KIND_REGARDS}<br/>
+            {!Quote.Opportunity.Owner.Name}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;font-size:80%;">
+            <br/><br/>* Provision in Höhe von 4% pro Verkauf auf Bestellpreis.<br/>
+            ** Provision in Höhe von 6% pro Verkauf auf Ticket- bzw. Gutschein Preis.
+        </p>
+    </div>
+    <div style="break-after:always;"/>
+    <div>
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage == 'de'}">
+            <c:quoteAttach_DE Account="{!Account}" Quote="{!Quote}" AddressParts="{!AddressParts}" AddressPartsShip="{!AddressPartsShip}"/>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage == 'fr'}">
+            <c:quoteAttach_FR Account="{!Account}" Quote="{!Quote}" AddressParts="{!AddressParts}" AddressPartsShip="{!AddressPartsShip}"/>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage == 'en'}">
+            <c:quoteAttach_EN Account="{!Account}" Quote="{!Quote}" AddressParts="{!AddressParts}" AddressPartsShip="{!AddressPartsShip}"/>
+        </apex:outputPanel>
+    </div>
+</apex:component>

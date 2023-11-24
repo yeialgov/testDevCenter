@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DoNotFlagUntil__c</fullName>
+    <description>Required in combination with the Opp Score to temporarily remove hot opportunities from to-do lists in case there is a fixed date, until contact is unnecessary/unwanted // Stakeholder: Sales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is there a date before which we should NOT contact the prospect? Set by sales agent in order to exclude the opp from to-do lists until the selected date.</inlineHelpText>
+    <label>Do Not Flag Until</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

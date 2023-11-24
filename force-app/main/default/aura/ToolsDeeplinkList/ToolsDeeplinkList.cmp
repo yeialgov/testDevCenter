@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                controller="AccountLightningController">
+    
+    <aura:attribute type="List" name="Venues"/>
+    <aura:attribute type="String" name="recordId"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getVenues}"/>
+
+    <aura:iteration items="{!v.Venues}" var="Venue">
+        <c:ToolsDeeplink VenueSFId="{!Venue.Id}" 
+                         VenueId="{!Venue.MyOrderbirdId__c}" />
+    </aura:iteration>
+
+</aura:component>

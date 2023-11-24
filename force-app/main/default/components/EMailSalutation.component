@@ -1,0 +1,50 @@
+<apex:component access="global">
+    <apex:attribute name="Salutation" description="Salutation"  type="String"/>
+    <apex:attribute name="Language" description="Language"  type="String"/>
+    <apex:attribute name="FirstName" description="Language"  type="String"/>
+    <apex:attribute name="LastName" description="Language"  type="String"/>
+    
+    
+    <!-- Definition of the language variable that is used to select the correct language block to render. DEFAULT "English" -->
+    <apex:variable var="SalutationLanguage" 
+        value="{!Case(Language,
+            'German','German',
+            'French','French',
+            'English')}"
+            />
+    
+    <!-- ENGLISH and DEFAULT Salutation Block -->
+    <apex:outputpanel layout="block" rendered="{!SalutationLanguage='English'}">
+        <apex:outputText rendered="{!Salutation = 'Mr.'}">
+            Dear Mr. {!LastName}
+        </apex:outputText>
+        <apex:outputText rendered="{!Salutation = 'Ms.'}">
+            Dear Ms. {!LastName}
+        </apex:outputText>
+    </apex:outputpanel>
+    
+    
+    <!-- German Salutation Block -->
+    <apex:outputpanel layout="block" rendered="{!SalutationLanguage='German'}">
+        <apex:outputText rendered="{!Salutation = 'Mr.'}">
+            Sehr geehrter Herr {!LastName},
+        </apex:outputText>
+        <apex:outputText rendered="{!Salutation = 'Ms.'}">
+            Sehr geehrte Frau {!LastName},
+        </apex:outputText>
+    </apex:outputpanel>
+    
+    <!-- French Salutation Block -->
+    <apex:outputpanel layout="block" rendered="{!SalutationLanguage='French'}">
+        <apex:outputText rendered="{!Salutation = 'Mr.'}">
+            Cher Monsieur {!LastName},
+        </apex:outputText>
+        <apex:outputText rendered="{!Salutation = 'Ms.'}">
+            Chere Madame {!LastName},
+        </apex:outputText>
+    </apex:outputpanel>
+    
+
+
+
+</apex:component>

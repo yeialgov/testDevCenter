@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_case_mandatory_closed_duplicate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users ,  $User.Id )),
+
+ISCHANGED( Status ),
+ISPICKVAL( Status , &quot;Closed as Duplicate&quot;),
+ISBLANK(  ParentId )  
+)</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>Case cannot be marked as duplicate without the original Parent Case ID!</errorMessage>
+</ValidationRule>

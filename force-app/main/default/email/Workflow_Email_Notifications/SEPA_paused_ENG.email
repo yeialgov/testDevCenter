@@ -1,0 +1,198 @@
+<messaging:emailTemplate subject="orderbird – die Kassenexperten für die Gastronomie" recipientType="Lead" relatedToType="Lead" replyTo="beratung@orderbird.com">
+    <messaging:htmlEmailBody >
+<table cellpadding="0" cellspacing="0" class="nl-container" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #eaeced;width: 100%">
+    <tbody>
+        <tr style="vertical-align: top">
+            <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;padding: 0">
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;">
+            <div align="center" class="img-container center autowidth fullwidth" style="padding-right: 0px; padding-left: 0px;"><img align="center" alt="Image" border="0" class="center autowidth fullwidth" src="https://orderbird--c.eu16.content.force.com/servlet/servlet.ImageServer?id=01558000003dzXr&oid=00D58000000PJMf&lastMod=1542644926000" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px" title="Image" width="600"/></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #FFFFFF;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:#FFFFFF;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+            <div style="color:#767676;line-height:150%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; padding-right: 10px; padding-left: 25px; padding-top: 10px; padding-bottom: 10px;">
+            <div style="font-size:14px;line-height:21px;color:#767676;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;">
+            
+Hello {!Account.SF_BillTo_Contact__c},
+<br/><br/>
+Since your last two direct debit payments to us could not be collected, we are forced to pause your SEPA Direct Debit Mandate immediately until further notice.
+
+<p style="line-height: 24px; font-size: 16px; font-weight: bold; color:#00A3E0;">What does it mean and what do I have to do now?</P>
+In the past, your account has two times not been sufficiently covered for our outstanding claims. These bounced transactions have unfortunately cost us money. In order to avoid such costs in the future, we have to pause your SEPA Direct Debit Mandate.
+<br/><br/>
+Tip: If you still have outstanding invoice amounts, please <b>transfer the outstanding amounts</b> to our bank account <b>with the corresponding invoice number within five working days</b>. This will save you a <b>dunning procedure with additional fees!</b>
+<br/><br/>
+If your next four payments or transfers go smoothly, feel free to send an email to <a style="text-decoration: underline; color: #00a3e0; font-size: 14px; line-height: 16px;" title="help@orderbird.com" href="mailto:help@orderbird.com">help@orderbird.com</a> and we will reactivate your SEPA Direct Debit Mandate after a brief verification.
+
+<p style="line-height: 24px; font-size: 16px; font-weight: bold; color:#00A3E0;">Our bank account</P>
+orderbird AG<br/>
+Bank: Deutsche Bank<br/>
+IBAN: DE68 1007 0124 0112 1359 00<br/>
+BIC: DEUTDEDB101<br/>
+
+<p style="line-height: 24px; font-size: 16px; font-weight: bold; color:#00A3E0;">Your payments did go through? This is just a misunderstanding?</P>
+If you are of the opinion that your direct debit mandate is working smoothly and there are no failed payments, please contact us as soon as possible. This will give us a chance to solve this inconvenience together. You can reach us by email at <a style="text-decoration: underline; color: #00a3e0; font-size: 14px; line-height: 16px;" title="help@orderbird.com" href="mailto:help@orderbird.com">help@orderbird.com</a> anytime. Please use "SEPA Direct Debit Mandate falsely paused" as subject line.
+<br/><br/>
+Thank you for your understanding.
+<br/><br/>
+Best regards, <br/>
+Your orderbird team
+
+            </div>
+            </div>
+
+            <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <div align="center">
+            <div style="border-top: 0px solid #BBBBBB; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0px;">
+            <div style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <div align="center">
+            <div style="border-top: 0px solid transparent; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+            <div style="background-color:transparent;">
+            <div class="block-grid" style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #323435;">
+            <div style="border-collapse: collapse;display: table;width: 100%;background-color:#323435;">
+            <div class="col num12" style="min-width: 320px;max-width: 600px;display: table-cell;vertical-align: top;">
+            <div style="background-color: transparent; width: 100% !important;">
+            <div style="border-top: 0px solid transparent; border-left: 0px solid transparent; border-bottom: 0px solid transparent; border-right: 0px solid transparent; padding-top:15px; padding-bottom:30px; padding-right: 0px; padding-left: 0px;">
+            <div align="left" style="padding-right: 10px; padding-left: 30px; padding-bottom: 0px;">
+            <div style="line-height:20px;font-size:1px">&nbsp;</div>
+
+            <div style="display: table; max-width:265px;">
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.orderbird.com" target="_blank" title="Website"><img alt="Website" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/website.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Website" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.facebook.com/orderbird.deutschland" target="_blank" title="Facebook"><img alt="Facebook" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/facebook.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Facebook" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.instagram.com/orderbird/" target="_blank" title="Instagram"><img alt="Instagram" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/instagram@2x.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="Instagram" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table align="left" border="0" cellpadding="0" cellspacing="0" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;Margin-right: 10px" width="32">
+                <tbody>
+                    <tr style="vertical-align: top">
+                        <td align="left" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top" valign="middle"><a href="https://www.youtube.com/user/orderbird" target="_blank" title="YouTube"><img alt="YouTube" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-dark-gray/youtube@2x.png" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important" title="YouTube" width="32" /></a>
+
+                        <div style="line-height:5px;font-size:1px">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+
+            <div style="padding-right: 5px; padding-left: 5px; padding-top: 5px; padding-bottom: 5px;">
+            <div align="center">
+            <div style="border-top: 0px solid #BBBBBB; width:100%; line-height:0px; height:0px; font-size:0px;">&nbsp;</div>
+            </div>
+            </div>
+
+            <div style="color:#767676;line-height:120%;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; padding-right: 30px; padding-left: 30px; padding-top: 20px; padding-bottom: 10px;">
+            <div style="font-size:12px;line-height:14px;color:#767676;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;text-align:left;">
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 16px; line-height: 19px; color: rgb(189, 189, 189);"><strong><span style="line-height: 19px; font-size: 16px;">orderbird AG</span></strong></span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">&nbsp;</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">Ritterstra&szlig;e 12-14, Aufg. 3</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">D- 10969 Berlin</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">Germany<br />
+            <br />
+            E-Mail: hello@orderbird.com<br />
+            Phone: 030 208 983 098<br />
+            Fax: +49 321 214 681 89</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><br />
+            <span style="font-size: 10px; line-height: 12px;">Company Headquarters: Berlin</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">District Court: Amtsgericht Berlin - Charlottenburg</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Register No.: HRB 134011 B</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">VAT ID: DE276722316</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px">&nbsp;</p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Management Board: Mark Schoen (Chairman), Jakob Schreyer, Patrick Brienen-Luciusl</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><span style="font-size: 10px; line-height: 12px;">Chairman of the Supervisory Board: Oliver Kaltner</span></p>
+
+            <p style="margin: 0;font-size: 12px;line-height: 14px"><br />
+            <span style="color: rgb(189, 189, 189); font-size: 12px; line-height: 14px;">&copy; orderbird AG&nbsp;2011-
+            
+             {!User.Current_Year__c} All Rights Reserved</span></p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

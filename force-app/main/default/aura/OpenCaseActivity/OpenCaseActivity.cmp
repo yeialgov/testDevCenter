@@ -1,0 +1,26 @@
+<aura:component controller="CaseLightningController">
+    <aura:attribute name="Task" type="Object"/>
+    <aura:attribute name="Show" type="Boolean" default="true"/>
+    <aura:attribute name="Spinner" type="Boolean" default="false"/>
+    
+    <aura:if isTrue="{!v.Show}">
+        <aura:if isTrue="{!v.Spinner}">
+            <lightning:spinner/>
+        </aura:if>
+        <lightning:card variant="Narrow" title="Open Task" iconName="standard:task">
+            <aura:set attribute="actions">
+                <lightning:buttonIcon iconName="utility:task" variant="border-filled" onclick="{!c.gotoTask}"/>
+                <lightning:buttonIcon iconName="utility:check" variant="border-filled" onclick="{!c.closeTask}"/>
+            </aura:set>
+            <p class="slds-p-horizontal_small">
+                {!v.Task.Subject}
+            </p>
+            <p class="slds-p-horizontal_small">
+                {!v.Task.Owner.Name}
+                <aura:if isTrue="{!v.Task.ActivityDate != null}">
+                    • <ui:outputDate value="{!v.Task.ActivityDate}"/>
+                </aura:if>
+            </p>
+        </lightning:card>
+    </aura:if>
+</aura:component>

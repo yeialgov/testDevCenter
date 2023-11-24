@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Contract_Paid_Date__c</fullName>
+    <description>https://jira.orderbird.com/browse/CDS-8</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When was the first payment settled for this customer? Filled automatically</inlineHelpText>
+    <label>Closed Contract Paid Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

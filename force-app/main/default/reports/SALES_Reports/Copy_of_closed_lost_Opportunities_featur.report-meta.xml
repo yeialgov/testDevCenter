@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>INDUSTRY</field>
+    </columns>
+    <columns>
+        <field>Opportunity.LostRejectedReason__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Missing_feature__c</field>
+    </columns>
+    <columns>
+        <field>Account.MissingFeature1__c</field>
+    </columns>
+    <currency>EUR</currency>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>INDUSTRY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Bakery,Beauty / Wellness,Cafe,Canteen,Catering / Events,Culture / Event / Tickets,Hotel / Pension,Nightclub / Disco,Pub / Bar,Restaurant,Retail / Sale,Snack / Takeaway,Other,Shisha Bar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.LostRejectedReason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Already Customer,Apple only,Cannot be reached,Cannot be reached after first contact,Closing down,Contact details incorrect,Corona Virus,Crucial feature request,Customer churned,Customer closed down,Duplicate / data quality issue,Foreign country / incompatible,Insufficient reliability,Language barrier,No/bad internet,Only free version,On-site demo / support needed,Opportunity Expired,Outside the industry / no fit,Pay lost - Cash only,Pay lost - existing contract,Pay lost - existing contract within hotel solution,Pay lost - fees too high,Pay lost - maybe later,Pay lost - prefers other solution,Pay reader too expensive,Project cancelled,Project delayed,Technical requirements too high,Too complicated,Too cost-intensive,Unknown / other,VAT Number Issue,Venue owner changed,Wrong Account assigned</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of closed lost Opportunities featur</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>OPPORTUNITY_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2020-05-04</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-01-01</startDate>
+    </timeFrameFilter>
+</Report>

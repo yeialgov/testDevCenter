@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Case Close Onboarding FR</name>
+    <style>none</style>
+    <subject>Fin de votre accompagnement avec {!Case.OwnerFirstName}</subject>
+    <textOnly>Envolez-vous!
+
+Votre période d&apos;accompagnement est officiellement terminée. Ensemble nous avons personnalisé orderbird selon vos besoins.
+
+Vous êtes désormais prêt à travailler sereinement avec orderbird.
+
+{!Case.OwnerFirstName} d&apos;orderbird
+
+Comment votre formation s’est-elle passée?
+
+Nous restons à votre dispo!
+
+Votre compte orderbird
+
+
+
+#{!Account.CustomerID__c}
+
+{!Account.Name}
+
+{!Account.myOrderbirdEmail__c}
+
+Nous contacter
+
+
+
+01 76 36 06 40
+
+assistance@orderbird.com﻿
+
+support.orderbird.com
+
+orderbird SAS
+
+
+
+71 rue du Faubourg Saint-Martin
+75010 Paris
+
+
+
+Siège: Berlin
+Registre de commerce de l&apos;Amtsgericht Berlin – Charlottenburg
+HRB 134011
+Numéro de TVA: DE276722316
+
+
+
+Comité directeur: Jakob Schreyer
+
+Président du comité directeur: Carlo Kölzer
+
+
+© 2010–2017 orderbird AG</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

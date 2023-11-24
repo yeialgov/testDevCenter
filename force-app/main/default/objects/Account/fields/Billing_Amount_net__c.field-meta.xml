@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Amount_net__c</fullName>
+    <description>Sum of &quot;Amount Without Tax&quot; of all related invoices with Status=posted</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sum of total net amount of all related invoices</inlineHelpText>
+    <label>Billing Amount (net)</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

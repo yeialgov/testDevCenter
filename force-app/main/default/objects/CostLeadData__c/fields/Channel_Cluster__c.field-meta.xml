@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Cluster__c</fullName>
+    <description>Defines Channel Clusters based on: {Insert Document here}</description>
+    <externalId>false</externalId>
+    <formula>CASE( Marketing_Channel__c ,
+ &apos;SEA Brand&apos;, &apos;SEA&apos;,
+ &apos;SEA Competitor&apos;,&apos;SEA&apos;, 
+ &apos;SEA Generic - PRO&apos;, &apos;SEA&apos;,
+ &apos;SEA Generic - MINI&apos;, &apos;SEA&apos;,
+ &apos;SEA Generic - Generic Funnel&apos;, &apos;SEA&apos;,
+ &apos;facebook Prospecting&apos;,&apos;Display&apos;,
+ &apos;facebook remarketing&apos;,&apos;Display&apos;,
+ &apos;Display Remarketing&apos;,&apos;Display&apos;,
+ &apos;Display prospecting&apos;,&apos;Display&apos;,
+ &apos;Outbrain Remarketing&apos;,&apos;Display&apos;,
+ &apos;Outbrain Prospecting&apos;,&apos;Display&apos;, 
+ &apos;MVF-Global&apos;, &apos;Affiliates &amp; Lead Agencies&apos;,
+ &apos;Affiliate&apos;, &apos;Affiliates &amp; Lead Agencies&apos;,
+ &apos;Kassen-Vergleich.com&apos;, &apos;Affiliates &amp; Lead Agencies&apos;,
+ &apos;TradingTwins&apos;, &apos;Affiliates &amp; Lead Agencies&apos;,
+ &apos;METRO - C&amp;C Callcenter&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - Event &amp; Trade Show&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - Landing Page&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - Salesforce&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - Telesales existing custo&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - HD Landingpage&apos;, &apos;METRO (Positive)&apos;,
+ &apos;METRO - Dish&apos;, &apos;METRO (Positive)&apos;,
+&apos;OTHER&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Channel Cluster</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

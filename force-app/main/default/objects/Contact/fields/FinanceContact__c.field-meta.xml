@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinanceContact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Stakeholder: Sales &amp; Account Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this Contact the person in charge of financial questions for their Account? Un/Checked by Sales</inlineHelpText>
+    <label>Finance Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

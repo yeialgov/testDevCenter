@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Black_Spot__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Something Max made, better not ask...
+Delete if there is no Max around anymore...</description>
+    <externalId>false</externalId>
+    <inlineHelpText>He is dead, Jim!</inlineHelpText>
+    <label>Black Spot</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

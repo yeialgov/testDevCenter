@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_Mismatch_VATId__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(VATId__c  ==  Account__r.VATNumber__c
+|| (ISBLANK(VATId__c) &amp;&amp; Account__r.VATNumber__c = &quot;userdata: NULL&quot;)
+|| (ISBLANK(Account__r.VATNumber__c) &amp;&amp; VATId__c = &quot;userdata: NULL&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp: Mismatch VATId</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,42 @@
+<aura:component access="global" 
+                controller="AccountLightningController">
+    
+    <aura:attribute type="String" name="AccountId"/>
+    <aura:attribute type="String" name="redirectId"/>    
+    <aura:attribute type="Object" name="Warning"/>
+
+    <aura:registerEvent name="appEvent" type="c:HasObVenue"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getWarning}"/>
+    <aura:handler name="change" value="{!v.AccountId}" action="{!c.getWarning}"/>
+    
+    <aura:if isTrue="{!and(v.Warning != null, !v.Warning.NoWarning)}">
+        <aura:if isTrue="{!v.Warning.SentEmail}">
+            <div style="margin-bottom:0.5rem;" class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                <span class="slds-assistive-text">warning</span>
+                <span class="slds-icon_container slds-m-right_x-small" title="Quote Total has not been verified.">
+                    <lightning:icon iconName="utility:email" variant="inverse" size="small"/>
+                </span>
+                <h2>This Prospect hasn't yet responded to the MyOrderbird sign-up email.</h2>
+                <span style="margin-left:1rem;">
+                    <lightning:button label="Re-Send Sign-up Email" onclick="{!c.SendEmail}"/>
+                </span>
+                <span style="line-height:1em;font-size:0.9em;margin-left:0.5rem;text-align:left;">Primary Contact Email<br/><b>{!v.Warning.PrimaryContactEmail}</b></span>
+            </div>
+            <aura:set attribute="else">
+                <div style="margin-bottom:0.5rem;" class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <span class="slds-icon_container slds-m-right_x-small" title="Quote Total has not been verified.">
+                        <lightning:icon iconName="utility:email" variant="inverse" size="small"/>
+                    </span>
+                    <h2>This Prospect hasn't been sent a MyOrderbird sign-up email.</h2>
+                    <span style="margin-left:1rem;">
+                        <lightning:button label="Send Sign-up Email" onclick="{!c.SendEmail}"/>
+                    </span>
+                    <span style="line-height:1em;font-size:0.9em;margin-left:0.5rem;text-align:left;">Primary Contact Email<br/><b>{!v.Warning.PrimaryContactEmail}</b></span>
+                </div>
+            </aura:set>
+        </aura:if>
+    </aura:if>
+    
+</aura:component>

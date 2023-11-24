@@ -1,0 +1,32 @@
+<aura:component controller="CockpitController">
+    <aura:attribute name="AccountId" type="String" />
+    <aura:attribute name="NPS" type="List" />
+    <aura:attribute name="isExpanded" type="Boolean" default="true"/>
+    
+    <aura:handler name="change" value="{!v.AccountId}" action="{!c.getAcctId}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getAcctId}"/>
+    
+    <aura:if isTrue="{!v.NPS.length > 0}">
+        <aura:iteration items="{!v.NPS}" var="n">
+            <aura:if isTrue="{!v.isExpanded}">
+                <div style="{!'font-family: \'Montserrat\', sans-serif; font-weight:900;color: '+n.color+'; margin-top:1rem;'}">
+                    <div style="text-align:center;width:5.75rem;">
+                        <p title="{!n.Contact__r.Email}" 
+                           style="cursor:pointer;letter-spacing: -1rem;margin:1rem 0 0;padding:0 1rem 0 0;font-size:5rem;line-height:1.5rem;">
+                            {!n.NPS__c}
+                        </p>
+                        <p style="margin:0 0 0.5rem;padding:0;color:white;font-size:0.75rem;">{!n.desc}</p>
+                    </div>    
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!!v.isExpanded}">
+                <span style="{!'font-family: \'Montserrat\', sans-serif; font-weight:900;color: '+n.color+'; margin-top:1rem;'}">
+                    <span title="{!n.Contact__r.Email}" 
+                          style="font-weight:900;cursor:pointer;margin:0 0.25rem;font-size:1rem;">
+                        {!n.NPS__c}
+                    </span>
+                </span>
+            </aura:if>
+        </aura:iteration>
+    </aura:if>    
+</aura:component>

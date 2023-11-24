@@ -1,0 +1,75 @@
+<aura:component controller="AccountLightningController">
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="AddressType" type="String" default="Billing"/>
+    <aura:attribute name="MailingStreet" type="String" />
+    <aura:attribute name="MailingStreet_raw" type="String" />
+    <aura:attribute name="MailingPostalCode" type="String" />
+    <aura:attribute name="MailingCity" type="String" />
+    <aura:attribute name="MailingCountry" type="String" />
+    <aura:attribute name="MailingCountryCode" type="String" />
+    <aura:attribute name="Account" type="Object" />
+    <aura:attribute name="Options" type="List" />
+    <aura:attribute name="Selections" type="List" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true" />
+    <aura:attribute name="ShowLCNError" type="Boolean" default="false" />
+    
+    <aura:registerEvent name="appEvent" type="c:AddressBuilderChange"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Id, Name, LegalCompanyName__c, AddressBuilder__c, AddressBuilder_Shipping__c, AddressBuilder_Venue__c,
+                              SF_BillTo_Contact__r.Name, SF_BillTo_Contact__r.FirstName, SF_BillTo_Contact__r.MailingStreet, 
+                              SF_BillTo_Contact__r.MailingCity, SF_BillTo_Contact__r.MailingPostalCode, SF_BillTo_Contact__r.MailingCountry, 
+                              SF_BillTo_Contact__r.MailingCountryCode, SF_BillTo_Contact__r.Addressee__c, SF_BillTo_Contact__r.Attention__c,
+                              SF_Venue_Contact__r.Name, SF_Venue_Contact__r.FirstName, SF_Venue_Contact__r.MailingStreet, 
+                              SF_Venue_Contact__r.MailingCity, SF_Venue_Contact__r.MailingPostalCode, SF_Venue_Contact__r.MailingCountry, 
+                              SF_Venue_Contact__r.MailingCountryCode, SF_Venue_Contact__r.Addressee__c, SF_Venue_Contact__r.Attention__c,
+                              SF_SoldTo_Contact__r.Name, SF_SoldTo_Contact__r.FirstName, SF_SoldTo_Contact__r.MailingStreet, 
+                              SF_SoldTo_Contact__r.MailingCity, SF_SoldTo_Contact__r.MailingPostalCode, SF_SoldTo_Contact__r.MailingCountry, 
+                              SF_SoldTo_Contact__r.MailingCountryCode, SF_SoldTo_Contact__r.Addressee__c, SF_SoldTo_Contact__r.Attention__c"
+                      targetFields="{!v.Account}"
+                      recordUpdated="{!c.doInit}"/>
+
+    <lightning:card title="{!v.AddressType + ' Address'}" iconName="standard:address">
+        
+        <aura:if isTrue="{!v.ShowSpinner}">
+            <lightning:spinner />
+        </aura:if>
+        <div class="slds-card__body slds-card__body_inner">
+            <ui:inputSelect class="slds-text-heading_medium bolden" aura:id="Line1" value="{!v.Selections[0]}" change="{!c.changed}">
+                <aura:iteration items="{!v.Options}" var="o">
+                    <ui:inputSelectOption text="{!o.Text}" label="{!o.Label}"/>
+                </aura:iteration>
+            </ui:inputSelect>
+            <ui:inputSelect class="slds-text-heading_medium bolden" aura:id="Line2" value="{!v.Selections[1]}" change="{!c.changed}">
+                <aura:iteration items="{!v.Options}" var="o">
+                    <ui:inputSelectOption text="{!o.Text}" label="{!o.Label}"/>
+                </aura:iteration>
+            </ui:inputSelect>
+            <aura:if isTrue="{!v.AddressType != 'Shipping'}">
+                <ui:inputSelect class="slds-text-heading_medium bolden" aura:id="Line3" value="{!v.Selections[2]}" change="{!c.changed}">
+                    <aura:iteration items="{!v.Options}" var="o">
+                        <ui:inputSelectOption text="{!o.Text}" label="{!o.Label}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+            </aura:if>
+            <p class="slds-text-heading_medium bolden spacer">
+                <aura:unescapedHtml value="{!v.MailingStreet}"/>
+            </p>
+            <p class="slds-text-heading_medium bolden spacer">
+                {!v.MailingPostalCode}&nbsp;{!v.MailingCity}
+            </p>
+            <p class="slds-text-heading_medium bolden spacer">{!v.MailingCountry}</p>
+        </div>
+        <aura:if isTrue="{!v.ShowLCNError}">
+            <div style="background-color:#870500;color:white;padding: 0.5rem;">
+                <b>NOT SAVED</b> until Legal Company Name ({!v.Account.LegalCompanyName__c}) is included.
+            </div>
+        </aura:if>
+        <c:GoogleMap Street="{!v.MailingStreet_raw}" 
+                     PostalCode="{!v.MailingPostalCode}"
+                     City="{!v.MailingCity}"
+                     Country="{!v.MailingCountryCode}"/>
+    </lightning:card>
+</aura:component>

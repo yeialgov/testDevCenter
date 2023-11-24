@@ -1,0 +1,284 @@
+<aura:component controller="EmailSender"
+                implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,force:lightningQuickAction" 
+                access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="Language" type="String" default="German"/>
+    <aura:attribute name="Contacts" type="List" />
+    <aura:attribute name="WhereCondition" type="List" default="['Case','German']"/>
+    <aura:attribute name="Opportunity" type="Object" />
+    <aura:attribute name="Invoice" type="Object" />
+    <aura:attribute name="Quote" type="Object" />
+    <aura:attribute name="Case" type="Object" />
+    <aura:attribute name="CCs" type="List" />
+    <aura:attribute name="IRs" type="List" />
+    <aura:attribute name="Templates" type="List" />
+    <aura:attribute name="TemplateFolders" type="List" />
+    <aura:attribute name="Invoices" type="List" />
+    <aura:attribute name="Files" type="List"/>
+    <aura:attribute name="Attachments" type="List"/>
+    <aura:attribute name="CantSend" type="Boolean" default="true" />
+    <aura:attribute name="ShowSpinner" type="Boolean" default="true" />
+    <aura:attribute name="BCCMe" type="Boolean" default="false" />
+    <aura:attribute name="ShowCC" type="Boolean" default="false" />
+    <aura:attribute name="Permission" type="Boolean" default="false" />
+    <aura:attribute name="Unwrapped" type="Boolean" default="false" />
+    <aura:attribute name="Notify" type="Boolean" default="false" />
+    <aura:attribute name="ShowTemplates" type="Boolean" default="false" />
+    <aura:attribute name="ShowInvoices" type="Boolean" default="false" />
+    <aura:attribute name="ShowPreview" type="Boolean" default="false" />
+    <aura:attribute name="ShowInternalRecipient" type="Boolean" default="false" />
+    <aura:attribute name="AllTemplateLanguages" type="Boolean" default="false" />
+    <aura:attribute name="Preview" type="Object"/>
+    <aura:attribute name="TemplateName" type="String"/>
+    <aura:attribute name="TemplateFolder" type="String"/>
+    <aura:attribute name="TemplateFolderName" type="String"/>
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="ObjectName" type="String" />
+    <aura:attribute name="EmailSubject" type="String" />
+    <aura:attribute name="EmailText" type="String" />
+    <aura:attribute name="UnwrappedEmailText" type="String" />
+    <aura:attribute name="OWEA" type="Object" />
+    <aura:attribute name="ReplyThread" type="List" />
+    <aura:attribute name="InclReplyThread" type="Boolean" default="false"/>
+    
+    <aura:attribute access="private" type="List" name="selection" default="[]"/>
+    <aura:attribute access="private" type="List" name="errors" default="[]"/>
+    
+    <aura:handler event="c:QuoteEmailContactClick" action="{!c.ContactClick}"/>
+    <aura:handler event="c:QuoteEmailBCCClick" action="{!c.BCCClick}"/>
+    
+    <aura:if isTrue="{!v.sObjectName == 'Case' || v.sObjectName == 'Opportunity'}">
+        <force:recordData aura:id="recordLoader3"
+                          recordId="{!v.recordId}"
+                          fields="Id,Account.Name,Account.PrimaryLanguage__c,Account.Primary_Contact__c,Account.SF_BillTo_Contact__c,
+                                  Account.SF_SoldTo_Contact__c,AccountId"
+                          targetFields="{!v.Case}"
+                          recordUpdated="{!c.doInit}" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.ShowSpinner}">
+        <lightning:spinner size="large" variant="brand"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.Case.AccountId != null}">
+        <div class="slds-grid slds-gutters slds-wrap"><!--style="margin-right:0;"-->
+            <aura:if isTrue="{!v.ShowInternalRecipient}">
+                <div class="slds-col slds-size_5-of-6">
+                    <lightning:input label="Internal Recipient(s)" onblur="{!c.CCBlur}" onchange="{!c.CCChange}"
+                                     placeholder="Enter email address(es)..."/>
+                </div>
+                <div class="slds-col slds-size_1-of-6" style="margin-top:1.5rem;">
+                    <lightning:buttonIcon iconName="utility:close" onclick="{!c.IRClose}"/>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <aura:iteration items="{!v.CCs}" var="CC">
+                        <aura:if isTrue="{!CC.Address != null}">
+                            <lightning:pill label="{!CC.Address}" onremove="{!c.removeCC}"
+                                            class="{!CC.Verified ? '' : 'redPill'}">
+                                <aura:set attribute="media">
+                                    <lightning:icon iconName="standard:drafts"/>
+                                </aura:set>
+                            </lightning:pill>
+                        </aura:if>
+                    </aura:iteration>
+                </div>
+                <aura:set attribute="else">
+                    <div aura:id="ToContainer" class="slds-col slds-size_5-of-6">
+                        <lightning:select label="To" aura:id="ContactSelect" name="ContactSelect" onchange="{! c.onChange }">
+                            <option value="">Add a Recipient...</option>
+                            <aura:iteration items="{!v.Contacts}" var="Contact">
+                                <aura:if isTrue="{!!Contact.Selected}">
+                                    <option value="{!Contact.Id}">{!Contact.Name} {!Contact.IsEmailBounced ? ' &#916; ' : ''}&#60;{!Contact.Email}&#62;</option>
+                                </aura:if>
+                            </aura:iteration>
+                            <option value="BCCMe">BCC Me</option>
+                            <option value="Internal">Internal Recipient(s)</option>
+                        </lightning:select> 
+                    </div>
+                    <aura:if isTrue="{!!v.ShowCC}">
+                        <div class="slds-col slds-size_1-of-6" style="margin-top:1.5rem;">
+                            <lightning:button label="CC" onclick="{!c.ShowCC}"/>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.ShowCC}">
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning:input label="CC" onblur="{!c.CCBlur}" onchange="{!c.CCChange}"
+                                             placeholder="Enter email address(es)..."/>
+                        </div>
+                    </aura:if>
+                    <div class="slds-col slds-size_1-of-1" style="margin-top:0.5rem;">
+                        <aura:iteration items="{!v.Contacts}" var="Contact">
+                            <aura:if isTrue="{!Contact.Selected}">
+                                <lightning:pill class="{!Contact.Id}" label="{!Contact.Name}" onremove="{!c.removeRecipient}" aura:id="x1">
+                                    <aura:set attribute="media">
+                                        <lightning:icon class="{!Contact.IsEmailBounced ? 'warningIcon' : ''}" iconName="{!Contact.IsEmailBounced ? 'utility:warning' : 'standard:contact'}"/>
+                                    </aura:set>
+                                </lightning:pill>
+                            </aura:if>
+                        </aura:iteration>
+                        <aura:iteration items="{!v.CCs}" var="CC">
+                            <aura:if isTrue="{!CC.Address != null}">
+                                <lightning:pill label="{!CC.Address}" onremove="{!c.removeCC}"
+                                                class="{!CC.Verified ? '' : 'redPill'}">
+                                    <aura:set attribute="media">
+                                        <lightning:icon iconName="standard:drafts"/>
+                                    </aura:set>
+                                </lightning:pill>
+                            </aura:if>
+                        </aura:iteration>
+                        <aura:if isTrue="{!v.BCCMe}">
+                            <lightning:pill label="BCC Me" onremove="{!c.removeBCC}">
+                                <aura:set attribute="media">
+                                    <lightning:icon iconName="standard:user"/>
+                                </aura:set>
+                            </lightning:pill>
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <div aura:id="TemplateContainer" class="slds-col slds-size_5-of-6">
+                <aura:if isTrue="{!v.ShowTemplates}">
+                    <div style="margin-top: 0.5rem;border-bottom: 1px solid #dddbda;"/>
+                    <aura:if isTrue="{!v.TemplateFolder == null}">
+                        <aura:iteration items="{!v.TemplateFolders}" var="Folder">
+                            <div id="{!Folder.Id}" class="templatePickRow" onclick="{!c.chooseFolder}">
+                                {!Folder.Name}
+                                <span style="float:right">
+                                    <lightning:icon size="x-small" iconName="utility:open_folder"/>
+                                </span>
+                            </div>
+                        </aura:iteration>
+                        <aura:set attribute="else">
+                            <div class="templatePickRow" onclick="{!c.removeFolder}">
+                                Folder: {!v.TemplateFolderName}
+                                <span style="float:right">
+                                    <lightning:icon size="x-small" iconName="utility:back"/>
+                                </span>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                    <aura:iteration items="{!v.Templates}" var="Template">
+                        <aura:if isTrue="{!Template.Folder__c == v.TemplateFolder}">
+                            <div id="{!Template.Id}" class="templatePickRow" onclick="{!c.chooser}">
+                                <b>{!Template.Name}</b>
+                                <span style="float:right">
+                                    <lightning:icon size="x-small" iconName="utility:text_template"/>
+                                </span>
+                            </div>
+                        </aura:if>
+                    </aura:iteration>
+                    <aura:set attribute="else">
+                        <c:Lookup aura:id="lookup" 
+                                  label="Template" 
+                                  WhereCondition="{!v.WhereCondition}"
+                                  selection="{!v.selection}" 
+                                  onSelection="{!c.selTemplate}"
+                                  onRemoval="{!c.remTemplate}"
+                                  onSearch="{!c.lookupSearch}"/>
+                        <aura:if isTrue="{!!v.AllTemplateLanguages}">
+                            Displaying {!v.Case.Account.PrimaryLanguage__c == 'English' ? '🇬🇧' : v.Case.Account.PrimaryLanguage__c == 'French' ? '🇫🇷' : '🇩🇪'} <span class="linky" onclick="{!c.AllLanguages}"><i>Show all</i></span>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </div>
+            <div class="slds-col slds-size_1-of-6" style="margin-top:1.5rem;">
+                <lightning:buttonIcon variant="border-filled" onclick="{!c.ToggleTemplate}"
+                                      iconName="{!v.ShowTemplates ? 'utility:search' : 'utility:open_folder'}"/>
+            </div>
+        </div>
+        <div style="margin-top: 1rem;">
+            <lightning:input label="Subject" value="{!v.EmailSubject}"/>
+        </div>
+        <!--aura:if isTrue="{!v.ReplyThread.length > 0}">
+            <lightning:input type="checkbox" label="Include Reply Thread" 
+                             onchange="{!c.ToggleReplyThread}"
+                             checked="{!v.InclReplyThread}"/>
+        </aura:if-->
+        <div style="margin-top: 1rem;">
+            <lightning:inputRichText variant="email" 
+                                     value="{!v.EmailText}"
+                                     formats="['font', 'size', 'bold', 'italic', 'underline',
+                                              'strike', 'list', 'indent', 'align', 'link',
+                                              'image', 'clean', 'table', 'header', 'color']"/>
+        </div>
+        <div style="margin-top: 1rem;">
+            <lightning:fileUpload label="Attach File(s)"
+                                  recordId="{!v.recordId}"
+                                  onuploadfinished="{!c.uploadAttachment}"/>
+        </div>
+        <div style="margin-top: 1rem;text-align:center;">
+            <div class="slds-button-group" role="group">
+                <aura:if isTrue="{!v.Files.length > 0}">
+                    <lightning:buttonMenu iconName="utility:attach" 
+                                          alternativeText="Attachments"
+                                          onselect="{!c.handleAttachSelect}" >
+                        <aura:iteration items="{!v.Files}" var="File">
+                            <lightning:menuItem label="{!File.ContentDocument.Title}" value="{!File}"/>
+                        </aura:iteration>
+                    </lightning:buttonMenu>
+                </aura:if>
+                <lightning:button iconName="utility:email" 
+                                  label="{!or(v.ObjectName=='Invoice',v.ObjectName=='Quote')?
+                                         'Email ' + v.ObjectName : 'Send'}" 
+                                  variant="brand" 
+                                  disabled="{!or(v.EmailSubject == null,v.EmailSubject == '')}"
+                                  onclick="{!c.SendEmail}"/>
+                <!--aura:if isTrue="{!and(or(v.ObjectName == 'Opportunity',v.ObjectName == 'Quote'),!v.CantSend)}">
+                <lightning:buttonStateful labelWhenOff="Notify"
+                                          labelWhenOn="Notifying"
+                                          iconNameWhenOff="utility:notification"
+                                          iconNameWhenOn="utility:check"
+                                          state="{! v.Notify }"
+                                          onclick="{! c.toggleNotify }" />
+            </aura:if-->
+                <!--lightning:buttonIcon iconName="utility:preview"
+                                  alternativeText="Preview"
+                                      onclick="{!c.Preview}"/-->
+                <aura:if isTrue="{!or(v.ObjectName == 'Opportunity',v.ObjectName == 'Quote')}">
+                    <lightning:buttonStateful labelWhenOff="Notify"
+                                              labelWhenOn="Notifying"
+                                              iconNameWhenOff="utility:notification"
+                                              iconNameWhenOn="utility:check"
+                                              state="{! v.Notify }"
+                                              onclick="{! c.toggleNotify }" />
+                </aura:if>
+                <lightning:buttonIcon iconName="utility:refresh"
+                                      alternativeText="Refresh"
+                                      onclick="{!c.doInit}" />
+            </div>
+        </div>
+        
+        <aura:if isTrue="{!v.Attachments.length > 0}">
+            <div style="margin-top: 1rem;text-align:center;">
+                <div style="text-align:left;color:rgb(221, 219, 218);">Attachments</div>
+                <div class="slds-pill_container">
+                    <ul class="slds-listbox slds-listbox_horizontal slds-listbox_inline" role="listbox" aria-label="Selected Attachments:" aria-orientation="horizontal">
+                        <aura:iteration items="{!v.Attachments}" var="Attach" indexVar="AttachNo">
+                            <li class="slds-listbox-item" role="presentation">
+                                <span class="slds-pill" role="option" tabindex="0" aria-selected="true">
+                                    <span class="slds-icon_container slds-icon-standard-account slds-pill__icon_container" title="Account">
+                                        <lightning:icon iconName="standard:document" />
+                                    </span>
+                                    <span class="slds-pill__label">{!Attach.ContentDocument.Title}</span>
+                                    <span class="slds-icon_container slds-pill__remove" title="Remove">
+                                        <lightning:buttonIcon iconName="utility:close" 
+                                                              size="x-small" 
+                                                              class="{!AttachNo}"
+                                                              onclick="{!c.RemoveAttachment}"
+                                                              variant="bare"/>
+                                    </span>
+                                </span>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </div>    
+        </aura:if>
+        
+        <!--<aura:if isTrue="{!v.ShowPreview}">
+            <c:EmailPreview Subject="{!v.Preview.Subject}" Message="{!v.Preview.Message}"/>
+        </aura:if>-->
+    </aura:if>
+    
+</aura:component>

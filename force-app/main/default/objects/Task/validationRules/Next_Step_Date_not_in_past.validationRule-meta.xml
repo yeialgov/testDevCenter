@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Step_Date_not_in_past</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(CONTAINS( $Label.Admin_Users , $User.Id )), 
+OR(
+ISCHANGED(Next_Step_Date__c),
+ISNEW()),
+Next_Step_Date__c &lt; NOW()
+)</errorConditionFormula>
+    <errorDisplayField>Next_Step_Date__c</errorDisplayField>
+    <errorMessage>Please choose a date in the future!</errorMessage>
+</ValidationRule>

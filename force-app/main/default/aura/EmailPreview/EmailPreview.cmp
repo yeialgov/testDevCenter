@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="Subject" type="String"/>
+    <aura:attribute name="Message" type="String"/>
+    
+    <br/>
+    <div style="border:solid 1px black;padding:1rem;"><b>Subject:&nbsp;</b>{!v.Subject}</div>
+    <br/>
+    <aura:unescapedHtml value="{!v.Message}"/>
+</aura:component>

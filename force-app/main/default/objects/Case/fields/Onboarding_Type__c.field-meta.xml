@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Type__c</fullName>
+    <description>https://jira.orderbird.com/browse/SAL-1318</description>
+    <externalId>false</externalId>
+    <label>Onboarding Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Onboarding Basic</fullName>
+                <default>false</default>
+                <label>Onboarding Basic</label>
+            </value>
+            <value>
+                <fullName>Resmio Onboarding</fullName>
+                <default>false</default>
+                <label>Resmio Onboarding</label>
+            </value>
+            <value>
+                <fullName>Resmio Activation Only</fullName>
+                <default>false</default>
+                <label>Resmio Activation Only</label>
+            </value>
+            <value>
+                <fullName>Onboarding Premium</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Onboarding Premium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,339 @@
+<apex:component controller="InvoicePdfController" language="{!primaryLanguage}" access="global">
+    <apex:attribute access="public" assignTo="{!iId}" name="InvoiceId" type="String" description="Invoice Id"/>
+    <apex:attribute access="public" assignTo="{!wBool}" name="Watermark" type="Boolean" description="Has Watermark?"/>
+    <head>
+        <apex:stylesheet value="{!$Resource.AttachDocument}"/>
+    </head>
+    <div class="footer">
+        <c:pdfFooter Language="{!primaryLanguage}" IsMini="{!IsMini}"/>
+    </div>
+    <div id="mainDiv">
+        <apex:outputPanel rendered="{!wBool}">
+            <img src="{!URLFOR($Resource.preview_watermark)}" width="100%" height="100%" 
+                 style="position: fixed;background-repeat:repeat;left: 0cm; top:0cm; z-index:0"/>
+        </apex:outputPanel>
+        <c:birdHeader />
+        <table class="fullWidth grayText" style="font-family: sans-serif;">
+            <tr>
+                <td class="wideCol">
+                    <div class="shrinkText padCell">
+                        <table>
+                            <tr>
+                                <td class="blueText padCell rightBar">
+                                    orderbird AG
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    Ritterstraße 12-14
+                                </td>
+                                <td class="grayText padCell rightBar">
+                                    10969 Berlin
+                                </td>
+                                <td class="grayText padCell">
+                                    {!$Label.GERMANY}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="narrCol"></td>
+            </tr>
+            <tr>
+                <td class="topAlign">
+                    <c:AddressBuilder Account="{!Account}" AddressParts="{!AddressParts}"/>
+                </td>
+                <td class="grayText shrinkText topAlign">
+                    <table class="fullWidth">
+                        <tr>
+                            <td class="narrCol">{!$Label.CUSTOMER_NUMBER}:</td>
+                            <td>{!Account.CustomerIdText__c}</td>
+                        </tr>
+                        <apex:outputPanel layout="none" rendered="{!AND(VATId != null, VATId != 'userdata: NULL')}">
+                            <tr>
+                                <td class="narrCol">{!$Label.YOUR_VAT_ID}:</td>
+                                <td>{!VATId}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr><td>&nbsp;</td></tr>
+                        <apex:outputPanel layout="none" rendered="{!!IsMini}">
+                            <tr>
+                                <td class="narrCol">{!$Label.TELEPHONE}:</td>
+                                <td>{!PhoneNumber}</td>
+                            </tr>
+                        </apex:outputPanel>
+                        <tr>
+                            <td class="narrCol">{!$Label.EMAIL}:</td>
+                            <td>{!$Label.SUPPORTEMAILADDRESS}</td>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.INTERNET}:</td>
+                            <td>www.orderbird.com</td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.PAYMENT_METHOD}:</td>
+                            <td>
+                                <apex:outputPanel layout="none" rendered="{!CONTAINS(PaymentMethod,'ire')}">
+                                    {!$Label.WIRE_TRANSFER}
+                                </apex:outputPanel>
+                                <apex:outputPanel layout="none" rendered="{!AND(PaymentMethod != null,!CONTAINS(PaymentMethod,'ire'))}">
+                                    {!$Label.SEPA_DIRECT_DEBIT}
+                                </apex:outputPanel>
+                            </td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.INVOICE_DATE}:</td>
+                            <td><apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Invoice.InvoiceDate__c}" /></apex:outputText></td>
+                        </tr>
+                        <tr>
+                            <td class="narrCol">{!$Label.DUE_DATE}:</td>
+                            <td><apex:outputText value="{0,date,dd.MM.yyyy}"><apex:param value="{!Invoice.DueDate__c}" /></apex:outputText></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <p class="blueText bigBold" style="font-family: sans-serif;">
+            // {!$Label.YOUR_INVOICE_CORRECTION} {!Invoice.Name} {!$Label.FOR_INVOICE} {!RelatedVATInvoice}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.DEAR_TEAM_AT}&nbsp;{!Account.Name},
+        </p>
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage = 'de'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                aufgrund der befristeten Herabsetzung des Umsatzsteuersatzes durch den Gesetzgeber ergibt sich eine Korrektur der Umsatzsteuer der o.g. Rechnungsnummer.
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Die Steuersatzhöhe der folgenden Leistungen wird berichtigt, da die Steuersatzhöhe im Zeitraum der Leistungserbringung mit der Steuersatzhöhe zum Zeitpunkt der Entgelt-Vereinnahmung abweicht.
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                Was bedeutet das?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Das Konjunktur- und Zukunftspaket der Bundesregierung sah vor, dass vom 01.07. bis zum 31.12.2020 für sechs Monate der reguläre Mehrwertsteuersatz von 19 % auf 16 % gesenkt wurde. Dieser Zeitraum ist verstrichen und <b>der reguläre Mehrwertsteuersatz von 19 % ist wieder gültig.</b>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                Warum greift die Steuersatzänderung bei Dir?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Ausschlaggebend für die angewendete Mehrwertsteuer ist das <b>Ablaufdatum der Lizenz</b>: 
+                <ul>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Lizenzen, <b>die nach dem 31.12.2020 ausgelaufen sind, müssen auf den regulären Mehrwertsteuersatz von 19 % korrigiert</b> werden. Für den Zeitraum der Steuersenkung (01.07. - 31.12.2020) konnten wir technisch bedingt keine Steuersätze mit 19 % für die Erstellung der Rechnung anwenden. Daher mussten wir Deine Rechnung mit 16 % MwSt. ausstellen.
+                    </li>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Lizenzen, <b>die zwischen dem 01.08. bis 31.12.2020 ausgelaufen sind, werden auf den gesenkten Mehrwertsteuersatz von 16 % korrigiert.</b>
+                    </li>
+                </ul>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Mehr Informationen findest Du hier: <a href="https://support.orderbird.com/hc/de/articles/360045507511">Die Mehrwertsteueranpassung auf 19 % in Deutschland ab Januar 2021</a> (<a href="https://support.orderbird.com/hc/de/articles/360045507511">https://support.orderbird.com/hc/de/articles/360045507511</a>)
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Sämtliche Rechnungen findest Du auch in Deinem Rechnungsportal auf MY orderbird: <a href="https://my.orderbird.com/billing">Dein Rechnungsportal</a> auf <a href="https://my.orderbird.com/billing">https://my.orderbird.com/billing</a>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Folgende Positionen der ursprünglichen Rechnung sind davon betroffen:
+            </p>
+        </apex:outputPanel> 
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage = 'en'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                Due to the temporary reduction of the VAT rate by legislation, there is a correction of the VAT of the invoice referenced above. The tax rate of the following services is corrected because the tax rate in the period of service differs with the tax rate at the time of fee collection.
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                What does this mean?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                The Federal Government's economic stimulus and future package provided for the regular VAT rate to be reduced from 19 % to 16 % for six months from 1 July to 31 December 2020. This period has elapsed and <b>the regular VAT rate of 19 % is applicable again.</b>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                Why does the change in VAT rate apply to you?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                The decisive factor for the applied VAT is the expiry date of the licence: 
+                <ul>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Licences that expire after 31.12.2020 must be adjusted to the regular VAT rate of 19 %. For the period of the tax reduction (01.07. - 31.12.2020), we could not apply tax rates with 19 % for the creation of the invoice for technical reasons. Therefore, we had to issue your invoice with 16% VAT.
+                    </li>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Licences that expired between 01.08. and 31.12.2020 will be corrected to the lowered VAT rate of 16 %.
+                    </li>
+                </ul>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                You can find more information here: <a href="https://support.orderbird.com/hc/en-us/articles/360045507511">The VAT adjustment to 19% in Germany from January 2021</a> (<a href="https://support.orderbird.com/hc/en-us/articles/360045507511">https://support.orderbird.com/hc/en-us/articles/360045507511</a>).
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Retrieve all your invoices in your invoice portal on MY orderbird: <a href="https://my.orderbird.com/billing">Your billing portal</a> at <a href="https://my.orderbird.com/billing">https://my.orderbird.com/billing</a>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                The following items on the original invoice are affected:
+            </p>
+        </apex:outputPanel> 
+        <apex:outputPanel layout="none" rendered="{!primaryLanguage = 'fr'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                Suite à la baisse temporaire du taux de TVA accordée par le gouvernement, une correction doit être apportée à la facture dont la référence se trouve dans l’objet de cet email. Le taux de TVA doit être corrigé parce que le taux appliqué pendant la période de prestation de service diffère du taux au moment du paiement.
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                Qu'est-ce que cela signifie ?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Le plan de relance économique prévu par le gouvernement fédéral prévoyait que le taux normal de TVA soit réduit de 19% à 16% pendant six mois du 01.07.2020 au 31.12.2020. Cette période est écoulée et <b>le taux normal de TVA de 19 % est à nouveau applicable.</b>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;font-size: 127%;">
+                Pourquoi le changement de taux d'imposition s'applique-t-il à vous ?
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                La date d'expiration de la licence est déterminante pour la TVA appliquée : '
+                <ul>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Les licences expirant après le 31.12.2020 doivent être ajustées au taux de TVA normal de 19%. Pendant la période de réduction de TVA (01.07 - 31.12.2020), nous n'avons pas pu techniquement appliquer des taux d'imposition de 19% pour créer la facture. Nous avons donc dû émettre votre facture avec une TVA de 16%.
+                    </li>
+                    <li class="grayText" style="font-family: sans-serif;">
+                        Les licences expirant entre le 01.08.2020 et le 31.12.2020 seront corrigées au taux de TVA réduit de 16%.  
+                    </li>
+                </ul>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Vous pouvez trouver plus d'informations (en allemand) ici: <a href="https://support.orderbird.com/hc/en-us/articles/360045507511">L'ajustement de la TVA à 19% en Allemagne à partir de janvier 2021.</a> (<a href="https://support.orderbird.com/hc/en-us/articles/360045507511">https://support.orderbird.com/hc/en-us/articles/360045507511</a>).
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Récupérez toutes vos factures sur votre portail MY orderbird : <a href="https://my.orderbird.com/billing">Votre portail de factures</a> <b>at</b> <a href="https://my.orderbird.com/billing">https://my.orderbird.com/billing</a>
+            </p>
+            <p class="grayText" style="font-family: sans-serif;">
+                Les éléments suivants de la facture originale sont concernés :
+            </p>
+        </apex:outputPanel> 
+        <table class="StatementTable bme grayText" border="0">
+            <thead style="background-color: rgb(0,163,224);">
+                <tr>
+                    <th class="lftalgn" colspan="2">{!$Label.ARTICLE}</th>
+                    <th>{!$Label.SERVICE_PERIOD}&nbsp;{!$Label.FROM}:</th>
+                    <th>{!$Label.SERVICE_PERIOD}&nbsp;{!$Label.TO}:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!RelatedVATILIs}" var="item" >
+                    <tr style="page-break-inside:avoid;">
+                        <td class="lftalgn" colspan="2" style="border-bottom: solid 1px rgb(0,163,224);padding:10px;">{!item[
+                            IF(Account.PrimaryLanguage__c=='French',
+                            'SubscriptionLineItem__r.Product__r.Product_Name_FR__c',
+                            IF(Account.PrimaryLanguage__c=='English',
+                            'SubscriptionLineItem__r.Product__r.Name',
+                            'SubscriptionLineItem__r.Product__r.Product_Name_DE__c'
+                            )
+                            )
+                            ]}
+                        </td>
+                        <td style="border-bottom: solid 1px rgb(0,163,224);">
+                            <apex:outputText value="{0,date,dd.MM.yyyy}">
+                                <apex:param value="{!item.ServiceStartDate__c}" />
+                            </apex:outputText>
+                        </td>
+                        <td style="border-bottom: solid 1px rgb(0,163,224);">
+                            <apex:outputText value="{0,date,dd.MM.yyyy}">
+                                <apex:param value="{!item.ServiceEndDate__c}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:repeat>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="background-color: rgb(0,163,224); color: #FFFFFF;" colspan="2">
+                        {!$Label.ORIGINALLY_BILLED}
+                    </td>
+                    <td class="lftalgn">{!$Label.TOTAL}:</td>
+                    <td style="background-color:#fff;">
+                       - <c:Curr Value="{!VATChgAmtNeg}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="">
+                        {!$Label.TAX_TOTAL}&nbsp;{!IF(Invoice.Amount__c < 0, '16', '19')}%:
+                       
+                    </td>
+                    <td style="background-color:#fff;">
+                        -<c:Curr Value="{!VATTaxAmtPos}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="">
+                        {!$Label.OLD_TOTAL_AMOUNT}
+                    </td>
+                    <td style="background-color:#fff;">
+                        - <c:Curr Value="{!VATTaxAmtPos+VATChgAmtNeg}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);background-color: rgb(0,163,224); color: #FFFFFF;" colspan="2">
+                        {!$Label.CORRECTED_INVOICE_AMOUNT}
+                    </td>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);">{!$Label.TOTAL}:</td>
+                    <td style="border-top: solid 1px rgb(0,163,224);background-color:#fff;">
+                       - <c:Curr Value="{!VATChgAmtPos}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="">
+                        {!$Label.TAX_TOTAL}&nbsp;{!IF(Invoice.Amount__c < 0, '19', '16')}%:
+                    </td>
+                    <td style="background-color:#fff;">
+                       - <c:Curr Value="{!VATTaxAmtNeg}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="">
+                        {!$Label.NEW_TOTAL_AMOUNT}
+                    </td>
+                    <td style="background-color:#fff;">
+                      - <c:Curr Value="{!VATTaxAmtNeg+VATChgAmtPos}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+                <tr style="page-break-inside:avoid;">
+                    <td style="color:#fff;padding:0 10px;">&nbsp;.&nbsp;</td>
+                    <td/>
+                    <td class="lftalgn" style="border-top: solid 1px rgb(0,163,224);font-weight:bolder;">{!$Label.DIFFERENCE}</td>
+                    <td style="border-top: solid 1px rgb(0,163,224);background-color:#fff;font-weight:bolder;">
+                        <c:Curr Value="{!Invoice.Amount__c}" Currency="{!Account.CurrencyIsoCode}" Country="{!Country}"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_4_vat_adj}
+        </p>
+        <apex:outputPanel layout="none" rendered="{!TaxExemptReason == 'EU reverse charge mechanism'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_3}
+            </p>
+        </apex:outputPanel>
+        <apex:outputPanel layout="none" rendered="{!TaxExemptReason == 'Third country jurisdictions'}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_4}
+            </p>
+        </apex:outputPanel>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_5_1}&nbsp;<a href="{!$Label.INV_GRAF_5_2}">{!$Label.INV_GRAF_5_2}</a>&nbsp;{!$Label.INV_GRAF_5_3}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_6}
+        </p>
+        <p class="grayText" style="font-family: sans-serif;">
+            {!$Label.INV_GRAF_7_1}&nbsp;{!Account.CustomerIdText__c}&nbsp;{!$Label.INV_GRAF_7_2}
+        </p>
+        <apex:outputPanel layout="none" rendered="{!DiffCustomerAccount != null}">
+            <p class="grayText" style="font-family: sans-serif;">
+                {!$Label.INV_GRAF_8}:&nbsp;{!DiffCustomerAccount}
+            </p>
+        </apex:outputPanel>
+    </div>
+</apex:component>

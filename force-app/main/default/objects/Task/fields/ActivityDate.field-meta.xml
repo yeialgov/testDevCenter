@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ActivityDate</fullName>
+    <inlineHelpText>When was this task fulfilled (in case of a communication log)? When is this task due (for scheduled tasks)? Set on creation</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
     <trackHistory>false</trackHistory>
 </CustomField>

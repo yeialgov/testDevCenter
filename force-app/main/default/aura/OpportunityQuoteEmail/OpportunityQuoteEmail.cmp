@@ -1,0 +1,66 @@
+<aura:component >
+    <aura:attribute name="Email" type="Object"/>
+    
+    <li style="margin-left:1rem;">
+        <div class="slds-timeline__item_expandable slds-timeline__item_email">
+            <span class="slds-assistive-text">email</span>
+            <div class="slds-media">
+                <div class="slds-media__figure">
+                    <lightning:buttonIcon iconName="utility:switch" variant="bare" class="pushRight slds-timeline__details-action-icon"/>
+                    <div class="slds-icon_container slds-icon-standard-email slds-timeline__icon" title="email">
+                        <lightning:icon iconName="standard:email" size="small" class="slds-icon slds-icon_small"/>
+                    </div>
+                </div>
+                <div class="slds-media__body">
+                    <div class="slds-grid slds-grid_align-spread slds-timeline__trigger">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-truncate_container_75 slds-no-space">
+                            <h3 class="slds-truncate" title="{!v.Email.Subject == null ? '[No subject]' : v.Email.Subject}">
+                                <a href="{!'/lightning/r/'+v.Email.Id+'/view'}">
+                                    {!v.Email.Subject == null ? '[No subject]' : v.Email.Subject}
+                                </a>
+                            </h3>
+                            <aura:if isTrue="{!v.Email.HasAttachment}">
+                                <div class="slds-no-flex">
+                                    <span class="slds-icon_container slds-icon-utility-attach" title="Has attachments">
+                                        <lightning:icon iconName="utility:attach" size="xx-small" class="slds-icon slds-icon_xx-small slds-icon-text-default slds-m-left_x-small"/>
+                                        <span class="slds-assistive-text">Has attachments</span>
+                                    </span>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <div class="slds-timeline__actions slds-timeline__actions_inline">
+                            <p class="slds-timeline__date">
+                                <lightning:relativeDateTime value="{!v.Email.MessageDateX}"/>
+                            </p>
+                            <!--button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" title="More Options for this item">
+                                <svg class="slds-button__icon" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down" xmlns:xlink="http://www.w3.org/1999/xlink" />
+                                </svg>
+                                <span class="slds-assistive-text">More Options for this item</span>
+                            </button-->
+                        </div>
+                    </div>
+                    <p class="slds-m-horizontal_xx-small"><a href="javascript:void(0);">{!v.Email.FromName}</a> emailed <a style="border-bottom: 1px dotted;" href="{!'/lightning/r/'+v.Email.EmailMessageRelations[0].RelationId+'/view'}">{!v.Email.EmailMessageRelations[0].Relation.Name}</a> </p>
+                    <p class="slds-m-horizontal_xx-small"><a style="border-bottom: 1px dotted;" href="{!'/lightning/r/'+v.Email.RelatedToId+'/view'}">{!v.Email.RelatedTo.Name}</a></p>
+                    <!--article class="slds-box slds-timeline__item_details slds-theme_shade slds-m-top_x-small slds-m-horizontal_xx-small" id="email-item-base" aria-hidden="true">
+                        <ul class="slds-list_horizontal slds-wrap">
+                            <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                <span class="slds-text-title slds-p-bottom_x-small">From Address</span>
+                                <span class="slds-text-body_medium slds-truncate" title="Jackie Dewar"><a href="javascript:void(0);">Jackie Dewar</a></span>
+                            </li>
+                            <li class="slds-grid slds-grid_vertical slds-size_1-of-2 slds-p-bottom_small">
+                                <span class="slds-text-title slds-p-bottom_x-small">To Address</span>
+                                <span class="slds-text-body_medium slds-truncate" title="Lea Chan"><a href="javascript:void(0);">Lea Chan</a></span>
+                            </li>
+                        </ul>
+                        <div>
+                            <span class="slds-text-title">Text Body</span>
+                            <p class="slds-p-top_x-small">Hi everyone, Thanks for meeting with the team today and going through the proposals we saw. This goes on and wraps if needed.</p>
+                        </div>
+                    </article-->
+                </div>
+            </div>
+        </div>
+    </li>
+    
+</aura:component>
