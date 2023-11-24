@@ -425,6 +425,46 @@
             <field>ZuoraSyncFailed__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_Level_Translation__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Status__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Comment__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_Tax_Advisor__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>merchantId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MerchantVenueId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amigo__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -1010,7 +1050,52 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Device_SIM_Card_Number__c</field>
+            <field>Supported_language_s__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Minimum_SLA_requirement__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_customers__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_markets__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Noteworthy_about_Account__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TypeofCooperation__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Company_Description__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Type_of_Business_Category__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Test_Meta_Data__c</field>
+            <table>Contact.Leads__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Rental_MINI_Type__c</field>
             <table>Contact.Leads__r</table>
         </columns>
         <columns>

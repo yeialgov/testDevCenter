@@ -516,7 +516,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>NoteworthyAboutCustomer__c</field>
+            <field>NoteworthyAboutAccount__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -772,6 +772,91 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Venue__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Insights_Email__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalPayopps__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Avg_monthly_PAY_Revenue__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Payment_Segmentation__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>out_of_sync_data_Mo_data__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Company_Description__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Supported_language_s__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Minimum_SLA_requirement__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_customers__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_markets__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Upselling_Agent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>nexiDiscountUsedBy__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MaxDayOverdue__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SplitCustomerNumber__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Combined_Balance_5__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>shopifySalesOrderId__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LAC_ID__c</field>
             <table>Account</table>
         </columns>
         <masterLabel>Accounts</masterLabel>
@@ -1215,6 +1300,46 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>EmailOptOut__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_Level_Translation__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Status__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Comment__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_Tax_Advisor__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>merchantId__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MerchantVenueId__c</field>
+            <table>Account.Contacts</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amigo__c</field>
             <table>Account.Contacts</table>
         </columns>
         <masterLabel>Contacts</masterLabel>
@@ -1722,7 +1847,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>NoteworthyAboutCustomer__c</field>
+            <field>NoteworthyAboutAccount__c</field>
             <table>Account.Contacts.PrimaryContactForAcc__r</table>
         </columns>
         <columns>

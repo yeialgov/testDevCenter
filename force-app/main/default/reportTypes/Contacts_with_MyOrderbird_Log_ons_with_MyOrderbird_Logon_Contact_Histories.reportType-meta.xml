@@ -524,6 +524,46 @@
             <field>Roles__c</field>
             <table>Contact</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Ambassador_Level_Translation__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Status__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Field_Tester_Comment__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_Tax_Advisor__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>merchantId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MerchantVenueId__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Amigo__c</field>
+            <table>Contact</table>
+        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -773,6 +813,24 @@
             <field>Inactive__c</field>
             <table>Contact.MyOrderbird_Log_ons__r</table>
         </columns>
+        <masterLabel>MyOb Venues</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Primary_Venue__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Debit_authorization_given_at_registratio__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Last_Invoice_Created_Timestamp__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Last_Shift_Closed_Timestamp__c</field>
@@ -780,7 +838,82 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Last_Invoice_Created_Timestamp__c</field>
+            <field>Latest_Installed_POS_Version__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Latest_Installed_OS_Version__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Latest_Used_TSS_Version__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_Cashbook_License__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Active_Free_Trial_License__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Swarm_Enabled__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>DATEV_Consultant_Number_Provided__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Avg_monthly_PAY_Revenue__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Max_Number_of_Devices__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Days_Since_Last_Shift_Closed__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Days_Since_Last_Invoice_Created__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Activated_Features__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Number_of_App_Re_Installments__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Industry__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Employees__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>First_Shift_Opened_Timestamp__c</field>
             <table>Contact.MyOrderbird_Log_ons__r</table>
         </columns>
         <columns>
@@ -793,6 +926,26 @@
             <field>Lead__c</field>
             <table>Contact.MyOrderbird_Log_ons__r</table>
         </columns>
-        <masterLabel>MyOb Venues</masterLabel>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Cashbook_Email__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Last_Cardpayment_Created_Timestamp__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Days_since_last_cardpayment_created__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Merchant__c</field>
+            <table>Contact.MyOrderbird_Log_ons__r</table>
+        </columns>
+        <masterLabel>MY orderbird Venues</masterLabel>
     </sections>
 </ReportType>

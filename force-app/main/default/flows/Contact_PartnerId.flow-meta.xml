@@ -22,6 +22,7 @@
         <connector>
             <targetReference>myRule_1_A2</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -80,15 +81,16 @@
                 <stringValue>IteratePartnerId</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_4_A1</name>
+        <name>myRule_5_A1</name>
         <label>PartnerId</label>
-        <locationX>400</locationX>
+        <locationX>500</locationX>
         <locationY>200</locationY>
         <actionName>IteratePartnerId</actionName>
         <actionType>flow</actionType>
         <connector>
-            <targetReference>myDecision5</targetReference>
+            <targetReference>myDecision6</targetReference>
         </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -141,12 +143,13 @@
                 <stringValue>Automated Email</stringValue>
             </value>
         </processMetadataValues>
-        <name>myRule_6_A1</name>
+        <name>myRule_7_A1</name>
         <label>Invitation Email</label>
-        <locationX>600</locationX>
+        <locationX>700</locationX>
         <locationY>200</locationY>
         <actionName>EmailAutomater</actionName>
         <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <processMetadataValues>
                 <name>dataType</name>
@@ -318,7 +321,7 @@
         <nameSegment>EmailAutomater</nameSegment>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>49.0</apiVersion>
+    <apiVersion>50.0</apiVersion>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -331,7 +334,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision3</targetReference>
+            <targetReference>myDecision4</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
@@ -378,19 +381,71 @@
         <processMetadataValues>
             <name>index</name>
             <value>
+                <numberValue>4.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision10</name>
+        <label>myDecision10</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_11</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Admin_flag_field__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>False</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_11_A1</targetReference>
+            </connector>
+            <label>Test Criteria</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
                 <numberValue>1.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision3</name>
-        <label>myDecision3</label>
+        <name>myDecision4</name>
+        <label>myDecision4</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision5</targetReference>
+            <targetReference>myDecision6</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_4</name>
+            <name>myRule_5</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -529,7 +584,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_4_A1</targetReference>
+                <targetReference>myRule_5_A1</targetReference>
             </connector>
             <label>ShouldCalculate</label>
         </rules>
@@ -541,16 +596,16 @@
                 <numberValue>2.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision5</name>
-        <label>myDecision5</label>
+        <name>myDecision6</name>
+        <label>myDecision6</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <defaultConnector>
-            <targetReference>myDecision7</targetReference>
+            <targetReference>myDecision8</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_6</name>
+            <name>myRule_7</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -584,7 +639,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_6_pmetdec</targetReference>
+                <targetReference>myRule_7_pmetdec</targetReference>
             </connector>
             <label>Fiscalization Beta Invitation</label>
         </rules>
@@ -596,13 +651,16 @@
                 <numberValue>3.0</numberValue>
             </value>
         </processMetadataValues>
-        <name>myDecision7</name>
-        <label>myDecision7</label>
+        <name>myDecision8</name>
+        <label>myDecision8</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision10</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
-            <name>myRule_8</name>
+            <name>myRule_9</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -636,7 +694,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_8_pmetdec</targetReference>
+                <targetReference>myRule_9_pmetdec</targetReference>
             </connector>
             <label>Creat Amb Account</label>
         </rules>
@@ -700,22 +758,22 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myDecision3</targetReference>
+                <targetReference>myDecision4</targetReference>
             </connector>
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
     <decisions>
-        <name>myRule_6_pmetdec</name>
+        <name>myRule_7_pmetdec</name>
         <label>Previously Met Decision</label>
-        <locationX>600</locationX>
+        <locationX>700</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myRule_6_A1</targetReference>
+            <targetReference>myRule_7_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
-            <name>myRule_6_pmetnullrule</name>
+            <name>myRule_7_pmetnullrule</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -725,12 +783,12 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_6_A1</targetReference>
+                <targetReference>myRule_7_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
         <rules>
-            <name>myRule_6_pmetrule</name>
+            <name>myRule_7_pmetrule</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -767,16 +825,16 @@
         </rules>
     </decisions>
     <decisions>
-        <name>myRule_8_pmetdec</name>
+        <name>myRule_9_pmetdec</name>
         <label>Previously Met Decision</label>
-        <locationX>800</locationX>
+        <locationX>900</locationX>
         <locationY>100</locationY>
         <defaultConnector>
-            <targetReference>myRule_8_A1</targetReference>
+            <targetReference>myRule_9_A1</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
         <rules>
-            <name>myRule_8_pmetnullrule</name>
+            <name>myRule_9_pmetnullrule</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>myVariable_old</leftValueReference>
@@ -786,12 +844,12 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>myRule_8_A1</targetReference>
+                <targetReference>myRule_9_A1</targetReference>
             </connector>
             <label>Previously Met - Null</label>
         </rules>
         <rules>
-            <name>myRule_8_pmetrule</name>
+            <name>myRule_9_pmetrule</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <processMetadataValues>
@@ -827,6 +885,18 @@
             <label>Previously Met - Prev</label>
         </rules>
     </decisions>
+    <description>testong changes</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_2_myRule_1_A3_1948913521</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -834,11 +904,11 @@
                 <stringValue>[Contact].Description  + &apos;A Level passed&apos;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A2_1881899456</name>
+        <name>formula_3_myRule_1_A2_0509318277</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Description}  + &apos;A Level passed&apos;</expression>
     </formulas>
-    <interviewLabel>Contact_PartnerId-10_InterviewLabel</interviewLabel>
+    <interviewLabel>Contact_PartnerId-12_InterviewLabel</interviewLabel>
     <label>A - Contact</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -866,9 +936,9 @@
     </processMetadataValues>
     <processType>Workflow</processType>
     <recordCreates>
-        <name>myRule_8_A1</name>
+        <name>myRule_9_A1</name>
         <label>Account creation</label>
-        <locationX>800</locationX>
+        <locationX>900</locationX>
         <locationY>200</locationY>
         <inputAssignments>
             <processMetadataValues>
@@ -1101,12 +1171,93 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
+        <name>myRule_11_A1</name>
+        <label>Validate Amigo</label>
+        <locationX>1100</locationX>
+        <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Amigo</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Amigo__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Contact]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
         <name>myRule_1_A2</name>
         <label>marker</label>
         <locationX>100</locationX>
         <locationY>300</locationY>
         <connector>
-            <targetReference>myDecision3</targetReference>
+            <targetReference>myRule_1_A3</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -1155,7 +1306,140 @@
             </processMetadataValues>
             <field>Description</field>
             <value>
-                <elementReference>formula_2_myRule_1_A2_1881899456</elementReference>
+                <elementReference>formula_3_myRule_1_A2_0509318277</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>criteria</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Contact]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_1_A3</name>
+        <label>Set ID Creation Date</label>
+        <locationX>100</locationX>
+        <locationY>400</locationY>
+        <connector>
+            <targetReference>myDecision4</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>inputDataType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Ambassador ID Creation Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>operatorDataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Boolean</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Ambassador ID Creation Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Ambassador_ID_Creation_Date__c</field>
+            <value>
+                <elementReference>formula_2_myRule_1_A3_1948913521</elementReference>
             </value>
         </inputAssignments>
         <object>Contact</object>
